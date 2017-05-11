@@ -4,3 +4,9 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: default
 ---
+<section>
+<iframe src="https://player.vimeo.com/video/58164503?color=ffffff&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</section>
+<section class="slider">
+<p><span>simply more</span><br>we are the smarter, cooler, more affordable solution to your vision</p>
+</section>

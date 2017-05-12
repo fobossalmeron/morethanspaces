@@ -9553,7 +9553,7 @@ var Hello = function (_Component) {
       return _react2.default.createElement(
         'p',
         null,
-        'hey this will be the quote section, 2'
+        'hey this will be the quote section, 3'
       );
     }
   }]);

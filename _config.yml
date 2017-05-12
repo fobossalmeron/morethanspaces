@@ -18,6 +18,8 @@ exclude:
 # For webpack directories to work
 destination: public
 source: src
+sass:
+    sass_dir: _sass
 
 prose:
   rooturl: 'src'

@@ -68,7 +68,7 @@ $full-down:         1100px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-		    "mixins",
+		    "_mixins",
         "base",
         "layout",
         "syntax-highlighting",

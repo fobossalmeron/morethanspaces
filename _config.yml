@@ -2,6 +2,9 @@ title: Morethanspaces
 email: ns@morethanspaces.custom
 description: Tradeshow booth and videowall rental solutions
 baseurl: "" # the subpath of your site, e.g. /blog
+baseurl2: "/" # the subpath of your site, e.g. /blog
+baseurl3: " " # the subpath of your site, e.g. /blog
+baseurl4: "/morethanspaces/" # the subpath of your site, e.g. /blog
 url: "morethanspaces.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll

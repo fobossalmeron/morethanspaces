@@ -1,0 +1,78 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: 'Lato', sans-serif;
+$secondary-font-family: 'Lato', sans-serif;
+$base-font-size:   20px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #212121;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+$black: #272727;
+$white: #f9f9f9;
+$lightblue: #62BCE9;
+$darkblue: #0072B4;
+
+$twitter:#02BAF8;
+$mail:#d14836;
+$facebook:#3B5999;
+$tumblr:#3C5A76;
+
+// Responsive width breakpoints
+$too-small:			     350px;
+$mobile-down:        490px;
+$tablet-down:        980px;
+$sidebar-down:  		 800px;
+$full-down:         1100px;
+
+// Responsive height breakpoints
+$minimum-height:     350px;
+$mobile-down:        490px;
+$tablet-down:        980px;
+$sidebar-down:       800px;
+$full-down:         1100px;
+
+
+//Site.baseurl
+$baseurl: "{{site.baseurl}}";
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+@mixin media-query-inverse($device){
+    @media screen and ( min-width: $device ){
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+		    "mixins",
+        "base",
+        "layout",
+        "syntax-highlighting",
+        "responsive"
+;

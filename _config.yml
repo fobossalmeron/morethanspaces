@@ -1,8 +1,8 @@
 title: Morethanspaces
 email: ns@morethanspaces.custom
 description: Tradeshow booth and videowall rental solutions
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "morethanspaces.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/morethanspaces/" # the subpath of your site, e.g. /blog
+url: "http://morethanspaces.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
@@ -14,12 +14,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-
-# For webpack directories to work
-destination: public
-source: src
-
-prose:
-  rooturl: 'src'
-  siteurl: 'https://designsuccess.github.io/morethanspaces/'
-  media: 'src/assets/img'
+  - webpack

@@ -1,6 +1,6 @@
 .sass-cache
 .jekyll-metadata
 .DS_Store
-public
 src/assets/bundle.js
+_site
 node_modules

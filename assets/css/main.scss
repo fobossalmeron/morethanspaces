@@ -8,7 +8,7 @@
 // Our variables
 $base-font-family: 'Lato', sans-serif;
 $secondary-font-family: 'Lato', sans-serif;
-$base-font-size:   25px;
+$base-font-size:   20px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
@@ -44,6 +44,8 @@ $sidebar-down:       800px;
 $full-down:         1100px;
 
 
+//Site.baseurl
+$baseurl: "{{site.baseurl}}";
 
 // Using media queries with like this:
 // @include media-query($on-palm) {

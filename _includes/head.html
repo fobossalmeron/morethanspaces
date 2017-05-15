@@ -6,7 +6,7 @@
   <title>{% if page.title %}{{ site.title }} | {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+  <meta property="og:url" content="{{ page.url |cd replace:'index.html','' | prepend: site.url }}">
   <meta property="og:site_name" content="Morethanspaces" />
   <meta property="og:type" content="website">
   <meta property="og:title" content="{% if page.title %}{{ site.title }} | {{ page.title }}{% else %}{{ site.title }}{% endif %}">
@@ -14,7 +14,7 @@
   <meta property="og:image" content="{{ site.og_image }}"/>
   <meta property="og:locale" content="en_US" />
 
-  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.url }}" />

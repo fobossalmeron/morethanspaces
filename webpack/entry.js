@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import {render} from 'react-dom';
-import Hello from './components/Hello';
+import QuoteTabs from './components/QuoteTabs';
+import InstaQuoteButton from './components/InstaQuoteButton';
 import './extras/nav';
 
 class Quote extends Component {
   render() {
     return (
-      <Hello />
+      <div>
+      <QuoteTabs />
+            <InstaQuoteButton />
+      </div>
     )
   }
 }

@@ -27,7 +27,7 @@ ul, ol { margin-left: 30px; }
 li > ul, li > ol { margin-bottom: 0; }
 
 /** Headings */
-h1, h2, h3, h4, h5, h6 { font-weight: 100; font-size: 1.7em; }
+h1, h2, h3, h4, h5, h6 { font-weight: 100; font-size: 1.7em; position: relative; }
 
 /** Links */
 a { color: #272727; text-decoration: none; cursor: pointer; }
@@ -56,10 +56,12 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 .icon > svg { display: inline-block; width: 16px; height: 16px; vertical-align: middle; }
 .icon > svg path { fill: #828282; }
 
-nav { height: 100px; background-color: #f9f9f9; width: 100%; float: left; position: fixed; padding: .5%; z-index: 2; transition: .5s ease all; }
+nav { height: 100px; background-color: #f9f9f9; width: 100%; float: left; position: fixed; padding: .5%; z-index: 3; transition: .5s ease all; }
 nav img { height: 100%; float: left; margin-left: 1.5%; }
 nav ul { height: 100%; float: right; margin: 0; min-width: 50%; }
 nav ul li { padding: 5% 3%; height: 100%; float: left; list-style: none; text-transform: uppercase; font-size: .8em; cursor: pointer; transition: .5s ease all; }
+nav ul li a { padding-bottom: 1px; border-bottom: 2px solid transparent; transition: .4s ease all; }
+nav ul li a:hover { border-color: #272727; padding-bottom: 4px; text-decoration: none; }
 
 .navScroll { height: 60px; }
 .navScroll ul li { padding: 2% 3%; }
@@ -71,6 +73,8 @@ footer .colophon { width: 100%; text-align: center; opacity: 0.5; color: #272727
 footer p, footer a { font-size: 0.8em; color: #f9f9f9; float: left; clear: both; }
 footer ul { margin: 0px; float: left; width: 100%; }
 footer ul li { width: 25%; padding: 2%; list-style: none; float: left; }
+
+#instaQuoteButton { position: fixed; width: 90px; height: 90px; bottom: 20px; right: 25px; background-size: cover; cursor: pointer; background-image: url("/morethanspaces/assets/img/instaQuote.svg"); }
 
 section { min-height: 500px; float: left; width: 100%; padding: 5%; }
 
@@ -93,6 +97,26 @@ section { min-height: 500px; float: left; width: 100%; padding: 5%; }
 #clients ul { width: 50%; float: left; margin: 0px; }
 #clients ul li { width: 45%; float: left; font-size: 0px; background-size: contain; background-repeat: no-repeat; min-height: 100px; margin: 0% 5% 5% 0%; }
 #clients ul li:nth-last-child(1), #clients ul li:nth-last-child(2) { margin-bottom: 0px; }
+
+#quoteSection { padding: 0px; background-color: #F9D026; }
+#quoteSection h2 { margin: 0px; float: left; }
+
+.quoteCheck { width: 30px; height: 30px; float: left; top: 10px; left: 15px; position: relative; }
+.quoteCheck label { width: 100%; height: 100%; position: absolute; left: 0; border: 2px solid #272727; }
+.quoteCheck label:after { content: ''; width: 17px; height: 8px; position: absolute; top: 6px; left: 5px; border: 2px solid #272727; border-top: none; border-right: none; background: transparent; opacity: 0; transform: rotate(-45deg); }
+.quoteCheck label:hover::after { opacity: 0.3; }
+.quoteCheck input[type=checkbox] { opacity: 0; position: absolute; cursor: pointer; width: 100%; height: 100%; left: 0; z-index: 2; margin: 0px; }
+.quoteCheck input[type=checkbox]:checked + label:after { opacity: 1; }
+
+.react-tabs__tab-list { margin: 0px; list-style: none; text-align: center; }
+
+.react-tabs__tab { width: 50%; float: left; padding: 15px 10%; background-color: #EDB20F; position: relative; }
+.react-tabs__tab:focus { outline: none; }
+.react-tabs__tab:focus::after { content: ''; position: absolute; height: 100%; width: 5px; right: 0; bottom: 0; background: #0E6FE2; box-shadow: 0 0 5px #0E6FE2; }
+
+.react-tabs__tab--selected { background-color: #F9D026; }
+
+.react-tabs__tab-panel { background-color: #F9D026; }
 
 .clientNike { background-image: url("/morethanspaces/assets/img/clientNike.svg"); }
 

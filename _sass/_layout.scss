@@ -5,7 +5,7 @@ nav{
   float:left;
   position:fixed;
   padding: .5%;
-  z-index: 2;
+  z-index: 3;
   transition: .5s ease all;
 
   img{
@@ -27,6 +27,16 @@ nav{
       font-size: .8em;
       cursor: pointer;
       transition: .5s ease all;
+      a{
+        padding-bottom: 1px;
+        border-bottom: 2px solid transparent;
+        transition: .4s ease all;
+        &:hover{
+          border-color: $black;
+          padding-bottom: 4px;
+          text-decoration: none;
+        }
+      }
     }
   }
 }
@@ -76,6 +86,17 @@ footer{
   }
 }
 
+#instaQuoteButton{
+  position: fixed;
+  width: 90px;
+  height: 90px;
+  bottom: 20px;
+  right: 25px;
+  background-size: cover;
+  cursor: pointer;
+  background-image: url("#{$baseurl}assets/img/instaQuote.svg");
+}
+
 section{
   min-height:500px;
   float:left;
@@ -84,7 +105,7 @@ section{
 }
 
 #slider{
-  background-color: #0E6FE2;
+  background-color: $blue;
   p{
     text-align: center;
     float: left;
@@ -129,7 +150,7 @@ section{
 }
 
 #services{
-    background-color: #0E6FE2;
+    background-color: $blue;
     color: $white;
     a{
       color:$white;
@@ -149,7 +170,7 @@ section{
 }
 
 #clients{
-  background-color: #0E6FE2;
+  background-color: $blue;
   color: $white;
   h3{
     float:left;
@@ -173,6 +194,98 @@ section{
       }
     }
   }
+}
+
+//Tabs
+
+#quoteSection{
+  padding:0px;
+  background-color: $yellow;
+  h2{
+    margin:0px;
+    float:left;
+  }
+}
+
+.quoteCheck{
+  width: 30px;
+  height: 30px;
+  float: left;
+  top: 10px;
+  left: 15px;
+  position: relative;
+ label {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   left: 0;
+   border: 2px solid $black;
+   &:after {
+     content: '';
+     width: 17px;
+     height: 8px;
+     position: absolute;
+     top: 6px;
+     left: 5px;
+     border: 2px solid $black;
+     border-top: none;
+     border-right: none;
+     background: transparent;
+     opacity: 0;
+     transform: rotate(-45deg);
+   }
+   &:hover::after {
+     opacity: 0.3;
+   }
+ }
+ input[type=checkbox] {
+   opacity: 0;
+   position: absolute;
+  cursor: pointer;
+   width: 100%;
+   height: 100%;
+   left: 0;
+   z-index: 2;
+   margin: 0px;
+   &:checked + label:after {
+     opacity: 1;
+   }
+ }
+}
+
+.react-tabs__tab-list{
+  margin:0px;
+  list-style: none;
+  text-align: center;
+}
+
+.react-tabs__tab{
+  width:50%;
+  float:left;
+  padding: 15px 10%;
+  background-color: #EDB20F;
+  position:relative;
+  &:focus{
+    outline: none;
+    &::after{
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 5px;
+      right: 0;
+      bottom: 0;
+      background: $blue;
+      box-shadow: 0 0 5px $blue;
+    }
+  }
+}
+
+.react-tabs__tab--selected{
+  background-color: $yellow;
+}
+
+.react-tabs__tab-panel{
+  background-color: $yellow;
 }
 
 .clientNike{

@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+<div id="theButton">
+
 <section id="homesection">
   <div id="homevideo">
     <iframe src="https://player.vimeo.com/video/58164503?color=ffffff&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -8,7 +10,8 @@ layout: default
 </section>
 
 <section id="slider">
-  <p><span>simply more</span><br>we are the smarter, cooler, more affordable solution to your vision</p>
+<!--  <p><span>simply more</span><br>we are the smarter, cooler, more affordable solution to your vision</p>-->
+  <p>from<span>$7,999 all incl.</span><br>Video wall rental in Vegas</p>
 </section>
 
 <section id="quoteSection"></section>
@@ -49,3 +52,7 @@ We completely transform ordinary containers into unique and eye-catching focal p
 <li class="clientBaseF">BaseF</li>
 </ul>
 </section>
+
+
+<script type="text/javascript" src="{{site.baseurl}}assets/js/bundle.js"
+charset="utf-8"></script>

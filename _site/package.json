@@ -18,5 +18,8 @@
     "react-addons-update": "^15.5.2",
     "react-dom": "^15.5.4",
     "webpack": "^2.5.1"
+  },
+  "dependencies": {
+    "react-tabs": "^1.0.0"
   }
 }

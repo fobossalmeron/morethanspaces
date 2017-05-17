@@ -26325,11 +26325,7 @@ var QuoteTabs = function (_Component) {
         _react2.default.createElement(
           _reactTabs.TabPanel,
           null,
-          _react2.default.createElement(
-            'h2',
-            null,
-            'Video walls content'
-          )
+          _react2.default.createElement('img', { src: '/morethanspaces/assets/img/mock.png' })
         )
       );
     }

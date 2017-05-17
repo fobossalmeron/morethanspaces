@@ -28,7 +28,7 @@ class QuoteTabs extends Component {
           <h2>Trade show booths content</h2>
         </TabPanel>
         <TabPanel>
-          <h2>Video walls content</h2>
+          <img src="/morethanspaces/assets/img/mock.png"></img>
         </TabPanel>
       </Tabs>
     )

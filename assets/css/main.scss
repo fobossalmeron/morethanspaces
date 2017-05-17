@@ -19,7 +19,7 @@ $text-color:       #212121;
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
-$black: #272727;
+$black: #383838;
 $white: #f9f9f9;
 $yellow: #F9D026;
 $blue: #0E6FE2;
@@ -73,6 +73,7 @@ $baseurl: "{{site.baseurl}}";
 		    "mixins",
         "base",
         "layout",
+        "react-datepicker",
         "syntax-highlighting",
         "responsive"
 ;

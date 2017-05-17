@@ -256,7 +256,8 @@ section{
 .react-tabs__tab-list{
   margin:0px;
   list-style: none;
-  text-align: center;
+  float: left;
+  width: 100%;
 }
 
 .react-tabs__tab{
@@ -285,7 +286,9 @@ section{
 }
 
 .react-tabs__tab-panel{
-  background-color: $yellow;
+  float: left;
+  width: 100%;
+  padding: 3% 0;
 }
 
 .clientNike{
@@ -305,4 +308,21 @@ section{
 }
 .clientBaseF{
   background-image: url("#{$baseurl}assets/img/clientBaseF.svg");
+}
+
+.instaQuoteForm {
+    background-color: $black;
+    width: 20%;
+    min-height: 530px;
+    float: left;
+    padding: 2%;
+    color: $white;
+}
+
+.datePickerFields{
+  float:left;
+  label{
+    float:left;
+    clear:both;
+  }
 }

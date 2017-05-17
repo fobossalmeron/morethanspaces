@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import TabCheckBox from './TabCheckBox';
-//import TradeShowForm from './TradeShowForm';
-//<TradeShowForm />
+import TradeShowForm from './TradeShowForm';
 
 class QuoteTabs extends Component {
 //  onTabClick: function(evt){
@@ -25,6 +24,7 @@ class QuoteTabs extends Component {
         </TabList>
 
         <TabPanel>
+          <TradeShowForm />
           <h2>Trade show booths content</h2>
         </TabPanel>
         <TabPanel>

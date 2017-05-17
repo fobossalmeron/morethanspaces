@@ -20,6 +20,8 @@
     "webpack": "^2.5.1"
   },
   "dependencies": {
+    "moment": "^2.18.1",
+    "react-datepicker": "^0.46.0",
     "react-tabs": "^1.0.0"
   }
 }

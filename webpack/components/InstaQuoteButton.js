@@ -1,14 +1,11 @@
-var React = require('react');
-var PropTypes = React.PropTypes;
+import React, { Component } from 'react';
 
-var InstaQuoteButton = React.createClass({
-
-  render: function() {
+class InstaQuoteButton extends Component {
+  render (){
     return (
       <div id="instaQuoteButton"></div>
     );
   }
+};
 
-});
-
-module.exports = InstaQuoteButton;
+export default InstaQuoteButton;

@@ -1,17 +1,14 @@
-var React = require('react');
-var PropTypes = React.PropTypes;
+import React, { Component } from 'react';
 
-var TabCheckBox = React.createClass({
-
-  render: function() {
+class TabCheckBox extends Component {
+  render() {
     return (
       <div className="quoteCheck">
         <input type="checkbox" id={this.props.checkFor} name={this.props.checkFor} value="true"/>
-        <label for={this.props.checkFor}></label>
+        <label htmlFor={this.props.checkFor}></label>
       </div>
     );
   }
+};
 
-});
-
-module.exports = TabCheckBox;
+export default TabCheckBox;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import TabCheckBox from './TabCheckBox';
 import TradeShowForm from './TradeShowForm';
+import BoothGrid from './BoothGrid';
 
 class QuoteTabs extends Component {
 //  onTabClick: function(evt){
@@ -15,7 +16,7 @@ class QuoteTabs extends Component {
         <TabList>
           <Tab>
             <h2>trade show booths</h2>
-            <TabCheckBox checkFor="tradeShowBooths"/>
+            <TabCheckBox checkFor="tradeShowBooths" checked="checked"/>
           </Tab>
           <Tab>
             <h2>video walls</h2>
@@ -25,7 +26,7 @@ class QuoteTabs extends Component {
 
         <TabPanel>
           <TradeShowForm />
-          <h2>Trade show booths content</h2>
+          <BoothGrid/>
         </TabPanel>
         <TabPanel>
           <img src="/morethanspaces/assets/img/mock.png"></img>

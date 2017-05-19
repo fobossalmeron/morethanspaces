@@ -149,7 +149,17 @@ input[type=text] { border: none; padding: 4px; font-size: .7em; }
 
 .boothGrid { width: 80%; min-height: 500px; padding: 0 5%; float: left; }
 
-.boothGridItem { width: 20%; height: 150px; float: left; margin: 0px 5% 5% 5%; background-color: #0E6FE2; }
+.boothGridItem { width: 18%; height: 150px; float: left; margin: 0px 1% 0% 1%; list-style: none; }
+.boothGridItem img { float: left; width: 100%; min-height: 100px; }
+.boothGridItem label { float: left; width: 100%; font-size: 0.6em; }
+
+.boothIsland img { background-color: #0E6FE2; }
+
+.boothSplitIsland img { background-color: green; }
+
+.boothPeninsula img { background-color: red; }
+
+.boothInline img { background-color: pink; }
 
 .react-datepicker__tether-element-attached-top .react-datepicker__triangle, .react-datepicker__tether-element-attached-bottom .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow { margin-left: -8px; position: absolute; }
 

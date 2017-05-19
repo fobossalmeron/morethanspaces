@@ -398,9 +398,35 @@ input[type=text]{
 }
 
 .boothGridItem{
-  width:20%;
-  height:150px;
-  float:left;
-  margin: 0px 5% 5% 5%;
-  background-color: $blue;
+  width: 18%;
+  height: 150px;
+  float: left;
+  margin: 0px 1% 0% 1%;
+  list-style: none;
+  img{
+    float:left;
+    width:100%;
+    min-height:100px;
+  }
+  label{
+    float:left;
+    width:100%;
+    font-size:0.6em;
+  }
+}
+
+.boothIsland img{
+    background-color: $blue;
+}
+
+.boothSplitIsland img {
+    background-color: green;
+}
+
+.boothPeninsula img{
+    background-color: red;
+}
+
+.boothInline img{
+    background-color: pink;
 }

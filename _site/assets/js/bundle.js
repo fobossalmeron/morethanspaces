@@ -26331,24 +26331,122 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-//import './../db/db.json';
+var SingleBooth = function (_Component) {
+  _inherits(SingleBooth, _Component);
 
-var BoothGrid = function (_Component) {
-  _inherits(BoothGrid, _Component);
+  function SingleBooth(props) {
+    _classCallCheck(this, SingleBooth);
+
+    var _this = _possibleConstructorReturn(this, (SingleBooth.__proto__ || Object.getPrototypeOf(SingleBooth)).call(this, props));
+
+    _this.state = {
+      main: ''
+    };
+    return _this;
+  }
+
+  _createClass(SingleBooth, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.setState({
+        main: this.props.images[0].url
+      });
+    }
+  }, {
+    key: 'handleView',
+    value: function handleView(value) {
+      value !== "3d" ? this.setState({
+        main: this.props.images[value].url
+      }) : console.log("value is 3d");
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var imageOptions = _react2.default.createElement(
+        'div',
+        { className: 'singleImage' },
+        _react2.default.createElement('img', { src: this.state.main }),
+        _react2.default.createElement('img', { className: 'thumbnailBooth', onClick: function onClick() {
+            return _this2.handleView("3d");
+          }, src: 'assets/img/3dTrigger.svg' }),
+        _react2.default.createElement('img', { className: 'thumbnailBooth', onClick: function onClick() {
+            return _this2.handleView(0);
+          }, src: this.props.images[0].url }),
+        _react2.default.createElement('img', { className: 'thumbnailBooth', onClick: function onClick() {
+            return _this2.handleView(1);
+          }, src: this.props.images[1].url }),
+        _react2.default.createElement('img', { className: 'thumbnailBooth', onClick: function onClick() {
+            return _this2.handleView(2);
+          }, src: this.props.images[2].url })
+      );
+      return _react2.default.createElement(
+        'div',
+        { className: 'singleBooth' },
+        imageOptions,
+        _react2.default.createElement(
+          'div',
+          { className: 'singleInfo' },
+          _react2.default.createElement(
+            'h3',
+            null,
+            this.props.singleValue
+          ),
+          _react2.default.createElement(
+            'span',
+            { onClick: function onClick() {
+                return _this2.props.handleBoothClick();
+              } },
+            '(Back to booths)'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            this.props.description
+          )
+        )
+      );
+    }
+  }]);
+
+  return SingleBooth;
+}(_react.Component);
+
+var BoothGrid = function (_Component2) {
+  _inherits(BoothGrid, _Component2);
 
   function BoothGrid(props) {
     _classCallCheck(this, BoothGrid);
 
-    var _this = _possibleConstructorReturn(this, (BoothGrid.__proto__ || Object.getPrototypeOf(BoothGrid)).call(this, props));
+    var _this3 = _possibleConstructorReturn(this, (BoothGrid.__proto__ || Object.getPrototypeOf(BoothGrid)).call(this, props));
 
-    _this.state = {
-      data: []
+    _this3.state = {
+      data: [],
+      singleVisible: false,
+      singleValue: '',
+      description: '',
+      obj: '',
+      images: []
     };
-    _this.loadFromServer = _this.loadFromServer.bind(_this);
-    return _this;
+    _this3.loadFromServer = _this3.loadFromServer.bind(_this3);
+    return _this3;
   }
 
   _createClass(BoothGrid, [{
+    key: 'generateSingleBooth',
+    value: function generateSingleBooth(singleValue, description, obj, images) {
+      this.setState({
+        singleVisible: true,
+        singleValue: singleValue,
+        description: description,
+        obj: obj,
+        images: images
+      });
+      console.log("successfully loaded " + singleValue);
+      console.log(obj);
+    }
+  }, {
     key: 'loadFromServer',
     value: function loadFromServer() {
       var xhr = new XMLHttpRequest();
@@ -26365,13 +26463,25 @@ var BoothGrid = function (_Component) {
       this.loadFromServer();
     }
   }, {
+    key: 'handleBoothClick',
+    value: function handleBoothClick() {
+      this.setState({ singleVisible: false });
+    }
+
+    //tienes que buscar en la base el mismo id y compararlo con cada uno de los ids
+
+  }, {
     key: 'render',
     value: function render() {
+      var _this4 = this;
+
       var allBooths = this.state.data.map(function (booth, index) {
         return _react2.default.createElement(
           'li',
-          { key: booth.id, className: "boothGridItem booth" + booth.type },
-          _react2.default.createElement('img', { src: booth.images[1] }),
+          { key: booth.id, onClick: function onClick() {
+              return _this4.generateSingleBooth(booth.id, booth.description, booth.obj, booth.images);
+            }, className: "boothGridItem booth" + booth.type },
+          _react2.default.createElement('img', { src: booth.images[0].url }),
           _react2.default.createElement(
             'label',
             null,
@@ -26379,10 +26489,17 @@ var BoothGrid = function (_Component) {
           )
         );
       });
+      var singleBooth = _react2.default.createElement(SingleBooth, { handleBoothClick: this.handleBoothClick.bind(this),
+        description: this.state.description,
+        singleValue: this.state.singleValue,
+        obj: this.state.obj,
+        images: this.state.images });
+
+      var gridChoice = this.state.singleVisible ? singleBooth : allBooths;
       return _react2.default.createElement(
         'ul',
         { id: 'boothGrid' },
-        allBooths
+        gridChoice
       );
     }
   }]);

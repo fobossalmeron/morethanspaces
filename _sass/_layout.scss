@@ -390,16 +390,19 @@ input[type=text]{
   }
 }
 
-.boothGrid{
+#boothGrid{
     width: 80%;
     min-height: 500px;
     padding: 0 5%;
     float: left;
+    width: 80%;
+    margin-left: 0;
 }
 
 .boothGridItem{
   width: 18%;
-  height: 150px;
+  height: 190px;
+  cursor: pointer;
   float: left;
   margin: 0px 1% 0% 1%;
   list-style: none;
@@ -429,4 +432,55 @@ input[type=text]{
 
 .boothInline img{
     background-color: pink;
+}
+
+.singleImage{
+    width: 60%;
+    float: left;
+    img{
+      width:100%;
+      min-height: 400px;
+    }
+    .thumbnailBooth{
+      width: 21%;
+      min-height: auto;
+      margin: 2% 4% 0 0;
+      cursor: pointer;
+      &:hover{
+        opacity:0.8;
+      }
+      &::nth-last-child(0){
+        margin-right:0px;
+      }
+    }
+}
+
+.singleBooth{
+  float: left;
+  position: relative;
+  width: 100%;
+
+  .singleInfo{
+    float:left;
+    width:40%;
+    padding-left:2%;
+  }
+
+  h3{
+    float:left;
+    width:100%;
+  }
+
+  span{
+    font-size:0.7em;
+    font-style: italic;
+    cursor:pointer;
+  }
+
+  p{
+    width:100%;
+    float:left;
+    font-size:0.8em;
+    margin:0px;
+  }
 }

@@ -1,49 +1,6 @@
 import React, { Component } from 'react';
-
-class SingleBooth extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      main: ''
-    };
-  }
-  componentDidMount() {
-   this.setState({
-     main: this.props.images[0].url
-    });
-  }
-
-  handleView(value){
-    value !== "3d" ?
-    this.setState({
-      main: this.props.images[value].url
-    }) : console.log("value is 3d");
-  }
-
-  render() {
-
-    var imageOptions = (
-      <div className="singleImage">
-        <img src={this.state.main}/>
-          <img className="thumbnailBooth" onClick={() => this.handleView("3d")} src="assets/img/3dTrigger.svg"/>
-          <img className="thumbnailBooth" onClick={() => this.handleView(0)} src={this.props.images[0].url}/>
-          <img className="thumbnailBooth" onClick={() => this.handleView(1)} src={this.props.images[1].url}/>
-          <img className="thumbnailBooth" onClick={() => this.handleView(2)} src={this.props.images[2].url}/>
-      </div>
-    );
-    return (
-      <div className="singleBooth">
-        {imageOptions}
-        <div className="singleInfo">
-          <h3>{this.props.singleValue}</h3>
-          <span onClick={() => this.props.handleBoothClick()}>(Back to booths)</span>
-          <p>{this.props.description}</p>
-        </div>
-      </div>
-    )
-  }
-}
-
+import SingleBooth from './SingleBooth';
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
 
 class BoothGrid extends Component {
   constructor(props) {
@@ -111,7 +68,12 @@ class BoothGrid extends Component {
      var gridChoice = (this.state.singleVisible ? singleBooth : allBooths);
     return (
       <ul id="boothGrid">
-          {gridChoice}
+      <CSSTransitionGroup
+               transitionName="example"
+               transitionEnterTimeout={500}
+               transitionLeaveTimeout={300}>
+               {gridChoice}
+             </CSSTransitionGroup>
       </ul>
     );
   }

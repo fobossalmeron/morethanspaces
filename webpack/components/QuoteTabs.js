@@ -5,11 +5,32 @@ import TradeShowForm from './TradeShowForm';
 import BoothGrid from './BoothGrid';
 
 class QuoteTabs extends Component {
-//  onTabClick: function(evt){
-//    alert('tab clicked');
-    //quoteTabContent.addclassname(visible)
-    //quoteTabContent.other.removeclassname(visible)
-//  },
+  constructor(props) {
+    super(props);
+    this.state = {
+      boothSizeWidth: 0,
+      boothSizeHeight: 0,
+      boothType: 0,
+      rentOwn: 1,
+      eventLocation: '',
+      dateFrom: '',
+      dateTo: ''
+    };
+  }
+
+  renderDifferentBooths(singleValue, description, obj, images){
+    this.setState({
+      boothSizeWidth: boothSizeWidth,
+      boothSizeHeight: boothSizeHeight,
+      boothType: boothType,
+      rentOwn: rentOwn,
+      eventLocation: eventLocation,
+      dateFrom: dateFrom,
+      dateTo: dateTo
+    })
+    console.log("successfully loaded " + singleValue);
+    console.log(obj);
+  }
   render(){
     return (
       <Tabs>

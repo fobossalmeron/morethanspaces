@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {render} from 'react-dom';
 import QuoteTabs from './components/QuoteTabs';
 import InstaQuoteButton from './components/InstaQuoteButton';
-import './extras/nav';
+import './extras/Nav';
 
 class Quote extends Component {
   render() {

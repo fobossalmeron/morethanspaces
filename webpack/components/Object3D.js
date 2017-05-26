@@ -46,7 +46,7 @@ class Object3D extends Component{
        mainCamera="camera" // this points to the perspectiveCamera which has the name set to "camera" below
        width={canvasWidth}
        height={canvasHeight}
-       clearColor="#F9D026"
+       clearColor="#f9f9f9"
 
        onAnimate={this._onAnimate}
      >
@@ -77,7 +77,7 @@ class Object3D extends Component{
              depth={1}
            />
            <meshBasicMaterial
-             color={0x0E6FE2}
+             color={0xEC3092}
            />
          </mesh>
        </scene>

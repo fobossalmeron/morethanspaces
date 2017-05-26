@@ -11,11 +11,18 @@ class QuoteTabs extends Component {
       boothSizeWidth: 0,
       boothSizeHeight: 0,
       boothType: 0,
+      selectedIsland: true,
       rentOwn: 1,
       eventLocation: '',
       dateFrom: '',
       dateTo: ''
     };
+  }
+
+  unselectIsland(){
+    this.setState({
+      selectedIsland: false
+    })
   }
 
   renderDifferentBooths(singleValue, description, obj, images){
@@ -46,8 +53,11 @@ class QuoteTabs extends Component {
         </TabList>
 
         <TabPanel>
-          <TradeShowForm />
-          <BoothGrid/>
+          <TradeShowForm
+          unselectIsland={this.unselectIsland.bind(this)}/>
+          <BoothGrid
+          selectedIsland={this.state.selectedIsland}
+          />
         </TabPanel>
         <TabPanel>
           <img src="/morethanspaces/assets/img/mock.png"></img>

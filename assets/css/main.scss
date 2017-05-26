@@ -21,8 +21,9 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 $black: #383838;
 $white: #f9f9f9;
-$yellow: #F9D026;
-$blue: #0E6FE2;
+$yellow: #ec3092;
+$darkyellow: darken($yellow, 10%);
+$blue: #2cbdc0;
 
 $twitter:#02BAF8;
 $mail:#d14836;

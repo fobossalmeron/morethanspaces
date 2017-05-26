@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import React3 from 'react-three-renderer';
 import * as THREE from 'three';
 import ReactDOM from 'react-dom';
+import ParsedModel from './../extras/parsed_model.js';
+import createMaterial from './../extras/create_material';
+//import OrbitControls from './../extras/OrbitControls';
 
 class Object3D extends Component{
   constructor(props, context) {
@@ -32,6 +35,7 @@ class Object3D extends Component{
    }
 
    render() {
+
      var canvasWidth = document.querySelector('#visualizer').offsetWidth;
      var canvasHeight = document.querySelector('#visualizer').offsetHeight;
 
@@ -42,6 +46,7 @@ class Object3D extends Component{
        mainCamera="camera" // this points to the perspectiveCamera which has the name set to "camera" below
        width={canvasWidth}
        height={canvasHeight}
+       clearColor="#F9D026"
 
        onAnimate={this._onAnimate}
      >
@@ -52,19 +57,27 @@ class Object3D extends Component{
            aspect={width / height}
            near={0.1}
            far={1000}
-
            position={this.cameraPosition}
          />
-         <mesh
-           rotation={this.state.cubeRotation}
-         >
+
+         <ambientLight
+           color={new THREE.Color(0xffffff)}
+         />
+
+         <directionalLight
+           color={new THREE.Color(0xFFFFFF)}
+           intensity={1.5}
+           position={new THREE.Vector3(0, 0, 60)}
+         />
+
+         <mesh rotation={this.state.cubeRotation}>
            <boxGeometry
              width={1}
              height={1}
              depth={1}
            />
            <meshBasicMaterial
-             color={0x00ff00}
+             color={0x0E6FE2}
            />
          </mesh>
        </scene>

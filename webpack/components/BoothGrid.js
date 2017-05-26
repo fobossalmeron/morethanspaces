@@ -24,8 +24,6 @@ class BoothGrid extends Component {
       obj: obj,
       images : images
     })
-    console.log("successfully loaded " + singleValue);
-    console.log(obj);
   }
 
   loadFromServer () {

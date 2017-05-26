@@ -78477,6 +78477,7 @@ var QuoteTabs = function (_Component) {
       boothSizeWidth: 0,
       boothSizeHeight: 0,
       boothType: 0,
+      selectedIsland: true,
       rentOwn: 1,
       eventLocation: '',
       dateFrom: '',
@@ -78486,6 +78487,13 @@ var QuoteTabs = function (_Component) {
   }
 
   _createClass(QuoteTabs, [{
+    key: 'unselectIsland',
+    value: function unselectIsland() {
+      this.setState({
+        selectedIsland: false
+      });
+    }
+  }, {
     key: 'renderDifferentBooths',
     value: function renderDifferentBooths(singleValue, description, obj, images) {
       this.setState({
@@ -78533,8 +78541,11 @@ var QuoteTabs = function (_Component) {
         _react2.default.createElement(
           _reactTabs.TabPanel,
           null,
-          _react2.default.createElement(_TradeShowForm2.default, null),
-          _react2.default.createElement(_BoothGrid2.default, null)
+          _react2.default.createElement(_TradeShowForm2.default, {
+            unselectIsland: this.unselectIsland.bind(this) }),
+          _react2.default.createElement(_BoothGrid2.default, {
+            selectedIsland: this.state.selectedIsland
+          })
         ),
         _react2.default.createElement(
           _reactTabs.TabPanel,
@@ -78654,12 +78665,14 @@ var BoothGrid = function (_Component) {
     value: function render() {
       var _this2 = this;
 
+      var hidden = this.props.selectedIsland ? '' : 'hidden';
+
       var allBooths = this.state.data.map(function (booth, index) {
         return _react2.default.createElement(
           'li',
           { key: booth.id, onClick: function onClick() {
               return _this2.generateSingleBooth(booth.id, booth.description, booth.obj, booth.images);
-            }, className: "boothGridItem booth" + booth.type },
+            }, className: "boothGridItem booth" + booth.type + " " + hidden },
           _react2.default.createElement('img', { src: booth.images[0].url }),
           _react2.default.createElement(
             'label',

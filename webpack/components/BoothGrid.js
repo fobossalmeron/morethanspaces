@@ -48,9 +48,10 @@ class BoothGrid extends Component {
   //tienes que buscar en la base el mismo id y compararlo con cada uno de los ids
 
   render () {
+    const hidden = this.props.selectedIsland ? '' : 'hidden';
 
     var allBooths = this.state.data.map((booth, index) => (
-      <li key={booth.id} onClick={() => this.generateSingleBooth(booth.id, booth.description, booth.obj, booth.images)} className={"boothGridItem booth" + booth.type}>
+      <li key={booth.id} onClick={() => this.generateSingleBooth(booth.id, booth.description, booth.obj, booth.images)} className={"boothGridItem booth" + booth.type + " " + hidden}>
             <img src={booth.images[0].url}/>
             <label>{booth.id}</label>
       </li>

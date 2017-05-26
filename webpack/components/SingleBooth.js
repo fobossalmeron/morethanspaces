@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import Object3D from './Object3D';
 
+
 class SingleBooth extends Component {
   constructor(props) {
     super(props);
@@ -17,10 +18,8 @@ class SingleBooth extends Component {
   }
 
   handleView(value){
-    this.setState({ render3D: false })
     value !== "3D" ?
-    this.setState({main: this.props.images[value].url}) : this.setState({render3D:true})
-    console.log(this.state.render3D);
+    this.setState({main: this.props.images[value].url, render3D:false}) : this.setState({render3D:true})
   }
 
   render() {
@@ -45,7 +44,7 @@ class SingleBooth extends Component {
         {imageOptions}
         <div className="singleInfo">
           <h3>{this.props.singleValue}</h3>
-          <span onClick={() => this.props.handleBoothClick()}>(Back to booths)</span>
+          <span onClick={() => this.props.handleBoothClick()}>&#8592; (Back to booths)</span>
           <p>{this.props.description}</p>
         </div>
       </div>

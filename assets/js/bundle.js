@@ -78478,6 +78478,9 @@ var QuoteTabs = function (_Component) {
       boothSizeHeight: 0,
       boothType: 0,
       selectedIsland: true,
+      selectedSplitIsland: true,
+      selectedInline: true,
+      selectedPeninsula: true,
       rentOwn: 1,
       eventLocation: '',
       dateFrom: '',
@@ -78492,6 +78495,29 @@ var QuoteTabs = function (_Component) {
       this.setState({
         selectedIsland: false
       });
+    }
+  }, {
+    key: 'toggleBooth',
+    value: function toggleBooth(booth) {
+      console.log("function running ");
+      switch (booth) {
+        case "Island":
+          this.setState({ selectedIsland: !this.state.selectedIsland });
+          console.log("island was toggled");
+          break;
+        case "SplitIsland":
+          this.setState({ selectedSplitIsland: !this.state.selectedSplitIsland });
+          console.log("split-island was toggled");
+          break;
+        case "Peninsula":
+          this.setState({ selectedPeninsula: !this.state.selectedPeninsula });
+          console.log("peninsula was toggled");
+          break;
+        case "Inline":
+          this.setState({ selectedInline: !this.state.selectedInline });
+          console.log("inline was toggled");
+          break;
+      }
     }
   }, {
     key: 'renderDifferentBooths',
@@ -78541,10 +78567,12 @@ var QuoteTabs = function (_Component) {
         _react2.default.createElement(
           _reactTabs.TabPanel,
           null,
-          _react2.default.createElement(_TradeShowForm2.default, {
-            unselectIsland: this.unselectIsland.bind(this) }),
+          _react2.default.createElement(_TradeShowForm2.default, { toggleBooth: this.toggleBooth.bind(this) }),
           _react2.default.createElement(_BoothGrid2.default, {
-            selectedIsland: this.state.selectedIsland
+            selectedIsland: this.state.selectedIsland,
+            selectedSplitIsland: this.state.selectedSplitIsland,
+            selectedPeninsula: this.state.selectedPeninsula,
+            selectedInline: this.state.selectedInline
           })
         ),
         _react2.default.createElement(
@@ -78657,6 +78685,20 @@ var BoothGrid = function (_Component) {
     value: function handleBoothClick() {
       this.setState({ singleVisible: false });
     }
+  }, {
+    key: 'hiddenIfType',
+    value: function hiddenIfType(booth) {
+      if (booth === "Island" && !this.props.selectedIsland) {
+        return "hidden";
+      } else if (booth === "SplitIsland" && !this.props.selectedSplitIsland) {
+        return "hidden";
+      } else if (booth === "Peninsula" && !this.props.selectedPeninsula) {
+        return "hidden";
+      } else if (booth === "Inline" && !this.props.selectedInline) {
+        return "hidden";
+      }
+      return " ";
+    }
 
     //tienes que buscar en la base el mismo id y compararlo con cada uno de los ids
 
@@ -78665,14 +78707,14 @@ var BoothGrid = function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var hidden = this.props.selectedIsland ? '' : 'hidden';
-
       var allBooths = this.state.data.map(function (booth, index) {
         return _react2.default.createElement(
           'li',
-          { key: booth.id, onClick: function onClick() {
+          { key: booth.id,
+            onClick: function onClick() {
               return _this2.generateSingleBooth(booth.id, booth.description, booth.obj, booth.images);
-            }, className: "boothGridItem booth" + booth.type + " " + hidden },
+            },
+            className: "boothGridItem booth" + booth.type + " " + _this2.hiddenIfType(booth.type) },
           _react2.default.createElement('img', { src: booth.images[0].url }),
           _react2.default.createElement(
             'label',
@@ -78850,19 +78892,23 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var FormCheckBox = function (_Component) {
   _inherits(FormCheckBox, _Component);
 
-  function FormCheckBox() {
+  function FormCheckBox(props) {
     _classCallCheck(this, FormCheckBox);
 
-    return _possibleConstructorReturn(this, (FormCheckBox.__proto__ || Object.getPrototypeOf(FormCheckBox)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (FormCheckBox.__proto__ || Object.getPrototypeOf(FormCheckBox)).call(this, props));
   }
 
   _createClass(FormCheckBox, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
         "div",
         { className: "formCheck quoteCheck" },
-        _react2.default.createElement("input", { type: this.props.inputType, id: this.props.checkFor, name: this.props.nameFor, value: "true", defaultChecked: this.props.checked }),
+        _react2.default.createElement("input", { type: this.props.inputType, id: this.props.checkFor, name: this.props.nameFor, onChange: function onChange() {
+            return _this2.props.toggleBooth(_this2.props.nameFor);
+          }, value: "true", defaultChecked: this.props.checked }),
         _react2.default.createElement("label", { className: "noMargin", htmlFor: this.props.checkFor }),
         _react2.default.createElement(
           "span",
@@ -78974,7 +79020,7 @@ var Object3D = function (_Component) {
           mainCamera: 'camera' // this points to the perspectiveCamera which has the name set to "camera" below
           , width: canvasWidth,
           height: canvasHeight,
-          clearColor: '#F9D026',
+          clearColor: '#f9f9f9',
 
           onAnimate: this._onAnimate
         },
@@ -79006,7 +79052,7 @@ var Object3D = function (_Component) {
               depth: 1
             }),
             _react2.default.createElement('meshBasicMaterial', {
-              color: 0x0E6FE2
+              color: 0xEC3092
             })
           )
         )
@@ -79241,10 +79287,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var TradeShowForm = function (_Component) {
   _inherits(TradeShowForm, _Component);
 
-  function TradeShowForm() {
+  function TradeShowForm(props) {
     _classCallCheck(this, TradeShowForm);
 
-    return _possibleConstructorReturn(this, (TradeShowForm.__proto__ || Object.getPrototypeOf(TradeShowForm)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (TradeShowForm.__proto__ || Object.getPrototypeOf(TradeShowForm)).call(this, props));
   }
 
   _createClass(TradeShowForm, [{
@@ -79268,18 +79314,23 @@ var TradeShowForm = function (_Component) {
           ),
           _react2.default.createElement(
             'option',
-            { value: '15' },
-            '15ft'
-          ),
-          _react2.default.createElement(
-            'option',
             { value: '20' },
             '20ft'
           ),
           _react2.default.createElement(
             'option',
-            { value: '25' },
-            '25ft'
+            { value: '30' },
+            '30ft'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: '40' },
+            '40ft'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: '50' },
+            '50ft'
           )
         ),
         _react2.default.createElement(
@@ -79297,18 +79348,23 @@ var TradeShowForm = function (_Component) {
           ),
           _react2.default.createElement(
             'option',
-            { value: '15' },
-            '15ft'
-          ),
-          _react2.default.createElement(
-            'option',
             { value: '20' },
             '20ft'
           ),
           _react2.default.createElement(
             'option',
-            { value: '25' },
-            '25ft'
+            { value: '30' },
+            '30ft'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: '40' },
+            '40ft'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: '50' },
+            '50ft'
           )
         ),
         _react2.default.createElement(
@@ -79316,10 +79372,10 @@ var TradeShowForm = function (_Component) {
           null,
           'booth type'
         ),
-        _react2.default.createElement(_FormCheckBox2.default, { inputType: 'checkbox', nameFor: 'island', checkFor: 'island', checked: 'checked' }),
-        _react2.default.createElement(_FormCheckBox2.default, { inputType: 'checkbox', nameFor: 'split island', checkFor: 'split island', checked: 'checked', doubleLine: 'doubleLine' }),
-        _react2.default.createElement(_FormCheckBox2.default, { inputType: 'checkbox', nameFor: 'peninsula', checked: 'checked', checkFor: 'peninsula' }),
-        _react2.default.createElement(_FormCheckBox2.default, { inputType: 'checkbox', nameFor: 'inline', checked: 'checked', checkFor: 'inline' }),
+        _react2.default.createElement(_FormCheckBox2.default, { toggleBooth: this.props.toggleBooth.bind(this), inputType: 'checkbox', nameFor: 'Island', checkFor: 'island', checked: 'checked' }),
+        _react2.default.createElement(_FormCheckBox2.default, { toggleBooth: this.props.toggleBooth.bind(this), inputType: 'checkbox', nameFor: 'SplitIsland', checkFor: 'split island', checked: 'checked', doubleLine: 'doubleLine' }),
+        _react2.default.createElement(_FormCheckBox2.default, { toggleBooth: this.props.toggleBooth.bind(this), inputType: 'checkbox', nameFor: 'Peninsula', checked: 'checked', checkFor: 'peninsula' }),
+        _react2.default.createElement(_FormCheckBox2.default, { toggleBooth: this.props.toggleBooth.bind(this), inputType: 'checkbox', nameFor: 'Inline', checked: 'checked', checkFor: 'inline' }),
         _react2.default.createElement(
           'label',
           null,

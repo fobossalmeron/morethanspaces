@@ -45,13 +45,31 @@ class BoothGrid extends Component {
     this.setState({ singleVisible: false });
   }
 
+
+    hiddenIfType(booth){
+      if (booth === "Island" && !this.props.selectedIsland) {
+          return "hidden";
+        }
+      else if (booth === "SplitIsland" && !this.props.selectedSplitIsland) {
+          return "hidden";
+      }
+      else if (booth === "Peninsula" && !this.props.selectedPeninsula) {
+          return "hidden";
+      }
+      else if (booth === "Inline" && !this.props.selectedInline) {
+          return "hidden";
+      }
+      return " ";
+    }
+
   //tienes que buscar en la base el mismo id y compararlo con cada uno de los ids
 
   render () {
-    const hidden = this.props.selectedIsland ? '' : 'hidden';
 
     var allBooths = this.state.data.map((booth, index) => (
-      <li key={booth.id} onClick={() => this.generateSingleBooth(booth.id, booth.description, booth.obj, booth.images)} className={"boothGridItem booth" + booth.type + " " + hidden}>
+      <li key={booth.id}
+          onClick={() => this.generateSingleBooth(booth.id, booth.description, booth.obj, booth.images)}
+          className={"boothGridItem booth" + booth.type + " " + this.hiddenIfType(booth.type)}>
             <img src={booth.images[0].url}/>
             <label>{booth.id}</label>
       </li>

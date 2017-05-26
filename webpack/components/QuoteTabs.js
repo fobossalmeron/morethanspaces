@@ -12,6 +12,9 @@ class QuoteTabs extends Component {
       boothSizeHeight: 0,
       boothType: 0,
       selectedIsland: true,
+      selectedSplitIsland: true,
+      selectedInline: true,
+      selectedPeninsula: true,
       rentOwn: 1,
       eventLocation: '',
       dateFrom: '',
@@ -23,6 +26,28 @@ class QuoteTabs extends Component {
     this.setState({
       selectedIsland: false
     })
+  }
+
+  toggleBooth(booth){
+    console.log("function running ")
+    switch (booth) {
+      case "Island":
+        this.setState({selectedIsland: !this.state.selectedIsland})
+        console.log("island was toggled")
+        break
+      case "SplitIsland":
+        this.setState({selectedSplitIsland: !this.state.selectedSplitIsland})
+        console.log("split-island was toggled")
+        break
+      case "Peninsula":
+        this.setState({selectedPeninsula: !this.state.selectedPeninsula})
+        console.log("peninsula was toggled")
+        break
+      case "Inline":
+        this.setState({selectedInline: !this.state.selectedInline})
+        console.log("inline was toggled")
+        break
+    }
   }
 
   renderDifferentBooths(singleValue, description, obj, images){
@@ -53,10 +78,12 @@ class QuoteTabs extends Component {
         </TabList>
 
         <TabPanel>
-          <TradeShowForm
-          unselectIsland={this.unselectIsland.bind(this)}/>
+          <TradeShowForm toggleBooth={this.toggleBooth.bind(this)}/>
           <BoothGrid
           selectedIsland={this.state.selectedIsland}
+          selectedSplitIsland={this.state.selectedSplitIsland}
+          selectedPeninsula={this.state.selectedPeninsula}
+          selectedInline={this.state.selectedInline}
           />
         </TabPanel>
         <TabPanel>

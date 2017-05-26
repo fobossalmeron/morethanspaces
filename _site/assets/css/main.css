@@ -98,7 +98,7 @@ section { min-height: 500px; float: left; width: 100%; padding: 5%; }
 #clients ul li { width: 45%; float: left; font-size: 0px; background-size: contain; background-repeat: no-repeat; min-height: 100px; margin: 0% 5% 5% 0%; }
 #clients ul li:nth-last-child(1), #clients ul li:nth-last-child(2) { margin-bottom: 0px; }
 
-#quoteSection { padding: 0px; background-color: #ec3092; }
+#quoteSection { padding: 0px; background-color: #f9f9f9; }
 #quoteSection h2 { margin: 0px; float: left; }
 
 .quoteCheck { width: 30px; height: 30px; float: left; top: 10px; left: 15px; position: relative; }
@@ -110,17 +110,17 @@ section { min-height: 500px; float: left; width: 100%; padding: 5%; }
 
 input[type=text] { border: none; padding: 4px; font-size: .7em; }
 
-.formCheck { width: 15%; margin-right: 10%; margin-bottom: 9%; top: 0; left: 0; }
+.formCheck { width: 30px; margin-right: 10%; margin-bottom: 9%; top: 0; left: 0; }
 .formCheck label { background-color: white; }
 .formCheck label:after { border-color: #2cbdc0; }
 
 .react-tabs__tab-list { margin: 0px; list-style: none; float: left; width: 100%; }
 
-.react-tabs__tab { width: 50%; float: left; padding: 15px 10%; background-color: #d51479; position: relative; }
+.react-tabs__tab { width: 50%; float: left; padding: 15px 0px 20px 35px; background-color: #e0e0e0; position: relative; }
 .react-tabs__tab:focus { outline: none; }
 .react-tabs__tab:focus::after { content: ''; position: absolute; height: 100%; width: 5px; right: 0; bottom: 0; background: #2cbdc0; box-shadow: 0 0 5px #2cbdc0; }
 
-.react-tabs__tab--selected { background-color: #ec3092; }
+.react-tabs__tab--selected { background-color: #f9f9f9; }
 
 .react-tabs__tab-panel { float: left; width: 100%; padding: 3% 0; }
 
@@ -149,20 +149,22 @@ input[type=text] { border: none; padding: 4px; font-size: .7em; }
 
 #boothGrid { width: 80%; min-height: 500px; padding: 0 5%; float: left; width: 80%; margin-left: 0; }
 
-.boothGridItem { width: 18%; height: 120px; cursor: pointer; float: left; margin: 0px 1% 6% 1%; list-style: none; }
+.boothGridItem { width: 23%; transition: .5s ease all; height: 120px; cursor: pointer; float: left; margin: 0px 1% 6% 1%; list-style: none; }
+.boothGridItem:hover { opacity: 0.8; }
 .boothGridItem img { float: left; width: 100%; min-height: 100px; }
 .boothGridItem label { float: left; width: 100%; font-size: 0.6em; }
-.boothGridItem label::after { content: ' '; width: 10px; height: 10px; margin-top: 4px; display: inline-block; right: 0; float: right; position: relative; }
+.boothGridItem label::after { content: ' '; padding: 0px 3px; height: 18px; display: inline-block; right: 0; float: right; position: relative; }
 
+.hidden { opacity: 0; display: none; }
 .hidden label::after { content: "hidden"; }
 
-.boothIsland label::after { background-color: #2cbdc0; }
+.boothIsland label::after { content: 'island'; background-color: #2cbdc0; }
 
-.boothSplitIsland label::after { background-color: cyan; }
+.boothSplitIsland label::after { content: 'split island'; background-color: #ec3092; }
 
-.boothPeninsula label::after { background-color: purple; }
+.boothPeninsula label::after { content: 'peninsula'; background-color: coral; }
 
-.boothInline label::after { background-color: orange; }
+.boothInline label::after { content: 'inline'; background-color: orange; }
 
 .singleImage { width: 60%; float: left; }
 .singleImage img { width: 100%; min-height: 400px; }

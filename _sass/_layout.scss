@@ -200,7 +200,7 @@ section{
 
 #quoteSection{
   padding:0px;
-  background-color: $yellow;
+  background-color: $white;
   h2{
     margin:0px;
     float:left;
@@ -260,7 +260,7 @@ input[type=text]{
 }
 
 .formCheck{
-  width: 15%;
+  width: 30px;
   margin-right: 10%;
   margin-bottom: 9%;
   top:0;
@@ -283,8 +283,8 @@ input[type=text]{
 .react-tabs__tab{
   width:50%;
   float:left;
-  padding: 15px 10%;
-  background-color: $darkyellow;
+  padding: 15px 0px 20px 35px;
+  background-color: darken($white, 10%);
   position:relative;
   &:focus{
     outline: none;
@@ -302,7 +302,7 @@ input[type=text]{
 }
 
 .react-tabs__tab--selected{
-  background-color: $yellow;
+  background-color: $white;
 }
 
 .react-tabs__tab-panel{
@@ -400,12 +400,16 @@ input[type=text]{
 }
 
 .boothGridItem{
-  width: 18%;
+  width: 23%;
+  transition: .5s ease all;
   height: 120px;
   cursor: pointer;
   float: left;
   margin: 0px 1% 6% 1%;
   list-style: none;
+  &:hover{
+    opacity:0.8;
+  }
   img{
     float:left;
     width:100%;
@@ -416,10 +420,9 @@ input[type=text]{
     width:100%;
     font-size:0.6em;
     &::after{
-      content:' ';
-      width: 10px;
-      height: 10px;
-      margin-top: 4px;
+      content: ' ';
+      padding: 0px 3px;
+      height: 18px;
       display: inline-block;
       right: 0;
       float: right;
@@ -429,24 +432,30 @@ input[type=text]{
 }
 
 .hidden{
+  opacity:0;
+  display:none;
   label::after{
     content:'hidden'
   }
 }
 
 .boothIsland label::after{
+    content: 'island';
     background-color: $blue;
 }
 
 .boothSplitIsland label::after{
-    background-color: cyan;
+    content: 'split island';
+    background-color: #ec3092;
 }
 
 .boothPeninsula label::after{
-    background-color: purple;
+    content: 'peninsula';
+    background-color: coral;
 }
 
 .boothInline label::after{
+    content:'inline';
     background-color: orange;
 }
 

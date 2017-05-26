@@ -79294,16 +79294,8 @@ var TradeShowForm = function (_Component) {
   }
 
   _createClass(TradeShowForm, [{
-    key: 'toggleChange',
-    value: function toggleChange(booth) {
-      console.log(booth);
-      //  this.props.toggleBooth(booth);
-    }
-  }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
       return _react2.default.createElement(
         'div',
         { className: 'instaQuoteForm' },
@@ -79377,9 +79369,7 @@ var TradeShowForm = function (_Component) {
         ),
         _react2.default.createElement(
           'label',
-          { onClick: function onClick() {
-              return _this2.props.toggleBooth("Peninsula");
-            } },
+          null,
           'booth type'
         ),
         _react2.default.createElement(_FormCheckBox2.default, { toggleBooth: this.props.toggleBooth.bind(this), inputType: 'checkbox', nameFor: 'Island', checkFor: 'island', checked: 'checked' }),

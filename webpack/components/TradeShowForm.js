@@ -8,10 +8,6 @@ class TradeShowForm extends Component {
   constructor(props) {
     super(props);
   }
-  toggleChange(booth){
-    console.log(booth)
-    //  this.props.toggleBooth(booth);
-  }
   render(){
     return (
       <div className="instaQuoteForm">
@@ -31,7 +27,7 @@ class TradeShowForm extends Component {
             <option value="40">40ft</option>
             <option value="50">50ft</option>
           </select>
-        <label onClick={() => this.props.toggleBooth("Peninsula")}>booth type</label>
+        <label>booth type</label>
           <FormCheckBox toggleBooth={this.props.toggleBooth.bind(this)} inputType="checkbox" nameFor="Island" checkFor="island" checked="checked"/>
           <FormCheckBox toggleBooth={this.props.toggleBooth.bind(this)} inputType="checkbox" nameFor="SplitIsland" checkFor="split island" checked="checked" doubleLine="doubleLine"/>
           <FormCheckBox toggleBooth={this.props.toggleBooth.bind(this)} inputType="checkbox" nameFor="Peninsula" checked="checked" checkFor="peninsula"/>

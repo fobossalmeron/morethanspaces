@@ -7,29 +7,27 @@ class SingleBooth extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      main: '',
+      mainImage: '',
       render3D: false
     };
   }
   componentDidMount() {
    this.setState({
-     main: this.props.images[0].url
+     mainImage: this.props.images[0].url
     });
   }
 
   handleView(value){
     value !== "3D" ?
-    this.setState({main: this.props.images[value].url, render3D:false}) : this.setState({render3D:true})
+    this.setState({mainImage: this.props.images[value].url, render3D:false}) : this.setState({render3D:true})
   }
 
   render() {
     var backgroundStyle = {
-      backgroundImage: 'url(' + this.state.main + ')',
+      backgroundImage: 'url(' + this.state.mainImage + ')',
     };
-    var object3D = (
-      <Object3D/>
-          )
-    var choice3D = (this.state.render3D ? object3D : null);
+    var choice3D = (this.state.render3D ? <Object3D/> : null);
+
     var imageOptions = (
       <div className="singleImage">
           <div className="visualizer" id="visualizer" style={backgroundStyle}>{ choice3D }</div>
@@ -44,7 +42,7 @@ class SingleBooth extends Component {
         {imageOptions}
         <div className="singleInfo">
           <h3>{this.props.singleValue}</h3>
-          <span onClick={() => this.props.handleBoothClick()}>&#8592; (Back to booths)</span>
+          <span onClick={() => this.props.closeIndividualBooth()}>&#8592; (Back to booths)</span>
           <p>{this.props.description}</p>
         </div>
       </div>

@@ -8,9 +8,8 @@ class QuoteTabs extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      boothSizeWidth: 0,
-      boothSizeHeight: 0,
-      boothType: 0,
+      boothSizeWidth: "All",
+      boothSizeLength: "All",
       selectedIsland: true,
       selectedSplitIsland: true,
       selectedInline: true,
@@ -22,47 +21,36 @@ class QuoteTabs extends Component {
     };
   }
 
-  unselectIsland(){
-    this.setState({
-      selectedIsland: false
-    })
-  }
-
   toggleBooth(booth){
-    console.log("function running ")
     switch (booth) {
       case "Island":
         this.setState({selectedIsland: !this.state.selectedIsland})
-        console.log("island was toggled")
         break
       case "SplitIsland":
         this.setState({selectedSplitIsland: !this.state.selectedSplitIsland})
-        console.log("split-island was toggled")
         break
       case "Peninsula":
         this.setState({selectedPeninsula: !this.state.selectedPeninsula})
-        console.log("peninsula was toggled")
         break
       case "Inline":
         this.setState({selectedInline: !this.state.selectedInline})
-        console.log("inline was toggled")
         break
     }
   }
 
-  renderDifferentBooths(singleValue, description, obj, images){
+  limitByWidth(width){
     this.setState({
-      boothSizeWidth: boothSizeWidth,
-      boothSizeHeight: boothSizeHeight,
-      boothType: boothType,
-      rentOwn: rentOwn,
-      eventLocation: eventLocation,
-      dateFrom: dateFrom,
-      dateTo: dateTo
-    })
-    console.log("successfully loaded " + singleValue);
-    console.log(obj);
+      boothSizeWidth: width
+    });
   }
+
+  limitByLength(length){
+    console.log("Booth size function triggered with length: " + length)
+    this.setState({
+      boothSizeLength: length
+    }, () => {console.log("State changed, state.length is " + this.state.boothSizeLength)});
+  }
+
   render(){
     return (
       <Tabs>
@@ -78,12 +66,16 @@ class QuoteTabs extends Component {
         </TabList>
 
         <TabPanel>
-          <TradeShowForm toggleBooth={this.toggleBooth.bind(this)}/>
+          <TradeShowForm toggleBooth={this.toggleBooth.bind(this)}
+                         limitByWidth={this.limitByWidth.bind(this)}
+                         limitByLength={this.limitByLength.bind(this)}/>
           <BoothGrid
           selectedIsland={this.state.selectedIsland}
           selectedSplitIsland={this.state.selectedSplitIsland}
           selectedPeninsula={this.state.selectedPeninsula}
           selectedInline={this.state.selectedInline}
+          boothSizeWidth={this.state.boothSizeWidth}
+          boothSizeLength={this.state.boothSizeLength}
           />
         </TabPanel>
         <TabPanel>

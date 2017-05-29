@@ -7,23 +7,13 @@ class BoothGrid extends Component {
     super(props);
     this.state = {
       data: [],
-      singleVisible: false,
+      individualBoothRender: false,
       singleValue: '',
       description: '',
       obj: '',
       images:[]
     };
     this.loadFromServer = this.loadFromServer.bind(this);
-  }
-
-  generateSingleBooth(singleValue, description, obj, images){
-    this.setState({
-      singleVisible: true,
-      singleValue: singleValue,
-      description: description,
-      obj: obj,
-      images : images
-    })
   }
 
   loadFromServer () {
@@ -41,56 +31,78 @@ class BoothGrid extends Component {
     this.loadFromServer();
   }
 
-  handleBoothClick(){
-    this.setState({ singleVisible: false });
+  generateSingleBooth(singleValue, description, obj, images){
+    this.setState({
+      individualBoothRender: true,
+      singleValue: singleValue,
+      description: description,
+      obj: obj,
+      images : images
+    })
   }
 
+  closeIndividualBooth(){
+    this.setState({ individualBoothRender: false });
+  }
 
-    hiddenIfType(booth){
-      if (booth === "Island" && !this.props.selectedIsland) {
-          return "hidden";
-        }
-      else if (booth === "SplitIsland" && !this.props.selectedSplitIsland) {
-          return "hidden";
-      }
-      else if (booth === "Peninsula" && !this.props.selectedPeninsula) {
-          return "hidden";
-      }
-      else if (booth === "Inline" && !this.props.selectedInline) {
-          return "hidden";
-      }
-      return " ";
+  shouldIRender(booth){
+    if (booth === "Island" && !this.props.selectedIsland) {
+        return false;
     }
+    else if (booth === "SplitIsland" && !this.props.selectedSplitIsland) {
+        return false;
+    }
+    else if (booth === "Peninsula" && !this.props.selectedPeninsula) {
+        return false;
+    }
+    else if (booth === "Inline" && !this.props.selectedInline) {
+        return false;
+    }
+    return true;
+  }
 
-  //tienes que buscar en la base el mismo id y compararlo con cada uno de los ids
+  shouldIFit(sizeW, sizeL){
+    if ((this.props.boothSizeLength === sizeL || this.props.boothSizeLength === "All") &&
+        (this.props.boothSizeWidth === sizeW || this.props.boothSizeWidth === "All")){
+       return true
+    }
+       return false
+    }
 
   render () {
 
-    var allBooths = this.state.data.map((booth, index) => (
+    var doRenderBooths = this.state.data.filter((booth,index) => {
+      if (this.shouldIRender(booth.type) == false || this.shouldIFit(booth.width, booth.length) == false) {
+        return false
+      } else {
+        return true
+      }
+    }).map((booth, index) => (
       <li key={booth.id}
           onClick={() => this.generateSingleBooth(booth.id, booth.description, booth.obj, booth.images)}
-          className={"boothGridItem booth" + booth.type + " " + this.hiddenIfType(booth.type)}>
+          className={"boothGridItem booth" + booth.type}>
             <img src={booth.images[0].url}/>
             <label>{booth.id}</label>
       </li>
-     ));
-     var singleBooth = (
-       <SingleBooth handleBoothClick={this.handleBoothClick.bind(this)}
-                        description={this.state.description}
-                        singleValue={this.state.singleValue}
-                        obj={this.state.obj}
-                        images={this.state.images} />
+    ));
+
+    var singleBooth = (
+       <SingleBooth closeIndividualBooth={this.closeIndividualBooth.bind(this)}
+                    description={this.state.description}
+                    singleValue={this.state.singleValue}
+                    obj={this.state.obj}
+                    images={this.state.images} />
       );
 
-     var gridChoice = (this.state.singleVisible ? singleBooth : allBooths);
+    var gridChoice = (this.state.individualBoothRender ? singleBooth : doRenderBooths);
+
     return (
       <ul id="boothGrid">
-      <CSSTransitionGroup
-               transitionName="example"
-               transitionEnterTimeout={500}
-               transitionLeaveTimeout={300}>
-               {gridChoice}
-             </CSSTransitionGroup>
+        <CSSTransitionGroup transitionName="example"
+                            transitionEnterTimeout={500}
+                            transitionLeaveTimeout={300}>
+          {gridChoice}
+        </CSSTransitionGroup>
       </ul>
     );
   }

@@ -78474,9 +78474,8 @@ var QuoteTabs = function (_Component) {
     var _this = _possibleConstructorReturn(this, (QuoteTabs.__proto__ || Object.getPrototypeOf(QuoteTabs)).call(this, props));
 
     _this.state = {
-      boothSizeWidth: 0,
-      boothSizeHeight: 0,
-      boothType: 0,
+      boothSizeWidth: "All",
+      boothSizeLength: "All",
       selectedIsland: true,
       selectedSplitIsland: true,
       selectedInline: true,
@@ -78490,49 +78489,41 @@ var QuoteTabs = function (_Component) {
   }
 
   _createClass(QuoteTabs, [{
-    key: 'unselectIsland',
-    value: function unselectIsland() {
-      this.setState({
-        selectedIsland: false
-      });
-    }
-  }, {
     key: 'toggleBooth',
     value: function toggleBooth(booth) {
-      console.log("function running ");
       switch (booth) {
         case "Island":
           this.setState({ selectedIsland: !this.state.selectedIsland });
-          console.log("island was toggled");
           break;
         case "SplitIsland":
           this.setState({ selectedSplitIsland: !this.state.selectedSplitIsland });
-          console.log("split-island was toggled");
           break;
         case "Peninsula":
           this.setState({ selectedPeninsula: !this.state.selectedPeninsula });
-          console.log("peninsula was toggled");
           break;
         case "Inline":
           this.setState({ selectedInline: !this.state.selectedInline });
-          console.log("inline was toggled");
           break;
       }
     }
   }, {
-    key: 'renderDifferentBooths',
-    value: function renderDifferentBooths(singleValue, description, obj, images) {
+    key: 'limitByWidth',
+    value: function limitByWidth(width) {
       this.setState({
-        boothSizeWidth: boothSizeWidth,
-        boothSizeHeight: boothSizeHeight,
-        boothType: boothType,
-        rentOwn: rentOwn,
-        eventLocation: eventLocation,
-        dateFrom: dateFrom,
-        dateTo: dateTo
+        boothSizeWidth: width
       });
-      console.log("successfully loaded " + singleValue);
-      console.log(obj);
+    }
+  }, {
+    key: 'limitByLength',
+    value: function limitByLength(length) {
+      var _this2 = this;
+
+      console.log("Booth size function triggered with length: " + length);
+      this.setState({
+        boothSizeLength: length
+      }, function () {
+        console.log("State changed, state.length is " + _this2.state.boothSizeLength);
+      });
     }
   }, {
     key: 'render',
@@ -78567,12 +78558,16 @@ var QuoteTabs = function (_Component) {
         _react2.default.createElement(
           _reactTabs.TabPanel,
           null,
-          _react2.default.createElement(_TradeShowForm2.default, { toggleBooth: this.toggleBooth.bind(this) }),
+          _react2.default.createElement(_TradeShowForm2.default, { toggleBooth: this.toggleBooth.bind(this),
+            limitByWidth: this.limitByWidth.bind(this),
+            limitByLength: this.limitByLength.bind(this) }),
           _react2.default.createElement(_BoothGrid2.default, {
             selectedIsland: this.state.selectedIsland,
             selectedSplitIsland: this.state.selectedSplitIsland,
             selectedPeninsula: this.state.selectedPeninsula,
-            selectedInline: this.state.selectedInline
+            selectedInline: this.state.selectedInline,
+            boothSizeWidth: this.state.boothSizeWidth,
+            boothSizeLength: this.state.boothSizeLength
           })
         ),
         _react2.default.createElement(
@@ -78643,7 +78638,7 @@ var BoothGrid = function (_Component) {
 
     _this.state = {
       data: [],
-      singleVisible: false,
+      individualBoothRender: false,
       singleValue: '',
       description: '',
       obj: '',
@@ -78654,17 +78649,6 @@ var BoothGrid = function (_Component) {
   }
 
   _createClass(BoothGrid, [{
-    key: 'generateSingleBooth',
-    value: function generateSingleBooth(singleValue, description, obj, images) {
-      this.setState({
-        singleVisible: true,
-        singleValue: singleValue,
-        description: description,
-        obj: obj,
-        images: images
-      });
-    }
-  }, {
     key: 'loadFromServer',
     value: function loadFromServer() {
       var xhr = new XMLHttpRequest();
@@ -78681,40 +78665,62 @@ var BoothGrid = function (_Component) {
       this.loadFromServer();
     }
   }, {
-    key: 'handleBoothClick',
-    value: function handleBoothClick() {
-      this.setState({ singleVisible: false });
+    key: 'generateSingleBooth',
+    value: function generateSingleBooth(singleValue, description, obj, images) {
+      this.setState({
+        individualBoothRender: true,
+        singleValue: singleValue,
+        description: description,
+        obj: obj,
+        images: images
+      });
     }
   }, {
-    key: 'hiddenIfType',
-    value: function hiddenIfType(booth) {
-      if (booth === "Island" && !this.props.selectedIsland) {
-        return "hidden";
-      } else if (booth === "SplitIsland" && !this.props.selectedSplitIsland) {
-        return "hidden";
-      } else if (booth === "Peninsula" && !this.props.selectedPeninsula) {
-        return "hidden";
-      } else if (booth === "Inline" && !this.props.selectedInline) {
-        return "hidden";
-      }
-      return " ";
+    key: 'closeIndividualBooth',
+    value: function closeIndividualBooth() {
+      this.setState({ individualBoothRender: false });
     }
-
-    //tienes que buscar en la base el mismo id y compararlo con cada uno de los ids
-
+  }, {
+    key: 'shouldIRender',
+    value: function shouldIRender(booth) {
+      if (booth === "Island" && !this.props.selectedIsland) {
+        return false;
+      } else if (booth === "SplitIsland" && !this.props.selectedSplitIsland) {
+        return false;
+      } else if (booth === "Peninsula" && !this.props.selectedPeninsula) {
+        return false;
+      } else if (booth === "Inline" && !this.props.selectedInline) {
+        return false;
+      }
+      return true;
+    }
+  }, {
+    key: 'shouldIFit',
+    value: function shouldIFit(sizeW, sizeL) {
+      if ((this.props.boothSizeLength === sizeL || this.props.boothSizeLength === "All") && (this.props.boothSizeWidth === sizeW || this.props.boothSizeWidth === "All")) {
+        return true;
+      }
+      return false;
+    }
   }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
 
-      var allBooths = this.state.data.map(function (booth, index) {
+      var doRenderBooths = this.state.data.filter(function (booth, index) {
+        if (_this2.shouldIRender(booth.type) == false || _this2.shouldIFit(booth.width, booth.length) == false) {
+          return false;
+        } else {
+          return true;
+        }
+      }).map(function (booth, index) {
         return _react2.default.createElement(
           'li',
           { key: booth.id,
             onClick: function onClick() {
               return _this2.generateSingleBooth(booth.id, booth.description, booth.obj, booth.images);
             },
-            className: "boothGridItem booth" + booth.type + " " + _this2.hiddenIfType(booth.type) },
+            className: "boothGridItem booth" + booth.type },
           _react2.default.createElement('img', { src: booth.images[0].url }),
           _react2.default.createElement(
             'label',
@@ -78723,20 +78729,21 @@ var BoothGrid = function (_Component) {
           )
         );
       });
-      var singleBooth = _react2.default.createElement(_SingleBooth2.default, { handleBoothClick: this.handleBoothClick.bind(this),
+
+      var singleBooth = _react2.default.createElement(_SingleBooth2.default, { closeIndividualBooth: this.closeIndividualBooth.bind(this),
         description: this.state.description,
         singleValue: this.state.singleValue,
         obj: this.state.obj,
         images: this.state.images });
 
-      var gridChoice = this.state.singleVisible ? singleBooth : allBooths;
+      var gridChoice = this.state.individualBoothRender ? singleBooth : doRenderBooths;
+
       return _react2.default.createElement(
         'ul',
         { id: 'boothGrid' },
         _react2.default.createElement(
           _CSSTransitionGroup2.default,
-          {
-            transitionName: 'example',
+          { transitionName: 'example',
             transitionEnterTimeout: 500,
             transitionLeaveTimeout: 300 },
           gridChoice
@@ -79107,7 +79114,7 @@ var SingleBooth = function (_Component) {
     var _this = _possibleConstructorReturn(this, (SingleBooth.__proto__ || Object.getPrototypeOf(SingleBooth)).call(this, props));
 
     _this.state = {
-      main: '',
+      mainImage: '',
       render3D: false
     };
     return _this;
@@ -79117,13 +79124,13 @@ var SingleBooth = function (_Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       this.setState({
-        main: this.props.images[0].url
+        mainImage: this.props.images[0].url
       });
     }
   }, {
     key: 'handleView',
     value: function handleView(value) {
-      value !== "3D" ? this.setState({ main: this.props.images[value].url, render3D: false }) : this.setState({ render3D: true });
+      value !== "3D" ? this.setState({ mainImage: this.props.images[value].url, render3D: false }) : this.setState({ render3D: true });
     }
   }, {
     key: 'render',
@@ -79131,10 +79138,10 @@ var SingleBooth = function (_Component) {
       var _this2 = this;
 
       var backgroundStyle = {
-        backgroundImage: 'url(' + this.state.main + ')'
+        backgroundImage: 'url(' + this.state.mainImage + ')'
       };
-      var object3D = _react2.default.createElement(_Object3D2.default, null);
-      var choice3D = this.state.render3D ? object3D : null;
+      var choice3D = this.state.render3D ? _react2.default.createElement(_Object3D2.default, null) : null;
+
       var imageOptions = _react2.default.createElement(
         'div',
         { className: 'singleImage' },
@@ -79171,7 +79178,7 @@ var SingleBooth = function (_Component) {
           _react2.default.createElement(
             'span',
             { onClick: function onClick() {
-                return _this2.props.handleBoothClick();
+                return _this2.props.closeIndividualBooth();
               } },
             '\u2190 (Back to booths)'
           ),
@@ -79290,10 +79297,24 @@ var TradeShowForm = function (_Component) {
   function TradeShowForm(props) {
     _classCallCheck(this, TradeShowForm);
 
-    return _possibleConstructorReturn(this, (TradeShowForm.__proto__ || Object.getPrototypeOf(TradeShowForm)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (TradeShowForm.__proto__ || Object.getPrototypeOf(TradeShowForm)).call(this, props));
+
+    _this.handleWidthChange = _this.handleWidthChange.bind(_this);
+    _this.handleLengthChange = _this.handleLengthChange.bind(_this);
+    return _this;
   }
 
   _createClass(TradeShowForm, [{
+    key: 'handleWidthChange',
+    value: function handleWidthChange(event) {
+      this.props.limitByWidth(event.target.value);
+    }
+  }, {
+    key: 'handleLengthChange',
+    value: function handleLengthChange(event) {
+      this.props.limitByLength(event.target.value);
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -79306,7 +79327,12 @@ var TradeShowForm = function (_Component) {
         ),
         _react2.default.createElement(
           'select',
-          null,
+          { onChange: this.handleWidthChange },
+          _react2.default.createElement(
+            'option',
+            { value: 'All' },
+            'All'
+          ),
           _react2.default.createElement(
             'option',
             { value: '10' },
@@ -79340,7 +79366,12 @@ var TradeShowForm = function (_Component) {
         ),
         _react2.default.createElement(
           'select',
-          null,
+          { onChange: this.handleLengthChange },
+          _react2.default.createElement(
+            'option',
+            { value: 'All' },
+            'All'
+          ),
           _react2.default.createElement(
             'option',
             { value: '10' },

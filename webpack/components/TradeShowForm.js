@@ -7,12 +7,23 @@ import FormCheckBox from './FormCheckBox';
 class TradeShowForm extends Component {
   constructor(props) {
     super(props);
+    this.handleWidthChange = this.handleWidthChange.bind(this);
+    this.handleLengthChange = this.handleLengthChange.bind(this);
   }
+
+  handleWidthChange(event) {
+    this.props.limitByWidth(event.target.value)
+  }
+  handleLengthChange(event) {
+    this.props.limitByLength(event.target.value)
+  }
+
   render(){
     return (
       <div className="instaQuoteForm">
         <label>booth size</label>
-          <select>
+          <select onChange={this.handleWidthChange}>
+            <option value="All">All</option>
             <option value="10">10ft</option>
             <option value="20">20ft</option>
             <option value="30">30ft</option>
@@ -20,7 +31,8 @@ class TradeShowForm extends Component {
             <option value="50">50ft</option>
           </select>
           <p>x</p>
-          <select>
+          <select onChange={this.handleLengthChange}>
+            <option value="All">All</option>
             <option value="10">10ft</option>
             <option value="20">20ft</option>
             <option value="30">30ft</option>

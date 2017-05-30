@@ -30,6 +30,11 @@ layout: default
 </section>
 
 <section class="infosection">
+<!-- Calendly link widget begin -->
+<link href="https://calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://calendly.com/assets/external/widget.js" type="text/javascript"></script>
+<a href="" onclick="Calendly.showPopupWidget('https://calendly.com/rodrigosalmeron/15min');return false;">Schedule time with me</a>
+<!-- Calendly link widget end -->
 <h2>thinking <b>outside</b> the box</h2>
 <p>As an option, we even custom design cool trade show containers.
 We completely transform ordinary containers into unique and eye-catching focal points for your show. You'll have the following benefits.</p>

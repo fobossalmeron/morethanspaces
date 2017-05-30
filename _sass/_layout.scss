@@ -86,7 +86,7 @@ footer{
   }
 }
 
-#instaQuoteButton{
+#instaQuoteAnchor{
   position: fixed;
   width: 90px;
   height: 90px;
@@ -95,6 +95,18 @@ footer{
   background-size: cover;
   cursor: pointer;
   background-image: url("#{$baseurl}assets/img/instaQuote.svg");
+}
+
+.instaQuoteButton{
+  width: 100%;
+font-family: inherit;
+border: none;
+background-color: $magenta;
+cursor:pointer;
+color: $white;
+font-size: 1em;
+padding: 10px;
+margin-top:5%;
 }
 
 section{
@@ -204,6 +216,7 @@ section{
   h2{
     margin:0px;
     float:left;
+    cursor:pointer;
   }
 }
 
@@ -211,10 +224,8 @@ section{
   width: 30px;
   height: 30px;
   float: left;
-  top: 10px;
-  left: 15px;
   position: relative;
- label {
+  label {
    width: 100%;
    height: 100%;
    position: absolute;
@@ -260,7 +271,6 @@ input[type=text]{
 }
 
 .formCheck{
-  width: 30px;
   margin-right: 10%;
   margin-bottom: 9%;
   top:0;
@@ -270,6 +280,13 @@ input[type=text]{
     &:after{
       border-color:$blue;
     }
+  }
+}
+
+.addOnCheck{
+  margin-right:10px;
+  span{
+    display:none;
   }
 }
 
@@ -303,6 +320,9 @@ input[type=text]{
 
 .react-tabs__tab--selected{
   background-color: $white;
+  h2{
+    cursor:auto !important;
+  }
 }
 
 .react-tabs__tab-panel{
@@ -333,9 +353,9 @@ input[type=text]{
 .instaQuoteForm {
     background-color: $black;
     width: 20%;
-    min-height: 530px;
+    max-width: 230px;
     float: left;
-    padding: 1% 2% 2% 2%;
+    padding: 1% 2% 3% 2%;
     color: $white;
     span{
       float: left;
@@ -365,7 +385,7 @@ input[type=text]{
       -webkit-appearance: none;
       -moz-appearance: none;
       border-radius: 0px;
-      width: 76px;
+      width: 72px;
       background-position: right 50%;
       background-repeat: no-repeat;
       background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAYAAABSgIzaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDZFNDEwNjlGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDZFNDEwNkFGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NkU0MTA2N0Y3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NkU0MTA2OEY3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuGsgwQAAAA5SURBVHjaYvz//z8DOYCJgUxAf42MQIzTk0D/M+KzkRGPoQSdykiKJrBGpOhgJFYTWNEIiEeAAAMAzNENEOH+do8AAAAASUVORK5CYII=);
@@ -393,19 +413,22 @@ input[type=text]{
 #boothGrid{
     width: 80%;
     min-height: 500px;
-    padding: 0 5%;
+    padding: 0 4%;
     float: left;
     width: 80%;
     margin-left: 0;
 }
 
 .boothGridItem{
-  width: 23%;
+  width: 31%;
+  padding-top:20%;
   transition: .5s ease all;
-  height: 120px;
+  background-size: cover;
+  position: relative;
+  min-height: 120px;
   cursor: pointer;
   float: left;
-  margin: 0px 1% 6% 1%;
+  margin: 0px 1% 5% 1%;
   list-style: none;
   &:hover{
     opacity:0.8;
@@ -417,10 +440,14 @@ input[type=text]{
   }
   label{
     float:left;
+    position: absolute;
+    background-color:$white;
+    bottom: 0;
     width:100%;
-    font-size:0.6em;
+    font-size:0.7em;
     &::after{
       content: ' ';
+      font-size:0.9em;
       padding: 0px 3px;
       height: 18px;
       display: inline-block;
@@ -467,16 +494,16 @@ input[type=text]{
       min-height: 400px;
     }
     .thumbnailBooth{
-      width: 21%;
+      width: 22%;
       min-height: auto;
       margin: 2% 4% 0 0;
       cursor: pointer;
       &:hover{
         opacity:0.8;
       }
-      &::nth-last-child(0){
-        margin-right:0px;
-      }
+    }
+    .noMarginRight{
+      margin-right:0px;
     }
 }
 
@@ -497,9 +524,14 @@ input[type=text]{
   .singleInfo{
     float:left;
     width:40%;
-    padding-left:2%;
+    padding-left:5%;
     span{
         font-weight: 600;
+    }
+    label{
+      float:left;
+      font-size:0.8em;
+      margin-right:10px;
     }
   }
 
@@ -518,7 +550,6 @@ input[type=text]{
     width:100%;
     float:left;
     font-size:0.8em;
-    margin:0px;
   }
 }
 
@@ -529,7 +560,7 @@ input[type=text]{
 
 .example-enter.example-enter-active {
   opacity: 1;
-  transition: opacity 500ms ease-in;
+  transition: opacity 400ms ease-in;
 }
 
 .example-leave {
@@ -538,7 +569,16 @@ input[type=text]{
 
 .example-leave.example-leave-active {
   opacity: 0.01;
-  transition: opacity 300ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity 400ms ease-in;
 }
 
 .threeTests{
@@ -559,4 +599,8 @@ input[type=text]{
     top: 0;
     width: 100%;
   }
+}
+
+.noMarginRight{
+  margin-right:0px;
 }

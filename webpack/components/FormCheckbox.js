@@ -5,8 +5,9 @@ class FormCheckBox extends Component {
     super(props);
   }
   render() {
+    var classList = (this.props.classList + " quoteCheck");
     return (
-      <div className="formCheck quoteCheck">
+      <div className={classList}>
         <input type={this.props.inputType} id={this.props.checkFor} name={this.props.nameFor} onChange={() => this.props.toggleBooth(this.props.nameFor)} value="true" defaultChecked={this.props.checked}/>
         <label className="noMargin" htmlFor={this.props.checkFor}></label>
         <span className={this.props.doubleLine}>{this.props.checkFor}</span>

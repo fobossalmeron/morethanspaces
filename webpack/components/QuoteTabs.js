@@ -15,9 +15,7 @@ class QuoteTabs extends Component {
       selectedInline: true,
       selectedPeninsula: true,
       rentOwn: 1,
-      eventLocation: '',
-      dateFrom: '',
-      dateTo: ''
+      eventInVegas: true
     };
   }
 
@@ -57,11 +55,9 @@ class QuoteTabs extends Component {
         <TabList>
           <Tab>
             <h2>trade show booths</h2>
-            <TabCheckBox checkFor="tradeShowBooths" checked="checked"/>
           </Tab>
           <Tab>
             <h2>video walls</h2>
-            <TabCheckBox checkFor="videoWalls"/>
           </Tab>
         </TabList>
 

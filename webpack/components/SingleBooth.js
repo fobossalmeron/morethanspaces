@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import Object3D from './Object3D';
+import Button from './Button';
+import FormCheckBox from './FormCheckBox';
 
 
 class SingleBooth extends Component {
@@ -34,7 +36,7 @@ class SingleBooth extends Component {
           <img className="thumbnailBooth" onClick={() => this.handleView("3D")} src="assets/img/3dTrigger.svg"/>
           <img className="thumbnailBooth" onClick={() => this.handleView(0)} src={this.props.images[0].url}/>
           <img className="thumbnailBooth" onClick={() => this.handleView(1)} src={this.props.images[1].url}/>
-          <img className="thumbnailBooth" onClick={() => this.handleView(2)} src={this.props.images[2].url}/>
+          <img className="thumbnailBooth noMarginRight" onClick={() => this.handleView(2)} src={this.props.images[2].url}/>
       </div>
     );
     return (
@@ -44,6 +46,11 @@ class SingleBooth extends Component {
           <h3>{this.props.singleValue}</h3>
           <span onClick={() => this.props.closeIndividualBooth()}>&#8592; (Back to booths)</span>
           <p>{this.props.description}</p>
+          <FormCheckBox inputType="checkbox" classList="addOnCheck" nameFor="TV" checkFor="TV"/>
+          <label>add TV</label>
+          <FormCheckBox inputType="checkbox" classList="addOnCheck" nameFor="videoWall" checkFor="videoWall"/>
+          <label>add videowall</label>
+          <Button buttonText="get InstaQuote"/>
         </div>
       </div>
     )

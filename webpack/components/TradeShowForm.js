@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import DatePicker from 'react-datepicker';
-import moment from 'moment';
-import DateRanger from './DateRanger.js';
 import FormCheckBox from './FormCheckBox';
 
 class TradeShowForm extends Component {
@@ -40,16 +37,16 @@ class TradeShowForm extends Component {
             <option value="50">50ft</option>
           </select>
         <label>booth type</label>
-          <FormCheckBox toggleBooth={this.props.toggleBooth.bind(this)} inputType="checkbox" nameFor="Island" checkFor="island" checked="checked"/>
-          <FormCheckBox toggleBooth={this.props.toggleBooth.bind(this)} inputType="checkbox" nameFor="SplitIsland" checkFor="split island" checked="checked" doubleLine="doubleLine"/>
-          <FormCheckBox toggleBooth={this.props.toggleBooth.bind(this)} inputType="checkbox" nameFor="Peninsula" checked="checked" checkFor="peninsula"/>
-          <FormCheckBox toggleBooth={this.props.toggleBooth.bind(this)} inputType="checkbox" nameFor="Inline" checked="checked" checkFor="inline"/>
+          <FormCheckBox toggleBooth={this.props.toggleBooth.bind(this)} inputType="checkbox" classList="formCheck" nameFor="Island" checkFor="island" checked="checked"/>
+          <FormCheckBox toggleBooth={this.props.toggleBooth.bind(this)} inputType="checkbox" classList="formCheck" nameFor="SplitIsland" checkFor="split island" checked="checked" doubleLine="doubleLine"/>
+          <FormCheckBox toggleBooth={this.props.toggleBooth.bind(this)} inputType="checkbox" classList="formCheck" nameFor="Peninsula" checked="checked" checkFor="peninsula"/>
+          <FormCheckBox toggleBooth={this.props.toggleBooth.bind(this)} inputType="checkbox" classList="formCheck noMarginRight" nameFor="Inline" checked="checked" checkFor="inline"/>
         <label>rent or own?</label>
-          <FormCheckBox inputType="radio" nameFor="tradeshowB" checked="checked" checkFor="rent"/>
-          <FormCheckBox inputType="radio" nameFor="tradeshowB" checkFor="own"/>
+          <FormCheckBox inputType="radio" classList="formCheck" nameFor="rentOrOwn" checked="checked" checkFor="rent"/>
+          <FormCheckBox inputType="radio" classList="formCheck" nameFor="rentOrOwn" checkFor="own"/>
         <label>event location</label>
-        <input type="text" name="location" defaultValue=" "/>
-        <DateRanger />
+        <FormCheckBox inputType="radio" classList="formCheck" nameFor="inVegas" doubleLine="doubleLine" checked="checked" checkFor="Las Vegas"/>
+        <FormCheckBox inputType="radio" classList="formCheck" nameFor="inVegas" checkFor="else"/>
       </div>
     )
   }

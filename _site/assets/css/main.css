@@ -74,7 +74,9 @@ footer p, footer a { font-size: 0.8em; color: #f9f9f9; float: left; clear: both;
 footer ul { margin: 0px; float: left; width: 100%; }
 footer ul li { width: 25%; padding: 2%; list-style: none; float: left; }
 
-#instaQuoteButton { position: fixed; width: 90px; height: 90px; bottom: 20px; right: 25px; background-size: cover; cursor: pointer; background-image: url("/morethanspaces/assets/img/instaQuote.svg"); }
+#instaQuoteAnchor { position: fixed; width: 90px; height: 90px; bottom: 20px; right: 25px; background-size: cover; cursor: pointer; background-image: url("/morethanspaces/assets/img/instaQuote.svg"); }
+
+.instaQuoteButton { width: 100%; font-family: inherit; border: none; background-color: #ec3092; cursor: pointer; color: #f9f9f9; font-size: 1em; padding: 10px; margin-top: 5%; }
 
 section { min-height: 500px; float: left; width: 100%; padding: 5%; }
 
@@ -99,9 +101,9 @@ section { min-height: 500px; float: left; width: 100%; padding: 5%; }
 #clients ul li:nth-last-child(1), #clients ul li:nth-last-child(2) { margin-bottom: 0px; }
 
 #quoteSection { padding: 0px; background-color: #f9f9f9; }
-#quoteSection h2 { margin: 0px; float: left; }
+#quoteSection h2 { margin: 0px; float: left; cursor: pointer; }
 
-.quoteCheck { width: 30px; height: 30px; float: left; top: 10px; left: 15px; position: relative; }
+.quoteCheck { width: 30px; height: 30px; float: left; position: relative; }
 .quoteCheck label { width: 100%; height: 100%; position: absolute; left: 0; border: 2px solid #383838; }
 .quoteCheck label:after { content: ''; width: 17px; height: 8px; position: absolute; top: 6px; left: 5px; border: 2px solid #383838; border-top: none; border-right: none; background: transparent; opacity: 0; transform: rotate(-45deg); }
 .quoteCheck label:hover::after { opacity: 0.3; }
@@ -110,9 +112,12 @@ section { min-height: 500px; float: left; width: 100%; padding: 5%; }
 
 input[type=text] { border: none; padding: 4px; font-size: .7em; }
 
-.formCheck { width: 30px; margin-right: 10%; margin-bottom: 9%; top: 0; left: 0; }
+.formCheck { margin-right: 10%; margin-bottom: 9%; top: 0; left: 0; }
 .formCheck label { background-color: white; }
 .formCheck label:after { border-color: #2cbdc0; }
+
+.addOnCheck { margin-right: 10px; }
+.addOnCheck span { display: none; }
 
 .react-tabs__tab-list { margin: 0px; list-style: none; float: left; width: 100%; }
 
@@ -121,6 +126,7 @@ input[type=text] { border: none; padding: 4px; font-size: .7em; }
 .react-tabs__tab:focus::after { content: ''; position: absolute; height: 100%; width: 5px; right: 0; bottom: 0; background: #2cbdc0; box-shadow: 0 0 5px #2cbdc0; }
 
 .react-tabs__tab--selected { background-color: #f9f9f9; }
+.react-tabs__tab--selected h2 { cursor: auto !important; }
 
 .react-tabs__tab-panel { float: left; width: 100%; padding: 3% 0; }
 
@@ -136,24 +142,24 @@ input[type=text] { border: none; padding: 4px; font-size: .7em; }
 
 .clientBaseF { background-image: url("/morethanspaces/assets/img/clientBaseF.svg"); }
 
-.instaQuoteForm { background-color: #383838; width: 20%; min-height: 530px; float: left; padding: 1% 2% 2% 2%; color: #f9f9f9; }
+.instaQuoteForm { background-color: #383838; width: 20%; max-width: 230px; float: left; padding: 1% 2% 3% 2%; color: #f9f9f9; }
 .instaQuoteForm span { float: left; top: 30px; width: 100%; font-size: 0.5em; text-align: center; position: relative; }
 .instaQuoteForm .doubleLine { width: 47px; left: -7px; }
 .instaQuoteForm p { float: left; padding: 0 10px; }
 .instaQuoteForm label { float: left; width: 100%; margin-top: 10px; }
 .instaQuoteForm .noMargin { margin: 0px; }
-.instaQuoteForm select { -webkit-appearance: none; -moz-appearance: none; border-radius: 0px; width: 76px; background-position: right 50%; background-repeat: no-repeat; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAYAAABSgIzaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDZFNDEwNjlGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDZFNDEwNkFGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NkU0MTA2N0Y3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NkU0MTA2OEY3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuGsgwQAAAA5SURBVHjaYvz//z8DOYCJgUxAf42MQIzTk0D/M+KzkRGPoQSdykiKJrBGpOhgJFYTWNEIiEeAAAMAzNENEOH+do8AAAAASUVORK5CYII=); padding: .5em; padding-right: 1.5em; float: left; border: none; padding: 4px; font-size: .7em; font-family: "Lato", sans-serif; height: 27px; background-color: white; margin: 4px 0; }
+.instaQuoteForm select { -webkit-appearance: none; -moz-appearance: none; border-radius: 0px; width: 72px; background-position: right 50%; background-repeat: no-repeat; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAYAAABSgIzaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDZFNDEwNjlGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDZFNDEwNkFGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NkU0MTA2N0Y3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NkU0MTA2OEY3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuGsgwQAAAA5SURBVHjaYvz//z8DOYCJgUxAf42MQIzTk0D/M+KzkRGPoQSdykiKJrBGpOhgJFYTWNEIiEeAAAMAzNENEOH+do8AAAAASUVORK5CYII=); padding: .5em; padding-right: 1.5em; float: left; border: none; padding: 4px; font-size: .7em; font-family: "Lato", sans-serif; height: 27px; background-color: white; margin: 4px 0; }
 
 .datePickerFields { float: left; }
 .datePickerFields label { float: left; clear: both; }
 
-#boothGrid { width: 80%; min-height: 500px; padding: 0 5%; float: left; width: 80%; margin-left: 0; }
+#boothGrid { width: 80%; min-height: 500px; padding: 0 4%; float: left; width: 80%; margin-left: 0; }
 
-.boothGridItem { width: 23%; transition: .5s ease all; height: 120px; cursor: pointer; float: left; margin: 0px 1% 6% 1%; list-style: none; }
+.boothGridItem { width: 31%; padding-top: 20%; transition: .5s ease all; background-size: cover; position: relative; min-height: 120px; cursor: pointer; float: left; margin: 0px 1% 5% 1%; list-style: none; }
 .boothGridItem:hover { opacity: 0.8; }
 .boothGridItem img { float: left; width: 100%; min-height: 100px; }
-.boothGridItem label { float: left; width: 100%; font-size: 0.6em; }
-.boothGridItem label::after { content: ' '; padding: 0px 3px; height: 18px; display: inline-block; right: 0; float: right; position: relative; }
+.boothGridItem label { float: left; position: absolute; background-color: #f9f9f9; bottom: 0; width: 100%; font-size: 0.7em; }
+.boothGridItem label::after { content: ' '; font-size: 0.9em; padding: 0px 3px; height: 18px; display: inline-block; right: 0; float: right; position: relative; }
 
 .hidden { opacity: 0; display: none; }
 .hidden label::after { content: "hidden"; }
@@ -168,31 +174,38 @@ input[type=text] { border: none; padding: 4px; font-size: .7em; }
 
 .singleImage { width: 60%; float: left; }
 .singleImage img { width: 100%; min-height: 400px; }
-.singleImage .thumbnailBooth { width: 21%; min-height: auto; margin: 2% 4% 0 0; cursor: pointer; }
+.singleImage .thumbnailBooth { width: 22%; min-height: auto; margin: 2% 4% 0 0; cursor: pointer; }
 .singleImage .thumbnailBooth:hover { opacity: 0.8; }
-.singleImage .thumbnailBooth::nth-last-child(0) { margin-right: 0px; }
+.singleImage .noMarginRight { margin-right: 0px; }
 
 .visualizer { width: 100%; min-height: 400px; background-size: cover; transition: 300ms all ease; }
 
 .singleBooth { float: left; position: relative; width: 100%; }
-.singleBooth .singleInfo { float: left; width: 40%; padding-left: 2%; }
+.singleBooth .singleInfo { float: left; width: 40%; padding-left: 5%; }
 .singleBooth .singleInfo span { font-weight: 600; }
+.singleBooth .singleInfo label { float: left; font-size: 0.8em; margin-right: 10px; }
 .singleBooth h3 { float: left; width: 100%; }
 .singleBooth span { font-size: 0.7em; font-style: italic; cursor: pointer; }
-.singleBooth p { width: 100%; float: left; font-size: 0.8em; margin: 0px; }
+.singleBooth p { width: 100%; float: left; font-size: 0.8em; }
 
 .example-enter { opacity: 0.01; }
 
-.example-enter.example-enter-active { opacity: 1; transition: opacity 500ms ease-in; }
+.example-enter.example-enter-active { opacity: 1; transition: opacity 400ms ease-in; }
 
 .example-leave { opacity: 1; }
 
-.example-leave.example-leave-active { opacity: 0.01; transition: opacity 300ms ease-in; }
+.example-leave.example-leave-active { opacity: 0.01; transition: opacity 400ms ease-in; }
+
+.example-appear { opacity: 0.01; }
+
+.example-appear.example-appear-active { opacity: 1; transition: opacity 400ms ease-in; }
 
 .threeTests { background-color: green; width: 100%; height: 100%; min-height: 100px; }
 
 .visualizer { position: relative; }
 .visualizer canvas { height: 100%; position: absolute; left: 0; right: 0; bottom: 0; top: 0; width: 100%; }
+
+.noMarginRight { margin-right: 0px; }
 
 .react-datepicker__tether-element-attached-top .react-datepicker__triangle, .react-datepicker__tether-element-attached-bottom .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow { margin-left: -8px; position: absolute; }
 

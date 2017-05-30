@@ -80,9 +80,9 @@ class BoothGrid extends Component {
     }).map((booth, index) => (
       <li key={booth.id}
           onClick={() => this.generateSingleBooth(booth.id, booth.description, booth.obj, booth.images)}
-          className={"boothGridItem booth" + booth.type}>
-            <img src={booth.images[0].url}/>
-            <label>{booth.id}</label>
+          className={"boothGridItem booth" + booth.type}
+          style={{backgroundImage: 'url(' + booth.images[0].url + ')'}}>
+          <label>{booth.id}</label>
       </li>
     ));
 
@@ -99,8 +99,8 @@ class BoothGrid extends Component {
     return (
       <ul id="boothGrid">
         <CSSTransitionGroup transitionName="example"
-                            transitionEnterTimeout={500}
-                            transitionLeaveTimeout={300}>
+                            transitionEnterTimeout={400}
+                            transitionLeaveTimeout={400}>
           {gridChoice}
         </CSSTransitionGroup>
       </ul>

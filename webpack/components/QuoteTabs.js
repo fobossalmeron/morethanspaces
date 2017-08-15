@@ -75,7 +75,7 @@ class QuoteTabs extends Component {
           />
         </TabPanel>
         <TabPanel>
-          <img src="/morethanspaces/assets/img/mock.png"></img>
+          <img src="/morethanspaces/assets/img/mock.png"/>
         </TabPanel>
       </Tabs>
     )

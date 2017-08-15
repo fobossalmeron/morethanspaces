@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
-import Object3D from './Object3D';
+import SketchFab from './SketchFab';
 import Button from './Button';
 import FormCheckBox from './FormCheckBox';
 
@@ -21,14 +21,14 @@ class SingleBooth extends Component {
 
   handleView(value){
     value !== "3D" ?
-    this.setState({mainImage: this.props.images[value].url, render3D:false}) : this.setState({render3D:true})
+    this.setState({mainImage: this.props.images[value].url, render3D:false}) : this.setState({mainImage: "assets/img/3dBack.svg", render3D:true})
   }
 
   render() {
     var backgroundStyle = {
       backgroundImage: 'url(' + this.state.mainImage + ')',
     };
-    var choice3D = (this.state.render3D ? <Object3D/> : null);
+    var choice3D = (this.state.render3D ? <SketchFab/> : null);
 
     var imageOptions = (
       <div className="singleImage">

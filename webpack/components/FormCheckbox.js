@@ -8,8 +8,8 @@ class FormCheckBox extends Component {
     var classList = (this.props.classList + " quoteCheck");
     return (
       <div className={classList}>
-        <input type={this.props.inputType} id={this.props.checkFor} name={this.props.nameFor} onChange={() => this.props.toggleBooth(this.props.nameFor)} value="true" defaultChecked={this.props.checked}/>
-        <label className="noMargin" htmlFor={this.props.checkFor}></label>
+        <input type={this.props.inputType} id={this.props.checkFor} name={this.props.nameFor} onChange={() => this.props.toggleBooth(this.props.nameFor)} value="true" defaultChecked={this.props.checked} />
+        <label className="noMargin" htmlFor={this.props.checkFor} />
         <span className={this.props.doubleLine}>{this.props.checkFor}</span>
       </div>
     );

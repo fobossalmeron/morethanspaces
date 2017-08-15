@@ -4,7 +4,7 @@ class InstaQuoteAnchor extends Component {
   render (){
     return (
       <a href="#quoteSection">
-      <div id="instaQuoteAnchor"></div>
+        <div id="instaQuoteAnchor"/>
       </a>
     );
   }

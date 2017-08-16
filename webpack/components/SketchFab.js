@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import React3 from 'react-three-renderer';
-import ReactDOM from 'react-dom';
 
 class SketchFab extends Component{
   constructor(props, context) {
@@ -25,8 +23,8 @@ class SketchFab extends Component{
              error: function onError() {
                  console.log( 'Viewer error' );
              },
-             autospin: 1,
-             transparent: 1,
+             autospin: 0,
+             transparent: 0,
              ui_controls: 0,
              ui_general_controls: 0,
              ui_settings: 0,

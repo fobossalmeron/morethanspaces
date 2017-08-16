@@ -74,21 +74,27 @@ layout: default
 
 </section>
 
-<section class="infosection">
+<section id="about">
+<h2>about us</h2>
+<p>More than Spaces was founded to give more than other trade show vendors. Established and located in
+Las Vegas, the convention capital, we understand the world or trade shows thoroughly. We believe in
+creativity, simplicity and quality before prices and always go over and beyond with a smile. Trusted by
+the world’s most iconic brands and Fortune500 companies, our job has always been to give more,
+
+charge less, and help big and small business bring their vision to life with innovative booth designs and
+high-end audio-visual equipment. Connect with us today to learn how we can transform your brand into
+a show stopper for your next trade show.</p>
+
+</section>
+
+<section id="contact">
+<h2>contact</h2>
+<p>Let us answer your question! Contact us for all your trade show needs.</p>
 <!-- Calendly link widget begin -->
 <link href="https://calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://calendly.com/assets/external/widget.js" type="text/javascript"></script>
-<a href="" onclick="Calendly.showPopupWidget('https://calendly.com/rodrigosalmeron/15min');return false;">Schedule time with me</a>
+<a href="" onclick="Calendly.showPopupWidget('https://calendly.com/rodrigosalmeron/15min');return false;"><h3>schedule a call with us</h3></a>
 <!-- Calendly link widget end -->
-<h2>thinking <b>outside</b> the box</h2>
-<p>As an option, we even custom design cool trade show containers.
-We completely transform ordinary containers into unique and eye-catching focal points for your show. You'll have the following benefits.</p>
-<ul>
-<li>eye-catching</li>
-<li>fast spanetup</li>
-<li>Easy Transportation</li>
-<li>100% Branded</li>
-</ul>
 </section>
 
 <section id="clients">
@@ -102,7 +108,3 @@ We completely transform ordinary containers into unique and eye-catching focal p
 <li class="clientBaseF">BaseF</li>
 </ul>
 </section>
-
-
-<script type="text/javascript" src="{{site.baseurl}}/assets/js/bundle.js"
-charset="utf-8"></script>

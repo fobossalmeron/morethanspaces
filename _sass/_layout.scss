@@ -116,6 +116,7 @@ section{
   p{
     text-align: center;
     float: left;
+    clear:both;
     padding: 5%;
     color: #f9f9f9;
     margin: 0;
@@ -161,6 +162,9 @@ section{
 #services{
     background-color: $blue;
     color: $white;
+    .full-service{
+      width:100%;
+    }
     a{
       color:$white;
       float:right;
@@ -177,6 +181,10 @@ section{
         list-style: none;
       }
     }
+}
+
+#contact{
+  background-color: $grey;
 }
 
 #clients{
@@ -324,9 +332,18 @@ input[type=text]{
 }
 
 .react-tabs__tab-panel{
+  visibility: hidden;
+  display:none;
+  opacity:0;
   float: left;
   width: 100%;
   padding: 3% 0;
+}
+
+.react-tabs__tab-panel--selected{
+  visibility: visible;
+  opacity:1;
+  display: block;
 }
 
 .clientNike{

@@ -8,7 +8,7 @@ class QuoteTabs extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tabIndex: 0,
+      tabIndex: this.props.tabIndex,
       boothSizeWidth: "All",
       boothSizeLength: "All",
       selectedIsland: true,
@@ -53,7 +53,7 @@ class QuoteTabs extends Component {
   render(){
     return (
       <section id="quoteSection">
-      <Tabs forceRenderTabPanel={false} selectedIndex={this.state.tabIndex} onSelect={tabIndex => this.setState({ tabIndex })}>
+      <Tabs forceRenderTabPanel={true} selectedIndex={this.props.tabIndex} onSelect={tabIndex => this.props.goToTab( tabIndex )}>
         <TabList>
           <Tab>
             <h2 id="booths">trade show booths</h2>

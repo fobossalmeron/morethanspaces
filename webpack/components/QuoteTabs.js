@@ -8,6 +8,7 @@ class QuoteTabs extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      tabIndex: 0,
       boothSizeWidth: "All",
       boothSizeLength: "All",
       selectedIsland: true,
@@ -51,13 +52,14 @@ class QuoteTabs extends Component {
 
   render(){
     return (
-      <Tabs>
+      <section id="quoteSection">
+      <Tabs forceRenderTabPanel={false} selectedIndex={this.state.tabIndex} onSelect={tabIndex => this.setState({ tabIndex })}>
         <TabList>
           <Tab>
-            <h2>trade show booths</h2>
+            <h2 id="booths">trade show booths</h2>
           </Tab>
           <Tab>
-            <h2>video walls</h2>
+            <h2 id="videowalls">video walls</h2>
           </Tab>
         </TabList>
 
@@ -75,9 +77,10 @@ class QuoteTabs extends Component {
           />
         </TabPanel>
         <TabPanel>
-          <img src="/morethanspaces/assets/img/mock.png"/>
+          <img src="assets/img/mock.png"/>
         </TabPanel>
       </Tabs>
+      </section>
     )
   }
 }

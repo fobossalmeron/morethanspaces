@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 100; font-size: 1.7em; position: relative;
 
 /** Links */
 a { color: #383838; text-decoration: none; cursor: pointer; }
-a:visited { color: lightgray; }
+a:visited { color: #5e5e5e; }
 a:hover { color: #212121; text-decoration: underline; }
 
 /** Blockquotes */
@@ -66,8 +66,6 @@ nav ul li a:hover { border-color: #383838; padding-bottom: 4px; text-decoration:
 .navScroll { height: 60px; }
 .navScroll ul li { padding: 2% 3%; }
 
-main { float: left; min-height: 1000px; width: 100%; margin-top: 8%; }
-
 footer { float: left; width: 100%; background-color: #777777; color: #f9f9f9; padding: 5%; }
 footer .colophon { width: 100%; text-align: center; opacity: 0.5; color: #383838; }
 footer p, footer a { font-size: 0.8em; color: #f9f9f9; float: left; clear: both; }
@@ -80,11 +78,11 @@ footer ul li { width: 25%; padding: 2%; list-style: none; float: left; }
 
 section { min-height: 500px; float: left; width: 100%; padding: 5%; }
 
-#slider { background-color: #2cbdc0; }
+#slider { background-color: #2cbdc0; float: left; width: 100%; }
 #slider p { text-align: center; float: left; padding: 5%; color: #f9f9f9; margin: 0; width: 40%; left: 50%; transform: translateX(72%); }
 #slider p span { font-size: 4em; line-height: 1; }
 
-#homesection { padding-top: 0; }
+#homesection { padding-top: 0; min-height: 100vh; margin-top: 8%; }
 
 #homevideo { width: 71.428%; height: 0; padding-bottom: 40.2%; float: left; overflow: hidden; left: 50%; transform: translateX(-50%); display: block; position: relative; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
 #homevideo iframe { position: absolute; height: 100%; width: 100%; }
@@ -92,7 +90,7 @@ section { min-height: 500px; float: left; width: 100%; padding: 5%; }
 #services { background-color: #2cbdc0; color: #f9f9f9; }
 #services a { color: #f9f9f9; float: right; }
 #services ul { margin: 0px; }
-#services ul li { float: left; min-height: 180px; text-align: center; width: 33.3%; padding: 3% 8%; list-style: none; }
+#services ul li { float: left; min-height: 520px; text-align: center; width: 33.3%; padding: 3% 3%; font-size: .8em; list-style: none; }
 
 #clients { background-color: #2cbdc0; color: #f9f9f9; }
 #clients h3 { float: left; width: 25%; margin-right: 25%; }
@@ -208,6 +206,8 @@ input[type=text] { border: none; padding: 4px; font-size: .7em; }
 .noMarginRight { margin-right: 0px; }
 
 iframe { position: absolute; height: 100%; width: 100%; border: none; }
+
+.react-tabs__tab--disabled { display: none; }
 
 .react-datepicker__tether-element-attached-top .react-datepicker__triangle, .react-datepicker__tether-element-attached-bottom .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow { margin-left: -8px; position: absolute; }
 

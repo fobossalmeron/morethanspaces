@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {render} from 'react-dom';
 import HomeSection from './components/HomeSection';
-import Slider from './components/Slider';
+import Carousel from './components/Carousel';
 import QuoteTabs from './components/QuoteTabs';
 import Nav from './components/Nav';
 import InstaQuoteAnchor from './components/InstaQuoteAnchor';
@@ -24,7 +24,7 @@ class App extends Component {
         <Nav goToTab={this.goToTab.bind(this)}/>
         <InstaQuoteAnchor />
         <HomeSection />
-        <Slider />
+        <Carousel />
         <QuoteTabs tabIndex={this.state.tabIndex}
                    goToTab={this.goToTab.bind(this)}/>
       </div>

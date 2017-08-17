@@ -21,7 +21,7 @@ class SingleBooth extends Component {
 
   handleView(value){
     value !== "3D" ?
-    this.setState({mainImage: this.props.images[value].url, render3D:false}) : this.setState({mainImage: "assets/img/3dBack.svg", render3D:true})
+    this.setState({mainImage: this.props.images[value].url, render3D:false}) : this.setState({render3D:true})
   }
 
   render() {

@@ -74,7 +74,7 @@ layout: default
 
 </section>
 
-<section id="about">
+<section id="aboutus">
 <h2>about us</h2>
 <p>More than Spaces was founded to give more than other trade show vendors. Established and located in
 Las Vegas, the convention capital, we understand the world or trade shows thoroughly. We believe in

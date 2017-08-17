@@ -8,7 +8,7 @@ class SketchFab extends Component{
    componentDidMount() {
      var iframe = document.getElementById( 'api-frame' );
          var version = '1.0.0';
-         var urlid = '35aff2670465453498a24ba120417f2d';
+         var urlid = '582d6d35e8974d1ba0af3d51e0a0369a';
          var client = new Sketchfab( version, iframe );
 
          client.init( urlid, {
@@ -24,7 +24,6 @@ class SketchFab extends Component{
                  console.log( 'Viewer error' );
              },
              autospin: 0,
-             transparent: 0,
              ui_controls: 0,
              ui_general_controls: 0,
              ui_settings: 0,

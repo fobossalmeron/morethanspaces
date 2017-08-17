@@ -1,18 +1,35 @@
 import React, { Component } from 'react';
 import {render} from 'react-dom';
+import HomeSection from './components/HomeSection';
+import Carousel from './components/Carousel';
 import QuoteTabs from './components/QuoteTabs';
+import Nav from './components/Nav';
 import InstaQuoteAnchor from './components/InstaQuoteAnchor';
-import './extras/Nav';
 
-class Quote extends Component {
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tabIndex: 0,
+    };
+  }
+  componentDidMount(){
+  }
+  goToTab(index){
+    this.setState({tabIndex: index})
+  }
   render() {
     return (
       <div>
-        <QuoteTabs />
+        <Nav goToTab={this.goToTab.bind(this)}/>
         <InstaQuoteAnchor />
+        <HomeSection />
+        <Carousel />
+        <QuoteTabs tabIndex={this.state.tabIndex}
+                   goToTab={this.goToTab.bind(this)}/>
       </div>
     )
   }
 }
 
-render(<Quote/>, document.getElementById('quoteSection'));
+render(<App/>, document.getElementById('app'));

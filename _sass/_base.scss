@@ -109,7 +109,7 @@ a {
     cursor:pointer;
 
     &:visited {
-        color: darken($white, 15%);
+        color: lighten($black, 15%);
     }
 
     &:hover {

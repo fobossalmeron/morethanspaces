@@ -8,7 +8,6 @@ class QuoteTabs extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tabIndex: this.props.tabIndex,
       boothSizeWidth: "All",
       boothSizeLength: "All",
       selectedIsland: true,

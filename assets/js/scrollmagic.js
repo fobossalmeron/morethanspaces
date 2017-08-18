@@ -12,7 +12,7 @@ var scrollScene = new ScrollMagic.Scene({duration: 200, triggerHook: "onLeave"})
 
 // change behaviour of controller to animate scroll instead of jump
 controller.scrollTo(function (newpos) {
-      TweenMax.to(window, 0.5, {scrollTo: {y: newpos}});
+      TweenMax.to(window, 0.5, {scrollTo: {y: newpos + -60}});
 });
 
 //  bind scroll to anchor links

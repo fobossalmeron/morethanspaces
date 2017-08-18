@@ -11508,7 +11508,7 @@ function SampleNextArrow(props) {
       { className: 'arrow-icon next-arrow', width: '32', height: '32', viewBox: '0 0 32 32' },
       _react2.default.createElement(
         'g',
-        { fill: 'none', stroke: '#f9f9f9', strokeWidth: '1.5', strokeLinejoin: 'round', strokeMiterlimit: '10' },
+        { fill: 'none', stroke: '#f9f9f9', strokeWidth: '1', strokeLinejoin: 'round', strokeMiterlimit: '10' },
         _react2.default.createElement('circle', { className: 'arrow-icon--circle', cx: '16', cy: '16', r: '15.12' }),
         _react2.default.createElement('path', { className: 'arrow-icon--arrow', d: 'M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98' })
       )
@@ -11529,7 +11529,7 @@ function SamplePrevArrow(props) {
       { className: 'arrow-icon back-arrow', width: '32', height: '32', viewBox: '0 0 32 32' },
       _react2.default.createElement(
         'g',
-        { fill: 'none', stroke: '#f9f9f9', strokeWidth: '1.5', strokeLinejoin: 'round', strokeMiterlimit: '10' },
+        { fill: 'none', stroke: '#f9f9f9', strokeWidth: '1', strokeLinejoin: 'round', strokeMiterlimit: '10' },
         _react2.default.createElement('circle', { className: 'arrow-icon--circle', cx: '16', cy: '16', r: '15.12' }),
         _react2.default.createElement('path', { className: 'arrow-icon--arrow', d: 'M15.9,22.1L9.8,16l6.1-6.1 M23.8,16h-14' })
       )
@@ -11570,31 +11570,75 @@ var Carousel = function (_Component) {
             'div',
             null,
             _react2.default.createElement(
-              'p',
-              null,
+              'div',
+              { className: 'sliderCard' },
               _react2.default.createElement(
-                'span',
+                'h3',
                 null,
-                'simply more'
+                'booths -',
+                _react2.default.createElement(
+                  'b',
+                  null,
+                  'more than just space!'
+                )
               ),
-              _react2.default.createElement('br', null),
-              'we are the smarter, cooler, more affordable solution to your vision'
+              _react2.default.createElement(
+                'p',
+                null,
+                'We at ',
+                _react2.default.createElement(
+                  'b',
+                  null,
+                  'morethanspaces'
+                ),
+                ' believe that when it comes to trade shows, a booth is more than just a booth. It showcases the history of your brand, by bringing out the uniqueness that is you. Our booths are designed with that in mind to offer you the most economical, innovative, and transportable booths out there. So that, you can get back to worrying about what\'s more important!'
+              )
             )
           ),
           _react2.default.createElement(
             'div',
             null,
             _react2.default.createElement(
-              'p',
-              null,
-              'from',
+              'div',
+              { className: 'sliderCard' },
               _react2.default.createElement(
-                'span',
+                'h3',
                 null,
-                '$7,999 all incl.'
+                'video walls -',
+                _react2.default.createElement(
+                  'b',
+                  null,
+                  'showcase your story'
+                )
               ),
-              _react2.default.createElement('br', null),
-              'Video wall rental in Vegas'
+              _react2.default.createElement(
+                'p',
+                null,
+                'We understand that a ',
+                _react2.default.createElement(
+                  'b',
+                  null,
+                  'video wall'
+                ),
+                ' is more than a displaying for your brand. A ',
+                _react2.default.createElement(
+                  'b',
+                  null,
+                  'video wall'
+                ),
+                ' brings out the vision behind your brand by giving it three-dimensional depth. Our video walls are hassle free, easy to install, and user-friendly. We make it simple \u2013',
+                _react2.default.createElement(
+                  'b',
+                  null,
+                  'plug and play!'
+                ),
+                ' All visions are not equally created and we get that! We can customize your video wall to any business need \u2013',
+                _react2.default.createElement(
+                  'b',
+                  null,
+                  'ask us how!'
+                )
+              )
             )
           )
         )
@@ -11655,7 +11699,7 @@ var HomeSection = function (_Component) {
         _react2.default.createElement(
           "div",
           { id: "homevideo" },
-          _react2.default.createElement("iframe", { src: "https://player.vimeo.com/video/58164503?color=ffffff&title=0&byline=0&portrait=0", frameBorder: "0", allowFullScreen: true })
+          _react2.default.createElement("iframe", { src: "https://player.vimeo.com/video/230048827?color=ffffff&title=0&byline=0&portrait=0", frameBorder: "0", allowFullScreen: true })
         )
       );
     }
@@ -11753,27 +11797,12 @@ var Nav = function (_Component) {
   _inherits(Nav, _Component);
 
   function Nav() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
     _classCallCheck(this, Nav);
 
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Nav.__proto__ || Object.getPrototypeOf(Nav)).call.apply(_ref, [this].concat(args))), _this), _this.handleClick = function () {
-      console.log('this is:', _this);
-    }, _temp), _possibleConstructorReturn(_this, _ret);
+    return _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).apply(this, arguments));
   }
 
   _createClass(Nav, [{
-    key: 'handleClock',
-    value: function handleClock(input) {
-      console.log("this isn't ", input);
-    }
-  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -11894,7 +11923,6 @@ var QuoteTabs = function (_Component) {
     var _this = _possibleConstructorReturn(this, (QuoteTabs.__proto__ || Object.getPrototypeOf(QuoteTabs)).call(this, props));
 
     _this.state = {
-      tabIndex: _this.props.tabIndex,
       boothSizeWidth: "All",
       boothSizeLength: "All",
       selectedIsland: true,
@@ -12724,9 +12752,6 @@ var App = function (_Component) {
   }
 
   _createClass(App, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {}
-  }, {
     key: 'goToTab',
     value: function goToTab(index) {
       this.setState({ tabIndex: index });

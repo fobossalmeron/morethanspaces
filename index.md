@@ -6,6 +6,7 @@ layout: default
   <h2>services</h2>
   <ul>
     <li>
+      <div class="service-icon"></div>
       <h3>booth rentals</h3>
       <p>Investment in a trade show booth may not be for everyone. Why spend more on a
       booth you might only use once or be limited to a certain layout or size for many trade
@@ -17,13 +18,18 @@ layout: default
       Vegas, our booth rentals can be shipped to anywhere you need it.</p>
     </li>
     <li>
-      <h3>custom rental</h3>
-      <p>Short on time or need a ready to go booth with a little more than zest. Our custom
-      rentals have you in mind. With our team, you’ll be able to customize the key things
-      you’ll benefit from the most without having to build the entire booth from scratch. Get
-      the same attention of a custom design with a simpler approach.</p>
+      <div class="service-icon"></div>
+      <h3>audio visual</h3>
+      <p>A show isn’t a show without audio visual! We understand this and only bring you the
+      best when it comes to audio visual including the newest technology; LED/LCD video
+      walls and LED TV’s. Our certified technician only uses the best equipment when it comes
+      to setting up your show. We are there for you every step of the process making sure
+      there are no bugs or mistakes. Because your trade show should be the center of
+      attention, not technical issues! Straightforward and smooth we’ll have you ready for any
+      presentation.</p>
     </li>
     <li>
+        <div class="service-icon"></div>
         <h3>custom design</h3>
         <p>Looking to make a statement with your booth? By working together, we can help you
         create bold design to standout from your competitor and impress visitors! We believe
@@ -34,6 +40,15 @@ layout: default
         will look? We will show you our 3D creation before to goes to production.</p>
     </li>
     <li>
+      <div class="service-icon"></div>
+      <h3>custom rental</h3>
+      <p>Short on time or need a ready to go booth with a little more than zest. Our custom
+      rentals have you in mind. With our team, you’ll be able to customize the key things
+      you’ll benefit from the most without having to build the entire booth from scratch. Get
+      the same attention of a custom design with a simpler approach.</p>
+    </li>
+    <li>
+        <div class="service-icon"></div>
         <h3>install / teardown</h3>
         <p>We take pride in offering you the highest degree of service in assembling and
         dismantling your booths. Our team of trained professionals are experienced and
@@ -43,6 +58,7 @@ layout: default
         next trade show venue.</p>
     </li>
     <li>
+        <div class="service-icon"></div>
         <h3>storage / shipping</h3>
         <p>Located in Las Vegas the convention capital of the world, we are more than experienced
         in the world of trade shows. When it comes to storage and shipping, we will not sacrifice
@@ -50,20 +66,12 @@ layout: default
         any Las Vegas venues to any part of the world. We handle all your items safely and
         carefully.</p>
     </li>
-    <li>
-      <h3>audio visual</h3>
-      <p>A show isn’t a show without audio visual! We understand this and only bring you the
-      best when it comes to audio visual including the newest technology; LED/LCD video
-      walls and LED TV’s. Our certified technician only uses the best equipment when it comes
-      to setting up your show. We are there for you every step of the process making sure
-      there are no bugs or mistakes. Because your trade show should be the center of
-      attention, not technical issues! Straightforward and smooth we’ll have you ready for any
-      presentation.</p>
-    </li>
+
     <li class="full-service">
-      <h3>full service</h3>
-      <h4>service for you, designed for you, 100 percent yours!</h4>
-      <p><b>The Smarter Approach to Trade show</b> We know the cost of trade shows, and we are here to help by making it the best
+      <div class="service-icon"></div>
+      <h3>full service -<b>service for you, designed for you, 100 percent yours!</b></h3>
+      <h4>The Smarter Approach to Trade show</h4>
+      <p>We know the cost of trade shows, and we are here to help by making it the best
       experience possible at a price you feel comfortable with! Don’t waste your time with
       overly complicated booth’s, set-up / tear down, logistics or high rental cost. We like to
       keep it simple for you and always guarantee to be on time. We are so sure in our service
@@ -71,40 +79,52 @@ layout: default
       of clients such as Nike, MoneyGarm, CapitalOne, Coca-Cola, and others!</p>
     </li>
   </ul>
-
 </section>
 
 <section id="aboutus">
-<h2>about us</h2>
-<p>More than Spaces was founded to give more than other trade show vendors. Established and located in
-Las Vegas, the convention capital, we understand the world or trade shows thoroughly. We believe in
-creativity, simplicity and quality before prices and always go over and beyond with a smile. Trusted by
-the world’s most iconic brands and Fortune500 companies, our job has always been to give more,
+  <h2>about us</h2>
+  <p><b>morethanspaces</b> was founded to give more than other trade show vendors. Established and located in
+  Las Vegas, the convention capital, we understand the world or trade shows thoroughly. We believe in
+  creativity, simplicity and quality before prices and always go over and beyond with a smile. Trusted by
+  the world’s most iconic brands and Fortune500 companies, our job has always been to give more,
 
-charge less, and help big and small business bring their vision to life with innovative booth designs and
-high-end audio-visual equipment. Connect with us today to learn how we can transform your brand into
-a show stopper for your next trade show.</p>
-
+  charge less, and help big and small business bring their vision to life with innovative booth designs and
+  high-end audio-visual equipment. Connect with us today to learn how we can transform your brand into
+  a show stopper for your next trade show.</p>
 </section>
 
 <section id="contact">
-<h2>contact</h2>
-<p>Let us answer your question! Contact us for all your trade show needs.</p>
-<!-- Calendly link widget begin -->
-<link href="https://calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://calendly.com/assets/external/widget.js" type="text/javascript"></script>
-<a href="" onclick="Calendly.showPopupWidget('https://calendly.com/rodrigosalmeron/15min');return false;"><h3>schedule a call with us</h3></a>
-<!-- Calendly link widget end -->
+  <h2>contact</h2>
+  <p><b>Let us answer your question! Contact us for all your trade show needs.</b><br>
+  We understand you may have questions and general answers may not be what you are looking for. We
+  will be more than happy to answer any of your questions. Please fill out your information below with
+  your question and we will be happy to answer you back or if you need immediate assistant please give
+  us a call at 1833-morethanspaces.</p>
+  <div class="half-card">
+    <h3>send us an email</h3>
+    <form action="https://formspree.io/hello@morethanspaces.com"
+        method="POST">
+      <input type="text" name="name" placeholder="Your name">
+      <input type="email" name="_replyto" placeholder="Your email">
+      <textarea placeholder="Your message"></textarea>
+      <input type="submit" value="Send">
+    </form>
+  </div>
+  <div class="half-card">
+    <h3>or schedule a call!</h3>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/rodrigosalmeron" style="min-width:320px;min-height:400px;"></div>
+    <script type="text/javascript" src="https://calendly.com/assets/external/widget.js"></script>
+  </div>
 </section>
 
 <section id="clients">
-<h3>we are trusted by amongst others</h3>
-<ul>
-<li class="clientNike">Nike</li>
-<li class="clientCocaCola">Coca-Cola</li>
-<li class="clientMoneyGram">MoneyGram</li>
-<li class="clientChanel">Chanel</li>
-<li class="clientCapitalOne">CapitalOne</li>
-<li class="clientBaseF">BaseF</li>
-</ul>
+  <h3>we are trusted by amongst others</h3>
+  <ul>
+    <li class="clientNike">Nike</li>
+    <li class="clientCocaCola">Coca-Cola</li>
+    <li class="clientMoneyGram">MoneyGram</li>
+    <li class="clientChanel">Chanel</li>
+    <li class="clientCapitalOne">CapitalOne</li>
+    <li class="clientBaseF">BaseF</li>
+  </ul>
 </section>

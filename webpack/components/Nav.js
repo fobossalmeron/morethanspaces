@@ -2,12 +2,6 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 class Nav extends Component {
-  handleClick = () => {
-    console.log('this is:', this);
-  }
-  handleClock(input){
-    console.log("this isn't ", input);
-  }
 
   render (){
     return (

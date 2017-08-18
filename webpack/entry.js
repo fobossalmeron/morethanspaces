@@ -13,8 +13,7 @@ class App extends Component {
       tabIndex: 0,
     };
   }
-  componentDidMount(){
-  }
+  
   goToTab(index){
     this.setState({tabIndex: index})
   }

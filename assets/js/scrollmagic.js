@@ -1,10 +1,17 @@
 
-var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: .13}});
+var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: .5}});
 
-var logoScene = new ScrollMagic.Scene({triggerElement: "#homevideo", offset:0})
+var logoScene = new ScrollMagic.Scene({triggerElement: "#slider", offset:-300})
         .setClassToggle("nav", "navScroll")
+        .addIndicators()
         .addTo(controller);
 
+var quoteHeight = $('#quoteSection').height() + 500;
+
+var instaQuoteButton = new ScrollMagic.Scene({triggerElement: "#quoteSection", duration: quoteHeight})
+        .setClassToggle( "#instaQuoteAnchor", "fadeOut")
+        //.addIndicators()
+        .addTo(controller);
 
 var scrollScene = new ScrollMagic.Scene({duration: 200, triggerHook: "onLeave"})
             //.addIndicators()

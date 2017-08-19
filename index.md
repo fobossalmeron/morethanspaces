@@ -112,7 +112,7 @@ layout: default
   </div>
   <div class="half-card">
     <h3>or schedule a call!</h3>
-    <div class="calendly-inline-widget" data-url="https://calendly.com/rodrigosalmeron" style="min-width:320px;min-height:400px;"></div>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/morethanspaces" style="min-width:320px;min-height:400px;"></div>
     <script type="text/javascript" src="https://calendly.com/assets/external/widget.js"></script>
   </div>
 </section>

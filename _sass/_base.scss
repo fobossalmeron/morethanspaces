@@ -28,7 +28,7 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
-    font-weight: 100;
+    font-weight: $base-font-weight;
     color: $black;
     -webkit-text-size-adjust: 100%;
     background-color: $white;
@@ -109,7 +109,7 @@ a {
     cursor:pointer;
 
     &:visited {
-        color: lighten($black, 15%);
+        color: lighten($black, 75%);
     }
 
     &:hover {

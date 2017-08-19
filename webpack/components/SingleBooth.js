@@ -50,7 +50,7 @@ class SingleBooth extends Component {
           <label>add TV</label>
           <FormCheckBox inputType="checkbox" classList="addOnCheck" nameFor="videoWall" checkFor="videoWall"/>
           <label>add videowall</label>
-          <Button buttonText="get InstaQuote"/>
+          <Button buttonText="get instaQuote"/>
         </div>
       </div>
     )

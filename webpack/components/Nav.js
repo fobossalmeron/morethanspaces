@@ -6,7 +6,7 @@ class Nav extends Component {
   render (){
     return (
       <nav>
-        <img src="assets/img/logo.svg"/>
+        <a href="#home"><img src="assets/img/logo.svg"/></a>
         <ul>
           <li onClick={() => this.props.goToTab(0)}><a href="#booths">booths</a></li>
           <li onClick={() => this.props.goToTab(1)}><a href="#videowalls">videowalls</a></li>

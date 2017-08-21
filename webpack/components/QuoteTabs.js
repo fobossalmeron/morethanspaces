@@ -15,8 +15,17 @@ class QuoteTabs extends Component {
       selectedInline: true,
       selectedPeninsula: true,
       rentOwn: 1,
-      eventInVegas: true
+      eventInVegas: true,
+      individualBoothRender: false,
     };
+  }
+
+  renderSingleBooth(){
+    this.setState({ individualBoothRender: true })
+  }
+
+  closeSingleBooth(){
+    this.setState({ individualBoothRender: false });
   }
 
   toggleBooth(booth){
@@ -65,7 +74,9 @@ class QuoteTabs extends Component {
         <TabPanel>
           <TradeShowForm toggleBooth={this.toggleBooth.bind(this)}
                          limitByWidth={this.limitByWidth.bind(this)}
-                         limitByLength={this.limitByLength.bind(this)}/>
+                         limitByLength={this.limitByLength.bind(this)}
+                         individualBoothRender={this.state.individualBoothRender}
+                         closeSingleBooth={this.closeSingleBooth.bind(this)}/>
           <BoothGrid
           selectedIsland={this.state.selectedIsland}
           selectedSplitIsland={this.state.selectedSplitIsland}
@@ -73,6 +84,8 @@ class QuoteTabs extends Component {
           selectedInline={this.state.selectedInline}
           boothSizeWidth={this.state.boothSizeWidth}
           boothSizeLength={this.state.boothSizeLength}
+          individualBoothRender={this.state.individualBoothRender}
+          renderSingleBooth={this.renderSingleBooth.bind(this)}
           />
         </TabPanel>
         <TabPanel>

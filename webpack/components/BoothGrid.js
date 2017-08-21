@@ -7,9 +7,10 @@ class BoothGrid extends Component {
     super(props);
     this.state = {
       data: [],
-      individualBoothRender: false,
+      individualBoothRender: this.props.individualBoothRender,
       singleValue: '',
       description: '',
+      boothType: '',
       obj: '',
       images:[]
     };
@@ -31,18 +32,15 @@ class BoothGrid extends Component {
     this.loadFromServer();
   }
 
-  generateSingleBooth(singleValue, description, obj, images){
+  generateSingleBooth(singleValue, description, obj, images, boothType){
     this.setState({
-      individualBoothRender: true,
       singleValue: singleValue,
       description: description,
+      boothType: boothType,
       obj: obj,
       images : images
     })
-  }
-
-  closeIndividualBooth(){
-    this.setState({ individualBoothRender: false });
+    this.props.renderSingleBooth();
   }
 
   shouldIRender(booth){
@@ -79,7 +77,7 @@ class BoothGrid extends Component {
       }
     }).map((booth, index) => (
       <li key={booth.id}
-          onClick={() => this.generateSingleBooth(booth.id, booth.description, booth.obj, booth.images)}
+          onClick={() => this.generateSingleBooth(booth.id, booth.description, booth.obj, booth.images, booth.type)}
           className={"boothGridItem booth" + booth.type}
           style={{backgroundImage: 'url(' + booth.images[0].url + ')'}}>
           <label>{booth.id}</label>
@@ -87,14 +85,14 @@ class BoothGrid extends Component {
     ));
 
     var singleBooth = (
-       <SingleBooth closeIndividualBooth={this.closeIndividualBooth.bind(this)}
-                    description={this.state.description}
+       <SingleBooth description={this.state.description}
                     singleValue={this.state.singleValue}
+                    boothType={this.state.boothType}
                     obj={this.state.obj}
                     images={this.state.images} />
       );
 
-    var gridChoice = (this.state.individualBoothRender ? singleBooth : doRenderBooths);
+    var gridChoice = (this.props.individualBoothRender ? singleBooth : doRenderBooths);
 
     return (
       <ul id="boothGrid">

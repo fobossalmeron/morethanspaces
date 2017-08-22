@@ -298,6 +298,9 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 
 .calendly-inline-widget { min-width: 320px; position: relative; width: 100%; min-height: 500px; }
 
+.realestate a { font-size: 1em; font-weight: bold; }
+.realestate a:hover { color: #ec3092; }
+
 .react-datepicker__tether-element-attached-top .react-datepicker__triangle, .react-datepicker__tether-element-attached-bottom .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow { margin-left: -8px; position: absolute; }
 
 .react-datepicker__tether-element-attached-top .react-datepicker__triangle, .react-datepicker__tether-element-attached-bottom .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow, .react-datepicker__tether-element-attached-top .react-datepicker__triangle::before, .react-datepicker__tether-element-attached-bottom .react-datepicker__triangle::before, .react-datepicker__year-read-view--down-arrow::before, .react-datepicker__month-read-view--down-arrow::before { box-sizing: content-box; position: absolute; border: 8px solid transparent; height: 0; width: 1px; }

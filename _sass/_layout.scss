@@ -940,3 +940,13 @@ iframe{
   width:100%;
   min-height:500px;
 }
+
+.realestate{
+  a{
+    font-size: 1em;
+    font-weight: bold;
+    &:hover{
+      color: $magenta;
+    }
+  }
+}

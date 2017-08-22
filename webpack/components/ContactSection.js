@@ -7,48 +7,54 @@ const contactForm = (
       console.log('Form Submitted Succesfully with:', values)
 
       const url = 'https://formspree.io/fobos.salmeron@gmail.com';
-      var data = {message: "hello!"};
-      const xhr = new XMLHttpRequest();
-      xhr.open('POST', url, true);
-      xhr.setRequestHeader('Accept', 'application/json');
-      xhr.setRequestHeader('Content-Type', 'application/json');
-      xhr.onreadystatechange = function () {
-        console.log(this.getResponseHeader('content-type'));
-        if (xhr.readyState == 4) {
-            if (xhr.status == 200) {
-                var data = xhr.responseText;
-                // do something with data
-            } else {
-                //handle errors
-                console.log('failed');
-            }
-        }
-    };
-      xhr.send(data);
-      console.log(data);
-    }}
+      var data = values;
 
-    validate={({ name, _replyto, business, message }) => {
+      var xhr = new XMLHttpRequest();
+          xhr.open('POST', url, true);
+          xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
+          xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+          // Send the collected data as JSON
+          xhr.send(JSON.stringify(data));
+
+          // Callback function
+          xhr.onloadend = function (response) {
+              if (response.target.status === 0) {
+                  // Failed XmlHttpRequest should be considered an undefined error.
+                  console.log('danger');
+
+              } else if (response.target.status === 400) {
+                  console.log(JSON.parse(responseText).error);
+
+              } else if (response.target.status === 200) {
+                  console.log('Success!')
+
+              }
+          }
+       }
+    }
+
+    validate={({ name, email, business, message }) => {
       return {
         name: !name ? 'A name is required' : undefined,
         business: !business ? 'A business name is required' : undefined,
         message: !message? 'The message cannot be empty' : undefined,
-        _replyto:
-          !_replyto ?
+        email:
+          !email ?
         'The email cannot be empty' :
-          _replyto.search('@') == -1?
+          email.search('@') == -1?
         'Please give a valid email' :
-          _replyto.search(/gmail.com/i) !== -1?
+          email.search(/gmail.com/i) !== -1?
         'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
-          _replyto.search(/aol.com/i) !== -1?
+          email.search(/aol.com/i) !== -1?
         'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
-          _replyto.search(/yahoo.com/i) !== -1?
+          email.search(/yahoo.com/i) !== -1?
         'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
-          _replyto.search(/live.com/i) !== -1?
+          email.search(/live.com/i) !== -1?
         'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
-          _replyto.search(/hotmail.com/i) !== -1?
+          email.search(/hotmail.com/i) !== -1?
         'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
-          _replyto.search('@') == -1?
+          email.search('@') == -1?
         'Please give a valid email' :
           undefined
       }
@@ -58,7 +64,7 @@ const contactForm = (
       return (
         <form onSubmit={submitForm}>
           <Text field='name' placeholder='your name'/>
-          <Text field='_replyto' placeholder='your email'/>
+          <Text field='email' placeholder='your email'/>
           <Text field='business' placeholder='your business name'/>
           <Textarea
             field='message'

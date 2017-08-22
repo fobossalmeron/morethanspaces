@@ -15,7 +15,7 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
 /** Basic styling */
-body { font-family: "GothamRound", sans-serif; font-size: 20px; line-height: 1.5; font-weight: 100; color: #383838; -webkit-text-size-adjust: 100%; background-color: #f9f9f9; }
+body { font-family: "GothamRound", sans-serif; font-size: 20px; line-height: 1.5; font-weight: 300; color: #383838; -webkit-text-size-adjust: 100%; background-color: #f9f9f9; }
 
 /** Set `margin-bottom` to maintain vertical rhythm */
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight { margin-bottom: 15px; }
@@ -28,7 +28,7 @@ figure > img { display: block; }
 
 figcaption { font-size: 17.5px; }
 
-b { font-weight: bold; }
+b { font-weight: 700; }
 
 /** Lists */
 ul, ol { margin-left: 30px; }
@@ -36,7 +36,7 @@ ul, ol { margin-left: 30px; }
 li > ul, li > ol { margin-bottom: 0; }
 
 /** Headings */
-h1, h2, h3, h4, h5, h6 { font-weight: 400; font-size: 1.7em; position: relative; }
+h1, h2, h3, h4, h5, h6 { font-weight: 300; font-size: 1.7em; position: relative; }
 
 /** Links */
 a { color: #383838; text-decoration: none; cursor: pointer; }
@@ -69,7 +69,7 @@ nav { height: 100px; background-color: transparent; width: 100%; float: left; po
 nav img { height: 100%; float: left; margin-left: 1.5%; -webkit-filter: brightness(20); filter: brightness(20); }
 nav ul { height: 100%; float: right; margin: 0; margin-right: 1.5%; }
 nav ul li { padding: 5% 3%; height: 100%; float: left; list-style: none; text-transform: lowercase; font-size: .8em; cursor: pointer; transition: .5s ease all; }
-nav ul li a { padding-bottom: 1px; font-weight: 400; border-bottom: 2px solid transparent; transition: .4s ease all; color: #f9f9f9; }
+nav ul li a { padding-bottom: 1px; font-weight: 300; border-bottom: 2px solid transparent; transition: .4s ease all; color: #f9f9f9; }
 nav ul li a:visited { color: #f9f9f9; }
 nav ul li a:hover { border-color: #383838; padding-bottom: 4px; text-decoration: none; }
 
@@ -114,8 +114,8 @@ section { min-height: 500px; float: left; width: 100%; padding: 5%; }
 #services .full-service { width: 100%; padding: 0 15% 5% 15%; min-height: 100px; }
 #services a { color: #f9f9f9; float: right; }
 #services ul { margin: 0px; }
-#services ul li { transition: .5s ease all; transform: translateX(-10%); float: left; min-height: 700px; text-align: center; width: 50%; padding: 3% 3%; font-size: 1em; list-style: none; opacity: 0; }
-#services ul li h3 { font-weight: bold; }
+#services ul li { transition: .5s ease all; transform: translateX(-10%); float: left; min-height: 630px; text-align: center; width: 50%; padding: 3% 3% 0% 3%; font-size: 1em; list-style: none; opacity: 0; }
+#services ul li h3 { font-weight: 700; }
 
 .service-icon { width: 100px; height: 100px; margin: 0 auto 17px auto; position: relative; background-image: url("/morethanspaces/assets/img/3dBack.svg"); background-size: cover; background-position: center center; }
 
@@ -135,6 +135,8 @@ form button:hover { background-color: #2cbdc0; }
 
 .half-card { width: 50%; padding: 2% 4% 2% 0; float: left; position: relative; box-sizing: border-box; }
 .half-card:nth-child(2n+2) { padding-right: 0; padding-left: 2%; }
+
+.messaged form { background-color: green !important; }
 
 #clients { background-color: #ec3092; color: #f9f9f9; }
 #clients h3 { float: left; width: 25%; }
@@ -249,7 +251,7 @@ input[type=text] { border: none; padding: 4px; font-size: .7em; }
 .singleBooth { float: left; position: relative; width: 100%; }
 .singleBooth .insertPadding label::after { padding: 4px 10px; }
 .singleBooth .singleInfo { float: left; width: 40%; padding-left: 5%; }
-.singleBooth .singleInfo span { font-weight: 600; }
+.singleBooth .singleInfo span { font-weight: 700; }
 .singleBooth .singleInfo label { float: left; font-size: 0.8em; margin-right: 10px; }
 .singleBooth .singleInfo label:after { float: left; margin-bottom: 10px; }
 .singleBooth h3 { float: left; width: 100%; margin-bottom: 0; }
@@ -298,7 +300,7 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 
 .calendly-inline-widget { min-width: 320px; position: relative; width: 100%; min-height: 500px; }
 
-.realestate a { font-size: 1em; font-weight: bold; }
+.realestate a { font-size: 1em; font-weight: 700; }
 .realestate a:hover { color: #ec3092; }
 
 .react-datepicker__tether-element-attached-top .react-datepicker__triangle, .react-datepicker__tether-element-attached-bottom .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow { margin-left: -8px; position: absolute; }

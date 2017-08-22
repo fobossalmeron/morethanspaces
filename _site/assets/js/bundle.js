@@ -13000,9 +13000,11 @@ var contactForm = _react2.default.createElement(
       var url = 'https://formspree.io/fobos.salmeron@gmail.com';
       var data = { message: "hello!" };
       var xhr = new XMLHttpRequest();
-      xhr.open('POST', url);
+      xhr.open('POST', url, true);
       xhr.setRequestHeader('Accept', 'application/json');
+      xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.onreadystatechange = function () {
+        console.log(this.getResponseHeader('content-type'));
         if (xhr.readyState == 4) {
           if (xhr.status == 200) {
             var data = xhr.responseText;

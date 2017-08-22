@@ -9,9 +9,11 @@ const contactForm = (
       const url = 'https://formspree.io/fobos.salmeron@gmail.com';
       var data = {message: "hello!"};
       const xhr = new XMLHttpRequest();
-      xhr.open('POST', url);
+      xhr.open('POST', url, true);
       xhr.setRequestHeader('Accept', 'application/json');
+      xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.onreadystatechange = function () {
+        console.log(this.getResponseHeader('content-type'));
         if (xhr.readyState == 4) {
             if (xhr.status == 200) {
                 var data = xhr.responseText;

@@ -12733,13 +12733,26 @@ var contactForm = _react2.default.createElement(
 var ContactSection = function (_Component) {
   _inherits(ContactSection, _Component);
 
-  function ContactSection() {
+  function ContactSection(props) {
     _classCallCheck(this, ContactSection);
 
-    return _possibleConstructorReturn(this, (ContactSection.__proto__ || Object.getPrototypeOf(ContactSection)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (ContactSection.__proto__ || Object.getPrototypeOf(ContactSection)).call(this, props));
+
+    _this.state = {
+      successMessage: false
+    };
+    return _this;
   }
 
   _createClass(ContactSection, [{
+    key: 'showConf',
+    value: function showConf() {
+      console.log("Success from function");
+      this.setState({
+        successMessage: true
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
       var calendlyUrl = 'https://calendly.com/morethanspaces';

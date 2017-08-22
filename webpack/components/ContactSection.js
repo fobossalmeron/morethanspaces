@@ -78,7 +78,19 @@ const contactForm = (
 )
 
 class ContactSection extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      successMessage: false
+    };
+  }
 
+  showConf(){
+    console.log("Success from function");
+    this.setState({
+        successMessage: true
+    });
+  }
   render (){
     var calendlyUrl = 'https://calendly.com/morethanspaces'
     return (

@@ -5,6 +5,8 @@ import Carousel from './components/Carousel';
 import QuoteTabs from './components/QuoteTabs';
 import Nav from './components/Nav';
 import InstaQuoteAnchor from './components/InstaQuoteAnchor';
+import StaticSection from './components/StaticSection';
+import ContactSection from './components/ContactSection';
 
 class App extends Component {
   constructor(props) {
@@ -13,7 +15,7 @@ class App extends Component {
       tabIndex: 0,
     };
   }
-  
+
   goToTab(index){
     this.setState({tabIndex: index})
   }
@@ -26,6 +28,8 @@ class App extends Component {
         <Carousel />
         <QuoteTabs tabIndex={this.state.tabIndex}
                    goToTab={this.goToTab.bind(this)}/>
+        <StaticSection/>
+        <ContactSection/>           
       </div>
     )
   }

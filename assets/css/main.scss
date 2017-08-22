@@ -4,9 +4,9 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: 'Lato', sans-serif;
-$secondary-font-family: 'Lato', sans-serif;
-$base-font-size:   19px;
+$base-font-family: 'GothamRound', sans-serif;
+$base-font-size:   20px;
+$base-font-weight: 300;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
@@ -21,6 +21,7 @@ $black: #383838;
 $white: #f9f9f9;
 
 $magenta: #ec3092;
+$yellow: #e0e221;
 $grey: #e0e0e0;
 $green: #e0e221;
 $blue: #2cbdc0;
@@ -72,6 +73,7 @@ $baseurl: "{{site.baseurl}}";
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
 		    "mixins",
+        "gotham",
         "base",
         "layout",
         "react-datepicker",

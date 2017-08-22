@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import ReactPlayer from 'react-player';
 
 class HomeSection extends Component {
-  componentDidMount() {
-  }
+
   render (){
+
     return (
-      <section id="homesection">
+      <section id="home">
+        <h1>trade shows & video walls: <br/>you deserve <b>more - for less</b></h1>
         <div id="homevideo">
-          <iframe src="https://player.vimeo.com/video/230048827?color=ffffff&title=0&byline=0&portrait=0" frameBorder="0" allowFullScreen></iframe>
+            <ReactPlayer url='/morethanspaces/assets/video/intro.mp4' playing volume={0}/>
         </div>
       </section>
     );

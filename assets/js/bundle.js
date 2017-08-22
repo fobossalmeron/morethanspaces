@@ -13013,8 +13013,8 @@ var contactForm = _react2.default.createElement(
           }
         }
       };
-      xhr.send(values);
-      console.log(values);
+      xhr.send(data);
+      console.log(data);
     },
 
     validate: function validate(_ref) {

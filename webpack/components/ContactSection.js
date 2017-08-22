@@ -22,8 +22,8 @@ const contactForm = (
             }
         }
     };
-      xhr.send(values);
-      console.log(values);
+      xhr.send(data);
+      console.log(data);
     }}
 
     validate={({ name, _replyto, business, message }) => {

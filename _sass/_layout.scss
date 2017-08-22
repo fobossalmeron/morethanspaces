@@ -289,6 +289,7 @@ section{
 
 form{
   background-color: white;
+  padding: 10%;
   position: relative;
   width: 100%;
   display: block;
@@ -296,6 +297,7 @@ form{
   min-height: 500px;
   border: solid #666A73 5px;
   box-sizing: border-box;
+  transition: .4s ease all;
 
   input, textarea, button{
     width:100%;
@@ -307,13 +309,20 @@ form{
     padding: 20px;
     font-size:1em;
     font-family: inherit;
+    transition: .4s ease all;
   }
   button{
-    color:$white;
-    position:absolute;
-    bottom:0;
-    left:0;
+    color: $white;
+    position: relative;
+    box-sizing: border-box;
+    padding: 5%;
+    margin-top: 5%;
+    width: 100%;
     background-color: $magenta;
+    cursor:pointer;
+    &:hover{
+      background-color: $blue;
+    }
   }
 }
 
@@ -321,9 +330,10 @@ form{
   display: block;
   float: left;
   clear: both;
-  color: black;
-  padding: 10px;
-  background-color: yellow;
+  font-size: .8em;
+  color: $black;
+  padding: 1% 2%;
+  background-color: $yellow;
   bottom: 0;
 }
 

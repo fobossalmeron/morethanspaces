@@ -124,11 +124,12 @@ section { min-height: 500px; float: left; width: 100%; padding: 5%; }
 #contact { background-color: #383838; color: white; }
 #contact p { column-count: 2; column-gap: 50px; width: 100%; }
 
-form { background-color: white; position: relative; width: 100%; display: block; float: left; min-height: 500px; border: solid #666A73 5px; box-sizing: border-box; }
-form input, form textarea, form button { width: 100%; float: left; clear: both; border: none; border-bottom: 1px solid grey; position: relative; padding: 20px; font-size: 1em; font-family: inherit; }
-form button { color: #f9f9f9; position: absolute; bottom: 0; left: 0; background-color: #ec3092; }
+form { background-color: white; padding: 10%; position: relative; width: 100%; display: block; float: left; min-height: 500px; border: solid #666A73 5px; box-sizing: border-box; transition: .4s ease all; }
+form input, form textarea, form button { width: 100%; float: left; clear: both; border: none; border-bottom: 1px solid grey; position: relative; padding: 20px; font-size: 1em; font-family: inherit; transition: .4s ease all; }
+form button { color: #f9f9f9; position: relative; box-sizing: border-box; padding: 5%; margin-top: 5%; width: 100%; background-color: #ec3092; cursor: pointer; }
+form button:hover { background-color: #2cbdc0; }
 
-.FormError { display: block; float: left; clear: both; color: black; padding: 10px; background-color: yellow; bottom: 0; }
+.FormError { display: block; float: left; clear: both; font-size: .8em; color: #383838; padding: 1% 2%; background-color: #e0e221; bottom: 0; }
 
 .destroy { display: none; }
 

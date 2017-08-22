@@ -1,15 +1,54 @@
 import React, { Component } from 'react';
-import { Form, Text, Select, Textarea, Checkbox, Radio, RadioGroup, NestedForm, FormError } from 'react-form'
+import { Form, Text, Select, Textarea, NestedForm, FormError } from 'react-form'
 
 const contactForm = (
   <Form
     onSubmit={(values) => {
-      console.log('Success!', values)
+      console.log('Form Submitted Succesfully with:', values)
+
+      const url = 'https://formspree.io/fobos.salmeron@gmail.com';
+      var data = {message: "hello!"};
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', url);
+      xhr.setRequestHeader('Accept', 'application/json');
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                var data = xhr.responseText;
+                // do something with data
+            } else {
+                //handle errors
+                console.log('failed');
+            }
+        }
+    };
+      xhr.send(values);
+      console.log(values);
     }}
-    validate={({ name, email }) => {
+
+    validate={({ name, _replyto, business, message }) => {
       return {
         name: !name ? 'A name is required' : undefined,
-        email: (email && email.length < 5) ? 'Your email must be at least 5 characters long' : false
+        business: !business ? 'A business name is required' : undefined,
+        message: !message? 'The message cannot be empty' : undefined,
+        _replyto:
+          !_replyto ?
+        'The email cannot be empty' :
+          _replyto.search('@') == -1?
+        'Please give a valid email' :
+          _replyto.search(/gmail.com/i) !== -1?
+        'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+          _replyto.search(/aol.com/i) !== -1?
+        'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+          _replyto.search(/yahoo.com/i) !== -1?
+        'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+          _replyto.search(/live.com/i) !== -1?
+        'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+          _replyto.search(/hotmail.com/i) !== -1?
+        'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+          _replyto.search('@') == -1?
+        'Please give a valid email' :
+          undefined
       }
     }}
     >
@@ -17,8 +56,8 @@ const contactForm = (
       return (
         <form onSubmit={submitForm}>
           <Text field='name' placeholder='your name'/>
-          <Text field='email' placeholder='your email'/>
-          <Text field='business' placeholder='your company'/>
+          <Text field='_replyto' placeholder='your email'/>
+          <Text field='business' placeholder='your business name'/>
           <Textarea
             field='message'
             placeholder='message'

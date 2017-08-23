@@ -71,29 +71,35 @@ nav ul { height: 100%; float: right; margin: 0; margin-right: 1.5%; }
 nav ul li { padding: 5% 3%; height: 100%; float: left; list-style: none; text-transform: lowercase; font-size: .8em; cursor: pointer; transition: .5s ease all; }
 nav ul li a { padding-bottom: 1px; font-weight: 300; border-bottom: 2px solid transparent; transition: .4s ease all; color: #f9f9f9; }
 nav ul li a:visited { color: #f9f9f9; }
-nav ul li a:hover { border-color: #383838; padding-bottom: 4px; text-decoration: none; }
+nav ul li a:hover { border-color: #f9f9f9; padding-bottom: 4px; text-decoration: none; }
 
 .navScroll { height: 60px; background-color: #f9f9f9; }
 .navScroll img { -webkit-filter: brightness(1); filter: brightness(1); }
-.navScroll ul li { padding: 2% 3%; }
+.navScroll ul li { padding: 2.5% 3%; }
 .navScroll ul li a { color: #383838; }
 .navScroll ul li a:visited { color: #383838; }
+.navScroll ul li a:hover { border-color: #383838; }
 
 footer { float: left; width: 100%; background-color: #777777; color: #f9f9f9; padding: 5%; }
+footer a { font-size: 1em; font-weight: 700; float: left; clear: both; color: #f9f9f9; }
+footer a:hover { color: #ec3092; }
 footer .colophon { width: 100%; text-align: center; opacity: 0.5; color: #383838; }
-footer p, footer a { font-size: 0.8em; color: #f9f9f9; float: left; clear: both; }
+footer p { font-size: 0.8em; color: #f9f9f9; float: left; clear: both; margin-bottom: 1%; }
 footer .inline-link { float: none; color: #f9f9f9; font-size: 1em; }
 footer ul { margin: 0px; float: left; width: 100%; }
 footer ul li { width: 25%; padding: 2%; list-style: none; float: left; }
 
-#instaQuoteAnchor { position: fixed; width: 90px; z-index: 10; height: 90px; bottom: 20px; right: 25px; background-size: cover; cursor: pointer; background-image: url("/morethanspaces/assets/img/instaQuote.svg"); transition: .4s ease; }
+.before-pinterest-snippet { margin-bottom: 2%; }
+
+#instaQuoteButton { position: fixed; width: 90px; z-index: 10; height: 90px; bottom: 20px; right: 25px; background-size: cover; cursor: pointer; background-image: url("/morethanspaces/assets/img/instaQuote.svg"); transition: .4s ease; }
+#instaQuoteButton:hover { animation-play-state: running; }
 
 @keyframes bounce { from { transform: scale3d(1, 1, 1); }
   10%, 20% { transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg); }
   30%, 50%, 70%, 90% { transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); }
   40%, 60%, 80% { transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
   to { transform: scale3d(1, 1, 1); } }
-.bounce { animation-name: bounce; transform-origin: center bottom; animation-duration: 1s; animation-fill-mode: both; }
+.bounce { animation-name: bounce; transform-origin: center bottom; animation-duration: 1s; animation-iteration-count: infinite; animation-fill-mode: both; animation-play-state: paused; }
 
 .instaQuoteButton { width: 100%; font-family: inherit; border: none; background-color: #ec3092; cursor: pointer; font-weight: 700; color: #f9f9f9; font-size: 1em; padding: 10px; margin-top: 5%; }
 
@@ -112,14 +118,27 @@ section { min-height: 500px; float: left; width: 100%; padding: 5%; }
 #services { background-color: #e0e221; color: #383838; }
 #services h2 { font-weight: 700; }
 #services .full-service { width: 100%; padding: 0 15% 5% 15%; min-height: 100px; }
+#services p { margin-bottom: 0; }
 #services a { color: #f9f9f9; float: right; }
+#services .row { float: left; clear: both; }
 #services ul { margin: 0px; }
-#services ul li { transition: .5s ease all; transform: translateX(-10%); float: left; min-height: 630px; text-align: center; width: 50%; padding: 3% 3% 0% 3%; font-size: 1em; list-style: none; opacity: 0; }
+#services ul li { transition: .5s ease all; transform: translateX(-10%); float: left; text-align: center; width: 50%; padding: 3% 3% 0% 3%; font-size: 1em; list-style: none; opacity: 0; }
 #services ul li h3 { font-weight: 700; }
 
 .service-icon { width: 100px; height: 100px; margin: 0 auto 17px auto; position: relative; background-image: url("/morethanspaces/assets/img/3dBack.svg"); background-size: cover; background-position: center center; }
 
-#aboutus p { column-count: 2; column-gap: 50px; width: 100%; }
+.frompdf p { float: left; }
+.frompdf span { font-size: 6em; float: left; position: relative; display: inline-block; font-weight: bold; color: #383838; }
+.frompdf span:nth-of-type(1) { color: #e0e221; }
+.frompdf span:nth-of-type(2) { color: #2cbdc0; }
+.frompdf span:nth-of-type(3) { color: #ec3092; margin-right: 2%; }
+.frompdf .stepbox { width: 100%; float: left; clear: both; font-weight: 700; padding: 2%; height: 75px; margin-bottom: 3.5%; }
+.frompdf .stepbox b { float: left; color: #383838; font-size: 3em; margin-right: 2%; margin-top: -15px; }
+.frompdf .stepbox p { float: left; margin-top: 0%; }
+.frompdf .stepbox:nth-of-type(1) { background-color: #e0e221; width: 60%; }
+.frompdf .stepbox:nth-of-type(2) { background-color: #2cbdc0; width: 70%; }
+.frompdf .stepbox:nth-of-type(3) { background-color: #ec3092; width: 80%; margin-bottom: 5%; }
+.frompdf .stepbox:nth-of-type(3) p { font-size: 2em; }
 
 #contact { background-color: #383838; color: white; }
 #contact p { column-count: 2; column-gap: 50px; width: 100%; }
@@ -136,12 +155,15 @@ form button:hover { background-color: #2cbdc0; }
 .half-card { width: 50%; padding: 2% 4% 2% 0; float: left; position: relative; box-sizing: border-box; }
 .half-card:nth-child(2n+2) { padding-right: 0; padding-left: 2%; }
 
-.messaged form { background-color: green !important; }
+.messaged form { padding: 20%; color: #383838; text-align: center; }
+.messaged form p { column-count: 1 !important; }
+
+.confirmCheck { float: left; left: 50%; transform: translateX(-50%); position: relative; margin-bottom: 8%; }
 
 #clients { background-color: #ec3092; color: #f9f9f9; }
 #clients h3 { float: left; width: 25%; }
 #clients ul { width: 75%; float: left; margin: 0px; }
-#clients ul li { width: 26.5%; float: left; font-size: 0px; background-size: contain; background-repeat: no-repeat; min-height: 100px; box-sizing: border-box; margin-right: 10%; }
+#clients ul li { width: 26.5%; float: left; font-size: 0px; background-size: contain; background-repeat: no-repeat; min-height: 100px; box-sizing: border-box; margin-right: 10%; opacity: 0; transition: .4s ease all; }
 #clients ul li:nth-child(3n+3) { margin-right: 0; }
 #clients ul li:nth-last-child(1), #clients ul li:nth-last-child(2) { margin-bottom: 0px; }
 
@@ -211,11 +233,11 @@ input[type=text] { border: none; padding: 4px; font-size: .7em; }
 
 .leaveOrStay { float: left; padding-top: 15px; width: 180px; text-align: left; line-height: 1.5; margin-bottom: 10px; }
 .leaveOrStay a { border-bottom: 2px solid #f9f9f9; color: white; text-decoration: none; padding-bottom: 0px; float: left; }
+.leaveOrStay .new-arrow { margin-top: 3px; float: left; }
+.leaveOrStay b { float: left; padding-right: 7px; }
 .leaveOrStay:nth-child(2) { float: right; width: 143px; }
 .leaveOrStay:nth-child(2) b { padding-right: 0; margin-top: -5px; }
 .leaveOrStay:nth-child(2) .new-arrow { margin-top: -1px; }
-.leaveOrStay .new-arrow { margin-top: 3px; }
-.leaveOrStay b { float: left; padding-right: 7px; }
 
 .datePickerFields { float: left; }
 .datePickerFields label { float: left; clear: both; }
@@ -278,6 +300,8 @@ input[type=text] { border: none; padding: 4px; font-size: .7em; }
 .noMarginRight { margin-right: 0px; }
 
 iframe { position: absolute; background-color: white; height: 100%; width: 100%; border: solid #666A73; border-width: 0px 5px 5px 5px; }
+
+#api-frame { border: none; background-color: #f9f9f9; }
 
 .react-tabs__tab--disabled { display: none; }
 

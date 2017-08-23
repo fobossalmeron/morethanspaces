@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Text, Select, Textarea, NestedForm, FormError } from 'react-form'
+import Check from './presentational/Check';
 
 class ContactSection extends Component {
   constructor(props) {
@@ -7,6 +8,7 @@ class ContactSection extends Component {
     this.state = {
       successMessage: false
     };
+  this.showConf = this.showConf.bind(this);
   }
 
   showConf(){
@@ -17,7 +19,25 @@ class ContactSection extends Component {
   }
   render (){
     var calendlyUrl = 'https://calendly.com/morethanspaces'
-    const message = this.state.successMessage ? 'THANKS!' : 'send us an email';
+    const actualForm = (
+      <div>
+        <Text field='name' placeholder='your name'/>
+        <Text field='email' placeholder='your email'/>
+        <Text field='business' placeholder='your business name'/>
+        <Textarea
+          field='message'
+          placeholder='message'
+        />
+        <button type='submit'>Send</button>
+        </div>
+    )
+    const sentMessage = (
+      <div>
+        <Check className={"confirmCheck"} width={"100px"} color={"#42ba42"}/>
+        <p>Email sent! We will get in touch with you soon.</p>
+      </div>
+    )
+    const message = this.state.successMessage ? sentMessage : actualForm ;
     const messageClass = this.state.successMessage ? 'half-card messaged' : 'half-card';
     return (
       <section id="contact">
@@ -28,10 +48,11 @@ class ContactSection extends Component {
         your question and we will be happy to answer you back or if you need immediate assistant please give
         us a call at 1833-morethanspaces.</p>
         <div className={messageClass}>
-          <h3>{message}</h3>
+          <h3>send us an email</h3>
           <Form
             onSubmit={(values) => {
               console.log('Form Submitted Succesfully with:', values)
+              this.showConf()
 
               const url = 'https://formspree.io/fobos.salmeron@gmail.com';
               var data = values;
@@ -45,22 +66,19 @@ class ContactSection extends Component {
                   xhr.send(JSON.stringify(data));
 
                   // Callback function
-                  xhr.onloadend = function (response) {
-                      if (response.target.status === 0) {
-                          // Failed XmlHttpRequest should be considered an undefined error.
-                          console.log('danger');
+                  xhr.onloadend = function (response, showMe) {
+                    if (response.target.status === 0) {
+                        // Failed XmlHttpRequest should be considered an undefined error.
+                        console.log('Danger');
 
-                      } else if (response.target.status === 400) {
-                          console.log(JSON.parse(responseText).error);
+                    } else if (response.target.status === 400) {
+                        console.log(JSON.parse(responseText).error);
 
-                      } else if (response.target.status === 200) {
-                          console.log('Success!');
-                          () => this.showConf();
-
+                    } else if (response.target.status === 200) {
+                        console.log('Success!');
                       }
                   }
-               }
-            }
+            }}
 
             validate={({ name, email, business, message }) => {
               return {
@@ -91,14 +109,7 @@ class ContactSection extends Component {
             {({submitForm}) => {
               return (
                 <form onSubmit={submitForm}>
-                  <Text field='name' placeholder='your name'/>
-                  <Text field='email' placeholder='your email'/>
-                  <Text field='business' placeholder='your business name'/>
-                  <Textarea
-                    field='message'
-                    placeholder='message'
-                  />
-                  <button type='submit'>Send</button>
+                  {message}
                 </form>
               )
             }}

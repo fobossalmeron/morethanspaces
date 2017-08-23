@@ -32,9 +32,9 @@ prose:
             placeholder: 'Choose a category'
             options:
               - name: 'Percentage'
-                value: true
+                value: 'percentage'
               - name: 'Amount'
-                value: false
+                value: 'amount'
         - name: 'text'
           field:
             element: 'text'

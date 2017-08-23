@@ -1,7 +1,8 @@
 ---
 amount: 0
-typeofdiscount: false
-text: ' '
+type: ''
+text: ''
+published: true
 ---
 
 // Morethanspaces discount file.
@@ -17,5 +18,5 @@ text: ' '
 
 
 var discountNumber = {{page.discount}}
-var isDiscountAPercentage = {{page.typeofdiscount}}
+var discountType = {{page.type}}
 var discountText = {{page.text}}

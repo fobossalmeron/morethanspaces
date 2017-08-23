@@ -8,7 +8,7 @@ class SketchFab extends Component{
    componentDidMount() {
      var iframe = document.getElementById( 'api-frame' );
          var version = '1.0.0';
-         var urlid = '582d6d35e8974d1ba0af3d51e0a0369a';
+         var urlid = '50046be4f4354df29231581e84150395';
          var client = new Sketchfab( version, iframe );
 
          client.init( urlid, {

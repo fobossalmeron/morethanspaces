@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import TabCheckBox from './TabCheckBox';
 import TradeShowForm from './TradeShowForm';
 import BoothGrid from './BoothGrid';
 
@@ -52,10 +51,9 @@ class QuoteTabs extends Component {
   }
 
   limitByLength(length){
-    console.log("Booth size function triggered with length: " + length)
     this.setState({
       boothSizeLength: length
-    }, () => {console.log("State changed, state.length is " + this.state.boothSizeLength)});
+    });
   }
 
   render(){

@@ -15,3 +15,28 @@ exclude:
   - Gemfile.lock
   - node_modules
   - webpack
+
+prose:
+    rooturl: 'assets/discounts/'
+    metadata:
+        assets/discounts/:
+        - name: 'amount'
+          field:
+            element: 'number'
+            label: "Specify an amount (Please don't use any signs)"
+            value: ''
+        - name: 'type'
+          field:
+            element: 'select'
+            label: 'Percentage or Amount'
+            placeholder: 'Choose a category'
+            options:
+              - name: 'Percentage'
+                value: 'percentage'
+              - name: 'Amount'
+                value: 'amount'
+        - name: 'text'
+          field:
+            element: 'text'
+            label: 'Discount Text'
+            value: ''

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import SketchFab from './SketchFab';
-import Button from './Button';
-import FormCheckBox from './FormCheckBox';
+import CheckBox from './presentational/CheckBox';
 import Slider from 'react-slick';
-import Arrow from './Arrow';
+import Arrow from './presentational/Arrow';
 
 function SampleNextArrow(props) {
   const {className, style, onClick} = props
@@ -50,6 +49,7 @@ class SingleBooth extends Component {
       slidesToShow: 4,
       slidesToScroll: 1,
       autoplay: false,
+      draggable: false,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />
     };
@@ -84,11 +84,11 @@ class SingleBooth extends Component {
           <label></label>
           </div>
           <p>{this.props.description}</p>
-          <FormCheckBox inputType="checkbox" classList="addOnCheck" nameFor="TV" checkFor="TV"/>
+          <CheckBox inputType="checkbox" classList="addOnCheck" nameFor="TV" checkFor="TV"/>
           <label>add TV(s)</label>
-          <FormCheckBox inputType="checkbox" classList="addOnCheck" nameFor="videoWall" checkFor="videoWall"/>
+          <CheckBox inputType="checkbox" classList="addOnCheck" nameFor="videoWall" checkFor="videoWall"/>
           <label>add videowall</label>
-          <Button buttonText="get instaQuote"/>
+          <button className="instaQuoteButton">get instaQuote</button>
         </div>
       </div>
     )

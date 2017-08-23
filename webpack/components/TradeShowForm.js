@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import FormCheckBox from './FormCheckBox';
-import Arrow from './Arrow';
+import CheckBox from './presentational/CheckBox';
+import Arrow from './presentational/Arrow';
 
 class TradeShowForm extends Component {
   constructor(props) {
     super(props);
     this.handleWidthChange = this.handleWidthChange.bind(this);
     this.handleLengthChange = this.handleLengthChange.bind(this);
+    this.handleBoothToggle = this.handleBoothToggle.bind(this);
   }
 
   handleWidthChange(event) {
@@ -14,6 +15,9 @@ class TradeShowForm extends Component {
   }
   handleLengthChange(event) {
     this.props.limitByLength(event.target.value)
+  }
+  handleBoothToggle(event){
+    this.props.toggleBooth(event.target.name);
   }
 
   render(){
@@ -38,21 +42,21 @@ class TradeShowForm extends Component {
           <option value="50">50ft</option>
         </select>
         <label>booth type</label>
-          <FormCheckBox toggleBooth={this.props.toggleBooth.bind(this)} inputType="checkbox" classList="formCheck" nameFor="Island" checkFor="island" checked="checked"/>
-          <FormCheckBox toggleBooth={this.props.toggleBooth.bind(this)} inputType="checkbox" classList="formCheck" nameFor="SplitIsland" checkFor="split island" checked="checked" doubleLine="doubleLine"/>
-          <FormCheckBox toggleBooth={this.props.toggleBooth.bind(this)} inputType="checkbox" classList="formCheck" nameFor="Peninsula" checked="checked" checkFor="peninsula"/>
-          <FormCheckBox toggleBooth={this.props.toggleBooth.bind(this)} inputType="checkbox" classList="formCheck noMarginRight" nameFor="Inline" checked="checked" checkFor="inline"/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck" nameFor="Island" checkFor="island" checked="checked"/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck" nameFor="SplitIsland" checkFor="split island" checked="checked" doubleLine="doubleLine"/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck" nameFor="Peninsula" checked="checked" checkFor="peninsula"/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck noMarginRight" nameFor="Inline" checked="checked" checkFor="inline"/>
       </div>
     )
     var backToBooths = (
       <div className={"goBackContainer"}>
         <div className="leaveOrStay">
-          <Arrow color={"#f9f9f9"} width={"25px"}/>
+          <Arrow className={"new-arrow"} color={"#f9f9f9"} width={"25px"}/>
           <a onClick={() => this.props.closeSingleBooth()}><b>back</b> to booths</a>
         </div>
         <div className="leaveOrStay">
           or get your <b>instaQuote</b>
-          <Arrow forward color={"#f9f9f9"} width={"25px"}/>
+          <Arrow className={"new-arrow"} forward color={"#f9f9f9"} width={"25px"}/>
         </div>
       </div>
     )
@@ -61,11 +65,11 @@ class TradeShowForm extends Component {
       <div className="instaQuoteForm">
         {menuChoice}
         <label>rent or own?</label>
-          <FormCheckBox inputType="radio" classList="formCheck" nameFor="rentOrOwn" checked="checked" checkFor="rent"/>
-          <FormCheckBox inputType="radio" classList="formCheck" nameFor="rentOrOwn" checkFor="own"/>
+          <CheckBox inputType="radio" classList="formCheck" nameFor="rentOrOwn" checked="checked" checkFor="rent"/>
+          <CheckBox inputType="radio" classList="formCheck" nameFor="rentOrOwn" checkFor="own"/>
         <label>event location</label>
-        <FormCheckBox inputType="radio" classList="formCheck" nameFor="inVegas" doubleLine="doubleLine" checked="checked" checkFor="Las Vegas"/>
-        <FormCheckBox inputType="radio" classList="formCheck" nameFor="inVegas" checkFor="else"/>
+          <CheckBox inputType="radio" classList="formCheck" nameFor="inVegas" doubleLine="doubleLine" checked="checked" checkFor="Las Vegas"/>
+          <CheckBox inputType="radio" classList="formCheck" nameFor="inVegas" checkFor="else"/>
       </div>
     )
   }

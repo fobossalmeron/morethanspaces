@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 
-class FormCheckBox extends Component {
-  constructor(props) {
-    super(props);
-  }
+class CheckBox extends Component {
+
   render() {
     var classList = (this.props.classList + " quoteCheck");
     return (
       <div className={classList}>
-        <input type={this.props.inputType} id={this.props.checkFor} name={this.props.nameFor} onChange={() => this.props.toggleBooth(this.props.nameFor)} value="true" defaultChecked={this.props.checked} />
+        <input type={this.props.inputType} id={this.props.checkFor} onChange={this.props.onChange} name={this.props.nameFor} value="true" defaultChecked={this.props.checked} />
         <label className="noMargin" htmlFor={this.props.checkFor} />
         <span className={this.props.doubleLine}>{this.props.checkFor}</span>
       </div>
@@ -16,4 +14,4 @@ class FormCheckBox extends Component {
   }
 };
 
-export default FormCheckBox;
+export default CheckBox;

@@ -1,4 +1,5 @@
 ---
+amount: 0 
 ---
 
 // Morethanspaces discount file.

@@ -19,8 +19,23 @@ exclude:
 prose:
     rooturl: 'assets/discounts'
     metadata:
-        - name: amount
-          field:
-            element: number
-            label: 'Specify an amount'
-            value: ""
+      - name: 'amount'
+        field:
+          element: 'number'
+          label: 'Specify an amount'
+          value: ''
+      - name: 'typeofdiscount'
+        field:
+          element: 'select'
+          label: 'Percentage or Amount'
+          placeholder: 'Choose a category'
+          option:
+            - name: "Percentage"
+              value: "true"
+            - name: "Amount"
+              value: "false"
+      - name: 'text'
+        field:
+          element: 'text'
+          label: 'Text of the discount'
+          value: ''

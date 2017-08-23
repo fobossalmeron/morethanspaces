@@ -19,7 +19,7 @@ exclude:
 prose:
     rooturl: 'assets/discounts'
     metadata:
-        discounts:
+        assets/discounts:
         - name: 'amount'
           field:
             element: 'number'

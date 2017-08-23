@@ -25,15 +25,15 @@ prose:
             element: 'number'
             label: "Specify an amount (Please don't use any signs)"
             value: ''
-        - name: 'typeofdiscount'
+        - name: 'type'
           field:
             element: 'select'
             label: 'Percentage or Amount'
             placeholder: 'Choose a category'
-            option:
-              - name: "Percentage"
+            options:
+              - name: 'Percentage'
                 value: true
-              - name: "Amount"
+              - name: 'Amount'
                 value: false
         - name: 'text'
           field:

@@ -23,7 +23,7 @@ prose:
         - name: 'amount'
           field:
             element: 'number'
-            label: 'Specify an amount'
+            label: "Specify an amount (Please don't use any signs)"
             value: ''
         - name: 'typeofdiscount'
           field:
@@ -32,11 +32,11 @@ prose:
             placeholder: 'Choose a category'
             option:
               - name: "Percentage"
-                value: "true"
+                value: true
               - name: "Amount"
-                value: "false"
+                value: false
         - name: 'text'
           field:
             element: 'text'
-            label: 'Text of the discount'
+            label: 'Discount Text'
             value: ''

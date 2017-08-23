@@ -1,3 +1,6 @@
+---
+---
+
 // Morethanspaces discount file.
 
 // write the amount of dollars or the percentage of the discount.

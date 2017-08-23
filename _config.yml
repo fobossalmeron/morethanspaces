@@ -15,3 +15,6 @@ exclude:
   - Gemfile.lock
   - node_modules
   - webpack
+
+prose:
+  rooturl: 'assets/discounts'

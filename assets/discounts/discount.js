@@ -17,6 +17,6 @@ text: ' dollars off!'
 
 
 
-var discountNumber = {{page.discount}}
+var discountNumber = {{page.amount}}
 var discountType = {{page.type}}
 var discountText = {{page.text}}

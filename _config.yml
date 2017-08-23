@@ -17,9 +17,9 @@ exclude:
   - webpack
 
 prose:
-    rooturl: 'assets/discounts'
+    rooturl: 'assets/discounts/discount.js'
     metadata:
-        assets/discounts:
+        assets/discounts/discount.js:
         - name: 'amount'
           field:
             element: 'number'

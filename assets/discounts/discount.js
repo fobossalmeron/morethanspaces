@@ -1,8 +1,8 @@
 ---
-amount: 0
-type: ''
-text: ''
 published: true
+amount: 1000
+type: 'amount'
+text: ' dollars off!'
 ---
 
 // Morethanspaces discount file.

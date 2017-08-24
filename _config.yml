@@ -20,9 +20,34 @@ collections:
     permalink: /conventions/:path/
 
 prose:
-    rooturl: 'assets/discounts'
+    rooturl: '_conventions'
     media: 'assets/img/conventions'
     metadata:
+        _conventions:
+        - name: layout
+          field:
+            element: 'hidden'
+            value: 'convention'
+        - name: title
+          field:
+            element: 'text'
+            label: 'Convention name'
+            value: ''
+        - name: convention_date
+          field:
+            element: 'text'
+            label: 'Date'
+            value: ''
+        - name: location
+          field:
+            element: 'text'
+            label: 'Location'
+            value: ''
+        - name: logo
+          field:
+            element: 'text'
+            label: 'Image/Logo name of file, ej. "CES.png"'
+            value: ''
         assets/discounts:
         - name: 'amount'
           field:

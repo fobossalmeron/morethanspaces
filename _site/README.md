@@ -2,7 +2,6 @@
 Morethanspaces Website
 
 ##Falta en estilos
-- about us en la navegación
 - social media
 - discount en menú
 

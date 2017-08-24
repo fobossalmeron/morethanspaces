@@ -11,7 +11,7 @@ class Nav extends Component {
           <li onClick={() => this.props.goToTab(0)}><a href="#booths">booths</a></li>
           <li onClick={() => this.props.goToTab(1)}><a href="#videowalls">videowalls</a></li>
           <li><a href="#services">services</a></li>
-          <li><a href="#aboutus">about us</a></li>
+          <li><a href="#about">about</a></li>
           <li><a href="#contact">contact</a></li>
         </ul>
       </nav>

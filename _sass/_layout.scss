@@ -298,7 +298,7 @@ section{
   background-position: center center;
 }
 
-#aboutus{
+#about{
   p{
   }
 }
@@ -1060,4 +1060,18 @@ iframe{
       color: $magenta;
     }
   }
+}
+#convention{
+  .frompdf{
+    margin-top:-4%;
+  }
+}
+.convention_card{
+  float: left;
+      width: 50%;
+      padding: 5%;
+      max-height: 300px;
+      box-sizing: border-box;
+      display: inline-block;
+      position: relative;
 }

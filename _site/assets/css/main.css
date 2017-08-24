@@ -327,6 +327,10 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 .realestate a { font-size: 1em; font-weight: 700; }
 .realestate a:hover { color: #ec3092; }
 
+#convention .frompdf { margin-top: -4%; }
+
+.convention_card { float: left; width: 50%; padding: 5%; max-height: 300px; box-sizing: border-box; display: inline-block; position: relative; }
+
 .react-datepicker__tether-element-attached-top .react-datepicker__triangle, .react-datepicker__tether-element-attached-bottom .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow { margin-left: -8px; position: absolute; }
 
 .react-datepicker__tether-element-attached-top .react-datepicker__triangle, .react-datepicker__tether-element-attached-bottom .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow, .react-datepicker__tether-element-attached-top .react-datepicker__triangle::before, .react-datepicker__tether-element-attached-bottom .react-datepicker__triangle::before, .react-datepicker__year-read-view--down-arrow::before, .react-datepicker__month-read-view--down-arrow::before { box-sizing: content-box; position: absolute; border: 8px solid transparent; height: 0; width: 1px; }

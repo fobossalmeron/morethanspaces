@@ -13584,7 +13584,7 @@ var StaticSection = function (_Component) {
         ),
         _react2.default.createElement(
           "section",
-          { id: "aboutus" },
+          { id: "about" },
           _react2.default.createElement(
             "div",
             { className: "half-card" },
@@ -13976,8 +13976,8 @@ var Nav = function (_Component) {
             null,
             _react2.default.createElement(
               'a',
-              { href: '#aboutus' },
-              'about us'
+              { href: '#about' },
+              'about'
             )
           ),
           _react2.default.createElement(

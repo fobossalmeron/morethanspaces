@@ -1,7 +1,7 @@
 ---
 published: true
 amount: 1000
-type: 'amount'
+type: amount
 text: ' dollars off!'
 ---
 

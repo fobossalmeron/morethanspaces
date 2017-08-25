@@ -1,10 +1,8 @@
-title: Morethanspaces
+title: More than spaces
 email: ns@morethanspaces.custom
 description: Tradeshow booth and videowall rental solutions
 baseurl: "/morethanspaces" # the subpath of your site, e.g. /blog
 url: "http://morethanspaces.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
 
 # Build settings
 markdown: kramdown
@@ -16,9 +14,40 @@ exclude:
   - node_modules
   - webpack
 
+collections:
+  conventions:
+    output: true
+    permalink: /conventions/:path/
+
 prose:
-    rooturl: 'assets/discounts'
+    rooturl: '_conventions'
+    media: 'assets/img/conventions'
     metadata:
+        _conventions:
+        - name: layout
+          field:
+            element: 'hidden'
+            value: 'convention'
+        - name: title
+          field:
+            element: 'text'
+            label: 'Convention name'
+            value: ''
+        - name: convention_date
+          field:
+            element: 'text'
+            label: 'Date'
+            value: ''
+        - name: location
+          field:
+            element: 'text'
+            label: 'Location'
+            value: ''
+        - name: logo
+          field:
+            element: 'text'
+            label: 'Image/Logo name of file, ej. "CES.png"'
+            value: ''
         assets/discounts:
         - name: 'amount'
           field:
@@ -38,5 +67,10 @@ prose:
         - name: 'text'
           field:
             element: 'text'
-            label: 'Discount Text'
+            label: 'Discount text'
+            value: ''
+        - name: 'smalltext'
+          field:
+            element: 'text'
+            label: 'Discount small text'
             value: ''

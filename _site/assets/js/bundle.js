@@ -13069,7 +13069,18 @@ var ContactSection = function (_Component) {
             'Let us answer your question! Contact us for all your trade show needs.'
           ),
           _react2.default.createElement('br', null),
-          'We understand you may have questions and general answers may not be what you are looking for. We will be more than happy to answer any of your questions. Please fill out your information below with your question and we will be happy to answer you back or if you need immediate assistant please give us a call at 1833-morethanspaces.'
+          'We understand you may have questions and general answers may not be what you are looking for. We will be more than happy to answer any of your questions. Please fill out your information below with your question and we will be happy to answer you back or if you need immediate assistant please give us a call at ',
+          _react2.default.createElement(
+            'a',
+            { href: 'tel:1 833 667 3842' },
+            '1833-morethanspaces'
+          ),
+          ' ',
+          _react2.default.createElement(
+            'a',
+            { href: 'tel:1 833 667 3842' },
+            '(1-833.667.3842)'
+          )
         ),
         _react2.default.createElement(
           'div',
@@ -13216,7 +13227,7 @@ var HomeSection = function (_Component) {
         _react2.default.createElement(
           'div',
           { id: 'homevideo' },
-          _react2.default.createElement(_reactPlayer2.default, { url: '/morethanspaces/assets/video/intro.mp4', playing: true, volume: 0 })
+          _react2.default.createElement(_reactPlayer2.default, { url: '/morethanspaces/assets/video/intro.mp4', playing: true, loop: true, volume: 0 })
         )
       );
     }
@@ -13584,7 +13595,7 @@ var StaticSection = function (_Component) {
         ),
         _react2.default.createElement(
           "section",
-          { id: "aboutus" },
+          { id: "about" },
           _react2.default.createElement(
             "div",
             { className: "half-card" },
@@ -13909,6 +13920,8 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -13918,13 +13931,38 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Nav = function (_Component) {
   _inherits(Nav, _Component);
 
-  function Nav() {
+  function Nav(props) {
     _classCallCheck(this, Nav);
 
-    return _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this, props));
+
+    _this.state = _defineProperty({
+      discount: [],
+      discountNumber: '',
+      discountType: '',
+      discountText: ''
+    }, 'discountText', '');
+    _this.loadFromServer = _this.loadFromServer.bind(_this);
+    return _this;
   }
 
   _createClass(Nav, [{
+    key: 'loadFromServer',
+    value: function loadFromServer() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('get', './assets/discounts/discount.js', true);
+      xhr.onload = function () {
+        var info = JSON.parse(xhr.responseText);
+        this.setState({ discount: info.discount });
+      }.bind(this);
+      xhr.send();
+    }
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.loadFromServer();
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -13936,6 +13974,21 @@ var Nav = function (_Component) {
           'a',
           { href: '#home' },
           _react2.default.createElement('img', { src: 'assets/img/logo.svg' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'discounts-menu' },
+          _react2.default.createElement(
+            'b',
+            null,
+            '$1000 dollars off!'
+          ),
+          ' ',
+          _react2.default.createElement(
+            'span',
+            null,
+            'for purchases over $30,000'
+          )
         ),
         _react2.default.createElement(
           'ul',
@@ -13976,8 +14029,8 @@ var Nav = function (_Component) {
             null,
             _react2.default.createElement(
               'a',
-              { href: '#aboutus' },
-              'about us'
+              { href: '#about' },
+              'about'
             )
           ),
           _react2.default.createElement(
@@ -14059,7 +14112,7 @@ var BoothGrid = function (_Component) {
     key: 'loadFromServer',
     value: function loadFromServer() {
       var xhr = new XMLHttpRequest();
-      xhr.open('get', './assets/js/booths2.json', true);
+      xhr.open('get', './assets/js/database.json', true);
       xhr.onload = function () {
         var data = JSON.parse(xhr.responseText);
         this.setState({ data: data.booths });

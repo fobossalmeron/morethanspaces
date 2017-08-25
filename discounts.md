@@ -1,3 +1,7 @@
+---
+permalink: admin/discounts/
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -19,7 +19,7 @@ class BoothGrid extends Component {
 
   loadFromServer () {
        var xhr = new XMLHttpRequest();
-       xhr.open('get', './assets/js/booths2.json', true);
+       xhr.open('get', './assets/js/database.json', true);
        xhr.onload = function() {
            var data = JSON.parse(xhr.responseText);
            this.setState({ data: data.booths });

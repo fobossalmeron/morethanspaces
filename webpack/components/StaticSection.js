@@ -91,7 +91,7 @@ class StaticSection extends Component {
         </ul>
       </section>
 
-      <section id="aboutus">
+      <section id="about">
         <div className="half-card">
         <h2><b>about us</b></h2>
         <p><b>morethanspaces</b> was founded to give more than other trade show vendors. Established and located in <b>Las Vegas</b>,

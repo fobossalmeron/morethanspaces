@@ -22,8 +22,10 @@ nav{
     float:right;
     margin: 0;
     margin-right: 1.5%;
+    padding-top:30px;
+    transition: .5s ease all;
     li{
-      padding: 5% 3%;
+      padding: 0 3% 5% 3%;
       height: 100%;
       float: left;
       list-style: none;
@@ -50,22 +52,51 @@ nav{
   }
 }
 
+.discounts-menu{
+  float:left;
+  left: 20%;
+  position: relative;
+  padding-top:20px;
+  transition: .5s ease all;
+  b{
+    float:left;
+    clear:both;
+    color:$magenta;
+  }
+  span{
+    float:left;
+    clear:both;
+    margin-top: -5px;
+    font-size: $small-font-size;
+    color:$white;
+  }
+}
+
 .navScroll{
   height: 60px;
   background-color:$white;
+  .discounts-menu{
+    padding-top: 2px;
+    span{
+      color:$black;
+    }
+  }
   img{
     -webkit-filter: brightness(1);
     filter: brightness(1);
   }
-  ul li{
-    padding: 2.5% 3%;
-    a{
-      color:$black;
-      &:visited{
-      color:$black;
-      }
-      &:hover{
-      border-color:$black;
+  ul{
+    padding-top:12px;
+    li{
+      padding: 0 3% 2.5% 3%;
+      a{
+        color:$black;
+        &:visited{
+        color:$black;
+        }
+        &:hover{
+        border-color:$black;
+        }
       }
     }
   }
@@ -298,7 +329,7 @@ section{
   background-position: center center;
 }
 
-#aboutus{
+#about{
   p{
   }
 }
@@ -370,6 +401,13 @@ section{
     column-count: 2;
     column-gap: 50px;
     width: 100%;
+  }
+  a{
+    color:$white;
+    font-weight: 700;
+    &:hover{
+      color:$magenta;
+    }
   }
 }
 
@@ -1060,4 +1098,18 @@ iframe{
       color: $magenta;
     }
   }
+}
+#convention{
+  .frompdf{
+    margin-top:-4%;
+  }
+}
+.convention_card{
+  float: left;
+      width: 50%;
+      padding: 5%;
+      max-height: 300px;
+      box-sizing: border-box;
+      display: inline-block;
+      position: relative;
 }

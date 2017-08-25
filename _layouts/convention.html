@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    {% include nav.html %}
+    <section id="convention">
+      <div class="convention_card">
+        <h1><b>{{ page.title }}</b></h1>
+        <h2>{{ page.convention_date }}</h2>
+        <h2>{{ page.location }}</h2>
+      </div>
+      <img class="convention_card" src="{{site.baseurl}}/assets/img/conventions/{{page.logo}}">
+      <div class="half-card">
+      {{ content }}
+      <h2><b>some subtitle</b></h2>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+        sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+      <h2>some other subtitle</h2>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+          totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+          consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+        </div>
+        <div class="half-card frompdf">
+        <span>1,</span> <span>2,</span> <span>3 </span> <span> go</span>
+        <div class="stepbox"><b>1:</b><p>choose your <br/>package</p></div>
+        <div class="stepbox"><b>2:</b><p>communicate <br/>your needs</p></div>
+        <div class="stepbox"><b>3:</b><p>we deliver</p></div>
+        <p><b>more for less:</b><br/>
+            better service, better products, better results, less stress, less worry</p>
+        <p>All you have to do is show up and <b>let the show begin!</b> It’s that simple with <b>more than spaces</b></p>
+        </div>
+    </section>
+    {% include footer.html %}
+  </body>
+
+</html>

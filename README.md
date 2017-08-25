@@ -2,10 +2,12 @@
 Morethanspaces Website
 
 ##Falta en estilos
-- about us en la navegación
 - social media
+- add overlay for video
+
 
 ##Falta en func
-- recolector de datos y resto de mecanismo
+- landing page(s)
+- make discounts work. 
+- recolector de datos y resto de mecanismo !!
 - calendly business
-- Login

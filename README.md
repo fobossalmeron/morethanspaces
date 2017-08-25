@@ -3,9 +3,11 @@ Morethanspaces Website
 
 ##Falta en estilos
 - social media
-- discount en menú
+- add overlay for video
+
 
 ##Falta en func
 - landing page(s)
-- recolector de datos y resto de mecanismo
+- make discounts work. 
+- recolector de datos y resto de mecanismo !!
 - calendly business

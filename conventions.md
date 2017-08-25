@@ -1,5 +1,5 @@
 ---
-permalink: admin/discounts/
+permalink: admin/conventions/
 ---
 
 <!DOCTYPE html>
@@ -10,8 +10,8 @@ permalink: admin/discounts/
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Discounts">
     <meta name="author" content="Discounts">
-    <meta http-equiv="refresh" content="0; url=http://prose.io/#DesignSuccess/morethanspaces/edit/master/assets/discounts/discount.js" />
-    <title>Discounts</title>
+    <meta http-equiv="refresh" content="0; url=http://prose.io/#DesignSuccess/morethanspaces/" />
+    <title>Conventions</title>
     <style>
     body{
       background-color: white;
@@ -26,11 +26,11 @@ permalink: admin/discounts/
       }
     </style>
     <script language="javascript">
-      window.location.href = "http://prose.io/#DesignSuccess/morethanspaces/edit/master/assets/discounts/discount.js"
+      window.location.href = "http://prose.io/#DesignSuccess/morethanspaces/"
     </script>
 </head>
 <body>
-    <a href="http://prose.io/#DesignSuccess/morethanspaces/edit/master/assets/discounts/discount.js">
+    <a href="http://prose.io/#DesignSuccess/morethanspaces/">
       <img src="../assets/img/logo.svg" alt="MTS">
     </a>
 </body>

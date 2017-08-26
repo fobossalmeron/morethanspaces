@@ -69,7 +69,7 @@ prose:
             element: 'text'
             label: 'Discount text'
             value: ''
-        - name: 'smalltext'
+        - name: 'smallText'
           field:
             element: 'text'
             label: 'Discount small text'

@@ -13097,7 +13097,7 @@ var ContactSection = function (_Component) {
                 console.log('Form Submitted Succesfully with:', values);
                 _this2.showConf();
 
-                var url = 'https://formspree.io/fobos.salmeron@gmail.com';
+                var url = 'https://formspree.io/feron@gml.cem';
                 var data = values;
 
                 var xhr = new XMLHttpRequest();
@@ -13109,7 +13109,7 @@ var ContactSection = function (_Component) {
                 xhr.send(JSON.stringify(data));
 
                 // Callback function
-                xhr.onloadend = function (response, showMe) {
+                xhr.onloadend = function (response) {
                   if (response.target.status === 0) {
                     // Failed XmlHttpRequest should be considered an undefined error.
                     console.log('Danger');
@@ -13227,6 +13227,7 @@ var HomeSection = function (_Component) {
         _react2.default.createElement(
           'div',
           { id: 'homevideo' },
+          _react2.default.createElement('div', { className: 'video_overlay' }),
           _react2.default.createElement(_reactPlayer2.default, { url: '/morethanspaces/assets/video/intro.mp4', playing: true, loop: true, volume: 0 })
         )
       );
@@ -13267,6 +13268,10 @@ var _BoothGrid = __webpack_require__(119);
 
 var _BoothGrid2 = _interopRequireDefault(_BoothGrid);
 
+var _CollectBeforeQuote = __webpack_require__(275);
+
+var _CollectBeforeQuote2 = _interopRequireDefault(_CollectBeforeQuote);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13292,12 +13297,26 @@ var QuoteTabs = function (_Component) {
       selectedPeninsula: true,
       rentOwn: 1,
       eventInVegas: true,
-      individualBoothRender: false
+      individualBoothRender: false,
+      renderCollector: false,
+      renderInstaQuote: false
     };
     return _this;
   }
 
   _createClass(QuoteTabs, [{
+    key: 'renderInstaQuote',
+    value: function renderInstaQuote() {
+      this.setState({ renderInstaQuote: true });
+    }
+  }, {
+    key: 'doRenderCollector',
+    value: function doRenderCollector() {
+      this.setState({ renderCollector: true }, function () {
+        return controller.scrollTo("#dataCollector");
+      });
+    }
+  }, {
     key: 'renderSingleBooth',
     value: function renderSingleBooth() {
       this.setState({ individualBoothRender: true });
@@ -13344,6 +13363,7 @@ var QuoteTabs = function (_Component) {
     value: function render() {
       var _this2 = this;
 
+      var showCollector = this.state.renderCollector ? _react2.default.createElement(_CollectBeforeQuote2.default, null) : undefined;
       return _react2.default.createElement(
         'section',
         { id: 'quoteSection' },
@@ -13382,23 +13402,23 @@ var QuoteTabs = function (_Component) {
               limitByLength: this.limitByLength.bind(this),
               individualBoothRender: this.state.individualBoothRender,
               closeSingleBooth: this.closeSingleBooth.bind(this) }),
-            _react2.default.createElement(_BoothGrid2.default, {
-              selectedIsland: this.state.selectedIsland,
+            _react2.default.createElement(_BoothGrid2.default, { selectedIsland: this.state.selectedIsland,
               selectedSplitIsland: this.state.selectedSplitIsland,
               selectedPeninsula: this.state.selectedPeninsula,
               selectedInline: this.state.selectedInline,
               boothSizeWidth: this.state.boothSizeWidth,
               boothSizeLength: this.state.boothSizeLength,
               individualBoothRender: this.state.individualBoothRender,
-              renderSingleBooth: this.renderSingleBooth.bind(this)
-            })
+              renderSingleBooth: this.renderSingleBooth.bind(this),
+              doRenderCollector: this.doRenderCollector.bind(this) })
           ),
           _react2.default.createElement(
             _reactTabs.TabPanel,
             null,
             _react2.default.createElement('img', { src: 'assets/img/mock.png' })
           )
-        )
+        ),
+        showCollector
       );
     }
   }]);
@@ -13920,8 +13940,6 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -13936,31 +13954,48 @@ var Nav = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this, props));
 
-    _this.state = _defineProperty({
-      discount: [],
+    _this.state = {
+      discount: '',
       discountNumber: '',
       discountType: '',
-      discountText: ''
-    }, 'discountText', '');
-    _this.loadFromServer = _this.loadFromServer.bind(_this);
+      discountText: '',
+      discountSmallText: ''
+    };
+    _this.loadDiscounts = _this.loadDiscounts.bind(_this);
     return _this;
   }
 
   _createClass(Nav, [{
-    key: 'loadFromServer',
-    value: function loadFromServer() {
+    key: 'loadDiscounts',
+    value: function loadDiscounts() {
       var xhr = new XMLHttpRequest();
       xhr.open('get', './assets/discounts/discount.js', true);
       xhr.onload = function () {
         var info = JSON.parse(xhr.responseText);
-        this.setState({ discount: info.discount });
+
+        this.setState({
+          discount: info.discount,
+          discountNumber: info.discountNumber,
+          discountType: info.discountType,
+          discountText: info.discountText,
+          discountSmallText: info.discountSmallText
+        });
       }.bind(this);
       xhr.send();
     }
   }, {
+    key: 'discountSymbol',
+    value: function discountSymbol() {
+      if (this.state.discountType === "percentage") {
+        return "%";
+      } else {
+        return "$";
+      }
+    }
+  }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
-      this.loadFromServer();
+      this.loadDiscounts();
     }
   }, {
     key: 'render',
@@ -13981,13 +14016,16 @@ var Nav = function (_Component) {
           _react2.default.createElement(
             'b',
             null,
-            '$1000 dollars off!'
+            this.state.discountNumber,
+            this.discountSymbol(),
+            ' ',
+            this.state.discountText
           ),
           ' ',
           _react2.default.createElement(
             'span',
             null,
-            'for purchases over $30,000'
+            this.state.discountSmallText
           )
         ),
         _react2.default.createElement(
@@ -14190,7 +14228,8 @@ var BoothGrid = function (_Component) {
         singleValue: this.state.singleValue,
         boothType: this.state.boothType,
         obj: this.state.obj,
-        images: this.state.images });
+        images: this.state.images,
+        doRenderCollector: this.props.doRenderCollector.bind(this) });
 
       var gridChoice = this.props.individualBoothRender ? singleBooth : doRenderBooths;
 
@@ -14307,6 +14346,11 @@ var SingleBooth = function (_Component) {
       });
     }
   }, {
+    key: 'nextStepCollector',
+    value: function nextStepCollector(event) {
+      this.props.doRenderCollector();
+    }
+  }, {
     key: 'handleView',
     value: function handleView(value) {
       value !== "3D" ? this.setState({ mainImage: this.props.images[value].url, render3D: false }) : this.setState({ render3D: true });
@@ -14354,6 +14398,13 @@ var SingleBooth = function (_Component) {
           numberOfImages
         )
       );
+      var button = _react2.default.createElement(
+        'button',
+        { onClick: function onClick() {
+            return _this2.nextStepCollector();
+          }, className: 'instaQuoteButton' },
+        'get instaQuote'
+      );
 
       return _react2.default.createElement(
         'div',
@@ -14389,11 +14440,7 @@ var SingleBooth = function (_Component) {
             null,
             'add videowall'
           ),
-          _react2.default.createElement(
-            'button',
-            { className: 'instaQuoteButton' },
-            'get instaQuote'
-          )
+          button
         )
       );
     }
@@ -35209,6 +35256,161 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+/* 275 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactForm = __webpack_require__(235);
+
+var _Check = __webpack_require__(123);
+
+var _Check2 = _interopRequireDefault(_Check);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var CollectBeforeQuote = function (_Component) {
+  _inherits(CollectBeforeQuote, _Component);
+
+  function CollectBeforeQuote(props) {
+    _classCallCheck(this, CollectBeforeQuote);
+
+    var _this = _possibleConstructorReturn(this, (CollectBeforeQuote.__proto__ || Object.getPrototypeOf(CollectBeforeQuote)).call(this, props));
+
+    _this.state = {
+      showInstaQuote: false
+    };
+    _this.showConf = _this.showConf.bind(_this);
+    return _this;
+  }
+
+  _createClass(CollectBeforeQuote, [{
+    key: 'showConf',
+    value: function showConf() {
+      console.log("Success from function");
+      this.setState({
+        showInstaQuote: true
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var calendlyUrl = 'https://calendly.com/morethanspaces';
+
+      var dataCollector = _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_reactForm.Text, { field: 'name', placeholder: 'your name' }),
+        _react2.default.createElement(_reactForm.Text, { field: 'email', placeholder: 'your email' }),
+        _react2.default.createElement(_reactForm.Text, { field: 'phone', placeholder: 'your phone' }),
+        _react2.default.createElement(
+          'button',
+          { type: 'submit' },
+          'See instaQuote now!'
+        )
+      );
+
+      var instaQuote = _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_Check2.default, { className: "confirmCheck", width: "100px", color: "#42ba42" }),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Email sent! We will get in touch with you soon.'
+        )
+      );
+
+      var message = this.state.showInstaQuote ? instaQuote : dataCollector;
+      var messageClass = this.state.showInstaQuote ? 'half-card messaged' : 'half-card';
+
+      return _react2.default.createElement(
+        'div',
+        { id: 'dataCollector' },
+        _react2.default.createElement(
+          _reactForm.Form,
+          {
+            onSubmit: function onSubmit(values) {
+              console.log('Form Submitted Succesfully with:', values);
+              _this2.showConf();
+
+              var url = 'https://formspree.io/feron@gml.cem';
+              var data = values;
+
+              var xhr = new XMLHttpRequest();
+              xhr.open('POST', url, true);
+              xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
+              xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+              // Send the collected data as JSON
+              xhr.send(JSON.stringify(data));
+
+              // Callback function
+              xhr.onloadend = function (response) {
+                if (response.target.status === 0) {
+                  // Failed XmlHttpRequest should be considered an undefined error.
+                  console.log('Danger');
+                } else if (response.target.status === 400) {
+                  console.log(JSON.parse(responseText).error);
+                } else if (response.target.status === 200) {
+                  console.log('Success!');
+                }
+              };
+            },
+
+            validate: function validate(_ref) {
+              var name = _ref.name,
+                  email = _ref.email,
+                  number = _ref.number;
+
+              return {
+                name: !name ? 'Your name is required' : undefined,
+                email: !email ? 'The email cannot be empty' : email.search('@') == -1 ? 'Please give a valid email' : email.search(/gmail.com/i) !== -1 ? 'Sorry for the inconvenience but we only work with businesses, please provide a business email' : email.search(/aol.com/i) !== -1 ? 'Sorry for the inconvenience but we only work with businesses, please provide a business email' : email.search(/yahoo.com/i) !== -1 ? 'Sorry for the inconvenience but we only work with businesses, please provide a business email' : email.search(/live.com/i) !== -1 ? 'Sorry for the inconvenience but we only work with businesses, please provide a business email' : email.search(/hotmail.com/i) !== -1 ? 'Sorry for the inconvenience but we only work with businesses, please provide a business email' : email.search('@') == -1 ? 'Please give a valid email' : undefined,
+                number: !number ? 'Your number is required' : undefined
+              };
+            }
+          },
+          function (_ref2) {
+            var submitForm = _ref2.submitForm;
+
+            return _react2.default.createElement(
+              'form',
+              { onSubmit: submitForm },
+              message
+            );
+          }
+        )
+      );
+    }
+  }]);
+
+  return CollectBeforeQuote;
+}(_react.Component);
+
+;
+
+exports.default = CollectBeforeQuote;
 
 /***/ })
 /******/ ]);

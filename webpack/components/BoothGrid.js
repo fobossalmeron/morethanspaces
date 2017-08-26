@@ -89,7 +89,8 @@ class BoothGrid extends Component {
                     singleValue={this.state.singleValue}
                     boothType={this.state.boothType}
                     obj={this.state.obj}
-                    images={this.state.images} />
+                    images={this.state.images}
+                    doRenderCollector={this.props.doRenderCollector.bind(this)} />
       );
 
     var gridChoice = (this.props.individualBoothRender ? singleBooth : doRenderBooths);

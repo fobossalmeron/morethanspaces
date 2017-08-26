@@ -8,6 +8,5 @@ Morethanspaces Website
 
 ##Falta en func
 - landing page(s)
-- make discounts work. 
-- recolector de datos y resto de mecanismo !!
+- recolector de datos y resto de mecanismo !! discounts work
 - calendly business

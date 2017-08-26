@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import TradeShowForm from './TradeShowForm';
 import BoothGrid from './BoothGrid';
+import CollectBeforeQuote from './CollectBeforeQuote';
 
 class QuoteTabs extends Component {
   constructor(props) {
@@ -16,7 +17,17 @@ class QuoteTabs extends Component {
       rentOwn: 1,
       eventInVegas: true,
       individualBoothRender: false,
+      renderCollector: false,
+      renderInstaQuote: false,
     };
+  }
+
+  renderInstaQuote(){
+    this.setState({ renderInstaQuote: true })
+  }
+
+  doRenderCollector(){
+    this.setState({ renderCollector: true }, ()=> controller.scrollTo("#dataCollector"));
   }
 
   renderSingleBooth(){
@@ -57,6 +68,7 @@ class QuoteTabs extends Component {
   }
 
   render(){
+    var showCollector = (this.state.renderCollector ? <CollectBeforeQuote/> : undefined );
     return (
       <section id="quoteSection">
       <Tabs forceRenderTabPanel={true} selectedIndex={this.props.tabIndex} onSelect={tabIndex => this.props.goToTab( tabIndex )}>
@@ -75,21 +87,22 @@ class QuoteTabs extends Component {
                          limitByLength={this.limitByLength.bind(this)}
                          individualBoothRender={this.state.individualBoothRender}
                          closeSingleBooth={this.closeSingleBooth.bind(this)}/>
-          <BoothGrid
-          selectedIsland={this.state.selectedIsland}
-          selectedSplitIsland={this.state.selectedSplitIsland}
-          selectedPeninsula={this.state.selectedPeninsula}
-          selectedInline={this.state.selectedInline}
-          boothSizeWidth={this.state.boothSizeWidth}
-          boothSizeLength={this.state.boothSizeLength}
-          individualBoothRender={this.state.individualBoothRender}
-          renderSingleBooth={this.renderSingleBooth.bind(this)}
-          />
+
+          <BoothGrid    selectedIsland={this.state.selectedIsland}
+                        selectedSplitIsland={this.state.selectedSplitIsland}
+                        selectedPeninsula={this.state.selectedPeninsula}
+                        selectedInline={this.state.selectedInline}
+                        boothSizeWidth={this.state.boothSizeWidth}
+                        boothSizeLength={this.state.boothSizeLength}
+                        individualBoothRender={this.state.individualBoothRender}
+                        renderSingleBooth={this.renderSingleBooth.bind(this)}
+                        doRenderCollector={this.doRenderCollector.bind(this)}/>
         </TabPanel>
         <TabPanel>
           <img src="assets/img/mock.png"/>
         </TabPanel>
       </Tabs>
+      {showCollector}
       </section>
     )
   }

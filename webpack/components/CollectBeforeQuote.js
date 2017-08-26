@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Text, NestedForm, FormError } from 'react-form'
 import Check from './presentational/Check';
+import InstaQuote from './InstaQuote';
 
 class CollectBeforeQuote extends Component {
   constructor(props) {
@@ -26,15 +27,12 @@ class CollectBeforeQuote extends Component {
         <Text field='name' placeholder='your name'/>
         <Text field='email' placeholder='your email'/>
         <Text field='phone' placeholder='your phone'/>
-        <button type='submit'>See instaQuote now!</button>
+        <button type='submit'>see instaQuote now!</button>
       </div>
     )
 
     const instaQuote = (
-      <div>
-        <Check className={"confirmCheck"} width={"100px"} color={"#42ba42"}/>
-        <p>Email sent! We will get in touch with you soon.</p>
-      </div>
+      <InstaQuote/>
     )
 
     const message = this.state.showInstaQuote ? instaQuote : dataCollector ;

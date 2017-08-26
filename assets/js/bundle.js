@@ -35280,6 +35280,10 @@ var _Check = __webpack_require__(123);
 
 var _Check2 = _interopRequireDefault(_Check);
 
+var _InstaQuote = __webpack_require__(277);
+
+var _InstaQuote2 = _interopRequireDefault(_InstaQuote);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -35327,20 +35331,11 @@ var CollectBeforeQuote = function (_Component) {
         _react2.default.createElement(
           'button',
           { type: 'submit' },
-          'See instaQuote now!'
+          'see instaQuote now!'
         )
       );
 
-      var instaQuote = _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(_Check2.default, { className: "confirmCheck", width: "100px", color: "#42ba42" }),
-        _react2.default.createElement(
-          'p',
-          null,
-          'Email sent! We will get in touch with you soon.'
-        )
-      );
+      var instaQuote = _react2.default.createElement(_InstaQuote2.default, null);
 
       var message = this.state.showInstaQuote ? instaQuote : dataCollector;
       var messageClass = this.state.showInstaQuote ? 'half-card messaged' : 'half-card';
@@ -35411,6 +35406,68 @@ var CollectBeforeQuote = function (_Component) {
 ;
 
 exports.default = CollectBeforeQuote;
+
+/***/ }),
+/* 276 */,
+/* 277 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactPlayer = __webpack_require__(236);
+
+var _reactPlayer2 = _interopRequireDefault(_reactPlayer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var InstaQuote = function (_Component) {
+  _inherits(InstaQuote, _Component);
+
+  function InstaQuote() {
+    _classCallCheck(this, InstaQuote);
+
+    return _possibleConstructorReturn(this, (InstaQuote.__proto__ || Object.getPrototypeOf(InstaQuote)).apply(this, arguments));
+  }
+
+  _createClass(InstaQuote, [{
+    key: 'render',
+    value: function render() {
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'h2',
+          null,
+          'instaQuote'
+        )
+      );
+    }
+  }]);
+
+  return InstaQuote;
+}(_react.Component);
+
+;
+
+exports.default = InstaQuote;
 
 /***/ })
 /******/ ]);

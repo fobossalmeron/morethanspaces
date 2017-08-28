@@ -660,11 +660,12 @@ input[type=text]{
 
 .react-tabs__tab-panel{
   visibility: hidden;
+  position: relative;
   display:none;
   opacity:0;
   float: left;
   width: 100%;
-  padding: 3% 4% 3% 0;
+  padding: 3% 0 0 0;
 }
 
 .react-tabs__tab-panel--selected{
@@ -809,7 +810,8 @@ input[type=text]{
   height: 545px;
   overflow-y: scroll;
   float: left;
-  width: 76%;
+  width: 72%;
+  margin-right: 4%;
   margin-left: 0;
 }
 
@@ -1127,11 +1129,13 @@ iframe{
   position: relative;
   float: left;
   width: 100%;
+  margin-top: 4%;
+  background-color:$blue;
   form{
     border: none;
     background-color: $blue;
     color:$black;
-    padding: 4%;
+    padding: 2% 4%;
     min-height: 0;
   }
   input{
@@ -1154,5 +1158,58 @@ iframe{
   .FormError{
     max-width:20%;
     position: absolute;
+  }
+}
+
+.instaThumbnail{
+  float: left;
+  width: 20%;
+  background-size: cover;
+  display: block;
+  position: relative;
+  height: 200px;
+  background-color: red;
+}
+
+#instaQuote{
+  padding: 0 4% 4% 4%;
+  float: left;
+  width: 100%;
+  h2{
+    cursor:auto;
+    padding-top: 0;
+    float:left;
+    clear:both;
+  }
+}
+.instaInfo{
+  width: 80%;
+  float: left;
+  padding-left: 4%;
+  p{
+    float:left;
+    clear:both;
+  }
+  ul{
+    float:left;
+    clear:both;
+    list-style: none;
+    margin: 0;
+    li{
+      float:left;
+      clear:both;
+    }
+  }
+}
+
+.quoteNumber{
+  font-weight: 700;
+  float: left;
+  clear: both;
+  font-size: 2em;
+  span{
+    font-weight:400;
+    font-size:.5em;
+    font-style: italic;
   }
 }

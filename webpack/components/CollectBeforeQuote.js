@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Text, NestedForm, FormError } from 'react-form'
 import Check from './presentational/Check';
-import InstaQuote from './InstaQuote';
+import InstaQuote from './presentational/InstaQuote';
 
 class CollectBeforeQuote extends Component {
   constructor(props) {
@@ -9,14 +9,16 @@ class CollectBeforeQuote extends Component {
     this.state = {
       showInstaQuote: false
     };
-  this.showConf = this.showConf.bind(this);
+  this.revealQuote = this.revealQuote.bind(this);
   }
 
-  showConf(){
-    console.log("Success from function");
+  revealQuote(){
     this.setState({
         showInstaQuote: true
     })
+  }
+  componentDidMount(){
+    console.log(this.props);
   }
 
   render (){
@@ -32,20 +34,26 @@ class CollectBeforeQuote extends Component {
     )
 
     const instaQuote = (
-      <InstaQuote/>
-    )
+      <InstaQuote images={this.props.images}
+                  singleValue={this.props.singleValue}
+                  boothType={this.props.boothType}
+                  wantToOwn={this.props.wantToOwn}
+                  eventInVegas={this.props.eventInVegas}
+                  width={this.props.width}
+                  length={this.props.length}/>
+    );
 
-    const message = this.state.showInstaQuote ? instaQuote : dataCollector ;
-    const messageClass = this.state.showInstaQuote ? 'half-card messaged' : 'half-card';
+    const collector = this.state.showInstaQuote ? undefined : dataCollector ;
+    const quote = this.state.showInstaQuote ? instaQuote : undefined ;
 
     return (
-      <div id="dataCollector">
+      <div id="dataCollector" onClick={() => this.revealQuote()}>
           <Form
             onSubmit={(values) => {
               console.log('Form Submitted Succesfully with:', values)
-              this.showConf()
+              this.revealQuote()
 
-              const url = 'https://formspree.io/feron@gml.cem';
+              const url = 'https://formspree.io/fobos.salmeron@gmail.com';
               var data = values;
 
               var xhr = new XMLHttpRequest();
@@ -74,6 +82,7 @@ class CollectBeforeQuote extends Component {
             validate={({ name, email, number }) => {
               return {
                 name: !name ? 'Your name is required' : undefined,
+                number: !number ? 'Your number is required' : undefined,
                 email:
                   !email ?
                 'The email cannot be empty' :
@@ -91,19 +100,19 @@ class CollectBeforeQuote extends Component {
                 'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
                   email.search('@') == -1?
                 'Please give a valid email' :
-                  undefined,
-                number: !number ? 'Your number is required' : undefined
+                  undefined
               }
             }}
             >
             {({submitForm}) => {
               return (
                 <form onSubmit={submitForm}>
-                  {message}
+                  {collector}
                 </form>
               )
             }}
           </Form>
+          {quote}
         </div>
     );
   }

@@ -8,8 +8,24 @@ class TradeShowForm extends Component {
     this.handleWidthChange = this.handleWidthChange.bind(this);
     this.handleLengthChange = this.handleLengthChange.bind(this);
     this.handleBoothToggle = this.handleBoothToggle.bind(this);
+    this.handleOwn = this.handleOwn.bind(this);
+    this.handleRent = this.handleRent.bind(this);
+    this.doShip = this.doShip.bind(this);
+    this.doNotShip = this.doNotShip.bind(this);
   }
 
+  doShip(){
+    this.props.needShipping();
+  }
+  doNotShip(){
+    this.props.noNeedShipping();
+  }
+  handleOwn(){
+    this.props.doWantToOwn();
+  }
+  handleRent(){
+    this.props.doWantToRent();
+  }
   handleWidthChange(event) {
     this.props.limitByWidth(event.target.value)
   }
@@ -65,11 +81,11 @@ class TradeShowForm extends Component {
       <div className="instaQuoteForm">
         {menuChoice}
         <label>rent or own?</label>
-          <CheckBox inputType="radio" classList="formCheck" nameFor="rentOrOwn" checked="checked" checkFor="rent"/>
-          <CheckBox inputType="radio" classList="formCheck" nameFor="rentOrOwn" checkFor="own"/>
+          <CheckBox onClick={this.handleRent} inputType="radio" classList="formCheck" nameFor="rentOrOwn" checked="true" checkFor="rent"/>
+          <CheckBox onClick={this.handleOwn} inputType="radio" classList="formCheck" nameFor="rentOrOwn" checkFor="own"/>
         <label>event location</label>
-          <CheckBox inputType="radio" classList="formCheck" nameFor="inVegas" doubleLine="doubleLine" checked="checked" checkFor="Las Vegas"/>
-          <CheckBox inputType="radio" classList="formCheck" nameFor="inVegas" checkFor="else"/>
+          <CheckBox onClick={this.doNotShip} inputType="radio" classList="formCheck" nameFor="inVegas" doubleLine="doubleLine" checked="checked" checkFor="Las Vegas"/>
+          <CheckBox onClick={this.doShip} inputType="radio" classList="formCheck" nameFor="inVegas" checkFor="else"/>
       </div>
     )
   }

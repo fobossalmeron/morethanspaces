@@ -14,12 +14,26 @@ class QuoteTabs extends Component {
       selectedSplitIsland: true,
       selectedInline: true,
       selectedPeninsula: true,
-      rentOwn: 1,
+      wantToOwn: false,
       eventInVegas: true,
       individualBoothRender: false,
       renderCollector: false,
       renderInstaQuote: false,
     };
+  }
+
+  needShipping(){
+    this.setState({ eventInVegas: false}, ()=> console.log("not in vegas XX"));
+  }
+  noNeedShipping(){
+    this.setState({ eventInVegas: true}, ()=> console.log("in vegas XX"));
+  }
+
+  doWantToOwn(){
+    this.setState({ wantToOwn: true });
+  }
+  doWantToRent(){
+    this.setState({ wantToOwn: false });
   }
 
   renderInstaQuote(){
@@ -68,7 +82,6 @@ class QuoteTabs extends Component {
   }
 
   render(){
-    var showCollector = (this.state.renderCollector ? <CollectBeforeQuote/> : undefined );
     return (
       <section id="quoteSection">
       <Tabs forceRenderTabPanel={true} selectedIndex={this.props.tabIndex} onSelect={tabIndex => this.props.goToTab( tabIndex )}>
@@ -86,7 +99,11 @@ class QuoteTabs extends Component {
                          limitByWidth={this.limitByWidth.bind(this)}
                          limitByLength={this.limitByLength.bind(this)}
                          individualBoothRender={this.state.individualBoothRender}
-                         closeSingleBooth={this.closeSingleBooth.bind(this)}/>
+                         closeSingleBooth={this.closeSingleBooth.bind(this)}
+                         doWantToOwn={this.doWantToOwn.bind(this)}
+                         doWantToRent={this.doWantToRent.bind(this)}
+                         needShipping={this.needShipping.bind(this)}
+                         noNeedShipping={this.noNeedShipping.bind(this)}/>
 
           <BoothGrid    selectedIsland={this.state.selectedIsland}
                         selectedSplitIsland={this.state.selectedSplitIsland}
@@ -95,6 +112,9 @@ class QuoteTabs extends Component {
                         boothSizeWidth={this.state.boothSizeWidth}
                         boothSizeLength={this.state.boothSizeLength}
                         individualBoothRender={this.state.individualBoothRender}
+                        renderCollector={this.state.renderCollector}
+                        wantToOwn={this.state.wantToOwn}
+                        eventInVegas={this.state.eventInVegas}
                         renderSingleBooth={this.renderSingleBooth.bind(this)}
                         doRenderCollector={this.doRenderCollector.bind(this)}/>
         </TabPanel>
@@ -102,7 +122,6 @@ class QuoteTabs extends Component {
           <img src="assets/img/mock.png"/>
         </TabPanel>
       </Tabs>
-      {showCollector}
       </section>
     )
   }

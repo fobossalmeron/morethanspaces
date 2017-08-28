@@ -49,6 +49,15 @@ prose:
             label: 'Image/Logo name of file, ej. "CES.png"'
             value: ''
         assets/discounts:
+        - name: 'discount'
+          field:
+            element: 'select'
+            label: 'Turn the discount ON or OFF'
+            placeholder: 'Choose an option'
+              - name: 'On'
+                value: 'on'
+              - name: 'Off'
+                value: 'off'
         - name: 'amount'
           field:
             element: 'number'

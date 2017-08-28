@@ -54,15 +54,11 @@ prose:
             element: 'select'
             label: 'Turn the discount ON or OFF'
             placeholder: 'Choose an option'
+            options:
               - name: 'On'
                 value: 'on'
               - name: 'Off'
                 value: 'off'
-        - name: 'amount'
-          field:
-            element: 'number'
-            label: "Specify an amount (Please don't use any signs)"
-            value: ''
         - name: 'type'
           field:
             element: 'select'
@@ -73,6 +69,11 @@ prose:
                 value: 'percentage'
               - name: 'Amount'
                 value: 'amount'
+        - name: 'amount'
+          field:
+            element: 'number'
+            label: "Specify an amount (Please don't use any signs)"
+            value : ''
         - name: 'text'
           field:
             element: 'text'

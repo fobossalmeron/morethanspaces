@@ -35,7 +35,7 @@ smallText: ' on purchases of 30,000USD or more'
 
 {
   "discountOn":"{{page.discount}}",
-  "discountNumber":"{{page.number}}",
+  "discountNumber":{{page.number}},
   "discountType":"{{page.type}}",
   "discountText":"{{page.text}}",
   "discountSmallText":"{{page.smallText}}"

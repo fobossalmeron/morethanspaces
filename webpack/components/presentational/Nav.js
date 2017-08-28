@@ -20,6 +20,7 @@ class Nav extends Component {
        xhr.open('get', './assets/discounts/discount.js', true);
        xhr.onload = function() {
            var info = JSON.parse(xhr.responseText);
+           console.log(info);
            this.setState({
              discountOn: info.discountOn,
              discountNumber: info.discountNumber,
@@ -38,6 +39,7 @@ class Nav extends Component {
         return "$"
       }
     }
+
     isThereDiscount(){
       if (this.state.discountOn === "on"){
         return (true)

@@ -1,8 +1,9 @@
 ---
 published: true
-amount: 1000
-type: amount
-text: ' dollars off!'
+discount: 'on'
+number: 25
+type: 'percentage'
+text: 'off!'
 smallText: ' on purchases of 30,000USD or more'
 ---
 
@@ -29,12 +30,13 @@ smallText: ' on purchases of 30,000USD or more'
 
 
 
-{"discount": [
-    {
-      "discountAmount":"{{page.amount}}",
-      "discountType":"{{page.type}}",
-      "discountText":"{{page.text}}",
-      "discountSmallText":"{{page.text}}"
-    }
-  ]
+
+
+
+{
+  "discountOn":"{{page.discount}}",
+  "discountNumber":{{page.number}},
+  "discountType":"{{page.type}}",
+  "discountText":"{{page.text}}",
+  "discountSmallText":"{{page.smallText}}"
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SingleBooth from './SingleBooth';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
+import CollectBeforeQuote from './CollectBeforeQuote'
 
 class BoothGrid extends Component {
   constructor(props) {
@@ -12,7 +13,9 @@ class BoothGrid extends Component {
       description: '',
       boothType: '',
       obj: '',
-      images:[]
+      images:[],
+      width: '',
+      length: ''
     };
     this.loadFromServer = this.loadFromServer.bind(this);
   }
@@ -32,13 +35,15 @@ class BoothGrid extends Component {
     this.loadFromServer();
   }
 
-  generateSingleBooth(singleValue, description, obj, images, boothType){
+  generateSingleBooth(singleValue, description, obj, images, boothType, width, length){
     this.setState({
       singleValue: singleValue,
       description: description,
       boothType: boothType,
       obj: obj,
-      images : images
+      images : images,
+      width: width,
+      length: length
     })
     this.props.renderSingleBooth();
   }
@@ -77,7 +82,7 @@ class BoothGrid extends Component {
       }
     }).map((booth, index) => (
       <li key={booth.id}
-          onClick={() => this.generateSingleBooth(booth.id, booth.description, booth.obj, booth.images, booth.type)}
+          onClick={() => this.generateSingleBooth(booth.id, booth.description, booth.obj, booth.images, booth.type, booth.width, booth.length)}
           className={"boothGridItem booth" + booth.type}
           style={{backgroundImage: 'url(' + booth.images[0].url + ')'}}>
           <label>{booth.id}</label>
@@ -89,12 +94,25 @@ class BoothGrid extends Component {
                     singleValue={this.state.singleValue}
                     boothType={this.state.boothType}
                     obj={this.state.obj}
-                    images={this.state.images} />
+                    images={this.state.images}
+                    doRenderCollector={this.props.doRenderCollector.bind(this)} />
       );
 
     var gridChoice = (this.props.individualBoothRender ? singleBooth : doRenderBooths);
 
+    var collectorRender = (
+      <CollectBeforeQuote images={this.state.images}
+                          singleValue={this.state.singleValue}
+                          boothType={this.state.boothType}
+                          wantToOwn={this.props.wantToOwn}
+                          eventInVegas={this.props.eventInVegas}
+                          width={this.state.width}
+                          length={this.state.length}/>
+    );
+
+    var showCollector = (this.props.renderCollector ? collectorRender : undefined );
     return (
+      <div>
       <ul id="boothGrid">
         <CSSTransitionGroup transitionName="example"
                             transitionEnterTimeout={400}
@@ -102,6 +120,8 @@ class BoothGrid extends Component {
           {gridChoice}
         </CSSTransitionGroup>
       </ul>
+      {showCollector}
+      </div>
     );
   }
 };

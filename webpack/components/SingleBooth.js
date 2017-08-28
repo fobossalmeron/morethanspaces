@@ -38,6 +38,10 @@ class SingleBooth extends Component {
     });
   }
 
+  nextStepCollector(event){
+    this.props.doRenderCollector();
+  }
+
   handleView(value){
     value !== "3D" ?
     this.setState({mainImage: this.props.images[value].url, render3D:false}) : this.setState({render3D:true})
@@ -74,6 +78,9 @@ class SingleBooth extends Component {
           </Slider>
       </div>
     );
+    var button = (
+      <button onClick={() => this.nextStepCollector()} className="instaQuoteButton">get instaQuote</button>
+    )
 
     return (
       <div className="singleBooth">
@@ -88,7 +95,7 @@ class SingleBooth extends Component {
           <label>add TV(s)</label>
           <CheckBox inputType="checkbox" classList="addOnCheck" nameFor="videoWall" checkFor="videoWall"/>
           <label>add videowall</label>
-          <button className="instaQuoteButton">get instaQuote</button>
+          {button}
         </div>
       </div>
     )

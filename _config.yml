@@ -49,11 +49,16 @@ prose:
             label: 'Image/Logo name of file, ej. "CES.png"'
             value: ''
         assets/discounts:
-        - name: 'amount'
+        - name: 'discount'
           field:
-            element: 'number'
-            label: "Specify an amount (Please don't use any signs)"
-            value: ''
+            element: 'select'
+            label: 'Turn the discount ON or OFF'
+            placeholder: 'Choose an option'
+            options:
+              - name: 'On'
+                value: 'on'
+              - name: 'Off'
+                value: 'off'
         - name: 'type'
           field:
             element: 'select'
@@ -64,12 +69,17 @@ prose:
                 value: 'percentage'
               - name: 'Amount'
                 value: 'amount'
+        - name: 'amount'
+          field:
+            element: 'number'
+            label: "Specify an amount (Please don't use any signs)"
+            value : ''
         - name: 'text'
           field:
             element: 'text'
             label: 'Discount text'
             value: ''
-        - name: 'smalltext'
+        - name: 'smallText'
           field:
             element: 'text'
             label: 'Discount small text'

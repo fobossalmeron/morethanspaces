@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import TradeShowForm from './TradeShowForm';
 import BoothGrid from './BoothGrid';
+import CollectBeforeQuote from './CollectBeforeQuote';
 
 class QuoteTabs extends Component {
   constructor(props) {
@@ -13,10 +14,34 @@ class QuoteTabs extends Component {
       selectedSplitIsland: true,
       selectedInline: true,
       selectedPeninsula: true,
-      rentOwn: 1,
+      wantToOwn: false,
       eventInVegas: true,
       individualBoothRender: false,
+      renderCollector: false,
+      renderInstaQuote: false,
     };
+  }
+
+  needShipping(){
+    this.setState({ eventInVegas: false}, ()=> console.log("not in vegas XX"));
+  }
+  noNeedShipping(){
+    this.setState({ eventInVegas: true}, ()=> console.log("in vegas XX"));
+  }
+
+  doWantToOwn(){
+    this.setState({ wantToOwn: true });
+  }
+  doWantToRent(){
+    this.setState({ wantToOwn: false });
+  }
+
+  renderInstaQuote(){
+    this.setState({ renderInstaQuote: true })
+  }
+
+  doRenderCollector(){
+    this.setState({ renderCollector: true }, ()=> controller.scrollTo("#dataCollector"));
   }
 
   renderSingleBooth(){
@@ -74,17 +99,24 @@ class QuoteTabs extends Component {
                          limitByWidth={this.limitByWidth.bind(this)}
                          limitByLength={this.limitByLength.bind(this)}
                          individualBoothRender={this.state.individualBoothRender}
-                         closeSingleBooth={this.closeSingleBooth.bind(this)}/>
-          <BoothGrid
-          selectedIsland={this.state.selectedIsland}
-          selectedSplitIsland={this.state.selectedSplitIsland}
-          selectedPeninsula={this.state.selectedPeninsula}
-          selectedInline={this.state.selectedInline}
-          boothSizeWidth={this.state.boothSizeWidth}
-          boothSizeLength={this.state.boothSizeLength}
-          individualBoothRender={this.state.individualBoothRender}
-          renderSingleBooth={this.renderSingleBooth.bind(this)}
-          />
+                         closeSingleBooth={this.closeSingleBooth.bind(this)}
+                         doWantToOwn={this.doWantToOwn.bind(this)}
+                         doWantToRent={this.doWantToRent.bind(this)}
+                         needShipping={this.needShipping.bind(this)}
+                         noNeedShipping={this.noNeedShipping.bind(this)}/>
+
+          <BoothGrid    selectedIsland={this.state.selectedIsland}
+                        selectedSplitIsland={this.state.selectedSplitIsland}
+                        selectedPeninsula={this.state.selectedPeninsula}
+                        selectedInline={this.state.selectedInline}
+                        boothSizeWidth={this.state.boothSizeWidth}
+                        boothSizeLength={this.state.boothSizeLength}
+                        individualBoothRender={this.state.individualBoothRender}
+                        renderCollector={this.state.renderCollector}
+                        wantToOwn={this.state.wantToOwn}
+                        eventInVegas={this.state.eventInVegas}
+                        renderSingleBooth={this.renderSingleBooth.bind(this)}
+                        doRenderCollector={this.doRenderCollector.bind(this)}/>
         </TabPanel>
         <TabPanel>
           <img src="assets/img/mock.png"/>

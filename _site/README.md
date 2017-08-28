@@ -3,11 +3,11 @@ Morethanspaces Website
 
 ##Falta en estilos
 - social media
-- add overlay for video
 
 
 ##Falta en func
 - landing page(s)
-- make discounts work. 
-- recolector de datos y resto de mecanismo !!
+- video player play complete video
+- instaQuote !! discounts work
 - calendly business
+- ver que pedo con alex y los obj's

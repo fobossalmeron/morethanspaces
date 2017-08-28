@@ -12,7 +12,7 @@ class ContactSection extends Component {
   }
 
   showConf(){
-    console.log("Success from function");
+    console.log("show success Message");
     this.setState({
         successMessage: true
     })
@@ -54,7 +54,7 @@ class ContactSection extends Component {
               console.log('Form Submitted Succesfully with:', values)
               this.showConf()
 
-              const url = 'https://formspree.io/fobos.salmeron@gmail.com';
+              const url = 'https://formspree.io/hello@morethanspaces.com';
               var data = values;
 
               var xhr = new XMLHttpRequest();
@@ -66,7 +66,7 @@ class ContactSection extends Component {
                   xhr.send(JSON.stringify(data));
 
                   // Callback function
-                  xhr.onloadend = function (response, showMe) {
+                  xhr.onloadend = function (response) {
                     if (response.target.status === 0) {
                         // Failed XmlHttpRequest should be considered an undefined error.
                         console.log('Danger');

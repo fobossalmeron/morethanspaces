@@ -362,6 +362,10 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 #instaQuote h2 { cursor: auto; padding-top: 0; float: left; clear: both; }
 
 .instaInfo { width: 80%; float: left; padding-left: 4%; }
+.instaInfo .wasLink { float: left; font-weight: 700; clear: both; line-height: 1; margin-bottom: 1%; border-bottom: 3px solid #ec3092; margin-top: 2%; transition: .4s ease all; cursor: pointer; }
+.instaInfo .wasLink:hover { color: #f9f9f9; border-color: #f9f9f9; }
+.instaInfo .wasLink:hover h2 { color: #f9f9f9 !important; }
+.instaInfo h2 { transition: .4s ease all; }
 .instaInfo p { float: left; clear: both; }
 .instaInfo ul { float: left; clear: both; list-style: none; margin: 0; }
 .instaInfo ul li { float: left; clear: both; }

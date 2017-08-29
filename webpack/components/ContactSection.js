@@ -52,11 +52,10 @@ class ContactSection extends Component {
           <Form
             onSubmit={(values) => {
               console.log('Form Submitted Succesfully with:', values)
-              this.showConf()
 
               const url = 'https://formspree.io/hello@morethanspaces.com';
               var data = values;
-
+              var myself = this;
               var xhr = new XMLHttpRequest();
                   xhr.open('POST', url, true);
                   xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
@@ -76,6 +75,7 @@ class ContactSection extends Component {
 
                     } else if (response.target.status === 200) {
                         console.log('Success!');
+                        myself.showConf()
                       }
                   }
             }}

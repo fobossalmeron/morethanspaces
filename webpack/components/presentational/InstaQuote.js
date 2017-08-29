@@ -31,7 +31,10 @@ class InstaQuote extends Component {
     this.loadDiscounts();
   }
 
-
+  showCalendly(){
+    Calendly.showPopupWidget('https://calendly.com/morethanspaces');
+    return false;
+  }
 
   render (){
     var renderRentOwn = this.props.wantToOwn? "own" : "rent";
@@ -52,6 +55,8 @@ class InstaQuote extends Component {
           <li>You want to <b>{renderRentOwn}</b> it</li>
           <li>This event is <b>{renderInVegas}</b> Las Vegas </li>
         </ul>
+        <p className="wasLink" onClick={() => this.showCalendly()}><h2>Schedule a call!</h2></p>
+        <p><em>we don&quot;t believe in pressure sales, schedule with confidence</em></p>
       </div>
     </div>
     );

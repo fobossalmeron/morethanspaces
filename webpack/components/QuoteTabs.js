@@ -42,8 +42,7 @@ class QuoteTabs extends Component {
   }
 
   doRevealInstaQuote(){
-    this.setState({ revealInstaQuote: true },() => console.log(this.state.revealInstaQuote));
-    console.log(this.state.revealInstaQuote);
+    this.setState({ revealInstaQuote: true });
   }
 
   renderSingleBooth(){

@@ -8,6 +8,8 @@ Morethanspaces Website
 ##Falta en func
 - landing page(s)
 - video player play complete video
-- instaQuote !! discounts work
+- discounts work on instaquote
 - calendly business
-- ver que pedo con alex y los obj's
+- logo in colors
+- it’s the wrong video
+- send email to two people  

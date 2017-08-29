@@ -58,7 +58,7 @@ class Nav extends Component {
 
     var discountBlock = (
       <div className="discounts-menu">
-      <b>{this.state.discountNumber}{this.discountSymbol()} {this.state.discountText}</b> <span>{this.state.discountSmallText}</span>
+      <b>{this.state.discountNumber}{this.discountSymbol()}</b> {this.state.discountText} <span>{this.state.discountSmallText}</span>
       </div>
     );
     var isThereDiscount = (this.isThereDiscount() ? discountBlock : undefined);

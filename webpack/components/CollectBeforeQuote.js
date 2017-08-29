@@ -6,17 +6,13 @@ import InstaQuote from './presentational/InstaQuote';
 class CollectBeforeQuote extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      showInstaQuote: false
-    };
   this.revealQuote = this.revealQuote.bind(this);
   }
 
   revealQuote(){
-    this.setState({
-        showInstaQuote: true
-    })
+    this.props.doRevealInstaQuote();
   }
+
   componentDidMount(){
     console.log(this.props);
   }
@@ -24,34 +20,11 @@ class CollectBeforeQuote extends Component {
   render (){
     var calendlyUrl = 'https://calendly.com/morethanspaces'
 
-    const dataCollector = (
-      <div>
-        <Text field='name' placeholder='your name'/>
-        <Text field='email' placeholder='your email'/>
-        <Text field='phone' placeholder='your phone'/>
-        <button type='submit'>see instaQuote now!</button>
-      </div>
-    )
-
-    const instaQuote = (
-      <InstaQuote images={this.props.images}
-                  singleValue={this.props.singleValue}
-                  boothType={this.props.boothType}
-                  wantToOwn={this.props.wantToOwn}
-                  eventInVegas={this.props.eventInVegas}
-                  width={this.props.width}
-                  length={this.props.length}/>
-    );
-
-    const collector = this.state.showInstaQuote ? undefined : dataCollector ;
-    const quote = this.state.showInstaQuote ? instaQuote : undefined ;
-
     return (
-      <div id="dataCollector" onClick={() => this.revealQuote()}>
+      <div id="dataCollector" onClick={() =>this.revealQuote()}>
           <Form
             onSubmit={(values) => {
               console.log('Form Submitted Succesfully with:', values)
-              this.revealQuote()
 
               const url = 'https://formspree.io/fobos.salmeron@gmail.com';
               var data = values;
@@ -107,12 +80,14 @@ class CollectBeforeQuote extends Component {
             {({submitForm}) => {
               return (
                 <form onSubmit={submitForm}>
-                  {collector}
+                  <Text field='name' placeholder='your name'/>
+                  <Text field='email' placeholder='your email'/>
+                  <Text field='phone' placeholder='your phone'/>
+                  <button type='submit'>see instaQuote now!</button>
                 </form>
               )
             }}
           </Form>
-          {quote}
         </div>
     );
   }

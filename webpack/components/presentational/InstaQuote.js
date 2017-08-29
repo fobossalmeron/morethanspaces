@@ -31,15 +31,19 @@ class InstaQuote extends Component {
     this.loadDiscounts();
   }
 
+
+
   render (){
     var renderRentOwn = this.props.wantToOwn? "own" : "rent";
     var renderInVegas = this.props.eventInVegas? "in" : "outside";
+    var reveal = this.props.revealInstaQuote? "revealQuote quoteNumber" : "quoteNumber";
     return (
-    <div id="instaQuote">
+    <div className="instaBlock">
       <div className="instaThumbnail" style={{backgroundImage: 'url(' + this.props.images[0].url + ')'}}></div>
       <div className="instaInfo">
         <h2>instaQuote</h2>
-        <div className="quoteNumber">$12,000 USD <span>*for up to 3 event days</span></div>
+        <div className={reveal}>$12,000 USD</div>
+        <span className="smallPrint">*for up to 3 event days</span>
         <p>$13,000 USD - $1000 discount</p>
         <ul>
           <li>model: <b>{this.props.singleValue}</b></li>

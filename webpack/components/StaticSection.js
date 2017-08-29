@@ -78,8 +78,8 @@ class StaticSection extends Component {
           <div className="row">
           <li className="full-service service7">
             <div className="service-icon"></div>
-            <h3>full service -<b>service for you, designed for you, 100 percent yours!</b></h3>
-            <h4>The Smarter Approach to Trade show</h4>
+            <h3>full service <em>-service for you, designed for you, 100 percent yours!</em></h3>
+            <h4><b>the smarter approach to trade show</b></h4>
             <p>We know the cost of trade shows, and we are here to help by making it the best
             experience possible at a price you feel comfortable with! Don’t waste your time with
             overly complicated booth’s, set-up / tear down, logistics or high rental cost. We like to

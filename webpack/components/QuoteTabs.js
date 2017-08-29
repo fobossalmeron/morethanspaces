@@ -17,9 +17,10 @@ class QuoteTabs extends Component {
       wantToOwn: false,
       eventInVegas: true,
       individualBoothRender: false,
-      renderCollector: false,
       renderInstaQuote: false,
+      revealInstaQuote: false,
     };
+    this.clickFor = this.clickFor.bind(this);
   }
 
   needShipping(){
@@ -36,12 +37,13 @@ class QuoteTabs extends Component {
     this.setState({ wantToOwn: false });
   }
 
-  renderInstaQuote(){
-    this.setState({ renderInstaQuote: true })
+  doRenderInstaQuote(){
+    this.setState({ renderInstaQuote: true }, ()=> controller.scrollTo("#instaQuote"))
   }
 
-  doRenderCollector(){
-    this.setState({ renderCollector: true }, ()=> controller.scrollTo("#dataCollector"));
+  doRevealInstaQuote(){
+    this.setState({ revealInstaQuote: true },() => console.log(this.state.revealInstaQuote));
+    console.log(this.state.revealInstaQuote);
   }
 
   renderSingleBooth(){
@@ -81,16 +83,24 @@ class QuoteTabs extends Component {
     });
   }
 
+  clickFor(tab){
+    if (this.props.tabIndex !== tab){
+      return  (<div className="clickFor">click for</div>)
+    }
+  }
+
   render(){
     return (
       <section id="quoteSection">
       <Tabs forceRenderTabPanel={true} selectedIndex={this.props.tabIndex} onSelect={tabIndex => this.props.goToTab( tabIndex )}>
         <TabList>
           <Tab>
-            <h2 id="booths">trade show booths</h2>
+            <h2 id="booths">{this.clickFor(0)}trade show booths</h2>
+            <div className={"frontSlide"}><span></span></div>
           </Tab>
           <Tab>
-            <h2 id="videowalls">video walls</h2>
+            <h2 id="videowalls">{this.clickFor(1)}video walls</h2>
+            <div className={"frontSlide"}><span></span></div>
           </Tab>
         </TabList>
 
@@ -112,11 +122,13 @@ class QuoteTabs extends Component {
                         boothSizeWidth={this.state.boothSizeWidth}
                         boothSizeLength={this.state.boothSizeLength}
                         individualBoothRender={this.state.individualBoothRender}
-                        renderCollector={this.state.renderCollector}
+                        revealInstaQuote={this.state.revealInstaQuote}
+                        renderInstaQuote={this.state.renderInstaQuote}
                         wantToOwn={this.state.wantToOwn}
                         eventInVegas={this.state.eventInVegas}
                         renderSingleBooth={this.renderSingleBooth.bind(this)}
-                        doRenderCollector={this.doRenderCollector.bind(this)}/>
+                        doRevealInstaQuote={this.doRevealInstaQuote.bind(this)}
+                        doRenderInstaQuote={this.doRenderInstaQuote.bind(this)}/>
         </TabPanel>
         <TabPanel>
           <img src="assets/img/mock.png"/>

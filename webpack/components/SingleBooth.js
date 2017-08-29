@@ -41,6 +41,9 @@ class SingleBooth extends Component {
   nextStepCollector(event){
     this.props.doRenderCollector();
   }
+  nextStepInstaQuote(event){
+    this.props.doRenderInstaQuote();
+  }
 
   handleView(value){
     value !== "3D" ?
@@ -79,7 +82,7 @@ class SingleBooth extends Component {
       </div>
     );
     var button = (
-      <button onClick={() => this.nextStepCollector()} className="instaQuoteButton">get instaQuote</button>
+      <button onClick={() => this.nextStepInstaQuote()} className="instaQuoteButton">get instaQuote</button>
     )
 
     return (

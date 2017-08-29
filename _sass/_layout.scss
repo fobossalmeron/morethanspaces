@@ -42,6 +42,7 @@ nav{
         }
         &:hover{
           border-color: $white;
+          color:$white;
           padding-bottom: 4px;
           text-decoration: none;
         }
@@ -53,13 +54,18 @@ nav{
 .discounts-menu{
   float:left;
   left: 20%;
+  white-space: nowrap;
   position: relative;
-  padding-top:20px;
+  padding-top: 15px;
+  color: $white;
   transition: .5s ease all;
   b{
     float:left;
     clear:both;
+    font-size: 25px;
     color:$magenta;
+    line-height: 1;
+    margin-right: 6px;
   }
   span{
     float:left;
@@ -74,7 +80,8 @@ nav{
   height: 60px;
   background-color:$white;
   .discounts-menu{
-    padding-top: 2px;
+    padding-top: 3px;
+    color:$black;
     span{
       color:$black;
     }
@@ -93,6 +100,7 @@ nav{
         color:$black;
         }
         &:hover{
+        color:$black;
         border-color:$black;
         }
       }
@@ -105,15 +113,20 @@ footer{
   width:100%;
   background-color:#777777;
   color:$white;
-  padding: 5%;
+  padding: 3% 4%;
   a{
     font-size: 1em;
     font-weight: 700;
     float:left;
     clear:both;
     color:$white;
+    border: solid white;
+    border-width: 0px 0px 2px 0px;
+    transition: .4s ease all;
     &:hover{
       color: $magenta;
+      text-decoration: none;
+      border-color: $magenta;
     }
   }
   .colophon{
@@ -127,7 +140,7 @@ footer{
     color: $white;
     float:left;
     clear:both;
-    margin-bottom: 1%;
+    margin-bottom: 0;
   }
   .inline-link{
     float: none;
@@ -143,6 +156,10 @@ footer{
       padding:2%;
       list-style: none;
       float:left;
+      h3{
+        font-weight:700;
+        color:$blue;
+      }
     }
   }
 }
@@ -230,7 +247,7 @@ section{
     float: left;
     clear:both;
     text-align: center;
-    padding: 5%;
+    padding: 0 5%;
     color: #f9f9f9;
     box-sizing: border-box;
     opacity:0;
@@ -253,11 +270,12 @@ section{
   h1 {
     margin: 10% 4%;
     padding: 1%;
-    font-size: 3em;
+    font-size: 3.3em;
     position: absolute;
     display: inline-block;
     z-index: 2;
     color: $white;
+    line-height: 1.25;
   }
 }
 
@@ -315,7 +333,7 @@ section{
           transition: .5s ease all;
           transform: translateX(-10%);
           float: left;
-          text-align: center;
+          text-align: left;
           width: 50%;
           padding: 3% 3% 0% 3%;
           font-size: 1em;
@@ -324,6 +342,9 @@ section{
           h3{
             font-weight: 700;
           }
+          em{
+            font-weight:400;
+          }
       }
     }
 }
@@ -331,7 +352,7 @@ section{
 .service-icon{
   width:100px;
   height:100px;
-  margin: 0 auto 17px auto;
+  margin-bottom: 20px;
   position: relative;
   background-image: url("#{$baseurl}/assets/img/3dBack.svg");
   background-size: cover;
@@ -545,7 +566,7 @@ form{
     margin:0px;
     color:$magenta;
     font-weight: 700;
-    padding-top: 10px;
+    padding-top: 15px;
     float:left;
     cursor:pointer;
   }
@@ -632,10 +653,37 @@ input[type=text]{
 .react-tabs__tab{
   width:50%;
   float:left;
+  position: relative;
   border-radius: 5px 5px 0 0;
-  padding: 15px 0px 20px 35px;
+  padding: 15px 0px 10px 35px;
   background-color: darken($white, 10%);
   position:relative;
+  &:nth-of-type(2){
+    margin-right: 2%;
+    margin-left: 2%;
+    width: 46%;
+  }
+  .frontSlide{
+    width: 50px;
+    position: absolute;
+    right: -50px;
+    overflow: hidden;
+    top: 0;
+    height: 100%;
+    z-index: 1;
+    display: block;
+
+    span{
+      width: 40px;
+      height: 110%;
+      background-color: darken($white, 10%);
+      position: absolute;
+      right: 29px;
+      top: 5px;
+      z-index: 0;
+      transform: rotate(-24deg);
+    }
+  }
   &:focus{
     outline: none;
     &::after{
@@ -653,6 +701,13 @@ input[type=text]{
 
 .react-tabs__tab--selected{
   background-color: $white;
+  z-index: 1;
+  .frontSlide{
+    span{
+      background-color: $white;
+      z-index: 1;
+    }
+  }
   h2{
     cursor:auto !important;
   }
@@ -811,8 +866,7 @@ input[type=text]{
   overflow-y: scroll;
   float: left;
   width: 72%;
-  margin-right: 4%;
-  margin-left: 0;
+  margin: 0 4% 4% 0px;
 }
 
 .boothGridItem{
@@ -1105,6 +1159,7 @@ iframe{
   a{
     font-size: 1em;
     font-weight: 700;
+    margin-bottom: 5px;
     &:hover{
       color: $magenta;
     }
@@ -1129,13 +1184,11 @@ iframe{
   position: relative;
   float: left;
   width: 100%;
-  margin-top: 4%;
-  background-color:$blue;
   form{
     border: none;
     background-color: $blue;
     color:$black;
-    padding: 2% 4%;
+    padding: 4% 0%;
     min-height: 0;
   }
   input{
@@ -1156,9 +1209,18 @@ iframe{
     }
   }
   .FormError{
-    max-width:20%;
+    bottom: 10px;
+    white-space: nowrap;
     position: absolute;
+    padding: .5% 1%;
+    background-color:$magenta;
   }
+}
+
+.instaBlock{
+  padding-top: 2%;
+  float: left;
+  width: 100%;
 }
 
 .instaThumbnail{
@@ -1173,6 +1235,8 @@ iframe{
 
 #instaQuote{
   padding: 0 4% 4% 4%;
+  min-height:100vh;
+  background-color: $blue;
   float: left;
   width: 100%;
   h2{
@@ -1206,10 +1270,26 @@ iframe{
   font-weight: 700;
   float: left;
   clear: both;
-  font-size: 2em;
-  span{
-    font-weight:400;
-    font-size:.5em;
-    font-style: italic;
-  }
+  font-size: 3em;
+  filter: blur(10px);
+  transition: .4s ease all;
+}
+
+.revealQuote{
+  filter: blur(0px);
+}
+
+.smallPrint{
+  float: left;
+  margin-top: 5%;
+  font-style:italic;
+  font-size: .8em;
+}
+
+.clickFor{
+  font-size:15px;
+  font-weight: 400;
+  color: $black;
+  position: absolute;
+  bottom: 40px;
 }

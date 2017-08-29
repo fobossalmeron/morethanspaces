@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import SingleBooth from './SingleBooth';
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
-import CollectBeforeQuote from './CollectBeforeQuote'
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import CollectBeforeQuote from './CollectBeforeQuote';
+import InstaQuote from './presentational/InstaQuote';
 
 class BoothGrid extends Component {
   constructor(props) {
@@ -95,22 +96,35 @@ class BoothGrid extends Component {
                     boothType={this.state.boothType}
                     obj={this.state.obj}
                     images={this.state.images}
-                    doRenderCollector={this.props.doRenderCollector.bind(this)} />
+                    doRenderInstaQuote={this.props.doRenderInstaQuote.bind(this)}/>
       );
 
     var gridChoice = (this.props.individualBoothRender ? singleBooth : doRenderBooths);
 
-    var collectorRender = (
+    var quote = (
+      <div id="instaQuote">
       <CollectBeforeQuote images={this.state.images}
                           singleValue={this.state.singleValue}
                           boothType={this.state.boothType}
                           wantToOwn={this.props.wantToOwn}
                           eventInVegas={this.props.eventInVegas}
                           width={this.state.width}
-                          length={this.state.length}/>
+                          length={this.state.length}
+                          doRevealInstaQuote={this.props.doRevealInstaQuote.bind(this)}/>
+
+      <InstaQuote images={this.state.images}
+                  singleValue={this.state.singleValue}
+                  boothType={this.state.boothType}
+                  wantToOwn={this.state.wantToOwn}
+                  eventInVegas={this.state.eventInVegas}
+                  width={this.state.width}
+                  length={this.state.length}
+                  revealInstaQuote={this.props.revealInstaQuote}/>
+      </div>
     );
 
-    var showCollector = (this.props.renderCollector ? collectorRender : undefined );
+    var renderQuote = this.props.renderInstaQuote ? quote : undefined ;
+
     return (
       <div>
       <ul id="boothGrid">
@@ -120,7 +134,7 @@ class BoothGrid extends Component {
           {gridChoice}
         </CSSTransitionGroup>
       </ul>
-      {showCollector}
+      {renderQuote}
       </div>
     );
   }

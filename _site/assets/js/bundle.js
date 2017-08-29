@@ -8151,9 +8151,6 @@ var CollectBeforeQuote = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (CollectBeforeQuote.__proto__ || Object.getPrototypeOf(CollectBeforeQuote)).call(this, props));
 
-    _this.state = {
-      showInstaQuote: false
-    };
     _this.revealQuote = _this.revealQuote.bind(_this);
     return _this;
   }
@@ -8161,9 +8158,7 @@ var CollectBeforeQuote = function (_Component) {
   _createClass(CollectBeforeQuote, [{
     key: 'revealQuote',
     value: function revealQuote() {
-      this.setState({
-        showInstaQuote: true
-      });
+      this.props.doRevealInstaQuote();
     }
   }, {
     key: 'componentDidMount',
@@ -8177,30 +8172,6 @@ var CollectBeforeQuote = function (_Component) {
 
       var calendlyUrl = 'https://calendly.com/morethanspaces';
 
-      var dataCollector = _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(_reactForm.Text, { field: 'name', placeholder: 'your name' }),
-        _react2.default.createElement(_reactForm.Text, { field: 'email', placeholder: 'your email' }),
-        _react2.default.createElement(_reactForm.Text, { field: 'phone', placeholder: 'your phone' }),
-        _react2.default.createElement(
-          'button',
-          { type: 'submit' },
-          'see instaQuote now!'
-        )
-      );
-
-      var instaQuote = _react2.default.createElement(_InstaQuote2.default, { images: this.props.images,
-        singleValue: this.props.singleValue,
-        boothType: this.props.boothType,
-        wantToOwn: this.props.wantToOwn,
-        eventInVegas: this.props.eventInVegas,
-        width: this.props.width,
-        length: this.props.length });
-
-      var collector = this.state.showInstaQuote ? undefined : dataCollector;
-      var quote = this.state.showInstaQuote ? instaQuote : undefined;
-
       return _react2.default.createElement(
         'div',
         { id: 'dataCollector', onClick: function onClick() {
@@ -8211,7 +8182,6 @@ var CollectBeforeQuote = function (_Component) {
           {
             onSubmit: function onSubmit(values) {
               console.log('Form Submitted Succesfully with:', values);
-              _this2.revealQuote();
 
               var url = 'https://formspree.io/fobos.salmeron@gmail.com';
               var data = values;
@@ -8255,11 +8225,17 @@ var CollectBeforeQuote = function (_Component) {
             return _react2.default.createElement(
               'form',
               { onSubmit: submitForm },
-              collector
+              _react2.default.createElement(_reactForm.Text, { field: 'name', placeholder: 'your name' }),
+              _react2.default.createElement(_reactForm.Text, { field: 'email', placeholder: 'your email' }),
+              _react2.default.createElement(_reactForm.Text, { field: 'phone', placeholder: 'your phone' }),
+              _react2.default.createElement(
+                'button',
+                { type: 'submit' },
+                'see instaQuote now!'
+              )
             );
           }
-        ),
-        quote
+        )
       );
     }
   }]);
@@ -13649,7 +13625,7 @@ var ContactSection = function (_Component) {
                   name: !name ? 'A name is required' : undefined,
                   business: !business ? 'A business name is required' : undefined,
                   message: !message ? 'The message cannot be empty' : undefined,
-                  email: !email ? 'The email cannot be empty' : email.search('@') == -1 ? 'Please give a valid email' : email.search(/gmail.com/i) !== -1 ? 'Sorry for the inconvenience but we only work with businesses, please provide a business email' : email.search(/aol.com/i) !== -1 ? 'Sorry for the inconvenience but we only work with businesses, please provide a business email' : email.search(/yahoo.com/i) !== -1 ? 'Sorry for the inconvenience but we only work with businesses, please provide a business email' : email.search(/live.com/i) !== -1 ? 'Sorry for the inconvenience but we only work with businesses, please provide a business email' : email.search(/hotmail.com/i) !== -1 ? 'Sorry for the inconvenience but we only work with businesses, please provide a business email' : email.search('@') == -1 ? 'Please give a valid email' : undefined
+                  email: !email ? 'The email cannot be empty' : email.search('@') == -1 ? 'Please give a valid email' : email.search(/@gmail.com/i) !== -1 ? 'Sorry for the inconvenience but we only work with businesses, please provide a business email' : email.search(/@aol.com/i) !== -1 ? 'Sorry for the inconvenience but we only work with businesses, please provide a business email' : email.search(/@icloud.com/i) !== -1 ? 'Sorry for the inconvenience but we only work with businesses, please provide a business email' : email.search(/@me.com/i) !== -1 ? 'Sorry for the inconvenience but we only work with businesses, please provide a business email' : email.search(/yahoo.com/i) !== -1 ? 'Sorry for the inconvenience but we only work with businesses, please provide a business email' : email.search(/@live.com/i) !== -1 ? 'Sorry for the inconvenience but we only work with businesses, please provide a business email' : email.search(/@hotmail.com/i) !== -1 ? 'Sorry for the inconvenience but we only work with businesses, please provide a business email' : undefined
                 };
               }
             },
@@ -13816,9 +13792,10 @@ var QuoteTabs = function (_Component) {
       wantToOwn: false,
       eventInVegas: true,
       individualBoothRender: false,
-      renderCollector: false,
-      renderInstaQuote: false
+      renderInstaQuote: false,
+      revealInstaQuote: false
     };
+    _this.clickFor = _this.clickFor.bind(_this);
     return _this;
   }
 
@@ -13847,16 +13824,21 @@ var QuoteTabs = function (_Component) {
       this.setState({ wantToOwn: false });
     }
   }, {
-    key: 'renderInstaQuote',
-    value: function renderInstaQuote() {
-      this.setState({ renderInstaQuote: true });
+    key: 'doRenderInstaQuote',
+    value: function doRenderInstaQuote() {
+      this.setState({ renderInstaQuote: true }, function () {
+        return controller.scrollTo("#instaQuote");
+      });
     }
   }, {
-    key: 'doRenderCollector',
-    value: function doRenderCollector() {
-      this.setState({ renderCollector: true }, function () {
-        return controller.scrollTo("#dataCollector");
+    key: 'doRevealInstaQuote',
+    value: function doRevealInstaQuote() {
+      var _this2 = this;
+
+      this.setState({ revealInstaQuote: true }, function () {
+        return console.log(_this2.state.revealInstaQuote);
       });
+      console.log(this.state.revealInstaQuote);
     }
   }, {
     key: 'renderSingleBooth',
@@ -13901,9 +13883,20 @@ var QuoteTabs = function (_Component) {
       });
     }
   }, {
+    key: 'clickFor',
+    value: function clickFor(tab) {
+      if (this.props.tabIndex !== tab) {
+        return _react2.default.createElement(
+          'div',
+          { className: 'clickFor' },
+          'click for'
+        );
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       return _react2.default.createElement(
         'section',
@@ -13911,7 +13904,7 @@ var QuoteTabs = function (_Component) {
         _react2.default.createElement(
           _reactTabs.Tabs,
           { forceRenderTabPanel: true, selectedIndex: this.props.tabIndex, onSelect: function onSelect(tabIndex) {
-              return _this2.props.goToTab(tabIndex);
+              return _this3.props.goToTab(tabIndex);
             } },
           _react2.default.createElement(
             _reactTabs.TabList,
@@ -13922,7 +13915,13 @@ var QuoteTabs = function (_Component) {
               _react2.default.createElement(
                 'h2',
                 { id: 'booths' },
+                this.clickFor(0),
                 'trade show booths'
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: "frontSlide" },
+                _react2.default.createElement('span', null)
               )
             ),
             _react2.default.createElement(
@@ -13931,7 +13930,13 @@ var QuoteTabs = function (_Component) {
               _react2.default.createElement(
                 'h2',
                 { id: 'videowalls' },
+                this.clickFor(1),
                 'video walls'
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: "frontSlide" },
+                _react2.default.createElement('span', null)
               )
             )
           ),
@@ -13954,11 +13959,13 @@ var QuoteTabs = function (_Component) {
               boothSizeWidth: this.state.boothSizeWidth,
               boothSizeLength: this.state.boothSizeLength,
               individualBoothRender: this.state.individualBoothRender,
-              renderCollector: this.state.renderCollector,
+              revealInstaQuote: this.state.revealInstaQuote,
+              renderInstaQuote: this.state.renderInstaQuote,
               wantToOwn: this.state.wantToOwn,
               eventInVegas: this.state.eventInVegas,
               renderSingleBooth: this.renderSingleBooth.bind(this),
-              doRenderCollector: this.doRenderCollector.bind(this) })
+              doRevealInstaQuote: this.doRevealInstaQuote.bind(this),
+              doRenderInstaQuote: this.doRenderInstaQuote.bind(this) })
           ),
           _react2.default.createElement(
             _reactTabs.TabPanel,
@@ -14139,17 +14146,21 @@ var StaticSection = function (_Component) {
                 _react2.default.createElement(
                   "h3",
                   null,
-                  "full service -",
+                  "full service ",
                   _react2.default.createElement(
-                    "b",
+                    "em",
                     null,
-                    "service for you, designed for you, 100 percent yours!"
+                    "-service for you, designed for you, 100 percent yours!"
                   )
                 ),
                 _react2.default.createElement(
                   "h4",
                   null,
-                  "The Smarter Approach to Trade show"
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "the smarter approach to trade show"
+                  )
                 ),
                 _react2.default.createElement(
                   "p",
@@ -14568,10 +14579,10 @@ var Nav = function (_Component) {
           'b',
           null,
           this.state.discountNumber,
-          this.discountSymbol(),
-          ' ',
-          this.state.discountText
+          this.discountSymbol()
         ),
+        ' ',
+        this.state.discountText,
         ' ',
         _react2.default.createElement(
           'span',
@@ -14682,6 +14693,10 @@ var _CSSTransitionGroup2 = _interopRequireDefault(_CSSTransitionGroup);
 var _CollectBeforeQuote = __webpack_require__(65);
 
 var _CollectBeforeQuote2 = _interopRequireDefault(_CollectBeforeQuote);
+
+var _InstaQuote = __webpack_require__(127);
+
+var _InstaQuote2 = _interopRequireDefault(_InstaQuote);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -14799,19 +14814,33 @@ var BoothGrid = function (_Component) {
         boothType: this.state.boothType,
         obj: this.state.obj,
         images: this.state.images,
-        doRenderCollector: this.props.doRenderCollector.bind(this) });
+        doRenderInstaQuote: this.props.doRenderInstaQuote.bind(this) });
 
       var gridChoice = this.props.individualBoothRender ? singleBooth : doRenderBooths;
 
-      var collectorRender = _react2.default.createElement(_CollectBeforeQuote2.default, { images: this.state.images,
-        singleValue: this.state.singleValue,
-        boothType: this.state.boothType,
-        wantToOwn: this.props.wantToOwn,
-        eventInVegas: this.props.eventInVegas,
-        width: this.state.width,
-        length: this.state.length });
+      var quote = _react2.default.createElement(
+        'div',
+        { id: 'instaQuote' },
+        _react2.default.createElement(_CollectBeforeQuote2.default, { images: this.state.images,
+          singleValue: this.state.singleValue,
+          boothType: this.state.boothType,
+          wantToOwn: this.props.wantToOwn,
+          eventInVegas: this.props.eventInVegas,
+          width: this.state.width,
+          length: this.state.length,
+          doRevealInstaQuote: this.props.doRevealInstaQuote.bind(this) }),
+        _react2.default.createElement(_InstaQuote2.default, { images: this.state.images,
+          singleValue: this.state.singleValue,
+          boothType: this.state.boothType,
+          wantToOwn: this.state.wantToOwn,
+          eventInVegas: this.state.eventInVegas,
+          width: this.state.width,
+          length: this.state.length,
+          revealInstaQuote: this.props.revealInstaQuote })
+      );
 
-      var showCollector = this.props.renderCollector ? collectorRender : undefined;
+      var renderQuote = this.props.renderInstaQuote ? quote : undefined;
+
       return _react2.default.createElement(
         'div',
         null,
@@ -14826,7 +14855,7 @@ var BoothGrid = function (_Component) {
             gridChoice
           )
         ),
-        showCollector
+        renderQuote
       );
     }
   }]);
@@ -14935,6 +14964,11 @@ var SingleBooth = function (_Component) {
       this.props.doRenderCollector();
     }
   }, {
+    key: 'nextStepInstaQuote',
+    value: function nextStepInstaQuote(event) {
+      this.props.doRenderInstaQuote();
+    }
+  }, {
     key: 'handleView',
     value: function handleView(value) {
       value !== "3D" ? this.setState({ mainImage: this.props.images[value].url, render3D: false }) : this.setState({ render3D: true });
@@ -14985,7 +15019,7 @@ var SingleBooth = function (_Component) {
       var button = _react2.default.createElement(
         'button',
         { onClick: function onClick() {
-            return _this2.nextStepCollector();
+            return _this2.nextStepInstaQuote();
           }, className: 'instaQuoteButton' },
         'get instaQuote'
       );
@@ -15423,9 +15457,10 @@ var InstaQuote = function (_Component) {
     value: function render() {
       var renderRentOwn = this.props.wantToOwn ? "own" : "rent";
       var renderInVegas = this.props.eventInVegas ? "in" : "outside";
+      var reveal = this.props.revealInstaQuote ? "revealQuote quoteNumber" : "quoteNumber";
       return _react2.default.createElement(
         'div',
-        { id: 'instaQuote' },
+        { className: 'instaBlock' },
         _react2.default.createElement('div', { className: 'instaThumbnail', style: { backgroundImage: 'url(' + this.props.images[0].url + ')' } }),
         _react2.default.createElement(
           'div',
@@ -15437,13 +15472,13 @@ var InstaQuote = function (_Component) {
           ),
           _react2.default.createElement(
             'div',
-            { className: 'quoteNumber' },
-            '$12,000 USD ',
-            _react2.default.createElement(
-              'span',
-              null,
-              '*for up to 3 event days'
-            )
+            { className: reveal },
+            '$12,000 USD'
+          ),
+          _react2.default.createElement(
+            'span',
+            { className: 'smallPrint' },
+            '*for up to 3 event days'
           ),
           _react2.default.createElement(
             'p',

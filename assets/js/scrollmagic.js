@@ -9,7 +9,7 @@ var logoScene = new ScrollMagic.Scene({triggerElement: "#slider", offset:-300})
         .addTo(controller);
 
 //instaQuote button
-var instaQuoteButton = new ScrollMagic.Scene({triggerElement: "#quoteSection", duration: $('#quoteSection').height()})
+var instaQuoteButton = new ScrollMagic.Scene({triggerElement: "#products", duration: $('#products').height()})
         .setClassToggle( "#instaQuoteButton", "fadeOut")
         .addTo(controller);
 

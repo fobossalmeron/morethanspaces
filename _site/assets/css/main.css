@@ -113,14 +113,22 @@ footer ul li h3 { font-weight: 700; color: #2cbdc0; }
 
 section { min-height: 500px; float: left; width: 100%; padding: 5%; }
 
-#slider { background-color: #2cbdc0; float: left; width: 100%; }
-#slider .sliderCard { display: inline-block; position: relative; float: left; clear: both; text-align: center; padding: 0 5%; color: #f9f9f9; box-sizing: border-box; opacity: 0; margin: 0; width: 60%; left: 50%; transition: .4s ease all; transform: translateX(-50%); }
+#slider { background-color: #2cbdc0; float: left; width: 100%; padding-bottom: 0; }
+#slider #discountbanner { position: relative; padding-top: 4%; box-sizing: border-box; margin: 0 auto 0 auto; height: 250px; width: 80%; }
+#slider #discountbanner .hideBanner { position: relative; display: block; width: 100%; height: 100%; background-size: cover; background-color: #383838; }
+#slider .sliderCard { display: inline-block; position: relative; float: left; clear: both; text-align: center; padding: 0 4%; color: #f9f9f9; box-sizing: border-box; opacity: 0; margin: 0; width: 60%; left: 50%; transition: .4s ease all; transform: translateX(-50%); }
 #slider .sliderCard h3 { font-weight: 300; }
 
 #home { padding: 0; position: relative; min-height: 100vh; background-color: #383838; }
-#home h1 { margin: 10% 4%; padding: 1%; font-size: 3.3em; position: absolute; display: inline-block; z-index: 2; color: #f9f9f9; line-height: 1.25; }
+#home h1 { font-size: 3.3em; display: inline-block; color: #f9f9f9; width: 100%; float: left; clear: both; line-height: 1.25; }
+#home button { background-color: #ec3092; color: #f9f9f9; border-radius: 2px; display: block; border: none; padding: 10px 20px; font-size: inherit; margin-top: 2%; font-family: inherit; white-space: nowrap; float: left; clear: both; z-index: 1; transition: .4s ease all; }
+#home button:hover { cursor: pointer; background-color: #2cbdc0; }
 
-#homevideo { width: 100%; height: 0; padding-bottom: 56.2%; overflow: hidden; display: block; position: relative; }
+.overVideo { position: absolute; margin: 10% 4%; z-index: 2; }
+
+.controllsVideo { bottom: 0; }
+
+#homevideo { width: 100%; height: 0; padding-bottom: 56.2%; overflow: hidden; display: block; position: relative; z-index: 0; }
 #homevideo .video_overlay { position: absolute; left: 0; z-index: 1; right: 0; bottom: 0; top: 0; background-image: url("/morethanspaces/assets/img/overlay.png"); }
 #homevideo video { position: absolute; z-index: 0; height: 100%; width: 100%; }
 
@@ -179,8 +187,8 @@ form button:hover { background-color: #2cbdc0; }
 #clients ul li:nth-child(3n+3) { margin-right: 0; }
 #clients ul li:nth-last-child(1), #clients ul li:nth-last-child(2) { margin-bottom: 0px; }
 
-#quoteSection { padding: 0px; background-color: #f9f9f9; }
-#quoteSection h2 { margin: 0px; color: #ec3092; font-weight: 700; padding-top: 15px; float: left; cursor: pointer; }
+#products { padding: 4% 0 0 0; background-color: #2cbdc0; }
+#products h2 { margin: 0px; color: #ec3092; font-weight: 700; padding-top: 15px; float: left; cursor: pointer; }
 
 .quoteCheck { width: 30px; height: 30px; float: left; position: relative; }
 .quoteCheck label { width: 100%; height: 100%; position: absolute; left: 0; border: 2px solid #383838; }
@@ -198,12 +206,14 @@ input[type=text] { border: none; padding: 4px; font-size: .7em; }
 .addOnCheck { margin-right: 10px; }
 .addOnCheck span { display: none; }
 
-.react-tabs__tab-list { margin: 0px; list-style: none; background-color: #2cbdc0; float: left; width: 100%; }
+.react-tabs__tab-list { margin: 0px; list-style: none; background-color: #2cbdc0; float: left; width: 100%; overflow: hidden; }
 
-.react-tabs__tab { width: 50%; float: left; position: relative; border-radius: 5px 5px 0 0; padding: 15px 0px 10px 35px; background-color: #e0e0e0; position: relative; }
-.react-tabs__tab:nth-of-type(2) { margin-right: 2%; margin-left: 2%; width: 46%; }
+.react-tabs__tab { width: 48%; margin-left: 2%; float: left; position: relative; border-radius: 5px 5px 0 0; padding: 15px 0px 10px 35px; background-color: #e0e0e0; position: relative; }
+.react-tabs__tab:nth-of-type(2) { margin-right: 2%; width: 46%; }
 .react-tabs__tab .frontSlide { width: 50px; position: absolute; right: -50px; overflow: hidden; top: 0; height: 100%; z-index: 1; display: block; }
 .react-tabs__tab .frontSlide span { width: 40px; height: 110%; background-color: #e0e0e0; position: absolute; right: 29px; top: 5px; z-index: 0; transform: rotate(-24deg); }
+.react-tabs__tab .backSlide { left: -50px; z-index: 0; }
+.react-tabs__tab .backSlide span { transform: rotate(24deg); left: 29px; }
 .react-tabs__tab:focus { outline: none; }
 .react-tabs__tab:focus::after { content: ''; position: absolute; height: 100%; width: 5px; right: 0; bottom: 0; background: #2cbdc0; box-shadow: 0 0 5px #2cbdc0; }
 
@@ -211,7 +221,7 @@ input[type=text] { border: none; padding: 4px; font-size: .7em; }
 .react-tabs__tab--selected .frontSlide span { background-color: #f9f9f9; z-index: 1; }
 .react-tabs__tab--selected h2 { cursor: auto !important; }
 
-.react-tabs__tab-panel { visibility: hidden; position: relative; display: none; opacity: 0; float: left; width: 100%; padding: 3% 0 0 0; }
+.react-tabs__tab-panel { visibility: hidden; position: relative; display: none; opacity: 0; float: left; width: 100%; padding: 3% 0 0 0; background-color: #f9f9f9; }
 
 .react-tabs__tab-panel--selected { visibility: visible; opacity: 1; display: block; }
 
@@ -348,23 +358,22 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 .convention_card { float: left; width: 50%; padding: 5%; max-height: 300px; box-sizing: border-box; display: inline-block; position: relative; }
 
 #dataCollector { position: relative; float: left; width: 100%; }
-#dataCollector form { border: none; background-color: #2cbdc0; color: #383838; padding: 4% 0%; min-height: 0; }
+#dataCollector form { border: none; background-color: #2cbdc0; color: #383838; padding: 0 0 4% 0; min-height: 0; }
 #dataCollector input { background-color: #f9f9f9; margin-right: 2%; clear: none; width: 20%; }
 #dataCollector button { width: 25%; clear: none; float: right; font-weight: 700; margin-top: 0; padding: 2%; }
 #dataCollector button:hover { background-color: #d51479; }
 #dataCollector .FormError { bottom: 10px; white-space: nowrap; position: absolute; padding: .5% 1%; background-color: #ec3092; }
 
-.instaBlock { padding-top: 2%; float: left; width: 100%; }
+.instaBlock { float: left; width: 100%; }
 
 .instaThumbnail { float: left; width: 20%; background-size: cover; display: block; position: relative; height: 200px; background-color: red; }
 
-#instaQuote { padding: 0 4% 4% 4%; min-height: 100vh; background-color: #2cbdc0; float: left; width: 100%; }
+#instaQuote { padding: 4%; min-height: 100vh; background-color: #2cbdc0; float: left; width: 100%; }
 #instaQuote h2 { cursor: auto; padding-top: 0; float: left; clear: both; }
 
 .instaInfo { width: 80%; float: left; padding-left: 4%; }
-.instaInfo .wasLink { float: left; font-weight: 700; clear: both; line-height: 1; margin-bottom: 1%; border-bottom: 3px solid #ec3092; margin-top: 2%; transition: .4s ease all; cursor: pointer; }
+.instaInfo .wasLink { float: left; font-weight: 700; clear: both; line-height: 1; margin-bottom: 1%; border-bottom: 3px solid #ec3092; margin-top: 2%; transition: .4s ease all; color: #ec3092; cursor: pointer; }
 .instaInfo .wasLink:hover { color: #f9f9f9; border-color: #f9f9f9; }
-.instaInfo .wasLink:hover h2 { color: #f9f9f9 !important; }
 .instaInfo h2 { transition: .4s ease all; }
 .instaInfo p { float: left; clear: both; }
 .instaInfo ul { float: left; clear: both; list-style: none; margin: 0; }

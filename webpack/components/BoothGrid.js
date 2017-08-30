@@ -115,11 +115,15 @@ class BoothGrid extends Component {
       <InstaQuote images={this.state.images}
                   singleValue={this.state.singleValue}
                   boothType={this.state.boothType}
-                  wantToOwn={this.state.wantToOwn}
-                  eventInVegas={this.state.eventInVegas}
+                  wantToOwn={this.props.wantToOwn}
+                  eventInVegas={this.props.eventInVegas}
                   width={this.state.width}
                   length={this.state.length}
-                  revealInstaQuote={this.props.revealInstaQuote}/>
+                  revealInstaQuote={this.props.revealInstaQuote}
+                  discountOn={this.props.discountOn}
+                  discountNumber={this.props.discountNumber}
+                  discountType={this.props.discountType}
+                  discountSymbol={this.props.discountSymbol.bind(this)}/>
       </div>
     );
 

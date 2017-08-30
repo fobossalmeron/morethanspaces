@@ -32,7 +32,7 @@ function SamplePrevArrow(props) {
 class Carousel extends Component {
   render (){
     const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -69,6 +69,9 @@ class Carousel extends Component {
             </div>
           </div>
         </Slider>
+        <div id="discountbanner">
+          <div className="hideBanner"></div>
+        </div>
       </section>
     );
   }

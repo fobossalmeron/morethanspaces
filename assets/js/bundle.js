@@ -36084,12 +36084,12 @@ var Footer = function (_Component) {
               _react2.default.createElement(
                 'a',
                 { href: '{{site.baseurl}}/assets/pdf/sample.pdf', target: '_blank' },
-                'graphic design specs'
+                'booth types'
               ),
               _react2.default.createElement(
                 'a',
                 { href: '{{site.baseurl}}/assets/pdf/sample.pdf', target: '_blank' },
-                'booth types'
+                'timeline & graphic specs'
               ),
               _react2.default.createElement(
                 'a',
@@ -36098,8 +36098,13 @@ var Footer = function (_Component) {
               ),
               _react2.default.createElement(
                 'a',
-                { className: 'before-pinterest-snippet', href: '{{site.baseurl}}/assets/pdf/sample.pdf', target: '_blank' },
-                'upload'
+                { href: '{{site.baseurl}}/assets/pdf/sample.pdf', target: '_blank' },
+                'how to upload'
+              ),
+              _react2.default.createElement(
+                'a',
+                { href: '{{site.baseurl}}/assets/pdf/sample.pdf', target: '_blank' },
+                'payment info'
               )
             ),
             _react2.default.createElement(

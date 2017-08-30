@@ -17,10 +17,11 @@ class Footer extends Component {
             <li>
               <h3>resources</h3>
               <p>Review our specifications on designs and uploads, trade show booths and video walls.</p>
-              <a href="{{site.baseurl}}/assets/pdf/sample.pdf" target="_blank">graphic design specs</a>
               <a href="{{site.baseurl}}/assets/pdf/sample.pdf" target="_blank">booth types</a>
+              <a href="{{site.baseurl}}/assets/pdf/sample.pdf" target="_blank">timeline & graphic specs</a>
               <a href="{{site.baseurl}}/assets/pdf/sample.pdf" target="_blank">video walls</a>
-              <a className="before-pinterest-snippet" href="{{site.baseurl}}/assets/pdf/sample.pdf" target="_blank">upload</a>
+              <a href="{{site.baseurl}}/assets/pdf/sample.pdf" target="_blank">how to upload</a>
+              <a href="{{site.baseurl}}/assets/pdf/sample.pdf" target="_blank">payment info</a>
             </li>
             <li className="realestate">
               <h3>contact us!</h3>

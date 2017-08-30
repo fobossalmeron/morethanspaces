@@ -88,7 +88,7 @@ nav ul li a:hover { border-color: #f9f9f9; color: #f9f9f9; padding-bottom: 4px; 
 .navScroll ul li a:hover { color: #383838; border-color: #383838; }
 
 footer { float: left; width: 100%; background-color: #777777; color: #f9f9f9; padding: 3% 4%; }
-footer a { font-size: 1em; font-weight: 700; float: left; clear: both; color: #f9f9f9; border: solid white; border-width: 0px 0px 2px 0px; transition: .4s ease all; }
+footer a { font-size: .9em; font-weight: 700; float: left; clear: both; color: #f9f9f9; border: solid white; border-width: 0px 0px 2px 0px; transition: .4s ease all; }
 footer a:hover { color: #ec3092; text-decoration: none; border-color: #ec3092; }
 footer p { font-size: 0.8em; color: #f9f9f9; float: left; clear: both; margin-bottom: 0; }
 footer .inline-link { float: none; color: #f9f9f9; font-size: 1em; }
@@ -143,11 +143,12 @@ section { min-height: 500px; float: left; width: 100%; padding: 5%; }
 #services .full-service { width: 100%; padding: 0 15% 5% 15%; min-height: 100px; }
 #services p { margin-bottom: 0; }
 #services a { color: #f9f9f9; float: right; }
-#services .row { float: left; clear: both; }
 #services ul { margin: 0px; }
 #services ul li { transition: .5s ease all; transform: translateX(-10%); float: left; text-align: left; width: 50%; padding: 3% 3% 0% 3%; font-size: 1em; list-style: none; opacity: 0; }
 #services ul li h3 { font-weight: 700; }
 #services ul li em { font-weight: 400; }
+
+.row { float: left; clear: both; }
 
 .service-icon { width: 100px; height: 100px; margin-bottom: 20px; position: relative; background-image: url("/morethanspaces/assets/img/3dBack.svg"); background-size: cover; background-position: center center; }
 

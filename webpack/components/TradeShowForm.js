@@ -70,10 +70,6 @@ class TradeShowForm extends Component {
           <Arrow className={"new-arrow"} color={"#f9f9f9"} width={"25px"}/>
           <a onClick={() => this.props.closeSingleBooth()}><b>back</b> to booths</a>
         </div>
-        <div className="leaveOrStay">
-          or get your <b>instaQuote</b>
-          <Arrow className={"new-arrow"} forward color={"#f9f9f9"} width={"25px"}/>
-        </div>
       </div>
     )
     var menuChoice = (this.props.individualBoothRender ? backToBooths : boothMenu);

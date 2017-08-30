@@ -6,11 +6,15 @@ import InstaQuote from './presentational/InstaQuote';
 class CollectBeforeQuote extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      hideFields: false
+    };
   this.revealQuote = this.revealQuote.bind(this);
   }
 
   revealQuote(){
     this.props.doRevealInstaQuote();
+    this.setState({hideFields:true});
   }
 
   componentDidMount(){
@@ -19,6 +23,15 @@ class CollectBeforeQuote extends Component {
 
   render (){
     var calendlyUrl = 'https://calendly.com/morethanspaces'
+    var actualForm = (
+      <div>
+      <Text field='name' placeholder='your name'/>
+      <Text field='email' placeholder='your email'/>
+      <Text field='phone' placeholder='your phone'/>
+      <button type='submit'>reveal instaQuote now!</button>
+      </div>
+    )
+    var displayForm = (this.state.hideFields? undefined : actualForm)
 
     return (
       <div id="dataCollector">
@@ -26,7 +39,7 @@ class CollectBeforeQuote extends Component {
         onSubmit={(values) => {
           console.log('Form Submitted Succesfully with:', values)
 
-          const url = 'https://formspree.io/fobos.salmeron@gmail.com';
+          const url = 'https://formspree.io/hello@morethanspaces.com';
           var data = values;
 
           var xhr = new XMLHttpRequest();
@@ -83,10 +96,7 @@ class CollectBeforeQuote extends Component {
         {({submitForm}) => {
           return (
             <form onSubmit={submitForm}>
-              <Text field='name' placeholder='your name'/>
-              <Text field='email' placeholder='your email'/>
-              <Text field='phone' placeholder='your phone'/>
-              <button type='submit'>reveal instaQuote now!</button>
+            {displayForm}
             </form>
           )
         }}

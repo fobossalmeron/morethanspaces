@@ -56,9 +56,9 @@ prose:
             placeholder: 'Choose an option'
             options:
               - name: 'On'
-                value: 'on'
+                value: true
               - name: 'Off'
-                value: 'off'
+                value: false
         - name: 'type'
           field:
             element: 'select'

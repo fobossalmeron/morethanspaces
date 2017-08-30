@@ -19,8 +19,18 @@ class QuoteTabs extends Component {
       individualBoothRender: false,
       renderInstaQuote: false,
       revealInstaQuote: false,
+      addVideoWall: false,
+      addTv: false
     };
     this.clickFor = this.clickFor.bind(this);
+  }
+
+  doAddVideoWall(){
+    this.setState({ addVideoWall: true}, ()=> console.log("videowall added"));
+  }
+
+  doAddTv(){
+    this.setState({ addTv: true}, ()=> console.log("Tv added"));
   }
 
   needShipping(){
@@ -31,10 +41,10 @@ class QuoteTabs extends Component {
   }
 
   doWantToOwn(){
-    this.setState({ wantToOwn: true });
+    this.setState({ wantToOwn: true }, ()=> console.log("i want to own it"));
   }
   doWantToRent(){
-    this.setState({ wantToOwn: false });
+    this.setState({ wantToOwn: false }, ()=> console.log("just want to rent it"));
   }
 
   doRenderInstaQuote(){
@@ -90,14 +100,16 @@ class QuoteTabs extends Component {
 
   render(){
     return (
-      <section id="quoteSection">
+      <section id="products">
       <Tabs forceRenderTabPanel={true} selectedIndex={this.props.tabIndex} onSelect={tabIndex => this.props.goToTab( tabIndex )}>
         <TabList>
           <Tab>
+            <div className={"frontSlide backSlide"}><span></span></div>
             <h2 id="booths">{this.clickFor(0)}trade show booths</h2>
             <div className={"frontSlide"}><span></span></div>
           </Tab>
           <Tab>
+            <div className={"frontSlide backSlide"}><span></span></div>
             <h2 id="videowalls">{this.clickFor(1)}video walls</h2>
             <div className={"frontSlide"}><span></span></div>
           </Tab>
@@ -127,7 +139,15 @@ class QuoteTabs extends Component {
                         eventInVegas={this.state.eventInVegas}
                         renderSingleBooth={this.renderSingleBooth.bind(this)}
                         doRevealInstaQuote={this.doRevealInstaQuote.bind(this)}
-                        doRenderInstaQuote={this.doRenderInstaQuote.bind(this)}/>
+                        doRenderInstaQuote={this.doRenderInstaQuote.bind(this)}
+                        doAddVideoWall={this.doAddVideoWall.bind(this)}
+                        doAddTv={this.doAddTv.bind(this)}
+                        addVideoWall={this.state.addVideoWall}
+                        addTv={this.state.addTv}
+                        discountOn={this.props.discountOn}
+                        discountNumber={this.props.discountNumber}
+                        discountType={this.props.discountType}
+                        discountSymbol={this.props.discountSymbol.bind(this)}/>
         </TabPanel>
         <TabPanel>
           <img src="assets/img/mock.png"/>

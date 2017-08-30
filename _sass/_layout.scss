@@ -677,7 +677,7 @@ form{
          position: absolute;
          top: 6px;
          left: 4px;
-         border: 4px solid #383838;
+         border: 4px solid $magenta;
          border-top: none;
          border-right: none;
          background: transparent;
@@ -717,7 +717,7 @@ input[type=text]{
   label{
     background-color:white;
     &:after{
-      border-color:$blue;
+      border-color:$magenta;
     }
   }
 }

@@ -199,7 +199,7 @@ form button:hover { background-color: #2cbdc0; }
 
 .quoteCheck { width: 30px; height: 30px; float: left; position: relative; }
 .quoteCheck label { width: 100%; height: 100%; border-radius: 3px; position: absolute; left: 0; border: 2px solid #383838; }
-.quoteCheck label:after { content: ''; width: 18px; height: 9px; position: absolute; top: 6px; left: 4px; border: 4px solid #383838; border-top: none; border-right: none; background: transparent; opacity: 0; transform: rotate(-45deg); }
+.quoteCheck label:after { content: ''; width: 18px; height: 9px; position: absolute; top: 6px; left: 4px; border: 4px solid #ec3092; border-top: none; border-right: none; background: transparent; opacity: 0; transform: rotate(-45deg); }
 .quoteCheck label:hover::after { opacity: 0.3; }
 .quoteCheck input[type=checkbox], .quoteCheck input[type=radio] { opacity: 0; position: absolute; cursor: pointer; width: 100%; height: 100%; left: 0; z-index: 2; margin: 0px; }
 .quoteCheck input[type=checkbox]:checked + label:after, .quoteCheck input[type=radio]:checked + label:after { opacity: 1; }
@@ -208,7 +208,7 @@ input[type=text] { border: none; padding: 4px; font-size: .7em; }
 
 .formCheck { margin-right: 10%; margin-bottom: 9%; top: 0; left: 0; }
 .formCheck label { background-color: white; }
-.formCheck label:after { border-color: #2cbdc0; }
+.formCheck label:after { border-color: #ec3092; }
 
 .addOnCheck { margin-right: 10px; }
 .addOnCheck span { display: none; }

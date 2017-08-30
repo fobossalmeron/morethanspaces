@@ -5,11 +5,15 @@
 
   <body>
 
-      <div id="app"></div>
+      <div id="app">
+        <div class="loading">
+          <img src="{{site.baseurl}}/assets/img/logo.svg">
+          <h2>We're loading, but we're fast!</h2>
+        </div>
+      </div>
 
         {{ content }}
 
-    {% include footer.html %}
   </body>
 
 </html>

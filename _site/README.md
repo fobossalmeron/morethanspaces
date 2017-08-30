@@ -6,6 +6,7 @@ Morethanspaces Website
 - css transition groups
 - landing page(s)
 - logo in colors
+- actualizar footer
 
 ##Falta en func
 - discounts work on instaquote

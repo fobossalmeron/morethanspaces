@@ -3,6 +3,7 @@ import SingleBooth from './SingleBooth';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import CollectBeforeQuote from './CollectBeforeQuote';
 import InstaQuote from './presentational/InstaQuote';
+import IconsBar from './presentational/IconsBar';
 
 class BoothGrid extends Component {
   constructor(props) {
@@ -102,16 +103,8 @@ class BoothGrid extends Component {
     var gridChoice = (this.props.individualBoothRender ? singleBooth : doRenderBooths);
 
     var quote = (
+      <div>
       <div id="instaQuote">
-      <CollectBeforeQuote images={this.state.images}
-                          singleValue={this.state.singleValue}
-                          boothType={this.state.boothType}
-                          wantToOwn={this.props.wantToOwn}
-                          eventInVegas={this.props.eventInVegas}
-                          width={this.state.width}
-                          length={this.state.length}
-                          doRevealInstaQuote={this.props.doRevealInstaQuote.bind(this)}/>
-
       <InstaQuote images={this.state.images}
                   singleValue={this.state.singleValue}
                   boothType={this.state.boothType}
@@ -124,6 +117,16 @@ class BoothGrid extends Component {
                   discountNumber={this.props.discountNumber}
                   discountType={this.props.discountType}
                   discountSymbol={this.props.discountSymbol.bind(this)}/>
+        <CollectBeforeQuote images={this.state.images}
+                  singleValue={this.state.singleValue}
+                  boothType={this.state.boothType}
+                  wantToOwn={this.props.wantToOwn}
+                  eventInVegas={this.props.eventInVegas}
+                  width={this.state.width}
+                  length={this.state.length}
+                  doRevealInstaQuote={this.props.doRevealInstaQuote.bind(this)}/>
+      </div>
+      <IconsBar/>
       </div>
     );
 

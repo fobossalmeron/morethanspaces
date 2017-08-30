@@ -39,7 +39,7 @@ class CollectBeforeQuote extends Component {
         onSubmit={(values) => {
           console.log('Form Submitted Succesfully with:', values)
 
-          const url = 'https://formspree.io/fobos.salmeron@gmail.com';
+          const url = 'https://formspree.io/hello@morethanspaces.com';
           var data = values;
 
           var xhr = new XMLHttpRequest();

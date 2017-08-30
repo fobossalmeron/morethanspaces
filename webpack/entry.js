@@ -4,6 +4,7 @@ import HomeSection from './components/HomeSection';
 import Carousel from './components/Carousel';
 import QuoteTabs from './components/QuoteTabs';
 import Nav from './components/presentational/Nav';
+import Footer from './components/presentational/Footer';
 import InstaQuoteButton from './components/presentational/InstaQuoteButton';
 import StaticSection from './components/StaticSection';
 import ContactSection from './components/ContactSection';
@@ -75,6 +76,7 @@ class App extends Component {
                     goToTab={this.goToTab.bind(this)}/>
         <StaticSection/>
         <ContactSection/>
+        <Footer/>
       </div>
     )
   }

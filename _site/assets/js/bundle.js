@@ -8198,7 +8198,7 @@ var CollectBeforeQuote = function (_Component) {
             onSubmit: function onSubmit(values) {
               console.log('Form Submitted Succesfully with:', values);
 
-              var url = 'https://formspree.io/fobos.salmeron@gmail.com';
+              var url = 'https://formspree.io/hello@morethanspaces.com';
               var data = values;
 
               var xhr = new XMLHttpRequest();
@@ -8297,8 +8297,8 @@ var Arrow = function (_Component) {
       var classChoice = this.props.forward ? preClass + " forward" : preClass;
       return _react2.default.createElement(
         'svg',
-        { className: classChoice, width: this.props.width, viewBox: '0 0 240.823 240.823' },
-        _react2.default.createElement('path', { fill: this.props.color, d: "M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816C52.942,116.507,52.942,124.327,57.633,129.007z" })
+        { className: classChoice, width: this.props.width, viewBox: '0 0 100 100' },
+        _react2.default.createElement('path', { fill: this.props.color, d: "M86.4,50.4V92c0,2.6-2.8,4.2-5.1,2.9l-36-20.8l-36-20.8C7,52,7,48.8,9.3,47.5l36-20.8l36-20.8c2.3-1.3,5.1,0.3,5.1,2.9L86.4,50.4z" })
       );
     }
   }]);
@@ -8504,42 +8504,16 @@ var InstaQuote = function (_Component) {
       var renderInVegas = this.props.eventInVegas ? "in" : "outside";
       var reveal = this.props.revealInstaQuote ? "revealQuote quoteNumber" : "quoteNumber";
 
-      var narrateDiscount = _react2.default.createElement(
-        'p',
-        null,
-        '(' + price + '$ USD - ' + this.props.discountNumber + this.props.discountSymbol() + ')'
-      );
+      var narrateDiscount = '(' + price + '$ - ' + this.props.discountNumber + this.props.discountSymbol() + ' discount)';
       var isDiscount = this.props.discountOn ? narrateDiscount : "we don't have discount";
 
       return _react2.default.createElement(
         'div',
         { className: 'instaBlock' },
-        _react2.default.createElement('div', { className: 'instaThumbnail', style: { backgroundImage: 'url(' + this.props.images[0].url + ')' } }),
         _react2.default.createElement(
           'div',
-          { className: 'instaInfo' },
-          _react2.default.createElement(
-            'h2',
-            null,
-            'instaQuote'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: reveal },
-            '$',
-            price,
-            ' USD'
-          ),
-          _react2.default.createElement(
-            'span',
-            { className: 'smallPrint' },
-            '*for up to 3 event days'
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            isDiscount
-          ),
+          { className: 'instaColumn' },
+          _react2.default.createElement('div', { className: 'instaThumbnail', style: { backgroundImage: 'url(' + this.props.images[0].url + ')' } }),
           _react2.default.createElement(
             'ul',
             null,
@@ -8598,10 +8572,40 @@ var InstaQuote = function (_Component) {
               ),
               ' Las Vegas '
             )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'instaInfo' },
+          _react2.default.createElement(
+            'h2',
+            null,
+            'instaQuote'
           ),
           _react2.default.createElement(
-            'p',
-            { className: 'wasLink', onClick: function onClick() {
+            'div',
+            { className: reveal },
+            '$',
+            price,
+            ' USD'
+          ),
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              isDiscount
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              '*for up to 3 event days'
+            )
+          ),
+          _react2.default.createElement(
+            'button',
+            { className: 'instaQuoteButton wasLink', onClick: function onClick() {
                 return _this2.showCalendly();
               } },
             'Schedule a call!'
@@ -13289,7 +13293,7 @@ function SampleNextArrow(props) {
     { onClick: onClick },
     _react2.default.createElement(
       'svg',
-      { className: 'arrow-icon next-arrow', width: '32', height: '32', viewBox: '0 0 32 32' },
+      { className: 'arrow-icon next-arrow', width: '50', height: '50', viewBox: '0 0 32 32' },
       _react2.default.createElement(
         'g',
         { fill: 'none', stroke: '#f9f9f9', strokeWidth: '1', strokeLinejoin: 'round', strokeMiterlimit: '10' },
@@ -13310,7 +13314,7 @@ function SamplePrevArrow(props) {
     { onClick: onClick },
     _react2.default.createElement(
       'svg',
-      { className: 'arrow-icon back-arrow', width: '32', height: '32', viewBox: '0 0 32 32' },
+      { className: 'arrow-icon back-arrow', width: '50', height: '50', viewBox: '0 0 32 32' },
       _react2.default.createElement(
         'g',
         { fill: 'none', stroke: '#f9f9f9', strokeWidth: '1', strokeLinejoin: 'round', strokeMiterlimit: '10' },
@@ -13670,6 +13674,10 @@ var _reactPlayer = __webpack_require__(238);
 
 var _reactPlayer2 = _interopRequireDefault(_reactPlayer);
 
+var _Arrow = __webpack_require__(66);
+
+var _Arrow2 = _interopRequireDefault(_Arrow);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13688,11 +13696,14 @@ var HomeSection = function (_Component) {
 
     _this.state = {
       fullVideo: false,
+      playing: true,
       videoVolume: 0,
       url: "intro.mp4"
     };
     _this.playFullVideo = _this.playFullVideo.bind(_this);
     _this.backToLanding = _this.backToLanding.bind(_this);
+    _this.playVideo = _this.playVideo.bind(_this);
+    _this.pauseVideo = _this.pauseVideo.bind(_this);
     return _this;
   }
 
@@ -13719,6 +13730,20 @@ var HomeSection = function (_Component) {
       });
     }
   }, {
+    key: 'playVideo',
+    value: function playVideo() {
+      this.setState({
+        playing: true
+      });
+    }
+  }, {
+    key: 'pauseVideo',
+    value: function pauseVideo() {
+      this.setState({
+        playing: false
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _this3 = this;
@@ -13741,9 +13766,20 @@ var HomeSection = function (_Component) {
         _react2.default.createElement(
           'button',
           { onClick: this.playFullVideo },
-          'watch our video!'
+          'play video ',
+          _react2.default.createElement(_Arrow2.default, { className: "playButtonArrow", forward: true, width: "30px" })
         )
       );
+      var pauseOrPlay = this.state.playing ? _react2.default.createElement(
+        'button',
+        { onClick: this.pauseVideo },
+        'pause'
+      ) : _react2.default.createElement(
+        'button',
+        { onClick: this.playVideo },
+        'play'
+      );
+
       var videoControls = _react2.default.createElement(
         'div',
         { className: 'overVideo controllsVideo' },
@@ -13751,7 +13787,8 @@ var HomeSection = function (_Component) {
           'button',
           { onClick: this.backToLanding },
           'close'
-        )
+        ),
+        pauseOrPlay
       );
 
       var doShowOver = this.state.fullVideo ? videoControls : showOver;
@@ -13764,7 +13801,7 @@ var HomeSection = function (_Component) {
           'div',
           { id: 'homevideo' },
           _react2.default.createElement('div', { className: 'video_overlay' }),
-          _react2.default.createElement(_reactPlayer2.default, { url: '/morethanspaces/assets/video/' + this.state.url, playing: true, loop: true, volume: this.state.volume, onEnded: function onEnded() {
+          _react2.default.createElement(_reactPlayer2.default, { url: '/morethanspaces/assets/video/' + this.state.url, playing: this.state.playing, loop: true, volume: this.state.volume, onEnded: function onEnded() {
               return _this3.backToLanding;
             } })
         )
@@ -14739,6 +14776,10 @@ var _InstaQuote = __webpack_require__(69);
 
 var _InstaQuote2 = _interopRequireDefault(_InstaQuote);
 
+var _IconsBar = __webpack_require__(277);
+
+var _IconsBar2 = _interopRequireDefault(_IconsBar);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -14861,27 +14902,32 @@ var BoothGrid = function (_Component) {
 
       var quote = _react2.default.createElement(
         'div',
-        { id: 'instaQuote' },
-        _react2.default.createElement(_CollectBeforeQuote2.default, { images: this.state.images,
-          singleValue: this.state.singleValue,
-          boothType: this.state.boothType,
-          wantToOwn: this.props.wantToOwn,
-          eventInVegas: this.props.eventInVegas,
-          width: this.state.width,
-          length: this.state.length,
-          doRevealInstaQuote: this.props.doRevealInstaQuote.bind(this) }),
-        _react2.default.createElement(_InstaQuote2.default, { images: this.state.images,
-          singleValue: this.state.singleValue,
-          boothType: this.state.boothType,
-          wantToOwn: this.props.wantToOwn,
-          eventInVegas: this.props.eventInVegas,
-          width: this.state.width,
-          length: this.state.length,
-          revealInstaQuote: this.props.revealInstaQuote,
-          discountOn: this.props.discountOn,
-          discountNumber: this.props.discountNumber,
-          discountType: this.props.discountType,
-          discountSymbol: this.props.discountSymbol.bind(this) })
+        null,
+        _react2.default.createElement(
+          'div',
+          { id: 'instaQuote' },
+          _react2.default.createElement(_InstaQuote2.default, { images: this.state.images,
+            singleValue: this.state.singleValue,
+            boothType: this.state.boothType,
+            wantToOwn: this.props.wantToOwn,
+            eventInVegas: this.props.eventInVegas,
+            width: this.state.width,
+            length: this.state.length,
+            revealInstaQuote: this.props.revealInstaQuote,
+            discountOn: this.props.discountOn,
+            discountNumber: this.props.discountNumber,
+            discountType: this.props.discountType,
+            discountSymbol: this.props.discountSymbol.bind(this) }),
+          _react2.default.createElement(_CollectBeforeQuote2.default, { images: this.state.images,
+            singleValue: this.state.singleValue,
+            boothType: this.state.boothType,
+            wantToOwn: this.props.wantToOwn,
+            eventInVegas: this.props.eventInVegas,
+            width: this.state.width,
+            length: this.state.length,
+            doRevealInstaQuote: this.props.doRevealInstaQuote.bind(this) })
+        ),
+        _react2.default.createElement(_IconsBar2.default, null)
       );
 
       var renderQuote = this.props.renderInstaQuote ? quote : undefined;
@@ -14965,7 +15011,7 @@ function SampleNextArrow(props) {
   return _react2.default.createElement(
     'div',
     { id: "nextArrow", onClick: onClick },
-    _react2.default.createElement(_Arrow2.default, { className: "arrow-icon next-arrow", forward: true, color: "#ec3092", width: "25px" })
+    _react2.default.createElement(_Arrow2.default, { className: "arrow-icon next-arrow", forward: true, color: "#ec3092", width: "30px" })
   );
 }
 
@@ -14977,7 +15023,7 @@ function SamplePrevArrow(props) {
   return _react2.default.createElement(
     'div',
     { id: "prevArrow", onClick: onClick },
-    _react2.default.createElement(_Arrow2.default, { className: "arrow-icon", color: "#ec3092", width: "25px" })
+    _react2.default.createElement(_Arrow2.default, { className: "arrow-icon", color: "#ec3092", width: "30px" })
   );
 }
 
@@ -15450,6 +15496,10 @@ var _Nav = __webpack_require__(122);
 
 var _Nav2 = _interopRequireDefault(_Nav);
 
+var _Footer = __webpack_require__(278);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
 var _InstaQuoteButton = __webpack_require__(121);
 
 var _InstaQuoteButton2 = _interopRequireDefault(_InstaQuoteButton);
@@ -15549,7 +15599,8 @@ var App = function (_Component) {
           discountSymbol: this.discountSymbol.bind(this),
           goToTab: this.goToTab.bind(this) }),
         _react2.default.createElement(_StaticSection2.default, null),
-        _react2.default.createElement(_ContactSection2.default, null)
+        _react2.default.createElement(_ContactSection2.default, null),
+        _react2.default.createElement(_Footer2.default, null)
       );
     }
   }]);
@@ -35856,6 +35907,278 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+/* 277 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var IconsBar = function (_Component) {
+  _inherits(IconsBar, _Component);
+
+  function IconsBar() {
+    _classCallCheck(this, IconsBar);
+
+    return _possibleConstructorReturn(this, (IconsBar.__proto__ || Object.getPrototypeOf(IconsBar)).apply(this, arguments));
+  }
+
+  _createClass(IconsBar, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "section",
+        { id: "iconsBar", style: { backgroundColor: this.props.backgroundColor } },
+        _react2.default.createElement(
+          "ul",
+          null,
+          _react2.default.createElement(
+            "li",
+            { style: { color: this.props.color } },
+            _react2.default.createElement("div", { className: "service-icon" }),
+            "free design",
+            _react2.default.createElement("br", null),
+            "consultation"
+          ),
+          _react2.default.createElement(
+            "li",
+            { style: { color: this.props.color } },
+            _react2.default.createElement("div", { className: "service-icon" }),
+            "NO",
+            _react2.default.createElement("br", null),
+            "pressure sale"
+          ),
+          _react2.default.createElement(
+            "li",
+            { style: { color: this.props.color } },
+            _react2.default.createElement("div", { className: "service-icon" }),
+            "approve",
+            _react2.default.createElement("br", null),
+            "online"
+          ),
+          _react2.default.createElement(
+            "li",
+            { style: { color: this.props.color } },
+            _react2.default.createElement("div", { className: "service-icon" }),
+            "save",
+            _react2.default.createElement("br", null),
+            "time"
+          ),
+          _react2.default.createElement(
+            "li",
+            { style: { color: this.props.color } },
+            _react2.default.createElement("div", { className: "service-icon" }),
+            "save",
+            _react2.default.createElement("br", null),
+            "money"
+          )
+        )
+      );
+    }
+  }]);
+
+  return IconsBar;
+}(_react.Component);
+
+;
+
+exports.default = IconsBar;
+
+/***/ }),
+/* 278 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _IconsBar = __webpack_require__(277);
+
+var _IconsBar2 = _interopRequireDefault(_IconsBar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Footer = function (_Component) {
+  _inherits(Footer, _Component);
+
+  function Footer() {
+    _classCallCheck(this, Footer);
+
+    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+  }
+
+  _createClass(Footer, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'footer',
+          null,
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                'h3',
+                null,
+                'follow us!'
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                'social icons and social feeds'
+              )
+            ),
+            _react2.default.createElement('li', null),
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                'h3',
+                null,
+                'resources'
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                'Review our specifications on designs and uploads, trade show booths and video walls.'
+              ),
+              _react2.default.createElement(
+                'a',
+                { href: '{{site.baseurl}}/assets/pdf/sample.pdf', target: '_blank' },
+                'graphic design specs'
+              ),
+              _react2.default.createElement(
+                'a',
+                { href: '{{site.baseurl}}/assets/pdf/sample.pdf', target: '_blank' },
+                'booth types'
+              ),
+              _react2.default.createElement(
+                'a',
+                { href: '{{site.baseurl}}/assets/pdf/sample.pdf', target: '_blank' },
+                'video walls'
+              ),
+              _react2.default.createElement(
+                'a',
+                { className: 'before-pinterest-snippet', href: '{{site.baseurl}}/assets/pdf/sample.pdf', target: '_blank' },
+                'upload'
+              )
+            ),
+            _react2.default.createElement(
+              'li',
+              { className: 'realestate' },
+              _react2.default.createElement(
+                'h3',
+                null,
+                'contact us!'
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                'send us an email'
+              ),
+              _react2.default.createElement(
+                'a',
+                { href: 'mailto:hello@morethanspaces.com', target: '_blank' },
+                'hello@morethanspaces.com'
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                'or call us!'
+              ),
+              _react2.default.createElement(
+                'a',
+                { href: 'tel:1 833 667 3842' },
+                '1833-morethanspaces'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'a',
+                { href: 'tel:1 833 667 3842' },
+                '(1-833.667.3842)'
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                _react2.default.createElement('br', null),
+                'visit our showroom'
+              ),
+              _react2.default.createElement(
+                'a',
+                { href: 'https://goo.gl/maps/ykw7oq8CJjx', target: '_blank' },
+                '900 Wigwam Parkway, Henderson NV'
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(_IconsBar2.default, { backgroundColor: '#e0e221', color: '#383838' }),
+        _react2.default.createElement(
+          'p',
+          { className: 'colophon' },
+          '\xA9 ',
+          _react2.default.createElement(
+            'b',
+            null,
+            'morethanspaces'
+          ),
+          ' 2017, all rights reserved.',
+          _react2.default.createElement('br', null),
+          'website developed by ',
+          _react2.default.createElement(
+            'b',
+            null,
+            'Rodrigo Salmeron'
+          )
+        )
+      );
+    }
+  }]);
+
+  return Footer;
+}(_react.Component);
+
+;
+
+exports.default = Footer;
 
 /***/ })
 /******/ ]);

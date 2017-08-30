@@ -9,7 +9,7 @@ function SampleNextArrow(props) {
   const {className, style, onClick} = props
   return (
       <div id={"nextArrow"} onClick={onClick}>
-        <Arrow className={"arrow-icon next-arrow"} forward color={"#ec3092"} width={"25px"}/>
+        <Arrow className={"arrow-icon next-arrow"} forward color={"#ec3092"} width={"30px"}/>
       </div>
   );
 }
@@ -18,7 +18,7 @@ function SamplePrevArrow(props) {
   const {className, style, onClick} = props
   return (
     <div id={"prevArrow"} onClick={onClick}>
-      <Arrow className={"arrow-icon"} color={"#ec3092"} width={"25px"}/>
+      <Arrow className={"arrow-icon"} color={"#ec3092"} width={"30px"}/>
     </div>
   );
 }

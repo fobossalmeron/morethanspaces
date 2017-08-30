@@ -5,7 +5,7 @@ function SampleNextArrow(props) {
   const {className, style, onClick} = props
   return (
       <div onClick={onClick}>
-        <svg className={'arrow-icon next-arrow'} width={'32'} height={'32'} viewBox={'0 0 32 32'}>
+        <svg className={'arrow-icon next-arrow'} width={'50'} height={'50'} viewBox={'0 0 32 32'}>
           <g fill="none" stroke={'#f9f9f9'} strokeWidth={'1'} strokeLinejoin="round" strokeMiterlimit="10">
             <circle className={'arrow-icon--circle'} cx={'16'} cy={'16'} r={'15.12'}/>
             <path className={'arrow-icon--arrow'} d={'M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98'}/>
@@ -19,7 +19,7 @@ function SamplePrevArrow(props) {
   const {className, style, onClick} = props
   return (
     <div onClick={onClick}>
-      <svg className={'arrow-icon back-arrow'} width={'32'} height={'32'} viewBox={'0 0 32 32'}>
+      <svg className={'arrow-icon back-arrow'} width={'50'} height={'50'} viewBox={'0 0 32 32'}>
         <g fill="none" stroke={'#f9f9f9'} strokeWidth={'1'} strokeLinejoin="round" strokeMiterlimit="10">
           <circle className={'arrow-icon--circle'} cx={'16'} cy={'16'} r={'15.12'}/>
           <path className={'arrow-icon--arrow'} d={'M15.9,22.1L9.8,16l6.1-6.1 M23.8,16h-14'}/>

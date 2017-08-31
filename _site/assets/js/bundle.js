@@ -13429,11 +13429,6 @@ var Carousel = function (_Component) {
               )
             )
           )
-        ),
-        _react2.default.createElement(
-          'div',
-          { id: 'discountbanner' },
-          _react2.default.createElement('div', { className: 'hideBanner' })
         )
       );
     }
@@ -13756,11 +13751,10 @@ var HomeSection = function (_Component) {
           null,
           'trade shows & video walls: ',
           _react2.default.createElement('br', null),
-          'you deserve ',
           _react2.default.createElement(
             'b',
             null,
-            'more - for less'
+            'more for less'
           )
         ),
         _react2.default.createElement(
@@ -14576,7 +14570,7 @@ var InstaQuoteButton = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         "a",
-        { href: "#quoteSection" },
+        { href: "#products" },
         _react2.default.createElement("div", { className: "bounce", id: "instaQuoteButton" })
       );
     }
@@ -15512,6 +15506,10 @@ var _ContactSection = __webpack_require__(117);
 
 var _ContactSection2 = _interopRequireDefault(_ContactSection);
 
+var _DiscountBanner = __webpack_require__(279);
+
+var _DiscountBanner2 = _interopRequireDefault(_DiscountBanner);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -15534,7 +15532,8 @@ var App = function (_Component) {
       discountNumber: '',
       discountType: '',
       discountText: '',
-      discountSmallText: ''
+      discountSmallText: '',
+      discountBanner: ''
     };
     _this.loadDiscounts = _this.loadDiscounts.bind(_this);
     return _this;
@@ -15553,7 +15552,8 @@ var App = function (_Component) {
           discountNumber: discountDigest.discountNumber,
           discountType: discountDigest.discountType,
           discountText: discountDigest.discountText,
-          discountSmallText: discountDigest.discountSmallText
+          discountSmallText: discountDigest.discountSmallText,
+          discountBanner: discountDigest.discountBanner
         });
       }.bind(this);
       xhr.send();
@@ -15592,6 +15592,7 @@ var App = function (_Component) {
         _react2.default.createElement(_InstaQuoteButton2.default, null),
         _react2.default.createElement(_HomeSection2.default, null),
         _react2.default.createElement(_Carousel2.default, null),
+        _react2.default.createElement(_DiscountBanner2.default, { discountBanner: this.state.discountBanner }),
         _react2.default.createElement(_QuoteTabs2.default, { tabIndex: this.state.tabIndex,
           discountOn: this.state.discountOn,
           discountNumber: this.state.discountNumber,
@@ -36077,11 +36078,6 @@ var Footer = function (_Component) {
                 'resources'
               ),
               _react2.default.createElement(
-                'p',
-                null,
-                'Review our specifications on designs and uploads, trade show booths and video walls.'
-              ),
-              _react2.default.createElement(
                 'a',
                 { href: '{{site.baseurl}}/assets/pdf/sample.pdf', target: '_blank' },
                 'booth types'
@@ -36133,13 +36129,13 @@ var Footer = function (_Component) {
               _react2.default.createElement(
                 'a',
                 { href: 'tel:1 833 667 3842' },
-                '1833-morethanspaces'
+                '1-833-morethanspaces'
               ),
               _react2.default.createElement('br', null),
               _react2.default.createElement(
                 'a',
                 { href: 'tel:1 833 667 3842' },
-                '(1-833.667.3842)'
+                '1-833-667.3842'
               ),
               _react2.default.createElement(
                 'p',
@@ -36149,7 +36145,7 @@ var Footer = function (_Component) {
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://goo.gl/maps/ykw7oq8CJjx', target: '_blank' },
+                { href: 'https://goo.gl/maps/PY2Umx41Pey', target: '_blank' },
                 '900 Wigwam Parkway, Henderson NV'
               )
             )
@@ -36184,6 +36180,59 @@ var Footer = function (_Component) {
 ;
 
 exports.default = Footer;
+
+/***/ }),
+/* 279 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var DiscountBanner = function (_Component) {
+  _inherits(DiscountBanner, _Component);
+
+  function DiscountBanner() {
+    _classCallCheck(this, DiscountBanner);
+
+    return _possibleConstructorReturn(this, (DiscountBanner.__proto__ || Object.getPrototypeOf(DiscountBanner)).apply(this, arguments));
+  }
+
+  _createClass(DiscountBanner, [{
+    key: 'render',
+    value: function render() {
+      var bannerBackgroundImage = 'url(/morethanspaces/assets/img/banners/' + this.props.discountBanner + '';
+      return _react2.default.createElement(
+        'div',
+        { id: 'discountbanner' },
+        _react2.default.createElement('div', { className: 'hideBanner', style: { backgroundImage: bannerBackgroundImage } })
+      );
+    }
+  }]);
+
+  return DiscountBanner;
+}(_react.Component);
+
+;
+
+exports.default = DiscountBanner;
 
 /***/ })
 /******/ ]);

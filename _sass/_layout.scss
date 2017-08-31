@@ -246,29 +246,31 @@ section{
   padding: 5%;
 }
 
+#discountbanner{
+  position: relative;
+  float: left;
+  padding-top: 4%;
+  box-sizing: border-box;
+  background-color: $black;
+  min-height: 250px;
+  width: 100%;
+}
+  .hideBanner{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    min-height: 200px;
+    background-size: cover;
+    background-color: $green;
+  }
+
+
 #slider{
   background-color: $blue;
   float:left;
   width:100%;
-  padding-bottom: 0;
+  min-height: 0;
 
-  #discountbanner{
-    position: relative;
-    padding-top: 4%;
-    box-sizing: border-box;
-    margin: 0 auto 0 auto;
-    height: 250px;
-    width: 80%;
-
-    .hideBanner{
-      position: relative;
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-color:$black;
-    }
-  }
 
   .sliderCard{
     display: inline-block;
@@ -647,10 +649,9 @@ form{
 
 #products{
   padding: 4% 0 0 0;
-  background-color: $blue;
+  background-color: $black;
   h2{
     margin:0px;
-    color:$magenta;
     font-weight: 700;
     padding-top: 15px;
     float:left;
@@ -732,7 +733,6 @@ input[type=text]{
 .react-tabs__tab-list{
   margin:0px;
   list-style: none;
-  background-color:$blue;
   float: left;
   width: 100%;
   overflow: hidden;
@@ -747,6 +747,7 @@ input[type=text]{
   padding: 15px 0px 10px 35px;
   background-color: darken($white, 10%);
   position:relative;
+  color:$black;
   &:nth-of-type(2){
     margin-right: 2%;
     width: 46%;
@@ -797,6 +798,7 @@ input[type=text]{
 
 .react-tabs__tab--selected{
   background-color: $white;
+  color:$magenta;
   z-index: 1;
   .frontSlide{
     span{
@@ -898,7 +900,7 @@ input[type=text]{
     select{
       -webkit-appearance: none;
       -moz-appearance: none;
-      border-radius: 0px;
+      border-radius: 2px;
       width: 72px;
       background-position: right 50%;
       background-repeat: no-repeat;

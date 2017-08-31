@@ -8,6 +8,7 @@ import Footer from './components/presentational/Footer';
 import InstaQuoteButton from './components/presentational/InstaQuoteButton';
 import StaticSection from './components/StaticSection';
 import ContactSection from './components/ContactSection';
+import DiscountBanner from './components/presentational/DiscountBanner';
 
 class App extends Component {
   constructor(props) {
@@ -18,7 +19,8 @@ class App extends Component {
         discountNumber: '',
         discountType: '',
         discountText: '',
-        discountSmallText: ''
+        discountSmallText: '',
+        discountBanner: '',
       };
     this.loadDiscounts = this.loadDiscounts.bind(this);
   }
@@ -34,7 +36,8 @@ class App extends Component {
              discountNumber: discountDigest.discountNumber,
              discountType: discountDigest.discountType,
              discountText: discountDigest.discountText,
-             discountSmallText: discountDigest.discountSmallText
+             discountSmallText: discountDigest.discountSmallText,
+             discountBanner: discountDigest.discountBanner
            });
        }.bind(this);
        xhr.send();
@@ -68,6 +71,7 @@ class App extends Component {
         <InstaQuoteButton />
         <HomeSection />
         <Carousel />
+        <DiscountBanner discountBanner={this.state.discountBanner}/>
         <QuoteTabs tabIndex={this.state.tabIndex}
                     discountOn={this.state.discountOn}
                     discountNumber={this.state.discountNumber}

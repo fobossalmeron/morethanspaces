@@ -69,9 +69,6 @@ class Carousel extends Component {
             </div>
           </div>
         </Slider>
-        <div id="discountbanner">
-          <div className="hideBanner"></div>
-        </div>
       </section>
     );
   }

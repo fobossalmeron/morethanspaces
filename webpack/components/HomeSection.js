@@ -44,7 +44,7 @@ class HomeSection extends Component {
   render (){
     var showOver = (
       <div className='overVideo'>
-        <h1>trade shows & video walls: <br/>you deserve <b>more - for less</b></h1>
+        <h1>trade shows & video walls: <br/><b>more for less</b></h1>
         <button onClick={this.playFullVideo}>play video <Arrow className={"playButtonArrow"} forward width={"30px"}/></button>
       </div>
     )

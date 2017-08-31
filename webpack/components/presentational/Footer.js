@@ -16,7 +16,6 @@ class Footer extends Component {
             </li>
             <li>
               <h3>resources</h3>
-              <p>Review our specifications on designs and uploads, trade show booths and video walls.</p>
               <a href="{{site.baseurl}}/assets/pdf/sample.pdf" target="_blank">booth types</a>
               <a href="{{site.baseurl}}/assets/pdf/sample.pdf" target="_blank">timeline & graphic specs</a>
               <a href="{{site.baseurl}}/assets/pdf/sample.pdf" target="_blank">video walls</a>
@@ -28,9 +27,9 @@ class Footer extends Component {
               <p>send us an email</p>
               <a href="mailto:hello@morethanspaces.com" target="_blank">hello@morethanspaces.com</a>
               <p>or call us!</p>
-              <a href="tel:1 833 667 3842">1833-morethanspaces</a><br/><a href="tel:1 833 667 3842">(1-833.667.3842)</a>
+              <a href="tel:1 833 667 3842">1-833-morethanspaces</a><br/><a href="tel:1 833 667 3842">1-833-667.3842</a>
               <p><br/>visit our showroom</p>
-              <a href="https://goo.gl/maps/ykw7oq8CJjx" target="_blank">900 Wigwam Parkway, Henderson NV</a>
+              <a href="https://goo.gl/maps/PY2Umx41Pey" target="_blank">900 Wigwam Parkway, Henderson NV</a>
             </li>
         </ul>
 

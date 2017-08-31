@@ -84,3 +84,8 @@ prose:
             element: 'text'
             label: 'Discount small text'
             value: ''
+        - name: 'banner'
+          field:
+            element: 'text'
+            label: 'Banner name of file, ej. "bannerSeptember.jpg"'
+            value: ''

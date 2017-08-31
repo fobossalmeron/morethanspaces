@@ -46,7 +46,7 @@ class ContactSection extends Component {
         We understand you may have questions and general answers may not be what you are looking for. We
         will be more than happy to answer any of your questions. Please fill out your information below with
         your question and we will be happy to answer you back or if you need immediate assistant please give
-        us a call at <a href="tel:1 833 667 3842">1833-morethanspaces</a> <a href="tel:1 833 667 3842">(1-833.667.3842)</a></p>
+        us a call at <a href="tel:1 833 667 3842">1-833-morethanspaces</a> <a href="tel:1 833 667 3842">(1-833-667-3842)</a></p>
         <div className={messageClass}>
           <h3>send us an email</h3>
           <Form

@@ -33,7 +33,7 @@ class Nav extends Component {
 
     return (
       <nav>
-        <a href="#home"><img src="assets/img/logo.svg"/></a>
+        <a href="#home"><img src="assets/img/layout/logo.svg"/><img src="assets/img/layout/type.svg"/></a>
         {isThereDiscount}
         <ul>
           <li onClick={() => this.handleNavClick(0)}><a href="#products">booths</a></li>

@@ -13429,11 +13429,6 @@ var Carousel = function (_Component) {
               )
             )
           )
-        ),
-        _react2.default.createElement(
-          'div',
-          { id: 'discountbanner' },
-          _react2.default.createElement('div', { className: 'hideBanner' })
         )
       );
     }
@@ -13559,13 +13554,13 @@ var ContactSection = function (_Component) {
           _react2.default.createElement(
             'a',
             { href: 'tel:1 833 667 3842' },
-            '1833-morethanspaces'
+            '1-833-morethanspaces'
           ),
           ' ',
           _react2.default.createElement(
             'a',
             { href: 'tel:1 833 667 3842' },
-            '(1-833.667.3842)'
+            '(1-833-667-3842)'
           )
         ),
         _react2.default.createElement(
@@ -13756,11 +13751,10 @@ var HomeSection = function (_Component) {
           null,
           'trade shows & video walls: ',
           _react2.default.createElement('br', null),
-          'you deserve ',
           _react2.default.createElement(
             'b',
             null,
-            'more - for less'
+            'more for less'
           )
         ),
         _react2.default.createElement(
@@ -14153,108 +14147,6 @@ var StaticSection = function (_Component) {
               { className: "row" },
               _react2.default.createElement(
                 "li",
-                { className: "service1" },
-                _react2.default.createElement("div", { className: "service-icon" }),
-                _react2.default.createElement(
-                  "h3",
-                  null,
-                  "booth rentals"
-                ),
-                _react2.default.createElement(
-                  "p",
-                  null,
-                  "Investment in a trade show booth may not be for everyone. Why spend more on a booth you might only use once or be limited to a certain layout or size for many trade shows to come. If flexibility is what you\u2019re looking for, we have multiple ready to go solutions for any budget. Our booth rentals can save you up to 65% when compared to buying. Since Las Vegas (the convention capital) is our home we have plenty of options in all sizes and designs to select from, it\u2019s up to you! Don\u2019t worry, if your trade show is somewhere other than Las Vegas, our booth rentals can be shipped to anywhere you need it."
-                )
-              ),
-              _react2.default.createElement(
-                "li",
-                { className: "service2" },
-                _react2.default.createElement("div", { className: "service-icon" }),
-                _react2.default.createElement(
-                  "h3",
-                  null,
-                  "audio visual"
-                ),
-                _react2.default.createElement(
-                  "p",
-                  null,
-                  "A show isn\u2019t a show without audio visual! We understand this and only bring you the best when it comes to audio visual including the newest technology; LED/LCD video walls and LED TV\u2019s. Our certified technician only uses the best equipment when it comes to setting up your show. We are there for you every step of the process making sure there are no bugs or mistakes. Because your trade show should be the center of attention, not technical issues! Straightforward and smooth we\u2019ll have you ready for any presentation."
-                )
-              )
-            ),
-            _react2.default.createElement(
-              "div",
-              { className: "row" },
-              _react2.default.createElement(
-                "li",
-                { className: "service3" },
-                _react2.default.createElement("div", { className: "service-icon" }),
-                _react2.default.createElement(
-                  "h3",
-                  null,
-                  "storage / shipping"
-                ),
-                _react2.default.createElement(
-                  "p",
-                  null,
-                  "Located in Las Vegas the convention capital of the world, we are more than experienced in the world of trade shows. When it comes to storage and shipping, we will not sacrifice quality or speed. Our experts can handle all your logistics needs - getting to and from any Las Vegas venues to any part of the world. We handle all your items safely and carefully."
-                )
-              ),
-              _react2.default.createElement(
-                "li",
-                { className: "service4" },
-                _react2.default.createElement("div", { className: "service-icon" }),
-                _react2.default.createElement(
-                  "h3",
-                  null,
-                  "custom rental"
-                ),
-                _react2.default.createElement(
-                  "p",
-                  null,
-                  "Short on time or need a ready to go booth with a little more than zest. Our custom rentals have you in mind. With our team, you\u2019ll be able to customize the key things you\u2019ll benefit from the most without having to build the entire booth from scratch. Get the same attention of a custom design with a simpler approach."
-                )
-              )
-            ),
-            _react2.default.createElement(
-              "div",
-              { className: "row" },
-              _react2.default.createElement(
-                "li",
-                { className: "service5" },
-                _react2.default.createElement("div", { className: "service-icon" }),
-                _react2.default.createElement(
-                  "h3",
-                  null,
-                  "custom design"
-                ),
-                _react2.default.createElement(
-                  "p",
-                  null,
-                  "Looking to make a statement with your booth? By working together, we can help you create bold design to standout from your competitor and impress visitors! We believe that innovation should help bring your vision to life, we\u2019ll bring out the best in your brand. Our dedicated design team will work with you to create any booths from in-line islands, or uniquely individualized exhibition containers- we\u2019ll design it! Not sure how it will look? We will show you our 3D creation before to goes to production."
-                )
-              ),
-              _react2.default.createElement(
-                "li",
-                { className: "service6" },
-                _react2.default.createElement("div", { className: "service-icon" }),
-                _react2.default.createElement(
-                  "h3",
-                  null,
-                  "install / teardown"
-                ),
-                _react2.default.createElement(
-                  "p",
-                  null,
-                  "We take pride in offering you the highest degree of service in assembling and dismantling your booths. Our team of trained professionals are experienced and reliable. We pay attention to the small details so that you won\u2019t have too. We will finish assembling your booth long before show-time. No need to worry about after the show, we got you covered! We will safely disassemble, transport, and stored your booth to the next trade show venue."
-                )
-              )
-            ),
-            _react2.default.createElement(
-              "div",
-              { className: "row" },
-              _react2.default.createElement(
-                "li",
                 { className: "full-service service7" },
                 _react2.default.createElement("div", { className: "service-icon" }),
                 _react2.default.createElement(
@@ -14279,7 +14171,246 @@ var StaticSection = function (_Component) {
                 _react2.default.createElement(
                   "p",
                   null,
-                  "We know the cost of trade shows, and we are here to help by making it the best experience possible at a price you feel comfortable with! Don\u2019t waste your time with overly complicated booth\u2019s, set-up / tear down, logistics or high rental cost. We like to keep it simple for you and always guarantee to be on time. We are so sure in our service that we will match or beat any of our competitors\u2019 prices up to 20%. Join our trusted list of clients such as Nike, MoneyGarm, CapitalOne, Coca-Cola, and others!"
+                  "We are here to help by making it the ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "best experience"
+                  ),
+                  " possible at a price you feel comfortable with! Innovative designs, turn-key a-to-z solutions. We like to keep it ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "simple for you"
+                  ),
+                  " and always guarantee to be on time. We are so sure in our service that we will match or beat any of our competitors\u2019 prices ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "up to 20%"
+                  ),
+                  ". Join our trusted list of clients such as ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "Nike"
+                  ),
+                  ", ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "MoneyGarm"
+                  ),
+                  ", ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "CapitalOne"
+                  ),
+                  ", ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "Coca-Cola"
+                  ),
+                  ", and others!"
+                )
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "row" },
+              _react2.default.createElement(
+                "li",
+                { className: "service1" },
+                _react2.default.createElement("div", { className: "service-icon" }),
+                _react2.default.createElement(
+                  "h3",
+                  null,
+                  "booth rentals"
+                ),
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  "If flexibility is what you\u2019re looking for, we have multiple ready to go solutions for any budget. Our booth rentals can save you ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "up to 65%"
+                  ),
+                  " when compared to buying. We have plenty of options in all sizes and designs to select from, it\u2019s up to you! Don\u2019t worry, if your trade show is somewhere other than Las Vegas, our booth rentals can be shipped to ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "anywhere you need it."
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                "li",
+                { className: "service2" },
+                _react2.default.createElement("div", { className: "service-icon" }),
+                _react2.default.createElement(
+                  "h3",
+                  null,
+                  "audio visual"
+                ),
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  "A show isn\u2019t a show without audio visual! We understand this and only bring you the best and newest technology; ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "LED/LCD video walls"
+                  ),
+                  " and ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "LED TV\u2019s"
+                  ),
+                  ". We use the best equipment. We are there for you every step of the process making sure there are no bugs or mistakes. Because your trade show should be the center of attention, not technical issues!",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    " We\u2019ll have you ready"
+                  ),
+                  " for any presentation."
+                )
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "row" },
+              _react2.default.createElement(
+                "li",
+                { className: "service3" },
+                _react2.default.createElement("div", { className: "service-icon" }),
+                _react2.default.createElement(
+                  "h3",
+                  null,
+                  "storage & shipping"
+                ),
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  "Located in ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "Las Vegas"
+                  ),
+                  ", the convention capital of the world, we are more than experienced in the world of trade shows. When it comes to storage and shipping, our expert team can handle all your logistics needs - getting to and from any Las Vegas venues to any part of the world. We handle all your items ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "safely"
+                  ),
+                  ", ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "carefully"
+                  ),
+                  " and ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "on time"
+                  ),
+                  "."
+                )
+              ),
+              _react2.default.createElement(
+                "li",
+                { className: "service4" },
+                _react2.default.createElement("div", { className: "service-icon" }),
+                _react2.default.createElement(
+                  "h3",
+                  null,
+                  "custom rental booths"
+                ),
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  "Short on time or need a ready to go booth with a little more than zest. Our custom rentals have you in mind. With our team, you\u2019ll be able to ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "customize"
+                  ),
+                  " the key things you\u2019ll benefit from the most without having to build the entire booth from scratch. Get the same attention of a ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "custom design"
+                  ),
+                  " with a ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "simpler approach"
+                  ),
+                  "."
+                )
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "row" },
+              _react2.default.createElement(
+                "li",
+                { className: "service5" },
+                _react2.default.createElement("div", { className: "service-icon" }),
+                _react2.default.createElement(
+                  "h3",
+                  null,
+                  "custom design booths"
+                ),
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  "Looking to make a statement? We can help you create bold design to standout from your competitor and ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "impress visitors!"
+                  ),
+                  " We believe that innovation should help bring your vision to life, we\u2019ll bring out the best in your brand. Our expert design team will work with you to create you an amazing booth. We handle everything from A to Z; ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "including 3D designs"
+                  ),
+                  "."
+                )
+              ),
+              _react2.default.createElement(
+                "li",
+                { className: "service6" },
+                _react2.default.createElement("div", { className: "service-icon" }),
+                _react2.default.createElement(
+                  "h3",
+                  null,
+                  "assemble & dismantle"
+                ),
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  "We take pride in offering you the highest degree of service in assembling and dismantling your booths. Our team of ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "trained professionals"
+                  ),
+                  " are experienced and reliable. We pay attention to the small details so that you won\u2019t have too. We will finish assembling your booth ",
+                  _react2.default.createElement(
+                    "b",
+                    null,
+                    "way before show-time"
+                  ),
+                  ". We safely disassemble, transport, and store your booth to the next trade show venue."
                 )
               )
             )
@@ -14301,55 +14432,89 @@ var StaticSection = function (_Component) {
               )
             ),
             _react2.default.createElement(
-              "p",
+              "h1",
               null,
               _react2.default.createElement(
                 "b",
                 null,
-                "morethanspaces"
-              ),
-              " was founded to give more than other trade show vendors. Established and located in ",
-              _react2.default.createElement(
-                "b",
-                null,
-                "Las Vegas"
-              ),
-              ", the convention capital, we understand the world or trade shows thoroughly. We believe in creativity, simplicity and quality before prices and always go over and beyond with a smile.",
-              _react2.default.createElement("br", null),
-              _react2.default.createElement("br", null),
-              "Trusted by the world\u2019s most iconic brands and ",
-              _react2.default.createElement(
-                "b",
-                null,
-                "Fortune500 companies"
-              ),
-              ", our job has always been to give more, charge less, and help big and small business bring their vision to life with innovative booth designs and high-end audio-visual equipment. Connect with us today to learn how we can transform your brand into a show stopper for your next trade show."
+                "more than spaces"
+              )
             ),
             _react2.default.createElement(
-              "p",
+              "ul",
               null,
               _react2.default.createElement(
-                "b",
+                "li",
                 null,
-                "best price & quality guaranteed"
+                "Established and located in\xA0Las Vegas, ",
+                _react2.default.createElement(
+                  "b",
+                  null,
+                  "the convention capital"
+                ),
+                ", we understand the world or trade shows."
+              ),
+              _react2.default.createElement(
+                "li",
+                null,
+                "Believes in creativity, simplicity and ",
+                _react2.default.createElement(
+                  "b",
+                  null,
+                  "good prices"
+                ),
+                " - and always to go over and beyond with a smile."
+              ),
+              _react2.default.createElement(
+                "li",
+                null,
+                "Is a concept by ",
+                _react2.default.createElement(
+                  "b",
+                  null,
+                  "design:success"
+                ),
+                " a world leading design and innovation company. "
+              ),
+              _react2.default.createElement(
+                "li",
+                null,
+                "Trusted by the world\u2019s most iconic brands and\xA0",
+                _react2.default.createElement(
+                  "b",
+                  null,
+                  "Fortune500"
+                ),
+                " companies."
               )
             ),
             _react2.default.createElement(
               "p",
               null,
-              "In most cases we offer the ",
+              _react2.default.createElement(
+                "b",
+                null,
+                "best price, best quality"
+              )
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              "In most cases we offer the\xA0",
               _react2.default.createElement(
                 "b",
                 null,
                 "best rates"
               ),
-              ". In fact, we will try to match or beat any price ",
+              ". In fact, we will try to match or beat any price\xA0",
               _react2.default.createElement(
                 "b",
                 null,
                 "up to 20%"
               ),
-              ". We proudly work with companies, event planners and agencies across the USA."
+              ".",
+              _react2.default.createElement("br", null),
+              "We proudly work with companies, event planners and agencies across the USA and international."
             )
           ),
           _react2.default.createElement(
@@ -14389,9 +14554,9 @@ var StaticSection = function (_Component) {
               _react2.default.createElement(
                 "p",
                 null,
-                "choose your ",
+                "communicate your need",
                 _react2.default.createElement("br", null),
-                "package"
+                "and choose"
               )
             ),
             _react2.default.createElement(
@@ -14405,9 +14570,9 @@ var StaticSection = function (_Component) {
               _react2.default.createElement(
                 "p",
                 null,
-                "communicate ",
+                "we create and",
                 _react2.default.createElement("br", null),
-                "your needs"
+                "make it happen"
               )
             ),
             _react2.default.createElement(
@@ -14421,7 +14586,9 @@ var StaticSection = function (_Component) {
               _react2.default.createElement(
                 "p",
                 null,
-                "we deliver"
+                "we deliver",
+                _react2.default.createElement("br", null),
+                "\u2026and take care of it all"
               )
             ),
             _react2.default.createElement(
@@ -14430,10 +14597,15 @@ var StaticSection = function (_Component) {
               _react2.default.createElement(
                 "b",
                 null,
-                "more for less:"
+                "Our motto:"
               ),
               _react2.default.createElement("br", null),
-              "better service, better products, better results, less stress, less worry"
+              _react2.default.createElement(
+                "b",
+                null,
+                "more for less:"
+              ),
+              " better service, better products, better results, less stress, less worry"
             ),
             _react2.default.createElement(
               "p",
@@ -14443,12 +14615,6 @@ var StaticSection = function (_Component) {
                 "b",
                 null,
                 "let the show begin!"
-              ),
-              " It\u2019s that simple with ",
-              _react2.default.createElement(
-                "b",
-                null,
-                "more than spaces"
               )
             )
           )
@@ -14576,7 +14742,7 @@ var InstaQuoteButton = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         "a",
-        { href: "#quoteSection" },
+        { href: "#products" },
         _react2.default.createElement("div", { className: "bounce", id: "instaQuoteButton" })
       );
     }
@@ -14676,7 +14842,8 @@ var Nav = function (_Component) {
         _react2.default.createElement(
           'a',
           { href: '#home' },
-          _react2.default.createElement('img', { src: 'assets/img/logo.svg' })
+          _react2.default.createElement('img', { src: 'assets/img/layout/logo.svg' }),
+          _react2.default.createElement('img', { src: 'assets/img/layout/type.svg' })
         ),
         isThereDiscount,
         _react2.default.createElement(
@@ -15512,6 +15679,10 @@ var _ContactSection = __webpack_require__(117);
 
 var _ContactSection2 = _interopRequireDefault(_ContactSection);
 
+var _DiscountBanner = __webpack_require__(279);
+
+var _DiscountBanner2 = _interopRequireDefault(_DiscountBanner);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -15534,7 +15705,8 @@ var App = function (_Component) {
       discountNumber: '',
       discountType: '',
       discountText: '',
-      discountSmallText: ''
+      discountSmallText: '',
+      discountBanner: ''
     };
     _this.loadDiscounts = _this.loadDiscounts.bind(_this);
     return _this;
@@ -15553,7 +15725,8 @@ var App = function (_Component) {
           discountNumber: discountDigest.discountNumber,
           discountType: discountDigest.discountType,
           discountText: discountDigest.discountText,
-          discountSmallText: discountDigest.discountSmallText
+          discountSmallText: discountDigest.discountSmallText,
+          discountBanner: discountDigest.discountBanner
         });
       }.bind(this);
       xhr.send();
@@ -15592,6 +15765,7 @@ var App = function (_Component) {
         _react2.default.createElement(_InstaQuoteButton2.default, null),
         _react2.default.createElement(_HomeSection2.default, null),
         _react2.default.createElement(_Carousel2.default, null),
+        _react2.default.createElement(_DiscountBanner2.default, { discountBanner: this.state.discountBanner }),
         _react2.default.createElement(_QuoteTabs2.default, { tabIndex: this.state.tabIndex,
           discountOn: this.state.discountOn,
           discountNumber: this.state.discountNumber,
@@ -36024,6 +36198,34 @@ var _IconsBar = __webpack_require__(277);
 
 var _IconsBar2 = _interopRequireDefault(_IconsBar);
 
+var _linkedin = __webpack_require__(284);
+
+var _linkedin2 = _interopRequireDefault(_linkedin);
+
+var _facebook = __webpack_require__(281);
+
+var _facebook2 = _interopRequireDefault(_facebook);
+
+var _instagram = __webpack_require__(283);
+
+var _instagram2 = _interopRequireDefault(_instagram);
+
+var _youtube = __webpack_require__(286);
+
+var _youtube2 = _interopRequireDefault(_youtube);
+
+var _pinterest = __webpack_require__(285);
+
+var _pinterest2 = _interopRequireDefault(_pinterest);
+
+var _googleplus = __webpack_require__(288);
+
+var _googleplus2 = _interopRequireDefault(_googleplus);
+
+var _twitter = __webpack_require__(282);
+
+var _twitter2 = _interopRequireDefault(_twitter);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -36055,19 +36257,57 @@ var Footer = function (_Component) {
             null,
             _react2.default.createElement(
               'li',
-              null,
+              { className: 'two-lists' },
               _react2.default.createElement(
                 'h3',
                 null,
                 'follow us!'
               ),
               _react2.default.createElement(
-                'p',
-                null,
-                'social icons and social feeds'
+                'ul',
+                { className: 'social-list' },
+                _react2.default.createElement(
+                  'a',
+                  { href: "https://facebook.com/morethanspaces/" },
+                  _react2.default.createElement(_linkedin2.default, null)
+                ),
+                _react2.default.createElement(
+                  'a',
+                  { href: "https://facebook.com/morethanspaces/" },
+                  _react2.default.createElement(_facebook2.default, null)
+                ),
+                _react2.default.createElement(
+                  'a',
+                  { href: "https://facebook.com/morethanspaces/" },
+                  _react2.default.createElement(_instagram2.default, null)
+                ),
+                _react2.default.createElement(
+                  'a',
+                  { href: "https://facebook.com/morethanspaces/" },
+                  _react2.default.createElement(_youtube2.default, null)
+                ),
+                _react2.default.createElement(
+                  'a',
+                  { href: "https://facebook.com/morethanspaces/" },
+                  _react2.default.createElement(_twitter2.default, null)
+                ),
+                _react2.default.createElement(
+                  'a',
+                  { href: "https://facebook.com/morethanspaces/" },
+                  _react2.default.createElement(_googleplus2.default, null)
+                ),
+                _react2.default.createElement(
+                  'a',
+                  { href: "https://facebook.com/morethanspaces/" },
+                  _react2.default.createElement(_pinterest2.default, null)
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'pinterestFeed' },
+                _react2.default.createElement('a', { 'data-pin-do': 'embedBoard', 'data-pin-board-width': '300', 'data-pin-scale-height': '200', 'data-pin-scale-width': '115', href: 'https://www.pinterest.com/MoreThanSpaces/design/' })
               )
             ),
-            _react2.default.createElement('li', null),
             _react2.default.createElement(
               'li',
               null,
@@ -36077,29 +36317,29 @@ var Footer = function (_Component) {
                 'resources'
               ),
               _react2.default.createElement(
-                'p',
-                null,
-                'Review our specifications on designs and uploads, trade show booths and video walls.'
-              ),
-              _react2.default.createElement(
                 'a',
-                { href: '{{site.baseurl}}/assets/pdf/sample.pdf', target: '_blank' },
-                'graphic design specs'
-              ),
-              _react2.default.createElement(
-                'a',
-                { href: '{{site.baseurl}}/assets/pdf/sample.pdf', target: '_blank' },
+                { href: 'assets/pdf/sample.pdf', target: '_blank' },
                 'booth types'
               ),
               _react2.default.createElement(
                 'a',
-                { href: '{{site.baseurl}}/assets/pdf/sample.pdf', target: '_blank' },
+                { href: 'assets/pdf/mts_timeline_and_graphic_specs.pdf', target: '_blank' },
+                'timeline & graphic specs'
+              ),
+              _react2.default.createElement(
+                'a',
+                { href: 'assets/pdf/sample.pdf', target: '_blank' },
                 'video walls'
               ),
               _react2.default.createElement(
                 'a',
-                { className: 'before-pinterest-snippet', href: '{{site.baseurl}}/assets/pdf/sample.pdf', target: '_blank' },
-                'upload'
+                { href: 'assets/pdf/sample.pdf', target: '_blank' },
+                'how to upload'
+              ),
+              _react2.default.createElement(
+                'a',
+                { href: 'assets/pdf/sample.pdf', target: '_blank' },
+                'payment info'
               )
             ),
             _react2.default.createElement(
@@ -36128,13 +36368,13 @@ var Footer = function (_Component) {
               _react2.default.createElement(
                 'a',
                 { href: 'tel:1 833 667 3842' },
-                '1833-morethanspaces'
+                '1-833-morethanspaces'
               ),
               _react2.default.createElement('br', null),
               _react2.default.createElement(
                 'a',
                 { href: 'tel:1 833 667 3842' },
-                '(1-833.667.3842)'
+                '1-833-667-3842'
               ),
               _react2.default.createElement(
                 'p',
@@ -36144,8 +36384,8 @@ var Footer = function (_Component) {
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://goo.gl/maps/ykw7oq8CJjx', target: '_blank' },
-                '900 Wigwam Parkway, Henderson NV'
+                { href: 'https://goo.gl/maps/PY2Umx41Pey', target: '_blank' },
+                '900 Wigwam Parkway, Suite 100 Henderson, NV 89014'
               )
             )
           )
@@ -36179,6 +36419,194 @@ var Footer = function (_Component) {
 ;
 
 exports.default = Footer;
+
+/***/ }),
+/* 279 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var DiscountBanner = function (_Component) {
+  _inherits(DiscountBanner, _Component);
+
+  function DiscountBanner() {
+    _classCallCheck(this, DiscountBanner);
+
+    return _possibleConstructorReturn(this, (DiscountBanner.__proto__ || Object.getPrototypeOf(DiscountBanner)).apply(this, arguments));
+  }
+
+  _createClass(DiscountBanner, [{
+    key: 'render',
+    value: function render() {
+      var bannerBackgroundImage = 'url(/morethanspaces/assets/img/banners/' + this.props.discountBanner + '';
+      return _react2.default.createElement(
+        'div',
+        { id: 'discountbanner' },
+        _react2.default.createElement('div', { className: 'hideBanner', style: { backgroundImage: bannerBackgroundImage } })
+      );
+    }
+  }]);
+
+  return DiscountBanner;
+}(_react.Component);
+
+;
+
+exports.default = DiscountBanner;
+
+/***/ }),
+/* 280 */,
+/* 281 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(1);
+
+function FacebookIcon (props) {
+    return React.createElement("svg",props,React.createElement("path",{"d":"M80.8,8.5H20c-6.2,0-11.2,5-11.2,11.2v60.8c0,6.2,5,11.2,11.2,11.2h30L50,61.9h-7.7c-1,0-1.8-0.8-1.8-1.8l0-9.6\n\tc0-1,0.8-1.8,1.8-1.8H50v-9.3c0-10.7,6.6-16.6,16.2-16.6H74c1,0,1.8,0.8,1.8,1.8v8.1c0,1-0.8,1.8-1.8,1.8l-4.8,0\n\tc-5.2,0-6.2,2.5-6.2,6.1v8h11.5c1.1,0,1.9,1,1.8,2l-1.1,9.6c-0.1,0.9-0.9,1.6-1.8,1.6H63l-0.1,29.7h17.8c6.2,0,11.2-5,11.2-11.2\n\tV19.7C92,13.5,87,8.5,80.8,8.5z"}));
+}
+
+FacebookIcon.displayName = "FacebookIcon";
+
+FacebookIcon.defaultProps = {"version":"1.1","id":"Layer_1","x":"0px","y":"0px","viewBox":"0 0 100 100","style":{"enableBackground":"new 0 0 100 100"},"xmlSpace":"preserve"};
+
+module.exports = FacebookIcon;
+
+FacebookIcon.default = FacebookIcon;
+
+
+/***/ }),
+/* 282 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(1);
+
+function TwitterIcon (props) {
+    return React.createElement("svg",props,React.createElement("path",{"d":"M81.8,35.7c0-0.7,0-1.4,0-2.2c3.1-2.3,5.8-5.2,7.9-8.5c-2.8,1.3-5.9,2.1-9.1,2.5c3.3-2,5.8-5.2,7-9.1\n\tc-3.1,1.9-6.5,3.2-10.1,3.9c-2.9-3.3-7-5.4-11.6-5.5C57.1,16.7,50,24.1,50,33.3c0,1.3,0.1,2.6,0.4,3.8C37.2,36.3,25.5,29.4,17.7,19\n\tc-1.4,2.5-2.1,5.4-2.1,8.5c0,5.9,2.8,11.1,7.1,14.2c-2.6-0.1-5-0.9-7.2-2.2c0,0.1,0,0.1,0,0.2c0,8.2,5.5,15.1,12.7,16.7\n\tC26.9,56.8,25.5,57,24,57c-1,0-2-0.1-3-0.3c2,6.7,7.9,11.6,14.8,11.8c-5.4,4.5-12.3,7.2-19.7,7.2c-1.3,0-2.5-0.1-3.8-0.2\n\tc7,4.8,15.4,7.6,24.3,7.6C65.8,83.1,81.8,57.7,81.8,35.7z"}));
+}
+
+TwitterIcon.displayName = "TwitterIcon";
+
+TwitterIcon.defaultProps = {"version":"1.1","id":"Layer_1","x":"0px","y":"0px","viewBox":"0 0 100 100","style":{"enableBackground":"new 0 0 100 100"},"xmlSpace":"preserve"};
+
+module.exports = TwitterIcon;
+
+TwitterIcon.default = TwitterIcon;
+
+
+/***/ }),
+/* 283 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(1);
+
+function InstagramIcon (props) {
+    return React.createElement("svg",props,React.createElement("g",null,[React.createElement("path",{"d":"M49.5,18.9c10.6,0,11.9,0,16.1,0.2c3.9,0.2,6,0.8,7.4,1.4c1.9,0.7,3.2,1.6,4.6,3s2.3,2.7,3,4.6c0.5,1.4,1.2,3.5,1.4,7.4\n\t\tc0.2,4.2,0.2,5.5,0.2,16.1s0,11.9-0.2,16.1c-0.2,3.9-0.8,6-1.4,7.4c-0.7,1.9-1.6,3.2-3,4.6c-1.4,1.4-2.7,2.3-4.6,3\n\t\tc-1.4,0.5-3.5,1.2-7.4,1.4c-4.2,0.2-5.5,0.2-16.1,0.2s-11.9,0-16.1-0.2c-3.9-0.2-6-0.8-7.4-1.4c-1.9-0.7-3.2-1.6-4.6-3\n\t\tc-1.4-1.4-2.3-2.7-3-4.6c-0.5-1.4-1.2-3.5-1.4-7.4c-0.2-4.2-0.2-5.5-0.2-16.1s0-11.9,0.2-16.1c0.2-3.9,0.8-6,1.4-7.4\n\t\tc0.7-1.9,1.6-3.2,3-4.6s2.7-2.3,4.6-3c1.4-0.5,3.5-1.2,7.4-1.4C37.6,18.9,38.9,18.9,49.5,18.9 M49.5,11.7c-10.8,0-12.2,0-16.4,0.2\n\t\ts-7.1,0.9-9.7,1.8c-2.6,1-4.8,2.4-7,4.6s-3.6,4.4-4.6,7c-1,2.5-1.7,5.4-1.8,9.7c-0.2,4.2-0.2,5.6-0.2,16.4s0,12.2,0.2,16.4\n\t\ts0.9,7.1,1.8,9.7c1,2.6,2.4,4.8,4.6,7c2.2,2.2,4.4,3.6,7,4.6c2.5,1,5.4,1.7,9.7,1.8c4.2,0.2,5.6,0.2,16.4,0.2s12.2,0,16.4-0.2\n\t\ts7.1-0.9,9.7-1.8c2.6-1,4.8-2.4,7-4.6c2.2-2.2,3.6-4.4,4.6-7c1-2.5,1.7-5.4,1.8-9.7c0.2-4.2,0.2-5.6,0.2-16.4s0-12.2-0.2-16.4\n\t\tc-0.2-4.2-0.9-7.1-1.8-9.7c-1-2.6-2.4-4.8-4.6-7c-2.2-2.2-4.4-3.6-7-4.6c-2.5-1-5.4-1.7-9.7-1.8C61.7,11.7,60.3,11.7,49.5,11.7\n\t\tL49.5,11.7z","key":0}),React.createElement("path",{"d":"M49.5,31.1c-11.3,0-20.4,9.2-20.4,20.4s9.2,20.4,20.4,20.4s20.4-9.2,20.4-20.4S60.8,31.1,49.5,31.1z M49.5,64.8\n\t\tc-7.3,0-13.3-5.9-13.3-13.3s5.9-13.3,13.3-13.3s13.3,5.9,13.3,13.3S56.8,64.8,49.5,64.8z","key":1}),React.createElement("circle",{"cx":"70.7","cy":"30.3","r":"4.8","key":2})]));
+}
+
+InstagramIcon.displayName = "InstagramIcon";
+
+InstagramIcon.defaultProps = {"version":"1.1","x":"0px","y":"0px","viewBox":"0 0 100 100","style":{"enableBackground":"new 0 0 100 100"},"xmlSpace":"preserve"};
+
+module.exports = InstagramIcon;
+
+InstagramIcon.default = InstagramIcon;
+
+
+/***/ }),
+/* 284 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(1);
+
+function LinkedInIcon (props) {
+    return React.createElement("svg",props,React.createElement("g",null,React.createElement("path",{"d":"M83.8,10.3H16.1c-3.2,0-5.9,2.6-5.9,5.7v68c0,3.2,2.6,5.7,5.9,5.7h67.8c3.2,0,5.9-2.6,5.9-5.7V16\n\t\tC89.7,12.8,87.1,10.3,83.8,10.3z M33.8,78H22V40.1h11.8V78z M27.9,34.9c-3.8,0-6.8-3.1-6.8-6.8c0-3.8,3.1-6.8,6.8-6.8\n\t\tc3.8,0,6.8,3.1,6.8,6.8S31.7,34.9,27.9,34.9z M77.9,78H66.2V59.6c0-4.4-0.1-10.1-6.1-10.1c-6.1,0-7.1,4.8-7.1,9.7V78H41.2V40.1\n\t\th11.3v5.2h0.2c1.6-3,5.4-6.1,11.2-6.1c11.9,0,14.1,7.9,14.1,18.1L77.9,78C78,78,77.9,78,77.9,78z"})));
+}
+
+LinkedInIcon.displayName = "LinkedInIcon";
+
+LinkedInIcon.defaultProps = {"version":"1.1","x":"0px","y":"0px","viewBox":"0 0 100 100","style":{"enableBackground":"new 0 0 100 100"},"xmlSpace":"preserve"};
+
+module.exports = LinkedInIcon;
+
+LinkedInIcon.default = LinkedInIcon;
+
+
+/***/ }),
+/* 285 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(1);
+
+function PinterestIcon (props) {
+    return React.createElement("svg",props,React.createElement("path",{"className":"st0","d":"M81.3,31.4C79,14.8,62.4,6.3,44.8,8.3c-14,1.6-27.9,12.8-28.4,29c-0.4,9.8,2.4,17.2,11.8,19.3\n\t\t\t\tc4.1-7.2-1.3-8.7-2.1-14C22.6,21.4,50.5,6.8,65.2,21.7C75.3,32,68.7,63.6,52.3,60.3C36.7,57.2,60,32,47.5,27.1\n\t\t\t\tc-10.2-4-15.5,12.3-10.7,20.4c-2.8,13.9-8.9,27.1-6.4,44.5c8-5.8,10.7-16.9,12.9-28.4c4,2.4,6.2,5,11.3,5.4\n\t\t\t\tC73.3,70.4,83.9,50.1,81.3,31.4z"}));
+}
+
+PinterestIcon.displayName = "PinterestIcon";
+
+PinterestIcon.defaultProps = {"version":"1.1","id":"Capa_1","x":"0px","y":"0px","viewBox":"0 0 100 100","style":{"enableBackground":"new 0 0 100 100"},"xmlSpace":"preserve"};
+
+module.exports = PinterestIcon;
+
+PinterestIcon.default = PinterestIcon;
+
+
+/***/ }),
+/* 286 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(1);
+
+function YouTubeIcon (props) {
+    return React.createElement("svg",props,React.createElement("g",{"id":"XMLID_822_"},React.createElement("path",{"id":"XMLID_823_","d":"M89.6,25c-3.1-3.7-8.8-5.2-19.8-5.2H30.1c-11.2,0-17,1.6-20.1,5.5c-3,3.8-3,9.5-3,17.3v14.9\n\t\tc0,15.1,3.6,22.8,23.1,22.8h39.7c9.5,0,14.8-1.3,18.2-4.6c3.5-3.3,5-8.8,5-18.2V42.7C93,34.3,92.8,28.7,89.6,25z M62.2,52.2\n\t\tl-18,9.4c-0.4,0.2-0.8,0.3-1.3,0.3s-1-0.1-1.4-0.4c-0.8-0.5-1.3-1.4-1.3-2.4V40.2c0-1,0.5-1.9,1.3-2.4s1.9-0.5,2.7-0.1l18,9.4\n\t\tc0.9,0.5,1.5,1.4,1.5,2.5C63.7,50.7,63.1,51.7,62.2,52.2z"})));
+}
+
+YouTubeIcon.displayName = "YouTubeIcon";
+
+YouTubeIcon.defaultProps = {"version":"1.1","id":"Layer_1","x":"0px","y":"0px","viewBox":"0 0 100 100","style":{"enableBackground":"new 0 0 100 100"},"xmlSpace":"preserve"};
+
+module.exports = YouTubeIcon;
+
+YouTubeIcon.default = YouTubeIcon;
+
+
+/***/ }),
+/* 287 */,
+/* 288 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(1);
+
+function GooglePlusIcon (props) {
+    return React.createElement("svg",props,React.createElement("g",null,[React.createElement("path",{"d":"M37.3,53.7h13.4c-2.4,6.7-8.7,11.4-16.2,11.4C25.5,65,18,57.8,17.6,48.7C17.3,39.1,25,31,34.7,31c4.4,0,8.4,1.7,11.4,4.4\n\t\tc0.7,0.7,1.8,0.7,2.5,0l4.9-4.6c0.8-0.7,0.8-1.9,0-2.7c-4.8-4.5-11.2-7.4-18.3-7.5c-15.1-0.3-27.9,12.1-28,27.2\n\t\tC7.1,63.1,19.4,75.5,34.7,75.5c14.6,0,26.6-11.5,27.4-25.9c0-0.2,0-6.3,0-6.3H37.3c-1,0-1.8,0.8-1.8,1.8v6.7\n\t\tC35.5,52.9,36.3,53.7,37.3,53.7z","key":0}),React.createElement("path",{"d":"M84.8,43.9v-6.6c0-0.9-0.7-1.6-1.6-1.6h-5.5c-0.9,0-1.6,0.7-1.6,1.6v6.6h-6.6c-0.9,0-1.6,0.7-1.6,1.6v5.5\n\t\tc0,0.9,0.7,1.6,1.6,1.6H76v6.6c0,0.9,0.7,1.6,1.6,1.6h5.5c0.9,0,1.6-0.7,1.6-1.6v-6.6h6.6c0.9,0,1.6-0.7,1.6-1.6v-5.5\n\t\tc0-0.9-0.7-1.6-1.6-1.6L84.8,43.9L84.8,43.9z","key":1})]));
+}
+
+GooglePlusIcon.displayName = "GooglePlusIcon";
+
+GooglePlusIcon.defaultProps = {"version":"1.1","id":"Layer_1","x":"0px","y":"0px","viewBox":"0 0 100 100","style":{"enableBackground":"new 0 0 100 100"},"xmlSpace":"preserve"};
+
+module.exports = GooglePlusIcon;
+
+GooglePlusIcon.default = GooglePlusIcon;
+
 
 /***/ })
 /******/ ]);

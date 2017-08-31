@@ -12,8 +12,11 @@ nav{
     height:100%;
     float:left;
     margin-left: 1.5%;
-    -webkit-filter: brightness(20);
-    filter: brightness(20);
+    &:nth-of-type(2){
+      margin-left:0;
+      -webkit-filter: brightness(20);
+      filter: brightness(20);
+    }
   }
   ul{
     height:100%;
@@ -86,7 +89,7 @@ nav{
       color:$black;
     }
   }
-  img{
+  img:nth-of-type(2){
     -webkit-filter: brightness(1);
     filter: brightness(1);
   }
@@ -120,12 +123,12 @@ footer{
     float:left;
     clear:both;
     color:$white;
-    border: solid white;
-    border-width: 0px 0px 2px 0px;
+    text-decoration: underline;
+    text-decoration-skip: ink;
     transition: .4s ease all;
     &:hover{
       color: $magenta;
-      text-decoration: none;
+      text-decoration-color: $magenta;
       border-color: $magenta;
     }
   }
@@ -140,6 +143,9 @@ footer{
     float: none;
     color: $white;
     font-size: 1em;
+  }
+  .two-lists{
+    width:50%;
   }
   ul{
     margin:0px;
@@ -158,9 +164,47 @@ footer{
   }
 }
 
+.social-list{
+  float:left;
+  clear:none;
+  width:40%;
+  a{
+    float: left;
+    width: 60px;
+    margin: 0 2% 1% 0;
+    padding:5px;
+    box-sizing: border-box;
+    height: 60px;
+    transition: .4s ease all;
+    border: none;
+    clear:none;
+    svg{
+      fill: $white;
+      transition: .4s ease all;
+    }
+    &:hover{
+      transform: scale(1.1);
+      svg{
+        fill: $magenta;
+      }
+    }
+    &:nth-of-type(odd){
+      clear:left;
+    }
+  }
+}
+
+.pinterestFeed{
+  width: 60%;
+  float: left;
+  span, a{
+    width:100%;
+  }
+}
+
 .colophon{
   width: 100%;
-      background-color: #777777;
+      background-color: $green;
       text-align: center;
       color: $black;
       float: left;
@@ -257,6 +301,7 @@ section{
 }
   .hideBanner{
     position: relative;
+    border-radius: 2px;
     width: 80%;
     margin: 0 auto;
     min-height: 200px;
@@ -299,13 +344,13 @@ section{
   min-height: 100vh;
   background-color:$black;
   h1 {
-    font-size: 3.3em;
+    font-size: 3.4em;
     display: inline-block;
     color: $white;
     width:100%;
     float:left;
     clear:both;
-    line-height: 1.25;
+    line-height: 1.20;
   }
   button{
     background-color: $green;
@@ -400,7 +445,7 @@ section{
     color: $black;
     .full-service{
       width:100%;
-      padding: 0 15% 5% 15%;
+      padding: 1.5% 22%;
       min-height:100px;
     }
     p{
@@ -418,7 +463,7 @@ section{
           float: left;
           text-align: left;
           width: 50%;
-          padding: 3% 3% 0% 3%;
+          padding: 1.5% 3%;
           font-size: 1em;
           list-style: none;
           opacity:0;
@@ -505,9 +550,6 @@ section{
       background-color: $magenta;
       width:80%;
       margin-bottom: 5%;
-      p{
-        font-size:2em;
-      }
     }
   }
 }
@@ -1256,11 +1298,16 @@ iframe{
 
 .realestate{
   a{
-    font-size: 1em;
     font-weight: 700;
     margin-bottom: 5px;
+    text-decoration-style: wavy;
+    text-decoration: underline;
+    text-decoration-skip: ink;
+    line-height: 1.2;
+    border: 0;
     &:hover{
       color: $magenta;
+      text-decoration-color: $magenta;
     }
   }
 }

@@ -2,14 +2,11 @@
 Morethanspaces Website
 
 ##Falta en estilos
-- social media
+- form error messages
 - css transition groups
 - landing page(s)
-- logo in colors
-- actualizar footer
 - vimeo tests for video y la otra resolucion
-- menos espacio entre el h1 del homesection
-- 404 
+- 404
 
 ##Falta en func
 - discounts work on instaquote

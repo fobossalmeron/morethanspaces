@@ -83,19 +83,19 @@ class StaticSection extends Component {
         <div className="half-card frompdf">
           <span>1,</span> <span>2,</span> <span>3 </span> <span> go</span>
           <p>All you have to do is show up and <b>let the show begin!</b></p>
-          <div className="stepbox"><b>1:</b><p>communicate your need<br/>and choose</p></div>
-          <div className="stepbox"><b>2:</b><p>we create and<br/>make it happen</p></div>
-          <div className="stepbox"><b>3:</b><p>we deliver<br/>…and take care of it all</p></div>
+          <div id="stepbox1" className="stepbox"><b>1:</b><p>communicate your need<br/>and choose</p></div>
+          <div id="stepbox2" className="stepbox"><b>2:</b><p>we create and<br/>make it happen</p></div>
+          <div id="stepbox3" className="stepbox"><b>3:</b><p>we deliver<br/>…and take care of it all</p></div>
           <div className="stepblackbox"><b>best price, best quality</b><p>In most cases we offer the <b>best rates</b>. In fact, we will try to match or beat any price <b>up to 20%</b>.</p></div>
         </div>
         <div className="half-card">
+          <h2><b>motto</b></h2>
           <div className="stepgreenbox">
-            <b>our motto</b>
-            <p><b>more for less:</b> better service, better products, better results, less stress, less worry</p>
+            <p><b>more for less</b><br/>better service, better products, <br/>better results, less stress, less worry</p>
           </div>
           <h1><b>more than spaces</b></h1>
           <ul>
-            <li>Established and located in Las Vegas, <b>the convention capital</b>, we understand the world or trade shows.</li>
+            <li>Established and located in Las Vegas, <b>the convention capital</b>, we understand the world of trade shows.</li>
             <li>Believes in creativity, simplicity and <b>good prices</b> - and always to go over and beyond with a smile.</li>
             <li>Is a concept by <b>design:success</b> a world leading design and innovation company. </li>
             <li>Trusted by the world’s most iconic brands and <b>Fortune500</b> companies.</li>

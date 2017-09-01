@@ -42,40 +42,40 @@ var service7 = new ScrollMagic.Scene({triggerElement: ".sliderCard", duration: $
 
 // clients
 
-var client1 = new ScrollMagic.Scene({triggerElement: ".clientNike"})
+var client1 = new ScrollMagic.Scene({triggerElement: ".clientNike", offset:-100})
         .setClassToggle( ".clientNike", "fadeIn")
         .addTo(controller);
-var client2 = new ScrollMagic.Scene({triggerElement: ".clientCocaCola", offset:30})
+var client2 = new ScrollMagic.Scene({triggerElement: ".clientCocaCola", offset:-60})
         .setClassToggle( ".clientCocaCola", "fadeIn")
         .addTo(controller);
-var client3 = new ScrollMagic.Scene({triggerElement: ".clientMoneyGram", offset:70})
+var client3 = new ScrollMagic.Scene({triggerElement: ".clientMoneyGram", offset:-30})
         .setClassToggle( ".clientMoneyGram", "fadeIn")
         .addTo(controller);
-var client4 = new ScrollMagic.Scene({triggerElement: ".clientChanel"})
+var client4 = new ScrollMagic.Scene({triggerElement: ".clientChanel", offset:-130})
         .setClassToggle( ".clientChanel", "fadeIn")
         .addTo(controller);
-var client5 = new ScrollMagic.Scene({triggerElement: ".clientCapitalOne", offset:30})
+var client5 = new ScrollMagic.Scene({triggerElement: ".clientCapitalOne", offset:-90})
         .setClassToggle( ".clientCapitalOne", "fadeIn")
         .addTo(controller);
-var client6 = new ScrollMagic.Scene({triggerElement: ".clientBaseF", offset:40})
+var client6 = new ScrollMagic.Scene({triggerElement: ".clientBaseF", offset:-60})
         .setClassToggle( ".clientBaseF", "fadeIn")
         .addTo(controller);
-var client7 = new ScrollMagic.Scene({triggerElement: ".clientBaseF", offset:50})
+var client7 = new ScrollMagic.Scene({triggerElement: ".clientBMW", offset:-160})
         .setClassToggle( ".clientBMW", "fadeIn")
         .addTo(controller);
-var client8 = new ScrollMagic.Scene({triggerElement: ".clientBaseF", offset:60})
+var client8 = new ScrollMagic.Scene({triggerElement: ".clientDiageo", offset:-120})
         .setClassToggle( ".clientDiageo", "fadeIn")
         .addTo(controller);
-var client9 = new ScrollMagic.Scene({triggerElement: ".clientBaseF", offset:70})
+var client9 = new ScrollMagic.Scene({triggerElement: ".clientKraft", offset:-90})
         .setClassToggle( ".clientKraft", "fadeIn")
         .addTo(controller);
-var client10 = new ScrollMagic.Scene({triggerElement: ".clientBaseF", offset:80})
+var client10 = new ScrollMagic.Scene({triggerElement: ".clientNovartis", offset:-190})
         .setClassToggle( ".clientNovartis", "fadeIn")
         .addTo(controller);
-var client11 = new ScrollMagic.Scene({triggerElement: ".clientBaseF", offset:90})
+var client11 = new ScrollMagic.Scene({triggerElement: ".clientPepsico", offset:-150})
         .setClassToggle( ".clientPepsico", "fadeIn")
         .addTo(controller);
-var client12 = new ScrollMagic.Scene({triggerElement: ".clientBaseF", offset:100})
+var client12 = new ScrollMagic.Scene({triggerElement: ".clientBoss", offset:-120})
         .setClassToggle( ".clientBoss", "fadeIn")
         .addTo(controller);
 

@@ -156,6 +156,18 @@ footer{
       padding: 0 2%;
       list-style: none;
       float:left;
+      &:nth-of-type(1){
+        width:17.5%;
+      }
+      &:nth-of-type(2){
+        width:30%;
+      }
+      &:nth-of-type(3){
+        width:19.5%;
+      }
+      &:nth-of-type(4){
+        width:33%;
+      }
       h3{
         font-weight:700;
         color:$blue;
@@ -167,7 +179,7 @@ footer{
 .social-list{
   float:left;
   clear:none;
-  width:40%;
+  width:100%;
   a{
     float: left;
     width: 60px;
@@ -195,7 +207,7 @@ footer{
 }
 
 .pinterestFeed{
-  width: 60%;
+  width: 100%;
   float: left;
   span, a{
     width:100%;
@@ -295,7 +307,7 @@ section{
   float: left;
   padding-top: 4%;
   box-sizing: border-box;
-  background-color: $black;
+  background-color: black;
   min-height: 250px;
   width: 100%;
 }
@@ -527,6 +539,7 @@ section{
   }
   .stepblackbox{
     background-color: $black;
+    border-radius: 2px;
     color: $white;
     float: left;
     padding: 2%;
@@ -540,6 +553,7 @@ section{
     float:left;
     clear:both;
     font-weight:700;
+    border-radius: 2px;
     padding: 2%;
     height: 75px;
     margin-bottom: 3.5%;
@@ -573,9 +587,11 @@ section{
 .stepgreenbox{
   background-color: $green;
   color: $black;
+  border-radius: 2px;
+  width:100%;
   float: left;
   padding: 2%;
-  margin-bottom: 6%;
+  margin-bottom: 4%;
     p{
       margin:0;
     }
@@ -584,20 +600,38 @@ section{
 #contact{
   background-color: $black;
   color:white;
+  .half-card{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  h3{
+    color:$green;
+    &:nth-of-type(2){
+      clear:left;
+    }
+  }
   h2{
     color:$blue;
   }
   p{
-    column-count: 2;
-    column-gap: 50px;
     width: 100%;
   }
   a{
-    color:$white;
-    font-weight: 700;
+    color:$magenta;
+    margin-top: 15px;
+    float:left;
+    b{
+      font-weight: 700;
+    }
     &:hover{
       color:$magenta;
     }
+  }
+}
+.contact-different{
+  h3{
+    float:left;
+    margin-right:10px;
   }
 }
 
@@ -612,6 +646,7 @@ form{
   border: solid #666A73 5px;
   box-sizing: border-box;
   transition: .4s ease all;
+  margin-bottom: 2%;
 
   input, textarea, button{
     width:100%;
@@ -721,7 +756,7 @@ form{
 
 #products{
   padding: 4% 0 0 0;
-  background-color: $black;
+  background-color: black;
   h2{
     margin:0px;
     font-weight: 700;
@@ -817,12 +852,15 @@ input[type=text]{
   position: relative;
   border-radius: 5px 5px 0 0;
   padding: 15px 0px 10px 35px;
-  background-color: darken($white, 10%);
+  background-color: $magenta;
   position:relative;
   color:$black;
   &:nth-of-type(2){
     margin-right: 2%;
     width: 46%;
+  }
+  h2{
+    color:$white;
   }
   .frontSlide{
     width: 50px;
@@ -837,7 +875,7 @@ input[type=text]{
     span{
       width: 40px;
       height: 110%;
-      background-color: darken($white, 10%);
+      background-color: $magenta;
       position: absolute;
       right: 29px;
       top: 5px;
@@ -870,7 +908,6 @@ input[type=text]{
 
 .react-tabs__tab--selected{
   background-color: $white;
-  color:$magenta;
   z-index: 1;
   .frontSlide{
     span{
@@ -880,6 +917,7 @@ input[type=text]{
   }
   h2{
     cursor:auto !important;
+    color:$magenta;
   }
 }
 
@@ -1366,6 +1404,7 @@ iframe{
     color:$black;
     padding: 2% 0 0% 0;
     min-height: 0;
+    margin-bottom: 0;
   }
   input{
     background-color: $white;
@@ -1502,7 +1541,7 @@ iframe{
     background-color: $black;
     color:$white;
     min-height: 0;
-    padding: 1% 4% 2% 4%;
+    padding: 2% 4%;
     ul{
       float:left;
       width:100%;
@@ -1525,7 +1564,39 @@ iframe{
 .loading{
   margin: 10% auto;
   width: 250px;
+  h2{
+    text-align: center;
+  }
   img{
     margin-bottom: 2%;
+  }
+}
+
+.contactBox{
+  background-color:$green;
+  float: left;
+  padding: 4% 6%;
+  width: 100%;
+  margin-bottom: 4%;
+  p{
+    font-weight: 700;
+    color:$magenta;
+  }
+  a{
+    color:$black;
+    font-size: .8em;
+    font-weight: normal;
+  }
+  b{
+    font-size:1.2em;
+  }
+}
+
+.boxInvert{
+  background-color: transparent;
+  border: 2px solid $green;
+  a{
+    color:$white;
+    text-decoration: none;
   }
 }

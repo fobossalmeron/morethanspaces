@@ -13869,25 +13869,50 @@ var ContactSection = function (_Component) {
           )
         ),
         _react2.default.createElement(
-          'p',
-          null,
+          'div',
+          { className: 'half-card' },
           _react2.default.createElement(
-            'b',
+            'p',
             null,
-            'Let us answer your question! Contact us for all your trade show needs.'
+            'Have questions or want expert advise?',
+            _react2.default.createElement('br', null),
+            'We are happy to help',
+            _react2.default.createElement('br', null),
+            'Friendly service. No pressure sale.'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'half-card contact-different' },
+          _react2.default.createElement(
+            'h3',
+            null,
+            'call us'
           ),
-          _react2.default.createElement('br', null),
-          'We understand you may have questions and general answers may not be what you are looking for. We will be more than happy to answer any of your questions. Please fill out your information below with your question and we will be happy to answer you back or if you need immediate assistant please give us a call at ',
           _react2.default.createElement(
             'a',
             { href: 'tel:1 833 667 3842' },
-            '1-833-morethanspaces'
-          ),
-          ' ',
-          _react2.default.createElement(
-            'a',
-            { href: 'tel:1 833 667 3842' },
+            _react2.default.createElement(
+              'b',
+              null,
+              '1-833-morethanspaces'
+            ),
+            _react2.default.createElement('br', null),
             '(1-833-667-3842)'
+          ),
+          _react2.default.createElement(
+            'h3',
+            null,
+            'email us'
+          ),
+          _react2.default.createElement(
+            'a',
+            { href: 'mailto:hello@morethanspaces.com' },
+            _react2.default.createElement(
+              'b',
+              null,
+              'hello@morethanspaces.com'
+            )
           )
         ),
         _react2.default.createElement(
@@ -13896,7 +13921,7 @@ var ContactSection = function (_Component) {
           _react2.default.createElement(
             'h3',
             null,
-            'send us an email'
+            'message us'
           ),
           _react2.default.createElement(
             _reactForm.Form,
@@ -13960,7 +13985,7 @@ var ContactSection = function (_Component) {
           _react2.default.createElement(
             'h3',
             null,
-            'or schedule a call!'
+            'schedule a call'
           ),
           _react2.default.createElement('div', { className: 'calendly-inline-widget', 'data-url': calendlyUrl })
         )
@@ -14125,7 +14150,7 @@ var HomeSection = function (_Component) {
           'div',
           { id: 'homevideo' },
           _react2.default.createElement('div', { className: 'video_overlay' }),
-          _react2.default.createElement(_reactPlayer2.default, { url: this.state.urlVimeo, playing: this.state.playing, loop: true, volume: this.state.volume, onEnded: function onEnded() {
+          _react2.default.createElement(_reactPlayer2.default, { url: this.state.url, playing: this.state.playing, loop: true, volume: this.state.volume, onEnded: function onEnded() {
               return _this3.backToLanding;
             } })
         )
@@ -14553,11 +14578,11 @@ var Footer = function (_Component) {
             null,
             _react2.default.createElement(
               'li',
-              { className: 'two-lists' },
+              null,
               _react2.default.createElement(
                 'h3',
                 null,
-                'follow us!'
+                'follow us'
               ),
               _react2.default.createElement(
                 'ul',
@@ -14592,6 +14617,15 @@ var Footer = function (_Component) {
                   { href: "https://facebook.com/morethanspaces/" },
                   _react2.default.createElement(_googleplus2.default, null)
                 )
+              )
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                'h3',
+                null,
+                'be inspired'
               ),
               _react2.default.createElement(
                 'div',
@@ -14615,7 +14649,9 @@ var Footer = function (_Component) {
               _react2.default.createElement(
                 'a',
                 { href: 'assets/pdf/mts_timeline_and_graphic_specs.pdf', target: '_blank' },
-                'timeline & graphic specs'
+                'timeline &',
+                _react2.default.createElement('br', null),
+                'graphic specs'
               ),
               _react2.default.createElement(
                 'a',
@@ -14639,44 +14675,63 @@ var Footer = function (_Component) {
               _react2.default.createElement(
                 'h3',
                 null,
-                'contact us!'
+                'contact us'
               ),
               _react2.default.createElement(
-                'p',
-                null,
-                'send us an email'
-              ),
-              _react2.default.createElement(
-                'a',
-                { href: 'mailto:hello@morethanspaces.com', target: '_blank' },
-                'hello@morethanspaces.com'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'or call us!'
-              ),
-              _react2.default.createElement(
-                'a',
-                { href: 'tel:1 833 667 3842' },
-                '1-833-morethanspaces'
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'a',
-                { href: 'tel:1 833 667 3842' },
-                '1-833-667-3842'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
+                'div',
+                { className: 'contactBox' },
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'call'
+                ),
+                _react2.default.createElement(
+                  'a',
+                  { href: 'tel:1 833 667 3842' },
+                  _react2.default.createElement(
+                    'b',
+                    null,
+                    '1-833-morethanspaces'
+                  )
+                ),
                 _react2.default.createElement('br', null),
-                'visit our showroom'
+                _react2.default.createElement(
+                  'a',
+                  { href: 'tel:1 833 667 3842' },
+                  '1-833-667-3842'
+                )
               ),
               _react2.default.createElement(
-                'a',
-                { href: 'https://goo.gl/maps/PY2Umx41Pey', target: '_blank' },
-                '900 Wigwam Parkway, Suite 100 Henderson, NV 89014'
+                'div',
+                { className: 'contactBox' },
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'email'
+                ),
+                _react2.default.createElement(
+                  'a',
+                  { href: 'mailto:hello@morethanspaces.com', target: '_blank' },
+                  _react2.default.createElement(
+                    'b',
+                    null,
+                    'hello@morethanspaces.com'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'contactBox boxInvert' },
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'visit'
+                ),
+                _react2.default.createElement(
+                  'a',
+                  { href: 'https://goo.gl/maps/PY2Umx41Pey', target: '_blank' },
+                  '900 Wigwam Parkway, Suite 100 Henderson, NV 89014'
+                )
               )
             )
           )
@@ -15294,7 +15349,7 @@ var StaticSection = function (_Component) {
             ),
             _react2.default.createElement(
               "div",
-              { className: "stepbox" },
+              { id: "stepbox1", className: "stepbox" },
               _react2.default.createElement(
                 "b",
                 null,
@@ -15310,7 +15365,7 @@ var StaticSection = function (_Component) {
             ),
             _react2.default.createElement(
               "div",
-              { className: "stepbox" },
+              { id: "stepbox2", className: "stepbox" },
               _react2.default.createElement(
                 "b",
                 null,
@@ -15326,7 +15381,7 @@ var StaticSection = function (_Component) {
             ),
             _react2.default.createElement(
               "div",
-              { className: "stepbox" },
+              { id: "stepbox3", className: "stepbox" },
               _react2.default.createElement(
                 "b",
                 null,
@@ -15371,22 +15426,29 @@ var StaticSection = function (_Component) {
             "div",
             { className: "half-card" },
             _react2.default.createElement(
-              "div",
-              { className: "stepgreenbox" },
+              "h2",
+              null,
               _react2.default.createElement(
                 "b",
                 null,
-                "our motto"
-              ),
+                "motto"
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "stepgreenbox" },
               _react2.default.createElement(
                 "p",
                 null,
                 _react2.default.createElement(
                   "b",
                   null,
-                  "more for less:"
+                  "more for less"
                 ),
-                " better service, better products, better results, less stress, less worry"
+                _react2.default.createElement("br", null),
+                "better service, better products, ",
+                _react2.default.createElement("br", null),
+                "better results, less stress, less worry"
               )
             ),
             _react2.default.createElement(
@@ -15410,7 +15472,7 @@ var StaticSection = function (_Component) {
                   null,
                   "the convention capital"
                 ),
-                ", we understand the world or trade shows."
+                ", we understand the world of trade shows."
               ),
               _react2.default.createElement(
                 "li",

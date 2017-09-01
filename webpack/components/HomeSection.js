@@ -69,7 +69,7 @@ class HomeSection extends Component {
         {doShowOver}
         <div id="homevideo">
             <div className="video_overlay"></div>
-            <ReactPlayer url={this.state.urlVimeo} playing={this.state.playing} loop={true} volume={this.state.volume} onEnded={() => this.backToLanding}/>
+            <ReactPlayer url={this.state.url} playing={this.state.playing} loop={true} volume={this.state.volume} onEnded={() => this.backToLanding}/>
         </div>
       </section>
     );

@@ -96,16 +96,20 @@ footer .inline-link { float: none; color: #f9f9f9; font-size: 1em; }
 footer .two-lists { width: 50%; }
 footer ul { margin: 0px; float: left; width: 100%; }
 footer ul li { width: 25%; padding: 0 2%; list-style: none; float: left; }
+footer ul li:nth-of-type(1) { width: 17.5%; }
+footer ul li:nth-of-type(2) { width: 30%; }
+footer ul li:nth-of-type(3) { width: 19.5%; }
+footer ul li:nth-of-type(4) { width: 33%; }
 footer ul li h3 { font-weight: 700; color: #2cbdc0; }
 
-.social-list { float: left; clear: none; width: 40%; }
+.social-list { float: left; clear: none; width: 100%; }
 .social-list a { float: left; width: 60px; margin: 0 2% 1% 0; padding: 5px; box-sizing: border-box; height: 60px; transition: .4s ease all; border: none; clear: none; }
 .social-list a svg { fill: #f9f9f9; transition: .4s ease all; }
 .social-list a:hover { transform: scale(1.1); }
 .social-list a:hover svg { fill: #ec3092; }
 .social-list a:nth-of-type(odd) { clear: left; }
 
-.pinterestFeed { width: 60%; float: left; }
+.pinterestFeed { width: 100%; float: left; }
 .pinterestFeed span, .pinterestFeed a { width: 100%; }
 
 .colophon { width: 100%; background-color: #e0e221; text-align: center; color: #383838; float: left; padding: 2%; font-size: 0.8em; margin-bottom: 0; }
@@ -127,7 +131,7 @@ footer ul li h3 { font-weight: 700; color: #2cbdc0; }
 
 section { min-height: 500px; float: left; width: 100%; padding: 3% 5%; }
 
-#discountbanner { position: relative; float: left; padding-top: 4%; box-sizing: border-box; background-color: #383838; min-height: 250px; width: 100%; }
+#discountbanner { position: relative; float: left; padding-top: 4%; box-sizing: border-box; background-color: black; min-height: 250px; width: 100%; }
 
 .hideBanner { position: relative; border-radius: 2px; width: 80%; margin: 0 auto; min-height: 200px; background-size: cover; background-color: #e0e221; }
 
@@ -173,25 +177,31 @@ section { min-height: 500px; float: left; width: 100%; padding: 3% 5%; }
 .frompdf span:nth-of-type(1) { color: #e0e221; }
 .frompdf span:nth-of-type(2) { color: #2cbdc0; }
 .frompdf span:nth-of-type(3) { color: #ec3092; margin-right: 2%; }
-.frompdf .stepblackbox { background-color: #383838; color: #f9f9f9; float: left; padding: 2%; }
+.frompdf .stepblackbox { background-color: #383838; border-radius: 2px; color: #f9f9f9; float: left; padding: 2%; }
 .frompdf .stepblackbox p { margin: 0; }
-.frompdf .stepbox { width: 100%; float: left; clear: both; font-weight: 700; padding: 2%; height: 75px; margin-bottom: 3.5%; }
+.frompdf .stepbox { width: 100%; float: left; clear: both; font-weight: 700; border-radius: 2px; padding: 2%; height: 75px; margin-bottom: 3.5%; }
 .frompdf .stepbox b { float: left; color: #383838; font-size: 3em; margin-right: 2%; margin-top: -15px; }
 .frompdf .stepbox p { float: left; margin-top: 0%; }
 .frompdf .stepbox:nth-of-type(1) { background-color: #e0e221; width: 60%; }
 .frompdf .stepbox:nth-of-type(2) { background-color: #2cbdc0; width: 70%; }
 .frompdf .stepbox:nth-of-type(3) { background-color: #ec3092; width: 80%; margin-bottom: 5%; }
 
-.stepgreenbox { background-color: #e0e221; color: #383838; float: left; padding: 2%; margin-bottom: 6%; }
+.stepgreenbox { background-color: #e0e221; color: #383838; border-radius: 2px; width: 100%; float: left; padding: 2%; margin-bottom: 4%; }
 .stepgreenbox p { margin: 0; }
 
 #contact { background-color: #383838; color: white; }
+#contact .half-card { padding-top: 0; padding-bottom: 0; }
+#contact h3 { color: #e0e221; }
+#contact h3:nth-of-type(2) { clear: left; }
 #contact h2 { color: #2cbdc0; }
-#contact p { column-count: 2; column-gap: 50px; width: 100%; }
-#contact a { color: #f9f9f9; font-weight: 700; }
+#contact p { width: 100%; }
+#contact a { color: #ec3092; margin-top: 15px; float: left; }
+#contact a b { font-weight: 700; }
 #contact a:hover { color: #ec3092; }
 
-form { background-color: white; padding: 10%; position: relative; width: 100%; display: block; float: left; min-height: 500px; border: solid #666A73 5px; box-sizing: border-box; transition: .4s ease all; }
+.contact-different h3 { float: left; margin-right: 10px; }
+
+form { background-color: white; padding: 10%; position: relative; width: 100%; display: block; float: left; min-height: 500px; border: solid #666A73 5px; box-sizing: border-box; transition: .4s ease all; margin-bottom: 2%; }
 form input, form textarea, form button { width: 100%; float: left; clear: both; border: none; border-bottom: 1px solid grey; position: relative; padding: 20px; font-size: 1em; font-family: inherit; transition: .4s ease all; }
 form button { color: #f9f9f9; position: relative; box-sizing: border-box; padding: 5%; margin-top: 5%; width: 100%; background-color: #ec3092; cursor: pointer; }
 form button:hover { background-color: #2cbdc0; }
@@ -215,7 +225,7 @@ form button:hover { background-color: #2cbdc0; }
 #clients ul li:nth-child(3n+3) { margin-right: 0; }
 #clients ul li:nth-last-child(1), #clients ul li:nth-last-child(2) { margin-bottom: 0px; }
 
-#products { padding: 4% 0 0 0; background-color: #383838; }
+#products { padding: 4% 0 0 0; background-color: black; }
 #products h2 { margin: 0px; font-weight: 700; padding-top: 15px; float: left; cursor: pointer; }
 
 .quoteCheck { width: 30px; height: 30px; float: left; position: relative; }
@@ -236,18 +246,19 @@ input[type=text] { border: none; padding: 4px; font-size: .7em; }
 
 .react-tabs__tab-list { margin: 0px; list-style: none; float: left; width: 100%; overflow: hidden; }
 
-.react-tabs__tab { width: 48%; margin-left: 2%; float: left; position: relative; border-radius: 5px 5px 0 0; padding: 15px 0px 10px 35px; background-color: #e0e0e0; position: relative; color: #383838; }
+.react-tabs__tab { width: 48%; margin-left: 2%; float: left; position: relative; border-radius: 5px 5px 0 0; padding: 15px 0px 10px 35px; background-color: #ec3092; position: relative; color: #383838; }
 .react-tabs__tab:nth-of-type(2) { margin-right: 2%; width: 46%; }
+.react-tabs__tab h2 { color: #f9f9f9; }
 .react-tabs__tab .frontSlide { width: 50px; position: absolute; right: -50px; overflow: hidden; top: 0; height: 100%; z-index: 1; display: block; }
-.react-tabs__tab .frontSlide span { width: 40px; height: 110%; background-color: #e0e0e0; position: absolute; right: 29px; top: 5px; z-index: 0; transform: rotate(-24deg); }
+.react-tabs__tab .frontSlide span { width: 40px; height: 110%; background-color: #ec3092; position: absolute; right: 29px; top: 5px; z-index: 0; transform: rotate(-24deg); }
 .react-tabs__tab .backSlide { left: -50px; z-index: 0; }
 .react-tabs__tab .backSlide span { transform: rotate(24deg); left: 29px; }
 .react-tabs__tab:focus { outline: none; }
 .react-tabs__tab:focus::after { content: ''; position: absolute; height: 100%; width: 5px; right: 0; bottom: 0; background: #2cbdc0; box-shadow: 0 0 5px #2cbdc0; }
 
-.react-tabs__tab--selected { background-color: #f9f9f9; color: #ec3092; z-index: 1; }
+.react-tabs__tab--selected { background-color: #f9f9f9; z-index: 1; }
 .react-tabs__tab--selected .frontSlide span { background-color: #f9f9f9; z-index: 1; }
-.react-tabs__tab--selected h2 { cursor: auto !important; }
+.react-tabs__tab--selected h2 { cursor: auto !important; color: #ec3092; }
 
 .react-tabs__tab-panel { visibility: hidden; position: relative; display: none; opacity: 0; float: left; width: 100%; padding: 3% 0 0 0; background-color: #f9f9f9; }
 
@@ -386,7 +397,7 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 .convention_card { float: left; width: 50%; padding: 5%; max-height: 300px; box-sizing: border-box; display: inline-block; position: relative; }
 
 #dataCollector { position: relative; float: left; width: 100%; }
-#dataCollector form { border: none; background-color: #2cbdc0; color: #383838; padding: 2% 0 0% 0; min-height: 0; }
+#dataCollector form { border: none; background-color: #2cbdc0; color: #383838; padding: 2% 0 0% 0; min-height: 0; margin-bottom: 0; }
 #dataCollector input { background-color: #f9f9f9; margin-right: 2%; clear: none; width: 20%; border-radius: 2px; }
 #dataCollector button { width: 25%; clear: none; float: right; font-weight: 700; margin-top: 0; padding: 2%; border-radius: 2px; }
 #dataCollector button:hover { background-color: #d51479; }
@@ -416,13 +427,22 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 
 .clickFor { font-size: 15px; font-weight: 400; color: #383838; position: absolute; bottom: 40px; }
 
-#iconsBar { background-color: #383838; color: #f9f9f9; min-height: 0; padding: 1% 4% 2% 4%; }
+#iconsBar { background-color: #383838; color: #f9f9f9; min-height: 0; padding: 2% 4%; }
 #iconsBar ul { float: left; width: 100%; margin: 0; list-style: none; }
 #iconsBar ul li { float: left; text-align: center; clear: none; width: 20%; line-height: 1.2; font-weight: 700; }
 #iconsBar ul li .service-icon { margin: 0 auto 2% auto; }
 
 .loading { margin: 10% auto; width: 250px; }
+.loading h2 { text-align: center; }
 .loading img { margin-bottom: 2%; }
+
+.contactBox { background-color: #e0e221; float: left; padding: 4% 6%; width: 100%; margin-bottom: 4%; }
+.contactBox p { font-weight: 700; color: #ec3092; }
+.contactBox a { color: #383838; font-size: .8em; font-weight: normal; }
+.contactBox b { font-size: 1.2em; }
+
+.boxInvert { background-color: transparent; border: 2px solid #e0e221; }
+.boxInvert a { color: #f9f9f9; text-decoration: none; }
 
 .react-datepicker__tether-element-attached-top .react-datepicker__triangle, .react-datepicker__tether-element-attached-bottom .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow { margin-left: -8px; position: absolute; }
 

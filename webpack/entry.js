@@ -6,7 +6,7 @@ import QuoteTabs from './components/QuoteTabs';
 import Nav from './components/presentational/Nav';
 import Footer from './components/presentational/Footer';
 import InstaQuoteButton from './components/presentational/InstaQuoteButton';
-import StaticSection from './components/StaticSection';
+import StaticSection from './components/presentational/StaticSection';
 import ContactSection from './components/ContactSection';
 import DiscountBanner from './components/presentational/DiscountBanner';
 

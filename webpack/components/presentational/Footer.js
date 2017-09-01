@@ -36,10 +36,6 @@ class Footer extends Component {
                <a href={"https://facebook.com/morethanspaces/"}>
                  <GooglePlusIcon/>
                </a>
-               <a href={"https://facebook.com/morethanspaces/"}>
-
-                 <PinterestIcon/>
-               </a>
              </ul>
              <div className="pinterestFeed">
                 <a data-pin-do="embedBoard" data-pin-board-width="300" data-pin-scale-height="200" data-pin-scale-width="115" href="https://www.pinterest.com/MoreThanSpaces/design/"></a>

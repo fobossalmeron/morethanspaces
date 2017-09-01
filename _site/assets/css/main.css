@@ -95,7 +95,7 @@ footer p { font-size: 0.8em; color: #f9f9f9; float: left; clear: both; margin-bo
 footer .inline-link { float: none; color: #f9f9f9; font-size: 1em; }
 footer .two-lists { width: 50%; }
 footer ul { margin: 0px; float: left; width: 100%; }
-footer ul li { width: 25%; padding: 2%; list-style: none; float: left; }
+footer ul li { width: 25%; padding: 0 2%; list-style: none; float: left; }
 footer ul li h3 { font-weight: 700; color: #2cbdc0; }
 
 .social-list { float: left; clear: none; width: 40%; }
@@ -125,7 +125,7 @@ footer ul li h3 { font-weight: 700; color: #2cbdc0; }
 .instaQuoteButton { width: 100%; font-family: inherit; border: none; background-color: #ec3092; border-radius: 2px; cursor: pointer; font-weight: 700; color: #f9f9f9; font-size: 1em; padding: 10px; margin-top: 5%; transition: .4s ease all; }
 .instaQuoteButton:hover { background-color: #2cbdc0; }
 
-section { min-height: 500px; float: left; width: 100%; padding: 5%; }
+section { min-height: 500px; float: left; width: 100%; padding: 3% 5%; }
 
 #discountbanner { position: relative; float: left; padding-top: 4%; box-sizing: border-box; background-color: #383838; min-height: 250px; width: 100%; }
 
@@ -167,11 +167,14 @@ section { min-height: 500px; float: left; width: 100%; padding: 5%; }
 
 .service-icon { width: 100px; height: 100px; margin-bottom: 20px; position: relative; background-image: url("/morethanspaces/assets/img/3dBack.svg"); background-size: cover; background-position: center center; }
 
+.frompdf { padding-top: 0 !important; }
 .frompdf p { float: left; }
 .frompdf span { font-size: 6em; float: left; position: relative; display: inline-block; font-weight: bold; color: #383838; }
 .frompdf span:nth-of-type(1) { color: #e0e221; }
 .frompdf span:nth-of-type(2) { color: #2cbdc0; }
 .frompdf span:nth-of-type(3) { color: #ec3092; margin-right: 2%; }
+.frompdf .stepblackbox { background-color: #383838; color: #f9f9f9; float: left; padding: 2%; }
+.frompdf .stepblackbox p { margin: 0; }
 .frompdf .stepbox { width: 100%; float: left; clear: both; font-weight: 700; padding: 2%; height: 75px; margin-bottom: 3.5%; }
 .frompdf .stepbox b { float: left; color: #383838; font-size: 3em; margin-right: 2%; margin-top: -15px; }
 .frompdf .stepbox p { float: left; margin-top: 0%; }
@@ -179,7 +182,11 @@ section { min-height: 500px; float: left; width: 100%; padding: 5%; }
 .frompdf .stepbox:nth-of-type(2) { background-color: #2cbdc0; width: 70%; }
 .frompdf .stepbox:nth-of-type(3) { background-color: #ec3092; width: 80%; margin-bottom: 5%; }
 
+.stepgreenbox { background-color: #e0e221; color: #383838; float: left; padding: 2%; margin-bottom: 6%; }
+.stepgreenbox p { margin: 0; }
+
 #contact { background-color: #383838; color: white; }
+#contact h2 { color: #2cbdc0; }
 #contact p { column-count: 2; column-gap: 50px; width: 100%; }
 #contact a { color: #f9f9f9; font-weight: 700; }
 #contact a:hover { color: #ec3092; }
@@ -193,8 +200,8 @@ form button:hover { background-color: #2cbdc0; }
 
 .destroy { display: none; }
 
-.half-card { width: 50%; padding: 2% 4% 2% 0; float: left; position: relative; box-sizing: border-box; }
-.half-card:nth-child(2n+2) { padding-right: 0; padding-left: 2%; }
+.half-card { width: 50%; padding: 2% 2% 2% 0; float: left; position: relative; box-sizing: border-box; }
+.half-card:nth-of-type(2n+2) { padding-right: 0; padding-left: 2%; }
 
 .messaged form { padding: 20%; color: #383838; text-align: center; }
 .messaged form p { column-count: 1 !important; }

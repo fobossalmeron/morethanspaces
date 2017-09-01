@@ -14445,6 +14445,504 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var DiscountBanner = function (_Component) {
+  _inherits(DiscountBanner, _Component);
+
+  function DiscountBanner() {
+    _classCallCheck(this, DiscountBanner);
+
+    return _possibleConstructorReturn(this, (DiscountBanner.__proto__ || Object.getPrototypeOf(DiscountBanner)).apply(this, arguments));
+  }
+
+  _createClass(DiscountBanner, [{
+    key: 'render',
+    value: function render() {
+      var bannerBackgroundImage = 'url(/morethanspaces/assets/img/banners/' + this.props.discountBanner + '';
+      return _react2.default.createElement(
+        'div',
+        { id: 'discountbanner' },
+        _react2.default.createElement('div', { className: 'hideBanner', style: { backgroundImage: bannerBackgroundImage } })
+      );
+    }
+  }]);
+
+  return DiscountBanner;
+}(_react.Component);
+
+;
+
+exports.default = DiscountBanner;
+
+/***/ }),
+/* 123 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _IconsBar = __webpack_require__(69);
+
+var _IconsBar2 = _interopRequireDefault(_IconsBar);
+
+var _linkedin = __webpack_require__(281);
+
+var _linkedin2 = _interopRequireDefault(_linkedin);
+
+var _facebook = __webpack_require__(278);
+
+var _facebook2 = _interopRequireDefault(_facebook);
+
+var _instagram = __webpack_require__(280);
+
+var _instagram2 = _interopRequireDefault(_instagram);
+
+var _youtube = __webpack_require__(284);
+
+var _youtube2 = _interopRequireDefault(_youtube);
+
+var _pinterest = __webpack_require__(282);
+
+var _pinterest2 = _interopRequireDefault(_pinterest);
+
+var _googleplus = __webpack_require__(279);
+
+var _googleplus2 = _interopRequireDefault(_googleplus);
+
+var _twitter = __webpack_require__(283);
+
+var _twitter2 = _interopRequireDefault(_twitter);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Footer = function (_Component) {
+  _inherits(Footer, _Component);
+
+  function Footer() {
+    _classCallCheck(this, Footer);
+
+    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+  }
+
+  _createClass(Footer, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'footer',
+          null,
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              { className: 'two-lists' },
+              _react2.default.createElement(
+                'h3',
+                null,
+                'follow us!'
+              ),
+              _react2.default.createElement(
+                'ul',
+                { className: 'social-list' },
+                _react2.default.createElement(
+                  'a',
+                  { href: "https://facebook.com/morethanspaces/" },
+                  _react2.default.createElement(_linkedin2.default, null)
+                ),
+                _react2.default.createElement(
+                  'a',
+                  { href: "https://facebook.com/morethanspaces/" },
+                  _react2.default.createElement(_facebook2.default, null)
+                ),
+                _react2.default.createElement(
+                  'a',
+                  { href: "https://facebook.com/morethanspaces/" },
+                  _react2.default.createElement(_instagram2.default, null)
+                ),
+                _react2.default.createElement(
+                  'a',
+                  { href: "https://facebook.com/morethanspaces/" },
+                  _react2.default.createElement(_youtube2.default, null)
+                ),
+                _react2.default.createElement(
+                  'a',
+                  { href: "https://facebook.com/morethanspaces/" },
+                  _react2.default.createElement(_twitter2.default, null)
+                ),
+                _react2.default.createElement(
+                  'a',
+                  { href: "https://facebook.com/morethanspaces/" },
+                  _react2.default.createElement(_googleplus2.default, null)
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'pinterestFeed' },
+                _react2.default.createElement('a', { 'data-pin-do': 'embedBoard', 'data-pin-board-width': '300', 'data-pin-scale-height': '200', 'data-pin-scale-width': '115', href: 'https://www.pinterest.com/MoreThanSpaces/design/' })
+              )
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                'h3',
+                null,
+                'resources'
+              ),
+              _react2.default.createElement(
+                'a',
+                { href: 'assets/pdf/sample.pdf', target: '_blank' },
+                'booth types'
+              ),
+              _react2.default.createElement(
+                'a',
+                { href: 'assets/pdf/mts_timeline_and_graphic_specs.pdf', target: '_blank' },
+                'timeline & graphic specs'
+              ),
+              _react2.default.createElement(
+                'a',
+                { href: 'assets/pdf/sample.pdf', target: '_blank' },
+                'video walls'
+              ),
+              _react2.default.createElement(
+                'a',
+                { href: 'assets/pdf/sample.pdf', target: '_blank' },
+                'how to upload'
+              ),
+              _react2.default.createElement(
+                'a',
+                { href: 'assets/pdf/sample.pdf', target: '_blank' },
+                'payment info'
+              )
+            ),
+            _react2.default.createElement(
+              'li',
+              { className: 'realestate' },
+              _react2.default.createElement(
+                'h3',
+                null,
+                'contact us!'
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                'send us an email'
+              ),
+              _react2.default.createElement(
+                'a',
+                { href: 'mailto:hello@morethanspaces.com', target: '_blank' },
+                'hello@morethanspaces.com'
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                'or call us!'
+              ),
+              _react2.default.createElement(
+                'a',
+                { href: 'tel:1 833 667 3842' },
+                '1-833-morethanspaces'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'a',
+                { href: 'tel:1 833 667 3842' },
+                '1-833-667-3842'
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                _react2.default.createElement('br', null),
+                'visit our showroom'
+              ),
+              _react2.default.createElement(
+                'a',
+                { href: 'https://goo.gl/maps/PY2Umx41Pey', target: '_blank' },
+                '900 Wigwam Parkway, Suite 100 Henderson, NV 89014'
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(_IconsBar2.default, { backgroundColor: '#e0e221', color: '#383838' }),
+        _react2.default.createElement(
+          'p',
+          { className: 'colophon' },
+          '\xA9 ',
+          _react2.default.createElement(
+            'b',
+            null,
+            'morethanspaces'
+          ),
+          ' 2017, all rights reserved.',
+          _react2.default.createElement('br', null),
+          'website developed by ',
+          _react2.default.createElement(
+            'b',
+            null,
+            'Rodrigo Salmeron'
+          )
+        )
+      );
+    }
+  }]);
+
+  return Footer;
+}(_react.Component);
+
+;
+
+exports.default = Footer;
+
+/***/ }),
+/* 124 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var InstaQuoteButton = function (_Component) {
+  _inherits(InstaQuoteButton, _Component);
+
+  function InstaQuoteButton() {
+    _classCallCheck(this, InstaQuoteButton);
+
+    return _possibleConstructorReturn(this, (InstaQuoteButton.__proto__ || Object.getPrototypeOf(InstaQuoteButton)).apply(this, arguments));
+  }
+
+  _createClass(InstaQuoteButton, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "a",
+        { href: "#products" },
+        _react2.default.createElement("div", { className: "bounce", id: "instaQuoteButton" })
+      );
+    }
+  }]);
+
+  return InstaQuoteButton;
+}(_react.Component);
+
+;
+
+exports.default = InstaQuoteButton;
+
+/***/ }),
+/* 125 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(20);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Nav = function (_Component) {
+  _inherits(Nav, _Component);
+
+  function Nav(props) {
+    _classCallCheck(this, Nav);
+
+    return _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this, props));
+  }
+
+  _createClass(Nav, [{
+    key: 'discountSymbol',
+    value: function discountSymbol() {
+      if (this.props.discountType === "percentage") {
+        return "%";
+      } else {
+        return "$";
+      }
+    }
+  }, {
+    key: 'handleNavClick',
+    value: function handleNavClick(booth) {
+      this.props.goToTab(booth);
+      controller.scrollTo("#discountbanner");
+      setTimeout(function () {
+        controller.scrollTo("#products");
+      }, 1500);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var discountBlock = _react2.default.createElement(
+        'div',
+        { className: 'discounts-menu' },
+        _react2.default.createElement(
+          'b',
+          null,
+          this.props.discountNumber,
+          this.discountSymbol()
+        ),
+        ' ',
+        this.props.discountText,
+        ' ',
+        _react2.default.createElement(
+          'span',
+          null,
+          this.props.discountSmallText
+        )
+      );
+      var isThereDiscount = this.props.discountOn ? discountBlock : undefined;
+
+      return _react2.default.createElement(
+        'nav',
+        null,
+        _react2.default.createElement(
+          'a',
+          { href: '#home' },
+          _react2.default.createElement('img', { src: 'assets/img/layout/logo.svg' }),
+          _react2.default.createElement('img', { src: 'assets/img/layout/type.svg' })
+        ),
+        isThereDiscount,
+        _react2.default.createElement(
+          'ul',
+          null,
+          _react2.default.createElement(
+            'li',
+            { onClick: function onClick() {
+                return _this2.handleNavClick(0);
+              } },
+            _react2.default.createElement(
+              'a',
+              { href: '#products' },
+              'booths'
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            { onClick: function onClick() {
+                return _this2.handleNavClick(1);
+              } },
+            _react2.default.createElement(
+              'a',
+              { href: '#products' },
+              'videowalls'
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: '#services' },
+              'services'
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: '#about' },
+              'about'
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: '#contact' },
+              'contact'
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Nav;
+}(_react.Component);
+
+;
+
+exports.default = Nav;
+
+/***/ }),
+/* 126 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 var StaticSection = function (_Component) {
   _inherits(StaticSection, _Component);
 
@@ -14750,15 +15248,145 @@ var StaticSection = function (_Component) {
           "section",
           { id: "about" },
           _react2.default.createElement(
-            "div",
-            { className: "half-card" },
+            "h2",
+            null,
             _react2.default.createElement(
-              "h2",
+              "b",
               null,
+              "about us"
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "half-card frompdf" },
+            _react2.default.createElement(
+              "span",
+              null,
+              "1,"
+            ),
+            " ",
+            _react2.default.createElement(
+              "span",
+              null,
+              "2,"
+            ),
+            " ",
+            _react2.default.createElement(
+              "span",
+              null,
+              "3 "
+            ),
+            " ",
+            _react2.default.createElement(
+              "span",
+              null,
+              " go"
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              "All you have to do is show up and ",
               _react2.default.createElement(
                 "b",
                 null,
-                "about us"
+                "let the show begin!"
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "stepbox" },
+              _react2.default.createElement(
+                "b",
+                null,
+                "1:"
+              ),
+              _react2.default.createElement(
+                "p",
+                null,
+                "communicate your need",
+                _react2.default.createElement("br", null),
+                "and choose"
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "stepbox" },
+              _react2.default.createElement(
+                "b",
+                null,
+                "2:"
+              ),
+              _react2.default.createElement(
+                "p",
+                null,
+                "we create and",
+                _react2.default.createElement("br", null),
+                "make it happen"
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "stepbox" },
+              _react2.default.createElement(
+                "b",
+                null,
+                "3:"
+              ),
+              _react2.default.createElement(
+                "p",
+                null,
+                "we deliver",
+                _react2.default.createElement("br", null),
+                "\u2026and take care of it all"
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "stepblackbox" },
+              _react2.default.createElement(
+                "b",
+                null,
+                "best price, best quality"
+              ),
+              _react2.default.createElement(
+                "p",
+                null,
+                "In most cases we offer the\xA0",
+                _react2.default.createElement(
+                  "b",
+                  null,
+                  "best rates"
+                ),
+                ". In fact, we will try to match or beat any price\xA0",
+                _react2.default.createElement(
+                  "b",
+                  null,
+                  "up to 20%"
+                ),
+                "."
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "half-card" },
+            _react2.default.createElement(
+              "div",
+              { className: "stepgreenbox" },
+              _react2.default.createElement(
+                "b",
+                null,
+                "our motto"
+              ),
+              _react2.default.createElement(
+                "p",
+                null,
+                _react2.default.createElement(
+                  "b",
+                  null,
+                  "more for less:"
+                ),
+                " better service, better products, better results, less stress, less worry"
               )
             ),
             _react2.default.createElement(
@@ -14821,131 +15449,7 @@ var StaticSection = function (_Component) {
             _react2.default.createElement(
               "p",
               null,
-              _react2.default.createElement(
-                "b",
-                null,
-                "best price, best quality"
-              )
-            ),
-            _react2.default.createElement(
-              "p",
-              null,
-              "In most cases we offer the\xA0",
-              _react2.default.createElement(
-                "b",
-                null,
-                "best rates"
-              ),
-              ". In fact, we will try to match or beat any price\xA0",
-              _react2.default.createElement(
-                "b",
-                null,
-                "up to 20%"
-              ),
-              ".",
-              _react2.default.createElement("br", null),
               "We proudly work with companies, event planners and agencies across the USA and international."
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "half-card frompdf" },
-            _react2.default.createElement(
-              "span",
-              null,
-              "1,"
-            ),
-            " ",
-            _react2.default.createElement(
-              "span",
-              null,
-              "2,"
-            ),
-            " ",
-            _react2.default.createElement(
-              "span",
-              null,
-              "3 "
-            ),
-            " ",
-            _react2.default.createElement(
-              "span",
-              null,
-              " go"
-            ),
-            _react2.default.createElement(
-              "div",
-              { className: "stepbox" },
-              _react2.default.createElement(
-                "b",
-                null,
-                "1:"
-              ),
-              _react2.default.createElement(
-                "p",
-                null,
-                "communicate your need",
-                _react2.default.createElement("br", null),
-                "and choose"
-              )
-            ),
-            _react2.default.createElement(
-              "div",
-              { className: "stepbox" },
-              _react2.default.createElement(
-                "b",
-                null,
-                "2:"
-              ),
-              _react2.default.createElement(
-                "p",
-                null,
-                "we create and",
-                _react2.default.createElement("br", null),
-                "make it happen"
-              )
-            ),
-            _react2.default.createElement(
-              "div",
-              { className: "stepbox" },
-              _react2.default.createElement(
-                "b",
-                null,
-                "3:"
-              ),
-              _react2.default.createElement(
-                "p",
-                null,
-                "we deliver",
-                _react2.default.createElement("br", null),
-                "\u2026and take care of it all"
-              )
-            ),
-            _react2.default.createElement(
-              "p",
-              null,
-              _react2.default.createElement(
-                "b",
-                null,
-                "Our motto:"
-              ),
-              _react2.default.createElement("br", null),
-              _react2.default.createElement(
-                "b",
-                null,
-                "more for less:"
-              ),
-              " better service, better products, better results, less stress, less worry"
-            ),
-            _react2.default.createElement(
-              "p",
-              null,
-              "All you have to do is show up and ",
-              _react2.default.createElement(
-                "b",
-                null,
-                "let the show begin!"
-              )
             )
           )
         ),
@@ -14955,7 +15459,7 @@ var StaticSection = function (_Component) {
           _react2.default.createElement(
             "h3",
             null,
-            "we are trusted by amongst others"
+            "we are trusted by"
           ),
           _react2.default.createElement(
             "ul",
@@ -15032,509 +15536,6 @@ var StaticSection = function (_Component) {
 ;
 
 exports.default = StaticSection;
-
-/***/ }),
-/* 123 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var DiscountBanner = function (_Component) {
-  _inherits(DiscountBanner, _Component);
-
-  function DiscountBanner() {
-    _classCallCheck(this, DiscountBanner);
-
-    return _possibleConstructorReturn(this, (DiscountBanner.__proto__ || Object.getPrototypeOf(DiscountBanner)).apply(this, arguments));
-  }
-
-  _createClass(DiscountBanner, [{
-    key: 'render',
-    value: function render() {
-      var bannerBackgroundImage = 'url(/morethanspaces/assets/img/banners/' + this.props.discountBanner + '';
-      return _react2.default.createElement(
-        'div',
-        { id: 'discountbanner' },
-        _react2.default.createElement('div', { className: 'hideBanner', style: { backgroundImage: bannerBackgroundImage } })
-      );
-    }
-  }]);
-
-  return DiscountBanner;
-}(_react.Component);
-
-;
-
-exports.default = DiscountBanner;
-
-/***/ }),
-/* 124 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _IconsBar = __webpack_require__(69);
-
-var _IconsBar2 = _interopRequireDefault(_IconsBar);
-
-var _linkedin = __webpack_require__(281);
-
-var _linkedin2 = _interopRequireDefault(_linkedin);
-
-var _facebook = __webpack_require__(278);
-
-var _facebook2 = _interopRequireDefault(_facebook);
-
-var _instagram = __webpack_require__(280);
-
-var _instagram2 = _interopRequireDefault(_instagram);
-
-var _youtube = __webpack_require__(284);
-
-var _youtube2 = _interopRequireDefault(_youtube);
-
-var _pinterest = __webpack_require__(282);
-
-var _pinterest2 = _interopRequireDefault(_pinterest);
-
-var _googleplus = __webpack_require__(279);
-
-var _googleplus2 = _interopRequireDefault(_googleplus);
-
-var _twitter = __webpack_require__(283);
-
-var _twitter2 = _interopRequireDefault(_twitter);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Footer = function (_Component) {
-  _inherits(Footer, _Component);
-
-  function Footer() {
-    _classCallCheck(this, Footer);
-
-    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
-  }
-
-  _createClass(Footer, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          'footer',
-          null,
-          _react2.default.createElement(
-            'ul',
-            null,
-            _react2.default.createElement(
-              'li',
-              { className: 'two-lists' },
-              _react2.default.createElement(
-                'h3',
-                null,
-                'follow us!'
-              ),
-              _react2.default.createElement(
-                'ul',
-                { className: 'social-list' },
-                _react2.default.createElement(
-                  'a',
-                  { href: "https://facebook.com/morethanspaces/" },
-                  _react2.default.createElement(_linkedin2.default, null)
-                ),
-                _react2.default.createElement(
-                  'a',
-                  { href: "https://facebook.com/morethanspaces/" },
-                  _react2.default.createElement(_facebook2.default, null)
-                ),
-                _react2.default.createElement(
-                  'a',
-                  { href: "https://facebook.com/morethanspaces/" },
-                  _react2.default.createElement(_instagram2.default, null)
-                ),
-                _react2.default.createElement(
-                  'a',
-                  { href: "https://facebook.com/morethanspaces/" },
-                  _react2.default.createElement(_youtube2.default, null)
-                ),
-                _react2.default.createElement(
-                  'a',
-                  { href: "https://facebook.com/morethanspaces/" },
-                  _react2.default.createElement(_twitter2.default, null)
-                ),
-                _react2.default.createElement(
-                  'a',
-                  { href: "https://facebook.com/morethanspaces/" },
-                  _react2.default.createElement(_googleplus2.default, null)
-                ),
-                _react2.default.createElement(
-                  'a',
-                  { href: "https://facebook.com/morethanspaces/" },
-                  _react2.default.createElement(_pinterest2.default, null)
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'pinterestFeed' },
-                _react2.default.createElement('a', { 'data-pin-do': 'embedBoard', 'data-pin-board-width': '300', 'data-pin-scale-height': '200', 'data-pin-scale-width': '115', href: 'https://www.pinterest.com/MoreThanSpaces/design/' })
-              )
-            ),
-            _react2.default.createElement(
-              'li',
-              null,
-              _react2.default.createElement(
-                'h3',
-                null,
-                'resources'
-              ),
-              _react2.default.createElement(
-                'a',
-                { href: 'assets/pdf/sample.pdf', target: '_blank' },
-                'booth types'
-              ),
-              _react2.default.createElement(
-                'a',
-                { href: 'assets/pdf/mts_timeline_and_graphic_specs.pdf', target: '_blank' },
-                'timeline & graphic specs'
-              ),
-              _react2.default.createElement(
-                'a',
-                { href: 'assets/pdf/sample.pdf', target: '_blank' },
-                'video walls'
-              ),
-              _react2.default.createElement(
-                'a',
-                { href: 'assets/pdf/sample.pdf', target: '_blank' },
-                'how to upload'
-              ),
-              _react2.default.createElement(
-                'a',
-                { href: 'assets/pdf/sample.pdf', target: '_blank' },
-                'payment info'
-              )
-            ),
-            _react2.default.createElement(
-              'li',
-              { className: 'realestate' },
-              _react2.default.createElement(
-                'h3',
-                null,
-                'contact us!'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'send us an email'
-              ),
-              _react2.default.createElement(
-                'a',
-                { href: 'mailto:hello@morethanspaces.com', target: '_blank' },
-                'hello@morethanspaces.com'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'or call us!'
-              ),
-              _react2.default.createElement(
-                'a',
-                { href: 'tel:1 833 667 3842' },
-                '1-833-morethanspaces'
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'a',
-                { href: 'tel:1 833 667 3842' },
-                '1-833-667-3842'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                _react2.default.createElement('br', null),
-                'visit our showroom'
-              ),
-              _react2.default.createElement(
-                'a',
-                { href: 'https://goo.gl/maps/PY2Umx41Pey', target: '_blank' },
-                '900 Wigwam Parkway, Suite 100 Henderson, NV 89014'
-              )
-            )
-          )
-        ),
-        _react2.default.createElement(_IconsBar2.default, { backgroundColor: '#e0e221', color: '#383838' }),
-        _react2.default.createElement(
-          'p',
-          { className: 'colophon' },
-          '\xA9 ',
-          _react2.default.createElement(
-            'b',
-            null,
-            'morethanspaces'
-          ),
-          ' 2017, all rights reserved.',
-          _react2.default.createElement('br', null),
-          'website developed by ',
-          _react2.default.createElement(
-            'b',
-            null,
-            'Rodrigo Salmeron'
-          )
-        )
-      );
-    }
-  }]);
-
-  return Footer;
-}(_react.Component);
-
-;
-
-exports.default = Footer;
-
-/***/ }),
-/* 125 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var InstaQuoteButton = function (_Component) {
-  _inherits(InstaQuoteButton, _Component);
-
-  function InstaQuoteButton() {
-    _classCallCheck(this, InstaQuoteButton);
-
-    return _possibleConstructorReturn(this, (InstaQuoteButton.__proto__ || Object.getPrototypeOf(InstaQuoteButton)).apply(this, arguments));
-  }
-
-  _createClass(InstaQuoteButton, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "a",
-        { href: "#products" },
-        _react2.default.createElement("div", { className: "bounce", id: "instaQuoteButton" })
-      );
-    }
-  }]);
-
-  return InstaQuoteButton;
-}(_react.Component);
-
-;
-
-exports.default = InstaQuoteButton;
-
-/***/ }),
-/* 126 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(20);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Nav = function (_Component) {
-  _inherits(Nav, _Component);
-
-  function Nav(props) {
-    _classCallCheck(this, Nav);
-
-    return _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this, props));
-  }
-
-  _createClass(Nav, [{
-    key: 'discountSymbol',
-    value: function discountSymbol() {
-      if (this.props.discountType === "percentage") {
-        return "%";
-      } else {
-        return "$";
-      }
-    }
-  }, {
-    key: 'handleNavClick',
-    value: function handleNavClick(booth) {
-      this.props.goToTab(booth);
-      controller.scrollTo("#discountbanner");
-      setTimeout(function () {
-        controller.scrollTo("#products");
-      }, 1500);
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var _this2 = this;
-
-      var discountBlock = _react2.default.createElement(
-        'div',
-        { className: 'discounts-menu' },
-        _react2.default.createElement(
-          'b',
-          null,
-          this.props.discountNumber,
-          this.discountSymbol()
-        ),
-        ' ',
-        this.props.discountText,
-        ' ',
-        _react2.default.createElement(
-          'span',
-          null,
-          this.props.discountSmallText
-        )
-      );
-      var isThereDiscount = this.props.discountOn ? discountBlock : undefined;
-
-      return _react2.default.createElement(
-        'nav',
-        null,
-        _react2.default.createElement(
-          'a',
-          { href: '#home' },
-          _react2.default.createElement('img', { src: 'assets/img/layout/logo.svg' }),
-          _react2.default.createElement('img', { src: 'assets/img/layout/type.svg' })
-        ),
-        isThereDiscount,
-        _react2.default.createElement(
-          'ul',
-          null,
-          _react2.default.createElement(
-            'li',
-            { onClick: function onClick() {
-                return _this2.handleNavClick(0);
-              } },
-            _react2.default.createElement(
-              'a',
-              { href: '#products' },
-              'booths'
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            { onClick: function onClick() {
-                return _this2.handleNavClick(1);
-              } },
-            _react2.default.createElement(
-              'a',
-              { href: '#products' },
-              'videowalls'
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              'a',
-              { href: '#services' },
-              'services'
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              'a',
-              { href: '#about' },
-              'about'
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              'a',
-              { href: '#contact' },
-              'contact'
-            )
-          )
-        )
-      );
-    }
-  }]);
-
-  return Nav;
-}(_react.Component);
-
-;
-
-exports.default = Nav;
 
 /***/ }),
 /* 127 */
@@ -16285,19 +16286,19 @@ var _QuoteTabs = __webpack_require__(121);
 
 var _QuoteTabs2 = _interopRequireDefault(_QuoteTabs);
 
-var _Nav = __webpack_require__(126);
+var _Nav = __webpack_require__(125);
 
 var _Nav2 = _interopRequireDefault(_Nav);
 
-var _Footer = __webpack_require__(124);
+var _Footer = __webpack_require__(123);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _InstaQuoteButton = __webpack_require__(125);
+var _InstaQuoteButton = __webpack_require__(124);
 
 var _InstaQuoteButton2 = _interopRequireDefault(_InstaQuoteButton);
 
-var _StaticSection = __webpack_require__(122);
+var _StaticSection = __webpack_require__(126);
 
 var _StaticSection2 = _interopRequireDefault(_StaticSection);
 
@@ -16305,7 +16306,7 @@ var _ContactSection = __webpack_require__(119);
 
 var _ContactSection2 = _interopRequireDefault(_ContactSection);
 
-var _DiscountBanner = __webpack_require__(123);
+var _DiscountBanner = __webpack_require__(122);
 
 var _DiscountBanner2 = _interopRequireDefault(_DiscountBanner);
 

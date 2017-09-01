@@ -9,7 +9,8 @@ class HomeSection extends Component {
       fullVideo: false,
       playing: true,
       videoVolume: 0,
-      url: "intro.mp4"
+      urlVimeo: "https://vimeo.com/231768380",
+      url: '/morethanspaces/assets/video/intro.mp4',
     };
   this.playFullVideo = this.playFullVideo.bind(this);
   this.backToLanding = this.backToLanding.bind(this);
@@ -19,14 +20,16 @@ class HomeSection extends Component {
 
   playFullVideo(){
     this.setState({
-      url : "full.mp4",
+      urlVimeo: "https://vimeo.com/231768166",
+      url: "/morethanspaces/assets/video/full.mp4",
       fullVideo: true,
       videoVolume: 1
     }, () => console.log(this.state.fullVideo))
   }
   backToLanding(){
     this.setState({
-      url: 'intro.mp4',
+      urlVimeo: "https://vimeo.com/231768380",
+      url: '/morethanspaces/assets/video/intro.mp4',
       fullVideo: false,
       videoVolume: 0
     })
@@ -66,7 +69,7 @@ class HomeSection extends Component {
         {doShowOver}
         <div id="homevideo">
             <div className="video_overlay"></div>
-            <ReactPlayer url={'/morethanspaces/assets/video/' + this.state.url} playing={this.state.playing} loop={true} volume={this.state.volume} onEnded={() => this.backToLanding}/>
+            <ReactPlayer url={this.state.urlVimeo} playing={this.state.playing} loop={true} volume={this.state.volume} onEnded={() => this.backToLanding}/>
         </div>
       </section>
     );

@@ -14,29 +14,29 @@ var instaQuoteButton = new ScrollMagic.Scene({triggerElement: "#products", durat
         .addTo(controller);
 
 // service section
-var service1 = new ScrollMagic.Scene({triggerElement: ".service1", duration: $('.service1').height() + 50})
+var service1 = new ScrollMagic.Scene({triggerElement: ".service1", duration: $('.service1').height() + 100, offset: -150})
         .setClassToggle( ".service1", "slideIn")
         .addTo(controller);
-var service2 = new ScrollMagic.Scene({triggerElement: ".service2", duration: $('.service2').height() + 50, offset:100})
+var service2 = new ScrollMagic.Scene({triggerElement: ".service2", duration: $('.service2').height() + 100, offset:-100})
         .setClassToggle( ".service2", "slideIn")
         .addTo(controller);
-var service3 = new ScrollMagic.Scene({triggerElement: ".service3", duration: $('.service3').height()+ 50})
+var service3 = new ScrollMagic.Scene({triggerElement: ".service3", duration: $('.service3').height()+ 100, offset:-150})
         .setClassToggle( ".service3", "slideIn")
         .addTo(controller);
-var service4 = new ScrollMagic.Scene({triggerElement: ".service4", duration: $('.service4').height() + 50, offset:50})
+var service4 = new ScrollMagic.Scene({triggerElement: ".service4", duration: $('.service4').height() + 100, offset:-100})
         .setClassToggle( ".service4", "slideIn")
         .addTo(controller);
-var service5 = new ScrollMagic.Scene({triggerElement: ".service5", duration: $('.service5').height()+ 50})
+var service5 = new ScrollMagic.Scene({triggerElement: ".service5", duration: $('.service5').height()+ 100, offset:-150})
         .setClassToggle( ".service5", "slideIn")
         .addTo(controller);
-var service6 = new ScrollMagic.Scene({triggerElement: ".service6", duration: $('.service6').height() + 50, offset:50})
+var service6 = new ScrollMagic.Scene({triggerElement: ".service6", duration: $('.service6').height() + 150, offset:-100})
         .setClassToggle( ".service6", "slideIn")
         .addTo(controller);
-var service7 = new ScrollMagic.Scene({triggerElement: ".service7", duration: $('.service7').height() + 50})
+var service7 = new ScrollMagic.Scene({triggerElement: ".service7", duration: $('.service7').height() + 150, offset:-150})
         .setClassToggle( ".service7", "slideIn")
         .addTo(controller);
 
-var service7 = new ScrollMagic.Scene({triggerElement: ".sliderCard", duration: $('.sliderCard').height() + 100})
+var service7 = new ScrollMagic.Scene({triggerElement: ".sliderCard", duration: $('.sliderCard').height() + 100, offset:-100})
         .setClassToggle( ".sliderCard", "fadeIn")
         .addTo(controller);
 

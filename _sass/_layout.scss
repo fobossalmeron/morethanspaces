@@ -352,6 +352,10 @@ section{
     clear:both;
     line-height: 1.20;
   }
+  iframe{
+    border:none;
+    background-color:$black;
+  }
   button{
     background-color: $green;
     color:$black;
@@ -369,11 +373,12 @@ section{
     z-index: 1;
     transition: .4s ease all;
     border: 2px solid transparent;
-      &:hover{
+      &:hover, &:focus{
         cursor:pointer;
-        background-color:$black;
+        background-color:transparent;
         color:$green;
         border-color:$green;
+        outline: none;
         svg{
           fill:$green;
         }

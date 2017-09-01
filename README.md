@@ -5,10 +5,11 @@ Morethanspaces Website
 - form error messages
 - css transition groups
 - landing page(s)
-- vimeo tests for video y la otra resolucion
+- video for services
 - 404
 
 ##Falta en func
 - discounts work on instaquote
+- instaquote button desaparece en instaquote
 - calendly business
 - send email to two people  

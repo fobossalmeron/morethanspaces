@@ -137,9 +137,10 @@ section { min-height: 500px; float: left; width: 100%; padding: 5%; }
 
 #home { padding: 0; position: relative; min-height: 100vh; background-color: #383838; }
 #home h1 { font-size: 3.4em; display: inline-block; color: #f9f9f9; width: 100%; float: left; clear: both; line-height: 1.20; }
+#home iframe { border: none; background-color: #383838; }
 #home button { background-color: #e0e221; color: #383838; font-weight: 700; border-radius: 2px; display: block; border: none; padding: 10px 20px; font-size: inherit; margin-top: 2%; font-family: inherit; white-space: nowrap; float: left; clear: both; z-index: 1; transition: .4s ease all; border: 2px solid transparent; }
-#home button:hover { cursor: pointer; background-color: #383838; color: #e0e221; border-color: #e0e221; }
-#home button:hover svg { fill: #e0e221; }
+#home button:hover, #home button:focus { cursor: pointer; background-color: transparent; color: #e0e221; border-color: #e0e221; outline: none; }
+#home button:hover svg, #home button:focus svg { fill: #e0e221; }
 
 .overVideo { position: absolute; margin: 10% 4%; z-index: 2; }
 

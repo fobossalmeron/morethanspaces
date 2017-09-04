@@ -6,9 +6,8 @@ class CheckBox extends Component {
     var classList = (this.props.classList + " quoteCheck");
     return (
       <div className={classList}>
-        <input type={this.props.inputType} id={this.props.checkFor} onClick={this.props.onClick} onChange={this.props.onChange} name={this.props.nameFor} value="true" defaultChecked={this.props.checked} />
-        <label className="noMargin" htmlFor={this.props.checkFor} />
-        <span className={this.props.doubleLine}>{this.props.checkFor}</span>
+        <input type={this.props.inputType} id={this.props.checkFor} onClick={this.props.onClick} onChange={this.props.onChange} name={this.props.nameFor} defaultChecked={this.props.checked} />
+        <label className="noMargin" htmlFor={this.props.checkFor}>{this.props.checkFor}</label>
       </div>
     );
   }

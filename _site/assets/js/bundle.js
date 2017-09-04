@@ -8403,11 +8403,10 @@ var CheckBox = function (_Component) {
       return _react2.default.createElement(
         "div",
         { className: classList },
-        _react2.default.createElement("input", { type: this.props.inputType, id: this.props.checkFor, onClick: this.props.onClick, onChange: this.props.onChange, name: this.props.nameFor, value: "true", defaultChecked: this.props.checked }),
-        _react2.default.createElement("label", { className: "noMargin", htmlFor: this.props.checkFor }),
+        _react2.default.createElement("input", { type: this.props.inputType, id: this.props.checkFor, onClick: this.props.onClick, onChange: this.props.onChange, name: this.props.nameFor, defaultChecked: this.props.checked }),
         _react2.default.createElement(
-          "span",
-          { className: this.props.doubleLine },
+          "label",
+          { className: "noMargin", htmlFor: this.props.checkFor },
           this.props.checkFor
         )
       );
@@ -8598,6 +8597,26 @@ var InstaQuote = function (_Component) {
       var renderRentOwn = this.props.wantToOwn ? "own" : "rent";
       var renderInVegas = this.props.eventInVegas ? "in" : "outside";
       var reveal = this.props.revealInstaQuote ? "revealQuote quoteNumber" : "quoteNumber";
+      var renderTv = this.props.addTv ? _react2.default.createElement(
+        'li',
+        null,
+        'You added a ',
+        _react2.default.createElement(
+          'b',
+          null,
+          'Tv'
+        )
+      ) : undefined;
+      var renderVideoWall = this.props.addVideoWall ? _react2.default.createElement(
+        'li',
+        null,
+        'You added a ',
+        _react2.default.createElement(
+          'b',
+          null,
+          'videowall'
+        )
+      ) : undefined;
 
       var narrateDiscount = '(' + price + '$ - ' + this.props.discountNumber + this.props.discountSymbol() + ' discount)';
       var isDiscount = this.props.discountOn ? narrateDiscount : "we don't have discount";
@@ -8666,7 +8685,9 @@ var InstaQuote = function (_Component) {
                 renderInVegas
               ),
               ' Las Vegas '
-            )
+            ),
+            renderTv,
+            renderVideoWall
           )
         ),
         _react2.default.createElement(
@@ -8680,18 +8701,22 @@ var InstaQuote = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: reveal },
-            '$',
-            price,
-            ' USD'
+            _react2.default.createElement(
+              'p',
+              null,
+              '$',
+              price,
+              ' USD'
+            ),
+            _react2.default.createElement(
+              'span',
+              null,
+              isDiscount
+            )
           ),
           _react2.default.createElement(
             'ul',
             null,
-            _react2.default.createElement(
-              'li',
-              null,
-              isDiscount
-            ),
             _react2.default.createElement(
               'li',
               null,
@@ -14045,8 +14070,7 @@ var HomeSection = function (_Component) {
       fullVideo: false,
       playing: true,
       videoVolume: 0,
-      urlVimeo: "https://vimeo.com/231768380",
-      url: '/morethanspaces/assets/video/intro.mp4'
+      url: 'assets/video/intro.mp4'
     };
     _this.playFullVideo = _this.playFullVideo.bind(_this);
     _this.backToLanding = _this.backToLanding.bind(_this);
@@ -14061,8 +14085,7 @@ var HomeSection = function (_Component) {
       var _this2 = this;
 
       this.setState({
-        urlVimeo: "https://vimeo.com/231768166",
-        url: "/morethanspaces/assets/video/full.mp4",
+        url: "assets/video/full.mp4",
         fullVideo: true,
         videoVolume: 1
       }, function () {
@@ -14073,8 +14096,7 @@ var HomeSection = function (_Component) {
     key: 'backToLanding',
     value: function backToLanding() {
       this.setState({
-        urlVimeo: "https://vimeo.com/231768380",
-        url: '/morethanspaces/assets/video/intro.mp4',
+        url: 'assets/video/intro.mp4',
         fullVideo: false,
         videoVolume: 0
       });
@@ -14234,15 +14256,19 @@ var QuoteTabs = function (_Component) {
   _createClass(QuoteTabs, [{
     key: 'doAddVideoWall',
     value: function doAddVideoWall() {
-      this.setState({ addVideoWall: true }, function () {
-        return console.log("videowall added");
+      var _this2 = this;
+
+      this.setState({ addVideoWall: !this.state.addVideoWall }, function () {
+        return console.log("videowall " + _this2.state.addVideoWall);
       });
     }
   }, {
     key: 'doAddTv',
     value: function doAddTv() {
-      this.setState({ addTv: true }, function () {
-        return console.log("Tv added");
+      var _this3 = this;
+
+      this.setState({ addTv: !this.state.addTv }, function () {
+        return console.log("Tv " + _this3.state.addTv);
       });
     }
   }, {
@@ -14263,14 +14289,14 @@ var QuoteTabs = function (_Component) {
     key: 'doWantToOwn',
     value: function doWantToOwn() {
       this.setState({ wantToOwn: true }, function () {
-        return console.log("i want to own it");
+        return console.log("i want to OWN it");
       });
     }
   }, {
     key: 'doWantToRent',
     value: function doWantToRent() {
       this.setState({ wantToOwn: false }, function () {
-        return console.log("just want to rent it");
+        return console.log("just want to RENT it");
       });
     }
   }, {
@@ -14341,7 +14367,7 @@ var QuoteTabs = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
+      var _this4 = this;
 
       return _react2.default.createElement(
         'section',
@@ -14349,7 +14375,7 @@ var QuoteTabs = function (_Component) {
         _react2.default.createElement(
           _reactTabs.Tabs,
           { forceRenderTabPanel: true, selectedIndex: this.props.tabIndex, onSelect: function onSelect(tabIndex) {
-              return _this2.props.goToTab(tabIndex);
+              return _this4.props.goToTab(tabIndex);
             } },
           _react2.default.createElement(
             _reactTabs.TabList,
@@ -14406,7 +14432,11 @@ var QuoteTabs = function (_Component) {
               doWantToOwn: this.doWantToOwn.bind(this),
               doWantToRent: this.doWantToRent.bind(this),
               needShipping: this.needShipping.bind(this),
-              noNeedShipping: this.noNeedShipping.bind(this) }),
+              noNeedShipping: this.noNeedShipping.bind(this),
+              doAddVideoWall: this.doAddVideoWall.bind(this),
+              doAddTv: this.doAddTv.bind(this),
+              addTv: this.state.addTv,
+              selectedIsland: this.state.selectedIsland }),
             _react2.default.createElement(_BoothGrid2.default, { selectedIsland: this.state.selectedIsland,
               selectedSplitIsland: this.state.selectedSplitIsland,
               selectedPeninsula: this.state.selectedPeninsula,
@@ -14418,13 +14448,11 @@ var QuoteTabs = function (_Component) {
               renderInstaQuote: this.state.renderInstaQuote,
               wantToOwn: this.state.wantToOwn,
               eventInVegas: this.state.eventInVegas,
+              addVideoWall: this.state.addVideoWall,
+              addTv: this.state.addTv,
               renderSingleBooth: this.renderSingleBooth.bind(this),
               doRevealInstaQuote: this.doRevealInstaQuote.bind(this),
               doRenderInstaQuote: this.doRenderInstaQuote.bind(this),
-              doAddVideoWall: this.doAddVideoWall.bind(this),
-              doAddTv: this.doAddTv.bind(this),
-              addVideoWall: this.state.addVideoWall,
-              addTv: this.state.addTv,
               discountOn: this.props.discountOn,
               discountNumber: this.props.discountNumber,
               discountType: this.props.discountType,
@@ -14482,7 +14510,7 @@ var DiscountBanner = function (_Component) {
   _createClass(DiscountBanner, [{
     key: 'render',
     value: function render() {
-      var bannerBackgroundImage = 'url(/morethanspaces/assets/img/banners/' + this.props.discountBanner + '';
+      var bannerBackgroundImage = 'url(assets/img/banners/' + this.props.discountBanner + '';
       return _react2.default.createElement(
         'div',
         { id: 'discountbanner' },
@@ -14736,7 +14764,7 @@ var Footer = function (_Component) {
             )
           )
         ),
-        _react2.default.createElement(_IconsBar2.default, { backgroundColor: '#e0e221', color: '#383838' }),
+        _react2.default.createElement(_IconsBar2.default, { backgroundColor: '#eee81a', color: '#383838' }),
         _react2.default.createElement(
           'p',
           { className: 'colophon' },
@@ -15436,7 +15464,7 @@ var StaticSection = function (_Component) {
             ),
             _react2.default.createElement(
               "div",
-              { className: "stepgreenbox" },
+              { className: "stepyellowbox" },
               _react2.default.createElement(
                 "p",
                 null,
@@ -15766,6 +15794,8 @@ var BoothGrid = function (_Component) {
             singleValue: this.state.singleValue,
             boothType: this.state.boothType,
             wantToOwn: this.props.wantToOwn,
+            addTv: this.props.addTv,
+            addVideoWall: this.props.addVideoWall,
             eventInVegas: this.props.eventInVegas,
             width: this.state.width,
             length: this.state.length,
@@ -15838,10 +15868,6 @@ var _CSSTransitionGroup2 = _interopRequireDefault(_CSSTransitionGroup);
 var _SketchFab = __webpack_require__(129);
 
 var _SketchFab2 = _interopRequireDefault(_SketchFab);
-
-var _CheckBox = __webpack_require__(68);
-
-var _CheckBox2 = _interopRequireDefault(_CheckBox);
 
 var _reactSlick = __webpack_require__(106);
 
@@ -15993,18 +16019,6 @@ var SingleBooth = function (_Component) {
             null,
             this.props.description
           ),
-          _react2.default.createElement(_CheckBox2.default, { inputType: 'checkbox', classList: 'addOnCheck', nameFor: 'TV', checkFor: 'TV' }),
-          _react2.default.createElement(
-            'label',
-            null,
-            'add TV(s)'
-          ),
-          _react2.default.createElement(_CheckBox2.default, { inputType: 'checkbox', classList: 'addOnCheck', nameFor: 'videoWall', checkFor: 'videoWall' }),
-          _react2.default.createElement(
-            'label',
-            null,
-            'add videowall'
-          ),
           button
         )
       );
@@ -16138,10 +16152,22 @@ var TradeShowForm = function (_Component) {
     _this.handleRent = _this.handleRent.bind(_this);
     _this.doShip = _this.doShip.bind(_this);
     _this.doNotShip = _this.doNotShip.bind(_this);
+    _this.setTv = _this.setTv.bind(_this);
+    _this.setVideoWall = _this.setVideoWall.bind(_this);
     return _this;
   }
 
   _createClass(TradeShowForm, [{
+    key: 'setVideoWall',
+    value: function setVideoWall() {
+      this.props.doAddVideoWall();
+    }
+  }, {
+    key: 'setTv',
+    value: function setTv() {
+      this.props.doAddTv();
+    }
+  }, {
     key: 'doShip',
     value: function doShip() {
       this.props.needShipping();
@@ -16267,7 +16293,7 @@ var TradeShowForm = function (_Component) {
           null,
           'booth type'
         ),
-        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', classList: 'formCheck', nameFor: 'Island', checkFor: 'island', checked: 'checked' }),
+        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', classList: 'formCheck', nameFor: 'Island', checkFor: 'island', checked: this.props.selectedIsland }),
         _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', classList: 'formCheck', nameFor: 'SplitIsland', checkFor: 'split island', checked: 'checked', doubleLine: 'doubleLine' }),
         _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', classList: 'formCheck', nameFor: 'Peninsula', checked: 'checked', checkFor: 'peninsula' }),
         _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', classList: 'formCheck noMarginRight', nameFor: 'Inline', checked: 'checked', checkFor: 'inline' })
@@ -16291,13 +16317,7 @@ var TradeShowForm = function (_Component) {
             ),
             ' to booths'
           )
-        )
-      );
-      var menuChoice = this.props.individualBoothRender ? backToBooths : boothMenu;
-      return _react2.default.createElement(
-        'div',
-        { className: 'instaQuoteForm' },
-        menuChoice,
+        ),
         _react2.default.createElement(
           'label',
           null,
@@ -16310,8 +16330,21 @@ var TradeShowForm = function (_Component) {
           null,
           'event location'
         ),
-        _react2.default.createElement(_CheckBox2.default, { onClick: this.doNotShip, inputType: 'radio', classList: 'formCheck', nameFor: 'inVegas', doubleLine: 'doubleLine', checked: 'checked', checkFor: 'Las Vegas' }),
-        _react2.default.createElement(_CheckBox2.default, { onClick: this.doShip, inputType: 'radio', classList: 'formCheck', nameFor: 'inVegas', checkFor: 'else' })
+        _react2.default.createElement(_CheckBox2.default, { onClick: this.doNotShip, inputType: 'radio', classList: 'formCheck', nameFor: 'inVegas', checked: 'checked', checkFor: 'Las Vegas' }),
+        _react2.default.createElement(_CheckBox2.default, { onClick: this.doShip, inputType: 'radio', classList: 'formCheck', nameFor: 'inVegas', checkFor: 'else' }),
+        _react2.default.createElement(
+          'label',
+          null,
+          'stand out even more'
+        ),
+        _react2.default.createElement(_CheckBox2.default, { onChange: this.setTv, inputType: 'checkbox', classList: 'formCheck', nameFor: 'addons', checked: this.props.addTv, checkFor: 'add Tv(s)' }),
+        _react2.default.createElement(_CheckBox2.default, { onChange: this.setVideoWall, inputType: 'checkbox', classList: 'formCheck', nameFor: 'addons', checkFor: 'add videowall' })
+      );
+      var menuChoice = this.props.individualBoothRender ? backToBooths : boothMenu;
+      return _react2.default.createElement(
+        'div',
+        { className: 'instaQuoteForm' },
+        menuChoice
       );
     }
   }]);
@@ -16395,9 +16428,12 @@ var App = function (_Component) {
       discountType: '',
       discountText: '',
       discountSmallText: '',
-      discountBanner: ''
+      discountBanner: '',
+      maintenance: true
     };
     _this.loadDiscounts = _this.loadDiscounts.bind(_this);
+    _this.quitMaintenance = _this.quitMaintenance.bind(_this);
+    _this.initScrollMagic = _this.initScrollMagic.bind(_this);
     return _this;
   }
 
@@ -16421,6 +16457,20 @@ var App = function (_Component) {
       xhr.send();
     }
   }, {
+    key: 'initScrollMagic',
+    value: function initScrollMagic() {
+      var script = document.createElement("script");
+      script.src = "assets/js/scrollmagic.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, {
+    key: 'quitMaintenance',
+    value: function quitMaintenance() {
+      this.setState({ maintenance: false });
+      this.initScrollMagic();
+    }
+  }, {
     key: 'discountSymbol',
     value: function discountSymbol() {
       if (this.props.discountType === "percentage") {
@@ -16433,6 +16483,9 @@ var App = function (_Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       this.loadDiscounts();
+      if (this.state.maintenance == false) {
+        this.initScrollMagic();
+      }
     }
   }, {
     key: 'goToTab',
@@ -16442,7 +16495,27 @@ var App = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(
+      var maintenanceButton = _react2.default.createElement(
+        'div',
+        { className: 'loading' },
+        _react2.default.createElement('img', { src: 'assets/img/layout/logoshort.svg' }),
+        _react2.default.createElement(
+          'h2',
+          null,
+          'Stay tuned'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'we\'re launching soon'
+        ),
+        _react2.default.createElement(
+          'button',
+          { onClick: this.quitMaintenance },
+          'quit'
+        )
+      );
+      var appDecision = _react2.default.createElement(
         'div',
         null,
         _react2.default.createElement(_Nav2.default, { goToTab: this.goToTab.bind(this),
@@ -16465,6 +16538,8 @@ var App = function (_Component) {
         _react2.default.createElement(_ContactSection2.default, null),
         _react2.default.createElement(_Footer2.default, null)
       );
+      var doRenderApp = this.state.maintenance ? maintenanceButton : appDecision;
+      return doRenderApp;
     }
   }]);
 

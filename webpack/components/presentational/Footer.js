@@ -70,7 +70,7 @@ class Footer extends Component {
         </ul>
 
       </footer>
-      <IconsBar backgroundColor={'#e0e221'} color={'#383838'}/>
+      <IconsBar backgroundColor={'#eee81a'} color={'#383838'}/>
           <p className="colophon">© <b>morethanspaces</b> 2017, all rights reserved.<br/>
           website developed by <b>Rodrigo Salmeron</b>
           </p>

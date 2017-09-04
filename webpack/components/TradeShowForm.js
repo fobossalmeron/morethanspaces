@@ -12,8 +12,16 @@ class TradeShowForm extends Component {
     this.handleRent = this.handleRent.bind(this);
     this.doShip = this.doShip.bind(this);
     this.doNotShip = this.doNotShip.bind(this);
+    this.setTv = this.setTv.bind(this);
+    this.setVideoWall = this.setVideoWall.bind(this);
   }
 
+  setVideoWall(){
+    this.props.doAddVideoWall();
+  }
+  setTv(){
+    this.props.doAddTv();
+  }
   doShip(){
     this.props.needShipping();
   }
@@ -58,7 +66,7 @@ class TradeShowForm extends Component {
           <option value="50">50ft</option>
         </select>
         <label>booth type</label>
-          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck" nameFor="Island" checkFor="island" checked="checked"/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck" nameFor="Island" checkFor="island" checked={this.props.selectedIsland}/>
           <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck" nameFor="SplitIsland" checkFor="split island" checked="checked" doubleLine="doubleLine"/>
           <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck" nameFor="Peninsula" checked="checked" checkFor="peninsula"/>
           <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck noMarginRight" nameFor="Inline" checked="checked" checkFor="inline"/>
@@ -70,18 +78,21 @@ class TradeShowForm extends Component {
           <Arrow className={"new-arrow"} color={"#f9f9f9"} width={"25px"}/>
           <a onClick={() => this.props.closeSingleBooth()}><b>back</b> to booths</a>
         </div>
+        <label>rent or own?</label>
+          <CheckBox onClick={this.handleRent} inputType="radio" classList="formCheck" nameFor="rentOrOwn" checked="true" checkFor="rent"/>
+          <CheckBox onClick={this.handleOwn} inputType="radio" classList="formCheck" nameFor="rentOrOwn" checkFor="own"/>
+        <label>event location</label>
+          <CheckBox onClick={this.doNotShip} inputType="radio" classList="formCheck" nameFor="inVegas" checked="checked" checkFor="Las Vegas"/>
+          <CheckBox onClick={this.doShip} inputType="radio" classList="formCheck" nameFor="inVegas" checkFor="else"/>
+        <label>stand out even more</label>
+          <CheckBox onChange={this.setTv} inputType="checkbox" classList="formCheck" nameFor="addons" checked={this.props.addTv} checkFor="add Tv(s)"/>
+          <CheckBox onChange={this.setVideoWall} inputType="checkbox" classList="formCheck" nameFor="addons" checkFor="add videowall"/>
       </div>
     )
     var menuChoice = (this.props.individualBoothRender ? backToBooths : boothMenu);
     return (
       <div className="instaQuoteForm">
         {menuChoice}
-        <label>rent or own?</label>
-          <CheckBox onClick={this.handleRent} inputType="radio" classList="formCheck" nameFor="rentOrOwn" checked="true" checkFor="rent"/>
-          <CheckBox onClick={this.handleOwn} inputType="radio" classList="formCheck" nameFor="rentOrOwn" checkFor="own"/>
-        <label>event location</label>
-          <CheckBox onClick={this.doNotShip} inputType="radio" classList="formCheck" nameFor="inVegas" doubleLine="doubleLine" checked="checked" checkFor="Las Vegas"/>
-          <CheckBox onClick={this.doShip} inputType="radio" classList="formCheck" nameFor="inVegas" checkFor="else"/>
       </div>
     )
   }

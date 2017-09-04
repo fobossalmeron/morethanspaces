@@ -9,8 +9,7 @@ class HomeSection extends Component {
       fullVideo: false,
       playing: true,
       videoVolume: 0,
-      urlVimeo: "https://vimeo.com/231768380",
-      url: '/morethanspaces/assets/video/intro.mp4',
+      url: 'assets/video/intro.mp4',
     };
   this.playFullVideo = this.playFullVideo.bind(this);
   this.backToLanding = this.backToLanding.bind(this);
@@ -20,16 +19,14 @@ class HomeSection extends Component {
 
   playFullVideo(){
     this.setState({
-      urlVimeo: "https://vimeo.com/231768166",
-      url: "/morethanspaces/assets/video/full.mp4",
+      url: "assets/video/full.mp4",
       fullVideo: true,
       videoVolume: 1
     }, () => console.log(this.state.fullVideo))
   }
   backToLanding(){
     this.setState({
-      urlVimeo: "https://vimeo.com/231768380",
-      url: '/morethanspaces/assets/video/intro.mp4',
+      url: 'assets/video/intro.mp4',
       fullVideo: false,
       videoVolume: 0
     })

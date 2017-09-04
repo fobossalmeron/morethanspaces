@@ -90,7 +90,7 @@ class StaticSection extends Component {
         </div>
         <div className="half-card">
           <h2><b>motto</b></h2>
-          <div className="stepgreenbox">
+          <div className="stepyellowbox">
             <p><b>more for less</b><br/>better service, better products, <br/>better results, less stress, less worry</p>
           </div>
           <h1><b>more than spaces</b></h1>

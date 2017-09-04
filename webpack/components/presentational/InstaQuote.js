@@ -5,47 +5,80 @@ class InstaQuote extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      discount: '',
-      discountNumber: '',
-      discountType: ''
+      maxDiscount: false,
     };
-    this.loadDiscounts = this.loadDiscounts.bind(this);
+     this.boothPrice = this.boothPrice.bind(this);
+     this.discountedBoothPrice = this.discountedBoothPrice.bind(this);
+     this.flagMaxDiscount = this.flagMaxDiscount.bind(this);
   }
 
-  loadDiscounts () {
-       var xhr = new XMLHttpRequest();
-       xhr.open('get', './assets/discounts/discount.js', true);
-       xhr.onload = function() {
-           var info = JSON.parse(xhr.responseText);
-
-           this.setState({
-             discount: info.discount,
-             discountNumber: info.discountNumber,
-             discountType: info.discountType
-           });
-       }.bind(this);
-       xhr.send();
+  discountSymbol(){
+    if (this.props.discountType === "percentage") {
+        return "%"
+      } else {
+       return "$"
+     }
    }
-
-   componentDidMount() {
-    this.loadDiscounts();
-  }
 
   showCalendly(){
     Calendly.showPopupWidget('https://calendly.com/morethanspaces');
     return false;
   }
 
+  boothPrice(){
+    var price = 0
+    if (this.props.wantToOwn){
+      price = this.props.own
+    } else {
+      price = this.props.rent
+    }
+    if (this.props.addTv){
+      price = price + this.props.tv
+    }
+    if (this.props.addVideoWall){
+      price = price + this.props.videowall
+    }
+   return price
+   console.log(price);
+  }
+
+  flagMaxDiscount(){
+    this.setState({maxDiscount: true}, ()=> console.log(this.state.maxDiscount));
+  }
+
+  discountedBoothPrice(somePrice){
+    var price = somePrice
+    if (this.props.discountOn){
+      if (this.props.discountType === "amount"){
+        price = (price - this.props.discountNumber)
+        console.log("amount apply")
+      } else if (this.props.discountType === "percentage"){
+          price = (1 - (this.props.discountNumber / 100)) * price
+          console.log("percentage apply")
+
+          if ((somePrice - price) > 5000) {
+            price = somePrice - 5000
+            console.log("max discount apply")
+          }
+      }
+    }
+   return price
+   console.log(price);
+  }
+
   render (){
-    var price = 13000;
+    var originalPrice = this.boothPrice();
+    var finalPrice = this.discountedBoothPrice(originalPrice);
     var renderRentOwn = this.props.wantToOwn? "own" : "rent";
     var renderInVegas = this.props.eventInVegas? "in" : "outside";
     var reveal = this.props.revealInstaQuote? "revealQuote quoteNumber" : "quoteNumber";
     var renderTv = this.props.addTv? <li>You added a <b>Tv</b></li> : undefined;
     var renderVideoWall = this.props.addVideoWall? <li>You added a <b>videowall</b></li> : undefined;
 
+    var maximumReached = this.state.maxDiscount?  ' *maximum discount amount reached' : '';
+
     var narrateDiscount = (
-      '(' + price + '$ - ' + this.props.discountNumber + this.props.discountSymbol() + ' discount)'
+      '(' + originalPrice + '$ - ' + this.props.discountNumber + this.discountSymbol() + ' discount)' + maximumReached
     )
     var isDiscount = this.props.discountOn? narrateDiscount : "we don't have discount";
 
@@ -53,7 +86,7 @@ class InstaQuote extends Component {
     return (
     <div className="instaBlock">
       <div className="instaColumn">
-        <div className="instaThumbnail" style={{backgroundImage: 'url(' + this.props.images[0].url + ')'}}></div>
+        <div className="instaThumbnail" style={{backgroundImage: ''}}></div>
         <ul>
           <li>model: <b>{this.props.singleValue}</b></li>
           <li>size: <b>{this.props.width}</b>ft x <b>{this.props.length}</b>ft</li>
@@ -66,11 +99,11 @@ class InstaQuote extends Component {
       </div>
       <div className="instaInfo">
         <h2>instaQuote</h2>
-        <div className={reveal}><p>${price} USD</p><span>{isDiscount}</span></div>
+        <div className={reveal}><p>${finalPrice} USD</p><span>{isDiscount}</span></div>
         <ul>
           <li>*for up to 3 event days</li>
         </ul>
-        <button className="instaQuoteButton wasLink" onClick={() => this.showCalendly()}>Schedule a call!</button>
+        <button className="instaQuoteButton wasLink" onClick={() => this.showCalendly()}>schedule a call!</button>
         <p><em>we don&quot;t believe in pressure sales, schedule with confidence</em></p>
       </div>
     </div>

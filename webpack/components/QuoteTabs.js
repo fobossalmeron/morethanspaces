@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import TradeShowForm from './TradeShowForm';
+import BoothForm from './BoothForm';
+import VideoWallForm from './VideoWallForm';
 import BoothGrid from './BoothGrid';
-import CollectBeforeQuote from './CollectBeforeQuote';
+import VideoWallGrid from './VideoWallGrid';
 
 class QuoteTabs extends Component {
   constructor(props) {
@@ -14,9 +15,13 @@ class QuoteTabs extends Component {
       selectedSplitIsland: true,
       selectedInline: true,
       selectedPeninsula: true,
+      selectedTv: true,
+      selectedLed: true,
+      selectedLcd: true,
       wantToOwn: false,
       eventInVegas: true,
       individualBoothRender: false,
+      individualVideoWallRender: false,
       renderInstaQuote: false,
       revealInstaQuote: false,
       addVideoWall: false,
@@ -59,8 +64,16 @@ class QuoteTabs extends Component {
     this.setState({ individualBoothRender: true })
   }
 
+  renderSingleVideoWall(){
+    this.setState({ individualVideoWallRender: true })
+  }
+
   closeSingleBooth(){
     this.setState({ individualBoothRender: false });
+  }
+
+  closeSingleVideoWall(){
+    this.setState({ individualVideoWallRender: false });
   }
 
   toggleBooth(booth){
@@ -76,6 +89,20 @@ class QuoteTabs extends Component {
         break
       case "Inline":
         this.setState({selectedInline: !this.state.selectedInline})
+        break
+    }
+  }
+
+  toggleVideoWall(videoWall){
+    switch (videoWall) {
+      case "Tv":
+        this.setState({selectedTv: !this.state.selectedTv})
+        break
+      case "LED":
+        this.setState({selectedLed: !this.state.selectedLed})
+        break
+      case "LCD":
+        this.setState({selectedLcd: !this.state.selectedLcd})
         break
     }
   }
@@ -116,7 +143,7 @@ class QuoteTabs extends Component {
         </TabList>
 
         <TabPanel>
-          <TradeShowForm toggleBooth={this.toggleBooth.bind(this)}
+          <BoothForm toggleBooth={this.toggleBooth.bind(this)}
                          limitByWidth={this.limitByWidth.bind(this)}
                          limitByLength={this.limitByLength.bind(this)}
                          individualBoothRender={this.state.individualBoothRender}
@@ -130,7 +157,8 @@ class QuoteTabs extends Component {
                          addTv={this.state.addTv}
                          selectedIsland={this.state.selectedIsland}/>
 
-          <BoothGrid    selectedIsland={this.state.selectedIsland}
+          <BoothGrid    dataToLoad={"./assets/js/booths.json"}
+                        selectedIsland={this.state.selectedIsland}
                         selectedSplitIsland={this.state.selectedSplitIsland}
                         selectedPeninsula={this.state.selectedPeninsula}
                         selectedInline={this.state.selectedInline}
@@ -148,11 +176,29 @@ class QuoteTabs extends Component {
                         doRenderInstaQuote={this.doRenderInstaQuote.bind(this)}
                         discountOn={this.props.discountOn}
                         discountNumber={this.props.discountNumber}
-                        discountType={this.props.discountType}
-                        discountSymbol={this.props.discountSymbol.bind(this)}/>
+                        discountType={this.props.discountType}/>
         </TabPanel>
         <TabPanel>
-          <img src="assets/img/mock.png"/>
+          <VideoWallForm toggleVideoWall={this.toggleVideoWall.bind(this)}
+                         individualVideoWallRender={this.state.individualVideoWallRender}
+                         closeSingleVideoWall={this.closeSingleVideoWall.bind(this)}
+                         needShipping={this.needShipping.bind(this)}
+                         noNeedShipping={this.noNeedShipping.bind(this)}/>
+
+          <VideoWallGrid dataToLoad={"./assets/js/videowalls.json"}
+                         individualVideoWallRender={this.state.individualVideoWallRender}
+                         selectedTv={this.state.selectedTv}
+                         selectedLcd={this.state.selectedLcd}
+                         selectedLed={this.state.selectedLed}
+                         revealInstaQuote={this.state.revealInstaQuote}
+                         renderInstaQuote={this.state.renderInstaQuote}
+                         eventInVegas={this.state.eventInVegas}
+                         renderSingleVideoWall={this.renderSingleVideoWall.bind(this)}
+                         doRevealInstaQuote={this.doRevealInstaQuote.bind(this)}
+                         doRenderInstaQuote={this.doRenderInstaQuote.bind(this)}
+                         discountOn={this.props.discountOn}
+                         discountNumber={this.props.discountNumber}
+                         discountType={this.props.discountType}/>
         </TabPanel>
       </Tabs>
       </section>

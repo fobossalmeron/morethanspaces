@@ -63,7 +63,7 @@ class SingleBooth extends Component {
     var backgroundStyle = {
       backgroundImage: 'url(' + this.state.mainImage + ')',
     };
-    var choice3D = (this.state.render3D ? <SketchFab/> : null);
+    var choice3D = (this.state.render3D ? <SketchFab obj={this.props.obj} /> : null);
 
     var numberOfImages = this.props.images.map((image, index) => (
       <img key={image.url} className="thumbnailBooth" onClick={() => this.handleView(index)} src={this.props.images[index].url}/>

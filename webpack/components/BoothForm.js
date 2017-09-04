@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CheckBox from './presentational/CheckBox';
 import Arrow from './presentational/Arrow';
 
-class TradeShowForm extends Component {
+class BoothForm extends Component {
   constructor(props) {
     super(props);
     this.handleWidthChange = this.handleWidthChange.bind(this);
@@ -103,4 +103,4 @@ class TradeShowForm extends Component {
     )
   }
 }
-export default TradeShowForm;
+export default BoothForm;

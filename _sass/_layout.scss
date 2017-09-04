@@ -242,7 +242,7 @@ footer{
   right: 25px;
   background-size: cover;
   cursor: pointer;
-  background-image: url("#{$baseurl}/assets/img/instaQuote.svg");
+  background-image: url("../img/instaQuote.svg");
   transition: .4s ease;
   &:hover{
     animation-play-state: running;
@@ -447,7 +447,7 @@ section{
     right: 0;
     bottom: 0;
     top: 0;
-    background-image:url("#{$baseurl}/assets/img/overlay.png");
+    background-image:url("../img/overlay.png");
   }
 
   video{
@@ -508,7 +508,7 @@ section{
   height:100px;
   margin-bottom: 20px;
   position: relative;
-  background-image: url("#{$baseurl}/assets/img/3dBack.svg");
+  background-image: url("../img/3dBack.svg");
   background-size: cover;
   background-position: center center;
 }
@@ -940,40 +940,40 @@ input[type=text]{
 }
 
 .clientNike{
-  background-image: url("#{$baseurl}/assets/img/clients/clientNike.svg");
+  background-image: url("../img/clients/clientNike.svg");
 }
 .clientCocaCola{
-  background-image: url("#{$baseurl}/assets/img/clients/clientCocaCola.svg");
+  background-image: url("../img/clients/clientCocaCola.svg");
 }
 .clientMoneyGram{
-  background-image: url("#{$baseurl}/assets/img/clients/clientMoneyGram.svg");
+  background-image: url("../img/clients/clientMoneyGram.svg");
 }
 .clientChanel{
-  background-image: url("#{$baseurl}/assets/img/clients/clientChanel.svg");
+  background-image: url("../img/clients/clientChanel.svg");
 }
 .clientCapitalOne{
-  background-image: url("#{$baseurl}/assets/img/clients/clientCapitalOne.svg");
+  background-image: url("../img/clients/clientCapitalOne.svg");
 }
 .clientBaseF{
-  background-image: url("#{$baseurl}/assets/img/clients/clientBaseF.svg");
+  background-image: url("../img/clients/clientBaseF.svg");
 }
 .clientBoss{
-  background-image: url("#{$baseurl}/assets/img/clients/clientBoss.svg");
+  background-image: url("../img/clients/clientBoss.svg");
 }
 .clientBMW{
-  background-image: url("#{$baseurl}/assets/img/clients/clientBMW.svg");
+  background-image: url("../img/clients/clientBMW.svg");
 }
 .clientPepsico{
-  background-image: url("#{$baseurl}/assets/img/clients/clientPepsico.svg");
+  background-image: url("../img/clients/clientPepsico.svg");
 }
 .clientNovartis{
-  background-image: url("#{$baseurl}/assets/img/clients/clientNovartis.svg");
+  background-image: url("../img/clients/clientNovartis.svg");
 }
 .clientKraft{
-  background-image: url("#{$baseurl}/assets/img/clients/clientKraft.svg");
+  background-image: url("../img/clients/clientKraft.svg");
 }
 .clientDiageo{
-  background-image: url("#{$baseurl}/assets/img/clients/clientDiageo.svg");
+  background-image: url("../img/clients/clientDiageo.svg");
 }
 .instaQuoteForm {
     background-color: $black;

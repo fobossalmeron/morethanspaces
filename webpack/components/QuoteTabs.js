@@ -26,11 +26,11 @@ class QuoteTabs extends Component {
   }
 
   doAddVideoWall(){
-    this.setState({ addVideoWall: true}, ()=> console.log("videowall added"));
+    this.setState({ addVideoWall: !this.state.addVideoWall }, ()=> console.log("videowall " + this.state.addVideoWall));
   }
 
   doAddTv(){
-    this.setState({ addTv: true}, ()=> console.log("Tv added"));
+    this.setState({ addTv: !this.state.addTv}, ()=> console.log("Tv " + this.state.addTv));
   }
 
   needShipping(){
@@ -41,10 +41,10 @@ class QuoteTabs extends Component {
   }
 
   doWantToOwn(){
-    this.setState({ wantToOwn: true }, ()=> console.log("i want to own it"));
+    this.setState({ wantToOwn: true }, ()=> console.log("i want to OWN it"));
   }
   doWantToRent(){
-    this.setState({ wantToOwn: false }, ()=> console.log("just want to rent it"));
+    this.setState({ wantToOwn: false }, ()=> console.log("just want to RENT it"));
   }
 
   doRenderInstaQuote(){
@@ -124,7 +124,11 @@ class QuoteTabs extends Component {
                          doWantToOwn={this.doWantToOwn.bind(this)}
                          doWantToRent={this.doWantToRent.bind(this)}
                          needShipping={this.needShipping.bind(this)}
-                         noNeedShipping={this.noNeedShipping.bind(this)}/>
+                         noNeedShipping={this.noNeedShipping.bind(this)}
+                         doAddVideoWall={this.doAddVideoWall.bind(this)}
+                         doAddTv={this.doAddTv.bind(this)}
+                         addTv={this.state.addTv}
+                         selectedIsland={this.state.selectedIsland}/>
 
           <BoothGrid    selectedIsland={this.state.selectedIsland}
                         selectedSplitIsland={this.state.selectedSplitIsland}
@@ -137,13 +141,11 @@ class QuoteTabs extends Component {
                         renderInstaQuote={this.state.renderInstaQuote}
                         wantToOwn={this.state.wantToOwn}
                         eventInVegas={this.state.eventInVegas}
+                        addVideoWall={this.state.addVideoWall}
+                        addTv={this.state.addTv}
                         renderSingleBooth={this.renderSingleBooth.bind(this)}
                         doRevealInstaQuote={this.doRevealInstaQuote.bind(this)}
                         doRenderInstaQuote={this.doRenderInstaQuote.bind(this)}
-                        doAddVideoWall={this.doAddVideoWall.bind(this)}
-                        doAddTv={this.doAddTv.bind(this)}
-                        addVideoWall={this.state.addVideoWall}
-                        addTv={this.state.addTv}
                         discountOn={this.props.discountOn}
                         discountNumber={this.props.discountNumber}
                         discountType={this.props.discountType}

@@ -41,6 +41,8 @@ class InstaQuote extends Component {
     var renderRentOwn = this.props.wantToOwn? "own" : "rent";
     var renderInVegas = this.props.eventInVegas? "in" : "outside";
     var reveal = this.props.revealInstaQuote? "revealQuote quoteNumber" : "quoteNumber";
+    var renderTv = this.props.addTv? <li>You added a <b>Tv</b></li> : undefined;
+    var renderVideoWall = this.props.addVideoWall? <li>You added a <b>videowall</b></li> : undefined;
 
     var narrateDiscount = (
       '(' + price + '$ - ' + this.props.discountNumber + this.props.discountSymbol() + ' discount)'
@@ -58,13 +60,14 @@ class InstaQuote extends Component {
           <li>type: {this.props.boothType}</li>
           <li>You want to <b>{renderRentOwn}</b> it</li>
           <li>This event is <b>{renderInVegas}</b> Las Vegas </li>
+          {renderTv}
+          {renderVideoWall}
         </ul>
       </div>
       <div className="instaInfo">
         <h2>instaQuote</h2>
-        <div className={reveal}>${price} USD</div>
+        <div className={reveal}><p>${price} USD</p><span>{isDiscount}</span></div>
         <ul>
-          <li>{isDiscount}</li>
           <li>*for up to 3 event days</li>
         </ul>
         <button className="instaQuoteButton wasLink" onClick={() => this.showCalendly()}>Schedule a call!</button>

@@ -6,7 +6,7 @@ import QuoteTabs from './components/QuoteTabs';
 import Nav from './components/presentational/Nav';
 import Footer from './components/presentational/Footer';
 import InstaQuoteButton from './components/presentational/InstaQuoteButton';
-import StaticSection from './components/StaticSection';
+import StaticSection from './components/presentational/StaticSection';
 import ContactSection from './components/ContactSection';
 import DiscountBanner from './components/presentational/DiscountBanner';
 
@@ -21,8 +21,11 @@ class App extends Component {
         discountText: '',
         discountSmallText: '',
         discountBanner: '',
+        maintenance: true
       };
     this.loadDiscounts = this.loadDiscounts.bind(this);
+    this.quitMaintenance = this.quitMaintenance.bind(this);
+    this.initScrollMagic = this.initScrollMagic.bind(this);
   }
 
   loadDiscounts () {
@@ -43,6 +46,18 @@ class App extends Component {
        xhr.send();
    }
 
+   initScrollMagic(){
+     const script = document.createElement("script");
+     script.src = "assets/js/scrollmagic.js";
+     script.async = true;
+     document.body.appendChild(script);
+   }
+
+   quitMaintenance(){
+     this.setState({maintenance: false})
+     this.initScrollMagic();
+   }
+
    discountSymbol(){
      if (this.props.discountType === "percentage") {
          return "%"
@@ -53,6 +68,9 @@ class App extends Component {
 
    componentDidMount() {
     this.loadDiscounts();
+    if (this.state.maintenance == false){
+      this.initScrollMagic();
+    }
   }
 
   goToTab(index){
@@ -60,7 +78,15 @@ class App extends Component {
   }
 
   render() {
-    return (
+    var maintenanceButton = (
+      <div className="loading">
+        <img src="assets/img/layout/logoshort.svg"/>
+        <h2>Stay tuned</h2>
+        <p>we&#39;re launching soon</p>
+        <button onClick={this.quitMaintenance}>quit</button>
+      </div>
+    )
+    var appDecision = (
       <div>
         <Nav goToTab={this.goToTab.bind(this)}
              discountOn={this.state.discountOn}
@@ -83,6 +109,8 @@ class App extends Component {
         <Footer/>
       </div>
     )
+    var doRenderApp = this.state.maintenance? maintenanceButton : appDecision;
+    return doRenderApp
   }
 }
 

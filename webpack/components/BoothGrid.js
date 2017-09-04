@@ -109,6 +109,8 @@ class BoothGrid extends Component {
                   singleValue={this.state.singleValue}
                   boothType={this.state.boothType}
                   wantToOwn={this.props.wantToOwn}
+                  addTv={this.props.addTv}
+                  addVideoWall={this.props.addVideoWall}
                   eventInVegas={this.props.eventInVegas}
                   width={this.state.width}
                   length={this.state.length}

@@ -42,13 +42,19 @@ class ContactSection extends Component {
     return (
       <section id="contact">
         <h2><b>contact</b></h2>
-        <p><b>Let us answer your question! Contact us for all your trade show needs.</b><br/>
-        We understand you may have questions and general answers may not be what you are looking for. We
-        will be more than happy to answer any of your questions. Please fill out your information below with
-        your question and we will be happy to answer you back or if you need immediate assistant please give
-        us a call at <a href="tel:1 833 667 3842">1-833-morethanspaces</a> <a href="tel:1 833 667 3842">(1-833-667-3842)</a></p>
+          <div className="half-card">
+            <p>Have questions or want expert advise?<br/>
+            We are happy to help<br/>
+            Friendly service. No pressure sale.</p>
+          </div>
+          <div className="half-card contact-different">
+            <h3>call us</h3>
+            <a href="tel:1 833 667 3842"><b>1-833-morethanspaces</b><br/>(1-833-667-3842)</a>
+            <h3>email us</h3>
+            <a href="mailto:hello@morethanspaces.com"><b>hello@morethanspaces.com</b></a>
+          </div>
         <div className={messageClass}>
-          <h3>send us an email</h3>
+          <h3>message us</h3>
           <Form
             onSubmit={(values) => {
               console.log('Form Submitted Succesfully with:', values)
@@ -118,7 +124,7 @@ class ContactSection extends Component {
           </Form>
         </div>
         <div className="half-card">
-          <h3>or schedule a call!</h3>
+          <h3>schedule a call</h3>
           <div className="calendly-inline-widget" data-url={calendlyUrl}></div>
         </div>
       </section>

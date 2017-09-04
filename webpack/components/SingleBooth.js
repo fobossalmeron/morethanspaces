@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import SketchFab from './SketchFab';
-import CheckBox from './presentational/CheckBox';
 import Slider from 'react-slick';
 import Arrow from './presentational/Arrow';
 
@@ -94,10 +93,6 @@ class SingleBooth extends Component {
           <label></label>
           </div>
           <p>{this.props.description}</p>
-          <CheckBox inputType="checkbox" classList="addOnCheck" nameFor="TV" checkFor="TV"/>
-          <label>add TV(s)</label>
-          <CheckBox inputType="checkbox" classList="addOnCheck" nameFor="videoWall" checkFor="videoWall"/>
-          <label>add videowall</label>
           {button}
         </div>
       </div>

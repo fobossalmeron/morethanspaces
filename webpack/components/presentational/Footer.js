@@ -15,8 +15,8 @@ class Footer extends Component {
       <div>
       <footer>
         <ul>
-          <li className="two-lists">
-            <h3>follow us!</h3>
+          <li>
+            <h3>follow us</h3>
             <ul className="social-list">
                <a href={"https://facebook.com/morethanspaces/"}>
                 <LinkedInIcon/>
@@ -36,36 +36,41 @@ class Footer extends Component {
                <a href={"https://facebook.com/morethanspaces/"}>
                  <GooglePlusIcon/>
                </a>
-               <a href={"https://facebook.com/morethanspaces/"}>
-
-                 <PinterestIcon/>
-               </a>
              </ul>
-             <div className="pinterestFeed">
-                <a data-pin-do="embedBoard" data-pin-board-width="300" data-pin-scale-height="200" data-pin-scale-width="115" href="https://www.pinterest.com/MoreThanSpaces/design/"></a>
-             </div>
+            </li>
+            <li>
+            <h3>be inspired</h3>
+            <div className="pinterestFeed">
+               <a data-pin-do="embedBoard" data-pin-board-width="300" data-pin-scale-height="200" data-pin-scale-width="115" href="https://www.pinterest.com/MoreThanSpaces/design/"></a>
+            </div>
             </li>
             <li>
               <h3>resources</h3>
               <a href="assets/pdf/sample.pdf" target="_blank">booth types</a>
-              <a href="assets/pdf/mts_timeline_and_graphic_specs.pdf" target="_blank">timeline & graphic specs</a>
+              <a href="assets/pdf/mts_timeline_and_graphic_specs.pdf" target="_blank">timeline &<br/>graphic specs</a>
               <a href="assets/pdf/sample.pdf" target="_blank">video walls</a>
               <a href="assets/pdf/sample.pdf" target="_blank">how to upload</a>
               <a href="assets/pdf/sample.pdf" target="_blank">payment info</a>
             </li>
             <li className="realestate">
-              <h3>contact us!</h3>
-              <p>send us an email</p>
-              <a href="mailto:hello@morethanspaces.com" target="_blank">hello@morethanspaces.com</a>
-              <p>or call us!</p>
-              <a href="tel:1 833 667 3842">1-833-morethanspaces</a><br/><a href="tel:1 833 667 3842">1-833-667-3842</a>
-              <p><br/>visit our showroom</p>
+              <h3>contact us</h3>
+              <div className="contactBox">
+                <p>call</p>
+                <a href="tel:1 833 667 3842"><b>1-833-morethanspaces</b></a><br/><a href="tel:1 833 667 3842">1-833-667-3842</a>
+              </div>
+              <div className="contactBox">
+              <p>email</p>
+              <a href="mailto:hello@morethanspaces.com" target="_blank"><b>hello@morethanspaces.com</b></a>
+              </div>
+              <div className="contactBox boxInvert">
+              <p>visit</p>
               <a href="https://goo.gl/maps/PY2Umx41Pey" target="_blank">900 Wigwam Parkway, Suite 100 Henderson, NV 89014</a>
+              </div>
             </li>
         </ul>
 
       </footer>
-      <IconsBar backgroundColor={'#e0e221'} color={'#383838'}/>
+      <IconsBar backgroundColor={'#eee81a'} color={'#383838'}/>
           <p className="colophon">© <b>morethanspaces</b> 2017, all rights reserved.<br/>
           website developed by <b>Rodrigo Salmeron</b>
           </p>

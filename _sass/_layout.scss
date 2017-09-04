@@ -1,3 +1,7 @@
+#app{
+  position: relative;
+}
+
 nav{
   height: 100px;
   background-color: transparent;
@@ -153,9 +157,21 @@ footer{
     width:100%;
     li{
       width:25%;
-      padding:2%;
+      padding: 0 2%;
       list-style: none;
       float:left;
+      &:nth-of-type(1){
+        width:17.5%;
+      }
+      &:nth-of-type(2){
+        width:30%;
+      }
+      &:nth-of-type(3){
+        width:19.5%;
+      }
+      &:nth-of-type(4){
+        width:33%;
+      }
       h3{
         font-weight:700;
         color:$blue;
@@ -167,7 +183,7 @@ footer{
 .social-list{
   float:left;
   clear:none;
-  width:40%;
+  width:100%;
   a{
     float: left;
     width: 60px;
@@ -195,7 +211,7 @@ footer{
 }
 
 .pinterestFeed{
-  width: 60%;
+  width: 100%;
   float: left;
   span, a{
     width:100%;
@@ -204,7 +220,7 @@ footer{
 
 .colophon{
   width: 100%;
-      background-color: $green;
+      background-color: $yellow;
       text-align: center;
       color: $black;
       float: left;
@@ -226,7 +242,7 @@ footer{
   right: 25px;
   background-size: cover;
   cursor: pointer;
-  background-image: url("#{$baseurl}/assets/img/instaQuote.svg");
+  background-image: url("../img/instaQuote.svg");
   transition: .4s ease;
   &:hover{
     animation-play-state: running;
@@ -276,7 +292,7 @@ footer{
   color: $white;
   font-size: 1em;
   padding: 10px;
-  margin-top:5%;
+  margin-top: 11%;
   transition: .4s ease all;
   &:hover{
     background-color:$blue;
@@ -287,7 +303,7 @@ section{
   min-height:500px;
   float:left;
   width:100%;
-  padding: 5%;
+  padding: 3% 5%;
 }
 
 #discountbanner{
@@ -295,7 +311,7 @@ section{
   float: left;
   padding-top: 4%;
   box-sizing: border-box;
-  background-color: $black;
+  background-color: black;
   min-height: 250px;
   width: 100%;
 }
@@ -306,7 +322,7 @@ section{
     margin: 0 auto;
     min-height: 200px;
     background-size: cover;
-    background-color: $green;
+    background-color: $yellow;
   }
 
 
@@ -357,7 +373,7 @@ section{
     background-color:$black;
   }
   button{
-    background-color: $green;
+    background-color: $yellow;
     color:$black;
     font-weight: 700;
     border-radius: 2px;
@@ -376,11 +392,11 @@ section{
       &:hover, &:focus{
         cursor:pointer;
         background-color:transparent;
-        color:$green;
-        border-color:$green;
+        color:$yellow;
+        border-color:$yellow;
         outline: none;
         svg{
-          fill:$green;
+          fill:$yellow;
         }
       }
   }
@@ -431,7 +447,7 @@ section{
     right: 0;
     bottom: 0;
     top: 0;
-    background-image:url("#{$baseurl}/assets/img/overlay.png");
+    background-image:url("../img/overlay.png");
   }
 
   video{
@@ -492,7 +508,7 @@ section{
   height:100px;
   margin-bottom: 20px;
   position: relative;
-  background-image: url("#{$baseurl}/assets/img/3dBack.svg");
+  background-image: url("../img/3dBack.svg");
   background-size: cover;
   background-position: center center;
 }
@@ -503,6 +519,7 @@ section{
 }
 
 .frompdf{
+  padding-top: 0 !important;
   p{
     float:left;
   }
@@ -514,7 +531,7 @@ section{
     font-weight: bold;
     color: $black;
     &:nth-of-type(1){
-      color: $green;
+      color: $yellow;
     }
     &:nth-of-type(2){
       color: $blue;
@@ -524,11 +541,23 @@ section{
       margin-right:2%;
     }
   }
+  .stepblackbox{
+    background-color: $black;
+    border-radius: 2px;
+    color: $white;
+    float: left;
+    padding: 2%;
+      p{
+        margin:0;
+      }
+  }
+
   .stepbox{
     width:100%;
     float:left;
     clear:both;
     font-weight:700;
+    border-radius: 2px;
     padding: 2%;
     height: 75px;
     margin-bottom: 3.5%;
@@ -544,7 +573,7 @@ section{
       margin-top:0%;
     }
     &:nth-of-type(1){
-      background-color: $green;
+      background-color: $yellow;
       width:60%;
     }
     &:nth-of-type(2){
@@ -559,20 +588,54 @@ section{
   }
 }
 
+.stepyellowbox{
+  background-color: $yellow;
+  color: $black;
+  border-radius: 2px;
+  width:100%;
+  float: left;
+  padding: 2%;
+  margin-bottom: 4%;
+    p{
+      margin:0;
+    }
+}
+
 #contact{
   background-color: $black;
   color:white;
+  .half-card{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  h3{
+    color:$yellow;
+    &:nth-of-type(2){
+      clear:left;
+    }
+  }
+  h2{
+    color:$blue;
+  }
   p{
-    column-count: 2;
-    column-gap: 50px;
     width: 100%;
   }
   a{
-    color:$white;
-    font-weight: 700;
+    color:$magenta;
+    margin-top: 15px;
+    float:left;
+    b{
+      font-weight: 700;
+    }
     &:hover{
       color:$magenta;
     }
+  }
+}
+.contact-different{
+  h3{
+    float:left;
+    margin-right:10px;
   }
 }
 
@@ -587,6 +650,7 @@ form{
   border: solid #666A73 5px;
   box-sizing: border-box;
   transition: .4s ease all;
+  margin-bottom: 2%;
 
   input, textarea, button{
     width:100%;
@@ -632,11 +696,11 @@ form{
 
 .half-card{
   width:50%;
-  padding: 2% 4% 2% 0;
+  padding: 2% 2% 2% 0;
   float:left;
   position:relative;
   box-sizing: border-box;
-  &:nth-child(2n+2){
+  &:nth-of-type(2n+2){
     padding-right:0;
     padding-left:2%;
   }
@@ -696,7 +760,7 @@ form{
 
 #products{
   padding: 4% 0 0 0;
-  background-color: $black;
+  background-color: black;
   h2{
     margin:0px;
     font-weight: 700;
@@ -707,30 +771,34 @@ form{
 }
 
 .quoteCheck{
-  width: 30px;
-  height: 30px;
+  width: 48%;
+  margin-right: 2%;
+  margin-bottom: 4%;
+  min-height: 30px;
   float: left;
   position: relative;
   label {
-   width: 100%;
-   height: 100%;
-   border-radius: 3px;
-   position: absolute;
-   left: 0;
-   border: 2px solid $black;
+    min-height: 100%;
+    border-radius: 2px;
+    background-color: $black;
+    font-size: .7em;
+    position: relative;
+    color: $yellow;
+    padding: 6% 4%;
+    left: 0;
+    border: 1px solid $yellow;
+    transition: .4s ease all;
    &:after {
-     content: '';
-         width: 18px;
-         height: 9px;
-         position: absolute;
-         top: 6px;
-         left: 4px;
-         border: 4px solid $magenta;
-         border-top: none;
-         border-right: none;
-         background: transparent;
-         opacity: 0;
-         transform: rotate(-45deg);
+     content: ' ';
+     width: 20px;
+     height: 20px;
+     float: right;
+     fill: black;
+     background-image: url(../img/layout/checked.svg);
+     position: absolute;
+     right: 2px;
+     top: 4px;
+     opacity: 0;
    }
    &:hover::after {
      opacity: 0.3;
@@ -739,14 +807,20 @@ form{
  input[type=checkbox], input[type=radio] {
    opacity: 0;
    position: absolute;
-  cursor: pointer;
+   background-color:$grey;
+   color:$black;
+   cursor: pointer;
    width: 100%;
    height: 100%;
    left: 0;
    z-index: 2;
    margin: 0px;
-   &:checked + label:after {
-     opacity: 1;
+   &:checked + label{
+      background-color: $yellow;
+      color:$black;
+     &:after {
+       opacity: 1;
+     }
    }
  }
 }
@@ -755,19 +829,6 @@ input[type=text]{
   border: none;
   padding: 4px;
   font-size: .7em;
-}
-
-.formCheck{
-  margin-right: 10%;
-  margin-bottom: 9%;
-  top:0;
-  left:0;
-  label{
-    background-color:white;
-    &:after{
-      border-color:$magenta;
-    }
-  }
 }
 
 .addOnCheck{
@@ -792,12 +853,15 @@ input[type=text]{
   position: relative;
   border-radius: 5px 5px 0 0;
   padding: 15px 0px 10px 35px;
-  background-color: darken($white, 10%);
+  background-color: $magenta;
   position:relative;
   color:$black;
   &:nth-of-type(2){
     margin-right: 2%;
     width: 46%;
+  }
+  h2{
+    color:$white;
   }
   .frontSlide{
     width: 50px;
@@ -812,7 +876,7 @@ input[type=text]{
     span{
       width: 40px;
       height: 110%;
-      background-color: darken($white, 10%);
+      background-color: $magenta;
       position: absolute;
       right: 29px;
       top: 5px;
@@ -845,7 +909,6 @@ input[type=text]{
 
 .react-tabs__tab--selected{
   background-color: $white;
-  color:$magenta;
   z-index: 1;
   .frontSlide{
     span{
@@ -855,6 +918,7 @@ input[type=text]{
   }
   h2{
     cursor:auto !important;
+    color:$magenta;
   }
 }
 
@@ -876,40 +940,40 @@ input[type=text]{
 }
 
 .clientNike{
-  background-image: url("#{$baseurl}/assets/img/clients/clientNike.svg");
+  background-image: url("../img/clients/clientNike.svg");
 }
 .clientCocaCola{
-  background-image: url("#{$baseurl}/assets/img/clients/clientCocaCola.svg");
+  background-image: url("../img/clients/clientCocaCola.svg");
 }
 .clientMoneyGram{
-  background-image: url("#{$baseurl}/assets/img/clients/clientMoneyGram.svg");
+  background-image: url("../img/clients/clientMoneyGram.svg");
 }
 .clientChanel{
-  background-image: url("#{$baseurl}/assets/img/clients/clientChanel.svg");
+  background-image: url("../img/clients/clientChanel.svg");
 }
 .clientCapitalOne{
-  background-image: url("#{$baseurl}/assets/img/clients/clientCapitalOne.svg");
+  background-image: url("../img/clients/clientCapitalOne.svg");
 }
 .clientBaseF{
-  background-image: url("#{$baseurl}/assets/img/clients/clientBaseF.svg");
+  background-image: url("../img/clients/clientBaseF.svg");
 }
 .clientBoss{
-  background-image: url("#{$baseurl}/assets/img/clients/clientBoss.svg");
+  background-image: url("../img/clients/clientBoss.svg");
 }
 .clientBMW{
-  background-image: url("#{$baseurl}/assets/img/clients/clientBMW.svg");
+  background-image: url("../img/clients/clientBMW.svg");
 }
 .clientPepsico{
-  background-image: url("#{$baseurl}/assets/img/clients/clientPepsico.svg");
+  background-image: url("../img/clients/clientPepsico.svg");
 }
 .clientNovartis{
-  background-image: url("#{$baseurl}/assets/img/clients/clientNovartis.svg");
+  background-image: url("../img/clients/clientNovartis.svg");
 }
 .clientKraft{
-  background-image: url("#{$baseurl}/assets/img/clients/clientKraft.svg");
+  background-image: url("../img/clients/clientKraft.svg");
 }
 .clientDiageo{
-  background-image: url("#{$baseurl}/assets/img/clients/clientDiageo.svg");
+  background-image: url("../img/clients/clientDiageo.svg");
 }
 .instaQuoteForm {
     background-color: $black;
@@ -934,6 +998,7 @@ input[type=text]{
     }
     p{
       float:left;
+      width:15%;
       padding:0 10px;
     }
     label{
@@ -948,27 +1013,25 @@ input[type=text]{
       -webkit-appearance: none;
       -moz-appearance: none;
       border-radius: 2px;
-      width: 72px;
+      width: 42.5%;
       background-position: right 50%;
       background-repeat: no-repeat;
       background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAYAAABSgIzaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDZFNDEwNjlGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDZFNDEwNkFGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NkU0MTA2N0Y3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NkU0MTA2OEY3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuGsgwQAAAA5SURBVHjaYvz//z8DOYCJgUxAf42MQIzTk0D/M+KzkRGPoQSdykiKJrBGpOhgJFYTWNEIiEeAAAMAzNENEOH+do8AAAAASUVORK5CYII=);
-      padding: .5em;
-      padding-right: 1.5em;
-      float:left;
+      padding: 4% 3%;
+      height: 30px;
+      float: left;
       border: none;
-      padding: 4px;
       font-size: .7em;
-      font-family: $base-font-family;
-      height: 27px;
-      background-color: white;
-      margin: 4px 0;
+      font-family: "GothamRound", sans-serif;
+      background-color: $yellow;
+      margin: 1% 0;
     }
 }
 
 .leaveOrStay{
   float: left;
   padding-top: 15px;
-  width: 180px;
+  width: 100%;
   text-align: left;
   line-height: 1.5;
   margin-bottom: 10px;
@@ -980,7 +1043,7 @@ input[type=text]{
     float:left;
   }
   .new-arrow{
-    margin-top: 3px;
+    margin: 3px 5px 0 0;
     float: left;
   }
   b{
@@ -1190,7 +1253,7 @@ input[type=text]{
 }
 
 .threeTests{
-  background-color: green;
+  background-color: yellow;
   width:100%;
   height:100%;
   min-height:100px;
@@ -1341,6 +1404,7 @@ iframe{
     color:$black;
     padding: 2% 0 0% 0;
     min-height: 0;
+    margin-bottom: 0;
   }
   input{
     background-color: $white;
@@ -1411,9 +1475,10 @@ iframe{
     width: auto;
     float: left;
     clear: both;
-    margin-top: auto;
+    display: block;
+    padding: 2% 4%;
     margin-top: 2%;
-    margin-bottom: 0%;
+    margin-bottom: 1%;
     border-radius: 2px;
       &:hover{
         background-color: darken($magenta, 10%);
@@ -1442,16 +1507,30 @@ iframe{
 
 .quoteNumber{
   font-weight: 700;
-  background-color: $green;
+  display: block;
+  width:100%;
+  background-color: $yellow;
   margin-bottom: 2%;
-  white-space: nowrap;
-  padding: 1% 4% 0% 3%;
+  padding: 1% 5% 0% 3%;
   border-radius: 2px;
   float: left;
   clear: both;
   font-size: 3em;
-  filter: blur(10px);
+  filter: blur(12px);
   transition: .4s ease all;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  span{
+    font-size: 15px;
+    margin-left: 10px;
+  }
+  p{
+    margin:0;
+  }
 }
 
 .revealQuote{
@@ -1477,7 +1556,7 @@ iframe{
     background-color: $black;
     color:$white;
     min-height: 0;
-    padding: 1% 4% 2% 4%;
+    padding: 2% 4%;
     ul{
       float:left;
       width:100%;
@@ -1498,9 +1577,60 @@ iframe{
 }
 
 .loading{
-  margin: 10% auto;
-  width: 250px;
-  img{
-    margin-bottom: 2%;
+  padding: 10%;
+  min-height: 100vh;
+  background-color: $yellow;
+  width: 100%;
+  text-align: left;
+    h2{
+        font-size: 3em;
+        font-weight: 700;
+        margin: 0;
+      }
+    img{
+      margin-bottom: 2%;
+      width: 170px;
+      position: relative;
+    }
+    button{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 30px;
+      opacity: 0;
+      height: 30px;
+      box-sizing: border-box;
+    }
+}
+
+.contactBox{
+  background-color:$yellow;
+  float: left;
+  padding: 4% 6%;
+  width: 100%;
+  margin-bottom: 4%;
+  p{
+    font-weight: 700;
+    color:$magenta;
+  }
+  a{
+    color:$black;
+    font-size: .8em;
+    font-weight: normal;
+  }
+  b{
+    font-size:1.2em;
+  }
+}
+
+.boxInvert{
+  background-color: transparent;
+  border: 2px solid $yellow;
+  p{
+    color:$yellow;
+  }
+  a{
+    color:$white;
+    text-decoration: none;
   }
 }

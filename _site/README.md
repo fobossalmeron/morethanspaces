@@ -6,6 +6,8 @@ Morethanspaces Website
 - css transition groups
 - landing page(s)
 - video for services
+- slider que se vea algo
+- chanel, bmw bigger 
 - 404
 
 ##Falta en func

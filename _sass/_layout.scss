@@ -291,8 +291,8 @@ footer{
   font-weight:700;
   color: $white;
   font-size: 1em;
-  padding: 10px;
-  margin-top: 11%;
+  padding: 6%;
+  margin-top: 6%;
   transition: .4s ease all;
   &:hover{
     background-color:$blue;
@@ -300,7 +300,6 @@ footer{
 }
 
 section{
-  min-height:500px;
   float:left;
   width:100%;
   padding: 3% 5%;
@@ -325,6 +324,65 @@ section{
     background-color: $yellow;
   }
 
+#discountsSlider{
+  background-color:black;
+  padding: 4% 5% 0% 5%;
+  .slick-list{
+    height: 150px;
+  }
+  .slick-slide{
+    margin-right: 10px;
+    cursor:pointer;
+    transition: .4s ease all;
+    &:hover{
+      opacity:0.8;
+    }
+  }
+}
+
+.modalCloseButton{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    background-image: url("../img/layout/cross.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor:pointer;
+    transition: .4s ease all;
+    &:focus, &:hover{
+      outline: none;
+      transform: scale(1.2);
+    }
+}
+
+.modalOverlay{
+  position: fixed;
+  z-index: 3;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.55);
+  transition: .4s ease all;
+}
+.modalItself{
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  right: 15%;
+  bottom: 10%;
+  overflow: hidden;
+  border-radius: 2px;
+  outline: none;
+}
+
+.ReactModal__Body--open{
+  overflow: hidden;
+}
 
 #slider{
   background-color: $blue;
@@ -696,7 +754,7 @@ form{
 
 .half-card{
   width:50%;
-  padding: 2% 2% 2% 0;
+  padding: 2% 2% 0 0;
   float:left;
   position:relative;
   box-sizing: border-box;
@@ -727,9 +785,15 @@ form{
 #clients{
   background-color: $magenta;
   color: $white;
-  h3{
+  .column{
     float:left;
     width:25%;
+    img{
+      width: 50%;
+      left: 50%;
+      transform: translateX(-60%);
+      position: relative;
+    }
   }
   ul{
     width:75%;
@@ -975,6 +1039,12 @@ input[type=text]{
 .clientDiageo{
   background-image: url("../img/clients/clientDiageo.svg");
 }
+
+.manyMore{
+  float:right;
+  margin: 2% 4% 0 0;
+}
+
 .instaQuoteForm {
     background-color: $black;
     width: 20%;
@@ -1632,5 +1702,53 @@ iframe{
   a{
     color:$white;
     text-decoration: none;
+  }
+}
+
+.blueSuggest{
+  background-color: $blue;
+  float:left;
+  border-radius: 2px;
+  margin-top: 6%;
+  label{
+    padding: 3% 4% 0 5%;
+    font-weight: bold;
+    margin: 0;
+    font-size: 17px;
+  }
+  a{
+    font-size: .8em;
+    background-color: black;
+    color: white;
+    float: left;
+    padding: 4%;
+    width: 100%;
+    transition: .4s ease all;
+    border-radius: 0 0 2px 2px;
+    &:hover{
+      text-decoration: none;
+      background-color: $magenta;
+      svg{
+        path{
+            fill: $white;
+        }
+      }
+    }
+    svg{
+      width: 25px;
+      left: 0px;
+      transition: .4s ease all;
+      path{
+        fill:$white;
+        transition: .4s ease all;
+      }
+    }
+  }
+  p{
+    float: left;
+    margin: 0;
+    width: 100%;
+    font-size: .7em;
+    padding: 2% 5%;
   }
 }

@@ -105,7 +105,10 @@ class StaticSection extends Component {
       </section>
 
       <section id="clients">
-        <h3>we are trusted by</h3>
+        <div className="column">
+          <h3>we are trusted by</h3>
+          <img src="assets/img/layout/yourlogohere.svg"/>
+        </div>
         <ul>
           <li className="clientNike">Nike</li>
           <li className="clientCocaCola">Coca-Cola</li>
@@ -120,6 +123,7 @@ class StaticSection extends Component {
           <li className="clientPepsico">Pepsico</li>
           <li className="clientBoss">Boss</li>
         </ul>
+        <p className="manyMore">...and many more</p>
       </section>
       </div>
     );

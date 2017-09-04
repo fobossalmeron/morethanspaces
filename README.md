@@ -2,12 +2,11 @@
 Morethanspaces Website
 
 ##Falta en estilos
-- form error messages
+- InstaCollect error messages
 - css transition groups
 - landing page(s)
 - video for services
-- slider que se vea algo
-- chanel, bmw bigger 
+- chanel, bmw bigger
 - 404
 
 ##Falta en func

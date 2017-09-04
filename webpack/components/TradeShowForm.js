@@ -73,7 +73,7 @@ class TradeShowForm extends Component {
       </div>
     )
     var backToBooths = (
-      <div className={"goBackContainer"}>
+      <div className="goBackContainer">
         <div className="leaveOrStay">
           <Arrow className={"new-arrow"} color={"#f9f9f9"} width={"25px"}/>
           <a onClick={() => this.props.closeSingleBooth()}><b>back</b> to booths</a>
@@ -87,6 +87,12 @@ class TradeShowForm extends Component {
         <label>stand out even more</label>
           <CheckBox onChange={this.setTv} inputType="checkbox" classList="formCheck" nameFor="addons" checked={this.props.addTv} checkFor="add Tv(s)"/>
           <CheckBox onChange={this.setVideoWall} inputType="checkbox" classList="formCheck" nameFor="addons" checkFor="add videowall"/>
+        <div className="blueSuggest">
+        <label>can&#39;t find &#39;your thing&#39;?</label>
+          <p>no problem!<br/>
+          We have 100&#39;s of other cool solutions.</p>
+          <a href="#contact">free friendly service <Arrow className={"playButtonArrow"} forward/></a>
+        </div>
       </div>
     )
     var menuChoice = (this.props.individualBoothRender ? backToBooths : boothMenu);

@@ -8925,7 +8925,7 @@ var SingleItem = function (_Component) {
           settings,
           _react2.default.createElement('img', { className: 'thumbnailBooth', onClick: function onClick() {
               return _this2.handleView("3D");
-            }, src: 'assets/img/3dTrigger.svg' }),
+            }, src: 'assets/img/layout/3dTrigger.svg' }),
           numberOfImages
         )
       );

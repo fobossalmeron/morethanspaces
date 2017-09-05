@@ -79,7 +79,7 @@ class SingleItem extends Component {
             { choice3D }
           </div>
           <Slider {...settings}>
-              <img className="thumbnailBooth" onClick={() => this.handleView("3D")} src="assets/img/3dTrigger.svg"/>
+              <img className="thumbnailBooth" onClick={() => this.handleView("3D")} src="assets/img/layout/3dTrigger.svg"/>
               {numberOfImages}
           </Slider>
       </div>

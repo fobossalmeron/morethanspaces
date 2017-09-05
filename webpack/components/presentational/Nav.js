@@ -16,9 +16,11 @@ class Nav extends Component {
 
   handleNavClick(booth){
     this.props.goToTab(booth);
-    controller.scrollTo("#discountbanner");
     setTimeout(function(){
       controller.scrollTo("#products");
+      if (window.history && window.history.pushState) {
+          history.pushState("", document.title, '#products');
+      }
     }, 1500);
   }
 
@@ -36,8 +38,8 @@ class Nav extends Component {
         <a href="#home"><img src="assets/img/layout/logo.svg"/><img src="assets/img/layout/type.svg"/></a>
         {isThereDiscount}
         <ul>
-          <li onClick={() => this.handleNavClick(0)}><a href="#products">booths</a></li>
-          <li onClick={() => this.handleNavClick(1)}><a href="#products">videowalls</a></li>
+          <li onClick={() => this.handleNavClick(0)}><a href="#discountbanner">booths</a></li>
+          <li onClick={() => this.handleNavClick(1)}><a href="#discountbanner">videowalls</a></li>
           <li><a href="#services">services</a></li>
           <li><a href="#about">about</a></li>
           <li><a href="#contact">contact</a></li>

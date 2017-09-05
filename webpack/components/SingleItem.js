@@ -22,7 +22,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-class SingleBooth extends Component {
+class SingleItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,8 +40,12 @@ class SingleBooth extends Component {
   nextStepCollector(event){
     this.props.doRenderCollector();
   }
-  nextStepInstaQuote(event){
-    this.props.doRenderInstaQuote();
+  nextStepBoothInstaQuote(event){
+    this.props.doRenderBoothInstaQuote();
+  }
+
+  nextStepVideoWallInstaQuote(event){
+    this.props.doRenderVideoWallInstaQuote();
   }
 
   handleView(value){
@@ -80,24 +84,28 @@ class SingleBooth extends Component {
           </Slider>
       </div>
     );
-    var button = (
-      <button onClick={() => this.nextStepInstaQuote()} className="instaQuoteButton">get instaQuote</button>
+    var boothButton = (
+      <button onClick={() => this.nextStepBoothInstaQuote()} className="instaQuoteButton">get instaQuote</button>
     )
+    var videoWallButton = (
+      <button onClick={() => this.nextStepVideoWallInstaQuote()} className="instaQuoteButton">get instaQuote</button>
+    )
+    var buttonChoice = this.props.instaQuoteVideoWall? videoWallButton : boothButton;
 
     return (
       <div className="singleBooth">
         {imageOptions}
         <div className="singleInfo">
           <h3>{this.props.singleValue}</h3>
-          <div className={"insertPadding booth" + this.props.boothType}>
+          <div className={"insertPadding booth" + this.props.type}>
           <label></label>
           </div>
           <p>{this.props.description}</p>
-          {button}
+          {buttonChoice}
         </div>
       </div>
     )
   }
 }
 
-export default SingleBooth;
+export default SingleItem;

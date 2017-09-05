@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SingleBooth from './SingleBooth';
+import SingleItem from './SingleItem';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import CollectBeforeQuote from './CollectBeforeQuote';
 import InstaQuote from './presentational/InstaQuote';
@@ -13,7 +13,7 @@ class BoothGrid extends Component {
       individualBoothRender: this.props.individualBoothRender,
       singleValue: '',
       description: '',
-      boothType: '',
+      type: '',
       obj: '',
       images:[],
       width: '',
@@ -40,11 +40,11 @@ class BoothGrid extends Component {
     this.loadFromServer();
   }
 
-  generateSingleBooth(singleValue, description, obj, images, boothType, width, length, rent, own, tv, videowall){
+  generateSingleItem(singleValue, description, obj, images, type, width, length, rent, own, tv, videowall){
     this.setState({
       singleValue: singleValue,
       description: description,
-      boothType: boothType,
+      type: type,
       obj: obj,
       images : images,
       width: width,
@@ -91,7 +91,7 @@ class BoothGrid extends Component {
       }
     }).map((item, index) => (
       <li key={item.id}
-          onClick={() => this.generateSingleBooth(item.id, item.description, item.obj, item.images, item.type, item.width, item.length, item.rent, item.own, item.tv, item.videowall)}
+          onClick={() => this.generateSingleItem(item.id, item.description, item.obj, item.images, item.type, item.width, item.length, item.rent, item.own, item.tv, item.videowall)}
           className={"boothGridItem booth" + item.type}
           style={{backgroundImage: 'url(' + item.images[0].url + ')'}}>
           <label>{item.id}</label>
@@ -99,22 +99,22 @@ class BoothGrid extends Component {
     ));
 
     var singleBooth = (
-       <SingleBooth description={this.state.description}
+       <SingleItem description={this.state.description}
                     singleValue={this.state.singleValue}
-                    boothType={this.state.boothType}
+                    type={this.state.type}
                     obj={this.state.obj}
                     images={this.state.images}
-                    doRenderInstaQuote={this.props.doRenderInstaQuote.bind(this)}/>
+                    doRenderBoothInstaQuote={this.props.doRenderBoothInstaQuote.bind(this)}/>
       );
 
     var gridChoice = (this.props.individualBoothRender ? singleBooth : doRenderBooths);
 
     var quote = (
       <div>
-      <div id="instaQuote">
+      <div className={"instaQuoteWhole"} id="boothInstaQuote">
       <InstaQuote images={this.state.images}
                   singleValue={this.state.singleValue}
-                  boothType={this.state.boothType}
+                  type={this.state.type}
                   wantToOwn={this.props.wantToOwn}
                   addTv={this.props.addTv}
                   addVideoWall={this.props.addVideoWall}
@@ -131,18 +131,20 @@ class BoothGrid extends Component {
                   discountType={this.props.discountType}/>
         <CollectBeforeQuote images={this.state.images}
                   singleValue={this.state.singleValue}
-                  boothType={this.state.boothType}
+                  type={this.state.type}
                   wantToOwn={this.props.wantToOwn}
                   eventInVegas={this.props.eventInVegas}
                   width={this.state.width}
                   length={this.state.length}
-                  doRevealInstaQuote={this.props.doRevealInstaQuote.bind(this)}/>
+                  doRevealInstaQuote={this.props.doRevealInstaQuote.bind(this)}
+                  hideCollectors={this.props.hideCollectors.bind(this)}
+                  renderCollectors={this.props.renderCollectors}/>
       </div>
       <IconsBar/>
       </div>
     );
 
-    var renderQuote = this.props.renderInstaQuote ? quote : undefined ;
+    var renderQuote = this.props.renderBoothInstaQuote ? quote : undefined ;
 
     return (
       <div>

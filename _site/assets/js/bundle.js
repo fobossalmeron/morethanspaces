@@ -8214,9 +8214,6 @@ var CollectBeforeQuote = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (CollectBeforeQuote.__proto__ || Object.getPrototypeOf(CollectBeforeQuote)).call(this, props));
 
-    _this.state = {
-      hideFields: false
-    };
     _this.revealQuote = _this.revealQuote.bind(_this);
     return _this;
   }
@@ -8225,7 +8222,7 @@ var CollectBeforeQuote = function (_Component) {
     key: 'revealQuote',
     value: function revealQuote() {
       this.props.doRevealInstaQuote();
-      this.setState({ hideFields: true });
+      this.props.hideCollectors();
     }
   }, {
     key: 'componentDidMount',
@@ -8250,7 +8247,7 @@ var CollectBeforeQuote = function (_Component) {
           'reveal instaQuote now!'
         )
       );
-      var displayForm = this.state.hideFields ? undefined : actualForm;
+      var displayForm = this.props.renderCollectors ? actualForm : undefined;
 
       return _react2.default.createElement(
         'div',
@@ -8509,6 +8506,8 @@ var InstaQuote = function (_Component) {
     _this.boothPrice = _this.boothPrice.bind(_this);
     _this.discountedBoothPrice = _this.discountedBoothPrice.bind(_this);
     _this.flagMaxDiscount = _this.flagMaxDiscount.bind(_this);
+    _this.ifExistsWantToOwn = _this.ifExistsWantToOwn.bind(_this);
+    _this.ifExistsSize = _this.ifExistsSize.bind(_this);
     return _this;
   }
 
@@ -8548,11 +8547,7 @@ var InstaQuote = function (_Component) {
   }, {
     key: 'flagMaxDiscount',
     value: function flagMaxDiscount() {
-      var _this2 = this;
-
-      this.setState({ maxDiscount: true }, function () {
-        return console.log(_this2.state.maxDiscount);
-      });
+      this.setState({ maxDiscount: true });
     }
   }, {
     key: 'discountedBoothPrice',
@@ -8561,28 +8556,88 @@ var InstaQuote = function (_Component) {
       if (this.props.discountOn) {
         if (this.props.discountType === "amount") {
           price = price - this.props.discountNumber;
-          console.log("amount apply");
         } else if (this.props.discountType === "percentage") {
           price = (1 - this.props.discountNumber / 100) * price;
-          console.log("percentage apply");
-
           if (somePrice - price > 5000) {
             price = somePrice - 5000;
-            console.log("max discount apply");
           }
         }
       }
       return price;
-      console.log(price);
+    }
+  }, {
+    key: 'ifExistsWantToOwn',
+    value: function ifExistsWantToOwn() {
+      var renderOrNot;
+      if (typeof this.props.wantToOwn !== 'undefined') {
+        renderOrNot = this.props.wantToOwn ? _react2.default.createElement(
+          'li',
+          null,
+          'You want to ',
+          _react2.default.createElement(
+            'b',
+            null,
+            'own'
+          ),
+          ' it'
+        ) : _react2.default.createElement(
+          'li',
+          null,
+          'You want to ',
+          _react2.default.createElement(
+            'b',
+            null,
+            'rent'
+          ),
+          ' it'
+        );
+      } else {
+        renderOrNot = ' ';
+      }
+      return renderOrNot;
+    }
+  }, {
+    key: 'ifExistsSize',
+    value: function ifExistsSize() {
+      var renderOrNot;
+      if (typeof this.props.size !== 'undefined') {
+        renderOrNot = _react2.default.createElement(
+          'li',
+          null,
+          'size: ',
+          this.props.size,
+          ' '
+        );
+      } else {
+        renderOrNot = _react2.default.createElement(
+          'li',
+          null,
+          'size: ',
+          _react2.default.createElement(
+            'b',
+            null,
+            this.props.width
+          ),
+          'ft x ',
+          _react2.default.createElement(
+            'b',
+            null,
+            this.props.length
+          ),
+          'ft'
+        );
+      }
+      return renderOrNot;
     }
   }, {
     key: 'render',
     value: function render() {
-      var _this3 = this;
+      var _this2 = this;
 
       var originalPrice = this.boothPrice();
       var finalPrice = this.discountedBoothPrice(originalPrice);
-      var renderRentOwn = this.props.wantToOwn ? "own" : "rent";
+      var ifExistsOwnableMessage = this.ifExistsWantToOwn();
+      var ifExistsSize = this.ifExistsSize();
       var renderInVegas = this.props.eventInVegas ? "in" : "outside";
       var reveal = this.props.revealInstaQuote ? "revealQuote quoteNumber" : "quoteNumber";
       var renderTv = this.props.addTv ? _react2.default.createElement(
@@ -8617,7 +8672,7 @@ var InstaQuote = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'instaColumn' },
-          _react2.default.createElement('div', { className: 'instaThumbnail', style: { backgroundImage: '' } }),
+          _react2.default.createElement('div', { className: 'instaThumbnail', style: { backgroundImage: 'url(' + this.props.images[0].url + ')' } }),
           _react2.default.createElement(
             'ul',
             null,
@@ -8631,40 +8686,14 @@ var InstaQuote = function (_Component) {
                 this.props.singleValue
               )
             ),
-            _react2.default.createElement(
-              'li',
-              null,
-              'size: ',
-              _react2.default.createElement(
-                'b',
-                null,
-                this.props.width
-              ),
-              'ft x ',
-              _react2.default.createElement(
-                'b',
-                null,
-                this.props.length
-              ),
-              'ft'
-            ),
+            ifExistsSize,
             _react2.default.createElement(
               'li',
               null,
               'type: ',
-              this.props.boothType
+              this.props.type
             ),
-            _react2.default.createElement(
-              'li',
-              null,
-              'You want to ',
-              _react2.default.createElement(
-                'b',
-                null,
-                renderRentOwn
-              ),
-              ' it'
-            ),
+            ifExistsOwnableMessage,
             _react2.default.createElement(
               'li',
               null,
@@ -8716,7 +8745,7 @@ var InstaQuote = function (_Component) {
           _react2.default.createElement(
             'button',
             { className: 'instaQuoteButton wasLink', onClick: function onClick() {
-                return _this3.showCalendly();
+                return _this2.showCalendly();
               } },
             'schedule a call!'
           ),
@@ -14396,6 +14425,8 @@ var _VideoWallGrid2 = _interopRequireDefault(_VideoWallGrid);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -14422,18 +14453,30 @@ var QuoteTabs = function (_Component) {
       selectedLcd: true,
       wantToOwn: false,
       eventInVegas: true,
+      addVideoWall: false,
+      addTv: false,
       individualBoothRender: false,
       individualVideoWallRender: false,
-      renderInstaQuote: false,
+      renderBoothInstaQuote: false,
+      renderVideoWallInstaQuote: false,
       revealInstaQuote: false,
-      addVideoWall: false,
-      addTv: false
+      renderCollectors: true
     };
     _this.clickFor = _this.clickFor.bind(_this);
     return _this;
   }
 
   _createClass(QuoteTabs, [{
+    key: 'seeState',
+    value: function seeState() {
+      console.log(this.state);
+    }
+  }, {
+    key: 'hideCollectors',
+    value: function hideCollectors() {
+      this.setState({ renderCollectors: false });
+    }
+  }, {
     key: 'doAddVideoWall',
     value: function doAddVideoWall() {
       var _this2 = this;
@@ -14452,17 +14495,17 @@ var QuoteTabs = function (_Component) {
       });
     }
   }, {
-    key: 'needShipping',
-    value: function needShipping() {
-      this.setState({ eventInVegas: false }, function () {
-        return console.log("not in vegas XX");
-      });
-    }
-  }, {
     key: 'noNeedShipping',
     value: function noNeedShipping() {
       this.setState({ eventInVegas: true }, function () {
         return console.log("in vegas XX");
+      });
+    }
+  }, {
+    key: 'needShipping',
+    value: function needShipping() {
+      this.setState({ eventInVegas: false }, function () {
+        return console.log("not in vegas XX");
       });
     }
   }, {
@@ -14480,10 +14523,17 @@ var QuoteTabs = function (_Component) {
       });
     }
   }, {
-    key: 'doRenderInstaQuote',
-    value: function doRenderInstaQuote() {
-      this.setState({ renderInstaQuote: true }, function () {
-        return controller.scrollTo("#instaQuote");
+    key: 'doRenderBoothInstaQuote',
+    value: function doRenderBoothInstaQuote() {
+      this.setState({ renderBoothInstaQuote: true }, function () {
+        return controller.scrollTo("#boothInstaQuote");
+      });
+    }
+  }, {
+    key: 'doRenderVideoWallInstaQuote',
+    value: function doRenderVideoWallInstaQuote() {
+      this.setState({ renderVideoWallInstaQuote: true }, function () {
+        return controller.scrollTo("#videoWallInstaQuote");
       });
     }
   }, {
@@ -14572,7 +14622,8 @@ var QuoteTabs = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _this4 = this;
+      var _this4 = this,
+          _React$createElement;
 
       return _react2.default.createElement(
         'section',
@@ -14629,7 +14680,7 @@ var QuoteTabs = function (_Component) {
           _react2.default.createElement(
             _reactTabs.TabPanel,
             null,
-            _react2.default.createElement(_BoothForm2.default, { toggleBooth: this.toggleBooth.bind(this),
+            _react2.default.createElement(_BoothForm2.default, (_React$createElement = { toggleBooth: this.toggleBooth.bind(this),
               limitByWidth: this.limitByWidth.bind(this),
               limitByLength: this.limitByLength.bind(this),
               individualBoothRender: this.state.individualBoothRender,
@@ -14641,7 +14692,10 @@ var QuoteTabs = function (_Component) {
               doAddVideoWall: this.doAddVideoWall.bind(this),
               doAddTv: this.doAddTv.bind(this),
               addTv: this.state.addTv,
-              selectedIsland: this.state.selectedIsland }),
+              wantToOwn: this.state.wantToOwn,
+              eventInVegas: this.state.eventInVegas,
+              addVideoWall: this.state.addVideoWall
+            }, _defineProperty(_React$createElement, 'addVideoWall', this.state.addVideoWall), _defineProperty(_React$createElement, 'selectedIsland', this.state.selectedIsland), _defineProperty(_React$createElement, 'seeState', this.seeState.bind(this)), _React$createElement)),
             _react2.default.createElement(_BoothGrid2.default, { dataToLoad: "./assets/js/booths.json",
               selectedIsland: this.state.selectedIsland,
               selectedSplitIsland: this.state.selectedSplitIsland,
@@ -14651,17 +14705,19 @@ var QuoteTabs = function (_Component) {
               boothSizeLength: this.state.boothSizeLength,
               individualBoothRender: this.state.individualBoothRender,
               revealInstaQuote: this.state.revealInstaQuote,
-              renderInstaQuote: this.state.renderInstaQuote,
+              renderBoothInstaQuote: this.state.renderBoothInstaQuote,
               wantToOwn: this.state.wantToOwn,
               eventInVegas: this.state.eventInVegas,
               addVideoWall: this.state.addVideoWall,
               addTv: this.state.addTv,
               renderSingleBooth: this.renderSingleBooth.bind(this),
               doRevealInstaQuote: this.doRevealInstaQuote.bind(this),
-              doRenderInstaQuote: this.doRenderInstaQuote.bind(this),
+              doRenderBoothInstaQuote: this.doRenderBoothInstaQuote.bind(this),
               discountOn: this.props.discountOn,
               discountNumber: this.props.discountNumber,
-              discountType: this.props.discountType })
+              discountType: this.props.discountType,
+              hideCollectors: this.hideCollectors.bind(this),
+              renderCollectors: this.state.renderCollectors })
           ),
           _react2.default.createElement(
             _reactTabs.TabPanel,
@@ -14681,10 +14737,13 @@ var QuoteTabs = function (_Component) {
               eventInVegas: this.state.eventInVegas,
               renderSingleVideoWall: this.renderSingleVideoWall.bind(this),
               doRevealInstaQuote: this.doRevealInstaQuote.bind(this),
-              doRenderInstaQuote: this.doRenderInstaQuote.bind(this),
+              renderVideoWallInstaQuote: this.state.renderVideoWallInstaQuote,
+              doRenderVideoWallInstaQuote: this.doRenderVideoWallInstaQuote.bind(this),
               discountOn: this.props.discountOn,
               discountNumber: this.props.discountNumber,
-              discountType: this.props.discountType })
+              discountType: this.props.discountType,
+              hideCollectors: this.hideCollectors.bind(this),
+              renderCollectors: this.state.renderCollectors })
           )
         )
       );
@@ -15275,9 +15334,11 @@ var Nav = function (_Component) {
     key: 'handleNavClick',
     value: function handleNavClick(booth) {
       this.props.goToTab(booth);
-      controller.scrollTo("#discountbanner");
       setTimeout(function () {
         controller.scrollTo("#products");
+        if (window.history && window.history.pushState) {
+          history.pushState("", document.title, '#products');
+        }
       }, 1500);
     }
   }, {
@@ -15325,7 +15386,7 @@ var Nav = function (_Component) {
               } },
             _react2.default.createElement(
               'a',
-              { href: '#products' },
+              { href: '#discountbanner' },
               'booths'
             )
           ),
@@ -15336,7 +15397,7 @@ var Nav = function (_Component) {
               } },
             _react2.default.createElement(
               'a',
-              { href: '#products' },
+              { href: '#discountbanner' },
               'videowalls'
             )
           ),
@@ -15949,13 +16010,13 @@ var StaticSection = function (_Component) {
             ),
             _react2.default.createElement(
               "li",
-              { className: "clientMoneyGram" },
-              "MoneyGram"
+              { className: "clientChanel" },
+              "Chanel"
             ),
             _react2.default.createElement(
               "li",
-              { className: "clientChanel" },
-              "Chanel"
+              { className: "clientMoneyGram" },
+              "MoneyGram"
             ),
             _react2.default.createElement(
               "li",
@@ -15969,8 +16030,8 @@ var StaticSection = function (_Component) {
             ),
             _react2.default.createElement(
               "li",
-              { className: "clientBMW" },
-              "BMW"
+              { className: "clientNovartis" },
+              "Novartis"
             ),
             _react2.default.createElement(
               "li",
@@ -15984,8 +16045,8 @@ var StaticSection = function (_Component) {
             ),
             _react2.default.createElement(
               "li",
-              { className: "clientNovartis" },
-              "Novartis"
+              { className: "clientBMW" },
+              "BMW"
             ),
             _react2.default.createElement(
               "li",
@@ -16032,9 +16093,9 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _SingleBooth = __webpack_require__(132);
+var _SingleItem = __webpack_require__(303);
 
-var _SingleBooth2 = _interopRequireDefault(_SingleBooth);
+var _SingleItem2 = _interopRequireDefault(_SingleItem);
 
 var _CSSTransitionGroup = __webpack_require__(114);
 
@@ -16073,7 +16134,7 @@ var BoothGrid = function (_Component) {
       individualBoothRender: _this.props.individualBoothRender,
       singleValue: '',
       description: '',
-      boothType: '',
+      type: '',
       obj: '',
       images: [],
       width: '',
@@ -16104,12 +16165,12 @@ var BoothGrid = function (_Component) {
       this.loadFromServer();
     }
   }, {
-    key: 'generateSingleBooth',
-    value: function generateSingleBooth(singleValue, description, obj, images, boothType, width, length, rent, own, tv, videowall) {
+    key: 'generateSingleItem',
+    value: function generateSingleItem(singleValue, description, obj, images, type, width, length, rent, own, tv, videowall) {
       this.setState({
         singleValue: singleValue,
         description: description,
-        boothType: boothType,
+        type: type,
         obj: obj,
         images: images,
         width: width,
@@ -16159,7 +16220,7 @@ var BoothGrid = function (_Component) {
           'li',
           { key: item.id,
             onClick: function onClick() {
-              return _this2.generateSingleBooth(item.id, item.description, item.obj, item.images, item.type, item.width, item.length, item.rent, item.own, item.tv, item.videowall);
+              return _this2.generateSingleItem(item.id, item.description, item.obj, item.images, item.type, item.width, item.length, item.rent, item.own, item.tv, item.videowall);
             },
             className: "boothGridItem booth" + item.type,
             style: { backgroundImage: 'url(' + item.images[0].url + ')' } },
@@ -16171,12 +16232,12 @@ var BoothGrid = function (_Component) {
         );
       });
 
-      var singleBooth = _react2.default.createElement(_SingleBooth2.default, { description: this.state.description,
+      var singleBooth = _react2.default.createElement(_SingleItem2.default, { description: this.state.description,
         singleValue: this.state.singleValue,
-        boothType: this.state.boothType,
+        type: this.state.type,
         obj: this.state.obj,
         images: this.state.images,
-        doRenderInstaQuote: this.props.doRenderInstaQuote.bind(this) });
+        doRenderBoothInstaQuote: this.props.doRenderBoothInstaQuote.bind(this) });
 
       var gridChoice = this.props.individualBoothRender ? singleBooth : doRenderBooths;
 
@@ -16185,10 +16246,10 @@ var BoothGrid = function (_Component) {
         null,
         _react2.default.createElement(
           'div',
-          { id: 'instaQuote' },
+          { className: "instaQuoteWhole", id: 'boothInstaQuote' },
           _react2.default.createElement(_InstaQuote2.default, { images: this.state.images,
             singleValue: this.state.singleValue,
-            boothType: this.state.boothType,
+            type: this.state.type,
             wantToOwn: this.props.wantToOwn,
             addTv: this.props.addTv,
             addVideoWall: this.props.addVideoWall,
@@ -16205,17 +16266,19 @@ var BoothGrid = function (_Component) {
             discountType: this.props.discountType }),
           _react2.default.createElement(_CollectBeforeQuote2.default, { images: this.state.images,
             singleValue: this.state.singleValue,
-            boothType: this.state.boothType,
+            type: this.state.type,
             wantToOwn: this.props.wantToOwn,
             eventInVegas: this.props.eventInVegas,
             width: this.state.width,
             length: this.state.length,
-            doRevealInstaQuote: this.props.doRevealInstaQuote.bind(this) })
+            doRevealInstaQuote: this.props.doRevealInstaQuote.bind(this),
+            hideCollectors: this.props.hideCollectors.bind(this),
+            renderCollectors: this.props.renderCollectors })
         ),
         _react2.default.createElement(_IconsBar2.default, null)
       );
 
-      var renderQuote = this.props.renderInstaQuote ? quote : undefined;
+      var renderQuote = this.props.renderBoothInstaQuote ? quote : undefined;
 
       return _react2.default.createElement(
         'div',
@@ -16244,192 +16307,7 @@ var BoothGrid = function (_Component) {
 exports.default = BoothGrid;
 
 /***/ }),
-/* 132 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _CSSTransitionGroup = __webpack_require__(114);
-
-var _CSSTransitionGroup2 = _interopRequireDefault(_CSSTransitionGroup);
-
-var _SketchFab = __webpack_require__(133);
-
-var _SketchFab2 = _interopRequireDefault(_SketchFab);
-
-var _reactSlick = __webpack_require__(64);
-
-var _reactSlick2 = _interopRequireDefault(_reactSlick);
-
-var _Arrow = __webpack_require__(33);
-
-var _Arrow2 = _interopRequireDefault(_Arrow);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-function SampleNextArrow(props) {
-  var className = props.className,
-      style = props.style,
-      onClick = props.onClick;
-
-  return _react2.default.createElement(
-    'div',
-    { id: "nextArrow", onClick: onClick },
-    _react2.default.createElement(_Arrow2.default, { className: "arrow-icon next-arrow", forward: true, color: "#ec3092", width: "30px" })
-  );
-}
-
-function SamplePrevArrow(props) {
-  var className = props.className,
-      style = props.style,
-      onClick = props.onClick;
-
-  return _react2.default.createElement(
-    'div',
-    { id: "prevArrow", onClick: onClick },
-    _react2.default.createElement(_Arrow2.default, { className: "arrow-icon", color: "#ec3092", width: "30px" })
-  );
-}
-
-var SingleBooth = function (_Component) {
-  _inherits(SingleBooth, _Component);
-
-  function SingleBooth(props) {
-    _classCallCheck(this, SingleBooth);
-
-    var _this = _possibleConstructorReturn(this, (SingleBooth.__proto__ || Object.getPrototypeOf(SingleBooth)).call(this, props));
-
-    _this.state = {
-      mainImage: '',
-      render3D: false
-    };
-    return _this;
-  }
-
-  _createClass(SingleBooth, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.setState({
-        mainImage: this.props.images[0].url
-      });
-    }
-  }, {
-    key: 'nextStepCollector',
-    value: function nextStepCollector(event) {
-      this.props.doRenderCollector();
-    }
-  }, {
-    key: 'nextStepInstaQuote',
-    value: function nextStepInstaQuote(event) {
-      this.props.doRenderInstaQuote();
-    }
-  }, {
-    key: 'handleView',
-    value: function handleView(value) {
-      value !== "3D" ? this.setState({ mainImage: this.props.images[value].url, render3D: false }) : this.setState({ render3D: true });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var _this2 = this;
-
-      var settings = {
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: false,
-        draggable: false,
-        nextArrow: _react2.default.createElement(SampleNextArrow, null),
-        prevArrow: _react2.default.createElement(SamplePrevArrow, null)
-      };
-
-      var backgroundStyle = {
-        backgroundImage: 'url(' + this.state.mainImage + ')'
-      };
-      var choice3D = this.state.render3D ? _react2.default.createElement(_SketchFab2.default, { obj: this.props.obj }) : null;
-
-      var numberOfImages = this.props.images.map(function (image, index) {
-        return _react2.default.createElement('img', { key: image.url, className: 'thumbnailBooth', onClick: function onClick() {
-            return _this2.handleView(index);
-          }, src: _this2.props.images[index].url });
-      });
-
-      var imageOptions = _react2.default.createElement(
-        'div',
-        { className: 'singleImage' },
-        _react2.default.createElement(
-          'div',
-          { className: 'visualizer', id: 'visualizer', style: backgroundStyle },
-          choice3D
-        ),
-        _react2.default.createElement(
-          _reactSlick2.default,
-          settings,
-          _react2.default.createElement('img', { className: 'thumbnailBooth', onClick: function onClick() {
-              return _this2.handleView("3D");
-            }, src: 'assets/img/3dTrigger.svg' }),
-          numberOfImages
-        )
-      );
-      var button = _react2.default.createElement(
-        'button',
-        { onClick: function onClick() {
-            return _this2.nextStepInstaQuote();
-          }, className: 'instaQuoteButton' },
-        'get instaQuote'
-      );
-
-      return _react2.default.createElement(
-        'div',
-        { className: 'singleBooth' },
-        imageOptions,
-        _react2.default.createElement(
-          'div',
-          { className: 'singleInfo' },
-          _react2.default.createElement(
-            'h3',
-            null,
-            this.props.singleValue
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: "insertPadding booth" + this.props.boothType },
-            _react2.default.createElement('label', null)
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            this.props.description
-          ),
-          button
-        )
-      );
-    }
-  }]);
-
-  return SingleBooth;
-}(_react.Component);
-
-exports.default = SingleBooth;
-
-/***/ }),
+/* 132 */,
 /* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16545,7 +16423,7 @@ var CheckBox = function (_Component) {
       return _react2.default.createElement(
         "div",
         { className: classList },
-        _react2.default.createElement("input", { type: this.props.inputType, id: this.props.checkFor, onClick: this.props.onClick, onChange: this.props.onChange, name: this.props.nameFor, defaultChecked: this.props.checked }),
+        _react2.default.createElement("input", { type: this.props.inputType, id: this.props.checkFor, onClick: this.props.onClick, value: "true", onChange: this.props.onChange, name: this.props.nameFor, defaultChecked: this.props.defaultChecked }),
         _react2.default.createElement(
           "label",
           { className: "noMargin", htmlFor: this.props.checkFor },
@@ -37822,6 +37700,10 @@ var _Arrow = __webpack_require__(33);
 
 var _Arrow2 = _interopRequireDefault(_Arrow);
 
+var _reactModal = __webpack_require__(253);
+
+var _reactModal2 = _interopRequireDefault(_reactModal);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -37838,13 +37720,28 @@ var VideoWallForm = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (VideoWallForm.__proto__ || Object.getPrototypeOf(VideoWallForm)).call(this, props));
 
+    _this.state = {
+      showModal: false
+    };
     _this.handleVideoWallToggle = _this.handleVideoWallToggle.bind(_this);
     _this.doShip = _this.doShip.bind(_this);
     _this.doNotShip = _this.doNotShip.bind(_this);
+    _this.handleOpenModal = _this.handleOpenModal.bind(_this);
+    _this.handleCloseModal = _this.handleCloseModal.bind(_this);
     return _this;
   }
 
   _createClass(VideoWallForm, [{
+    key: 'handleOpenModal',
+    value: function handleOpenModal() {
+      this.setState({ showModal: true });
+    }
+  }, {
+    key: 'handleCloseModal',
+    value: function handleCloseModal() {
+      this.setState({ showModal: false });
+    }
+  }, {
     key: 'doShip',
     value: function doShip() {
       this.props.needShipping();
@@ -37872,9 +37769,20 @@ var VideoWallForm = function (_Component) {
           null,
           'choose type'
         ),
-        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleVideoWallToggle, inputType: 'checkbox', classList: 'formCheck', nameFor: 'Tv', checkFor: 'tv', checked: 'checked' }),
-        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleVideoWallToggle, inputType: 'checkbox', classList: 'formCheck', nameFor: 'LED', checkFor: 'led', checked: 'checked' }),
-        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleVideoWallToggle, inputType: 'checkbox', classList: 'formCheck', nameFor: 'LCD', checkFor: 'lcd', checked: 'checked' })
+        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleVideoWallToggle, inputType: 'checkbox', classList: 'formCheck', nameFor: 'Tv', checkFor: 'tv', defaultChecked: 'checked' }),
+        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleVideoWallToggle, inputType: 'checkbox', classList: 'formCheck', nameFor: 'LED', checkFor: 'led', defaultChecked: 'checked' }),
+        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleVideoWallToggle, inputType: 'checkbox', classList: 'formCheck', nameFor: 'LCD', checkFor: 'lcd', defaultChecked: 'checked' }),
+        _react2.default.createElement(
+          'div',
+          { className: 'blueSuggest' },
+          _react2.default.createElement(
+            'label',
+            { onClick: function onClick() {
+                return _this2.handleOpenModal();
+              } },
+            'what\'s the difference?'
+          )
+        )
       );
       var backToVideoWalls = _react2.default.createElement(
         'div',
@@ -37901,8 +37809,26 @@ var VideoWallForm = function (_Component) {
           null,
           'event location'
         ),
-        _react2.default.createElement(_CheckBox2.default, { onClick: this.doNotShip, inputType: 'radio', classList: 'formCheck', nameFor: 'inVegas', checked: 'checked', checkFor: 'Las Vegas' }),
-        _react2.default.createElement(_CheckBox2.default, { onClick: this.doShip, inputType: 'radio', classList: 'formCheck', nameFor: 'inVegas', checkFor: 'else' }),
+        _react2.default.createElement(
+          'div',
+          { className: 'formCheck quoteCheck' },
+          _react2.default.createElement('input', { type: 'radio', id: 'Las Vegas', onClick: this.doNotShip, name: "inVegas", defaultChecked: true }),
+          _react2.default.createElement(
+            'label',
+            { className: 'noMargin', htmlFor: 'Las Vegas' },
+            'Las Vegas'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'formCheck quoteCheck' },
+          _react2.default.createElement('input', { type: 'radio', id: 'else', onClick: this.doShip, name: "inVegas", defaultChecked: false }),
+          _react2.default.createElement(
+            'label',
+            { className: 'noMargin', htmlFor: 'else' },
+            'else'
+          )
+        ),
         _react2.default.createElement(
           'div',
           { className: 'blueSuggest' },
@@ -37929,8 +37855,24 @@ var VideoWallForm = function (_Component) {
       var menuChoice = this.props.individualVideoWallRender ? backToVideoWalls : videoWallMenu;
       return _react2.default.createElement(
         'div',
-        { className: 'instaQuoteForm' },
-        menuChoice
+        null,
+        _react2.default.createElement(
+          'div',
+          { className: 'instaQuoteForm' },
+          menuChoice
+        ),
+        _react2.default.createElement(
+          _reactModal2.default,
+          {
+            overlayClassName: "modalOverlay",
+            className: "modalItself",
+            isOpen: this.state.showModal,
+            onRequestClose: this.handleCloseModal,
+            closeTimeoutMS: 500,
+            contentLabel: 'What\'s the difference?' },
+          _react2.default.createElement('img', { src: "assets/img/layout/videotypes.png" }),
+          _react2.default.createElement('button', { className: 'modalCloseButton', onClick: this.handleCloseModal })
+        )
       );
     }
   }]);
@@ -37994,6 +37936,11 @@ var BoothForm = function (_Component) {
   }
 
   _createClass(BoothForm, [{
+    key: 'doSeeState',
+    value: function doSeeState() {
+      this.props.seeState();
+    }
+  }, {
     key: 'setVideoWall',
     value: function setVideoWall() {
       this.props.doAddVideoWall();
@@ -38005,12 +37952,12 @@ var BoothForm = function (_Component) {
     }
   }, {
     key: 'doShip',
-    value: function doShip() {
+    value: function doShip(event) {
       this.props.needShipping();
     }
   }, {
     key: 'doNotShip',
-    value: function doNotShip() {
+    value: function doNotShip(event) {
       this.props.noNeedShipping();
     }
   }, {
@@ -38129,10 +38076,10 @@ var BoothForm = function (_Component) {
           null,
           'booth type'
         ),
-        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', classList: 'formCheck', nameFor: 'Island', checkFor: 'island', checked: this.props.selectedIsland }),
-        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', classList: 'formCheck', nameFor: 'SplitIsland', checkFor: 'split island', checked: 'checked', doubleLine: 'doubleLine' }),
-        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', classList: 'formCheck', nameFor: 'Peninsula', checked: 'checked', checkFor: 'peninsula' }),
-        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', classList: 'formCheck noMarginRight', nameFor: 'Inline', checked: 'checked', checkFor: 'inline' })
+        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', classList: 'formCheck', nameFor: 'Island', checkFor: 'island', defaultChecked: this.props.selectedIsland }),
+        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', classList: 'formCheck', nameFor: 'SplitIsland', checkFor: 'split island', defaultChecked: 'checked', doubleLine: 'doubleLine' }),
+        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', classList: 'formCheck', nameFor: 'Peninsula', defaultChecked: 'checked', checkFor: 'peninsula' }),
+        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', classList: 'formCheck noMarginRight', nameFor: 'Inline', defaultChecked: 'checked', checkFor: 'inline' })
       );
       var backToBooths = _react2.default.createElement(
         'div',
@@ -38159,22 +38106,49 @@ var BoothForm = function (_Component) {
           null,
           'rent or own?'
         ),
-        _react2.default.createElement(_CheckBox2.default, { onClick: this.handleRent, inputType: 'radio', classList: 'formCheck', nameFor: 'rentOrOwn', checked: 'true', checkFor: 'rent' }),
+        _react2.default.createElement(_CheckBox2.default, { onClick: this.handleRent, inputType: 'radio', classList: 'formCheck', nameFor: 'rentOrOwn', defaultChecked: 'checked', checkFor: 'rent' }),
         _react2.default.createElement(_CheckBox2.default, { onClick: this.handleOwn, inputType: 'radio', classList: 'formCheck', nameFor: 'rentOrOwn', checkFor: 'own' }),
         _react2.default.createElement(
           'label',
           null,
           'event location'
         ),
-        _react2.default.createElement(_CheckBox2.default, { onClick: this.doNotShip, inputType: 'radio', classList: 'formCheck', nameFor: 'inVegas', checked: 'checked', checkFor: 'Las Vegas' }),
-        _react2.default.createElement(_CheckBox2.default, { onClick: this.doShip, inputType: 'radio', classList: 'formCheck', nameFor: 'inVegas', checkFor: 'else' }),
+        _react2.default.createElement(
+          'div',
+          { className: 'formCheck quoteCheck' },
+          _react2.default.createElement('input', { type: 'radio', id: 'Las Vegas', onClick: this.doNotShip, name: "inVegas", defaultChecked: true }),
+          _react2.default.createElement(
+            'label',
+            { className: 'noMargin', htmlFor: 'Las Vegas' },
+            'Las Vegas'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'formCheck quoteCheck' },
+          _react2.default.createElement('input', { type: 'radio', id: 'else', onClick: this.doShip, name: "inVegas", defaultChecked: false }),
+          _react2.default.createElement(
+            'label',
+            { className: 'noMargin', htmlFor: 'else' },
+            'else'
+          )
+        ),
         _react2.default.createElement(
           'label',
           null,
           'stand out even more'
         ),
-        _react2.default.createElement(_CheckBox2.default, { onChange: this.setTv, inputType: 'checkbox', classList: 'formCheck', nameFor: 'addons', checked: this.props.addTv, checkFor: 'add Tv(s)' }),
-        _react2.default.createElement(_CheckBox2.default, { onChange: this.setVideoWall, inputType: 'checkbox', classList: 'formCheck', nameFor: 'addons', checkFor: 'add videowall' }),
+        _react2.default.createElement(
+          'div',
+          { className: 'formCheck quoteCheck' },
+          _react2.default.createElement('input', { type: 'checkbox', id: 'add Tv(s)', onClick: this.setTv, defaultChecked: false }),
+          _react2.default.createElement(
+            'label',
+            { className: 'noMargin', htmlFor: "add Tv(s)" },
+            'add Tv(s)'
+          )
+        ),
+        _react2.default.createElement(_CheckBox2.default, { onClick: this.setVideoWall, inputType: 'checkbox', classList: 'formCheck', nameFor: 'else', checkFor: 'add videowall' }),
         _react2.default.createElement(
           'div',
           { className: 'blueSuggest' },
@@ -38229,9 +38203,9 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _SingleBooth = __webpack_require__(132);
+var _SingleItem = __webpack_require__(303);
 
-var _SingleBooth2 = _interopRequireDefault(_SingleBooth);
+var _SingleItem2 = _interopRequireDefault(_SingleItem);
 
 var _CSSTransitionGroup = __webpack_require__(114);
 
@@ -38270,9 +38244,11 @@ var VideoWallGrid = function (_Component) {
       individualVideoWallRender: _this.props.individualVideoWallRender,
       singleValue: '',
       description: '',
-      type: '',
       obj: '',
-      images: []
+      images: [],
+      type: '',
+      rent: '',
+      size: ''
     };
     _this.loadFromServer = _this.loadFromServer.bind(_this);
     return _this;
@@ -38296,13 +38272,15 @@ var VideoWallGrid = function (_Component) {
     }
   }, {
     key: 'generateSingleVideoWall',
-    value: function generateSingleVideoWall(singleValue, description, obj, images, type) {
+    value: function generateSingleVideoWall(singleValue, description, obj, images, type, rent, size) {
       this.setState({
         singleValue: singleValue,
         description: description,
         obj: obj,
+        rent: rent,
         images: images,
-        type: type
+        type: type,
+        size: size
       });
       this.props.renderSingleVideoWall();
     }
@@ -38334,7 +38312,7 @@ var VideoWallGrid = function (_Component) {
           'li',
           { key: item.id,
             onClick: function onClick() {
-              return _this2.generateSingleVideoWall(item.id, item.description, item.obj, item.images, item.type);
+              return _this2.generateSingleVideoWall(item.id, item.description, item.obj, item.images, item.type, item.rent, item.size);
             },
             className: "boothGridItem booth" + item.type,
             style: { backgroundImage: 'url(' + item.images[0].url + ')' } },
@@ -38346,12 +38324,13 @@ var VideoWallGrid = function (_Component) {
         );
       });
 
-      var singleVideowall = _react2.default.createElement(_SingleBooth2.default, { description: this.state.description,
+      var singleVideoWall = _react2.default.createElement(_SingleItem2.default, { instaQuoteVideoWall: true,
+        description: this.state.description,
         singleValue: this.state.singleValue,
-        boothType: this.state.type,
+        type: this.state.type,
         obj: this.state.obj,
         images: this.state.images,
-        doRenderInstaQuote: this.props.doRenderInstaQuote.bind(this) });
+        doRenderVideoWallInstaQuote: this.props.doRenderVideoWallInstaQuote.bind(this) });
 
       var gridChoice = this.props.individualVideoWallRender ? singleVideoWall : doRenderVideoWalls;
 
@@ -38360,10 +38339,12 @@ var VideoWallGrid = function (_Component) {
         null,
         _react2.default.createElement(
           'div',
-          { id: 'instaQuote' },
+          { className: "instaQuoteWhole", id: 'videoWallInstaQuote' },
           _react2.default.createElement(_InstaQuote2.default, { images: this.state.images,
             singleValue: this.state.singleValue,
             type: this.state.type,
+            rent: this.state.rent,
+            size: this.state.size,
             eventInVegas: this.props.eventInVegas,
             revealInstaQuote: this.props.revealInstaQuote,
             discountOn: this.props.discountOn,
@@ -38374,12 +38355,14 @@ var VideoWallGrid = function (_Component) {
             singleValue: this.state.singleValue,
             type: this.state.type,
             eventInVegas: this.props.eventInVegas,
-            doRevealInstaQuote: this.props.doRevealInstaQuote.bind(this) })
+            doRevealInstaQuote: this.props.doRevealInstaQuote.bind(this),
+            hideCollectors: this.props.hideCollectors.bind(this),
+            renderCollectors: this.props.renderCollectors })
         ),
         _react2.default.createElement(_IconsBar2.default, null)
       );
 
-      var renderQuote = this.props.renderInstaQuote ? quote : undefined;
+      var renderQuote = this.props.renderVideoWallInstaQuote ? quote : undefined;
 
       return _react2.default.createElement(
         'div',
@@ -38406,6 +38389,205 @@ var VideoWallGrid = function (_Component) {
 ;
 
 exports.default = VideoWallGrid;
+
+/***/ }),
+/* 303 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _CSSTransitionGroup = __webpack_require__(114);
+
+var _CSSTransitionGroup2 = _interopRequireDefault(_CSSTransitionGroup);
+
+var _SketchFab = __webpack_require__(133);
+
+var _SketchFab2 = _interopRequireDefault(_SketchFab);
+
+var _reactSlick = __webpack_require__(64);
+
+var _reactSlick2 = _interopRequireDefault(_reactSlick);
+
+var _Arrow = __webpack_require__(33);
+
+var _Arrow2 = _interopRequireDefault(_Arrow);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function SampleNextArrow(props) {
+  var className = props.className,
+      style = props.style,
+      onClick = props.onClick;
+
+  return _react2.default.createElement(
+    'div',
+    { id: "nextArrow", onClick: onClick },
+    _react2.default.createElement(_Arrow2.default, { className: "arrow-icon next-arrow", forward: true, color: "#ec3092", width: "30px" })
+  );
+}
+
+function SamplePrevArrow(props) {
+  var className = props.className,
+      style = props.style,
+      onClick = props.onClick;
+
+  return _react2.default.createElement(
+    'div',
+    { id: "prevArrow", onClick: onClick },
+    _react2.default.createElement(_Arrow2.default, { className: "arrow-icon", color: "#ec3092", width: "30px" })
+  );
+}
+
+var SingleItem = function (_Component) {
+  _inherits(SingleItem, _Component);
+
+  function SingleItem(props) {
+    _classCallCheck(this, SingleItem);
+
+    var _this = _possibleConstructorReturn(this, (SingleItem.__proto__ || Object.getPrototypeOf(SingleItem)).call(this, props));
+
+    _this.state = {
+      mainImage: '',
+      render3D: false
+    };
+    return _this;
+  }
+
+  _createClass(SingleItem, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.setState({
+        mainImage: this.props.images[0].url
+      });
+    }
+  }, {
+    key: 'nextStepCollector',
+    value: function nextStepCollector(event) {
+      this.props.doRenderCollector();
+    }
+  }, {
+    key: 'nextStepBoothInstaQuote',
+    value: function nextStepBoothInstaQuote(event) {
+      this.props.doRenderBoothInstaQuote();
+    }
+  }, {
+    key: 'nextStepVideoWallInstaQuote',
+    value: function nextStepVideoWallInstaQuote(event) {
+      this.props.doRenderVideoWallInstaQuote();
+    }
+  }, {
+    key: 'handleView',
+    value: function handleView(value) {
+      value !== "3D" ? this.setState({ mainImage: this.props.images[value].url, render3D: false }) : this.setState({ render3D: true });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var settings = {
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: false,
+        draggable: false,
+        nextArrow: _react2.default.createElement(SampleNextArrow, null),
+        prevArrow: _react2.default.createElement(SamplePrevArrow, null)
+      };
+
+      var backgroundStyle = {
+        backgroundImage: 'url(' + this.state.mainImage + ')'
+      };
+      var choice3D = this.state.render3D ? _react2.default.createElement(_SketchFab2.default, { obj: this.props.obj }) : null;
+
+      var numberOfImages = this.props.images.map(function (image, index) {
+        return _react2.default.createElement('img', { key: image.url, className: 'thumbnailBooth', onClick: function onClick() {
+            return _this2.handleView(index);
+          }, src: _this2.props.images[index].url });
+      });
+
+      var imageOptions = _react2.default.createElement(
+        'div',
+        { className: 'singleImage' },
+        _react2.default.createElement(
+          'div',
+          { className: 'visualizer', id: 'visualizer', style: backgroundStyle },
+          choice3D
+        ),
+        _react2.default.createElement(
+          _reactSlick2.default,
+          settings,
+          _react2.default.createElement('img', { className: 'thumbnailBooth', onClick: function onClick() {
+              return _this2.handleView("3D");
+            }, src: 'assets/img/3dTrigger.svg' }),
+          numberOfImages
+        )
+      );
+      var boothButton = _react2.default.createElement(
+        'button',
+        { onClick: function onClick() {
+            return _this2.nextStepBoothInstaQuote();
+          }, className: 'instaQuoteButton' },
+        'get instaQuote'
+      );
+      var videoWallButton = _react2.default.createElement(
+        'button',
+        { onClick: function onClick() {
+            return _this2.nextStepVideoWallInstaQuote();
+          }, className: 'instaQuoteButton' },
+        'get instaQuote'
+      );
+      var buttonChoice = this.props.instaQuoteVideoWall ? videoWallButton : boothButton;
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'singleBooth' },
+        imageOptions,
+        _react2.default.createElement(
+          'div',
+          { className: 'singleInfo' },
+          _react2.default.createElement(
+            'h3',
+            null,
+            this.props.singleValue
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: "insertPadding booth" + this.props.type },
+            _react2.default.createElement('label', null)
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            this.props.description
+          ),
+          buttonChoice
+        )
+      );
+    }
+  }]);
+
+  return SingleItem;
+}(_react.Component);
+
+exports.default = SingleItem;
 
 /***/ })
 /******/ ]);

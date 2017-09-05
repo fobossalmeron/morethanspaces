@@ -112,14 +112,14 @@ class StaticSection extends Component {
         <ul>
           <li className="clientNike">Nike</li>
           <li className="clientCocaCola">Coca-Cola</li>
-          <li className="clientMoneyGram">MoneyGram</li>
           <li className="clientChanel">Chanel</li>
+          <li className="clientMoneyGram">MoneyGram</li>
           <li className="clientCapitalOne">CapitalOne</li>
           <li className="clientBaseF">BaseF</li>
-          <li className="clientBMW">BMW</li>
+          <li className="clientNovartis">Novartis</li>
           <li className="clientDiageo">Diageo</li>
           <li className="clientKraft">Kraft</li>
-          <li className="clientNovartis">Novartis</li>
+          <li className="clientBMW">BMW</li>
           <li className="clientPepsico">Pepsico</li>
           <li className="clientBoss">Boss</li>
         </ul>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SingleBooth from './SingleBooth';
+import SingleItem from './SingleItem';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import CollectBeforeQuote from './CollectBeforeQuote';
 import InstaQuote from './presentational/InstaQuote';
@@ -13,9 +13,11 @@ class VideoWallGrid extends Component {
       individualVideoWallRender: this.props.individualVideoWallRender,
       singleValue: '',
       description: '',
-      type: '',
       obj: '',
       images:[],
+      type: '',
+      rent: '',
+      size: ''
     };
     this.loadFromServer = this.loadFromServer.bind(this);
   }
@@ -34,13 +36,15 @@ class VideoWallGrid extends Component {
     this.loadFromServer();
   }
 
-  generateSingleVideoWall(singleValue, description, obj, images, type){
+  generateSingleVideoWall(singleValue, description, obj, images, type, rent, size){
     this.setState({
       singleValue: singleValue,
       description: description,
       obj: obj,
+      rent: rent,
       images : images,
       type: type,
+      size: size
     })
     this.props.renderSingleVideoWall();
   }
@@ -68,47 +72,52 @@ class VideoWallGrid extends Component {
       }
     }).map((item, index) => (
       <li key={item.id}
-          onClick={() => this.generateSingleVideoWall(item.id, item.description, item.obj, item.images, item.type)}
+          onClick={() => this.generateSingleVideoWall(item.id, item.description, item.obj, item.images, item.type, item.rent, item.size)}
           className={"boothGridItem booth" + item.type}
           style={{backgroundImage: 'url(' + item.images[0].url + ')'}}>
           <label>{item.id}</label>
       </li>
     ));
 
-    var singleVideowall = (
-       <SingleBooth description={this.state.description}
+    var singleVideoWall = (
+       <SingleItem instaQuoteVideoWall={true}
+                    description={this.state.description}
                     singleValue={this.state.singleValue}
-                    boothType={this.state.type}
+                    type={this.state.type}
                     obj={this.state.obj}
                     images={this.state.images}
-                    doRenderInstaQuote={this.props.doRenderInstaQuote.bind(this)}/>
+                    doRenderVideoWallInstaQuote={this.props.doRenderVideoWallInstaQuote.bind(this)}/>
       );
 
     var gridChoice = (this.props.individualVideoWallRender ? singleVideoWall : doRenderVideoWalls);
 
     var quote = (
       <div>
-      <div id="instaQuote">
-      <InstaQuote images={this.state.images}
-                  singleValue={this.state.singleValue}
-                  type={this.state.type}
-                  eventInVegas={this.props.eventInVegas}
-                  revealInstaQuote={this.props.revealInstaQuote}
-                  discountOn={this.props.discountOn}
-                  discountNumber={this.props.discountNumber}
-                  discountType={this.props.discountType}/>
-        <CollectBeforeQuote
-                  images={this.state.images}
-                  singleValue={this.state.singleValue}
-                  type={this.state.type}
-                  eventInVegas={this.props.eventInVegas}
-                  doRevealInstaQuote={this.props.doRevealInstaQuote.bind(this)}/>
-      </div>
-      <IconsBar/>
+        <div className={"instaQuoteWhole"} id="videoWallInstaQuote">
+        <InstaQuote images={this.state.images}
+                    singleValue={this.state.singleValue}
+                    type={this.state.type}
+                    rent={this.state.rent}
+                    size={this.state.size}
+                    eventInVegas={this.props.eventInVegas}
+                    revealInstaQuote={this.props.revealInstaQuote}
+                    discountOn={this.props.discountOn}
+                    discountNumber={this.props.discountNumber}
+                    discountType={this.props.discountType}/>
+          <CollectBeforeQuote
+                    images={this.state.images}
+                    singleValue={this.state.singleValue}
+                    type={this.state.type}
+                    eventInVegas={this.props.eventInVegas}
+                    doRevealInstaQuote={this.props.doRevealInstaQuote.bind(this)}
+                    hideCollectors={this.props.hideCollectors.bind(this)}
+                    renderCollectors={this.props.renderCollectors}/>
+        </div>
+        <IconsBar/>
       </div>
     );
 
-    var renderQuote = this.props.renderInstaQuote ? quote : undefined ;
+    var renderQuote = this.props.renderVideoWallInstaQuote ? quote : undefined ;
 
     return (
       <div>

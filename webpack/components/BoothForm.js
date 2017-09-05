@@ -16,16 +16,20 @@ class BoothForm extends Component {
     this.setVideoWall = this.setVideoWall.bind(this);
   }
 
+  doSeeState(){
+    this.props.seeState();
+  }
+
   setVideoWall(){
     this.props.doAddVideoWall();
   }
   setTv(){
     this.props.doAddTv();
   }
-  doShip(){
+  doShip(event){
     this.props.needShipping();
   }
-  doNotShip(){
+  doNotShip(event){
     this.props.noNeedShipping();
   }
   handleOwn(){
@@ -66,10 +70,10 @@ class BoothForm extends Component {
           <option value="50">50ft</option>
         </select>
         <label>booth type</label>
-          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck" nameFor="Island" checkFor="island" checked={this.props.selectedIsland}/>
-          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck" nameFor="SplitIsland" checkFor="split island" checked="checked" doubleLine="doubleLine"/>
-          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck" nameFor="Peninsula" checked="checked" checkFor="peninsula"/>
-          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck noMarginRight" nameFor="Inline" checked="checked" checkFor="inline"/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck" nameFor="Island" checkFor="island" defaultChecked={this.props.selectedIsland}/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck" nameFor="SplitIsland" checkFor="split island" defaultChecked="checked" doubleLine="doubleLine"/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck" nameFor="Peninsula" defaultChecked="checked" checkFor="peninsula"/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck noMarginRight" nameFor="Inline" defaultChecked="checked" checkFor="inline"/>
       </div>
     )
     var backToBooths = (
@@ -79,14 +83,23 @@ class BoothForm extends Component {
           <a onClick={() => this.props.closeSingleBooth()}><b>back</b> to booths</a>
         </div>
         <label>rent or own?</label>
-          <CheckBox onClick={this.handleRent} inputType="radio" classList="formCheck" nameFor="rentOrOwn" checked="true" checkFor="rent"/>
+          <CheckBox onClick={this.handleRent} inputType="radio" classList="formCheck" nameFor="rentOrOwn" defaultChecked="checked" checkFor="rent"/>
           <CheckBox onClick={this.handleOwn} inputType="radio" classList="formCheck" nameFor="rentOrOwn" checkFor="own"/>
         <label>event location</label>
-          <CheckBox onClick={this.doNotShip} inputType="radio" classList="formCheck" nameFor="inVegas" checked="checked" checkFor="Las Vegas"/>
-          <CheckBox onClick={this.doShip} inputType="radio" classList="formCheck" nameFor="inVegas" checkFor="else"/>
+          <div className="formCheck quoteCheck">
+            <input type="radio" id="Las Vegas" onClick={this.doNotShip} name={"inVegas"} defaultChecked={true} />
+            <label className="noMargin" htmlFor="Las Vegas">Las Vegas</label>
+          </div>
+          <div className="formCheck quoteCheck">
+            <input type="radio" id="else" onClick={this.doShip} name={"inVegas"} defaultChecked={false} />
+            <label className="noMargin" htmlFor="else">else</label>
+          </div>
         <label>stand out even more</label>
-          <CheckBox onChange={this.setTv} inputType="checkbox" classList="formCheck" nameFor="addons" checked={this.props.addTv} checkFor="add Tv(s)"/>
-          <CheckBox onChange={this.setVideoWall} inputType="checkbox" classList="formCheck" nameFor="addons" checkFor="add videowall"/>
+          <div className="formCheck quoteCheck">
+            <input type="checkbox" id="add Tv(s)" onClick={this.setTv} defaultChecked={false} />
+            <label className="noMargin" htmlFor={"add Tv(s)"}>add Tv(s)</label>
+          </div>
+          <CheckBox onClick={this.setVideoWall} inputType="checkbox" classList="formCheck" nameFor="else" checkFor="add videowall"/>
         <div className="blueSuggest">
         <label>can&#39;t find &#39;your thing&#39;?</label>
           <p>no problem!<br/>

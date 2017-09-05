@@ -10,6 +10,8 @@ class InstaQuote extends Component {
      this.boothPrice = this.boothPrice.bind(this);
      this.discountedBoothPrice = this.discountedBoothPrice.bind(this);
      this.flagMaxDiscount = this.flagMaxDiscount.bind(this);
+     this.ifExistsWantToOwn = this.ifExistsWantToOwn.bind(this);
+     this.ifExistsSize = this.ifExistsSize.bind(this);
   }
 
   discountSymbol(){
@@ -43,7 +45,7 @@ class InstaQuote extends Component {
   }
 
   flagMaxDiscount(){
-    this.setState({maxDiscount: true}, ()=> console.log(this.state.maxDiscount));
+    this.setState({maxDiscount: true});
   }
 
   discountedBoothPrice(somePrice){
@@ -51,25 +53,41 @@ class InstaQuote extends Component {
     if (this.props.discountOn){
       if (this.props.discountType === "amount"){
         price = (price - this.props.discountNumber)
-        console.log("amount apply")
       } else if (this.props.discountType === "percentage"){
           price = (1 - (this.props.discountNumber / 100)) * price
-          console.log("percentage apply")
-
           if ((somePrice - price) > 5000) {
             price = somePrice - 5000
-            console.log("max discount apply")
           }
       }
     }
    return price
-   console.log(price);
+  }
+
+  ifExistsWantToOwn(){
+    var renderOrNot
+    if (typeof this.props.wantToOwn !== 'undefined') {
+      renderOrNot = this.props.wantToOwn? <li>You want to <b>own</b> it</li> : <li>You want to <b>rent</b> it</li>;
+    } else {
+      renderOrNot = ' '
+    }
+    return renderOrNot
+  }
+
+  ifExistsSize(){
+    var renderOrNot
+    if (typeof this.props.size !== 'undefined') {
+      renderOrNot = <li>size: {this.props.size} </li>
+    } else {
+      renderOrNot = <li>size: <b>{this.props.width}</b>ft x <b>{this.props.length}</b>ft</li>
+    }
+    return renderOrNot
   }
 
   render (){
     var originalPrice = this.boothPrice();
     var finalPrice = this.discountedBoothPrice(originalPrice);
-    var renderRentOwn = this.props.wantToOwn? "own" : "rent";
+    var ifExistsOwnableMessage = this.ifExistsWantToOwn();
+    var ifExistsSize = this.ifExistsSize();
     var renderInVegas = this.props.eventInVegas? "in" : "outside";
     var reveal = this.props.revealInstaQuote? "revealQuote quoteNumber" : "quoteNumber";
     var renderTv = this.props.addTv? <li>You added a <b>Tv</b></li> : undefined;
@@ -86,12 +104,12 @@ class InstaQuote extends Component {
     return (
     <div className="instaBlock">
       <div className="instaColumn">
-        <div className="instaThumbnail" style={{backgroundImage: ''}}></div>
+        <div className="instaThumbnail" style={{backgroundImage: 'url(' + this.props.images[0].url + ')'}}></div>
         <ul>
           <li>model: <b>{this.props.singleValue}</b></li>
-          <li>size: <b>{this.props.width}</b>ft x <b>{this.props.length}</b>ft</li>
-          <li>type: {this.props.boothType}</li>
-          <li>You want to <b>{renderRentOwn}</b> it</li>
+          {ifExistsSize}
+          <li>type: {this.props.type}</li>
+          {ifExistsOwnableMessage}
           <li>This event is <b>{renderInVegas}</b> Las Vegas </li>
           {renderTv}
           {renderVideoWall}

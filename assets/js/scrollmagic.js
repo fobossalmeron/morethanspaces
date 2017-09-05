@@ -8,6 +8,11 @@ var logoScene = new ScrollMagic.Scene({triggerElement: "#slider", offset:-300})
         //.addIndicators()
         .addTo(controller);
 
+
+        $('#products').on('onresize', function(){
+          return $('#products').height()
+        })
+
 //instaQuote button
 var instaQuoteButton = new ScrollMagic.Scene({triggerElement: "#products", duration: $('#products').height()})
         .setClassToggle( "#instaQuoteButton", "fadeOut")
@@ -48,10 +53,10 @@ var client1 = new ScrollMagic.Scene({triggerElement: ".clientNike", offset:-100}
 var client2 = new ScrollMagic.Scene({triggerElement: ".clientCocaCola", offset:-60})
         .setClassToggle( ".clientCocaCola", "fadeIn")
         .addTo(controller);
-var client3 = new ScrollMagic.Scene({triggerElement: ".clientMoneyGram", offset:-30})
+var client3 = new ScrollMagic.Scene({triggerElement: ".clientChanel", offset:-30})
         .setClassToggle( ".clientMoneyGram", "fadeIn")
         .addTo(controller);
-var client4 = new ScrollMagic.Scene({triggerElement: ".clientChanel", offset:-130})
+var client4 = new ScrollMagic.Scene({triggerElement: ".clientMoneyGram", offset:-130})
         .setClassToggle( ".clientChanel", "fadeIn")
         .addTo(controller);
 var client5 = new ScrollMagic.Scene({triggerElement: ".clientCapitalOne", offset:-90})
@@ -75,7 +80,7 @@ var client10 = new ScrollMagic.Scene({triggerElement: ".clientNovartis", offset:
 var client11 = new ScrollMagic.Scene({triggerElement: ".clientPepsico", offset:-150})
         .setClassToggle( ".clientPepsico", "fadeIn")
         .addTo(controller);
-var client12 = new ScrollMagic.Scene({triggerElement: ".clientBoss", offset:-120})
+var client12 = new ScrollMagic.Scene({triggerElement: ".clientBoss", offset:-150})
         .setClassToggle( ".clientBoss", "fadeIn")
         .addTo(controller);
 

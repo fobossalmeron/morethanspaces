@@ -145,9 +145,9 @@ section { float: left; width: 100%; padding: 3% 5%; }
 .modalCloseButton { position: absolute; top: 0; right: 0; width: 40px; height: 50px; background-color: transparent; border: none; background-image: url("../img/layout/cross.svg"); background-repeat: no-repeat; background-size: contain; cursor: pointer; transition: .4s ease all; }
 .modalCloseButton:focus, .modalCloseButton:hover { outline: none; transform: scale(1.2); }
 
-.modalOverlay { position: fixed; z-index: 3; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: rgba(255, 255, 255, 0.55); transition: .4s ease all; }
+.modalOverlay { position: fixed; z-index: 3; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: rgba(255, 255, 255, 0.55); transition: .4s ease all; cursor: pointer; }
 
-.modalItself { position: absolute; top: 20%; left: 15%; right: 15%; bottom: 10%; overflow: hidden; border-radius: 2px; outline: none; }
+.modalItself { position: absolute; top: 20%; left: 15%; right: 15%; bottom: 10%; overflow: hidden; border-radius: 2px; outline: none; cursor: auto; }
 
 .ReactModal__Body--open { overflow: hidden; }
 
@@ -313,7 +313,7 @@ input[type=text] { border: none; padding: 4px; font-size: .7em; }
 .instaQuoteForm select { -webkit-appearance: none; -moz-appearance: none; border-radius: 2px; width: 42.5%; background-position: right 50%; background-repeat: no-repeat; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAYAAABSgIzaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDZFNDEwNjlGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDZFNDEwNkFGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NkU0MTA2N0Y3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NkU0MTA2OEY3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuGsgwQAAAA5SURBVHjaYvz//z8DOYCJgUxAf42MQIzTk0D/M+KzkRGPoQSdykiKJrBGpOhgJFYTWNEIiEeAAAMAzNENEOH+do8AAAAASUVORK5CYII=); padding: 4% 3%; height: 30px; float: left; border: none; font-size: .7em; font-family: "GothamRound", sans-serif; background-color: #eee81a; margin: 1% 0; }
 
 .leaveOrStay { float: left; padding-top: 15px; width: 100%; text-align: left; line-height: 1.5; margin-bottom: 10px; }
-.leaveOrStay a { border-bottom: 2px solid #f9f9f9; color: white; text-decoration: none; padding-bottom: 0px; float: left; }
+.leaveOrStay a { border-bottom: 2px solid #f9f9f9; color: white; text-decoration: none; padding-bottom: 0px; float: left; font-size: 18px; }
 .leaveOrStay .new-arrow { margin: 3px 5px 0 0; float: left; }
 .leaveOrStay b { float: left; padding-right: 7px; }
 .leaveOrStay:nth-child(2) { float: right; width: 143px; }
@@ -323,7 +323,7 @@ input[type=text] { border: none; padding: 4px; font-size: .7em; }
 .datePickerFields { float: left; }
 .datePickerFields label { float: left; clear: both; }
 
-#boothGrid { height: 545px; overflow-y: scroll; float: left; width: 72%; margin: 0 4% 4% 0px; }
+#boothGrid { height: 500px; overflow-y: scroll; float: left; width: 72%; margin: 0 4% 4% 0px; }
 
 .boothGridItem { width: 31.6%; padding-top: 20%; transition: .5s ease all; background-size: cover; position: relative; min-height: 120px; cursor: pointer; float: left; margin: 0px 1% 5% 1%; list-style: none; }
 .boothGridItem:nth-child(3n+3) { margin-right: 0; }
@@ -334,6 +334,12 @@ input[type=text] { border: none; padding: 4px; font-size: .7em; }
 
 .hidden { opacity: 0; display: none; }
 .hidden label::after { content: "hidden"; }
+
+.boothTv label::after { content: 'tv'; background-color: #2dbdc0; }
+
+.boothLED label::after { content: 'led'; background-color: #eee81a; }
+
+.boothLCD label::after { content: 'lcd'; background-color: #ec3092; }
 
 .boothIsland label::after { content: 'island'; background-color: #2dbdc0; }
 
@@ -421,11 +427,11 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 
 .instaBlock { float: left; width: 100%; }
 
-#instaQuote { padding: 4%; background-color: #2dbdc0; float: left; width: 100%; }
-#instaQuote h2 { cursor: auto; padding-top: 0; float: left; clear: both; }
-#instaQuote ul { float: left; clear: both; list-style: none; font-size: 0.8em; margin: 0; }
-#instaQuote ul:nth-of-type(2) { margin-bottom: 4%; margin-top: 1%; }
-#instaQuote ul li { float: left; clear: both; }
+.instaQuoteWhole { padding: 4%; background-color: #2dbdc0; float: left; width: 100%; }
+.instaQuoteWhole h2 { cursor: auto; padding-top: 0; float: left; clear: both; }
+.instaQuoteWhole ul { float: left; clear: both; list-style: none; font-size: 0.8em; margin: 0; }
+.instaQuoteWhole ul:nth-of-type(2) { margin-bottom: 4%; margin-top: 1%; }
+.instaQuoteWhole ul li { float: left; clear: both; }
 
 .instaInfo { width: 75%; float: left; padding-left: 4%; }
 .instaInfo .wasLink { width: auto; float: left; clear: both; display: block; padding: 2% 4%; margin-top: 2%; margin-bottom: 1%; border-radius: 2px; }

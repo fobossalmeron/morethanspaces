@@ -20,14 +20,24 @@ class QuoteTabs extends Component {
       selectedLcd: true,
       wantToOwn: false,
       eventInVegas: true,
+      addVideoWall: false,
+      addTv: false,
       individualBoothRender: false,
       individualVideoWallRender: false,
-      renderInstaQuote: false,
+      renderBoothInstaQuote: false,
+      renderVideoWallInstaQuote: false,
       revealInstaQuote: false,
-      addVideoWall: false,
-      addTv: false
+      renderCollectors: true
     };
     this.clickFor = this.clickFor.bind(this);
+  }
+
+  seeState(){
+    console.log(this.state);
+  }
+
+  hideCollectors(){
+    this.setState({ renderCollectors: false });
   }
 
   doAddVideoWall(){
@@ -38,22 +48,27 @@ class QuoteTabs extends Component {
     this.setState({ addTv: !this.state.addTv}, ()=> console.log("Tv " + this.state.addTv));
   }
 
-  needShipping(){
-    this.setState({ eventInVegas: false}, ()=> console.log("not in vegas XX"));
-  }
   noNeedShipping(){
     this.setState({ eventInVegas: true}, ()=> console.log("in vegas XX"));
+  }
+
+  needShipping(){
+    this.setState({ eventInVegas: false}, ()=> console.log("not in vegas XX"));
   }
 
   doWantToOwn(){
     this.setState({ wantToOwn: true }, ()=> console.log("i want to OWN it"));
   }
+
   doWantToRent(){
     this.setState({ wantToOwn: false }, ()=> console.log("just want to RENT it"));
   }
 
-  doRenderInstaQuote(){
-    this.setState({ renderInstaQuote: true }, ()=> controller.scrollTo("#instaQuote"))
+  doRenderBoothInstaQuote(){
+    this.setState({ renderBoothInstaQuote: true }, ()=> controller.scrollTo("#boothInstaQuote"))
+  }
+  doRenderVideoWallInstaQuote(){
+    this.setState({ renderVideoWallInstaQuote: true }, ()=> controller.scrollTo("#videoWallInstaQuote"))
   }
 
   doRevealInstaQuote(){
@@ -143,7 +158,7 @@ class QuoteTabs extends Component {
         </TabList>
 
         <TabPanel>
-          <BoothForm toggleBooth={this.toggleBooth.bind(this)}
+          <BoothForm     toggleBooth={this.toggleBooth.bind(this)}
                          limitByWidth={this.limitByWidth.bind(this)}
                          limitByLength={this.limitByLength.bind(this)}
                          individualBoothRender={this.state.individualBoothRender}
@@ -155,7 +170,12 @@ class QuoteTabs extends Component {
                          doAddVideoWall={this.doAddVideoWall.bind(this)}
                          doAddTv={this.doAddTv.bind(this)}
                          addTv={this.state.addTv}
-                         selectedIsland={this.state.selectedIsland}/>
+                         wantToOwn={this.state.wantToOwn}
+                         eventInVegas={this.state.eventInVegas}
+                         addVideoWall={this.state.addVideoWall}
+                         addVideoWall={this.state.addVideoWall}
+                         selectedIsland={this.state.selectedIsland}
+                         seeState={this.seeState.bind(this)}/>
 
           <BoothGrid    dataToLoad={"./assets/js/booths.json"}
                         selectedIsland={this.state.selectedIsland}
@@ -166,17 +186,19 @@ class QuoteTabs extends Component {
                         boothSizeLength={this.state.boothSizeLength}
                         individualBoothRender={this.state.individualBoothRender}
                         revealInstaQuote={this.state.revealInstaQuote}
-                        renderInstaQuote={this.state.renderInstaQuote}
+                        renderBoothInstaQuote={this.state.renderBoothInstaQuote}
                         wantToOwn={this.state.wantToOwn}
                         eventInVegas={this.state.eventInVegas}
                         addVideoWall={this.state.addVideoWall}
                         addTv={this.state.addTv}
                         renderSingleBooth={this.renderSingleBooth.bind(this)}
                         doRevealInstaQuote={this.doRevealInstaQuote.bind(this)}
-                        doRenderInstaQuote={this.doRenderInstaQuote.bind(this)}
+                        doRenderBoothInstaQuote={this.doRenderBoothInstaQuote.bind(this)}
                         discountOn={this.props.discountOn}
                         discountNumber={this.props.discountNumber}
-                        discountType={this.props.discountType}/>
+                        discountType={this.props.discountType}
+                        hideCollectors={this.hideCollectors.bind(this)}
+                        renderCollectors={this.state.renderCollectors}/>
         </TabPanel>
         <TabPanel>
           <VideoWallForm toggleVideoWall={this.toggleVideoWall.bind(this)}
@@ -195,10 +217,13 @@ class QuoteTabs extends Component {
                          eventInVegas={this.state.eventInVegas}
                          renderSingleVideoWall={this.renderSingleVideoWall.bind(this)}
                          doRevealInstaQuote={this.doRevealInstaQuote.bind(this)}
-                         doRenderInstaQuote={this.doRenderInstaQuote.bind(this)}
+                         renderVideoWallInstaQuote={this.state.renderVideoWallInstaQuote}
+                         doRenderVideoWallInstaQuote={this.doRenderVideoWallInstaQuote.bind(this)}
                          discountOn={this.props.discountOn}
                          discountNumber={this.props.discountNumber}
-                         discountType={this.props.discountType}/>
+                         discountType={this.props.discountType}
+                         hideCollectors={this.hideCollectors.bind(this)}
+                         renderCollectors={this.state.renderCollectors}/>
         </TabPanel>
       </Tabs>
       </section>

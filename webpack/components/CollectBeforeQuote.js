@@ -6,15 +6,12 @@ import InstaQuote from './presentational/InstaQuote';
 class CollectBeforeQuote extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      hideFields: false
-    };
   this.revealQuote = this.revealQuote.bind(this);
   }
 
   revealQuote(){
     this.props.doRevealInstaQuote();
-    this.setState({hideFields:true});
+    this.props.hideCollectors();
   }
 
   componentDidMount(){
@@ -31,7 +28,7 @@ class CollectBeforeQuote extends Component {
       <button type='submit'>reveal instaQuote now!</button>
       </div>
     )
-    var displayForm = (this.state.hideFields? undefined : actualForm)
+    var displayForm = (this.props.renderCollectors? actualForm : undefined)
 
     return (
       <div id="dataCollector">

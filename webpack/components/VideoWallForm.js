@@ -1,13 +1,27 @@
 import React, { Component } from 'react';
 import CheckBox from './presentational/CheckBox';
 import Arrow from './presentational/Arrow';
+import ReactModal from 'react-modal';
 
 class VideoWallForm extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      showModal: false
+    };
     this.handleVideoWallToggle = this.handleVideoWallToggle.bind(this);
     this.doShip = this.doShip.bind(this);
     this.doNotShip = this.doNotShip.bind(this);
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+  }
+
+  handleOpenModal () {
+    this.setState({ showModal: true });
+  }
+
+  handleCloseModal () {
+    this.setState({ showModal: false });
   }
 
   doShip(){
@@ -25,9 +39,12 @@ class VideoWallForm extends Component {
     var videoWallMenu = (
       <div>
         <label>choose type</label>
-          <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" classList="formCheck" nameFor="Tv" checkFor="tv" checked="checked"/>
-          <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" classList="formCheck" nameFor="LED" checkFor="led" checked="checked"/>
-          <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" classList="formCheck" nameFor="LCD" checkFor="lcd" checked="checked"/>
+          <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" classList="formCheck" nameFor="Tv" checkFor="tv" defaultChecked="checked"/>
+          <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" classList="formCheck" nameFor="LED" checkFor="led" defaultChecked="checked"/>
+          <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" classList="formCheck" nameFor="LCD" checkFor="lcd" defaultChecked="checked"/>
+          <div className="blueSuggest">
+          <label onClick={() => this.handleOpenModal()}>what&#39;s the difference?</label>
+          </div>
       </div>
     )
     var backToVideoWalls = (
@@ -37,8 +54,14 @@ class VideoWallForm extends Component {
           <a onClick={() => this.props.closeSingleVideoWall()}><b>back</b> to videowalls</a>
         </div>
         <label>event location</label>
-          <CheckBox onClick={this.doNotShip} inputType="radio" classList="formCheck" nameFor="inVegas" checked="checked" checkFor="Las Vegas"/>
-          <CheckBox onClick={this.doShip} inputType="radio" classList="formCheck" nameFor="inVegas" checkFor="else"/>
+          <div className="formCheck quoteCheck">
+            <input type="radio" id="Las Vegas" onClick={this.doNotShip} name={"inVegas"} defaultChecked={true} />
+            <label className="noMargin" htmlFor="Las Vegas">Las Vegas</label>
+          </div>
+          <div className="formCheck quoteCheck">
+            <input type="radio" id="else" onClick={this.doShip} name={"inVegas"} defaultChecked={false} />
+            <label className="noMargin" htmlFor="else">else</label>
+          </div>
         <div className="blueSuggest">
         <label>can&#39;t find &#39;your thing&#39;?</label>
           <p>no problem!<br/>
@@ -49,8 +72,20 @@ class VideoWallForm extends Component {
     )
     var menuChoice = (this.props.individualVideoWallRender ? backToVideoWalls : videoWallMenu);
     return (
-      <div className="instaQuoteForm">
-        {menuChoice}
+      <div>
+        <div className="instaQuoteForm">
+          {menuChoice}
+        </div>
+        <ReactModal
+           overlayClassName={"modalOverlay"}
+           className={"modalItself"}
+           isOpen={this.state.showModal}
+           onRequestClose={this.handleCloseModal}
+           closeTimeoutMS={500}
+           contentLabel="What's the difference?">
+           <img src={"assets/img/layout/videotypes.png"} />
+           <button className="modalCloseButton" onClick={this.handleCloseModal}></button>
+        </ReactModal>
       </div>
     )
   }

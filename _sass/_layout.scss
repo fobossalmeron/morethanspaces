@@ -368,6 +368,7 @@ section{
   bottom: 0px;
   background-color: rgba(255, 255, 255, 0.55);
   transition: .4s ease all;
+  cursor: pointer;
 }
 .modalItself{
   position: absolute;
@@ -378,6 +379,7 @@ section{
   overflow: hidden;
   border-radius: 2px;
   outline: none;
+  cursor:auto;
 }
 
 .ReactModal__Body--open{
@@ -1111,6 +1113,7 @@ input[type=text]{
     text-decoration: none;
     padding-bottom: 0px;
     float:left;
+    font-size: 18px;
   }
   .new-arrow{
     margin: 3px 5px 0 0;
@@ -1142,7 +1145,7 @@ input[type=text]{
 }
 
 #boothGrid{
-  height: 545px;
+  height: 500px;
   overflow-y: scroll;
   float: left;
   width: 72%;
@@ -1197,6 +1200,19 @@ input[type=text]{
   label::after{
     content:'hidden'
   }
+}
+
+.boothTv label::after{
+    content: 'tv';
+    background-color: $blue;
+}
+.boothLED label::after{
+    content: 'led';
+    background-color: $yellow;
+}
+.boothLCD label::after{
+    content: 'lcd';
+    background-color: $magenta;
 }
 
 .boothIsland label::after{
@@ -1509,7 +1525,7 @@ iframe{
   width: 100%;
 }
 
-#instaQuote{
+.instaQuoteWhole{
   padding: 4%;
   background-color: $blue;
   float: left;

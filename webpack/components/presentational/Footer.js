@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import IconsBar from './IconsBar';
-import LinkedInIcon from 'svg-react-loader?name=LinkedInIcon!../../../assets/img/icons/linkedin.svg';
-import FacebookIcon from 'svg-react-loader?name=FacebookIcon!../../../assets/img/icons/facebook.svg';
-import InstagramIcon from 'svg-react-loader?name=InstagramIcon!../../../assets/img/icons/instagram.svg';
-import YouTubeIcon from 'svg-react-loader?name=YouTubeIcon!../../../assets/img/icons/youtube.svg';
-import PinterestIcon from 'svg-react-loader?name=PinterestIcon!../../../assets/img/icons/pinterest.svg';
-import GooglePlusIcon from 'svg-react-loader?name=GooglePlusIcon!../../../assets/img/icons/googleplus.svg';
-import TwitterIcon from 'svg-react-loader?name=TwitterIcon!../../../assets/img/icons/twitter.svg';
+import LinkedInIcon from 'svg-react-loader?name=LinkedInIcon!../../../assets/img/layout/icons/linkedin.svg';
+import FacebookIcon from 'svg-react-loader?name=FacebookIcon!../../../assets/img/layout/icons/facebook.svg';
+import InstagramIcon from 'svg-react-loader?name=InstagramIcon!../../../assets/img/layout/icons/instagram.svg';
+import YouTubeIcon from 'svg-react-loader?name=YouTubeIcon!../../../assets/img/layout/icons/youtube.svg';
+import PinterestIcon from 'svg-react-loader?name=PinterestIcon!../../../assets/img/layout/icons/pinterest.svg';
+import GooglePlusIcon from 'svg-react-loader?name=GooglePlusIcon!../../../assets/img/layout/icons/googleplus.svg';
+import TwitterIcon from 'svg-react-loader?name=TwitterIcon!../../../assets/img/layout/icons/twitter.svg';
 
 class Footer extends Component {
 
@@ -46,11 +46,12 @@ class Footer extends Component {
             </li>
             <li>
               <h3>resources</h3>
-              <a href="assets/pdf/mts_booth_types.pdf" target="_blank">booth types</a>
+              <a href="assets/pdf/mts_booth_types.pdf" download="mts_booth_types" target="_blank">booth types</a>
               <a href="assets/pdf/mts_timeline_and_graphic_specs.pdf" target="_blank">timeline &<br/>graphic specs</a>
               <a href="assets/pdf/sample.pdf" target="_blank">video walls</a>
               <a href="assets/pdf/sample.pdf" target="_blank">how to upload</a>
               <a href="assets/pdf/sample.pdf" target="_blank">payment info</a>
+              <a href="assets/pdf/sample.pdf" target="_blank">industry clients</a>
             </li>
             <li className="realestate">
               <h3>contact us</h3>

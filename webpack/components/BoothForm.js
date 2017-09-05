@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import CheckBox from './presentational/CheckBox';
-import Arrow from './presentational/Arrow';
+import ArrowBackIcon from 'svg-react-loader?name=ArrowBackIcon!../../assets/img/layout/arrowback.svg';
+import BlueSuggest from './presentational/BlueSuggest';
+import MagentaSuggest from './presentational/MagentaSuggest';
 
 class BoothForm extends Component {
   constructor(props) {
@@ -70,42 +72,38 @@ class BoothForm extends Component {
           <option value="50">50ft</option>
         </select>
         <label>booth type</label>
-          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck" nameFor="Island" checkFor="island" defaultChecked={this.props.selectedIsland}/>
-          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck" nameFor="SplitIsland" checkFor="split island" defaultChecked="checked" doubleLine="doubleLine"/>
-          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck" nameFor="Peninsula" defaultChecked="checked" checkFor="peninsula"/>
-          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" classList="formCheck noMarginRight" nameFor="Inline" defaultChecked="checked" checkFor="inline"/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="Island" checkFor="island" defaultChecked={this.props.selectedIsland}/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="SplitIsland" checkFor="split island" defaultChecked="checked" doubleLine="doubleLine"/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="Peninsula" defaultChecked="checked" checkFor="peninsula"/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" noMarginRight nameFor="Inline" defaultChecked="checked" checkFor="inline"/>
+        <BlueSuggest/>
       </div>
     )
     var backToBooths = (
       <div className="goBackContainer">
         <div className="leaveOrStay">
-          <Arrow className={"new-arrow"} color={"#f9f9f9"} width={"25px"}/>
+          <ArrowBackIcon/>
           <a onClick={() => this.props.closeSingleBooth()}><b>back</b> to booths</a>
         </div>
         <label>rent or own?</label>
-          <CheckBox onClick={this.handleRent} inputType="radio" classList="formCheck" nameFor="rentOrOwn" defaultChecked="checked" checkFor="rent"/>
-          <CheckBox onClick={this.handleOwn} inputType="radio" classList="formCheck" nameFor="rentOrOwn" checkFor="own"/>
+          <CheckBox onClick={this.handleRent} inputType="radio" nameFor="rentOrOwn" defaultChecked="checked" checkFor="rent"/>
+          <CheckBox onClick={this.handleOwn} inputType="radio" nameFor="rentOrOwn" checkFor="own"/>
         <label>event location</label>
-          <div className="formCheck quoteCheck">
+          <div className="quoteCheck">
             <input type="radio" id="Las Vegas" onClick={this.doNotShip} name={"inVegas"} defaultChecked={true} />
             <label className="noMargin" htmlFor="Las Vegas">Las Vegas</label>
           </div>
-          <div className="formCheck quoteCheck">
+          <div className="quoteCheck">
             <input type="radio" id="else" onClick={this.doShip} name={"inVegas"} defaultChecked={false} />
             <label className="noMargin" htmlFor="else">else</label>
           </div>
         <label>stand out even more</label>
-          <div className="formCheck quoteCheck">
+          <div className="quoteCheck">
             <input type="checkbox" id="add Tv(s)" onClick={this.setTv} defaultChecked={false} />
             <label className="noMargin" htmlFor={"add Tv(s)"}>add Tv(s)</label>
           </div>
-          <CheckBox onClick={this.setVideoWall} inputType="checkbox" classList="formCheck" nameFor="else" checkFor="add videowall"/>
-        <div className="blueSuggest">
-        <label>can&#39;t find &#39;your thing&#39;?</label>
-          <p>no problem!<br/>
-          We have 100&#39;s of other cool solutions.</p>
-          <a href="#contact">free friendly service <Arrow className={"playButtonArrow"} forward/></a>
-        </div>
+          <CheckBox onClick={this.setVideoWall} inputType="checkbox" nameFor="else" checkFor="add videowall"/>
+          <MagentaSuggest/>
       </div>
     )
     var menuChoice = (this.props.individualBoothRender ? backToBooths : boothMenu);

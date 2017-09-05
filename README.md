@@ -7,6 +7,7 @@ Morethanspaces Website
 - landing page(s)
 - video for services
 - 404
+- optimize carousel modal images
 
 ##Falta en func
 - instaquote button desaparece en instaquote

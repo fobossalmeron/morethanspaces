@@ -117,12 +117,9 @@ class InstaQuote extends Component {
       </div>
       <div className="instaInfo">
         <h2>instaQuote</h2>
-        <div className={reveal}><p>${finalPrice} USD</p><span>{isDiscount}</span></div>
-        <ul>
-          <li>*for up to 3 event days</li>
-        </ul>
-        <button className="instaQuoteButton wasLink" onClick={() => this.showCalendly()}>schedule a call!</button>
-        <p><em>we don&quot;t believe in pressure sales, schedule with confidence</em></p>
+        <div className={reveal}><p>${finalPrice} USD</p><span>{isDiscount} *for up to 3 event days</span></div>
+        <button className="scheduleButton" onClick={() => this.showCalendly()}>schedule a call!</button>
+        <p><b>we don&#39;t believe in pressure sales, schedule with confidence</b></p>
       </div>
     </div>
     );

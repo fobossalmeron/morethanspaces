@@ -118,9 +118,9 @@ nav{
 footer{
   float:left;
   width:100%;
-  background-color:#777777;
-  color:$white;
-  padding: 3% 4%;
+  background-color:$blue;
+  color: $white;
+  padding: 3% 5%;
   a{
     font-size: .9em;
     font-weight: 700;
@@ -157,7 +157,7 @@ footer{
     width:100%;
     li{
       width:25%;
-      padding: 0 2%;
+      padding: 0 2% 0 0;
       list-style: none;
       float:left;
       &:nth-of-type(1){
@@ -165,16 +165,18 @@ footer{
       }
       &:nth-of-type(2){
         width:30%;
+        padding-right: 5%;
       }
       &:nth-of-type(3){
         width:19.5%;
       }
       &:nth-of-type(4){
         width:33%;
+        padding-right: 0;
       }
       h3{
         font-weight:700;
-        color:$blue;
+        color:$white;
       }
     }
   }
@@ -242,7 +244,7 @@ footer{
   right: 25px;
   background-size: cover;
   cursor: pointer;
-  background-image: url("../img/instaQuote.svg");
+  background-image: url("../img/layout/instaQuote.svg");
   transition: .4s ease;
   &:hover{
     animation-play-state: running;
@@ -303,15 +305,15 @@ section{
   float:left;
   width:100%;
   padding: 3% 5%;
+  position: relative;
 }
 
 #discountbanner{
   position: relative;
   float: left;
-  padding-top: 4%;
   box-sizing: border-box;
   background-color: black;
-  min-height: 250px;
+  min-height: 200px;
   width: 100%;
 }
   .hideBanner{
@@ -391,8 +393,6 @@ section{
   float:left;
   width:100%;
   min-height: 0;
-
-
   .sliderCard{
     display: inline-block;
     position: relative;
@@ -410,6 +410,11 @@ section{
     transform: translateX(-50%);
     h3{
       font-weight:$base-font-weight;
+    }
+    p{
+      text-align: left;
+      color: $black;
+      margin-bottom: 0;
     }
   }
 }
@@ -449,6 +454,20 @@ section{
     z-index: 1;
     transition: .4s ease all;
     border: 2px solid transparent;
+    .spaceLeft {
+        margin-left: 10px;
+    }
+    svg{
+      display: inline-block;
+      position: relative;
+      top: 0;
+      float: right;
+      height: 25px;
+      margin-left: 0;
+      padding: 0;
+      transition: .4s ease all;
+      fill: $black;
+    }
       &:hover, &:focus{
         cursor:pointer;
         background-color:transparent;
@@ -466,20 +485,6 @@ section{
   position: absolute;
   margin: 10% 4%;
   z-index: 2;
-}
-
-.playButtonArrow{
-    display: inline-block;
-    position: relative;
-    bottom: 0;
-    top: 11px;
-    left: 10px;
-    float: right;
-    height: 25px;
-    margin: 0;
-    padding: 0;
-    fill:$black;
-    transition: .4s ease all;
 }
 
 .controllsVideo{
@@ -507,8 +512,26 @@ section{
     right: 0;
     bottom: 0;
     top: 0;
-    background-image:url("../img/overlay.png");
+    background-image:url("../img/layout/overlay.png");
   }
+
+  video{
+    position: absolute;
+    z-index: 0;
+    height:100%;
+    width:100%;
+  }
+}
+#servicesvideo{
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.2%;
+  overflow: hidden;
+  display: block;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
 
   video{
     position: absolute;
@@ -521,12 +544,13 @@ section{
 #services{
     h2{
       font-weight: 700;
+      margin-bottom: 0;
     }
-    background-color: $yellow;
+//    background-color: $yellow;
     color: $black;
     .full-service{
       width:100%;
-      padding: 1.5% 22%;
+      padding: 0 22% 1.5% 22%;
       min-height:100px;
     }
     p{
@@ -544,7 +568,7 @@ section{
           float: left;
           text-align: left;
           width: 50%;
-          padding: 1.5% 3%;
+          padding: 3% 3% 0 3%;
           font-size: 1em;
           list-style: none;
           opacity:0;
@@ -568,14 +592,20 @@ section{
   height:100px;
   margin-bottom: 20px;
   position: relative;
-  background-image: url("../img/3dBack.svg");
-  background-size: cover;
-  background-position: center center;
+  display: block;
 }
 
 #about{
-  p{
-  }
+  background-color: $white;
+  h1{
+   color:$magenta;
+   margin-bottom: 0;
+   font-size: 2em;
+ }
+ .motto{
+   color:$magenta;
+   margin-bottom: 0;
+ }
 }
 
 .frompdf{
@@ -589,6 +619,7 @@ section{
     position: relative;
     display: inline-block;
     font-weight: bold;
+    line-height: 1;
     color: $black;
     &:nth-of-type(1){
       color: $yellow;
@@ -655,7 +686,7 @@ section{
   width:100%;
   float: left;
   padding: 2%;
-  margin-bottom: 4%;
+  margin-bottom: 2%;
     p{
       margin:0;
     }
@@ -682,11 +713,11 @@ section{
   }
   a{
     color:$magenta;
-    margin-top: 15px;
-    float:left;
-    b{
-      font-weight: 700;
-    }
+    margin-top: 10px;
+    float: left;
+    font-size: 1.2em;
+    text-decoration-skip: ink;
+    cursor: pointer;
     &:hover{
       color:$magenta;
     }
@@ -756,7 +787,7 @@ form{
 
 .half-card{
   width:50%;
-  padding: 2% 2% 0 0;
+  padding: 0% 2% 0 0;
   float:left;
   position:relative;
   box-sizing: border-box;
@@ -790,6 +821,9 @@ form{
   .column{
     float:left;
     width:25%;
+    h3{
+      margin-bottom: 6%;
+    }
     img{
       width: 50%;
       left: 50%;
@@ -840,7 +874,7 @@ form{
   width: 48%;
   margin-right: 2%;
   margin-bottom: 4%;
-  min-height: 30px;
+  min-height: 35px;
   float: left;
   position: relative;
   label {
@@ -850,7 +884,7 @@ form{
     font-size: .7em;
     position: relative;
     color: $yellow;
-    padding: 6% 4%;
+    padding: 8% 6% 6% 6%;
     left: 0;
     border: 1px solid $yellow;
     transition: .4s ease all;
@@ -863,7 +897,7 @@ form{
      background-image: url(../img/layout/checked.svg);
      position: absolute;
      right: 2px;
-     top: 4px;
+     top: 7px;
      opacity: 0;
    }
    &:hover::after {
@@ -1054,7 +1088,8 @@ input[type=text]{
     min-width: 230px;
     float: left;
     margin-right: 4%;
-    padding: 10px 20px 30px 20px;
+    margin-bottom: 4%;
+    padding: 0% 1% 2% 1%;
     color: $white;
     span{
       float: left;
@@ -1082,6 +1117,7 @@ input[type=text]{
       margin:0px;
     }
     select{
+      min-height: 35px;
       -webkit-appearance: none;
       -moz-appearance: none;
       border-radius: 2px;
@@ -1115,24 +1151,16 @@ input[type=text]{
     float:left;
     font-size: 18px;
   }
-  .new-arrow{
-    margin: 3px 5px 0 0;
+  svg{
+    margin-right: 5px;
+    fill: white;
+    position: relative;
     float: left;
+    width: 30px;
   }
   b{
     float:left;
     padding-right: 7px;
-  }
-  &:nth-child(2){
-    float: right;
-    width: 143px;
-    b{
-      padding-right:0;
-      margin-top: -5px;
-    }
-    .new-arrow{
-      margin-top:-1px;
-    }
   }
 }
 
@@ -1256,15 +1284,6 @@ input[type=text]{
     }
 }
 
-
-
-.visualizer{
-  width:100%;
-  min-height:400px;
-  background-size: cover;
-  transition: 300ms all ease;
-}
-
 .singleBooth{
   float: left;
   position: relative;
@@ -1347,6 +1366,11 @@ input[type=text]{
 
 .visualizer{
   position:relative;
+  border-radius: 2px;
+  width:100%;
+  min-height:400px;
+  background-size: cover;
+  transition: 300ms all ease;
   canvas{
     height: 100%;
     position: absolute;
@@ -1540,7 +1564,7 @@ iframe{
     float:left;
     clear:both;
     list-style: none;
-    font-size: 0.8em;
+    font-size: 0.9em;
     margin: 0;
     &:nth-of-type(2){
       margin-bottom:4%;
@@ -1557,8 +1581,8 @@ iframe{
   width: 75%;
   float: left;
   padding-left: 4%;
-  .wasLink{
-    width: auto;
+  .scheduleButton{
+    width:50%;
     float: left;
     clear: both;
     display: block;
@@ -1566,6 +1590,12 @@ iframe{
     margin-top: 2%;
     margin-bottom: 1%;
     border-radius: 2px;
+    background-color: $magenta;
+    color: $white;
+    border: none;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: 700;
       &:hover{
         background-color: darken($magenta, 10%);
       }
@@ -1633,7 +1663,7 @@ iframe{
 .clickFor{
   font-size:15px;
   font-weight: 400;
-  color: $black;
+  color: $white;
   position: absolute;
   bottom: 40px;
 }
@@ -1701,7 +1731,7 @@ iframe{
   }
   a{
     color:$black;
-    font-size: .8em;
+    font-size: .9em;
     font-weight: normal;
   }
   b{
@@ -1722,49 +1752,71 @@ iframe{
 }
 
 .blueSuggest{
-  background-color: $blue;
-  float:left;
+  float: left;
+  width:100%;
   border-radius: 2px;
+  border: 1px solid $blue;
   margin-top: 6%;
+  margin-right: 2%;
+  transition: .4s ease all;
+  &:hover{
+    border-color: $magenta;
+    a {
+      text-decoration: none;
+      background-color: $magenta;
+      svg{
+          path{
+              fill: $white;
+          }
+        }
+      }
+    }
   label{
-    padding: 3% 4% 0 5%;
+    padding: 2% 4%;
     font-weight: bold;
     margin: 0;
     font-size: 17px;
   }
   a{
     font-size: .8em;
-    background-color: black;
+    background-color: $blue;
     color: white;
     float: left;
     padding: 4%;
     width: 100%;
     transition: .4s ease all;
     border-radius: 0 0 2px 2px;
-    &:hover{
-      text-decoration: none;
-      background-color: $magenta;
-      svg{
-        path{
-            fill: $white;
-        }
-      }
     }
     svg{
       width: 25px;
-      left: 0px;
-      transition: .4s ease all;
+      position: relative;
+      float: right;
       path{
         fill:$white;
         transition: .4s ease all;
       }
     }
-  }
   p{
+    &:nth-of-type(1){
+      margin-top: -2%;
+    }
     float: left;
     margin: 0;
     width: 100%;
-    font-size: .7em;
-    padding: 2% 5%;
+    font-size: .65em;
+    padding: 0 4% 2% 4%;
+  }
+}
+
+.magentaSuggest{
+  border-color: $magenta;
+  label{
+    color:$magenta;
+  }
+  p{
+    &:nth-of-type(1){
+      color:$yellow;
+      padding-bottom: 0;
+    }
   }
 }

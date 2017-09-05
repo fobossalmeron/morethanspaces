@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import CheckBox from './presentational/CheckBox';
-import Arrow from './presentational/Arrow';
+import BlueSuggest from './presentational/BlueSuggest';
+import MagentaSuggest from './presentational/MagentaSuggest';
 import ReactModal from 'react-modal';
+import ArrowBackIcon from 'svg-react-loader?name=ArrowBackIcon!../../assets/img/layout/arrowback.svg';
 
 class VideoWallForm extends Component {
   constructor(props) {
@@ -39,35 +41,31 @@ class VideoWallForm extends Component {
     var videoWallMenu = (
       <div>
         <label>choose type</label>
-          <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" classList="formCheck" nameFor="Tv" checkFor="tv" defaultChecked="checked"/>
-          <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" classList="formCheck" nameFor="LED" checkFor="led" defaultChecked="checked"/>
-          <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" classList="formCheck" nameFor="LCD" checkFor="lcd" defaultChecked="checked"/>
+          <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" nameFor="Tv" checkFor="tv" defaultChecked="checked"/>
+          <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" nameFor="LED" checkFor="led" defaultChecked="checked"/>
+          <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" nameFor="LCD" checkFor="lcd" defaultChecked="checked"/>
           <div className="blueSuggest">
           <label onClick={() => this.handleOpenModal()}>what&#39;s the difference?</label>
           </div>
+          <BlueSuggest/>
       </div>
     )
     var backToVideoWalls = (
       <div className="goBackContainer">
         <div className="leaveOrStay">
-          <Arrow className={"new-arrow"} color={"#f9f9f9"} width={"25px"}/>
+          <ArrowBackIcon/>
           <a onClick={() => this.props.closeSingleVideoWall()}><b>back</b> to videowalls</a>
         </div>
         <label>event location</label>
-          <div className="formCheck quoteCheck">
+          <div className="quoteCheck">
             <input type="radio" id="Las Vegas" onClick={this.doNotShip} name={"inVegas"} defaultChecked={true} />
             <label className="noMargin" htmlFor="Las Vegas">Las Vegas</label>
           </div>
-          <div className="formCheck quoteCheck">
+          <div className="quoteCheck">
             <input type="radio" id="else" onClick={this.doShip} name={"inVegas"} defaultChecked={false} />
             <label className="noMargin" htmlFor="else">else</label>
           </div>
-        <div className="blueSuggest">
-        <label>can&#39;t find &#39;your thing&#39;?</label>
-          <p>no problem!<br/>
-          We have 100&#39;s of other cool solutions.</p>
-          <a href="#contact">free friendly service <Arrow className={"playButtonArrow"} forward/></a>
-        </div>
+        <MagentaSuggest/>
       </div>
     )
     var menuChoice = (this.props.individualVideoWallRender ? backToVideoWalls : videoWallMenu);
@@ -81,7 +79,6 @@ class VideoWallForm extends Component {
            className={"modalItself"}
            isOpen={this.state.showModal}
            onRequestClose={this.handleCloseModal}
-           closeTimeoutMS={500}
            contentLabel="What's the difference?">
            <img src={"assets/img/layout/videotypes.png"} />
            <button className="modalCloseButton" onClick={this.handleCloseModal}></button>

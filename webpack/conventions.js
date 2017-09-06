@@ -8,8 +8,8 @@ class Conventions extends Component {
   render() {
     return (
       <div>
-        <Nav relativePath="/../"/>
-        <Footer relativePath="/../"/>
+        <Nav relativePath="../../../../"/>
+        <Footer relativePath="/../../../../"/>
       </div>
     );
   }

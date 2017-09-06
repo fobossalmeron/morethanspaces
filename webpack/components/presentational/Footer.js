@@ -29,7 +29,7 @@ class Footer extends Component {
       <footer>
         <ul>
           <li>
-            <h3>follow us</h3>
+            <h3>follow</h3>
             <ul className="social-list">
                <a href={"https://facebook.com/morethanspaces/"}>
                 <LinkedInIcon/>
@@ -67,7 +67,7 @@ class Footer extends Component {
               <a href={baseUrl + "assets/pdf/sample.pdf"} target="_blank">industry clients</a>
             </li>
             <li className="realestate">
-              <h3>contact us</h3>
+              <h3>contact</h3>
               <div className="contactBox">
                 <p>call</p>
                 <a href="tel:1 833 667 3842"><b>1-833-morethanspaces</b></a><br/><a href="tel:1 833 667 3842">1-833-667-3842</a>

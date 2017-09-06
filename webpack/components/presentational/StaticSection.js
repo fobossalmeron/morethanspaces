@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
 import CustomBoothDesignIcon from 'svg-react-loader?name=CustomBoothDesignIcon!../../../assets/img/layout/icons/customboothdesign.svg';
+import BoothRentalsIcon from 'svg-react-loader?name=BoothRentalsIcon!../../../assets/img/layout/icons/boothrentals.svg';
+import AudioVisualIcon from 'svg-react-loader?name=BoothRentalsIcon!../../../assets/img/layout/icons/audiovisual.svg';
+import CustomRentalBoothIcon from 'svg-react-loader?name=CustomRentalBoothIcon!../../../assets/img/layout/icons/customrentalbooths.svg';
+import AssembleDismantleIcon from 'svg-react-loader?name=AssembleDismantleIcon!../../../assets/img/layout/icons/assembledismantle.svg';
+import StorageShippingIcon from 'svg-react-loader?name=StorageShippingIcon!../../../assets/img/layout/icons/storageshipping.svg';
+import FullServiceIcon from 'svg-react-loader?name=FullServiceIcon!../../../assets/img/layout/icons/fullservice.svg';
+
 
 class StaticSection extends Component {
 
@@ -16,7 +23,7 @@ class StaticSection extends Component {
         <ul>
           <div className="row">
           <li className="full-service service7">
-            <CustomBoothDesignIcon className="service-icon"/>
+            <FullServiceIcon className="service-icon"/>
             <h3>full service <em>-service for you, designed for you, 100 percent yours!</em></h3>
             <h4><b>the smarter approach to trade show</b></h4>
             <p>We are here to help by making it the <b>best experience</b> possible at a price you feel comfortable with!
@@ -25,7 +32,7 @@ class StaticSection extends Component {
           </div>
           <div className="row">
           <li className="service1">
-            <CustomBoothDesignIcon className="service-icon"/>
+            <BoothRentalsIcon className="service-icon"/>
             <h3>booth rentals</h3>
             <p>If flexibility is what you’re looking for, we have multiple ready to go solutions
             for any budget. Our booth rentals can save you <b>up to 65%</b> when compared to buying. We
@@ -34,7 +41,7 @@ class StaticSection extends Component {
             shipped to <b>anywhere you need it.</b></p>
           </li>
           <li className="service2">
-            <CustomBoothDesignIcon className="service-icon"/>
+            <AudioVisualIcon className="service-icon"/>
             <h3>audio visual</h3>
             <p>A show isn’t a show without audio visual! We understand this and only bring you the
             best and newest technology; <b>LED/LCD video walls</b> and <b>LED TV’s</b>. We use the best equipment.
@@ -45,7 +52,7 @@ class StaticSection extends Component {
           </div>
           <div className="row">
           <li className="service3">
-            <CustomBoothDesignIcon className="service-icon"/>
+            <CustomRentalBoothIcon className="service-icon"/>
             <h3>custom rental booths</h3>
             <p>Short on time or need a ready to go booth with a little more than zest. Our custom rentals
             have you in mind. With our team, you’ll be able to <b>customize</b> the key things you’ll benefit
@@ -64,7 +71,7 @@ class StaticSection extends Component {
           </div>
           <div className="row">
           <li className="service5">
-              <CustomBoothDesignIcon className="service-icon"/>
+              <AssembleDismantleIcon className="service-icon"/>
               <h3>assemble & dismantle</h3>
               <p>We take pride in offering you the highest degree of service in assembling and dismantling
                your booths. Our team of <b>trained professionals</b> are experienced and reliable. We pay attention
@@ -72,7 +79,7 @@ class StaticSection extends Component {
                show-time</b>. We safely disassemble, transport, and store your booth to the next trade show venue.</p>
           </li>
           <li className="service6">
-              <CustomBoothDesignIcon className="service-icon"/>
+              <StorageShippingIcon className="service-icon"/>
               <h3>storage & shipping</h3>
               <p>Located in <b>Las Vegas</b>, the convention capital of the world, we are more than experienced
               in the world of trade shows. When it comes to storage and shipping, our expert team can

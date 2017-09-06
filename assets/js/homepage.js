@@ -10127,6 +10127,7 @@ var Footer = function (_Component) {
     key: 'render',
     value: function render() {
       var baseUrl = this.state.relative ? this.props.relativePath : '';
+      var iconsBar = this.props.hideIconsBar ? '' : _react2.default.createElement(_IconsBar2.default, { backgroundColor: '#eee81a', color: '#383838' });
       return _react2.default.createElement(
         'div',
         null,
@@ -10301,7 +10302,7 @@ var Footer = function (_Component) {
             )
           )
         ),
-        _react2.default.createElement(_IconsBar2.default, { backgroundColor: '#eee81a', color: '#383838' }),
+        iconsBar,
         _react2.default.createElement(
           'p',
           { className: 'colophon' },
@@ -29400,7 +29401,8 @@ var DiscountsCarousel = function (_Component) {
 
     _this.state = {
       showModal: false,
-      modalIndex: ''
+      modalIndex: '',
+      relative: false
     };
 
     _this.handleOpenModal = _this.handleOpenModal.bind(_this);
@@ -29419,10 +29421,18 @@ var DiscountsCarousel = function (_Component) {
       this.setState({ showModal: false });
     }
   }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      if (typeof this.props.relativePath !== 'undefined') {
+        this.setState({ relative: true });
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
 
+      var baseUrl = this.state.relative ? this.props.relativePath : '';
       var settings = {
         dots: false,
         infinite: true,
@@ -29440,26 +29450,27 @@ var DiscountsCarousel = function (_Component) {
         settings,
         _react2.default.createElement('img', { onClick: function onClick() {
             return _this2.handleOpenModal(1);
-          }, src: 'assets/img/layout/carousel/carousel1.jpg' }),
+          }, src: baseUrl + "assets/img/layout/carousel/carousel1.jpg" }),
         _react2.default.createElement('img', { onClick: function onClick() {
             return _this2.handleOpenModal(2);
-          }, src: 'assets/img/layout/carousel/carousel2.jpg' }),
+          }, src: baseUrl + "assets/img/layout/carousel/carousel2.jpg" }),
         _react2.default.createElement('img', { onClick: function onClick() {
             return _this2.handleOpenModal(3);
-          }, src: 'assets/img/layout/carousel/carousel3.jpg' }),
+          }, src: baseUrl + "assets/img/layout/carousel/carousel3.jpg" }),
         _react2.default.createElement('img', { onClick: function onClick() {
             return _this2.handleOpenModal(4);
-          }, src: 'assets/img/layout/carousel/carousel4.jpg' }),
+          }, src: baseUrl + "assets/img/layout/carousel/carousel4.jpg" }),
         _react2.default.createElement('img', { onClick: function onClick() {
             return _this2.handleOpenModal(5);
-          }, src: 'assets/img/layout/carousel/carousel5.jpg' }),
+          }, src: baseUrl + "assets/img/layout/carousel/carousel5.jpg" }),
         _react2.default.createElement('img', { onClick: function onClick() {
             return _this2.handleOpenModal(6);
-          }, src: 'assets/img/layout/carousel/carousel6.jpg' })
+          }, src: baseUrl + "assets/img/layout/carousel/carousel6.jpg" })
       );
+      var classList = this.props.className ? this.props.className : '';
       return _react2.default.createElement(
         'section',
-        { id: 'discountsSlider' },
+        { id: "discountsSlider", className: classList },
         slider,
         _react2.default.createElement(
           _reactModal2.default,

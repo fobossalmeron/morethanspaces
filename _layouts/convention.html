@@ -1,38 +1,20 @@
 <!DOCTYPE html>
 <html>
 
-  {% include headconventions.html %}
+  {% include head-conventions.html %}
 
   <body>
+    <div class="convention_card">
+      <h2>your tradeshow expert for</h2>
+      <h1><b>{{ page.title }}</b></h1>
+      <h3>{{ page.convention_date }}. {{ page.location }}</h3>
+    </div>
+    <div class="convention_card">
+      <img src="../../assets/img/conventions/{{page.logo}}">
+    </div>
     <section id="convention">
-      <div class="convention_card">
-        <h2>your tradeshow expert for<h2>
-        <h1><b>{{ page.title }}</b></h1>
-        <h2>{{ page.convention_date }}{{ page.location }}</h2>
-      </div>
-      <img class="convention_card" src="{{site.baseurl}}/assets/img/conventions/{{page.logo}}">
       <div id="content">
         {{ content }}
-      </div>
-      <div class="half-card frompdf">
-      <span>1,</span> <span>2,</span> <span>3 </span> <span> go</span>
-      <div class="stepbox"><b>1:</b><p>communicate your need<br/>and choose</p></div>
-      <div class="stepbox"><b>2:</b><p>we create and<br/>make it happen</p></div>
-      <div class="stepbox"><b>3:</b><p>we deliver<br/>…and take care of it all</p></div>
-      <p><b>Our motto:</b><br/>
-          <b>more for less:</b> better service, better products, better results, less stress, less worry</p>
-      <p>All you have to do is show up and <b>let the show begin!</b></p>
-      </div>
-      <div class="row">
-        <div class="half-card">
-          <h2><b>Las Vegas</b></h2>
-          <p>Las Vegas is a standout amongst the most renowned destinations that companies gage being that it's the entertainment capital of the world. Conventions are a HUGE piece of the Las Vegas culture and has encircled itself around the nearly 28,000 meetings that happen in Vegas. An Estimated 6.3 million guests come here to encounter the marvelousness trade shows in the city of lights. A portion of the biggest shows are in Las Vegas are CES, Magic, World of Concrete, NAB (national association of broadcasting), JCK trade show, G2E(global gaming expo), SEMA, International Market Centers, National MIning Association, Nightclub and Bar convention.
-          </p>
-        </div>
-        <div class="half-card">
-          <h2><b>more than spaces</b></h2>
-          <p>Vendors spend a decent sum on making over the top booths for the world to see. It's imperative to visually express and stimulate within your industry why you're one of the best contenders of your space. Morethanspaces provides all of the requirements important for an effective event. In most cases. we offer the best rates. Truth be told, we will attempt to match or beat any cost up to 20%. We gladly work with companies, event planners, and agencies across the USA. Morethanspaces is More for Less. It's simple! 1. Pick your package 2. Communicate your needs 3. We deliver 1..2..3. GO! </p>
-        </div>
       </div>
     </section>
     <div id="app"></div>

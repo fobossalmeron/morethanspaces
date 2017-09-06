@@ -28,7 +28,8 @@ class DiscountsCarousel extends Component {
     super();
     this.state = {
       showModal: false,
-      modalIndex: ''
+      modalIndex: '',
+      relative: false
     };
 
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -43,7 +44,14 @@ class DiscountsCarousel extends Component {
     this.setState({ showModal: false });
   }
 
+  componentDidMount(){
+    if (typeof this.props.relativePath !== 'undefined') {
+        this.setState({ relative : true });
+      }
+  }
+
   render (){
+    var baseUrl = this.state.relative? this.props.relativePath : '';
     const settings = {
       dots: false,
       infinite: true,
@@ -58,16 +66,17 @@ class DiscountsCarousel extends Component {
     };
     var slider = (
       <Slider {...settings}>
-        <img onClick={() => this.handleOpenModal(1)} src="assets/img/layout/carousel/carousel1.jpg"/>
-        <img onClick={() => this.handleOpenModal(2)} src="assets/img/layout/carousel/carousel2.jpg"/>
-        <img onClick={() => this.handleOpenModal(3)} src="assets/img/layout/carousel/carousel3.jpg"/>
-        <img onClick={() => this.handleOpenModal(4)} src="assets/img/layout/carousel/carousel4.jpg"/>
-        <img onClick={() => this.handleOpenModal(5)} src="assets/img/layout/carousel/carousel5.jpg"/>
-        <img onClick={() => this.handleOpenModal(6)} src="assets/img/layout/carousel/carousel6.jpg"/>
+        <img onClick={() => this.handleOpenModal(1)} src={baseUrl + "assets/img/layout/carousel/carousel1.jpg"}/>
+        <img onClick={() => this.handleOpenModal(2)} src={baseUrl + "assets/img/layout/carousel/carousel2.jpg"}/>
+        <img onClick={() => this.handleOpenModal(3)} src={baseUrl + "assets/img/layout/carousel/carousel3.jpg"}/>
+        <img onClick={() => this.handleOpenModal(4)} src={baseUrl + "assets/img/layout/carousel/carousel4.jpg"}/>
+        <img onClick={() => this.handleOpenModal(5)} src={baseUrl + "assets/img/layout/carousel/carousel5.jpg"}/>
+        <img onClick={() => this.handleOpenModal(6)} src={baseUrl + "assets/img/layout/carousel/carousel6.jpg"}/>
       </Slider>
     )
+    var classList = this.props.className? this.props.className : '';
     return (
-      <section id="discountsSlider">
+      <section id={"discountsSlider"} className={classList}>
       {slider}
         <ReactModal
            overlayClassName={"modalOverlay"}

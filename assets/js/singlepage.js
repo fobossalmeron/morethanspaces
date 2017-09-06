@@ -9969,6 +9969,7 @@ var Footer = function (_Component) {
     key: 'render',
     value: function render() {
       var baseUrl = this.state.relative ? this.props.relativePath : '';
+      var iconsBar = this.props.hideIconsBar ? '' : _react2.default.createElement(_IconsBar2.default, { backgroundColor: '#eee81a', color: '#383838' });
       return _react2.default.createElement(
         'div',
         null,
@@ -10143,7 +10144,7 @@ var Footer = function (_Component) {
             )
           )
         ),
-        _react2.default.createElement(_IconsBar2.default, { backgroundColor: '#eee81a', color: '#383838' }),
+        iconsBar,
         _react2.default.createElement(
           'p',
           { className: 'colophon' },

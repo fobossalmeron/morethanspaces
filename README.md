@@ -12,7 +12,6 @@ Morethanspaces Website
 - video no regresa al loop del intro onEnd()
 
 ##Answers
-- checkmarks on the form are making things unresponsive then / background
 - quotes are not emailed to two people / si se arma
 - pdf into pages best way to display .pdf / si se arma
 - calendly needs to ask for less information

@@ -24,6 +24,7 @@ class Footer extends Component {
 
   render (){
     var baseUrl = this.state.relative? this.props.relativePath : '';
+    var iconsBar = this.props.hideIconsBar? '' : <IconsBar backgroundColor={'#eee81a'} color={'#383838'}/>;
     return (
       <div>
       <footer>
@@ -84,7 +85,7 @@ class Footer extends Component {
         </ul>
 
       </footer>
-      <IconsBar backgroundColor={'#eee81a'} color={'#383838'}/>
+      {iconsBar}
           <p className="colophon">© <b>morethanspaces</b> 2017, all rights reserved.<br/>
           website developed by <b>Rodrigo Salmeron</b>
           </p>

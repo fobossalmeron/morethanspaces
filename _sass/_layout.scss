@@ -610,7 +610,6 @@ section{
 }
 
 .frompdf{
-  padding-top: 0 !important;
   p{
     float:left;
   }
@@ -925,7 +924,7 @@ form{
       background-color: $yellow;
       color:$black;
      &:after {
-       opacity: 1;
+       opacity: 0.1;
      }
    }
  }
@@ -1503,13 +1502,51 @@ iframe{
   }
 }
 .convention_card{
-  float: left;
-      width: 50%;
-      padding: 5%;
-      max-height: 300px;
+    float: left;
+    width: 50%;
+      padding: 10% 5% 5% 5%;
+      max-height: 400px;
       box-sizing: border-box;
       display: inline-block;
       position: relative;
+      background-color: $black;
+      &:nth-of-type(1){
+        padding-left: 0;
+      }
+      h2{
+        color: $yellow;
+        background-color:$magenta;
+        padding: 2% 0 2% 10%;
+      }
+      h1{
+        font-weight: bold;
+        background-color: $blue;
+        color:$black;
+        width: 100%;
+        font-size: 3em;
+        margin-bottom: 0;
+        padding: 2% 0 0% 10%;
+      }
+      h3{
+        background-color: $blue;
+        font-size:1em;
+        color:$white;
+        padding: 0% 0 2% 10%;
+      }
+}
+
+#content{
+  column-count: 2;
+  h1{
+    color:$yellow;
+    font-weight: 700;
+  }
+  h2{
+    color:$magenta;
+    font-weight: 700;
+  }
+  p{
+  }
 }
 
 #dataCollector{
@@ -1706,6 +1743,16 @@ iframe{
     }
 }
 
+.iconsBarServices {
+  ul li{
+    width:16.6%;
+  }
+    background-color: $magenta;
+    svg{
+      fill:$white;
+    }
+}
+
 .loading{
   padding: 10%;
   min-height: 100vh;
@@ -1846,4 +1893,39 @@ iframe{
     h1{
       font-size: 3em;
     }
+}
+
+.lastConventionSection{
+  background-color: $black;
+  color:$white;
+  h2{
+    color:$magenta;
+    font-weight: 700;
+  }
+  h3{
+    color:$yellow;
+    font-weight: 700;
+  }
+}
+
+.conventionFromPdf{
+padding:2% 0 2% 5%;
+background-color:$white;
+}
+.conventionHalfCard{
+  background-color: $black;
+  padding: 2% 5% 2% 4% !important;
+  color: $white;
+  h2{
+    color:$yellow;
+  }
+}
+.conventionBackground{
+  background-color:$black;
+  float:left;
+}
+
+.normalizeCarousel{
+  padding-bottom: 5% !important;
+  background-color: $black !important;
 }

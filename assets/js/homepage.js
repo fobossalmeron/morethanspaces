@@ -27214,7 +27214,7 @@ var App = function (_Component) {
       discountText: '',
       discountSmallText: '',
       discountBanner: '',
-      maintenance: false
+      maintenance: true
     };
     _this.loadDiscounts = _this.loadDiscounts.bind(_this);
     _this.quitMaintenance = _this.quitMaintenance.bind(_this);

@@ -196,7 +196,6 @@ section { float: left; width: 100%; padding: 3% 5%; position: relative; }
 #about h1 { color: #ec3092; margin-bottom: 0; font-size: 2em; }
 #about .motto { color: #ec3092; margin-bottom: 0; }
 
-.frompdf { padding-top: 0 !important; }
 .frompdf p { float: left; }
 .frompdf span { font-size: 6em; float: left; position: relative; display: inline-block; font-weight: bold; line-height: 1; color: #383838; }
 .frompdf span:nth-of-type(1) { color: #eee81a; }
@@ -261,7 +260,7 @@ form button:hover { background-color: #2dbdc0; }
 .quoteCheck label:hover::after { opacity: 0.3; }
 .quoteCheck input[type=checkbox], .quoteCheck input[type=radio] { opacity: 0; position: absolute; background-color: #e0e0e0; color: #383838; cursor: pointer; width: 100%; height: 100%; left: 0; z-index: 2; margin: 0px; }
 .quoteCheck input[type=checkbox]:checked + label, .quoteCheck input[type=radio]:checked + label { background-color: #eee81a; color: #383838; }
-.quoteCheck input[type=checkbox]:checked + label:after, .quoteCheck input[type=radio]:checked + label:after { opacity: 1; }
+.quoteCheck input[type=checkbox]:checked + label:after, .quoteCheck input[type=radio]:checked + label:after { opacity: 0.1; }
 
 input[type=text] { border: none; padding: 4px; font-size: .7em; }
 
@@ -422,7 +421,15 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 #convention { background-color: #383838; color: #f9f9f9; }
 #convention .frompdf { margin-top: -4%; }
 
-.convention_card { float: left; width: 50%; padding: 5%; max-height: 300px; box-sizing: border-box; display: inline-block; position: relative; }
+.convention_card { float: left; width: 50%; padding: 10% 5% 5% 5%; max-height: 400px; box-sizing: border-box; display: inline-block; position: relative; background-color: #383838; }
+.convention_card:nth-of-type(1) { padding-left: 0; }
+.convention_card h2 { color: #eee81a; background-color: #ec3092; padding: 2% 0 2% 10%; }
+.convention_card h1 { font-weight: bold; background-color: #2dbdc0; color: #383838; width: 100%; font-size: 3em; margin-bottom: 0; padding: 2% 0 0% 10%; }
+.convention_card h3 { background-color: #2dbdc0; font-size: 1em; color: #f9f9f9; padding: 0% 0 2% 10%; }
+
+#content { column-count: 2; }
+#content h1 { color: #eee81a; font-weight: 700; }
+#content h2 { color: #ec3092; font-weight: 700; }
 
 #dataCollector { position: relative; float: left; width: 100%; }
 #dataCollector form { border: none; background-color: #2dbdc0; color: #383838; padding: 2% 0 0% 0; min-height: 0; margin-bottom: 0; }
@@ -462,6 +469,10 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 .iconsBar ul li { float: left; text-align: center; clear: none; width: 20%; line-height: 1.2; font-weight: 700; }
 .iconsBar ul li .service-icon { margin: 0 auto 2% auto; }
 
+.iconsBarServices { background-color: #ec3092; }
+.iconsBarServices ul li { width: 16.6%; }
+.iconsBarServices svg { fill: #f9f9f9; }
+
 .loading { padding: 10%; min-height: 100vh; background-color: #eee81a; width: 100%; text-align: left; }
 .loading h2 { font-size: 3em; font-weight: 700; margin: 0; }
 .loading img { margin-bottom: 2%; width: 170px; position: relative; }
@@ -493,6 +504,19 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 
 #pageNotFound { position: relative; float: left; padding: 10%; text-align: center; color: #f9f9f9; background-color: #383838; width: 100%; }
 #pageNotFound h1 { font-size: 3em; }
+
+.lastConventionSection { background-color: #383838; color: #f9f9f9; }
+.lastConventionSection h2 { color: #ec3092; font-weight: 700; }
+.lastConventionSection h3 { color: #eee81a; font-weight: 700; }
+
+.conventionFromPdf { padding: 2% 0 2% 5%; background-color: #f9f9f9; }
+
+.conventionHalfCard { background-color: #383838; padding: 2% 5% 2% 4% !important; color: #f9f9f9; }
+.conventionHalfCard h2 { color: #eee81a; }
+
+.conventionBackground { background-color: #383838; float: left; }
+
+.normalizeCarousel { padding-bottom: 5% !important; background-color: #383838 !important; }
 
 /** Syntax highlighting styles */
 .highlight { background: #fff; }

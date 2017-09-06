@@ -9900,7 +9900,7 @@ var IconsBar = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'section',
-        { id: 'iconsBar', style: { backgroundColor: this.props.backgroundColor } },
+        { className: 'iconsBar', style: { backgroundColor: this.props.backgroundColor } },
         _react2.default.createElement(
           'ul',
           null,
@@ -11262,12 +11262,12 @@ exports['default'] = Base;
 var React = __webpack_require__(3);
 
 function CustomBoothDesignIcon (props) {
-    return React.createElement("svg",props,[React.createElement("style",{"type":"text/css","key":0},"\n\t.st0{fill:#241F21;}\n"),React.createElement("g",{"key":1},React.createElement("g",null,React.createElement("path",{"className":"st0","d":"M72.2,66.5c-0.5-0.2-0.8-0.7-1.2-1.6c-0.4-0.8-0.9-1.8-1.9-2.5c-1.4-0.9-14.3-8.8-18-11.1l1.1-1.9\n\t\t\tc3.5,2.1,16,9.5,18.2,10.5c1.5,0.8,2.6,0.6,3.5,0.5c0.8-0.1,1.3-0.2,2.1,0.3c1.7,1,4.1,3.5,5.2,4.6l-1.5,3.1\n\t\t\tC78.4,68.3,75.6,67.8,72.2,66.5 M22.9,40.1c-1.4-0.8-2.7-2-3.4-3.1c-0.8-1.4-0.9-2.7-0.2-4c1-1.8,2.1-2.9,3.3-3.2\n\t\t\tc1.5-0.4,3.4,0.1,6.3,1.7c14.5,8.2,21,12,23.2,13.3L47.5,53l-0.3,0.5C42.8,51,25.4,41.5,22.9,40.1 M83.9,65.1l-0.5-0.6\n\t\t\tc-0.2-0.2-3.8-4.2-6.3-5.6c-1.5-0.9-2.7-0.7-3.6-0.6c-0.7,0.1-1.3,0.2-2.1-0.3c-2-1-14.4-8.3-18-10.4l1.9-3.6l-0.9-0.6\n\t\t\tc-0.1,0-5.3-3.3-24.2-14c-2.4-1.4-5.3-2.7-8.1-1.9c-1.9,0.5-3.5,2-4.7,4.4c-0.9,1.7-1,3.5-0.3,5.2c0.1,0.4,0.3,0.7,0.5,1.1\n\t\t\tc0.9,1.6,2.5,3,4.2,4c2.8,1.5,25.1,13.7,25.3,13.8l1,0.5l1.8-3.1c3.7,2.3,16.6,10.1,17.9,11c0.5,0.3,0.8,0.9,1.1,1.6\n\t\t\tc0.5,1,1.1,2.2,2.5,2.7c5.1,1.8,8.7,2.3,8.8,2.3l0.8,0.1L83.9,65.1z"}))),React.createElement("g",{"key":2},React.createElement("rect",{"x":"35","y":"32.3","transform":"matrix(0.4866 -0.8736 0.8736 0.4866 -17.7288 52.8874)","className":"st0","width":"2.3","height":"18.5"})),React.createElement("g",{"key":3},React.createElement("g",null,React.createElement("path",{"d":"M50,97.9c-26.5,0-48-21.5-48-48c0-26.5,21.5-48,48-48c26.5,0,48,21.5,48,48C98,76.4,76.5,97.9,50,97.9z M50,5.1\n\t\t\tC25.3,5.1,5.2,25.2,5.2,49.9c0,24.7,20.1,44.8,44.8,44.8c24.7,0,44.8-20.1,44.8-44.8C94.8,25.2,74.7,5.1,50,5.1z"})))]);
+    return React.createElement("svg",props,React.createElement("g",null,[React.createElement("path",{"className":"st0","d":"M72.2,66.5c-0.5-0.2-0.8-0.7-1.2-1.6c-0.4-0.8-0.9-1.8-1.9-2.5c-1.4-0.9-14.3-8.8-18-11.1l1.1-1.9\n\t\t\tc3.5,2.1,16,9.5,18.2,10.5c1.5,0.8,2.6,0.6,3.5,0.5c0.8-0.1,1.3-0.2,2.1,0.3c1.7,1,4.1,3.5,5.2,4.6l-1.5,3.1\n\t\t\tC78.4,68.3,75.6,67.8,72.2,66.5 M22.9,40.1c-1.4-0.8-2.7-2-3.4-3.1c-0.8-1.4-0.9-2.7-0.2-4c1-1.8,2.1-2.9,3.3-3.2\n\t\t\tc1.5-0.4,3.4,0.1,6.3,1.7c14.5,8.2,21,12,23.2,13.3L47.5,53l-0.3,0.5C42.8,51,25.4,41.5,22.9,40.1 M83.9,65.1l-0.5-0.6\n\t\t\tc-0.2-0.2-3.8-4.2-6.3-5.6c-1.5-0.9-2.7-0.7-3.6-0.6c-0.7,0.1-1.3,0.2-2.1-0.3c-2-1-14.4-8.3-18-10.4l1.9-3.6l-0.9-0.6\n\t\t\tc-0.1,0-5.3-3.3-24.2-14c-2.4-1.4-5.3-2.7-8.1-1.9c-1.9,0.5-3.5,2-4.7,4.4c-0.9,1.7-1,3.5-0.3,5.2c0.1,0.4,0.3,0.7,0.5,1.1\n\t\t\tc0.9,1.6,2.5,3,4.2,4c2.8,1.5,25.1,13.7,25.3,13.8l1,0.5l1.8-3.1c3.7,2.3,16.6,10.1,17.9,11c0.5,0.3,0.8,0.9,1.1,1.6\n\t\t\tc0.5,1,1.1,2.2,2.5,2.7c5.1,1.8,8.7,2.3,8.8,2.3l0.8,0.1L83.9,65.1z","key":0}),React.createElement("rect",{"x":"35","y":"32.3","transform":"matrix(0.4866 -0.8736 0.8736 0.4866 -17.7288 52.8874)","className":"st0","width":"2.3","height":"18.5","key":1}),React.createElement("path",{"d":"M50,97.9c-26.5,0-48-21.5-48-48c0-26.5,21.5-48,48-48c26.5,0,48,21.5,48,48C98,76.4,76.5,97.9,50,97.9z M50,5.1\n\t\t\tC25.3,5.1,5.2,25.2,5.2,49.9c0,24.7,20.1,44.8,44.8,44.8c24.7,0,44.8-20.1,44.8-44.8C94.8,25.2,74.7,5.1,50,5.1z","key":2})]));
 }
 
 CustomBoothDesignIcon.displayName = "CustomBoothDesignIcon";
 
-CustomBoothDesignIcon.defaultProps = {"version":"1.1","id":"Layer_1","x":"0px","y":"0px","viewBox":"0 0 100 100","style":{"enableBackground":"new 0 0 100 100"},"xmlSpace":"preserve"};
+CustomBoothDesignIcon.defaultProps = {"version":"1.1","x":"0px","y":"0px","viewBox":"0 0 100 100","style":{"enableBackground":"new 0 0 100 100"},"xmlSpace":"preserve"};
 
 module.exports = CustomBoothDesignIcon;
 
@@ -24067,15 +24067,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactPlayer = __webpack_require__(206);
+var _CollectBeforeQuote = __webpack_require__(211);
 
-var _reactPlayer2 = _interopRequireDefault(_reactPlayer);
+var _CollectBeforeQuote2 = _interopRequireDefault(_CollectBeforeQuote);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24135,7 +24137,6 @@ var InstaQuote = function (_Component) {
         price = price + this.props.videowall;
       }
       return price;
-      console.log(price);
     }
   }, {
     key: 'flagMaxDiscount',
@@ -24145,6 +24146,7 @@ var InstaQuote = function (_Component) {
   }, {
     key: 'discountedBoothPrice',
     value: function discountedBoothPrice(somePrice) {
+      var myself = this;
       var price = somePrice;
       if (this.props.discountOn) {
         if (this.props.discountType === "amount") {
@@ -24254,96 +24256,117 @@ var InstaQuote = function (_Component) {
         )
       ) : undefined;
 
-      var maximumReached = this.state.maxDiscount ? ' *maximum discount amount reached' : '';
+      var maximumReached = this.state.maxDiscount ? _react2.default.createElement(
+        'li',
+        null,
+        '*maximum discount reached'
+      ) : '';
 
-      var narrateDiscount = '(' + originalPrice + '$ - ' + this.props.discountNumber + this.discountSymbol() + ' discount)' + maximumReached;
-      var isDiscount = this.props.discountOn ? narrateDiscount : "we don't have discount";
+      var narrateDiscount = _react2.default.createElement(
+        'li',
+        null,
+        '(' + originalPrice + '$ - ' + this.props.discountNumber + this.discountSymbol() + ' discount)'
+      );
+      var isDiscount = this.props.discountOn ? narrateDiscount : '';
 
+      var hello = "hello";
       return _react2.default.createElement(
         'div',
-        { className: 'instaBlock' },
+        null,
         _react2.default.createElement(
           'div',
-          { className: 'instaColumn' },
-          _react2.default.createElement('div', { className: 'instaThumbnail', style: { backgroundImage: 'url(' + this.props.images[0].url + ')' } }),
+          { className: 'instaBlock' },
           _react2.default.createElement(
-            'ul',
-            null,
+            'div',
+            { className: 'instaColumn' },
+            _react2.default.createElement('div', { className: 'instaThumbnail', style: { backgroundImage: 'url(' + this.props.images[0].url + ')' } }),
             _react2.default.createElement(
-              'li',
+              'ul',
               null,
-              'model: ',
               _react2.default.createElement(
-                'b',
+                'li',
                 null,
-                this.props.singleValue
-              )
-            ),
-            ifExistsSize,
-            _react2.default.createElement(
-              'li',
-              null,
-              'type: ',
-              this.props.type
-            ),
-            ifExistsOwnableMessage,
-            _react2.default.createElement(
-              'li',
-              null,
-              'This event is ',
-              _react2.default.createElement(
-                'b',
-                null,
-                renderInVegas
+                'model: ',
+                _react2.default.createElement(
+                  'b',
+                  null,
+                  this.props.singleValue
+                )
               ),
-              ' Las Vegas '
-            ),
-            renderTv,
-            renderVideoWall
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'instaInfo' },
-          _react2.default.createElement(
-            'h2',
-            null,
-            'instaQuote'
+              ifExistsSize,
+              _react2.default.createElement(
+                'li',
+                null,
+                'type: ',
+                this.props.type
+              ),
+              ifExistsOwnableMessage,
+              _react2.default.createElement(
+                'li',
+                null,
+                'This event is ',
+                _react2.default.createElement(
+                  'b',
+                  null,
+                  renderInVegas
+                ),
+                ' Las Vegas '
+              ),
+              renderTv,
+              renderVideoWall
+            )
           ),
           _react2.default.createElement(
             'div',
-            { className: reveal },
+            { className: 'instaInfo' },
+            _react2.default.createElement(
+              'h2',
+              null,
+              'instaQuote'
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: reveal },
+              _react2.default.createElement(
+                'h2',
+                null,
+                '$',
+                finalPrice,
+                ' USD'
+              ),
+              _react2.default.createElement(
+                'ul',
+                null,
+                isDiscount,
+                maximumReached,
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  ' *for up to 3 event days'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'button',
+              { className: 'scheduleButton', onClick: function onClick() {
+                  return _this2.showCalendly();
+                } },
+              'schedule a call!'
+            ),
             _react2.default.createElement(
               'p',
               null,
-              '$',
-              finalPrice,
-              ' USD'
-            ),
-            _react2.default.createElement(
-              'span',
-              null,
-              isDiscount,
-              ' *for up to 3 event days'
-            )
-          ),
-          _react2.default.createElement(
-            'button',
-            { className: 'scheduleButton', onClick: function onClick() {
-                return _this2.showCalendly();
-              } },
-            'schedule a call!'
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            _react2.default.createElement(
-              'b',
-              null,
-              'we don\'t believe in pressure sales, schedule with confidence'
+              _react2.default.createElement(
+                'b',
+                null,
+                'we don\'t believe in pressure sales, schedule with confidence'
+              )
             )
           )
-        )
+        ),
+        _react2.default.createElement(_CollectBeforeQuote2.default, _extends({}, this.props, { originalPrice: originalPrice,
+          finalPrice: finalPrice,
+          discountSymbol: this.discountSymbol.bind(this) }))
       );
     }
   }]);
@@ -25326,6 +25349,10 @@ var CollectBeforeQuote = function (_Component) {
         _react2.default.createElement(_reactForm.Text, { field: 'name', placeholder: 'your name' }),
         _react2.default.createElement(_reactForm.Text, { field: 'email', placeholder: 'your email' }),
         _react2.default.createElement(_reactForm.Text, { field: 'phone', placeholder: 'your phone' }),
+        _react2.default.createElement(_reactForm.Text, { field: 'model', className: 'hidden' }),
+        _react2.default.createElement(_reactForm.Text, { field: 'convention', className: 'hidden' }),
+        _react2.default.createElement(_reactForm.Text, { field: 'addons', className: 'hidden' }),
+        _react2.default.createElement(_reactForm.Text, { field: 'price', className: 'hidden' }),
         _react2.default.createElement(
           'button',
           { type: 'submit' },
@@ -25333,17 +25360,34 @@ var CollectBeforeQuote = function (_Component) {
         )
       );
       var displayForm = this.props.renderCollectors ? actualForm : undefined;
+      var renderInVegas = this.props.eventInVegas ? "in" : "outside";
+      var renderTv = this.props.addTv ? "They added a TV." : '';
+      var renderVideoWall = this.props.addVideoWall ? "They added a videowall." : '';
+      var renderRentOwn = this.props.wantToOwn ? "own" : "rent";
+      var narrateDiscount = this.props.originalPrice + '$ - ' + this.props.discountNumber + this.props.discountSymbol() + ' discount = ' + this.props.finalPrice;
+      var price = this.props.discountOn ? narrateDiscount : "No discount applied.";
 
+      var addons = renderTv + " " + renderVideoWall;
+      var redacted = "This person quoted the " + this.props.singleValue + " model with the original price of " + this.props.originalPrice + " and the final price after discounts of " + this.props.finalPrice + ". ";
+      var convention = "They want to " + renderRentOwn + " it and the event is " + renderInVegas + " Las Vegas.";
       return _react2.default.createElement(
         'div',
         { id: 'dataCollector' },
         _react2.default.createElement(
           _reactForm.Form,
           {
+
+            defaultValues: {
+              model: redacted,
+              convention: convention,
+              addons: addons,
+              price: price
+            },
+
             onSubmit: function onSubmit(values) {
               console.log('Form Submitted Succesfully with:', values);
 
-              var url = 'https://formspree.io/fobos.salmeron@gmail.com';
+              var url = 'https://formspree.io/hello@morethanspaces.com';
               var data = values;
 
               var xhr = new XMLHttpRequest();
@@ -27014,10 +27058,6 @@ var _Footer = __webpack_require__(87);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _InstaQuoteButton = __webpack_require__(249);
-
-var _InstaQuoteButton2 = _interopRequireDefault(_InstaQuoteButton);
-
 var _StaticSection = __webpack_require__(250);
 
 var _StaticSection2 = _interopRequireDefault(_StaticSection);
@@ -27058,7 +27098,7 @@ var App = function (_Component) {
       discountText: '',
       discountSmallText: '',
       discountBanner: '',
-      maintenance: false
+      maintenance: true
     };
     _this.loadDiscounts = _this.loadDiscounts.bind(_this);
     _this.quitMaintenance = _this.quitMaintenance.bind(_this);
@@ -27144,7 +27184,6 @@ var App = function (_Component) {
           discountType: this.state.discountType,
           discountText: this.state.discountText,
           discountSmallText: this.state.discountSmallText }),
-        _react2.default.createElement(_InstaQuoteButton2.default, null),
         _react2.default.createElement(_HomeSection2.default, null),
         _react2.default.createElement(_Carousel2.default, null),
         _react2.default.createElement(_DiscountBanner2.default, { discountBanner: this.state.discountBanner }),
@@ -27296,7 +27335,7 @@ var BoothForm = function (_Component) {
         ),
         _react2.default.createElement(
           'select',
-          { onChange: this.handleWidthChange },
+          { onChange: this.handleWidthChange, value: this.props.boothSizeWidth },
           _react2.default.createElement(
             'option',
             { value: 'All' },
@@ -27335,7 +27374,7 @@ var BoothForm = function (_Component) {
         ),
         _react2.default.createElement(
           'select',
-          { onChange: this.handleLengthChange },
+          { onChange: this.handleLengthChange, value: this.props.boothSizeLength },
           _react2.default.createElement(
             'option',
             { value: 'All' },
@@ -27373,9 +27412,9 @@ var BoothForm = function (_Component) {
           'booth type'
         ),
         _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', nameFor: 'Island', checkFor: 'island', defaultChecked: this.props.selectedIsland }),
-        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', nameFor: 'SplitIsland', checkFor: 'split island', defaultChecked: 'checked', doubleLine: 'doubleLine' }),
-        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', nameFor: 'Peninsula', defaultChecked: 'checked', checkFor: 'peninsula' }),
-        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', noMarginRight: true, nameFor: 'Inline', defaultChecked: 'checked', checkFor: 'inline' }),
+        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', nameFor: 'SplitIsland', checkFor: 'split island', defaultChecked: this.props.selectedSplitIsland, doubleLine: 'doubleLine' }),
+        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', nameFor: 'Peninsula', defaultChecked: this.props.selectedPeninsula, checkFor: 'peninsula' }),
+        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleBoothToggle, inputType: 'checkbox', noMarginRight: true, nameFor: 'Inline', defaultChecked: this.props.selectedInline, checkFor: 'inline' }),
         _react2.default.createElement(_BlueSuggest2.default, null)
       );
       var backToBooths = _react2.default.createElement(
@@ -27403,8 +27442,8 @@ var BoothForm = function (_Component) {
           null,
           'rent or own?'
         ),
-        _react2.default.createElement(_CheckBox2.default, { onClick: this.handleRent, inputType: 'radio', nameFor: 'rentOrOwn', defaultChecked: 'checked', checkFor: 'rent' }),
-        _react2.default.createElement(_CheckBox2.default, { onClick: this.handleOwn, inputType: 'radio', nameFor: 'rentOrOwn', checkFor: 'own' }),
+        _react2.default.createElement(_CheckBox2.default, { onClick: this.handleRent, inputType: 'radio', nameFor: 'rentOrOwn', defaultChecked: !this.props.wantToOwn, checkFor: 'rent' }),
+        _react2.default.createElement(_CheckBox2.default, { onClick: this.handleOwn, inputType: 'radio', nameFor: 'rentOrOwn', defaultChecked: this.props.wantToOwn, checkFor: 'own' }),
         _react2.default.createElement(
           'label',
           null,
@@ -27413,7 +27452,7 @@ var BoothForm = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'quoteCheck' },
-          _react2.default.createElement('input', { type: 'radio', id: 'Las Vegas', onClick: this.doNotShip, name: "inVegas", defaultChecked: true }),
+          _react2.default.createElement('input', { type: 'radio', id: 'Las Vegas', onClick: this.doNotShip, name: "inVegas", defaultChecked: this.props.eventInVegas }),
           _react2.default.createElement(
             'label',
             { className: 'noMargin', htmlFor: 'Las Vegas' },
@@ -27423,7 +27462,7 @@ var BoothForm = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'quoteCheck' },
-          _react2.default.createElement('input', { type: 'radio', id: 'else', onClick: this.doShip, name: "inVegas", defaultChecked: false }),
+          _react2.default.createElement('input', { type: 'radio', id: 'else', onClick: this.doShip, name: "inVegas", defaultChecked: !this.props.eventInVegas }),
           _react2.default.createElement(
             'label',
             { className: 'noMargin', htmlFor: 'else' },
@@ -27438,14 +27477,14 @@ var BoothForm = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'quoteCheck' },
-          _react2.default.createElement('input', { type: 'checkbox', id: 'add Tv(s)', onClick: this.setTv, defaultChecked: false }),
+          _react2.default.createElement('input', { type: 'checkbox', id: 'add Tv(s)', onClick: this.setTv, defaultChecked: this.props.addTv }),
           _react2.default.createElement(
             'label',
             { className: 'noMargin', htmlFor: "add Tv(s)" },
             'add Tv(s)'
           )
         ),
-        _react2.default.createElement(_CheckBox2.default, { onClick: this.setVideoWall, inputType: 'checkbox', nameFor: 'else', checkFor: 'add videowall' }),
+        _react2.default.createElement(_CheckBox2.default, { onClick: this.setVideoWall, defaultChecked: this.props.addVideoWall, inputType: 'checkbox', nameFor: 'else', checkFor: 'add videowall' }),
         _react2.default.createElement(_MagentaSuggest2.default, null)
       );
       var menuChoice = this.props.individualBoothRender ? backToBooths : boothMenu;
@@ -27486,10 +27525,6 @@ var _SingleItem2 = _interopRequireDefault(_SingleItem);
 var _CSSTransitionGroup = __webpack_require__(210);
 
 var _CSSTransitionGroup2 = _interopRequireDefault(_CSSTransitionGroup);
-
-var _CollectBeforeQuote = __webpack_require__(211);
-
-var _CollectBeforeQuote2 = _interopRequireDefault(_CollectBeforeQuote);
 
 var _InstaQuote = __webpack_require__(204);
 
@@ -27649,19 +27684,12 @@ var BoothGrid = function (_Component) {
             revealInstaQuote: this.props.revealInstaQuote,
             discountOn: this.props.discountOn,
             discountNumber: this.props.discountNumber,
-            discountType: this.props.discountType }),
-          _react2.default.createElement(_CollectBeforeQuote2.default, { images: this.state.images,
-            singleValue: this.state.singleValue,
-            type: this.state.type,
-            wantToOwn: this.props.wantToOwn,
-            eventInVegas: this.props.eventInVegas,
-            width: this.state.width,
-            length: this.state.length,
+            discountType: this.props.discountType,
             doRevealInstaQuote: this.props.doRevealInstaQuote.bind(this),
             hideCollectors: this.props.hideCollectors.bind(this),
             renderCollectors: this.props.renderCollectors })
         ),
-        _react2.default.createElement(_IconsBar2.default, null)
+        _react2.default.createElement(_IconsBar2.default, { className: "iconsBarQuote" })
       );
 
       var renderQuote = this.props.renderBoothInstaQuote ? quote : undefined;
@@ -28316,6 +28344,10 @@ var _VideoWallGrid = __webpack_require__(246);
 
 var _VideoWallGrid2 = _interopRequireDefault(_VideoWallGrid);
 
+var _InstaQuoteButton = __webpack_require__(249);
+
+var _InstaQuoteButton2 = _interopRequireDefault(_InstaQuoteButton);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -28447,7 +28479,9 @@ var QuoteTabs = function (_Component) {
   }, {
     key: 'closeSingleBooth',
     value: function closeSingleBooth() {
-      this.setState({ individualBoothRender: false });
+      this.setState({
+        individualBoothRender: false
+      });
     }
   }, {
     key: 'closeSingleVideoWall',
@@ -28521,6 +28555,8 @@ var QuoteTabs = function (_Component) {
       return _react2.default.createElement(
         'section',
         { id: 'products' },
+        _react2.default.createElement(_InstaQuoteButton2.default, { renderBoothInstaQuote: this.state.renderBoothInstaQuote,
+          renderVideoWallInstaQuote: this.state.renderVideoWallInstaQuote }),
         _react2.default.createElement(
           _reactTabs.Tabs,
           { forceRenderTabPanel: true, selectedIndex: this.props.tabIndex, onSelect: function onSelect(tabIndex) {
@@ -28587,8 +28623,10 @@ var QuoteTabs = function (_Component) {
               addTv: this.state.addTv,
               wantToOwn: this.state.wantToOwn,
               eventInVegas: this.state.eventInVegas,
-              addVideoWall: this.state.addVideoWall
-            }, _defineProperty(_React$createElement, 'addVideoWall', this.state.addVideoWall), _defineProperty(_React$createElement, 'selectedIsland', this.state.selectedIsland), _defineProperty(_React$createElement, 'seeState', this.seeState.bind(this)), _React$createElement)),
+              addVideoWall: this.state.addVideoWall,
+              selectedIsland: this.state.selectedIsland,
+              seeState: this.seeState.bind(this)
+            }, _defineProperty(_React$createElement, 'selectedIsland', this.state.selectedIsland), _defineProperty(_React$createElement, 'selectedSplitIsland', this.state.selectedSplitIsland), _defineProperty(_React$createElement, 'selectedPeninsula', this.state.selectedPeninsula), _defineProperty(_React$createElement, 'selectedInline', this.state.selectedInline), _defineProperty(_React$createElement, 'boothSizeWidth', this.state.boothSizeWidth), _defineProperty(_React$createElement, 'boothSizeLength', this.state.boothSizeLength), _React$createElement)),
             _react2.default.createElement(_BoothGrid2.default, { dataToLoad: "./assets/js/booths.json",
               selectedIsland: this.state.selectedIsland,
               selectedSplitIsland: this.state.selectedSplitIsland,
@@ -28619,7 +28657,11 @@ var QuoteTabs = function (_Component) {
               individualVideoWallRender: this.state.individualVideoWallRender,
               closeSingleVideoWall: this.closeSingleVideoWall.bind(this),
               needShipping: this.needShipping.bind(this),
-              noNeedShipping: this.noNeedShipping.bind(this) }),
+              noNeedShipping: this.noNeedShipping.bind(this),
+              selectedTv: this.state.selectedTv,
+              selectedLcd: this.state.selectedLcd,
+              selectedLed: this.state.selectedLed,
+              eventInVegas: this.state.eventInVegas }),
             _react2.default.createElement(_VideoWallGrid2.default, { dataToLoad: "./assets/js/videowalls.json",
               individualVideoWallRender: this.state.individualVideoWallRender,
               selectedTv: this.state.selectedTv,
@@ -28824,9 +28866,9 @@ var VideoWallForm = function (_Component) {
           null,
           'choose type'
         ),
-        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleVideoWallToggle, inputType: 'checkbox', nameFor: 'Tv', checkFor: 'tv', defaultChecked: 'checked' }),
-        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleVideoWallToggle, inputType: 'checkbox', nameFor: 'LED', checkFor: 'led', defaultChecked: 'checked' }),
-        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleVideoWallToggle, inputType: 'checkbox', nameFor: 'LCD', checkFor: 'lcd', defaultChecked: 'checked' }),
+        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleVideoWallToggle, inputType: 'checkbox', nameFor: 'Tv', checkFor: 'tv', defaultChecked: this.props.selectedTv }),
+        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleVideoWallToggle, inputType: 'checkbox', nameFor: 'LED', checkFor: 'led', defaultChecked: this.props.selectedLed }),
+        _react2.default.createElement(_CheckBox2.default, { onChange: this.handleVideoWallToggle, inputType: 'checkbox', nameFor: 'LCD', checkFor: 'lcd', defaultChecked: this.props.selectedLcd }),
         _react2.default.createElement(
           'div',
           { className: 'blueSuggest' },
@@ -28868,7 +28910,7 @@ var VideoWallForm = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'quoteCheck' },
-          _react2.default.createElement('input', { type: 'radio', id: 'Las Vegas', onClick: this.doNotShip, name: "inVegas", defaultChecked: true }),
+          _react2.default.createElement('input', { type: 'radio', id: 'Las Vegas', onClick: this.doNotShip, name: "inVegas", defaultChecked: this.props.eventInVegas }),
           _react2.default.createElement(
             'label',
             { className: 'noMargin', htmlFor: 'Las Vegas' },
@@ -28878,7 +28920,7 @@ var VideoWallForm = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'quoteCheck' },
-          _react2.default.createElement('input', { type: 'radio', id: 'else', onClick: this.doShip, name: "inVegas", defaultChecked: false }),
+          _react2.default.createElement('input', { type: 'radio', id: 'else', onClick: this.doShip, name: "inVegas", defaultChecked: !this.props.eventInVegas }),
           _react2.default.createElement(
             'label',
             { className: 'noMargin', htmlFor: 'else' },
@@ -29079,17 +29121,12 @@ var VideoWallGrid = function (_Component) {
             revealInstaQuote: this.props.revealInstaQuote,
             discountOn: this.props.discountOn,
             discountNumber: this.props.discountNumber,
-            discountType: this.props.discountType }),
-          _react2.default.createElement(_CollectBeforeQuote2.default, {
-            images: this.state.images,
-            singleValue: this.state.singleValue,
-            type: this.state.type,
-            eventInVegas: this.props.eventInVegas,
+            discountType: this.props.discountType,
             doRevealInstaQuote: this.props.doRevealInstaQuote.bind(this),
             hideCollectors: this.props.hideCollectors.bind(this),
             renderCollectors: this.props.renderCollectors })
         ),
-        _react2.default.createElement(_IconsBar2.default, null)
+        _react2.default.createElement(_IconsBar2.default, { className: "iconsBarQuote" })
       );
 
       var renderQuote = this.props.renderVideoWallInstaQuote ? quote : undefined;
@@ -29201,6 +29238,10 @@ var _reactModal2 = _interopRequireDefault(_reactModal);
 var _Arrow = __webpack_require__(213);
 
 var _Arrow2 = _interopRequireDefault(_Arrow);
+
+var _cross = __webpack_require__(311);
+
+var _cross2 = _interopRequireDefault(_cross);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29315,7 +29356,7 @@ var DiscountsCarousel = function (_Component) {
             closeTimeoutMS: 500,
             contentLabel: 'Minimal Modal Example' },
           _react2.default.createElement('img', { src: "assets/img/layout/carousel/carousel" + this.state.modalIndex + ".jpg" }),
-          _react2.default.createElement('button', { className: 'modalCloseButton', onClick: this.handleCloseModal })
+          _react2.default.createElement(_cross2.default, { className: 'modalCloseButton', onClick: this.handleCloseModal })
         )
       );
     }
@@ -38735,7 +38776,7 @@ module.exports = camel2hyphen;
 var React = __webpack_require__(3);
 
 function CloseIcon (props) {
-    return React.createElement("svg",props,[React.createElement("path",{"className":"st0","d":"M84.4,91.6c-1.8,0-3.6-0.7-5-2L11.1,21.2c-2.7-2.7-2.7-7.2,0-9.9c2.7-2.7,7.2-2.7,9.9,0l68.4,68.4\n\t\tc2.7,2.7,2.7,7.2,0,9.9C88,90.9,86.2,91.6,84.4,91.6z","key":0}),React.createElement("path",{"className":"st0","d":"M16,91.6c-1.8,0-3.6-0.7-4.9-2c-2.7-2.7-2.7-7.2,0-9.9l68.4-68.4c2.7-2.7,7.2-2.7,9.9,0c2.7,2.7,2.7,7.2,0,9.9\n\t\tL20.9,89.6C19.6,90.9,17.8,91.6,16,91.6z","key":1})]);
+    return React.createElement("svg",props,[React.createElement("path",{"d":"M84.4,91.6c-1.8,0-3.6-0.7-5-2L11.1,21.2c-2.7-2.7-2.7-7.2,0-9.9c2.7-2.7,7.2-2.7,9.9,0l68.4,68.4\n\t\tc2.7,2.7,2.7,7.2,0,9.9C88,90.9,86.2,91.6,84.4,91.6z","key":0}),React.createElement("path",{"d":"M16,91.6c-1.8,0-3.6-0.7-4.9-2c-2.7-2.7-2.7-7.2,0-9.9l68.4-68.4c2.7-2.7,7.2-2.7,9.9,0c2.7,2.7,2.7,7.2,0,9.9\n\t\tL20.9,89.6C19.6,90.9,17.8,91.6,16,91.6z","key":1})]);
 }
 
 CloseIcon.displayName = "CloseIcon";
@@ -38859,6 +38900,25 @@ try {
 // easier to handle this case. if(!global) { ...}
 
 module.exports = g;
+
+
+/***/ }),
+/* 311 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(3);
+
+function CrossIcon (props) {
+    return React.createElement("svg",props,[React.createElement("path",{"d":"M84.4,91.6c-1.8,0-3.6-0.7-5-2L11.1,21.2c-2.7-2.7-2.7-7.2,0-9.9c2.7-2.7,7.2-2.7,9.9,0l68.4,68.4\n\t\tc2.7,2.7,2.7,7.2,0,9.9C88,90.9,86.2,91.6,84.4,91.6z","key":0}),React.createElement("path",{"d":"M16,91.6c-1.8,0-3.6-0.7-4.9-2c-2.7-2.7-2.7-7.2,0-9.9l68.4-68.4c2.7-2.7,7.2-2.7,9.9,0c2.7,2.7,2.7,7.2,0,9.9\n\t\tL20.9,89.6C19.6,90.9,17.8,91.6,16,91.6z","key":1})]);
+}
+
+CrossIcon.displayName = "CrossIcon";
+
+CrossIcon.defaultProps = {"version":"1.1","id":"Layer_1","x":"0px","y":"0px","viewBox":"0 0 100 100","style":{"enableBackground":"new 0 0 100 100"},"xmlSpace":"preserve"};
+
+module.exports = CrossIcon;
+
+CrossIcon.default = CrossIcon;
 
 
 /***/ })

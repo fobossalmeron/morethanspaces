@@ -9810,7 +9810,7 @@ var IconsBar = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'section',
-        { id: 'iconsBar', style: { backgroundColor: this.props.backgroundColor } },
+        { className: 'iconsBar', style: { backgroundColor: this.props.backgroundColor } },
         _react2.default.createElement(
           'ul',
           null,
@@ -10870,12 +10870,12 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 var React = __webpack_require__(3);
 
 function CustomBoothDesignIcon (props) {
-    return React.createElement("svg",props,[React.createElement("style",{"type":"text/css","key":0},"\n\t.st0{fill:#241F21;}\n"),React.createElement("g",{"key":1},React.createElement("g",null,React.createElement("path",{"className":"st0","d":"M72.2,66.5c-0.5-0.2-0.8-0.7-1.2-1.6c-0.4-0.8-0.9-1.8-1.9-2.5c-1.4-0.9-14.3-8.8-18-11.1l1.1-1.9\n\t\t\tc3.5,2.1,16,9.5,18.2,10.5c1.5,0.8,2.6,0.6,3.5,0.5c0.8-0.1,1.3-0.2,2.1,0.3c1.7,1,4.1,3.5,5.2,4.6l-1.5,3.1\n\t\t\tC78.4,68.3,75.6,67.8,72.2,66.5 M22.9,40.1c-1.4-0.8-2.7-2-3.4-3.1c-0.8-1.4-0.9-2.7-0.2-4c1-1.8,2.1-2.9,3.3-3.2\n\t\t\tc1.5-0.4,3.4,0.1,6.3,1.7c14.5,8.2,21,12,23.2,13.3L47.5,53l-0.3,0.5C42.8,51,25.4,41.5,22.9,40.1 M83.9,65.1l-0.5-0.6\n\t\t\tc-0.2-0.2-3.8-4.2-6.3-5.6c-1.5-0.9-2.7-0.7-3.6-0.6c-0.7,0.1-1.3,0.2-2.1-0.3c-2-1-14.4-8.3-18-10.4l1.9-3.6l-0.9-0.6\n\t\t\tc-0.1,0-5.3-3.3-24.2-14c-2.4-1.4-5.3-2.7-8.1-1.9c-1.9,0.5-3.5,2-4.7,4.4c-0.9,1.7-1,3.5-0.3,5.2c0.1,0.4,0.3,0.7,0.5,1.1\n\t\t\tc0.9,1.6,2.5,3,4.2,4c2.8,1.5,25.1,13.7,25.3,13.8l1,0.5l1.8-3.1c3.7,2.3,16.6,10.1,17.9,11c0.5,0.3,0.8,0.9,1.1,1.6\n\t\t\tc0.5,1,1.1,2.2,2.5,2.7c5.1,1.8,8.7,2.3,8.8,2.3l0.8,0.1L83.9,65.1z"}))),React.createElement("g",{"key":2},React.createElement("rect",{"x":"35","y":"32.3","transform":"matrix(0.4866 -0.8736 0.8736 0.4866 -17.7288 52.8874)","className":"st0","width":"2.3","height":"18.5"})),React.createElement("g",{"key":3},React.createElement("g",null,React.createElement("path",{"d":"M50,97.9c-26.5,0-48-21.5-48-48c0-26.5,21.5-48,48-48c26.5,0,48,21.5,48,48C98,76.4,76.5,97.9,50,97.9z M50,5.1\n\t\t\tC25.3,5.1,5.2,25.2,5.2,49.9c0,24.7,20.1,44.8,44.8,44.8c24.7,0,44.8-20.1,44.8-44.8C94.8,25.2,74.7,5.1,50,5.1z"})))]);
+    return React.createElement("svg",props,React.createElement("g",null,[React.createElement("path",{"className":"st0","d":"M72.2,66.5c-0.5-0.2-0.8-0.7-1.2-1.6c-0.4-0.8-0.9-1.8-1.9-2.5c-1.4-0.9-14.3-8.8-18-11.1l1.1-1.9\n\t\t\tc3.5,2.1,16,9.5,18.2,10.5c1.5,0.8,2.6,0.6,3.5,0.5c0.8-0.1,1.3-0.2,2.1,0.3c1.7,1,4.1,3.5,5.2,4.6l-1.5,3.1\n\t\t\tC78.4,68.3,75.6,67.8,72.2,66.5 M22.9,40.1c-1.4-0.8-2.7-2-3.4-3.1c-0.8-1.4-0.9-2.7-0.2-4c1-1.8,2.1-2.9,3.3-3.2\n\t\t\tc1.5-0.4,3.4,0.1,6.3,1.7c14.5,8.2,21,12,23.2,13.3L47.5,53l-0.3,0.5C42.8,51,25.4,41.5,22.9,40.1 M83.9,65.1l-0.5-0.6\n\t\t\tc-0.2-0.2-3.8-4.2-6.3-5.6c-1.5-0.9-2.7-0.7-3.6-0.6c-0.7,0.1-1.3,0.2-2.1-0.3c-2-1-14.4-8.3-18-10.4l1.9-3.6l-0.9-0.6\n\t\t\tc-0.1,0-5.3-3.3-24.2-14c-2.4-1.4-5.3-2.7-8.1-1.9c-1.9,0.5-3.5,2-4.7,4.4c-0.9,1.7-1,3.5-0.3,5.2c0.1,0.4,0.3,0.7,0.5,1.1\n\t\t\tc0.9,1.6,2.5,3,4.2,4c2.8,1.5,25.1,13.7,25.3,13.8l1,0.5l1.8-3.1c3.7,2.3,16.6,10.1,17.9,11c0.5,0.3,0.8,0.9,1.1,1.6\n\t\t\tc0.5,1,1.1,2.2,2.5,2.7c5.1,1.8,8.7,2.3,8.8,2.3l0.8,0.1L83.9,65.1z","key":0}),React.createElement("rect",{"x":"35","y":"32.3","transform":"matrix(0.4866 -0.8736 0.8736 0.4866 -17.7288 52.8874)","className":"st0","width":"2.3","height":"18.5","key":1}),React.createElement("path",{"d":"M50,97.9c-26.5,0-48-21.5-48-48c0-26.5,21.5-48,48-48c26.5,0,48,21.5,48,48C98,76.4,76.5,97.9,50,97.9z M50,5.1\n\t\t\tC25.3,5.1,5.2,25.2,5.2,49.9c0,24.7,20.1,44.8,44.8,44.8c24.7,0,44.8-20.1,44.8-44.8C94.8,25.2,74.7,5.1,50,5.1z","key":2})]));
 }
 
 CustomBoothDesignIcon.displayName = "CustomBoothDesignIcon";
 
-CustomBoothDesignIcon.defaultProps = {"version":"1.1","id":"Layer_1","x":"0px","y":"0px","viewBox":"0 0 100 100","style":{"enableBackground":"new 0 0 100 100"},"xmlSpace":"preserve"};
+CustomBoothDesignIcon.defaultProps = {"version":"1.1","x":"0px","y":"0px","viewBox":"0 0 100 100","style":{"enableBackground":"new 0 0 100 100"},"xmlSpace":"preserve"};
 
 module.exports = CustomBoothDesignIcon;
 

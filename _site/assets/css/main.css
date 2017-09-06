@@ -142,18 +142,19 @@ section { float: left; width: 100%; padding: 3% 5%; position: relative; }
 #discountsSlider .slick-slide { margin-right: 10px; cursor: pointer; transition: .4s ease all; }
 #discountsSlider .slick-slide:hover { opacity: 0.8; }
 
-.modalCloseButton { position: absolute; top: 0; right: 0; width: 40px; height: 50px; background-color: transparent; border: none; background-image: url("../img/layout/cross.svg"); background-repeat: no-repeat; background-size: contain; cursor: pointer; transition: .4s ease all; }
+.modalCloseButton { position: absolute; top: 5px; right: 5px; width: 40px; height: 40px; background-color: transparent; border: none; cursor: pointer; transition: .4s ease all; }
+.modalCloseButton path { fill: #eee81a; }
 .modalCloseButton:focus, .modalCloseButton:hover { outline: none; transform: scale(1.2); }
 
 .modalOverlay { position: fixed; z-index: 3; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: rgba(255, 255, 255, 0.55); transition: .4s ease all; cursor: pointer; }
 
-.modalItself { position: absolute; top: 20%; left: 15%; right: 15%; bottom: 10%; overflow: hidden; border-radius: 2px; outline: none; cursor: auto; }
+.modalItself { position: absolute; top: 20%; left: 15%; right: 15%; bottom: 10%; overflow: scroll; border-radius: 2px; outline: none; cursor: auto; }
 
 .ReactModal__Body--open { overflow: hidden; }
 
 #slider { background-color: #2dbdc0; float: left; width: 100%; min-height: 0; }
 #slider .sliderCard { display: inline-block; position: relative; float: left; clear: both; text-align: center; padding: 0 4%; color: #f9f9f9; box-sizing: border-box; opacity: 0; margin: 0; width: 60%; left: 50%; transition: .4s ease all; transform: translateX(-50%); }
-#slider .sliderCard h3 { font-weight: 300; }
+#slider .sliderCard h3 { font-weight: 300; text-align: left; }
 #slider .sliderCard p { text-align: left; color: #383838; margin-bottom: 0; }
 
 #home { padding: 0; position: relative; min-height: 100vh; background-color: #383838; }
@@ -251,6 +252,7 @@ form button:hover { background-color: #2dbdc0; }
 #clients ul li:nth-last-child(1), #clients ul li:nth-last-child(2) { margin-bottom: 0px; }
 
 #products { padding: 4% 0 0 0; background-color: black; }
+#products .iconsBar ul li svg { fill: #f9f9f9; }
 #products h2 { margin: 0px; font-weight: 700; padding-top: 15px; float: left; cursor: pointer; }
 
 .quoteCheck { width: 48%; margin-right: 2%; margin-bottom: 4%; min-height: 35px; float: left; position: relative; }
@@ -445,9 +447,9 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 .instaColumn { width: 25%; float: left; }
 .instaColumn .instaThumbnail { float: left; width: 100%; border-radius: 2px; background-size: cover; display: block; position: relative; height: 200px; margin-bottom: 4%; }
 
-.quoteNumber { font-weight: 700; display: block; width: 100%; background-color: #eee81a; margin-bottom: 2%; padding: 1% 5% 0% 3%; border-radius: 2px; float: left; clear: both; font-size: 3em; filter: blur(12px); transition: .4s ease all; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-.quoteNumber span { font-size: 15px; margin-left: 10px; }
-.quoteNumber p { margin: 0; }
+.quoteNumber { font-weight: 700; display: block; width: 100%; background-color: #eee81a; margin-bottom: 2%; padding: 1% 5% 0% 3%; border-radius: 2px; float: left; font-size: 2em; filter: blur(12px); transition: .4s ease all; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.quoteNumber h2 { width: 65%; float: left; }
+.quoteNumber ul { float: left; clear: none; width: 35%; font-size: .4em; margin-top: 5.8%; }
 
 .revealQuote { filter: blur(0px); }
 
@@ -455,10 +457,10 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 
 .clickFor { font-size: 15px; font-weight: 400; color: #f9f9f9; position: absolute; bottom: 40px; }
 
-#iconsBar { background-color: #383838; color: #f9f9f9; min-height: 0; padding: 2% 4%; }
-#iconsBar ul { float: left; width: 100%; margin: 0; list-style: none; }
-#iconsBar ul li { float: left; text-align: center; clear: none; width: 20%; line-height: 1.2; font-weight: 700; }
-#iconsBar ul li .service-icon { margin: 0 auto 2% auto; }
+.iconsBar { background-color: #383838; color: #f9f9f9; min-height: 0; padding: 2% 4%; }
+.iconsBar ul { float: left; width: 100%; margin: 0; list-style: none; }
+.iconsBar ul li { float: left; text-align: center; clear: none; width: 20%; line-height: 1.2; font-weight: 700; }
+.iconsBar ul li .service-icon { margin: 0 auto 2% auto; }
 
 .loading { padding: 10%; min-height: 100vh; background-color: #eee81a; width: 100%; text-align: left; }
 .loading h2 { font-size: 3em; font-weight: 700; margin: 0; }

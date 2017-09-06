@@ -9,7 +9,7 @@
     "rent": 13000,
     "own" : 26000,
     "tv" : 1000,
-    "videowall" : 1500,
+    "videowall" : 150000,
     "images":[
       {"url":"assets/img/booths/booth1/2.jpg"},
       {"url":"assets/img/booths/booth1/1.jpg"},

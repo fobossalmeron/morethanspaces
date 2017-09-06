@@ -5,7 +5,6 @@ import Carousel from './Carousel';
 import QuoteTabs from './QuoteTabs';
 import Nav from './presentational/Nav';
 import Footer from './presentational/Footer';
-import InstaQuoteButton from './presentational/InstaQuoteButton';
 import StaticSection from './presentational/StaticSection';
 import ContactSection from './ContactSection';
 import DiscountBanner from './presentational/DiscountBanner';
@@ -22,7 +21,7 @@ class App extends Component {
         discountText: '',
         discountSmallText: '',
         discountBanner: '',
-        maintenance: false
+        maintenance: true
       };
     this.loadDiscounts = this.loadDiscounts.bind(this);
     this.quitMaintenance = this.quitMaintenance.bind(this);
@@ -87,7 +86,6 @@ class App extends Component {
              discountType={this.state.discountType}
              discountText={this.state.discountText}
              discountSmallText={this.state.discountSmallText}/>
-        <InstaQuoteButton />
         <HomeSection />
         <Carousel />
         <DiscountBanner discountBanner={this.state.discountBanner}/>

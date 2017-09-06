@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Slider from 'react-slick';
 import ReactModal from 'react-modal';
 import Arrow from './Arrow';
+import CrossIcon from 'svg-react-loader?name=CrossIcon!../../../assets/img/layout/cross.svg';
+
 
 function SampleNextArrow(props) {
   const {className, style, onClick} = props
@@ -75,7 +77,7 @@ class DiscountsCarousel extends Component {
            closeTimeoutMS={500}
            contentLabel="Minimal Modal Example">
            <img src={"assets/img/layout/carousel/carousel" + this.state.modalIndex + ".jpg"} />
-           <button className="modalCloseButton" onClick={this.handleCloseModal}></button>
+           <CrossIcon className="modalCloseButton" onClick={this.handleCloseModal}/>
         </ReactModal>
       </section>
     );

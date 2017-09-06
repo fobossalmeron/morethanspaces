@@ -2,8 +2,9 @@
 
 var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: .5}});
 
-//instaQuote button
-var instaQuoteButton = new ScrollMagic.Scene({triggerElement: "#products", duration: $('#products').height()})
+// instaQuoteButton
+
+var instaScene = new ScrollMagic.Scene({triggerElement: "#products", duration: $('#products').height()*1.5})
         .setClassToggle( "#instaQuoteButton", "fadeOut")
         .addTo(controller);
 

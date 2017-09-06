@@ -54,7 +54,7 @@ class BoothForm extends Component {
     var boothMenu = (
       <div>
       <label>booth size</label>
-        <select onChange={this.handleWidthChange}>
+        <select onChange={this.handleWidthChange} value={this.props.boothSizeWidth}>
           <option value="All">All</option>
           <option value="10">10ft</option>
           <option value="20">20ft</option>
@@ -63,7 +63,7 @@ class BoothForm extends Component {
           <option value="50">50ft</option>
         </select>
         <p>x</p>
-        <select onChange={this.handleLengthChange}>
+        <select onChange={this.handleLengthChange} value={this.props.boothSizeLength}>
           <option value="All">All</option>
           <option value="10">10ft</option>
           <option value="20">20ft</option>
@@ -73,9 +73,9 @@ class BoothForm extends Component {
         </select>
         <label>booth type</label>
           <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="Island" checkFor="island" defaultChecked={this.props.selectedIsland}/>
-          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="SplitIsland" checkFor="split island" defaultChecked="checked" doubleLine="doubleLine"/>
-          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="Peninsula" defaultChecked="checked" checkFor="peninsula"/>
-          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" noMarginRight nameFor="Inline" defaultChecked="checked" checkFor="inline"/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="SplitIsland" checkFor="split island" defaultChecked={this.props.selectedSplitIsland} doubleLine="doubleLine"/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="Peninsula" defaultChecked={this.props.selectedPeninsula} checkFor="peninsula"/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" noMarginRight nameFor="Inline" defaultChecked={this.props.selectedInline} checkFor="inline"/>
         <BlueSuggest/>
       </div>
     )
@@ -86,23 +86,23 @@ class BoothForm extends Component {
           <a onClick={() => this.props.closeSingleBooth()}><b>back</b> to booths</a>
         </div>
         <label>rent or own?</label>
-          <CheckBox onClick={this.handleRent} inputType="radio" nameFor="rentOrOwn" defaultChecked="checked" checkFor="rent"/>
-          <CheckBox onClick={this.handleOwn} inputType="radio" nameFor="rentOrOwn" checkFor="own"/>
+          <CheckBox onClick={this.handleRent} inputType="radio" nameFor="rentOrOwn" defaultChecked={!this.props.wantToOwn} checkFor="rent"/>
+          <CheckBox onClick={this.handleOwn} inputType="radio" nameFor="rentOrOwn" defaultChecked={this.props.wantToOwn} checkFor="own"/>
         <label>event location</label>
           <div className="quoteCheck">
-            <input type="radio" id="Las Vegas" onClick={this.doNotShip} name={"inVegas"} defaultChecked={true} />
+            <input type="radio" id="Las Vegas" onClick={this.doNotShip} name={"inVegas"} defaultChecked={this.props.eventInVegas} />
             <label className="noMargin" htmlFor="Las Vegas">Las Vegas</label>
           </div>
           <div className="quoteCheck">
-            <input type="radio" id="else" onClick={this.doShip} name={"inVegas"} defaultChecked={false} />
+            <input type="radio" id="else" onClick={this.doShip} name={"inVegas"} defaultChecked={!this.props.eventInVegas} />
             <label className="noMargin" htmlFor="else">else</label>
           </div>
         <label>stand out even more</label>
           <div className="quoteCheck">
-            <input type="checkbox" id="add Tv(s)" onClick={this.setTv} defaultChecked={false} />
+            <input type="checkbox" id="add Tv(s)" onClick={this.setTv} defaultChecked={this.props.addTv} />
             <label className="noMargin" htmlFor={"add Tv(s)"}>add Tv(s)</label>
           </div>
-          <CheckBox onClick={this.setVideoWall} inputType="checkbox" nameFor="else" checkFor="add videowall"/>
+          <CheckBox onClick={this.setVideoWall} defaultChecked={this.props.addVideoWall} inputType="checkbox" nameFor="else" checkFor="add videowall"/>
           <MagentaSuggest/>
       </div>
     )

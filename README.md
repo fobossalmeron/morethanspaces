@@ -8,7 +8,11 @@ Morethanspaces Website
 - responsive
 
 ##Falta en func
-- instaquote button desaparece en instaquote
-- calendly business
-- send email to two people  && to two people
 - og image
+
+##Answers
+- checkmarks on the form are making things unresponsive
+- quotes are not emailed to people
+- pdf into pages best way to display .pdf
+- calendly needs to ask for less information
+- status of obj files and images and databases

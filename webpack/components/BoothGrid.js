@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SingleItem from './SingleItem';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
-import CollectBeforeQuote from './CollectBeforeQuote';
 import InstaQuote from './presentational/InstaQuote';
 import IconsBar from './presentational/IconsBar';
 
@@ -128,19 +127,12 @@ class BoothGrid extends Component {
                   revealInstaQuote={this.props.revealInstaQuote}
                   discountOn={this.props.discountOn}
                   discountNumber={this.props.discountNumber}
-                  discountType={this.props.discountType}/>
-        <CollectBeforeQuote images={this.state.images}
-                  singleValue={this.state.singleValue}
-                  type={this.state.type}
-                  wantToOwn={this.props.wantToOwn}
-                  eventInVegas={this.props.eventInVegas}
-                  width={this.state.width}
-                  length={this.state.length}
+                  discountType={this.props.discountType}
                   doRevealInstaQuote={this.props.doRevealInstaQuote.bind(this)}
                   hideCollectors={this.props.hideCollectors.bind(this)}
                   renderCollectors={this.props.renderCollectors}/>
       </div>
-      <IconsBar/>
+      <IconsBar className={"iconsBarQuote"}/>
       </div>
     );
 

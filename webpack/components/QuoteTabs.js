@@ -4,6 +4,7 @@ import BoothForm from './BoothForm';
 import VideoWallForm from './VideoWallForm';
 import BoothGrid from './BoothGrid';
 import VideoWallGrid from './VideoWallGrid';
+import InstaQuoteButton from './presentational/InstaQuoteButton';
 
 class QuoteTabs extends Component {
   constructor(props) {
@@ -84,7 +85,9 @@ class QuoteTabs extends Component {
   }
 
   closeSingleBooth(){
-    this.setState({ individualBoothRender: false });
+    this.setState({
+      individualBoothRender: false
+     });
   }
 
   closeSingleVideoWall(){
@@ -143,6 +146,9 @@ class QuoteTabs extends Component {
   render(){
     return (
       <section id="products">
+      <InstaQuoteButton renderBoothInstaQuote={this.state.renderBoothInstaQuote}
+                        renderVideoWallInstaQuote={this.state.renderVideoWallInstaQuote}/>
+
       <Tabs forceRenderTabPanel={true} selectedIndex={this.props.tabIndex} onSelect={tabIndex => this.props.goToTab( tabIndex )}>
         <TabList>
           <Tab>
@@ -173,9 +179,14 @@ class QuoteTabs extends Component {
                          wantToOwn={this.state.wantToOwn}
                          eventInVegas={this.state.eventInVegas}
                          addVideoWall={this.state.addVideoWall}
-                         addVideoWall={this.state.addVideoWall}
                          selectedIsland={this.state.selectedIsland}
-                         seeState={this.seeState.bind(this)}/>
+                         seeState={this.seeState.bind(this)}
+                         selectedIsland={this.state.selectedIsland}
+                         selectedSplitIsland={this.state.selectedSplitIsland}
+                         selectedPeninsula={this.state.selectedPeninsula}
+                         selectedInline={this.state.selectedInline}
+                         boothSizeWidth={this.state.boothSizeWidth}
+                         boothSizeLength={this.state.boothSizeLength}/>
 
           <BoothGrid    dataToLoad={"./assets/js/booths.json"}
                         selectedIsland={this.state.selectedIsland}
@@ -205,7 +216,11 @@ class QuoteTabs extends Component {
                          individualVideoWallRender={this.state.individualVideoWallRender}
                          closeSingleVideoWall={this.closeSingleVideoWall.bind(this)}
                          needShipping={this.needShipping.bind(this)}
-                         noNeedShipping={this.noNeedShipping.bind(this)}/>
+                         noNeedShipping={this.noNeedShipping.bind(this)}
+                         selectedTv={this.state.selectedTv}
+                         selectedLcd={this.state.selectedLcd}
+                         selectedLed={this.state.selectedLed}
+                         eventInVegas={this.state.eventInVegas}/>
 
           <VideoWallGrid dataToLoad={"./assets/js/videowalls.json"}
                          individualVideoWallRender={this.state.individualVideoWallRender}

@@ -1,7 +1,7 @@
 ---
 published: true
 discount: true
-number: 50
+number: 20
 type: 'percentage'
 text: 'off!'
 smallText: ' on purchases of 30,000 USD or more'

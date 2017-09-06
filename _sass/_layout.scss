@@ -343,18 +343,18 @@ section{
 }
 
 .modalCloseButton{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 40px;
-    height: 50px;
-    background-color: transparent;
-    border: none;
-    background-image: url("../img/layout/cross.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    cursor:pointer;
-    transition: .4s ease all;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: .4s ease all;
+    path{
+      fill: $yellow;
+    }
     &:focus, &:hover{
       outline: none;
       transform: scale(1.2);
@@ -378,7 +378,7 @@ section{
   left: 15%;
   right: 15%;
   bottom: 10%;
-  overflow: hidden;
+  overflow: scroll;
   border-radius: 2px;
   outline: none;
   cursor:auto;
@@ -410,6 +410,7 @@ section{
     transform: translateX(-50%);
     h3{
       font-weight:$base-font-weight;
+      text-align: left;
     }
     p{
       text-align: left;
@@ -861,6 +862,11 @@ form{
 #products{
   padding: 4% 0 0 0;
   background-color: black;
+  .iconsBar{
+    ul li svg{
+      fill: $white;
+    }
+  }
   h2{
     margin:0px;
     font-weight: 700;
@@ -1635,8 +1641,7 @@ iframe{
   padding: 1% 5% 0% 3%;
   border-radius: 2px;
   float: left;
-  clear: both;
-  font-size: 3em;
+  font-size: 2em;
   filter: blur(12px);
   transition: .4s ease all;
   -webkit-touch-callout: none;
@@ -1645,12 +1650,16 @@ iframe{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  span{
-    font-size: 15px;
-    margin-left: 10px;
+  h2{
+    width:65%;
+    float:left;
   }
-  p{
-    margin:0;
+  ul{
+    float:left;
+    clear:none;
+    width: 35%;
+    font-size: .4em;
+    margin-top: 5.8%;
   }
 }
 
@@ -1673,7 +1682,7 @@ iframe{
   bottom: 40px;
 }
 
-#iconsBar {
+.iconsBar {
     background-color: $black;
     color:$white;
     min-height: 0;

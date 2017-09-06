@@ -41,9 +41,9 @@ class VideoWallForm extends Component {
     var videoWallMenu = (
       <div>
         <label>choose type</label>
-          <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" nameFor="Tv" checkFor="tv" defaultChecked="checked"/>
-          <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" nameFor="LED" checkFor="led" defaultChecked="checked"/>
-          <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" nameFor="LCD" checkFor="lcd" defaultChecked="checked"/>
+          <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" nameFor="Tv" checkFor="tv" defaultChecked={this.props.selectedTv}/>
+          <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" nameFor="LED" checkFor="led" defaultChecked={this.props.selectedLed}/>
+          <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" nameFor="LCD" checkFor="lcd" defaultChecked={this.props.selectedLcd}/>
           <div className="blueSuggest">
           <label onClick={() => this.handleOpenModal()}>what&#39;s the difference?</label>
           </div>
@@ -58,11 +58,11 @@ class VideoWallForm extends Component {
         </div>
         <label>event location</label>
           <div className="quoteCheck">
-            <input type="radio" id="Las Vegas" onClick={this.doNotShip} name={"inVegas"} defaultChecked={true} />
+            <input type="radio" id="Las Vegas" onClick={this.doNotShip} name={"inVegas"} defaultChecked={this.props.eventInVegas} />
             <label className="noMargin" htmlFor="Las Vegas">Las Vegas</label>
           </div>
           <div className="quoteCheck">
-            <input type="radio" id="else" onClick={this.doShip} name={"inVegas"} defaultChecked={false} />
+            <input type="radio" id="else" onClick={this.doShip} name={"inVegas"} defaultChecked={!this.props.eventInVegas} />
             <label className="noMargin" htmlFor="else">else</label>
           </div>
         <MagentaSuggest/>

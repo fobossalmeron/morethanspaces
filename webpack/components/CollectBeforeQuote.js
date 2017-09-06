@@ -25,18 +25,49 @@ class CollectBeforeQuote extends Component {
       <Text field='name' placeholder='your name'/>
       <Text field='email' placeholder='your email'/>
       <Text field='phone' placeholder='your phone'/>
+      <Text field='model' className='hidden'/>
+      <Text field='convention' className='hidden'/>
+      <Text field='addons' className='hidden'/>
+      <Text field='price' className='hidden'/>
+
       <button type='submit'>reveal instaQuote now!</button>
       </div>
     )
     var displayForm = (this.props.renderCollectors? actualForm : undefined)
+    var renderInVegas = this.props.eventInVegas? "in" : "outside";
+    var renderTv = this.props.addTv? "They added a TV." : '';
+    var renderVideoWall = this.props.addVideoWall? "They added a videowall." : '';
+    var renderRentOwn = this.props.wantToOwn? "own" : "rent";
+    var narrateDiscount = (
+      this.props.originalPrice + '$ - ' + this.props.discountNumber + this.props.discountSymbol() + ' discount = ' + this.props.finalPrice
+    )
+    var price = this.props.discountOn? narrateDiscount : "No discount applied.";
 
+    var addons = (
+      renderTv + " " + renderVideoWall
+    )
+    var redacted = (
+      "This person quoted the " + this.props.singleValue + " model with the original price of " + this.props.originalPrice +
+      " and the final price after discounts of " + this.props.finalPrice + ". "
+    )
+    var convention = (
+      "They want to " + renderRentOwn + " it and the event is " + renderInVegas + " Las Vegas."
+    )
     return (
       <div id="dataCollector">
       <Form
+
+        defaultValues={{
+            model: redacted,
+            convention: convention,
+            addons: addons,
+            price: price
+        }}
+
         onSubmit={(values) => {
           console.log('Form Submitted Succesfully with:', values)
 
-          const url = 'https://formspree.io/fobos.salmeron@gmail.com';
+          const url = 'https://formspree.io/hello@morethanspaces.com';
           var data = values;
 
           var xhr = new XMLHttpRequest();

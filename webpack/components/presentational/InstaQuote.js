@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactPlayer from 'react-player';
+import CollectBeforeQuote from '../CollectBeforeQuote';
 
 class InstaQuote extends Component {
   constructor(props) {
@@ -41,7 +41,6 @@ class InstaQuote extends Component {
       price = price + this.props.videowall
     }
    return price
-   console.log(price);
   }
 
   flagMaxDiscount(){
@@ -49,6 +48,7 @@ class InstaQuote extends Component {
   }
 
   discountedBoothPrice(somePrice){
+    var myself = this
     var price = somePrice
     if (this.props.discountOn){
       if (this.props.discountType === "amount"){
@@ -93,15 +93,16 @@ class InstaQuote extends Component {
     var renderTv = this.props.addTv? <li>You added a <b>Tv</b></li> : undefined;
     var renderVideoWall = this.props.addVideoWall? <li>You added a <b>videowall</b></li> : undefined;
 
-    var maximumReached = this.state.maxDiscount?  ' *maximum discount amount reached' : '';
+    var maximumReached = this.state.maxDiscount?  <li>*maximum discount reached</li> : '';
 
     var narrateDiscount = (
-      '(' + originalPrice + '$ - ' + this.props.discountNumber + this.discountSymbol() + ' discount)' + maximumReached
+      <li>{'(' + originalPrice + '$ - ' + this.props.discountNumber + this.discountSymbol() + ' discount)'}</li>
     )
-    var isDiscount = this.props.discountOn? narrateDiscount : "we don't have discount";
+    var isDiscount = this.props.discountOn? narrateDiscount : '';
 
-
+    var hello = "hello"
     return (
+      <div>
     <div className="instaBlock">
       <div className="instaColumn">
         <div className="instaThumbnail" style={{backgroundImage: 'url(' + this.props.images[0].url + ')'}}></div>
@@ -117,11 +118,22 @@ class InstaQuote extends Component {
       </div>
       <div className="instaInfo">
         <h2>instaQuote</h2>
-        <div className={reveal}><p>${finalPrice} USD</p><span>{isDiscount} *for up to 3 event days</span></div>
+        <div className={reveal}>
+        <h2>${finalPrice} USD</h2>
+          <ul>
+          {isDiscount}
+          {maximumReached}
+          <li> *for up to 3 event days</li>
+        </ul>
+      </div>
         <button className="scheduleButton" onClick={() => this.showCalendly()}>schedule a call!</button>
         <p><b>we don&#39;t believe in pressure sales, schedule with confidence</b></p>
       </div>
     </div>
+    <CollectBeforeQuote {...this.props} originalPrice={originalPrice}
+                                        finalPrice={finalPrice}
+                                        discountSymbol={this.discountSymbol.bind(this)}/>
+      </div>
     );
   }
 };

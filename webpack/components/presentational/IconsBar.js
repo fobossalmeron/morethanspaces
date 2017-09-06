@@ -6,7 +6,7 @@ class IconsBar extends Component {
 
   render (){
     return (
-      <section id="iconsBar" style={{backgroundColor:this.props.backgroundColor}}>
+      <section className="iconsBar" style={{backgroundColor:this.props.backgroundColor}}>
       <ul>
         <li style={{color:this.props.color}}>
         <CustomBoothDesignIcon className="service-icon"/>

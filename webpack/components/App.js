@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import {render} from 'react-dom';
-import HomeSection from './components/HomeSection';
-import Carousel from './components/Carousel';
-import QuoteTabs from './components/QuoteTabs';
-import Nav from './components/presentational/Nav';
-import Footer from './components/presentational/Footer';
-import InstaQuoteButton from './components/presentational/InstaQuoteButton';
-import StaticSection from './components/presentational/StaticSection';
-import ContactSection from './components/ContactSection';
-import DiscountBanner from './components/presentational/DiscountBanner';
+import HomeSection from './HomeSection';
+import Carousel from './Carousel';
+import QuoteTabs from './QuoteTabs';
+import Nav from './presentational/Nav';
+import Footer from './presentational/Footer';
+import StaticSection from './presentational/StaticSection';
+import ContactSection from './ContactSection';
+import DiscountBanner from './presentational/DiscountBanner';
+import DiscountsCarousel from './presentational/DiscountsCarousel';
 
 class App extends Component {
   constructor(props) {
@@ -58,14 +58,6 @@ class App extends Component {
      this.initScrollMagic();
    }
 
-   discountSymbol(){
-     if (this.props.discountType === "percentage") {
-         return "%"
-       } else {
-        return "$"
-      }
-    }
-
    componentDidMount() {
     this.loadDiscounts();
     if (this.state.maintenance == false){
@@ -78,7 +70,7 @@ class App extends Component {
   }
 
   render() {
-    var maintenanceButton = (
+    var maintenanceScreen = (
       <div className="loading">
         <img src="assets/img/layout/logoshort.svg"/>
         <h2>Stay tuned</h2>
@@ -86,7 +78,7 @@ class App extends Component {
         <button onClick={this.quitMaintenance}>quit</button>
       </div>
     )
-    var appDecision = (
+    var app = (
       <div>
         <Nav goToTab={this.goToTab.bind(this)}
              discountOn={this.state.discountOn}
@@ -94,24 +86,23 @@ class App extends Component {
              discountType={this.state.discountType}
              discountText={this.state.discountText}
              discountSmallText={this.state.discountSmallText}/>
-        <InstaQuoteButton />
         <HomeSection />
         <Carousel />
         <DiscountBanner discountBanner={this.state.discountBanner}/>
+        <DiscountsCarousel />
         <QuoteTabs tabIndex={this.state.tabIndex}
                     discountOn={this.state.discountOn}
                     discountNumber={this.state.discountNumber}
                     discountType={this.state.discountType}
-                    discountSymbol={this.discountSymbol.bind(this)}
                     goToTab={this.goToTab.bind(this)}/>
         <StaticSection/>
         <ContactSection/>
         <Footer/>
       </div>
     )
-    var doRenderApp = this.state.maintenance? maintenanceButton : appDecision;
+    var doRenderApp = this.state.maintenance? maintenanceScreen : app;
     return doRenderApp
   }
-}
+};
 
-render(<App/>, document.getElementById('app'));
+export default App;

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
-import Arrow from './presentational/Arrow';
+import CloseIcon from 'svg-react-loader?name=CloseIcon!../../assets/img/layout/cross.svg';
+import PauseIcon from 'svg-react-loader?name=PauseIcon!../../assets/img/layout/pause.svg';
+import ArrowForwardIcon from 'svg-react-loader?name=ArrowForwardIcon!../../assets/img/layout/arrowforward.svg';
 
 class HomeSection extends Component {
   constructor(props) {
@@ -45,21 +47,21 @@ class HomeSection extends Component {
     var showOver = (
       <div className='overVideo'>
         <h1>trade shows & video walls: <br/><b>more for less</b></h1>
-        <button onClick={this.playFullVideo}>play video <Arrow className={"playButtonArrow"} forward width={"30px"}/></button>
+        <button onClick={this.playFullVideo}>play video <ArrowForwardIcon className="spaceLeft"/></button>
       </div>
     )
     var pauseOrPlay = (
-      this.state.playing? <button onClick={this.pauseVideo}>pause</button> : <button onClick={this.playVideo}>play</button>
+      this.state.playing? <button onClick={this.pauseVideo}><PauseIcon/></button> : <button onClick={this.playVideo}><ArrowForwardIcon/></button>
     )
 
     var videoControls = (
       <div className='overVideo controllsVideo'>
-          <button onClick={this.backToLanding}>close</button>
+          <button onClick={this.backToLanding}><CloseIcon/></button>
           {pauseOrPlay}
       </div>
     )
 
-    var doShowOver = (this.state.fullVideo? videoControls : showOver )
+    var doShowOver = (this.state.fullVideo? videoControls : showOver)
 
     return (
       <section id="home">

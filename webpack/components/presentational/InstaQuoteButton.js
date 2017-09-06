@@ -5,7 +5,7 @@ class InstaQuoteButton extends Component {
   render (){
     return (
       <a href="#products">
-        <div className={"bounce"} id="instaQuoteButton"/>
+        <div className={"bounce"} id="instaQuoteButton"></div>
       </a>
     );
   }

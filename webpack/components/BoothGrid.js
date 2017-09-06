@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import SingleBooth from './SingleBooth';
+import SingleItem from './SingleItem';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
-import CollectBeforeQuote from './CollectBeforeQuote';
 import InstaQuote from './presentational/InstaQuote';
 import IconsBar from './presentational/IconsBar';
 
@@ -13,22 +12,25 @@ class BoothGrid extends Component {
       individualBoothRender: this.props.individualBoothRender,
       singleValue: '',
       description: '',
-      boothType: '',
+      type: '',
       obj: '',
       images:[],
       width: '',
-      length: ''
+      length: '',
+      rent: '',
+      own: '',
+      tv:'',
+      videowall: ''
     };
     this.loadFromServer = this.loadFromServer.bind(this);
   }
 
   loadFromServer () {
        var xhr = new XMLHttpRequest();
-       xhr.open('get', './assets/js/database.json', true);
+       xhr.open('get', this.props.dataToLoad, true);
        xhr.onload = function() {
            var data = JSON.parse(xhr.responseText);
-           this.setState({ data: data.booths });
-
+           this.setState({ data: data.items });
        }.bind(this);
        xhr.send();
    }
@@ -37,15 +39,19 @@ class BoothGrid extends Component {
     this.loadFromServer();
   }
 
-  generateSingleBooth(singleValue, description, obj, images, boothType, width, length){
+  generateSingleItem(singleValue, description, obj, images, type, width, length, rent, own, tv, videowall){
     this.setState({
       singleValue: singleValue,
       description: description,
-      boothType: boothType,
+      type: type,
       obj: obj,
       images : images,
       width: width,
-      length: length
+      length: length,
+      rent: rent,
+      own: own,
+      tv:tv,
+      videowall: videowall
     })
     this.props.renderSingleBooth();
   }
@@ -76,63 +82,61 @@ class BoothGrid extends Component {
 
   render () {
 
-    var doRenderBooths = this.state.data.filter((booth,index) => {
-      if (this.shouldIRender(booth.type) == false || this.shouldIFit(booth.width, booth.length) == false) {
+    var doRenderBooths = this.state.data.filter((item,index) => {
+      if (this.shouldIRender(item.type) == false || this.shouldIFit(item.width, item.length) == false) {
         return false
       } else {
         return true
       }
-    }).map((booth, index) => (
-      <li key={booth.id}
-          onClick={() => this.generateSingleBooth(booth.id, booth.description, booth.obj, booth.images, booth.type, booth.width, booth.length)}
-          className={"boothGridItem booth" + booth.type}
-          style={{backgroundImage: 'url(' + booth.images[0].url + ')'}}>
-          <label>{booth.id}</label>
+    }).map((item, index) => (
+      <li key={item.id}
+          onClick={() => this.generateSingleItem(item.id, item.description, item.obj, item.images, item.type, item.width, item.length, item.rent, item.own, item.tv, item.videowall)}
+          className={"boothGridItem booth" + item.type}
+          style={{backgroundImage: 'url(' + item.images[0].url + ')'}}>
+          <label>{item.id}</label>
       </li>
     ));
 
     var singleBooth = (
-       <SingleBooth description={this.state.description}
+       <SingleItem description={this.state.description}
                     singleValue={this.state.singleValue}
-                    boothType={this.state.boothType}
+                    type={this.state.type}
                     obj={this.state.obj}
                     images={this.state.images}
-                    doRenderInstaQuote={this.props.doRenderInstaQuote.bind(this)}/>
+                    doRenderBoothInstaQuote={this.props.doRenderBoothInstaQuote.bind(this)}/>
       );
 
     var gridChoice = (this.props.individualBoothRender ? singleBooth : doRenderBooths);
 
     var quote = (
       <div>
-      <div id="instaQuote">
+      <div className={"instaQuoteWhole"} id="boothInstaQuote">
       <InstaQuote images={this.state.images}
                   singleValue={this.state.singleValue}
-                  boothType={this.state.boothType}
+                  type={this.state.type}
                   wantToOwn={this.props.wantToOwn}
                   addTv={this.props.addTv}
                   addVideoWall={this.props.addVideoWall}
                   eventInVegas={this.props.eventInVegas}
                   width={this.state.width}
                   length={this.state.length}
+                  rent={this.state.rent}
+                  own={this.state.own}
+                  tv={this.state.tv}
+                  videowall={this.state.videowall}
                   revealInstaQuote={this.props.revealInstaQuote}
                   discountOn={this.props.discountOn}
                   discountNumber={this.props.discountNumber}
                   discountType={this.props.discountType}
-                  discountSymbol={this.props.discountSymbol.bind(this)}/>
-        <CollectBeforeQuote images={this.state.images}
-                  singleValue={this.state.singleValue}
-                  boothType={this.state.boothType}
-                  wantToOwn={this.props.wantToOwn}
-                  eventInVegas={this.props.eventInVegas}
-                  width={this.state.width}
-                  length={this.state.length}
-                  doRevealInstaQuote={this.props.doRevealInstaQuote.bind(this)}/>
+                  doRevealInstaQuote={this.props.doRevealInstaQuote.bind(this)}
+                  hideCollectors={this.props.hideCollectors.bind(this)}
+                  renderCollectors={this.props.renderCollectors}/>
       </div>
-      <IconsBar/>
+      <IconsBar className={"iconsBarQuote"}/>
       </div>
     );
 
-    var renderQuote = this.props.renderInstaQuote ? quote : undefined ;
+    var renderQuote = this.props.renderBoothInstaQuote ? quote : undefined ;
 
     return (
       <div>

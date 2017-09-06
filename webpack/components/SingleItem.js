@@ -22,7 +22,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-class SingleBooth extends Component {
+class SingleItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,8 +40,12 @@ class SingleBooth extends Component {
   nextStepCollector(event){
     this.props.doRenderCollector();
   }
-  nextStepInstaQuote(event){
-    this.props.doRenderInstaQuote();
+  nextStepBoothInstaQuote(event){
+    this.props.doRenderBoothInstaQuote();
+  }
+
+  nextStepVideoWallInstaQuote(event){
+    this.props.doRenderVideoWallInstaQuote();
   }
 
   handleView(value){
@@ -63,7 +67,7 @@ class SingleBooth extends Component {
     var backgroundStyle = {
       backgroundImage: 'url(' + this.state.mainImage + ')',
     };
-    var choice3D = (this.state.render3D ? <SketchFab/> : null);
+    var choice3D = (this.state.render3D ? <SketchFab obj={this.props.obj} /> : null);
 
     var numberOfImages = this.props.images.map((image, index) => (
       <img key={image.url} className="thumbnailBooth" onClick={() => this.handleView(index)} src={this.props.images[index].url}/>
@@ -75,29 +79,33 @@ class SingleBooth extends Component {
             { choice3D }
           </div>
           <Slider {...settings}>
-              <img className="thumbnailBooth" onClick={() => this.handleView("3D")} src="assets/img/3dTrigger.svg"/>
+              <img className="thumbnailBooth" onClick={() => this.handleView("3D")} src="assets/img/layout/3dTrigger.svg"/>
               {numberOfImages}
           </Slider>
       </div>
     );
-    var button = (
-      <button onClick={() => this.nextStepInstaQuote()} className="instaQuoteButton">get instaQuote</button>
+    var boothButton = (
+      <button onClick={() => this.nextStepBoothInstaQuote()} className="instaQuoteButton">get instaQuote</button>
     )
+    var videoWallButton = (
+      <button onClick={() => this.nextStepVideoWallInstaQuote()} className="instaQuoteButton">get instaQuote</button>
+    )
+    var buttonChoice = this.props.instaQuoteVideoWall? videoWallButton : boothButton;
 
     return (
       <div className="singleBooth">
         {imageOptions}
         <div className="singleInfo">
           <h3>{this.props.singleValue}</h3>
-          <div className={"insertPadding booth" + this.props.boothType}>
+          <div className={"insertPadding booth" + this.props.type}>
           <label></label>
           </div>
           <p>{this.props.description}</p>
-          {button}
+          {buttonChoice}
         </div>
       </div>
     )
   }
 }
 
-export default SingleBooth;
+export default SingleItem;

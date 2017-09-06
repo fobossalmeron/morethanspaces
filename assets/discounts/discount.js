@@ -1,8 +1,8 @@
 ---
 published: true
 discount: true
-number: 1000
-type: 'amount'
+number: 20
+type: 'percentage'
 text: 'off!'
 smallText: ' on purchases of 30,000 USD or more'
 banner: 'banner1.jpg'

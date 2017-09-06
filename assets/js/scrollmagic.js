@@ -2,17 +2,6 @@
 
 var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: .5}});
 
-//Navigation
-var logoScene = new ScrollMagic.Scene({triggerElement: "#slider", offset:-300})
-        .setClassToggle("nav", "navScroll")
-        //.addIndicators()
-        .addTo(controller);
-
-
-        $('#products').on('onresize', function(){
-          return $('#products').height()
-        })
-
 //instaQuote button
 var instaQuoteButton = new ScrollMagic.Scene({triggerElement: "#products", duration: $('#products').height()})
         .setClassToggle( "#instaQuoteButton", "fadeOut")

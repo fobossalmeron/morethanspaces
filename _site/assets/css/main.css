@@ -417,6 +417,7 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 .realestate a { font-weight: 700; margin-bottom: 5px; text-decoration-style: wavy; text-decoration: underline; text-decoration-skip: ink; line-height: 1.2; border: 0; }
 .realestate a:hover { color: #ec3092; text-decoration-color: #ec3092; }
 
+#convention { background-color: #383838; color: #f9f9f9; }
 #convention .frompdf { margin-top: -4%; }
 
 .convention_card { float: left; width: 50%; padding: 5%; max-height: 300px; box-sizing: border-box; display: inline-block; position: relative; }
@@ -426,7 +427,7 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 #dataCollector input { background-color: #f9f9f9; margin-right: 2%; clear: none; width: 20%; border-radius: 2px; }
 #dataCollector button { width: 25%; clear: none; float: right; font-weight: 700; margin-top: 0; padding: 2%; border-radius: 2px; }
 #dataCollector button:hover { background-color: #d51479; }
-#dataCollector .FormError { bottom: 10px; white-space: nowrap; position: absolute; padding: .5% 1%; background-color: #ec3092; }
+#dataCollector .FormError { bottom: -35%; white-space: nowrap; position: absolute; padding: .5% 1%; background-color: #2dbdc0; color: #be116b; width: 100%; float: left; }
 
 .instaBlock { float: left; width: 100%; }
 
@@ -487,6 +488,9 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 .magentaSuggest { border-color: #ec3092; }
 .magentaSuggest label { color: #ec3092; }
 .magentaSuggest p:nth-of-type(1) { color: #eee81a; padding-bottom: 0; }
+
+#pageNotFound { position: relative; float: left; padding: 10%; text-align: center; color: #f9f9f9; background-color: #383838; width: 100%; }
+#pageNotFound h1 { font-size: 3em; }
 
 /** Syntax highlighting styles */
 .highlight { background: #fff; }

@@ -36,7 +36,7 @@ class CollectBeforeQuote extends Component {
         onSubmit={(values) => {
           console.log('Form Submitted Succesfully with:', values)
 
-          const url = 'https://formspree.io/hello@morethanspaces.com';
+          const url = 'https://formspree.io/fobos.salmeron@gmail.com';
           var data = values;
 
           var xhr = new XMLHttpRequest();
@@ -65,27 +65,27 @@ class CollectBeforeQuote extends Component {
 
         validate={({ name, email, phone }) => {
           return {
-            name: !name ? 'A name is required' : undefined,
-            phone: !phone ? 'A phone is required' : undefined,
+            name: !name ? '*A name is required' : undefined,
+            phone: !phone ? '*A phone is required' : undefined,
             email:
               !email ?
-            'The email cannot be empty' :
+            '*The email cannot be empty' :
               email.search('@') == -1?
-            'Please give a valid email' :
+            '*Please give a valid email' :
               email.search(/@gmail.com/i) !== -1?
-            'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+            '*Sorry for the inconvenience but we only work with businesses, please provide a business email' :
               email.search(/@aol.com/i) !== -1?
-            'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+            '*Sorry for the inconvenience but we only work with businesses, please provide a business email' :
               email.search(/@icloud.com/i) !== -1?
-            'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+            '*Sorry for the inconvenience but we only work with businesses, please provide a business email' :
               email.search(/@me.com/i) !== -1?
-            'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+            '*Sorry for the inconvenience but we only work with businesses, please provide a business email' :
               email.search(/yahoo.com/i) !== -1?
-            'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+            '*Sorry for the inconvenience but we only work with businesses, please provide a business email' :
               email.search(/@live.com/i) !== -1?
-            'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+            '*Sorry for the inconvenience but we only work with businesses, please provide a business email' :
               email.search(/@hotmail.com/i) !== -1?
-            'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+            '*Sorry for the inconvenience but we only work with businesses, please provide a business email' :
               undefined
           }
         }}

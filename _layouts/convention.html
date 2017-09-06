@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+  {% include headconventions.html %}
 
   <body>
-    {% include nav.html %}
     <section id="convention">
       <div class="convention_card">
+        <h2>your tradeshow expert for<h2>
         <h1><b>{{ page.title }}</b></h1>
-        <h2>{{ page.convention_date }}</h2>
-        <h2>{{ page.location }}</h2>
+        <h2>{{ page.convention_date }}{{ page.location }}</h2>
       </div>
       <img class="convention_card" src="{{site.baseurl}}/assets/img/conventions/{{page.logo}}">
-      <div class="half-card">
+      <div id="content">
         {{ content }}
       </div>
       <div class="half-card frompdf">
@@ -36,7 +35,9 @@
         </div>
       </div>
     </section>
-    {% include footer.html %}
+    <div id="app"></div>
+    <script type="text/javascript" src="/../assets/js/conventions.js" charset="utf-8"></script>
+    <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
   </body>
 
 </html>

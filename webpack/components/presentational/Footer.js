@@ -24,7 +24,7 @@ class Footer extends Component {
 
   render (){
     var baseUrl = this.state.relative? this.props.relativePath : '';
-    var iconsBar = this.props.hideIconsBar? '' : <IconsBar backgroundColor={'#eee81a'} color={'#383838'}/>;
+    var iconsBar = this.props.hideIconsBar? '' : <IconsBar backgroundColor={'#383838'} color={'#eee81a'}/>;
     return (
       <div>
       <footer>
@@ -71,7 +71,7 @@ class Footer extends Component {
               <h3>contact</h3>
               <div className="contactBox">
                 <p>call</p>
-                <a href="tel:1 833 667 3842"><b>1-833-morethanspaces</b></a><br/><a href="tel:1 833 667 3842">1-833-667-3842</a>
+                <a href="tel:1 833 667 3842"><b>1-833-MORETHANSPACES</b></a><br/><a href="tel:1 833 667 3842">1-833-667-3842</a>
               </div>
               <div className="contactBox">
               <p>email</p>

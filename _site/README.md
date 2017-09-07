@@ -5,7 +5,6 @@ Morethanspaces Website
 - css transition groups
 - responsive
 - og image
-- instaquote bigger button
 
 ##Answers
 - send email each time user clicks, store user info in state, send emails

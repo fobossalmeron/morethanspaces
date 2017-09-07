@@ -77,6 +77,7 @@ class BoothForm extends Component {
           <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="Peninsula" defaultChecked={this.props.selectedPeninsula} checkFor="peninsula"/>
           <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" noMarginRight nameFor="Inline" defaultChecked={this.props.selectedInline} checkFor="inline"/>
         <MagentaSuggest/>
+        <BlueSuggest/>
       </div>
     )
     var backToBooths = (

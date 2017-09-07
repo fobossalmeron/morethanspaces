@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CollectBeforeQuote from '../CollectBeforeQuote';
+import NumberFormat from 'react-number-format';
 
 class InstaQuote extends Component {
   constructor(props) {
@@ -12,6 +13,7 @@ class InstaQuote extends Component {
      this.flagMaxDiscount = this.flagMaxDiscount.bind(this);
      this.ifExistsWantToOwn = this.ifExistsWantToOwn.bind(this);
      this.ifExistsSize = this.ifExistsSize.bind(this);
+     this.formatNumber = this.formatNumber.bind(this);
   }
 
   discountSymbol(){
@@ -83,6 +85,13 @@ class InstaQuote extends Component {
     return renderOrNot
   }
 
+  formatNumber(n, x, s, c) {
+      var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\D' : '$') + ')',
+          num = this.toFixed(Math.max(0, ~~n));
+
+      return (c ? num.replace(',', c) : num).replace(new RegExp(re, 'g'), '$&' + (s || ','));
+  };
+
   render (){
     var originalPrice = this.boothPrice();
     var finalPrice = this.discountedBoothPrice(originalPrice);
@@ -100,7 +109,6 @@ class InstaQuote extends Component {
     )
     var isDiscount = this.props.discountOn? narrateDiscount : '';
 
-    var hello = "hello"
     return (
       <div>
     <div className="instaBlock">
@@ -119,7 +127,7 @@ class InstaQuote extends Component {
       <div className="instaInfo">
         <h2>instaQuote</h2>
         <div className={reveal}>
-        <h2>${finalPrice} USD</h2>
+        <h2><NumberFormat value={finalPrice} displayType={'text'} thousandSeparator={true} prefix={'$'} /> USD</h2>
           <ul>
           {isDiscount}
           {maximumReached}

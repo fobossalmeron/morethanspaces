@@ -47,6 +47,7 @@ class VideoWallForm extends Component {
           <div className="blueSuggest">
           <label onClick={() => this.handleOpenModal()}>what&#39;s the difference?</label>
           </div>
+          <BlueSuggest/>
       </div>
     )
     var backToVideoWalls = (

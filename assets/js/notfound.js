@@ -2487,7 +2487,8 @@ module.exports = ReactElement;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 17 */
+/* 17 */,
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2497,7 +2498,6 @@ module.exports = __webpack_require__(125);
 
 
 /***/ }),
-/* 18 */,
 /* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10590,12 +10590,12 @@ var Footer = function (_Component) {
               ),
               _react2.default.createElement(
                 'a',
-                { href: baseUrl + "assets/pdf/mts_booth_types.pdf", target: '_blank' },
+                { href: baseUrl + "resources/booth_types/", target: '_blank' },
                 'booth types'
               ),
               _react2.default.createElement(
                 'a',
-                { href: baseUrl + "assets/pdf/mts_timeline_and_graphic_specs.pdf", target: '_blank' },
+                { href: baseUrl + "resources/timeline_and_graphic_specs/", target: '_blank' },
                 'timeline &',
                 _react2.default.createElement('br', null),
                 'graphic specs'
@@ -10735,7 +10735,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -23341,7 +23341,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(18);
 
 var _Nav = __webpack_require__(95);
 

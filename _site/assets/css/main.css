@@ -197,7 +197,7 @@ section { float: left; width: 100%; padding: 3% 5%; position: relative; }
 
 .frompdf p { float: left; }
 .frompdf span { font-size: 6em; float: left; position: relative; display: inline-block; font-weight: bold; line-height: 1; color: #383838; }
-.frompdf span:nth-of-type(1) { color: #f7ec0f; }
+.frompdf span:nth-of-type(1) { color: #f9ec00; }
 .frompdf span:nth-of-type(2) { color: #2dbdc0; }
 .frompdf span:nth-of-type(3) { color: #ec3092; margin-right: 2%; }
 .frompdf .stepblackbox { background-color: #383838; border-radius: 2px; color: #f9f9f9; float: left; padding: 2%; }
@@ -205,11 +205,11 @@ section { float: left; width: 100%; padding: 3% 5%; position: relative; }
 .frompdf .stepbox { width: 100%; float: left; clear: both; font-weight: 700; border-radius: 2px; padding: 2%; height: 75px; margin-bottom: 3.5%; }
 .frompdf .stepbox b { float: left; color: #383838; font-size: 3em; margin-right: 2%; margin-top: -15px; }
 .frompdf .stepbox p { float: left; margin-top: 0%; }
-.frompdf .stepbox:nth-of-type(1) { background-color: #f7ec0f; width: 60%; }
+.frompdf .stepbox:nth-of-type(1) { background-color: #f9ec00; width: 60%; }
 .frompdf .stepbox:nth-of-type(2) { background-color: #2dbdc0; width: 70%; }
 .frompdf .stepbox:nth-of-type(3) { background-color: #ec3092; width: 80%; margin-bottom: 5%; }
 
-.stepyellowbox { background-color: #f7ec0f; color: #383838; border-radius: 2px; width: 100%; float: left; padding: 2%; margin-bottom: 2%; }
+.stepyellowbox { background-color: #f9ec00; color: #383838; border-radius: 2px; width: 100%; float: left; padding: 2%; margin-bottom: 2%; }
 .stepyellowbox p { margin: 0; }
 
 #contact { background-color: #383838; color: white; }
@@ -531,6 +531,9 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 
 .noBackground { color: #383838; }
 .noBackground img { -webkit-filter: brightness(1) !important; filter: brightness(1) !important; }
+
+#pdfViewer { padding: 0; margin-top: 60px; min-height: 100vh; }
+#pdfViewer embed { position: absolute; left: 0; right: 0; bottom: 0; top: 0; width: 100%; height: 100%; }
 
 /** Syntax highlighting styles */
 .highlight { background: #fff; }

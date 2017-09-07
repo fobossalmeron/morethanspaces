@@ -2490,16 +2490,6 @@ module.exports = ReactElement;
 /* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-module.exports = __webpack_require__(125);
-
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -2532,6 +2522,16 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = __webpack_require__(125);
+
 
 /***/ }),
 /* 19 */
@@ -11070,7 +11070,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.defaultProps = exports.propTypes = undefined;
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(17);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -11208,7 +11208,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -11746,12 +11746,12 @@ var Footer = function (_Component) {
               ),
               _react2.default.createElement(
                 'a',
-                { href: baseUrl + "assets/pdf/mts_booth_types.pdf", target: '_blank' },
+                { href: baseUrl + "resources/booth_types/", target: '_blank' },
                 'booth types'
               ),
               _react2.default.createElement(
                 'a',
-                { href: baseUrl + "assets/pdf/mts_timeline_and_graphic_specs.pdf", target: '_blank' },
+                { href: baseUrl + "resources/timeline_and_graphic_specs/", target: '_blank' },
                 'timeline &',
                 _react2.default.createElement('br', null),
                 'graphic specs'
@@ -11891,7 +11891,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -22885,7 +22885,7 @@ module.exports = __webpack_require__(256);
 exports.__esModule = true;
 exports.getTrackLeft = exports.getTrackAnimateCSS = exports.getTrackCSS = undefined;
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -25251,7 +25251,7 @@ exports.__esModule = true;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(17);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -25371,7 +25371,7 @@ exports.__esModule = true;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(17);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -25439,7 +25439,7 @@ exports.__esModule = true;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(17);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -25729,7 +25729,7 @@ var _CollectBeforeQuote = __webpack_require__(268);
 
 var _CollectBeforeQuote2 = _interopRequireDefault(_CollectBeforeQuote);
 
-var _reactNumberFormat = __webpack_require__(325);
+var _reactNumberFormat = __webpack_require__(316);
 
 var _reactNumberFormat2 = _interopRequireDefault(_reactNumberFormat);
 
@@ -28899,7 +28899,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = FormField;
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(17);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -28957,11 +28957,11 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(17);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -29183,7 +29183,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(17);
 
 var _focusManager = __webpack_require__(241);
 
@@ -31730,7 +31730,7 @@ var _objectAssign = __webpack_require__(5);
 
 var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -32421,15 +32421,15 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(17);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _TransitionGroup = __webpack_require__(320);
+var _TransitionGroup = __webpack_require__(321);
 
 var _TransitionGroup2 = _interopRequireDefault(_TransitionGroup);
 
-var _CSSTransitionGroupChild = __webpack_require__(319);
+var _CSSTransitionGroupChild = __webpack_require__(320);
 
 var _CSSTransitionGroupChild2 = _interopRequireDefault(_CSSTransitionGroupChild);
 
@@ -33748,7 +33748,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(17);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -33843,7 +33843,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(18);
 
 var _HomeSection = __webpack_require__(290);
 
@@ -35019,11 +35019,11 @@ var _reactPlayer = __webpack_require__(187);
 
 var _reactPlayer2 = _interopRequireDefault(_reactPlayer);
 
-var _cross = __webpack_require__(322);
+var _cross = __webpack_require__(323);
 
 var _cross2 = _interopRequireDefault(_cross);
 
-var _pause = __webpack_require__(323);
+var _pause = __webpack_require__(324);
 
 var _pause2 = _interopRequireDefault(_pause);
 
@@ -35186,7 +35186,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactTabs = __webpack_require__(318);
+var _reactTabs = __webpack_require__(319);
 
 var _BoothForm = __webpack_require__(286);
 
@@ -36807,7 +36807,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(18);
 
 var _App = __webpack_require__(284);
 
@@ -37089,7 +37089,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(17);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -37603,7 +37603,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(17);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -37690,7 +37690,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(17);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -38014,1277 +38014,13 @@ function FormInputTextarea(_ref) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-exports.__esModule = true;
-
-var _propTypes = __webpack_require__(18);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes3 = __webpack_require__(279);
-
-var _UncontrolledTabs = __webpack_require__(317);
-
-var _UncontrolledTabs2 = _interopRequireDefault(_UncontrolledTabs);
-
-var _count = __webpack_require__(278);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Tabs = function (_Component) {
-  _inherits(Tabs, _Component);
-
-  function Tabs(props) {
-    _classCallCheck(this, Tabs);
-
-    var _this = _possibleConstructorReturn(this, _Component.call(this, props));
-
-    _this.handleSelected = function (index, last, event) {
-      // Call change event handler
-      if (typeof _this.props.onSelect === 'function') {
-        // Check if the change event handler cancels the tab change
-        if (_this.props.onSelect(index, last, event) === false) return;
-      }
-
-      var state = {
-        // Set focus if the change was triggered from the keyboard
-        focus: event.type === 'keydown'
-      };
-
-      if (Tabs.inUncontrolledMode(_this.props)) {
-        // Update selected index
-        state.selectedIndex = index;
-      }
-
-      _this.setState(state);
-    };
-
-    _this.state = Tabs.copyPropsToState(_this.props, {}, _this.props.defaultFocus);
-    return _this;
-  }
-
-  Tabs.prototype.componentWillReceiveProps = function componentWillReceiveProps(newProps) {
-    if (process.env.NODE_ENV !== 'production' && Tabs.inUncontrolledMode(newProps) !== Tabs.inUncontrolledMode(this.props)) {
-      throw new Error('Switching between controlled mode (by using `selectedIndex`) and uncontrolled mode is not supported in `Tabs`.\nFor more information about controlled and uncontrolled mode of react-tabs see the README.');
-    }
-    // Use a transactional update to prevent race conditions
-    // when reading the state in copyPropsToState
-    // See https://github.com/reactjs/react-tabs/issues/51
-    this.setState(function (state) {
-      return Tabs.copyPropsToState(newProps, state);
-    });
-  };
-
-  Tabs.inUncontrolledMode = function inUncontrolledMode(props) {
-    return props.selectedIndex === null;
-  };
-
-  // preserve the existing selectedIndex from state.
-  // If the state has not selectedIndex, default to the defaultIndex or 0
-  Tabs.copyPropsToState = function copyPropsToState(props, state) {
-    var focus = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-
-    var newState = {
-      focus: focus
-    };
-
-    if (Tabs.inUncontrolledMode(props)) {
-      var maxTabIndex = (0, _count.getTabsCount)(props.children) - 1;
-      var selectedIndex = null;
-
-      if (state.selectedIndex != null) {
-        selectedIndex = Math.min(state.selectedIndex, maxTabIndex);
-      } else {
-        selectedIndex = props.defaultIndex || 0;
-      }
-      newState.selectedIndex = selectedIndex;
-    }
-
-    return newState;
-  };
-
-  Tabs.prototype.render = function render() {
-    var _props = this.props,
-        children = _props.children,
-        defaultIndex = _props.defaultIndex,
-        defaultFocus = _props.defaultFocus,
-        props = _objectWithoutProperties(_props, ['children', 'defaultIndex', 'defaultFocus']);
-
-    props.focus = this.state.focus;
-    props.onSelect = this.handleSelected;
-
-    if (this.state.selectedIndex != null) {
-      props.selectedIndex = this.state.selectedIndex;
-    }
-
-    return _react2.default.createElement(
-      _UncontrolledTabs2.default,
-      props,
-      children
-    );
-  };
-
-  return Tabs;
-}(_react.Component);
-
-Tabs.defaultProps = {
-  defaultFocus: false,
-  forceRenderTabPanel: false,
-  selectedIndex: null,
-  defaultIndex: null
-};
-exports.default = Tabs;
-Tabs.propTypes = process.env.NODE_ENV !== "production" ? {
-  children: _propTypes3.childrenPropType,
-  className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array, _propTypes2.default.object]),
-  defaultFocus: _propTypes2.default.bool,
-  defaultIndex: _propTypes2.default.number,
-  disabledTabClassName: _propTypes2.default.string,
-  forceRenderTabPanel: _propTypes2.default.bool,
-  onSelect: _propTypes3.onSelectPropType,
-  selectedIndex: _propTypes3.selectedIndexPropType,
-  selectedTabClassName: _propTypes2.default.string,
-  selectedTabPanelClassName: _propTypes2.default.string
-} : {};
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 317 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-exports.__esModule = true;
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _propTypes = __webpack_require__(18);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _classnames = __webpack_require__(28);
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _uuid = __webpack_require__(280);
-
-var _uuid2 = _interopRequireDefault(_uuid);
-
-var _propTypes3 = __webpack_require__(279);
-
-var _Tab = __webpack_require__(220);
-
-var _Tab2 = _interopRequireDefault(_Tab);
-
-var _TabList = __webpack_require__(221);
-
-var _TabList2 = _interopRequireDefault(_TabList);
-
-var _TabPanel = __webpack_require__(222);
-
-var _TabPanel2 = _interopRequireDefault(_TabPanel);
-
-var _count = __webpack_require__(278);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-// Determine if a node from event.target is a Tab element
-function isTabNode(node) {
-  return node.nodeName === 'LI' && node.getAttribute('role') === 'tab';
-}
-
-// Determine if a tab node is disabled
-function isTabDisabled(node) {
-  return node.getAttribute('aria-disabled') === 'true';
-}
-
-var canUseActiveElement = !!(typeof window !== 'undefined' && window.document && window.document.activeElement);
-
-var UncontrolledTabs = function (_Component) {
-  _inherits(UncontrolledTabs, _Component);
-
-  function UncontrolledTabs() {
-    var _temp, _this, _ret;
-
-    _classCallCheck(this, UncontrolledTabs);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.tabNodes = [], _this.handleKeyDown = function (e) {
-      if (_this.isTabFromContainer(e.target)) {
-        var index = _this.props.selectedIndex;
-        var preventDefault = false;
-
-        if (e.keyCode === 37 || e.keyCode === 38) {
-          // Select next tab to the left
-          index = _this.getPrevTab(index);
-          preventDefault = true;
-        } else if (e.keyCode === 39 || e.keyCode === 40) {
-          // Select next tab to the right
-          index = _this.getNextTab(index);
-          preventDefault = true;
-        }
-
-        // This prevents scrollbars from moving around
-        if (preventDefault) {
-          e.preventDefault();
-        }
-
-        _this.setSelected(index, e);
-      }
-    }, _this.handleClick = function (e) {
-      var node = e.target;
-      // eslint-disable-next-line no-cond-assign
-      do {
-        if (_this.isTabFromContainer(node)) {
-          if (isTabDisabled(node)) {
-            return;
-          }
-
-          var index = [].slice.call(node.parentNode.children).filter(isTabNode).indexOf(node);
-          _this.setSelected(index, e);
-          return;
-        }
-      } while ((node = node.parentNode) !== null);
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  }
-
-  UncontrolledTabs.prototype.setSelected = function setSelected(index, event) {
-    // Don't do anything if nothing has changed
-    if (index === this.props.selectedIndex) return;
-    // Check index boundary
-    if (index < 0 || index >= this.getTabsCount()) return;
-
-    // Call change event handler
-    this.props.onSelect(index, this.props.selectedIndex, event);
-  };
-
-  UncontrolledTabs.prototype.getNextTab = function getNextTab(index) {
-    var count = this.getTabsCount();
-
-    // Look for non-disabled tab from index to the last tab on the right
-    for (var i = index + 1; i < count; i++) {
-      if (!isTabDisabled(this.getTab(i))) {
-        return i;
-      }
-    }
-
-    // If no tab found, continue searching from first on left to index
-    for (var _i = 0; _i < index; _i++) {
-      if (!isTabDisabled(this.getTab(_i))) {
-        return _i;
-      }
-    }
-
-    // No tabs are disabled, return index
-    return index;
-  };
-
-  UncontrolledTabs.prototype.getPrevTab = function getPrevTab(index) {
-    var i = index;
-
-    // Look for non-disabled tab from index to first tab on the left
-    while (i--) {
-      if (!isTabDisabled(this.getTab(i))) {
-        return i;
-      }
-    }
-
-    // If no tab found, continue searching from last tab on right to index
-    i = this.getTabsCount();
-    while (i-- > index) {
-      if (!isTabDisabled(this.getTab(i))) {
-        return i;
-      }
-    }
-
-    // No tabs are disabled, return index
-    return index;
-  };
-
-  UncontrolledTabs.prototype.getTabsCount = function getTabsCount() {
-    return (0, _count.getTabsCount)(this.props.children);
-  };
-
-  UncontrolledTabs.prototype.getPanelsCount = function getPanelsCount() {
-    return (0, _count.getPanelsCount)(this.props.children);
-  };
-
-  UncontrolledTabs.prototype.getTab = function getTab(index) {
-    return this.tabNodes['tabs-' + index];
-  };
-
-  UncontrolledTabs.prototype.getChildren = function getChildren() {
-    var _this2 = this;
-
-    var index = 0;
-    var _props = this.props,
-        children = _props.children,
-        disabledTabClassName = _props.disabledTabClassName,
-        focus = _props.focus,
-        forceRenderTabPanel = _props.forceRenderTabPanel,
-        selectedIndex = _props.selectedIndex,
-        selectedTabClassName = _props.selectedTabClassName,
-        selectedTabPanelClassName = _props.selectedTabPanelClassName;
-
-
-    this.tabIds = this.tabIds || [];
-    this.panelIds = this.panelIds || [];
-    var diff = this.tabIds.length - this.getTabsCount();
-
-    // Add ids if new tabs have been added
-    // Don't bother removing ids, just keep them in case they are added again
-    // This is more efficient, and keeps the uuid counter under control
-    while (diff++ < 0) {
-      this.tabIds.push((0, _uuid2.default)());
-      this.panelIds.push((0, _uuid2.default)());
-    }
-
-    // Map children to dynamically setup refs
-    return _react2.default.Children.map(children, function (child) {
-      // null happens when conditionally rendering TabPanel/Tab
-      // see https://github.com/reactjs/react-tabs/issues/37
-      if (child === null) {
-        return null;
-      }
-
-      var result = child;
-
-      // Clone TabList and Tab components to have refs
-      if (child.type === _TabList2.default) {
-        var listIndex = 0;
-
-        // Figure out if the current focus in the DOM is set on a Tab
-        // If it is we should keep the focus on the next selected tab
-        var wasTabFocused = false;
-
-        if (canUseActiveElement) {
-          wasTabFocused = _react2.default.Children.toArray(child.props.children).filter(function (tab) {
-            return tab.type === _Tab2.default;
-          }).some(function (tab, i) {
-            return document.activeElement === _this2.getTab(i);
-          });
-        }
-
-        result = (0, _react.cloneElement)(child, {
-          children: _react2.default.Children.map(child.props.children, function (tab) {
-            // null happens when conditionally rendering TabPanel/Tab
-            // see https://github.com/reactjs/react-tabs/issues/37
-            if (tab === null) {
-              return null;
-            }
-
-            // Exit early if this is not a tab. That way we can have arbitrary
-            // elements anywhere inside <TabList>
-            if (tab.type !== _Tab2.default) return tab;
-
-            var key = 'tabs-' + listIndex;
-            var selected = selectedIndex === listIndex;
-
-            var props = {
-              tabRef: function tabRef(node) {
-                _this2.tabNodes[key] = node;
-              },
-              id: _this2.tabIds[listIndex],
-              panelId: _this2.panelIds[listIndex],
-              selected: selected,
-              focus: selected && (focus || wasTabFocused)
-            };
-
-            if (selectedTabClassName) props.selectedClassName = selectedTabClassName;
-            if (disabledTabClassName) props.disabledClassName = disabledTabClassName;
-
-            listIndex++;
-
-            return (0, _react.cloneElement)(tab, props);
-          })
-        });
-      } else if (child.type === _TabPanel2.default) {
-        var props = {
-          id: _this2.panelIds[index],
-          tabId: _this2.tabIds[index],
-          selected: selectedIndex === index
-        };
-
-        if (forceRenderTabPanel) props.forceRender = forceRenderTabPanel;
-        if (selectedTabPanelClassName) props.selectedClassName = selectedTabPanelClassName;
-
-        index++;
-
-        result = (0, _react.cloneElement)(child, props);
-      }
-
-      return result;
-    });
-  };
-
-  /**
-   * Determine if a node from event.target is a Tab element for the current Tabs container.
-   * If the clicked element is not a Tab, it returns false.
-   * If it finds another Tabs container between the Tab and `this`, it returns false.
-   */
-  UncontrolledTabs.prototype.isTabFromContainer = function isTabFromContainer(node) {
-    // return immediately if the clicked element is not a Tab.
-    if (!isTabNode(node)) {
-      return false;
-    }
-
-    // Check if the first occurrence of a Tabs container is `this` one.
-    var nodeAncestor = node.parentElement;
-    do {
-      if (nodeAncestor === this.node) return true;else if (nodeAncestor.getAttribute('data-tabs')) break;
-
-      nodeAncestor = nodeAncestor.parentElement;
-    } while (nodeAncestor);
-
-    return false;
-  };
-
-  UncontrolledTabs.prototype.render = function render() {
-    var _this3 = this;
-
-    // Delete all known props, so they don't get added to DOM
-    var _props2 = this.props,
-        children = _props2.children,
-        className = _props2.className,
-        disabledTabClassName = _props2.disabledTabClassName,
-        focus = _props2.focus,
-        forceRenderTabPanel = _props2.forceRenderTabPanel,
-        onSelect = _props2.onSelect,
-        selectedIndex = _props2.selectedIndex,
-        selectedTabClassName = _props2.selectedTabClassName,
-        selectedTabPanelClassName = _props2.selectedTabPanelClassName,
-        attributes = _objectWithoutProperties(_props2, ['children', 'className', 'disabledTabClassName', 'focus', 'forceRenderTabPanel', 'onSelect', 'selectedIndex', 'selectedTabClassName', 'selectedTabPanelClassName']);
-
-    return _react2.default.createElement(
-      'div',
-      _extends({}, attributes, {
-        className: (0, _classnames2.default)(className),
-        onClick: this.handleClick,
-        onKeyDown: this.handleKeyDown,
-        ref: function ref(node) {
-          _this3.node = node;
-        },
-        'data-tabs': true
-      }),
-      this.getChildren()
-    );
-  };
-
-  return UncontrolledTabs;
-}(_react.Component);
-
-UncontrolledTabs.defaultProps = {
-  className: 'react-tabs',
-  focus: false
-};
-exports.default = UncontrolledTabs;
-UncontrolledTabs.propTypes = process.env.NODE_ENV !== "production" ? {
-  children: _propTypes3.childrenPropType,
-  className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array, _propTypes2.default.object]),
-  disabledTabClassName: _propTypes2.default.string,
-  focus: _propTypes2.default.bool,
-  forceRenderTabPanel: _propTypes2.default.bool,
-  onSelect: _propTypes2.default.func.isRequired,
-  selectedIndex: _propTypes2.default.number.isRequired,
-  selectedTabClassName: _propTypes2.default.string,
-  selectedTabPanelClassName: _propTypes2.default.string
-} : {};
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 318 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.resetIdCounter = exports.Tabs = exports.TabPanel = exports.TabList = exports.Tab = undefined;
-
-var _Tabs = __webpack_require__(316);
-
-var _Tabs2 = _interopRequireDefault(_Tabs);
-
-var _TabList = __webpack_require__(221);
-
-var _TabList2 = _interopRequireDefault(_TabList);
-
-var _Tab = __webpack_require__(220);
-
-var _Tab2 = _interopRequireDefault(_Tab);
-
-var _TabPanel = __webpack_require__(222);
-
-var _TabPanel2 = _interopRequireDefault(_TabPanel);
-
-var _uuid = __webpack_require__(280);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.Tab = _Tab2.default;
-exports.TabList = _TabList2.default;
-exports.TabPanel = _TabPanel2.default;
-exports.Tabs = _Tabs2.default;
-exports.resetIdCounter = _uuid.reset;
-
-/***/ }),
-/* 319 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _addClass = __webpack_require__(303);
-
-var _addClass2 = _interopRequireDefault(_addClass);
-
-var _removeClass = __webpack_require__(305);
-
-var _removeClass2 = _interopRequireDefault(_removeClass);
-
-var _requestAnimationFrame = __webpack_require__(307);
-
-var _requestAnimationFrame2 = _interopRequireDefault(_requestAnimationFrame);
-
-var _properties = __webpack_require__(306);
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(18);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _reactDom = __webpack_require__(17);
-
-var _PropTypes = __webpack_require__(281);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var events = [];
-if (_properties.transitionEnd) events.push(_properties.transitionEnd);
-if (_properties.animationEnd) events.push(_properties.animationEnd);
-
-function addEndListener(node, listener) {
-  if (events.length) {
-    events.forEach(function (e) {
-      return node.addEventListener(e, listener, false);
-    });
-  } else {
-    setTimeout(listener, 0);
-  }
-
-  return function () {
-    if (!events.length) return;
-    events.forEach(function (e) {
-      return node.removeEventListener(e, listener, false);
-    });
-  };
-}
-
-var propTypes = {
-  children: _propTypes2.default.node,
-  name: _PropTypes.nameShape.isRequired,
-
-  // Once we require timeouts to be specified, we can remove the
-  // boolean flags (appear etc.) and just accept a number
-  // or a bool for the timeout flags (appearTimeout etc.)
-  appear: _propTypes2.default.bool,
-  enter: _propTypes2.default.bool,
-  leave: _propTypes2.default.bool,
-  appearTimeout: _propTypes2.default.number,
-  enterTimeout: _propTypes2.default.number,
-  leaveTimeout: _propTypes2.default.number
-};
-
-var CSSTransitionGroupChild = function (_React$Component) {
-  _inherits(CSSTransitionGroupChild, _React$Component);
-
-  function CSSTransitionGroupChild() {
-    var _temp, _this, _ret;
-
-    _classCallCheck(this, CSSTransitionGroupChild);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.componentWillAppear = function (done) {
-      if (_this.props.appear) {
-        _this.transition('appear', done, _this.props.appearTimeout);
-      } else {
-        done();
-      }
-    }, _this.componentWillEnter = function (done) {
-      if (_this.props.enter) {
-        _this.transition('enter', done, _this.props.enterTimeout);
-      } else {
-        done();
-      }
-    }, _this.componentWillLeave = function (done) {
-      if (_this.props.leave) {
-        _this.transition('leave', done, _this.props.leaveTimeout);
-      } else {
-        done();
-      }
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  }
-
-  CSSTransitionGroupChild.prototype.componentWillMount = function componentWillMount() {
-    this.classNameAndNodeQueue = [];
-    this.transitionTimeouts = [];
-  };
-
-  CSSTransitionGroupChild.prototype.componentWillUnmount = function componentWillUnmount() {
-    this.unmounted = true;
-
-    if (this.timeout) {
-      clearTimeout(this.timeout);
-    }
-    this.transitionTimeouts.forEach(function (timeout) {
-      clearTimeout(timeout);
-    });
-
-    this.classNameAndNodeQueue.length = 0;
-  };
-
-  CSSTransitionGroupChild.prototype.transition = function transition(animationType, finishCallback, timeout) {
-    var node = (0, _reactDom.findDOMNode)(this);
-
-    if (!node) {
-      if (finishCallback) {
-        finishCallback();
-      }
-      return;
-    }
-
-    var className = this.props.name[animationType] || this.props.name + '-' + animationType;
-    var activeClassName = this.props.name[animationType + 'Active'] || className + '-active';
-    var timer = null;
-    var removeListeners = void 0;
-
-    (0, _addClass2.default)(node, className);
-
-    // Need to do this to actually trigger a transition.
-    this.queueClassAndNode(activeClassName, node);
-
-    // Clean-up the animation after the specified delay
-    var finish = function finish(e) {
-      if (e && e.target !== node) {
-        return;
-      }
-
-      clearTimeout(timer);
-      if (removeListeners) removeListeners();
-
-      (0, _removeClass2.default)(node, className);
-      (0, _removeClass2.default)(node, activeClassName);
-
-      if (removeListeners) removeListeners();
-
-      // Usually this optional callback is used for informing an owner of
-      // a leave animation and telling it to remove the child.
-      if (finishCallback) {
-        finishCallback();
-      }
-    };
-
-    if (timeout) {
-      timer = setTimeout(finish, timeout);
-      this.transitionTimeouts.push(timer);
-    } else if (_properties.transitionEnd) {
-      removeListeners = addEndListener(node, finish);
-    }
-  };
-
-  CSSTransitionGroupChild.prototype.queueClassAndNode = function queueClassAndNode(className, node) {
-    var _this2 = this;
-
-    this.classNameAndNodeQueue.push({
-      className: className,
-      node: node
-    });
-
-    if (!this.rafHandle) {
-      this.rafHandle = (0, _requestAnimationFrame2.default)(function () {
-        return _this2.flushClassNameAndNodeQueue();
-      });
-    }
-  };
-
-  CSSTransitionGroupChild.prototype.flushClassNameAndNodeQueue = function flushClassNameAndNodeQueue() {
-    if (!this.unmounted) {
-      this.classNameAndNodeQueue.forEach(function (obj) {
-        // This is for to force a repaint,
-        // which is necessary in order to transition styles when adding a class name.
-        /* eslint-disable no-unused-expressions */
-        obj.node.scrollTop;
-        /* eslint-enable no-unused-expressions */
-        (0, _addClass2.default)(obj.node, obj.className);
-      });
-    }
-    this.classNameAndNodeQueue.length = 0;
-    this.rafHandle = null;
-  };
-
-  CSSTransitionGroupChild.prototype.render = function render() {
-    var props = _extends({}, this.props);
-    delete props.name;
-    delete props.appear;
-    delete props.enter;
-    delete props.leave;
-    delete props.appearTimeout;
-    delete props.enterTimeout;
-    delete props.leaveTimeout;
-    delete props.children;
-    return _react2.default.cloneElement(_react2.default.Children.only(this.props.children), props);
-  };
-
-  return CSSTransitionGroupChild;
-}(_react2.default.Component);
-
-CSSTransitionGroupChild.displayName = 'CSSTransitionGroupChild';
-
-
-CSSTransitionGroupChild.propTypes = propTypes;
-
-exports.default = CSSTransitionGroupChild;
-module.exports = exports['default'];
-
-/***/ }),
-/* 320 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-exports.__esModule = true;
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _chainFunction = __webpack_require__(302);
-
-var _chainFunction2 = _interopRequireDefault(_chainFunction);
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(18);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _warning = __webpack_require__(324);
-
-var _warning2 = _interopRequireDefault(_warning);
-
-var _ChildMapping = __webpack_require__(321);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var propTypes = {
-  component: _propTypes2.default.any,
-  childFactory: _propTypes2.default.func,
-  children: _propTypes2.default.node
-};
-
-var defaultProps = {
-  component: 'span',
-  childFactory: function childFactory(child) {
-    return child;
-  }
-};
-
-var TransitionGroup = function (_React$Component) {
-  _inherits(TransitionGroup, _React$Component);
-
-  function TransitionGroup(props, context) {
-    _classCallCheck(this, TransitionGroup);
-
-    var _this = _possibleConstructorReturn(this, _React$Component.call(this, props, context));
-
-    _this.performAppear = function (key) {
-      _this.currentlyTransitioningKeys[key] = true;
-
-      var component = _this.childRefs[key];
-
-      if (component.componentWillAppear) {
-        component.componentWillAppear(_this._handleDoneAppearing.bind(_this, key));
-      } else {
-        _this._handleDoneAppearing(key);
-      }
-    };
-
-    _this._handleDoneAppearing = function (key) {
-      var component = _this.childRefs[key];
-      if (component && component.componentDidAppear) {
-        component.componentDidAppear();
-      }
-
-      delete _this.currentlyTransitioningKeys[key];
-
-      var currentChildMapping = (0, _ChildMapping.getChildMapping)(_this.props.children);
-
-      if (!currentChildMapping || !currentChildMapping.hasOwnProperty(key)) {
-        // This was removed before it had fully appeared. Remove it.
-        _this.performLeave(key);
-      }
-    };
-
-    _this.performEnter = function (key) {
-      _this.currentlyTransitioningKeys[key] = true;
-
-      var component = _this.childRefs[key];
-
-      if (component.componentWillEnter) {
-        component.componentWillEnter(_this._handleDoneEntering.bind(_this, key));
-      } else {
-        _this._handleDoneEntering(key);
-      }
-    };
-
-    _this._handleDoneEntering = function (key) {
-      var component = _this.childRefs[key];
-      if (component && component.componentDidEnter) {
-        component.componentDidEnter();
-      }
-
-      delete _this.currentlyTransitioningKeys[key];
-
-      var currentChildMapping = (0, _ChildMapping.getChildMapping)(_this.props.children);
-
-      if (!currentChildMapping || !currentChildMapping.hasOwnProperty(key)) {
-        // This was removed before it had fully entered. Remove it.
-        _this.performLeave(key);
-      }
-    };
-
-    _this.performLeave = function (key) {
-      _this.currentlyTransitioningKeys[key] = true;
-
-      var component = _this.childRefs[key];
-      if (component.componentWillLeave) {
-        component.componentWillLeave(_this._handleDoneLeaving.bind(_this, key));
-      } else {
-        // Note that this is somewhat dangerous b/c it calls setState()
-        // again, effectively mutating the component before all the work
-        // is done.
-        _this._handleDoneLeaving(key);
-      }
-    };
-
-    _this._handleDoneLeaving = function (key) {
-      var component = _this.childRefs[key];
-
-      if (component && component.componentDidLeave) {
-        component.componentDidLeave();
-      }
-
-      delete _this.currentlyTransitioningKeys[key];
-
-      var currentChildMapping = (0, _ChildMapping.getChildMapping)(_this.props.children);
-
-      if (currentChildMapping && currentChildMapping.hasOwnProperty(key)) {
-        // This entered again before it fully left. Add it again.
-        _this.performEnter(key);
-      } else {
-        _this.setState(function (state) {
-          var newChildren = _extends({}, state.children);
-          delete newChildren[key];
-          return { children: newChildren };
-        });
-      }
-    };
-
-    _this.childRefs = Object.create(null);
-
-    _this.state = {
-      children: (0, _ChildMapping.getChildMapping)(props.children)
-    };
-    return _this;
-  }
-
-  TransitionGroup.prototype.componentWillMount = function componentWillMount() {
-    this.currentlyTransitioningKeys = {};
-    this.keysToEnter = [];
-    this.keysToLeave = [];
-  };
-
-  TransitionGroup.prototype.componentDidMount = function componentDidMount() {
-    var initialChildMapping = this.state.children;
-    for (var key in initialChildMapping) {
-      if (initialChildMapping[key]) {
-        this.performAppear(key);
-      }
-    }
-  };
-
-  TransitionGroup.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
-    var nextChildMapping = (0, _ChildMapping.getChildMapping)(nextProps.children);
-    var prevChildMapping = this.state.children;
-
-    this.setState({
-      children: (0, _ChildMapping.mergeChildMappings)(prevChildMapping, nextChildMapping)
-    });
-
-    for (var key in nextChildMapping) {
-      var hasPrev = prevChildMapping && prevChildMapping.hasOwnProperty(key);
-      if (nextChildMapping[key] && !hasPrev && !this.currentlyTransitioningKeys[key]) {
-        this.keysToEnter.push(key);
-      }
-    }
-
-    for (var _key in prevChildMapping) {
-      var hasNext = nextChildMapping && nextChildMapping.hasOwnProperty(_key);
-      if (prevChildMapping[_key] && !hasNext && !this.currentlyTransitioningKeys[_key]) {
-        this.keysToLeave.push(_key);
-      }
-    }
-
-    // If we want to someday check for reordering, we could do it here.
-  };
-
-  TransitionGroup.prototype.componentDidUpdate = function componentDidUpdate() {
-    var keysToEnter = this.keysToEnter;
-    this.keysToEnter = [];
-    keysToEnter.forEach(this.performEnter);
-
-    var keysToLeave = this.keysToLeave;
-    this.keysToLeave = [];
-    keysToLeave.forEach(this.performLeave);
-  };
-
-  TransitionGroup.prototype.render = function render() {
-    var _this2 = this;
-
-    // TODO: we could get rid of the need for the wrapper node
-    // by cloning a single child
-    var childrenToRender = [];
-
-    var _loop = function _loop(key) {
-      var child = _this2.state.children[key];
-      if (child) {
-        var isCallbackRef = typeof child.ref !== 'string';
-        var factoryChild = _this2.props.childFactory(child);
-        var ref = function ref(r) {
-          _this2.childRefs[key] = r;
-        };
-
-        process.env.NODE_ENV !== 'production' ? (0, _warning2.default)(isCallbackRef, 'string refs are not supported on children of TransitionGroup and will be ignored. ' + 'Please use a callback ref instead: https://facebook.github.io/react/docs/refs-and-the-dom.html#the-ref-callback-attribute') : void 0;
-
-        // Always chaining the refs leads to problems when the childFactory
-        // wraps the child. The child ref callback gets called twice with the
-        // wrapper and the child. So we only need to chain the ref if the
-        // factoryChild is not different from child.
-        if (factoryChild === child && isCallbackRef) {
-          ref = (0, _chainFunction2.default)(child.ref, ref);
-        }
-
-        // You may need to apply reactive updates to a child as it is leaving.
-        // The normal React way to do it won't work since the child will have
-        // already been removed. In case you need this behavior you can provide
-        // a childFactory function to wrap every child, even the ones that are
-        // leaving.
-        childrenToRender.push(_react2.default.cloneElement(factoryChild, {
-          key: key,
-          ref: ref
-        }));
-      }
-    };
-
-    for (var key in this.state.children) {
-      _loop(key);
-    }
-
-    // Do not forward TransitionGroup props to primitive DOM nodes
-    var props = _extends({}, this.props);
-    delete props.transitionLeave;
-    delete props.transitionName;
-    delete props.transitionAppear;
-    delete props.transitionEnter;
-    delete props.childFactory;
-    delete props.transitionLeaveTimeout;
-    delete props.transitionEnterTimeout;
-    delete props.transitionAppearTimeout;
-    delete props.component;
-
-    return _react2.default.createElement(this.props.component, props, childrenToRender);
-  };
-
-  return TransitionGroup;
-}(_react2.default.Component);
-
-TransitionGroup.displayName = 'TransitionGroup';
-
-
-TransitionGroup.propTypes = propTypes;
-TransitionGroup.defaultProps = defaultProps;
-
-exports.default = TransitionGroup;
-module.exports = exports['default'];
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 321 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.getChildMapping = getChildMapping;
-exports.mergeChildMappings = mergeChildMappings;
-
-var _react = __webpack_require__(1);
-
-/**
- * Given `this.props.children`, return an object mapping key to child.
- *
- * @param {*} children `this.props.children`
- * @return {object} Mapping of key to child
- */
-function getChildMapping(children) {
-  if (!children) {
-    return children;
-  }
-  var result = {};
-  _react.Children.map(children, function (child) {
-    return child;
-  }).forEach(function (child) {
-    result[child.key] = child;
-  });
-  return result;
-}
-
-/**
- * When you're adding or removing children some may be added or removed in the
- * same render pass. We want to show *both* since we want to simultaneously
- * animate elements in and out. This function takes a previous set of keys
- * and a new set of keys and merges them with its best guess of the correct
- * ordering. In the future we may expose some of the utilities in
- * ReactMultiChild to make this easy, but for now React itself does not
- * directly have this concept of the union of prevChildren and nextChildren
- * so we implement it here.
- *
- * @param {object} prev prev children as returned from
- * `ReactTransitionChildMapping.getChildMapping()`.
- * @param {object} next next children as returned from
- * `ReactTransitionChildMapping.getChildMapping()`.
- * @return {object} a key set that contains all keys in `prev` and all keys
- * in `next` in a reasonable order.
- */
-function mergeChildMappings(prev, next) {
-  prev = prev || {};
-  next = next || {};
-
-  function getValueForKey(key) {
-    if (next.hasOwnProperty(key)) {
-      return next[key];
-    }
-
-    return prev[key];
-  }
-
-  // For each key of `next`, the list of keys to insert before that key in
-  // the combined list
-  var nextKeysPending = {};
-
-  var pendingKeys = [];
-  for (var prevKey in prev) {
-    if (next.hasOwnProperty(prevKey)) {
-      if (pendingKeys.length) {
-        nextKeysPending[prevKey] = pendingKeys;
-        pendingKeys = [];
-      }
-    } else {
-      pendingKeys.push(prevKey);
-    }
-  }
-
-  var i = void 0;
-  var childMapping = {};
-  for (var nextKey in next) {
-    if (nextKeysPending.hasOwnProperty(nextKey)) {
-      for (i = 0; i < nextKeysPending[nextKey].length; i++) {
-        var pendingNextKey = nextKeysPending[nextKey][i];
-        childMapping[nextKeysPending[nextKey][i]] = getValueForKey(pendingNextKey);
-      }
-    }
-    childMapping[nextKey] = getValueForKey(nextKey);
-  }
-
-  // Finally, add the keys which didn't appear before any key in `next`
-  for (i = 0; i < pendingKeys.length; i++) {
-    childMapping[pendingKeys[i]] = getValueForKey(pendingKeys[i]);
-  }
-
-  return childMapping;
-}
-
-/***/ }),
-/* 322 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var React = __webpack_require__(1);
-
-function CloseIcon (props) {
-    return React.createElement("svg",props,[React.createElement("path",{"d":"M84.4,91.6c-1.8,0-3.6-0.7-5-2L11.1,21.2c-2.7-2.7-2.7-7.2,0-9.9c2.7-2.7,7.2-2.7,9.9,0l68.4,68.4\n\t\tc2.7,2.7,2.7,7.2,0,9.9C88,90.9,86.2,91.6,84.4,91.6z","key":0}),React.createElement("path",{"d":"M16,91.6c-1.8,0-3.6-0.7-4.9-2c-2.7-2.7-2.7-7.2,0-9.9l68.4-68.4c2.7-2.7,7.2-2.7,9.9,0c2.7,2.7,2.7,7.2,0,9.9\n\t\tL20.9,89.6C19.6,90.9,17.8,91.6,16,91.6z","key":1})]);
-}
-
-CloseIcon.displayName = "CloseIcon";
-
-CloseIcon.defaultProps = {"version":"1.1","id":"Layer_1","x":"0px","y":"0px","viewBox":"0 0 100 100","style":{"enableBackground":"new 0 0 100 100"},"xmlSpace":"preserve"};
-
-module.exports = CloseIcon;
-
-CloseIcon.default = CloseIcon;
-
-
-/***/ }),
-/* 323 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var React = __webpack_require__(1);
-
-function PauseIcon (props) {
-    return React.createElement("svg",props,[React.createElement("path",{"d":"M81.5,93.4c-1.3,1.3-3,2.1-4.9,2.1c-3.8,0-7-3.2-7-7V12.8c0-3.8,3.2-7,7-7s7,3.2,7,7l-0.1,75.8\n\t\tC83.5,90.4,82.7,92.2,81.5,93.4z","key":0}),React.createElement("path",{"d":"M28.5,93.4c-1.3,1.3-3,2.1-4.9,2.1c-3.8,0-7-3.2-7-7V12.8c0-3.8,3.2-7,7-7s7,3.2,7,7l-0.1,75.8\n\t\tC30.5,90.4,29.7,92.2,28.5,93.4z","key":1})]);
-}
-
-PauseIcon.displayName = "PauseIcon";
-
-PauseIcon.defaultProps = {"version":"1.1","x":"0px","y":"0px","viewBox":"0 0 100 100","style":{"enableBackground":"new 0 0 100 100"},"xmlSpace":"preserve"};
-
-module.exports = PauseIcon;
-
-PauseIcon.default = PauseIcon;
-
-
-/***/ }),
-/* 324 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-2015, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- */
-
-
-
-/**
- * Similar to invariant but only logs a warning if the condition is not met.
- * This can be used to log issues in development environments in critical
- * paths. Removing the logging code for production environments will keep the
- * same logic and follow the same code paths.
- */
-
-var warning = function() {};
-
-if (process.env.NODE_ENV !== 'production') {
-  warning = function(condition, format, args) {
-    var len = arguments.length;
-    args = new Array(len > 2 ? len - 2 : 0);
-    for (var key = 2; key < len; key++) {
-      args[key - 2] = arguments[key];
-    }
-    if (format === undefined) {
-      throw new Error(
-        '`warning(condition, format, ...args)` requires a warning ' +
-        'message argument'
-      );
-    }
-
-    if (format.length < 10 || (/^[s\W]*$/).test(format)) {
-      throw new Error(
-        'The warning format should be able to uniquely identify this ' +
-        'warning. Please, use a more descriptive format than: ' + format
-      );
-    }
-
-    if (!condition) {
-      var argIndex = 0;
-      var message = 'Warning: ' +
-        format.replace(/%s/g, function() {
-          return args[argIndex++];
-        });
-      if (typeof console !== 'undefined') {
-        console.error(message);
-      }
-      try {
-        // This error was thrown as a convenience so that you can use this stack
-        // to find the callsite that caused this warning to fire.
-        throw new Error(message);
-      } catch(x) {}
-    }
-  };
-}
-
-module.exports = warning;
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 325 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(17);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -39893,6 +38629,1270 @@ NumberFormat.defaultProps = defaultProps;
 
 module.exports = NumberFormat;
 
+
+/***/ }),
+/* 317 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+exports.__esModule = true;
+
+var _propTypes = __webpack_require__(17);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes3 = __webpack_require__(279);
+
+var _UncontrolledTabs = __webpack_require__(318);
+
+var _UncontrolledTabs2 = _interopRequireDefault(_UncontrolledTabs);
+
+var _count = __webpack_require__(278);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Tabs = function (_Component) {
+  _inherits(Tabs, _Component);
+
+  function Tabs(props) {
+    _classCallCheck(this, Tabs);
+
+    var _this = _possibleConstructorReturn(this, _Component.call(this, props));
+
+    _this.handleSelected = function (index, last, event) {
+      // Call change event handler
+      if (typeof _this.props.onSelect === 'function') {
+        // Check if the change event handler cancels the tab change
+        if (_this.props.onSelect(index, last, event) === false) return;
+      }
+
+      var state = {
+        // Set focus if the change was triggered from the keyboard
+        focus: event.type === 'keydown'
+      };
+
+      if (Tabs.inUncontrolledMode(_this.props)) {
+        // Update selected index
+        state.selectedIndex = index;
+      }
+
+      _this.setState(state);
+    };
+
+    _this.state = Tabs.copyPropsToState(_this.props, {}, _this.props.defaultFocus);
+    return _this;
+  }
+
+  Tabs.prototype.componentWillReceiveProps = function componentWillReceiveProps(newProps) {
+    if (process.env.NODE_ENV !== 'production' && Tabs.inUncontrolledMode(newProps) !== Tabs.inUncontrolledMode(this.props)) {
+      throw new Error('Switching between controlled mode (by using `selectedIndex`) and uncontrolled mode is not supported in `Tabs`.\nFor more information about controlled and uncontrolled mode of react-tabs see the README.');
+    }
+    // Use a transactional update to prevent race conditions
+    // when reading the state in copyPropsToState
+    // See https://github.com/reactjs/react-tabs/issues/51
+    this.setState(function (state) {
+      return Tabs.copyPropsToState(newProps, state);
+    });
+  };
+
+  Tabs.inUncontrolledMode = function inUncontrolledMode(props) {
+    return props.selectedIndex === null;
+  };
+
+  // preserve the existing selectedIndex from state.
+  // If the state has not selectedIndex, default to the defaultIndex or 0
+  Tabs.copyPropsToState = function copyPropsToState(props, state) {
+    var focus = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
+    var newState = {
+      focus: focus
+    };
+
+    if (Tabs.inUncontrolledMode(props)) {
+      var maxTabIndex = (0, _count.getTabsCount)(props.children) - 1;
+      var selectedIndex = null;
+
+      if (state.selectedIndex != null) {
+        selectedIndex = Math.min(state.selectedIndex, maxTabIndex);
+      } else {
+        selectedIndex = props.defaultIndex || 0;
+      }
+      newState.selectedIndex = selectedIndex;
+    }
+
+    return newState;
+  };
+
+  Tabs.prototype.render = function render() {
+    var _props = this.props,
+        children = _props.children,
+        defaultIndex = _props.defaultIndex,
+        defaultFocus = _props.defaultFocus,
+        props = _objectWithoutProperties(_props, ['children', 'defaultIndex', 'defaultFocus']);
+
+    props.focus = this.state.focus;
+    props.onSelect = this.handleSelected;
+
+    if (this.state.selectedIndex != null) {
+      props.selectedIndex = this.state.selectedIndex;
+    }
+
+    return _react2.default.createElement(
+      _UncontrolledTabs2.default,
+      props,
+      children
+    );
+  };
+
+  return Tabs;
+}(_react.Component);
+
+Tabs.defaultProps = {
+  defaultFocus: false,
+  forceRenderTabPanel: false,
+  selectedIndex: null,
+  defaultIndex: null
+};
+exports.default = Tabs;
+Tabs.propTypes = process.env.NODE_ENV !== "production" ? {
+  children: _propTypes3.childrenPropType,
+  className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array, _propTypes2.default.object]),
+  defaultFocus: _propTypes2.default.bool,
+  defaultIndex: _propTypes2.default.number,
+  disabledTabClassName: _propTypes2.default.string,
+  forceRenderTabPanel: _propTypes2.default.bool,
+  onSelect: _propTypes3.onSelectPropType,
+  selectedIndex: _propTypes3.selectedIndexPropType,
+  selectedTabClassName: _propTypes2.default.string,
+  selectedTabPanelClassName: _propTypes2.default.string
+} : {};
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 318 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+exports.__esModule = true;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _propTypes = __webpack_require__(17);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classnames = __webpack_require__(28);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _uuid = __webpack_require__(280);
+
+var _uuid2 = _interopRequireDefault(_uuid);
+
+var _propTypes3 = __webpack_require__(279);
+
+var _Tab = __webpack_require__(220);
+
+var _Tab2 = _interopRequireDefault(_Tab);
+
+var _TabList = __webpack_require__(221);
+
+var _TabList2 = _interopRequireDefault(_TabList);
+
+var _TabPanel = __webpack_require__(222);
+
+var _TabPanel2 = _interopRequireDefault(_TabPanel);
+
+var _count = __webpack_require__(278);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// Determine if a node from event.target is a Tab element
+function isTabNode(node) {
+  return node.nodeName === 'LI' && node.getAttribute('role') === 'tab';
+}
+
+// Determine if a tab node is disabled
+function isTabDisabled(node) {
+  return node.getAttribute('aria-disabled') === 'true';
+}
+
+var canUseActiveElement = !!(typeof window !== 'undefined' && window.document && window.document.activeElement);
+
+var UncontrolledTabs = function (_Component) {
+  _inherits(UncontrolledTabs, _Component);
+
+  function UncontrolledTabs() {
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, UncontrolledTabs);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.tabNodes = [], _this.handleKeyDown = function (e) {
+      if (_this.isTabFromContainer(e.target)) {
+        var index = _this.props.selectedIndex;
+        var preventDefault = false;
+
+        if (e.keyCode === 37 || e.keyCode === 38) {
+          // Select next tab to the left
+          index = _this.getPrevTab(index);
+          preventDefault = true;
+        } else if (e.keyCode === 39 || e.keyCode === 40) {
+          // Select next tab to the right
+          index = _this.getNextTab(index);
+          preventDefault = true;
+        }
+
+        // This prevents scrollbars from moving around
+        if (preventDefault) {
+          e.preventDefault();
+        }
+
+        _this.setSelected(index, e);
+      }
+    }, _this.handleClick = function (e) {
+      var node = e.target;
+      // eslint-disable-next-line no-cond-assign
+      do {
+        if (_this.isTabFromContainer(node)) {
+          if (isTabDisabled(node)) {
+            return;
+          }
+
+          var index = [].slice.call(node.parentNode.children).filter(isTabNode).indexOf(node);
+          _this.setSelected(index, e);
+          return;
+        }
+      } while ((node = node.parentNode) !== null);
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  UncontrolledTabs.prototype.setSelected = function setSelected(index, event) {
+    // Don't do anything if nothing has changed
+    if (index === this.props.selectedIndex) return;
+    // Check index boundary
+    if (index < 0 || index >= this.getTabsCount()) return;
+
+    // Call change event handler
+    this.props.onSelect(index, this.props.selectedIndex, event);
+  };
+
+  UncontrolledTabs.prototype.getNextTab = function getNextTab(index) {
+    var count = this.getTabsCount();
+
+    // Look for non-disabled tab from index to the last tab on the right
+    for (var i = index + 1; i < count; i++) {
+      if (!isTabDisabled(this.getTab(i))) {
+        return i;
+      }
+    }
+
+    // If no tab found, continue searching from first on left to index
+    for (var _i = 0; _i < index; _i++) {
+      if (!isTabDisabled(this.getTab(_i))) {
+        return _i;
+      }
+    }
+
+    // No tabs are disabled, return index
+    return index;
+  };
+
+  UncontrolledTabs.prototype.getPrevTab = function getPrevTab(index) {
+    var i = index;
+
+    // Look for non-disabled tab from index to first tab on the left
+    while (i--) {
+      if (!isTabDisabled(this.getTab(i))) {
+        return i;
+      }
+    }
+
+    // If no tab found, continue searching from last tab on right to index
+    i = this.getTabsCount();
+    while (i-- > index) {
+      if (!isTabDisabled(this.getTab(i))) {
+        return i;
+      }
+    }
+
+    // No tabs are disabled, return index
+    return index;
+  };
+
+  UncontrolledTabs.prototype.getTabsCount = function getTabsCount() {
+    return (0, _count.getTabsCount)(this.props.children);
+  };
+
+  UncontrolledTabs.prototype.getPanelsCount = function getPanelsCount() {
+    return (0, _count.getPanelsCount)(this.props.children);
+  };
+
+  UncontrolledTabs.prototype.getTab = function getTab(index) {
+    return this.tabNodes['tabs-' + index];
+  };
+
+  UncontrolledTabs.prototype.getChildren = function getChildren() {
+    var _this2 = this;
+
+    var index = 0;
+    var _props = this.props,
+        children = _props.children,
+        disabledTabClassName = _props.disabledTabClassName,
+        focus = _props.focus,
+        forceRenderTabPanel = _props.forceRenderTabPanel,
+        selectedIndex = _props.selectedIndex,
+        selectedTabClassName = _props.selectedTabClassName,
+        selectedTabPanelClassName = _props.selectedTabPanelClassName;
+
+
+    this.tabIds = this.tabIds || [];
+    this.panelIds = this.panelIds || [];
+    var diff = this.tabIds.length - this.getTabsCount();
+
+    // Add ids if new tabs have been added
+    // Don't bother removing ids, just keep them in case they are added again
+    // This is more efficient, and keeps the uuid counter under control
+    while (diff++ < 0) {
+      this.tabIds.push((0, _uuid2.default)());
+      this.panelIds.push((0, _uuid2.default)());
+    }
+
+    // Map children to dynamically setup refs
+    return _react2.default.Children.map(children, function (child) {
+      // null happens when conditionally rendering TabPanel/Tab
+      // see https://github.com/reactjs/react-tabs/issues/37
+      if (child === null) {
+        return null;
+      }
+
+      var result = child;
+
+      // Clone TabList and Tab components to have refs
+      if (child.type === _TabList2.default) {
+        var listIndex = 0;
+
+        // Figure out if the current focus in the DOM is set on a Tab
+        // If it is we should keep the focus on the next selected tab
+        var wasTabFocused = false;
+
+        if (canUseActiveElement) {
+          wasTabFocused = _react2.default.Children.toArray(child.props.children).filter(function (tab) {
+            return tab.type === _Tab2.default;
+          }).some(function (tab, i) {
+            return document.activeElement === _this2.getTab(i);
+          });
+        }
+
+        result = (0, _react.cloneElement)(child, {
+          children: _react2.default.Children.map(child.props.children, function (tab) {
+            // null happens when conditionally rendering TabPanel/Tab
+            // see https://github.com/reactjs/react-tabs/issues/37
+            if (tab === null) {
+              return null;
+            }
+
+            // Exit early if this is not a tab. That way we can have arbitrary
+            // elements anywhere inside <TabList>
+            if (tab.type !== _Tab2.default) return tab;
+
+            var key = 'tabs-' + listIndex;
+            var selected = selectedIndex === listIndex;
+
+            var props = {
+              tabRef: function tabRef(node) {
+                _this2.tabNodes[key] = node;
+              },
+              id: _this2.tabIds[listIndex],
+              panelId: _this2.panelIds[listIndex],
+              selected: selected,
+              focus: selected && (focus || wasTabFocused)
+            };
+
+            if (selectedTabClassName) props.selectedClassName = selectedTabClassName;
+            if (disabledTabClassName) props.disabledClassName = disabledTabClassName;
+
+            listIndex++;
+
+            return (0, _react.cloneElement)(tab, props);
+          })
+        });
+      } else if (child.type === _TabPanel2.default) {
+        var props = {
+          id: _this2.panelIds[index],
+          tabId: _this2.tabIds[index],
+          selected: selectedIndex === index
+        };
+
+        if (forceRenderTabPanel) props.forceRender = forceRenderTabPanel;
+        if (selectedTabPanelClassName) props.selectedClassName = selectedTabPanelClassName;
+
+        index++;
+
+        result = (0, _react.cloneElement)(child, props);
+      }
+
+      return result;
+    });
+  };
+
+  /**
+   * Determine if a node from event.target is a Tab element for the current Tabs container.
+   * If the clicked element is not a Tab, it returns false.
+   * If it finds another Tabs container between the Tab and `this`, it returns false.
+   */
+  UncontrolledTabs.prototype.isTabFromContainer = function isTabFromContainer(node) {
+    // return immediately if the clicked element is not a Tab.
+    if (!isTabNode(node)) {
+      return false;
+    }
+
+    // Check if the first occurrence of a Tabs container is `this` one.
+    var nodeAncestor = node.parentElement;
+    do {
+      if (nodeAncestor === this.node) return true;else if (nodeAncestor.getAttribute('data-tabs')) break;
+
+      nodeAncestor = nodeAncestor.parentElement;
+    } while (nodeAncestor);
+
+    return false;
+  };
+
+  UncontrolledTabs.prototype.render = function render() {
+    var _this3 = this;
+
+    // Delete all known props, so they don't get added to DOM
+    var _props2 = this.props,
+        children = _props2.children,
+        className = _props2.className,
+        disabledTabClassName = _props2.disabledTabClassName,
+        focus = _props2.focus,
+        forceRenderTabPanel = _props2.forceRenderTabPanel,
+        onSelect = _props2.onSelect,
+        selectedIndex = _props2.selectedIndex,
+        selectedTabClassName = _props2.selectedTabClassName,
+        selectedTabPanelClassName = _props2.selectedTabPanelClassName,
+        attributes = _objectWithoutProperties(_props2, ['children', 'className', 'disabledTabClassName', 'focus', 'forceRenderTabPanel', 'onSelect', 'selectedIndex', 'selectedTabClassName', 'selectedTabPanelClassName']);
+
+    return _react2.default.createElement(
+      'div',
+      _extends({}, attributes, {
+        className: (0, _classnames2.default)(className),
+        onClick: this.handleClick,
+        onKeyDown: this.handleKeyDown,
+        ref: function ref(node) {
+          _this3.node = node;
+        },
+        'data-tabs': true
+      }),
+      this.getChildren()
+    );
+  };
+
+  return UncontrolledTabs;
+}(_react.Component);
+
+UncontrolledTabs.defaultProps = {
+  className: 'react-tabs',
+  focus: false
+};
+exports.default = UncontrolledTabs;
+UncontrolledTabs.propTypes = process.env.NODE_ENV !== "production" ? {
+  children: _propTypes3.childrenPropType,
+  className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array, _propTypes2.default.object]),
+  disabledTabClassName: _propTypes2.default.string,
+  focus: _propTypes2.default.bool,
+  forceRenderTabPanel: _propTypes2.default.bool,
+  onSelect: _propTypes2.default.func.isRequired,
+  selectedIndex: _propTypes2.default.number.isRequired,
+  selectedTabClassName: _propTypes2.default.string,
+  selectedTabPanelClassName: _propTypes2.default.string
+} : {};
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 319 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.resetIdCounter = exports.Tabs = exports.TabPanel = exports.TabList = exports.Tab = undefined;
+
+var _Tabs = __webpack_require__(317);
+
+var _Tabs2 = _interopRequireDefault(_Tabs);
+
+var _TabList = __webpack_require__(221);
+
+var _TabList2 = _interopRequireDefault(_TabList);
+
+var _Tab = __webpack_require__(220);
+
+var _Tab2 = _interopRequireDefault(_Tab);
+
+var _TabPanel = __webpack_require__(222);
+
+var _TabPanel2 = _interopRequireDefault(_TabPanel);
+
+var _uuid = __webpack_require__(280);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.Tab = _Tab2.default;
+exports.TabList = _TabList2.default;
+exports.TabPanel = _TabPanel2.default;
+exports.Tabs = _Tabs2.default;
+exports.resetIdCounter = _uuid.reset;
+
+/***/ }),
+/* 320 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _addClass = __webpack_require__(303);
+
+var _addClass2 = _interopRequireDefault(_addClass);
+
+var _removeClass = __webpack_require__(305);
+
+var _removeClass2 = _interopRequireDefault(_removeClass);
+
+var _requestAnimationFrame = __webpack_require__(307);
+
+var _requestAnimationFrame2 = _interopRequireDefault(_requestAnimationFrame);
+
+var _properties = __webpack_require__(306);
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(17);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactDom = __webpack_require__(18);
+
+var _PropTypes = __webpack_require__(281);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var events = [];
+if (_properties.transitionEnd) events.push(_properties.transitionEnd);
+if (_properties.animationEnd) events.push(_properties.animationEnd);
+
+function addEndListener(node, listener) {
+  if (events.length) {
+    events.forEach(function (e) {
+      return node.addEventListener(e, listener, false);
+    });
+  } else {
+    setTimeout(listener, 0);
+  }
+
+  return function () {
+    if (!events.length) return;
+    events.forEach(function (e) {
+      return node.removeEventListener(e, listener, false);
+    });
+  };
+}
+
+var propTypes = {
+  children: _propTypes2.default.node,
+  name: _PropTypes.nameShape.isRequired,
+
+  // Once we require timeouts to be specified, we can remove the
+  // boolean flags (appear etc.) and just accept a number
+  // or a bool for the timeout flags (appearTimeout etc.)
+  appear: _propTypes2.default.bool,
+  enter: _propTypes2.default.bool,
+  leave: _propTypes2.default.bool,
+  appearTimeout: _propTypes2.default.number,
+  enterTimeout: _propTypes2.default.number,
+  leaveTimeout: _propTypes2.default.number
+};
+
+var CSSTransitionGroupChild = function (_React$Component) {
+  _inherits(CSSTransitionGroupChild, _React$Component);
+
+  function CSSTransitionGroupChild() {
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, CSSTransitionGroupChild);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.componentWillAppear = function (done) {
+      if (_this.props.appear) {
+        _this.transition('appear', done, _this.props.appearTimeout);
+      } else {
+        done();
+      }
+    }, _this.componentWillEnter = function (done) {
+      if (_this.props.enter) {
+        _this.transition('enter', done, _this.props.enterTimeout);
+      } else {
+        done();
+      }
+    }, _this.componentWillLeave = function (done) {
+      if (_this.props.leave) {
+        _this.transition('leave', done, _this.props.leaveTimeout);
+      } else {
+        done();
+      }
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  CSSTransitionGroupChild.prototype.componentWillMount = function componentWillMount() {
+    this.classNameAndNodeQueue = [];
+    this.transitionTimeouts = [];
+  };
+
+  CSSTransitionGroupChild.prototype.componentWillUnmount = function componentWillUnmount() {
+    this.unmounted = true;
+
+    if (this.timeout) {
+      clearTimeout(this.timeout);
+    }
+    this.transitionTimeouts.forEach(function (timeout) {
+      clearTimeout(timeout);
+    });
+
+    this.classNameAndNodeQueue.length = 0;
+  };
+
+  CSSTransitionGroupChild.prototype.transition = function transition(animationType, finishCallback, timeout) {
+    var node = (0, _reactDom.findDOMNode)(this);
+
+    if (!node) {
+      if (finishCallback) {
+        finishCallback();
+      }
+      return;
+    }
+
+    var className = this.props.name[animationType] || this.props.name + '-' + animationType;
+    var activeClassName = this.props.name[animationType + 'Active'] || className + '-active';
+    var timer = null;
+    var removeListeners = void 0;
+
+    (0, _addClass2.default)(node, className);
+
+    // Need to do this to actually trigger a transition.
+    this.queueClassAndNode(activeClassName, node);
+
+    // Clean-up the animation after the specified delay
+    var finish = function finish(e) {
+      if (e && e.target !== node) {
+        return;
+      }
+
+      clearTimeout(timer);
+      if (removeListeners) removeListeners();
+
+      (0, _removeClass2.default)(node, className);
+      (0, _removeClass2.default)(node, activeClassName);
+
+      if (removeListeners) removeListeners();
+
+      // Usually this optional callback is used for informing an owner of
+      // a leave animation and telling it to remove the child.
+      if (finishCallback) {
+        finishCallback();
+      }
+    };
+
+    if (timeout) {
+      timer = setTimeout(finish, timeout);
+      this.transitionTimeouts.push(timer);
+    } else if (_properties.transitionEnd) {
+      removeListeners = addEndListener(node, finish);
+    }
+  };
+
+  CSSTransitionGroupChild.prototype.queueClassAndNode = function queueClassAndNode(className, node) {
+    var _this2 = this;
+
+    this.classNameAndNodeQueue.push({
+      className: className,
+      node: node
+    });
+
+    if (!this.rafHandle) {
+      this.rafHandle = (0, _requestAnimationFrame2.default)(function () {
+        return _this2.flushClassNameAndNodeQueue();
+      });
+    }
+  };
+
+  CSSTransitionGroupChild.prototype.flushClassNameAndNodeQueue = function flushClassNameAndNodeQueue() {
+    if (!this.unmounted) {
+      this.classNameAndNodeQueue.forEach(function (obj) {
+        // This is for to force a repaint,
+        // which is necessary in order to transition styles when adding a class name.
+        /* eslint-disable no-unused-expressions */
+        obj.node.scrollTop;
+        /* eslint-enable no-unused-expressions */
+        (0, _addClass2.default)(obj.node, obj.className);
+      });
+    }
+    this.classNameAndNodeQueue.length = 0;
+    this.rafHandle = null;
+  };
+
+  CSSTransitionGroupChild.prototype.render = function render() {
+    var props = _extends({}, this.props);
+    delete props.name;
+    delete props.appear;
+    delete props.enter;
+    delete props.leave;
+    delete props.appearTimeout;
+    delete props.enterTimeout;
+    delete props.leaveTimeout;
+    delete props.children;
+    return _react2.default.cloneElement(_react2.default.Children.only(this.props.children), props);
+  };
+
+  return CSSTransitionGroupChild;
+}(_react2.default.Component);
+
+CSSTransitionGroupChild.displayName = 'CSSTransitionGroupChild';
+
+
+CSSTransitionGroupChild.propTypes = propTypes;
+
+exports.default = CSSTransitionGroupChild;
+module.exports = exports['default'];
+
+/***/ }),
+/* 321 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+exports.__esModule = true;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _chainFunction = __webpack_require__(302);
+
+var _chainFunction2 = _interopRequireDefault(_chainFunction);
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(17);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _warning = __webpack_require__(325);
+
+var _warning2 = _interopRequireDefault(_warning);
+
+var _ChildMapping = __webpack_require__(322);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var propTypes = {
+  component: _propTypes2.default.any,
+  childFactory: _propTypes2.default.func,
+  children: _propTypes2.default.node
+};
+
+var defaultProps = {
+  component: 'span',
+  childFactory: function childFactory(child) {
+    return child;
+  }
+};
+
+var TransitionGroup = function (_React$Component) {
+  _inherits(TransitionGroup, _React$Component);
+
+  function TransitionGroup(props, context) {
+    _classCallCheck(this, TransitionGroup);
+
+    var _this = _possibleConstructorReturn(this, _React$Component.call(this, props, context));
+
+    _this.performAppear = function (key) {
+      _this.currentlyTransitioningKeys[key] = true;
+
+      var component = _this.childRefs[key];
+
+      if (component.componentWillAppear) {
+        component.componentWillAppear(_this._handleDoneAppearing.bind(_this, key));
+      } else {
+        _this._handleDoneAppearing(key);
+      }
+    };
+
+    _this._handleDoneAppearing = function (key) {
+      var component = _this.childRefs[key];
+      if (component && component.componentDidAppear) {
+        component.componentDidAppear();
+      }
+
+      delete _this.currentlyTransitioningKeys[key];
+
+      var currentChildMapping = (0, _ChildMapping.getChildMapping)(_this.props.children);
+
+      if (!currentChildMapping || !currentChildMapping.hasOwnProperty(key)) {
+        // This was removed before it had fully appeared. Remove it.
+        _this.performLeave(key);
+      }
+    };
+
+    _this.performEnter = function (key) {
+      _this.currentlyTransitioningKeys[key] = true;
+
+      var component = _this.childRefs[key];
+
+      if (component.componentWillEnter) {
+        component.componentWillEnter(_this._handleDoneEntering.bind(_this, key));
+      } else {
+        _this._handleDoneEntering(key);
+      }
+    };
+
+    _this._handleDoneEntering = function (key) {
+      var component = _this.childRefs[key];
+      if (component && component.componentDidEnter) {
+        component.componentDidEnter();
+      }
+
+      delete _this.currentlyTransitioningKeys[key];
+
+      var currentChildMapping = (0, _ChildMapping.getChildMapping)(_this.props.children);
+
+      if (!currentChildMapping || !currentChildMapping.hasOwnProperty(key)) {
+        // This was removed before it had fully entered. Remove it.
+        _this.performLeave(key);
+      }
+    };
+
+    _this.performLeave = function (key) {
+      _this.currentlyTransitioningKeys[key] = true;
+
+      var component = _this.childRefs[key];
+      if (component.componentWillLeave) {
+        component.componentWillLeave(_this._handleDoneLeaving.bind(_this, key));
+      } else {
+        // Note that this is somewhat dangerous b/c it calls setState()
+        // again, effectively mutating the component before all the work
+        // is done.
+        _this._handleDoneLeaving(key);
+      }
+    };
+
+    _this._handleDoneLeaving = function (key) {
+      var component = _this.childRefs[key];
+
+      if (component && component.componentDidLeave) {
+        component.componentDidLeave();
+      }
+
+      delete _this.currentlyTransitioningKeys[key];
+
+      var currentChildMapping = (0, _ChildMapping.getChildMapping)(_this.props.children);
+
+      if (currentChildMapping && currentChildMapping.hasOwnProperty(key)) {
+        // This entered again before it fully left. Add it again.
+        _this.performEnter(key);
+      } else {
+        _this.setState(function (state) {
+          var newChildren = _extends({}, state.children);
+          delete newChildren[key];
+          return { children: newChildren };
+        });
+      }
+    };
+
+    _this.childRefs = Object.create(null);
+
+    _this.state = {
+      children: (0, _ChildMapping.getChildMapping)(props.children)
+    };
+    return _this;
+  }
+
+  TransitionGroup.prototype.componentWillMount = function componentWillMount() {
+    this.currentlyTransitioningKeys = {};
+    this.keysToEnter = [];
+    this.keysToLeave = [];
+  };
+
+  TransitionGroup.prototype.componentDidMount = function componentDidMount() {
+    var initialChildMapping = this.state.children;
+    for (var key in initialChildMapping) {
+      if (initialChildMapping[key]) {
+        this.performAppear(key);
+      }
+    }
+  };
+
+  TransitionGroup.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+    var nextChildMapping = (0, _ChildMapping.getChildMapping)(nextProps.children);
+    var prevChildMapping = this.state.children;
+
+    this.setState({
+      children: (0, _ChildMapping.mergeChildMappings)(prevChildMapping, nextChildMapping)
+    });
+
+    for (var key in nextChildMapping) {
+      var hasPrev = prevChildMapping && prevChildMapping.hasOwnProperty(key);
+      if (nextChildMapping[key] && !hasPrev && !this.currentlyTransitioningKeys[key]) {
+        this.keysToEnter.push(key);
+      }
+    }
+
+    for (var _key in prevChildMapping) {
+      var hasNext = nextChildMapping && nextChildMapping.hasOwnProperty(_key);
+      if (prevChildMapping[_key] && !hasNext && !this.currentlyTransitioningKeys[_key]) {
+        this.keysToLeave.push(_key);
+      }
+    }
+
+    // If we want to someday check for reordering, we could do it here.
+  };
+
+  TransitionGroup.prototype.componentDidUpdate = function componentDidUpdate() {
+    var keysToEnter = this.keysToEnter;
+    this.keysToEnter = [];
+    keysToEnter.forEach(this.performEnter);
+
+    var keysToLeave = this.keysToLeave;
+    this.keysToLeave = [];
+    keysToLeave.forEach(this.performLeave);
+  };
+
+  TransitionGroup.prototype.render = function render() {
+    var _this2 = this;
+
+    // TODO: we could get rid of the need for the wrapper node
+    // by cloning a single child
+    var childrenToRender = [];
+
+    var _loop = function _loop(key) {
+      var child = _this2.state.children[key];
+      if (child) {
+        var isCallbackRef = typeof child.ref !== 'string';
+        var factoryChild = _this2.props.childFactory(child);
+        var ref = function ref(r) {
+          _this2.childRefs[key] = r;
+        };
+
+        process.env.NODE_ENV !== 'production' ? (0, _warning2.default)(isCallbackRef, 'string refs are not supported on children of TransitionGroup and will be ignored. ' + 'Please use a callback ref instead: https://facebook.github.io/react/docs/refs-and-the-dom.html#the-ref-callback-attribute') : void 0;
+
+        // Always chaining the refs leads to problems when the childFactory
+        // wraps the child. The child ref callback gets called twice with the
+        // wrapper and the child. So we only need to chain the ref if the
+        // factoryChild is not different from child.
+        if (factoryChild === child && isCallbackRef) {
+          ref = (0, _chainFunction2.default)(child.ref, ref);
+        }
+
+        // You may need to apply reactive updates to a child as it is leaving.
+        // The normal React way to do it won't work since the child will have
+        // already been removed. In case you need this behavior you can provide
+        // a childFactory function to wrap every child, even the ones that are
+        // leaving.
+        childrenToRender.push(_react2.default.cloneElement(factoryChild, {
+          key: key,
+          ref: ref
+        }));
+      }
+    };
+
+    for (var key in this.state.children) {
+      _loop(key);
+    }
+
+    // Do not forward TransitionGroup props to primitive DOM nodes
+    var props = _extends({}, this.props);
+    delete props.transitionLeave;
+    delete props.transitionName;
+    delete props.transitionAppear;
+    delete props.transitionEnter;
+    delete props.childFactory;
+    delete props.transitionLeaveTimeout;
+    delete props.transitionEnterTimeout;
+    delete props.transitionAppearTimeout;
+    delete props.component;
+
+    return _react2.default.createElement(this.props.component, props, childrenToRender);
+  };
+
+  return TransitionGroup;
+}(_react2.default.Component);
+
+TransitionGroup.displayName = 'TransitionGroup';
+
+
+TransitionGroup.propTypes = propTypes;
+TransitionGroup.defaultProps = defaultProps;
+
+exports.default = TransitionGroup;
+module.exports = exports['default'];
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 322 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.getChildMapping = getChildMapping;
+exports.mergeChildMappings = mergeChildMappings;
+
+var _react = __webpack_require__(1);
+
+/**
+ * Given `this.props.children`, return an object mapping key to child.
+ *
+ * @param {*} children `this.props.children`
+ * @return {object} Mapping of key to child
+ */
+function getChildMapping(children) {
+  if (!children) {
+    return children;
+  }
+  var result = {};
+  _react.Children.map(children, function (child) {
+    return child;
+  }).forEach(function (child) {
+    result[child.key] = child;
+  });
+  return result;
+}
+
+/**
+ * When you're adding or removing children some may be added or removed in the
+ * same render pass. We want to show *both* since we want to simultaneously
+ * animate elements in and out. This function takes a previous set of keys
+ * and a new set of keys and merges them with its best guess of the correct
+ * ordering. In the future we may expose some of the utilities in
+ * ReactMultiChild to make this easy, but for now React itself does not
+ * directly have this concept of the union of prevChildren and nextChildren
+ * so we implement it here.
+ *
+ * @param {object} prev prev children as returned from
+ * `ReactTransitionChildMapping.getChildMapping()`.
+ * @param {object} next next children as returned from
+ * `ReactTransitionChildMapping.getChildMapping()`.
+ * @return {object} a key set that contains all keys in `prev` and all keys
+ * in `next` in a reasonable order.
+ */
+function mergeChildMappings(prev, next) {
+  prev = prev || {};
+  next = next || {};
+
+  function getValueForKey(key) {
+    if (next.hasOwnProperty(key)) {
+      return next[key];
+    }
+
+    return prev[key];
+  }
+
+  // For each key of `next`, the list of keys to insert before that key in
+  // the combined list
+  var nextKeysPending = {};
+
+  var pendingKeys = [];
+  for (var prevKey in prev) {
+    if (next.hasOwnProperty(prevKey)) {
+      if (pendingKeys.length) {
+        nextKeysPending[prevKey] = pendingKeys;
+        pendingKeys = [];
+      }
+    } else {
+      pendingKeys.push(prevKey);
+    }
+  }
+
+  var i = void 0;
+  var childMapping = {};
+  for (var nextKey in next) {
+    if (nextKeysPending.hasOwnProperty(nextKey)) {
+      for (i = 0; i < nextKeysPending[nextKey].length; i++) {
+        var pendingNextKey = nextKeysPending[nextKey][i];
+        childMapping[nextKeysPending[nextKey][i]] = getValueForKey(pendingNextKey);
+      }
+    }
+    childMapping[nextKey] = getValueForKey(nextKey);
+  }
+
+  // Finally, add the keys which didn't appear before any key in `next`
+  for (i = 0; i < pendingKeys.length; i++) {
+    childMapping[pendingKeys[i]] = getValueForKey(pendingKeys[i]);
+  }
+
+  return childMapping;
+}
+
+/***/ }),
+/* 323 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(1);
+
+function CloseIcon (props) {
+    return React.createElement("svg",props,[React.createElement("path",{"d":"M84.4,91.6c-1.8,0-3.6-0.7-5-2L11.1,21.2c-2.7-2.7-2.7-7.2,0-9.9c2.7-2.7,7.2-2.7,9.9,0l68.4,68.4\n\t\tc2.7,2.7,2.7,7.2,0,9.9C88,90.9,86.2,91.6,84.4,91.6z","key":0}),React.createElement("path",{"d":"M16,91.6c-1.8,0-3.6-0.7-4.9-2c-2.7-2.7-2.7-7.2,0-9.9l68.4-68.4c2.7-2.7,7.2-2.7,9.9,0c2.7,2.7,2.7,7.2,0,9.9\n\t\tL20.9,89.6C19.6,90.9,17.8,91.6,16,91.6z","key":1})]);
+}
+
+CloseIcon.displayName = "CloseIcon";
+
+CloseIcon.defaultProps = {"version":"1.1","id":"Layer_1","x":"0px","y":"0px","viewBox":"0 0 100 100","style":{"enableBackground":"new 0 0 100 100"},"xmlSpace":"preserve"};
+
+module.exports = CloseIcon;
+
+CloseIcon.default = CloseIcon;
+
+
+/***/ }),
+/* 324 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(1);
+
+function PauseIcon (props) {
+    return React.createElement("svg",props,[React.createElement("path",{"d":"M81.5,93.4c-1.3,1.3-3,2.1-4.9,2.1c-3.8,0-7-3.2-7-7V12.8c0-3.8,3.2-7,7-7s7,3.2,7,7l-0.1,75.8\n\t\tC83.5,90.4,82.7,92.2,81.5,93.4z","key":0}),React.createElement("path",{"d":"M28.5,93.4c-1.3,1.3-3,2.1-4.9,2.1c-3.8,0-7-3.2-7-7V12.8c0-3.8,3.2-7,7-7s7,3.2,7,7l-0.1,75.8\n\t\tC30.5,90.4,29.7,92.2,28.5,93.4z","key":1})]);
+}
+
+PauseIcon.displayName = "PauseIcon";
+
+PauseIcon.defaultProps = {"version":"1.1","x":"0px","y":"0px","viewBox":"0 0 100 100","style":{"enableBackground":"new 0 0 100 100"},"xmlSpace":"preserve"};
+
+module.exports = PauseIcon;
+
+PauseIcon.default = PauseIcon;
+
+
+/***/ }),
+/* 325 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Copyright 2014-2015, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ */
+
+
+
+/**
+ * Similar to invariant but only logs a warning if the condition is not met.
+ * This can be used to log issues in development environments in critical
+ * paths. Removing the logging code for production environments will keep the
+ * same logic and follow the same code paths.
+ */
+
+var warning = function() {};
+
+if (process.env.NODE_ENV !== 'production') {
+  warning = function(condition, format, args) {
+    var len = arguments.length;
+    args = new Array(len > 2 ? len - 2 : 0);
+    for (var key = 2; key < len; key++) {
+      args[key - 2] = arguments[key];
+    }
+    if (format === undefined) {
+      throw new Error(
+        '`warning(condition, format, ...args)` requires a warning ' +
+        'message argument'
+      );
+    }
+
+    if (format.length < 10 || (/^[s\W]*$/).test(format)) {
+      throw new Error(
+        'The warning format should be able to uniquely identify this ' +
+        'warning. Please, use a more descriptive format than: ' + format
+      );
+    }
+
+    if (!condition) {
+      var argIndex = 0;
+      var message = 'Warning: ' +
+        format.replace(/%s/g, function() {
+          return args[argIndex++];
+        });
+      if (typeof console !== 'undefined') {
+        console.error(message);
+      }
+      try {
+        // This error was thrown as a convenience so that you can use this stack
+        // to find the callsite that caused this warning to fire.
+        throw new Error(message);
+      } catch(x) {}
+    }
+  };
+}
+
+module.exports = warning;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ })
 /******/ ]);

@@ -24,7 +24,7 @@ class Footer extends Component {
 
   render (){
     var baseUrl = this.state.relative? this.props.relativePath : '';
-    var iconsBar = this.props.hideIconsBar? '' : <IconsBar backgroundColor={'#eee81a'} color={'#383838'}/>;
+    var iconsBar = this.props.hideIconsBar? '' : <IconsBar backgroundColor={'#383838'} color={'#eee81a'}/>;
     return (
       <div>
       <footer>
@@ -60,8 +60,8 @@ class Footer extends Component {
             </li>
             <li>
               <h3>resources</h3>
-              <a href={baseUrl + "assets/pdf/mts_booth_types.pdf"} target="_blank">booth types</a>
-              <a href={baseUrl + "assets/pdf/mts_timeline_and_graphic_specs.pdf"} target="_blank">timeline &<br/>graphic specs</a>
+              <a href={baseUrl + "resources/booth_types/"} target="_blank">booth types</a>
+              <a href={baseUrl + "resources/timeline_and_graphic_specs/"} target="_blank">timeline &<br/>graphic specs</a>
               <a href={baseUrl + "assets/pdf/sample.pdf"} target="_blank">video walls</a>
               <a href={baseUrl + "assets/pdf/sample.pdf"} target="_blank">how to upload</a>
               <a href={baseUrl + "assets/pdf/sample.pdf"} target="_blank">payment info</a>
@@ -71,7 +71,7 @@ class Footer extends Component {
               <h3>contact</h3>
               <div className="contactBox">
                 <p>call</p>
-                <a href="tel:1 833 667 3842"><b>1-833-morethanspaces</b></a><br/><a href="tel:1 833 667 3842">1-833-667-3842</a>
+                <a href="tel:1 833 667 3842"><b>1-833-MORETHANSPACES</b></a><br/><a href="tel:1 833 667 3842">1-833-667-3842</a>
               </div>
               <div className="contactBox">
               <p>email</p>

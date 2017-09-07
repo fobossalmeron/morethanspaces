@@ -48,7 +48,7 @@ class Carousel extends Component {
         <Slider {...settings}>
           <div>
           <div className="sliderCard">
-            <h3>booths -<b>more than just space!</b></h3>
+            <h3>booths - <b>more than just space!</b></h3>
             <p>We at <b>morethanspaces</b> believe that when it comes to trade shows, a booth is more than
               just a booth. It showcases the history of your brand, by bringing out the uniqueness that
               is you. Our booths are designed with that in mind to offer you the most economical,
@@ -58,7 +58,7 @@ class Carousel extends Component {
           </div>
           <div>
           <div className="sliderCard">
-            <h3>video walls -<b>showcase your story</b></h3>
+            <h3>video walls - <b>showcase your story</b></h3>
             <p>
               We understand that a <b>video wall</b> is more than a displaying for your brand.
               A <b>video wall</b> brings out the vision behind your brand by giving it three-dimensional

@@ -25,13 +25,13 @@ nav{
   ul{
     height:100%;
     float:right;
-    margin: 0;
-    margin-right: 1.5%;
+    margin: 0 1.5% 0 0;
     padding-top:30px;
     transition: .5s ease all;
     li{
       padding: 0 3% 5% 3%;
       height: 100%;
+      display: inline-block;
       float: left;
       list-style: none;
       text-transform: lowercase;
@@ -50,7 +50,6 @@ nav{
         &:hover{
           border-color: $white;
           color:$white;
-          padding-bottom: 4px;
           text-decoration: none;
         }
       }
@@ -100,7 +99,6 @@ nav{
   ul{
     padding-top:12px;
     li{
-      padding: 0 3% 2.5% 3%;
       a{
         color:$black;
         &:visited{
@@ -222,9 +220,9 @@ footer{
 
 .colophon{
   width: 100%;
-      background-color: $yellow;
+      color: $yellow;
       text-align: center;
-      color: $black;
+      background-color: $black;
       float: left;
       padding: 2%;
       font-size: 0.8em;
@@ -624,7 +622,7 @@ section{
     line-height: 1;
     color: $black;
     &:nth-of-type(1){
-      color: $yellow;
+      color: $strongYellow;
     }
     &:nth-of-type(2){
       color: $blue;
@@ -642,6 +640,7 @@ section{
     padding: 2%;
       p{
         margin:0;
+        width: 100%;
       }
   }
 
@@ -666,7 +665,7 @@ section{
       margin-top:0%;
     }
     &:nth-of-type(1){
-      background-color: $yellow;
+      background-color: $strongYellow;
       width:60%;
     }
     &:nth-of-type(2){
@@ -682,7 +681,7 @@ section{
 }
 
 .stepyellowbox{
-  background-color: $yellow;
+  background-color: $strongYellow;
   color: $black;
   border-radius: 2px;
   width:100%;
@@ -720,6 +719,9 @@ section{
     font-size: 1.3em;
     text-decoration-skip: ink;
     cursor: pointer;
+    &:nth-of-type(1){
+      margin-left: 25px;
+    }
     &:hover{
       color:$magenta;
     }
@@ -956,6 +958,7 @@ input[type=text]{
 .react-tabs__tab{
   width: 48%;
   margin-left: 2%;
+  box-sizing: border-box;
   float:left;
   position: relative;
   border-radius: 5px 5px 0 0;
@@ -973,6 +976,7 @@ input[type=text]{
   .frontSlide{
     width: 50px;
     position: absolute;
+    box-sizing: border-box;
     right: -50px;
     overflow: hidden;
     top: 0;
@@ -1654,6 +1658,8 @@ iframe{
     font-family: inherit;
     font-size: 1em;
     font-weight: 700;
+    cursor:pointer;
+    transition: .4s ease all;
       &:hover{
         background-color: darken($magenta, 10%);
       }
@@ -1700,6 +1706,7 @@ iframe{
   h2{
     width:65%;
     float:left;
+    cursor:auto !important;
   }
   ul{
     float:left;
@@ -1746,6 +1753,7 @@ iframe{
       li{
         .service-icon{
           margin: 0 auto 2% auto;
+          fill: currentColor;
           }
         float:left;
         text-align: center;
@@ -1838,6 +1846,7 @@ iframe{
   margin-bottom: 4%;
   p{
     font-weight: 700;
+    font-size: 1em;
     color:$magenta;
   }
   a{
@@ -1990,4 +1999,19 @@ background-color:$white;
     filter: brightness(1) !important;
   }
   color:$black;
+}
+
+#pdfViewer{
+  padding: 0;
+  margin-top: 60px;
+  min-height: 100vh;
+    embed{
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+  }
 }

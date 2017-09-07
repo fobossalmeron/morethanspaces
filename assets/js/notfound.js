@@ -2487,7 +2487,8 @@ module.exports = ReactElement;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 17 */
+/* 17 */,
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2497,7 +2498,6 @@ module.exports = __webpack_require__(125);
 
 
 /***/ }),
-/* 18 */,
 /* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10513,7 +10513,7 @@ var Footer = function (_Component) {
     key: 'render',
     value: function render() {
       var baseUrl = this.state.relative ? this.props.relativePath : '';
-      var iconsBar = this.props.hideIconsBar ? '' : _react2.default.createElement(_IconsBar2.default, { backgroundColor: '#eee81a', color: '#383838' });
+      var iconsBar = this.props.hideIconsBar ? '' : _react2.default.createElement(_IconsBar2.default, { backgroundColor: '#383838', color: '#eee81a' });
       return _react2.default.createElement(
         'div',
         null,
@@ -10590,12 +10590,12 @@ var Footer = function (_Component) {
               ),
               _react2.default.createElement(
                 'a',
-                { href: baseUrl + "assets/pdf/mts_booth_types.pdf", target: '_blank' },
+                { href: baseUrl + "resources/booth_types/", target: '_blank' },
                 'booth types'
               ),
               _react2.default.createElement(
                 'a',
-                { href: baseUrl + "assets/pdf/mts_timeline_and_graphic_specs.pdf", target: '_blank' },
+                { href: baseUrl + "resources/timeline_and_graphic_specs/", target: '_blank' },
                 'timeline &',
                 _react2.default.createElement('br', null),
                 'graphic specs'
@@ -10643,7 +10643,7 @@ var Footer = function (_Component) {
                   _react2.default.createElement(
                     'b',
                     null,
-                    '1-833-morethanspaces'
+                    '1-833-MORETHANSPACES'
                   )
                 ),
                 _react2.default.createElement('br', null),
@@ -10735,7 +10735,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -23341,7 +23341,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(18);
 
 var _Nav = __webpack_require__(95);
 

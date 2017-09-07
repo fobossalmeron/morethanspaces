@@ -1,11 +1,13 @@
 # morethanspaces
 Morethanspaces Website
 
-##Falta en estilos
+##Estilos
 - css transition groups
 - responsive
 - og image
 
-##Answers
+##Funcionalidad
 - send email each time user clicks, store user info in state, send emails
-- status of obj files and images and databases
+- add data to database
+
+##Answers

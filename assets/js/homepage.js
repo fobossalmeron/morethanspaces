@@ -33909,7 +33909,7 @@ var App = function (_Component) {
       discountText: '',
       discountSmallText: '',
       discountBanner: '',
-      maintenance: false
+      maintenance: true
     };
     _this.loadDiscounts = _this.loadDiscounts.bind(_this);
     _this.quitMaintenance = _this.quitMaintenance.bind(_this);
@@ -35244,7 +35244,7 @@ var QuoteTabs = function (_Component) {
       individualVideoWallRender: false,
       renderBoothInstaQuote: false,
       renderVideoWallInstaQuote: false,
-      revealInstaQuote: true,
+      revealInstaQuote: false,
       renderCollectors: true
     };
     _this.clickFor = _this.clickFor.bind(_this);

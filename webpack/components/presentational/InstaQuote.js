@@ -96,7 +96,7 @@ class InstaQuote extends Component {
     var maximumReached = this.state.maxDiscount?  <li>*maximum discount reached</li> : '';
 
     var narrateDiscount = (
-      <li>{'(' + originalPrice + '$ - ' + this.props.discountNumber + this.discountSymbol() + ' discount)'}</li>
+      <li><b>{'(' + originalPrice + '$ - ' + this.props.discountNumber + this.discountSymbol() + ' discount)'}</b></li>
     )
     var isDiscount = this.props.discountOn? narrateDiscount : '';
 

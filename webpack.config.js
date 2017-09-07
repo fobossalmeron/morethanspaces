@@ -4,7 +4,7 @@ const config = {
     entry: {
       homepage: './webpack/homepage.js',
       conventions: './webpack/conventions.js',
-      singlepage: './webpack/singlepage.js'
+      notfound: './webpack/notfound.js'
     },
     output: {
       filename: '[name].js',

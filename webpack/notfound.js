@@ -3,18 +3,18 @@ import {render} from 'react-dom';
 import Nav from './components/presentational/Nav';
 import Footer from './components/presentational/Footer';
 
-class SinglePage extends Component {
+class NotFound extends Component {
 
   render() {
     return (
       <div>
-        <Nav relativePath="/../../../../"/>
-        <Footer relativePath="/../../../../"/>
+        <Nav relativePath="/"/>
+        <Footer relativePath="/"/>
       </div>
     );
   }
 };
 
-export default SinglePage;
+export default NotFound;
 
-render(<SinglePage/>, document.getElementById('content'));
+render(<NotFound/>, document.getElementById('layout'));

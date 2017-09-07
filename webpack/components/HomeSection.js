@@ -10,6 +10,7 @@ class HomeSection extends Component {
     this.state = {
       fullVideo: false,
       playing: true,
+      loop: true,
       videoVolume: 0,
       url: 'assets/video/intro.mp4',
     };
@@ -23,6 +24,7 @@ class HomeSection extends Component {
     this.setState({
       url: "assets/video/full.mp4",
       fullVideo: true,
+      loop: false,
       videoVolume: 1
     }, () => console.log(this.state.fullVideo))
   }
@@ -30,6 +32,7 @@ class HomeSection extends Component {
     this.setState({
       url: 'assets/video/intro.mp4',
       fullVideo: false,
+      loop: true,
       videoVolume: 0
     })
   }
@@ -46,7 +49,7 @@ class HomeSection extends Component {
   render (){
     var showOver = (
       <div className='overVideo'>
-        <h1>trade shows & video walls: <br/><b>more for less</b></h1>
+        <h1>trade shows <br/>& video walls: <br/><b>more for less</b></h1>
         <button onClick={this.playFullVideo}>play video <ArrowForwardIcon className="spaceLeft"/></button>
       </div>
     )
@@ -68,7 +71,7 @@ class HomeSection extends Component {
         {doShowOver}
         <div id="homevideo">
             <div className="video_overlay"></div>
-            <ReactPlayer url={this.state.url} playing={this.state.playing} loop={true} volume={this.state.volume} onEnded={() => this.backToLanding}/>
+            <ReactPlayer url={this.state.url} playing={this.state.playing} loop={this.state.loop} volume={this.state.volume} onEnded={this.backToLanding}/>
         </div>
       </section>
     );

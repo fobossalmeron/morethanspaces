@@ -47,7 +47,6 @@ class VideoWallForm extends Component {
           <div className="blueSuggest">
           <label onClick={() => this.handleOpenModal()}>what&#39;s the difference?</label>
           </div>
-          <BlueSuggest/>
       </div>
     )
     var backToVideoWalls = (
@@ -62,10 +61,10 @@ class VideoWallForm extends Component {
             <label className="noMargin" htmlFor="Las Vegas">Las Vegas</label>
           </div>
           <div className="quoteCheck">
-            <input type="radio" id="else" onClick={this.doShip} name={"inVegas"} defaultChecked={!this.props.eventInVegas} />
-            <label className="noMargin" htmlFor="else">else</label>
+            <input type="radio" id="other" onClick={this.doShip} name={"inVegas"} defaultChecked={!this.props.eventInVegas} />
+            <label className="noMargin" htmlFor="other">other</label>
           </div>
-        <MagentaSuggest/>
+        <BlueSuggest/>
       </div>
     )
     var menuChoice = (this.props.individualVideoWallRender ? backToVideoWalls : videoWallMenu);

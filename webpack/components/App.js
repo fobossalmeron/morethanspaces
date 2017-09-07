@@ -9,6 +9,7 @@ import StaticSection from './presentational/StaticSection';
 import ContactSection from './ContactSection';
 import DiscountBanner from './presentational/DiscountBanner';
 import DiscountsCarousel from './presentational/DiscountsCarousel';
+import ReactPlayer from 'react-player';
 
 class App extends Component {
   constructor(props) {
@@ -72,9 +73,17 @@ class App extends Component {
   render() {
     var maintenanceScreen = (
       <div className="loading">
-        <img src="assets/img/layout/logoshort.svg"/>
+        <div id="loadingvideo">
+            <ReactPlayer url={"assets/video/intro.mp4"} playing={true} loop={true} volume={0}/>
+        </div>
+        <img src="assets/img/layout/logo.svg"/>
+        <img src="assets/img/layout/type.svg"/>
         <h2>Stay tuned</h2>
-        <p>we&#39;re launching soon</p>
+        <p>We are re-designing the site to be the <em>Uber</em> of trade show both and video wall rentals</p>
+        <p>Can’t wait?<br/>
+        call: <a href="tel:1 833 667 3842"><b>1-833-MORETHANSPACES</b><br/>(1-833-667-3842)</a><br/>
+        email: <a href="mailto:hello@morethanspaces.com"><b>hello@morethanspaces.com</b></a>
+        </p>
         <button onClick={this.quitMaintenance}>quit</button>
       </div>
     )

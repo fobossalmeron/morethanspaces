@@ -97,7 +97,12 @@ class CollectBeforeQuote extends Component {
         validate={({ name, email, phone }) => {
           return {
             name: !name ? '*A name is required' : undefined,
-            phone: !phone ? '*A phone is required' : undefined,
+            phone:
+              !phone ?
+            '*A phone is required' :
+              !phone.match(/^(?=.*\d)[\d ]+$/)?
+            '*Please enter a valid phone number' :
+            undefined,
             email:
               !email ?
             '*The email cannot be empty' :

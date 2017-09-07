@@ -35,7 +35,7 @@ class StaticSection extends Component {
             <BoothRentalsIcon className="service-icon"/>
             <h3>booth rentals</h3>
             <p>If flexibility is what you’re looking for, we have multiple ready to go solutions
-            for any budget. Our booth rentals can save you <b>up to 65%</b> when compared to buying. We
+            for any budget. Our booth rentals <b>can save you up to 65%</b> when compared to buying. We
             have plenty of options in all sizes and designs to select from, it’s up to you! Don’t
             worry, if your trade show is somewhere other than Las Vegas, our booth rentals can be
             shipped to <b>anywhere you need it.</b></p>
@@ -98,7 +98,7 @@ class StaticSection extends Component {
           <div id="stepbox1" className="stepbox"><b>1:</b><p>communicate your need<br/>and choose</p></div>
           <div id="stepbox2" className="stepbox"><b>2:</b><p>we create and<br/>make it happen</p></div>
           <div id="stepbox3" className="stepbox"><b>3:</b><p>we deliver<br/>…and take care of it all</p></div>
-          <div className="stepblackbox"><b>best price, best quality</b><p>In most cases we offer the <b>best rates</b>. In fact, we will try to match or beat any price <b>up to 20%</b>.</p></div>
+          <div className="stepblackbox"><b className="arbitraryPink">best price, best quality</b><p>we try to <b>match or beat any price</b> up to <b>20%</b></p></div>
         </div>
         <div className="half-card">
           <h2 className="motto"><b>motto</b></h2>
@@ -131,8 +131,8 @@ class StaticSection extends Component {
           <li className="clientNovartis">Novartis</li>
           <li className="clientDiageo">Diageo</li>
           <li className="clientKraft">Kraft</li>
-          <li className="clientBMW">BMW</li>
           <li className="clientPepsico">Pepsico</li>
+          <li className="clientBMW">BMW</li>
           <li className="clientBoss">Boss</li>
         </ul>
         <p className="manyMore">...and many more</p>

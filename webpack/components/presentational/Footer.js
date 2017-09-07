@@ -60,7 +60,7 @@ class Footer extends Component {
             </li>
             <li>
               <h3>resources</h3>
-              <a href={baseUrl + "assets/pdf/mts_booth_types.pdf"} download="mts_booth_types" target="_blank">booth types</a>
+              <a href={baseUrl + "assets/pdf/mts_booth_types.pdf"} target="_blank">booth types</a>
               <a href={baseUrl + "assets/pdf/mts_timeline_and_graphic_specs.pdf"} target="_blank">timeline &<br/>graphic specs</a>
               <a href={baseUrl + "assets/pdf/sample.pdf"} target="_blank">video walls</a>
               <a href={baseUrl + "assets/pdf/sample.pdf"} target="_blank">how to upload</a>

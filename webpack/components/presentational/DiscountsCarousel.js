@@ -8,17 +8,29 @@ import CrossIcon from 'svg-react-loader?name=CrossIcon!../../../assets/img/layou
 function SampleNextArrow(props) {
   const {className, style, onClick} = props
   return (
-    <div id={"nextArrow"} onClick={onClick}>
-      <Arrow className={"arrow-icon next-arrow"} forward color={"#ec3092"} width={"30px"}/>
-    </div>
+      <div onClick={onClick}>
+        <svg className={'arrow-icon next-arrow'} width={'50'} height={'50'} viewBox={'0 0 32 32'}>
+          <circle fill="#ffffff" className={'arrow-icon--circle'} cx={'16'} cy={'16'} r={'15.12'}/>
+          <g fill="none" stroke={'#ec3092'} strokeWidth={'1'} strokeLinejoin="round" strokeMiterlimit="10">
+            <circle className={'arrow-icon--circle'} cx={'16'} cy={'16'} r={'15.12'}/>
+            <path className={'arrow-icon--arrow'} d={'M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98'}/>
+          </g>
+        </svg>
+      </div>
   );
 }
 
 function SamplePrevArrow(props) {
   const {className, style, onClick} = props
   return (
-    <div id={"nextArrow"} onClick={onClick}>
-      <Arrow className={"arrow-icon"} color={"#ec3092"} width={"30px"}/>
+    <div onClick={onClick}>
+      <svg className={'arrow-icon back-arrow'} width={'50'} height={'50'} viewBox={'0 0 32 32'}>
+        <circle fill="#ffffff" className={'arrow-icon--circle'} cx={'16'} cy={'16'} r={'15.12'}/>
+        <g fill="none" stroke={'#ec3092'} strokeWidth={'1'} strokeLinejoin="round" strokeMiterlimit="10">
+          <circle className={'arrow-icon--circle'} cx={'16'} cy={'16'} r={'15.12'}/>
+          <path className={'arrow-icon--arrow'} d={'M15.9,22.1L9.8,16l6.1-6.1 M23.8,16h-14'}/>
+        </g>
+      </svg>
     </div>
   );
 }

@@ -43,18 +43,18 @@ class ContactSection extends Component {
       <section id="contact">
         <h2><b>contact</b></h2>
           <div className="half-card">
-            <p>Have questions or want expert advise?<br/>
-            We are happy to help<br/>
+            <p><b>Have questions or want expert advise?</b><br/>
+            We are happy to help.<br/>
             Friendly service. No pressure sale.</p>
           </div>
           <div className="half-card contact-different">
-            <h3>call us</h3>
-            <a href="tel:1 833 667 3842"><b>1-833-morethanspaces</b><br/>(1-833-667-3842)</a>
-            <h3>email us</h3>
+            <h3>call</h3>
+            <a href="tel:1 833 667 3842"><b>1-833-MORETHANSPACES</b><br/>(1-833-667-3842)</a>
+            <h3>email</h3>
             <a href="mailto:hello@morethanspaces.com"><b>hello@morethanspaces.com</b></a>
           </div>
         <div className={messageClass}>
-          <h3>message us</h3>
+          <h3>message</h3>
           <Form
             onSubmit={(values) => {
               console.log('Form Submitted Succesfully with:', values)

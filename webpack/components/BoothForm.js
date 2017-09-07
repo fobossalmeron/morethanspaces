@@ -76,7 +76,7 @@ class BoothForm extends Component {
           <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="SplitIsland" checkFor="split island" defaultChecked={this.props.selectedSplitIsland} doubleLine="doubleLine"/>
           <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="Peninsula" defaultChecked={this.props.selectedPeninsula} checkFor="peninsula"/>
           <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" noMarginRight nameFor="Inline" defaultChecked={this.props.selectedInline} checkFor="inline"/>
-        <BlueSuggest/>
+        <MagentaSuggest/>
       </div>
     )
     var backToBooths = (
@@ -94,8 +94,8 @@ class BoothForm extends Component {
             <label className="noMargin" htmlFor="Las Vegas">Las Vegas</label>
           </div>
           <div className="quoteCheck">
-            <input type="radio" id="else" onClick={this.doShip} name={"inVegas"} defaultChecked={!this.props.eventInVegas} />
-            <label className="noMargin" htmlFor="else">else</label>
+            <input type="radio" id="other" onClick={this.doShip} name={"inVegas"} defaultChecked={!this.props.eventInVegas} />
+            <label className="noMargin" htmlFor="other">other</label>
           </div>
         <label>stand out even more</label>
           <div className="quoteCheck">
@@ -104,6 +104,7 @@ class BoothForm extends Component {
           </div>
           <CheckBox onClick={this.setVideoWall} defaultChecked={this.props.addVideoWall} inputType="checkbox" nameFor="else" checkFor="add videowall"/>
           <MagentaSuggest/>
+          <BlueSuggest/>
       </div>
     )
     var menuChoice = (this.props.individualBoothRender ? backToBooths : boothMenu);

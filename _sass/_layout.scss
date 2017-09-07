@@ -378,7 +378,7 @@ section{
   left: 15%;
   right: 15%;
   bottom: 10%;
-  overflow: scroll;
+  overflow: hidden;
   border-radius: 2px;
   outline: none;
   cursor:auto;
@@ -393,6 +393,7 @@ section{
   float:left;
   width:100%;
   min-height: 0;
+  padding: 1.5% 5%;
   .sliderCard{
     display: inline-block;
     position: relative;
@@ -411,6 +412,7 @@ section{
     h3{
       font-weight:$base-font-weight;
       text-align: left;
+      margin-bottom: 1%;
     }
     p{
       text-align: left;
@@ -597,7 +599,7 @@ section{
 }
 
 #about{
-  background-color: $white;
+  background-color: $grey;
   h1{
    color:$magenta;
    margin-bottom: 0;
@@ -701,6 +703,7 @@ section{
   }
   h3{
     color:$yellow;
+    font-size:1.3em;
     &:nth-of-type(2){
       clear:left;
     }
@@ -713,9 +716,8 @@ section{
   }
   a{
     color:$magenta;
-    margin-top: 10px;
     float: left;
-    font-size: 1.2em;
+    font-size: 1.3em;
     text-decoration-skip: ink;
     cursor: pointer;
     &:hover{
@@ -822,7 +824,7 @@ form{
     float:left;
     width:25%;
     h3{
-      margin-bottom: 6%;
+      margin-bottom: 18%;
     }
     img{
       width: 50%;
@@ -869,7 +871,6 @@ form{
   h2{
     margin:0px;
     font-weight: 700;
-    padding-top: 15px;
     float:left;
     cursor:pointer;
   }
@@ -904,9 +905,10 @@ form{
      right: 2px;
      top: 7px;
      opacity: 0;
+     transition: .4s ease all;
    }
    &:hover::after {
-     opacity: 0.3;
+     opacity: 1;
    }
  }
  input[type=checkbox], input[type=radio] {
@@ -924,7 +926,7 @@ form{
       background-color: $yellow;
       color:$black;
      &:after {
-       opacity: 0.1;
+       opacity: 1;
      }
    }
  }
@@ -957,7 +959,7 @@ input[type=text]{
   float:left;
   position: relative;
   border-radius: 5px 5px 0 0;
-  padding: 15px 0px 10px 35px;
+  padding: 30px 0px 10px 35px;
   background-color: $magenta;
   position:relative;
   color:$black;
@@ -1002,12 +1004,14 @@ input[type=text]{
     &::after{
       content: '';
       position: absolute;
-      height: 100%;
-      width: 5px;
-      right: 0;
+      height: 20px;
+      width: 20px;
+      right: 20px;
+      top: 30px;
+      border-radius: 50% 50%;
       bottom: 0;
-      background: $blue;
-      box-shadow: 0 0 5px $blue;
+      background: $magenta;
+      box-shadow: 0 0 5px $magenta;
     }
   }
 }
@@ -1084,6 +1088,7 @@ input[type=text]{
 .manyMore{
   float:right;
   margin: 2% 4% 0 0;
+  font-weight: 700;
 }
 
 .instaQuoteForm {
@@ -1294,6 +1299,10 @@ input[type=text]{
   position: relative;
   width: 100%;
 
+  .next-arrow{
+    right:0;
+  }
+
   .insertPadding label::after{
     padding: 4px 10px;
   }
@@ -1453,7 +1462,7 @@ iframe{
 }
 
 .next-arrow{
-  right: 3px;
+  right: -20px;
 }
 .back-arrow{
   left: -20px;
@@ -1537,6 +1546,7 @@ iframe{
 
 #content{
   column-count: 2;
+  column-gap: 40px;
   h1{
     color:$yellow;
     font-weight: 700;
@@ -1696,7 +1706,11 @@ iframe{
     clear:none;
     width: 35%;
     font-size: .4em;
-    margin-top: 5.8%;
+    margin-top: 4%;
+    font-weight: 300;
+    b{
+      font-weight: 700;
+    }
   }
 }
 
@@ -1754,20 +1768,29 @@ iframe{
 }
 
 .loading{
-  padding: 10%;
+  padding: 2% 10%;
   min-height: 100vh;
-  background-color: $yellow;
+  background-color: transparent;
   width: 100%;
   text-align: left;
+  color:$white;
+    p{
+      width: 350px;
+    }
     h2{
         font-size: 3em;
         font-weight: 700;
         margin: 0;
+        padding-bottom: 10px;
       }
     img{
       margin-bottom: 2%;
-      width: 170px;
+      width: 10%;
       position: relative;
+      &:nth-of-type(2){
+        -webkit-filter: brightness(20);
+        filter: brightness(20);
+      }
     }
     button{
       position: absolute;
@@ -1778,6 +1801,33 @@ iframe{
       height: 30px;
       box-sizing: border-box;
     }
+    a{
+      color:$magenta;
+      &:hover{
+      }
+      &:visited{
+        color:$magenta;
+      }
+    }
+}
+
+#loadingvideo{
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.2%;
+  overflow: hidden;
+  display: block;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+
+  video{
+    position: absolute;
+    z-index: 0;
+    height:100%;
+    width:100%;
+  }
 }
 
 .contactBox{
@@ -1918,6 +1968,7 @@ background-color:$white;
   color: $white;
   h2{
     color:$yellow;
+    font-weight: 700;
   }
 }
 .conventionBackground{
@@ -1928,4 +1979,15 @@ background-color:$white;
 .normalizeCarousel{
   padding-bottom: 5% !important;
   background-color: $black !important;
+}
+.arbitraryPink{
+  color:$magenta;
+}
+
+.noBackground{
+  img{
+    -webkit-filter: brightness(1) !important;
+    filter: brightness(1) !important;
+  }
+  color:$black;
 }

@@ -55,7 +55,7 @@ class BoothForm extends Component {
       <div>
       <label>booth size</label>
         <select onChange={this.handleWidthChange} value={this.props.boothSizeWidth}>
-          <option value="All">All</option>
+          <option value="All">width</option>
           <option value="10">10ft</option>
           <option value="20">20ft</option>
           <option value="30">30ft</option>
@@ -64,7 +64,7 @@ class BoothForm extends Component {
         </select>
         <p>x</p>
         <select onChange={this.handleLengthChange} value={this.props.boothSizeLength}>
-          <option value="All">All</option>
+          <option value="All">length</option>
           <option value="10">10ft</option>
           <option value="20">20ft</option>
           <option value="30">30ft</option>

@@ -1,31 +1,272 @@
-/**
-Full Down
-**/
-@include media-query($full-down) {
+@include media-query($x1100-down) {
+  section{
+    padding: 3%;
+  }
+  footer{
+    padding:3%;
+    ul li{
+      &:nth-of-type(1){
+        width:15.5%;
+      }
+      &:nth-of-type(2){
+        width:27%;
+        padding-right: 2%;
+      }
+      &:nth-of-type(3){
+        width:19.5%;
+      }
+      &:nth-of-type(4){
+        width:38%;
+        padding-right: 0;
+      }
+    }
+  }
+  .instaQuoteForm{
+    margin-right:2%;
+    select{
+      width:100%;
+    }
+    p{
+      display: none;
+    }
+  }
+  #boothGrid{
+    margin-right: 0;
+    width: 75%;
+  }
+  .discounts-menu{
+    margin-left: 10%;
+  }
+  nav ul{
+    margin-right: 0;
+  }
+  .quoteCheck{
+    label{
+      padding: 5% 6% 3% 6%;
+      &:before{
+        right: 8px;
+      }
+    }
+    width: 100%;
+  }
+}
+
+@include media-query($x1000-down) {
+  footer{
+    padding:3%;
+    ul li{
+      &:nth-of-type(1){
+        width:23%;
+      }
+      &:nth-of-type(2){
+        width:43%;
+        padding-right: 4%;
+      }
+      &:nth-of-type(3){
+        width:33%;
+      }
+      &:nth-of-type(4){
+        width:100%;
+        padding-right: 0;
+      }
+    }
+  }
+  .contactBox {
+    padding: 1% 2%;
+    margin-bottom: 2%;
+  }
+  .singleBooth{
+    .singleInfo {
+      width: 50%;
+      padding-left: 3%;
+      padding-right: 3%;
+  }
+  }
+  .singleImage {
+    width: 50%;
+  }
+  .boothGridItem{
+        min-height: 190px;
+        width: 48%;
+        &:nth-child(3n+3){
+          margin-right:1%;
+        }
+        &:nth-child(even){
+          margin-right:0;
+        }
+  }
+  #boothGrid{
+        width: 77%;
+        margin-right:0px;
+  }
+  nav ul  {
+        transform: translateX(-100%);
+        position: fixed;
+        padding: 5%;
+        width: 100%;
+        z-index: -2;
+        background-color: $magenta;
+        height: 100%;
+        top: 100px;
+        margin: 0;
+        left: 0;
+        bottom: 0px;
+        transform: translateX(-100%);
+    li{
+      float: right;
+      height: auto;
+      clear: both;
+      padding: 2% 5%;
+      font-size:1.5em;
+      text-align: left;
+      a{
+        font-weight: 700;
+      }
+    }
+  }
+  .menuButton{
+    display:block;
+  }
+  .navScroll {
+    ul{
+      margin-top: 0;
+      top:60px;
+    }
+  }
+}
+
+@include media-query($x900-down) {
 
 }
-/**
-Sidebar
-**/
-@include media-query($sidebar-down) {
 
+@include media-query($x800-down) {
+  #slider .sliderCard{
+    width:80%;
+  }
+  .social-list a{
+    &:nth-of-type(odd) {
+      clear: none;
+    }
+  }
+  footer{
+    padding:3%;
+    ul li{
+      &:nth-of-type(1){
+        width:100%;
+      }
+      &:nth-of-type(2){
+        width:100%;
+        padding-right: 0;
+      }
+      &:nth-of-type(3){
+        width:100%;
+      }
+    }
+  }
+  .hideOnMobile{
+    display: none;
+  }
+  #services{
+    .full-service {
+      padding: inherit;
+    }
+    ul li {
+      width:100%;
+    }
+  }
+
+  #clients ul li {
+    width: 46%;
+    margin-right: 8%;
+
+    &:nth-child(3n+3){
+      margin-right: 8%;
+    }
+    &:nth-child(even){
+      margin-right: 0;
+    }
+  }
+
+  .half-card{
+    width: 100%;
+    &:nth-of-type(2n+2) {
+      padding: 0
+    }
+  }
+  .react-tabs__tab{
+    .frontSlide{
+      right:-46px;
+    }
+    .backSlide{
+      left: -46px;
+    }
+  }
+  .clickFor {
+    font-size: 12px;
+    bottom: 35px;
+  }
+  #products h2{
+    font-size: 1.3em;
+  }
+  #boothGrid{
+        width: 76%;
+        margin-right:0px;
+  }
+  .instaQuoteForm{
+    margin-right:1%;
+  }
+  .iconsBar{
+    ul li{
+      width:50%;
+      font-size: .8em;
+      margin-bottom: 5%;
+      svg{
+        padding:3%;
+      }
+    }
+  }
 }
 
-/**
-Tablet Down
-**/
-@include media-query($tablet-down) {
-
+@include media-query($x700-down) {
+  #boothGrid{
+    width:70%
+  }
 }
-/**
-Smartphone Down
-**/
-@include media-query($mobile-down) {
 
+@include media-query($x600-down) {
+  #slider .sliderCard{
+    width:90%;
+  }
+  .boothGridItem{
+        min-height: 190px;
+        width: 100%;
+  }
+  #boothGrid{
+    width:60%
+  }
 }
-/**
-Too Small
-**/
-@include media-query($too-small) {
 
+@include media-query($x500-down) {
+  #boothGrid{
+    width:59%
+  }
+  .discounts-menu{
+    display: none;
+  }
+  #home h1{
+    font-size:2.4em;
+  }
+  .iconsBar{
+    ul li{
+      svg{
+        padding:8%;
+      }
+    }
+  }
+}
+
+@include media-query($x400-down) {
+  #boothGrid{
+    width:49%
+  }
 }

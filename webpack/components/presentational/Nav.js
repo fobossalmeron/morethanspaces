@@ -1,13 +1,26 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import HamburgerIcon from 'svg-react-loader?name=HamburgerIcon!../../../assets/img/layout/icons/hamburger.svg';
 
 class Nav extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      relative: false
+      relative: false,
+      menuOn: false
     };
     this.navScrollMagic = this.navScrollMagic.bind(this);
+    this.doToggleMenu = this.doToggleMenu.bind(this);
+    this.doHideNav = this.doHideNav.bind(this);
+  }
+
+  doToggleMenu(){
+    this.setState({ menuOn: !this.state.menuOn})
+    document.body.classList.toggle('restrictBody')
+  }
+  doHideNav(){
+    this.setState({ menuOn: false});
+    document.body.classList.remove('restrictBody')
   }
 
   componentDidMount(){
@@ -16,6 +29,8 @@ class Nav extends Component {
     } else{
       this.navScrollMagic();
     }
+  }
+  componentWillReceiveProps(nextProps) {
   }
 
   navScrollMagic(){
@@ -58,17 +73,19 @@ class Nav extends Component {
       </div>
     );
     var isThereDiscount = (this.props.discountOn ? discountBlock : undefined);
+    var isActive = this.state.menuOn? "menuActive" : "";
 
     return (
       <nav>
         <a href={baseUrl + "#home"}><img src={baseUrl + "assets/img/layout/logo.svg"}/><img src={baseUrl + "assets/img/layout/type.svg"}/></a>
         {isThereDiscount}
-        <ul>
-          <li onClick={() => this.handleNavClick(0)}><a href={baseUrl + "#discountbanner"}>booths</a></li>
-          <li onClick={() => this.handleNavClick(1)}><a href={baseUrl + "#discountbanner"}>videowalls</a></li>
-          <li><a href={baseUrl + "#services"}>services</a></li>
-          <li><a href={baseUrl + "#about"}>about</a></li>
-          <li><a href={baseUrl + "#contact"}>contact</a></li>
+        <HamburgerIcon onClick={this.doToggleMenu} className={"menuButton " + isActive}/>
+        <ul className={isActive}>
+          <li onClick={() => {this.handleNavClick(0); this.doHideNav()}}><a href={baseUrl + "#discountbanner"}>booths</a></li>
+          <li onClick={() => {this.handleNavClick(1); this.doHideNav()}}><a href={baseUrl + "#discountbanner"}>videowalls</a></li>
+          <li onClick={() => this.doHideNav()}><a href={baseUrl + "#services"}>services</a></li>
+          <li onClick={() => this.doHideNav()}><a href={baseUrl + "#about"}>about</a></li>
+          <li onClick={() => this.doHideNav()}><a href={baseUrl + "#contact"}>contact</a></li>
         </ul>
       </nav>
     );

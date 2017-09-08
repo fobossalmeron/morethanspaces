@@ -15,6 +15,7 @@ class App extends Component {
   constructor(props) {
     super(props);
       this.state = {
+        menuOn: false,
         tabIndex: 0,
         discountOn: 'off',
         discountNumber: '',
@@ -27,6 +28,13 @@ class App extends Component {
     this.loadDiscounts = this.loadDiscounts.bind(this);
     this.quitMaintenance = this.quitMaintenance.bind(this);
     this.initScrollMagic = this.initScrollMagic.bind(this);
+  }
+
+  toggleMenu(){
+    this.setState({ menuOn: !this.state.menuOn})
+  }
+  hideNav(){
+    this.setState({ menuOn: false});
   }
 
   loadDiscounts () {
@@ -94,7 +102,10 @@ class App extends Component {
              discountNumber={this.state.discountNumber}
              discountType={this.state.discountType}
              discountText={this.state.discountText}
-             discountSmallText={this.state.discountSmallText}/>
+             discountSmallText={this.state.discountSmallText}
+             toggleMenu={this.toggleMenu.bind(this)}
+             hideNav={this.hideNav.bind(this)}
+             menuOn={this.state.menuOn}/>
         <HomeSection />
         <Carousel />
         <DiscountBanner discountBanner={this.state.discountBanner}/>

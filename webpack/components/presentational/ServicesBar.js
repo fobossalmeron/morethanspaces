@@ -5,7 +5,7 @@ import AudioVisualIcon from 'svg-react-loader?name=BoothRentalsIcon!../../../ass
 import CustomRentalBoothIcon from 'svg-react-loader?name=CustomRentalBoothIcon!../../../assets/img/layout/icons/customrentalbooths.svg';
 import AssembleDismantleIcon from 'svg-react-loader?name=AssembleDismantleIcon!../../../assets/img/layout/icons/assembledismantle.svg';
 import StorageShippingIcon from 'svg-react-loader?name=StorageShippingIcon!../../../assets/img/layout/icons/storageshipping.svg';
-import FullServiceIcon from 'svg-react-loader?name=FullServiceIcon!../../../assets/img/layout/icons/fullservice.svg';
+import VideoWallIcon from 'svg-react-loader?name=VideoWallIcon!../../../assets/img/layout/icons/videowall.svg';
 
 class IconsBar extends Component {
 
@@ -26,7 +26,7 @@ class IconsBar extends Component {
           custom booth<br/>design
         </li>
         <li style={{color:this.props.color}}>
-        <BoothRentalsIcon className="service-icon"/>
+        <VideoWallIcon className="service-icon"/>
           videowall<br/>wall
         </li>
         <li style={{color:this.props.color}}>

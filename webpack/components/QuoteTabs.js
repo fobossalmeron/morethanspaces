@@ -153,7 +153,7 @@ class QuoteTabs extends Component {
         <TabList>
           <Tab>
             <div className={"frontSlide backSlide"}><span></span></div>
-            <h2 id="booths">{this.clickFor(0)}trade show booths</h2>
+            <h2 id="booths">{this.clickFor(0)}<div className="hideOnMobile">trade show </div>booths</h2>
             <div className={"frontSlide"}><span></span></div>
           </Tab>
           <Tab>

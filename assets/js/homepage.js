@@ -11895,6 +11895,10 @@ var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _hamburger = __webpack_require__(326);
+
+var _hamburger2 = _interopRequireDefault(_hamburger);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -11912,13 +11916,28 @@ var Nav = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this, props));
 
     _this.state = {
-      relative: false
+      relative: false,
+      menuOn: false
     };
     _this.navScrollMagic = _this.navScrollMagic.bind(_this);
+    _this.doToggleMenu = _this.doToggleMenu.bind(_this);
+    _this.doHideNav = _this.doHideNav.bind(_this);
     return _this;
   }
 
   _createClass(Nav, [{
+    key: 'doToggleMenu',
+    value: function doToggleMenu() {
+      this.setState({ menuOn: !this.state.menuOn });
+      document.body.classList.toggle('restrictBody');
+    }
+  }, {
+    key: 'doHideNav',
+    value: function doHideNav() {
+      this.setState({ menuOn: false });
+      document.body.classList.remove('restrictBody');
+    }
+  }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
       var _this2 = this;
@@ -11931,6 +11950,9 @@ var Nav = function (_Component) {
         this.navScrollMagic();
       }
     }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {}
   }, {
     key: 'navScrollMagic',
     value: function navScrollMagic() {
@@ -11987,6 +12009,7 @@ var Nav = function (_Component) {
         )
       );
       var isThereDiscount = this.props.discountOn ? discountBlock : undefined;
+      var isActive = this.state.menuOn ? "menuActive" : "";
 
       return _react2.default.createElement(
         'nav',
@@ -11998,13 +12021,14 @@ var Nav = function (_Component) {
           _react2.default.createElement('img', { src: baseUrl + "assets/img/layout/type.svg" })
         ),
         isThereDiscount,
+        _react2.default.createElement(_hamburger2.default, { onClick: this.doToggleMenu, className: "menuButton " + isActive }),
         _react2.default.createElement(
           'ul',
-          null,
+          { className: isActive },
           _react2.default.createElement(
             'li',
             { onClick: function onClick() {
-                return _this3.handleNavClick(0);
+                _this3.handleNavClick(0);_this3.doHideNav();
               } },
             _react2.default.createElement(
               'a',
@@ -12015,7 +12039,7 @@ var Nav = function (_Component) {
           _react2.default.createElement(
             'li',
             { onClick: function onClick() {
-                return _this3.handleNavClick(1);
+                _this3.handleNavClick(1);_this3.doHideNav();
               } },
             _react2.default.createElement(
               'a',
@@ -12025,7 +12049,9 @@ var Nav = function (_Component) {
           ),
           _react2.default.createElement(
             'li',
-            null,
+            { onClick: function onClick() {
+                return _this3.doHideNav();
+              } },
             _react2.default.createElement(
               'a',
               { href: baseUrl + "#services" },
@@ -12034,7 +12060,9 @@ var Nav = function (_Component) {
           ),
           _react2.default.createElement(
             'li',
-            null,
+            { onClick: function onClick() {
+                return _this3.doHideNav();
+              } },
             _react2.default.createElement(
               'a',
               { href: baseUrl + "#about" },
@@ -12043,7 +12071,9 @@ var Nav = function (_Component) {
           ),
           _react2.default.createElement(
             'li',
-            null,
+            { onClick: function onClick() {
+                return _this3.doHideNav();
+              } },
             _react2.default.createElement(
               'a',
               { href: baseUrl + "#contact" },
@@ -25692,7 +25722,7 @@ var DiscountsCarousel = function (_Component) {
             onRequestClose: this.handleCloseModal,
             closeTimeoutMS: 500,
             contentLabel: 'Minimal Modal Example' },
-          _react2.default.createElement('img', { src: "assets/img/layout/carousel/carousel" + this.state.modalIndex + ".jpg" }),
+          _react2.default.createElement('img', { src: baseUrl + "assets/img/layout/carousel/carousel" + this.state.modalIndex + ".jpg" }),
           _react2.default.createElement(_cross2.default, { className: 'modalCloseButton', onClick: this.handleCloseModal })
         )
       );
@@ -33902,6 +33932,7 @@ var App = function (_Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
     _this.state = {
+      menuOn: false,
       tabIndex: 0,
       discountOn: 'off',
       discountNumber: '',
@@ -33918,6 +33949,16 @@ var App = function (_Component) {
   }
 
   _createClass(App, [{
+    key: 'toggleMenu',
+    value: function toggleMenu() {
+      this.setState({ menuOn: !this.state.menuOn });
+    }
+  }, {
+    key: 'hideNav',
+    value: function hideNav() {
+      this.setState({ menuOn: false });
+    }
+  }, {
     key: 'loadDiscounts',
     value: function loadDiscounts() {
       var xhr = new XMLHttpRequest();
@@ -34035,7 +34076,10 @@ var App = function (_Component) {
           discountNumber: this.state.discountNumber,
           discountType: this.state.discountType,
           discountText: this.state.discountText,
-          discountSmallText: this.state.discountSmallText }),
+          discountSmallText: this.state.discountSmallText,
+          toggleMenu: this.toggleMenu.bind(this),
+          hideNav: this.hideNav.bind(this),
+          menuOn: this.state.menuOn }),
         _react2.default.createElement(_HomeSection2.default, null),
         _react2.default.createElement(_Carousel2.default, null),
         _react2.default.createElement(_DiscountBanner2.default, { discountBanner: this.state.discountBanner }),
@@ -34192,7 +34236,7 @@ var BoothForm = function (_Component) {
           _react2.default.createElement(
             'option',
             { value: 'All' },
-            'All'
+            'width'
           ),
           _react2.default.createElement(
             'option',
@@ -34231,7 +34275,7 @@ var BoothForm = function (_Component) {
           _react2.default.createElement(
             'option',
             { value: 'All' },
-            'All'
+            'length'
           ),
           _react2.default.createElement(
             'option',
@@ -35437,7 +35481,12 @@ var QuoteTabs = function (_Component) {
                 'h2',
                 { id: 'booths' },
                 this.clickFor(0),
-                'trade show booths'
+                _react2.default.createElement(
+                  'div',
+                  { className: 'hideOnMobile' },
+                  'trade show '
+                ),
+                'booths'
               ),
               _react2.default.createElement(
                 'div',
@@ -36218,7 +36267,11 @@ var StaticSection = function (_Component) {
               _react2.default.createElement(
                 'li',
                 { className: 'full-service service7' },
-                _react2.default.createElement(_fullservice2.default, { className: 'service-icon' }),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'service-container' },
+                  _react2.default.createElement(_fullservice2.default, { className: 'service-icon' })
+                ),
                 _react2.default.createElement(
                   'h3',
                   null,
@@ -36293,7 +36346,11 @@ var StaticSection = function (_Component) {
               _react2.default.createElement(
                 'li',
                 { className: 'service1' },
-                _react2.default.createElement(_boothrentals2.default, { className: 'service-icon' }),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'service-container' },
+                  _react2.default.createElement(_boothrentals2.default, { className: 'service-icon' })
+                ),
                 _react2.default.createElement(
                   'h3',
                   null,
@@ -36319,7 +36376,11 @@ var StaticSection = function (_Component) {
               _react2.default.createElement(
                 'li',
                 { className: 'service2' },
-                _react2.default.createElement(_audiovisual2.default, { className: 'service-icon' }),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'service-container' },
+                  _react2.default.createElement(_audiovisual2.default, { className: 'service-icon' })
+                ),
                 _react2.default.createElement(
                   'h3',
                   null,
@@ -36356,7 +36417,11 @@ var StaticSection = function (_Component) {
               _react2.default.createElement(
                 'li',
                 { className: 'service3' },
-                _react2.default.createElement(_customrentalbooths2.default, { className: 'service-icon' }),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'service-container' },
+                  _react2.default.createElement(_customrentalbooths2.default, { className: 'service-icon' })
+                ),
                 _react2.default.createElement(
                   'h3',
                   null,
@@ -36389,7 +36454,11 @@ var StaticSection = function (_Component) {
               _react2.default.createElement(
                 'li',
                 { className: 'service4' },
-                _react2.default.createElement(_customboothdesign2.default, { className: 'service-icon' }),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'service-container' },
+                  _react2.default.createElement(_customboothdesign2.default, { className: 'service-icon' })
+                ),
                 _react2.default.createElement(
                   'h3',
                   null,
@@ -36420,7 +36489,11 @@ var StaticSection = function (_Component) {
               _react2.default.createElement(
                 'li',
                 { className: 'service5' },
-                _react2.default.createElement(_assembledismantle2.default, { className: 'service-icon' }),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'service-container' },
+                  _react2.default.createElement(_assembledismantle2.default, { className: 'service-icon' })
+                ),
                 _react2.default.createElement(
                   'h3',
                   null,
@@ -36447,7 +36520,11 @@ var StaticSection = function (_Component) {
               _react2.default.createElement(
                 'li',
                 { className: 'service6' },
-                _react2.default.createElement(_storageshipping2.default, { className: 'service-icon' }),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'service-container' },
+                  _react2.default.createElement(_storageshipping2.default, { className: 'service-icon' })
+                ),
                 _react2.default.createElement(
                   'h3',
                   null,
@@ -39893,6 +39970,25 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = warning;
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 326 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(1);
+
+function HamburgerIcon (props) {
+    return React.createElement("svg",props,[React.createElement("line",{"x1":"5","y1":"18.3","x2":"95","y2":"18.3","key":0}),React.createElement("line",{"x1":"5","y1":"50","x2":"95","y2":"50","key":1}),React.createElement("line",{"x1":"5","y1":"81.7","x2":"95","y2":"81.7","key":2})]);
+}
+
+HamburgerIcon.displayName = "HamburgerIcon";
+
+HamburgerIcon.defaultProps = {"version":"1.1","x":"0px","y":"0px","viewBox":"0 0 100 100","xmlSpace":"preserve"};
+
+module.exports = HamburgerIcon;
+
+HamburgerIcon.default = HamburgerIcon;
+
 
 /***/ })
 /******/ ]);

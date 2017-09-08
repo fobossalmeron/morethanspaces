@@ -97,7 +97,7 @@ class DiscountsCarousel extends Component {
            onRequestClose={this.handleCloseModal}
            closeTimeoutMS={500}
            contentLabel="Minimal Modal Example">
-           <img src={"assets/img/layout/carousel/carousel" + this.state.modalIndex + ".jpg"} />
+           <img src={baseUrl + "assets/img/layout/carousel/carousel" + this.state.modalIndex + ".jpg"} />
            <CrossIcon className="modalCloseButton" onClick={this.handleCloseModal}/>
         </ReactModal>
       </section>

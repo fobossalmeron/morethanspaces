@@ -8,7 +8,7 @@ nav{
   width: 100%;
   float:left;
   position:fixed;
-  padding: .5%;
+  padding: 5px;
   z-index: 3;
   transition: .5s ease all;
 
@@ -25,13 +25,13 @@ nav{
   ul{
     height:100%;
     float:right;
-    margin: 0 1.5% 0 0;
-    padding-top:30px;
+    width: 450px;
+    margin: 30px 1.5% 0 0;
     transition: .5s ease all;
     li{
       padding: 0 3% 5% 3%;
       height: 100%;
-      display: inline-block;
+      display: block;
       float: left;
       list-style: none;
       text-transform: lowercase;
@@ -57,12 +57,20 @@ nav{
   }
 }
 
+.restrictBody{
+  overflow: hidden;
+}
+
+.menuActive{
+  transform: translateX(0);
+}
+
 .discounts-menu{
   float:left;
-  left: 20%;
+  margin-left: 20%;
   white-space: nowrap;
   position: relative;
-  padding-top: 15px;
+  padding-top: 26px;
   color: $white;
   transition: .5s ease all;
   b{
@@ -85,6 +93,10 @@ nav{
 .navScroll{
   height: 60px;
   background-color:$white;
+  .menuButton{
+    stroke: $black;
+    margin: 5px 15px;
+  }
   .discounts-menu{
     padding-top: 3px;
     color:$black;
@@ -97,7 +109,7 @@ nav{
     filter: brightness(1);
   }
   ul{
-    padding-top:12px;
+    margin-top:12px;
     li{
       a{
         color:$black;
@@ -110,6 +122,22 @@ nav{
         }
       }
     }
+  }
+}
+
+.menuButton{
+  display:none;
+  width: 40px;
+  height: 40px;
+  float: right;
+  stroke: $white;
+  margin: 20px;
+  stroke-width: 8px;
+  stroke-linecap: round;
+  transition: .4s ease all;
+  cursor:pointer;
+  &:hover{
+    stroke-width:10px;
   }
 }
 
@@ -486,6 +514,7 @@ section{
   position: absolute;
   margin: 10% 4%;
   z-index: 2;
+  margin: 130px 5% 0 5%;
 }
 
 .controllsVideo{
@@ -589,8 +618,9 @@ section{
 }
 
 .service-icon{
-  width:100px;
-  height:100px;
+  width: 100%;
+  max-height: 100px;
+  height: 100%;
   margin-bottom: 20px;
   position: relative;
   display: block;
@@ -666,11 +696,11 @@ section{
     }
     &:nth-of-type(1){
       background-color: $strongYellow;
-      width:60%;
+      width:66%;
     }
     &:nth-of-type(2){
       background-color: $blue;
-      width:70%;
+      width:75%;
     }
     &:nth-of-type(3){
       background-color: $magenta;
@@ -896,7 +926,7 @@ form{
     left: 0;
     border: 1px solid $yellow;
     transition: .4s ease all;
-   &:after {
+   &:before {
      content: ' ';
      width: 20px;
      height: 20px;
@@ -927,7 +957,7 @@ form{
    &:checked + label{
       background-color: $yellow;
       color:$black;
-     &:after {
+     &:before {
        opacity: 1;
      }
    }
@@ -962,7 +992,7 @@ input[type=text]{
   float:left;
   position: relative;
   border-radius: 5px 5px 0 0;
-  padding: 30px 0px 10px 35px;
+  padding: 25px 0px 10px 5%;
   background-color: $magenta;
   position:relative;
   color:$black;
@@ -977,7 +1007,7 @@ input[type=text]{
     width: 50px;
     position: absolute;
     box-sizing: border-box;
-    right: -50px;
+    right: -49px;
     overflow: hidden;
     top: 0;
     height: 100%;
@@ -1099,7 +1129,7 @@ input[type=text]{
     background-color: $black;
     width: 20%;
     border-radius: 0 2px 2px 0;
-    min-width: 230px;
+    min-width: 160px;
     float: left;
     margin-right: 4%;
     margin-bottom: 4%;
@@ -1187,7 +1217,7 @@ input[type=text]{
 }
 
 #boothGrid{
-  height: 500px;
+  height: 550px;
   overflow-y: scroll;
   float: left;
   width: 72%;
@@ -1199,11 +1229,12 @@ input[type=text]{
   padding-top:20%;
   transition: .5s ease all;
   background-size: cover;
+  background-position: center;
   position: relative;
   min-height: 120px;
   cursor: pointer;
   float: left;
-  margin: 0px 1% 5% 1%;
+  margin: 0 1% 5% 0%;
   list-style: none;
   &:nth-child(3n+3){
     margin-right:0;
@@ -1388,6 +1419,7 @@ input[type=text]{
   width:100%;
   min-height:400px;
   background-size: cover;
+  background-position: center;
   transition: 300ms all ease;
   canvas{
     height: 100%;
@@ -1765,6 +1797,10 @@ iframe{
     }
 }
 
+.service-container{
+  width:100px;
+}
+
 .iconsBarServices {
   ul li{
     width:16.6%;
@@ -2014,4 +2050,8 @@ background-color:$white;
       width: 100%;
       height: 100%;
   }
+}
+
+.hideOnMobile{
+  display: inline-block;
 }

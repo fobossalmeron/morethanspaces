@@ -11827,6 +11827,10 @@ var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _hamburger = __webpack_require__(326);
+
+var _hamburger2 = _interopRequireDefault(_hamburger);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -11844,13 +11848,28 @@ var Nav = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this, props));
 
     _this.state = {
-      relative: false
+      relative: false,
+      menuOn: false
     };
     _this.navScrollMagic = _this.navScrollMagic.bind(_this);
+    _this.doToggleMenu = _this.doToggleMenu.bind(_this);
+    _this.doHideNav = _this.doHideNav.bind(_this);
     return _this;
   }
 
   _createClass(Nav, [{
+    key: 'doToggleMenu',
+    value: function doToggleMenu() {
+      this.setState({ menuOn: !this.state.menuOn });
+      document.body.classList.toggle('restrictBody');
+    }
+  }, {
+    key: 'doHideNav',
+    value: function doHideNav() {
+      this.setState({ menuOn: false });
+      document.body.classList.remove('restrictBody');
+    }
+  }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
       var _this2 = this;
@@ -11863,6 +11882,9 @@ var Nav = function (_Component) {
         this.navScrollMagic();
       }
     }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {}
   }, {
     key: 'navScrollMagic',
     value: function navScrollMagic() {
@@ -11919,6 +11941,7 @@ var Nav = function (_Component) {
         )
       );
       var isThereDiscount = this.props.discountOn ? discountBlock : undefined;
+      var isActive = this.state.menuOn ? "menuActive" : "";
 
       return _react2.default.createElement(
         'nav',
@@ -11930,13 +11953,14 @@ var Nav = function (_Component) {
           _react2.default.createElement('img', { src: baseUrl + "assets/img/layout/type.svg" })
         ),
         isThereDiscount,
+        _react2.default.createElement(_hamburger2.default, { onClick: this.doToggleMenu, className: "menuButton " + isActive }),
         _react2.default.createElement(
           'ul',
-          null,
+          { className: isActive },
           _react2.default.createElement(
             'li',
             { onClick: function onClick() {
-                return _this3.handleNavClick(0);
+                _this3.handleNavClick(0);_this3.doHideNav();
               } },
             _react2.default.createElement(
               'a',
@@ -11947,7 +11971,7 @@ var Nav = function (_Component) {
           _react2.default.createElement(
             'li',
             { onClick: function onClick() {
-                return _this3.handleNavClick(1);
+                _this3.handleNavClick(1);_this3.doHideNav();
               } },
             _react2.default.createElement(
               'a',
@@ -11957,7 +11981,9 @@ var Nav = function (_Component) {
           ),
           _react2.default.createElement(
             'li',
-            null,
+            { onClick: function onClick() {
+                return _this3.doHideNav();
+              } },
             _react2.default.createElement(
               'a',
               { href: baseUrl + "#services" },
@@ -11966,7 +11992,9 @@ var Nav = function (_Component) {
           ),
           _react2.default.createElement(
             'li',
-            null,
+            { onClick: function onClick() {
+                return _this3.doHideNav();
+              } },
             _react2.default.createElement(
               'a',
               { href: baseUrl + "#about" },
@@ -11975,7 +12003,9 @@ var Nav = function (_Component) {
           ),
           _react2.default.createElement(
             'li',
-            null,
+            { onClick: function onClick() {
+                return _this3.doHideNav();
+              } },
             _react2.default.createElement(
               'a',
               { href: baseUrl + "#contact" },
@@ -25332,7 +25362,7 @@ var DiscountsCarousel = function (_Component) {
             onRequestClose: this.handleCloseModal,
             closeTimeoutMS: 500,
             contentLabel: 'Minimal Modal Example' },
-          _react2.default.createElement('img', { src: "assets/img/layout/carousel/carousel" + this.state.modalIndex + ".jpg" }),
+          _react2.default.createElement('img', { src: baseUrl + "assets/img/layout/carousel/carousel" + this.state.modalIndex + ".jpg" }),
           _react2.default.createElement(_cross2.default, { className: 'modalCloseButton', onClick: this.handleCloseModal })
         )
       );
@@ -31772,25 +31802,7 @@ CustomRentalBoothIcon.default = CustomRentalBoothIcon;
 
 
 /***/ }),
-/* 265 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var React = __webpack_require__(1);
-
-function FullServiceIcon (props) {
-    return React.createElement("svg",props,[React.createElement("path",{"d":"M55.5,78.1c-2.3,0.9-6.5,2.7-10.8,4.4c-1,0.4-1.3,1.1-1,1.8c0.3,0.7,1.2,1,2.3,0.6c1.1-0.4,9.6-3.9,11.3-4.7\n\tc1.7-0.7,2-1.6,1.6-2.4C58.5,77,57.9,77.2,55.5,78.1 M58.1,72.1c-3.1,1.1-14.8,5.7-16.2,6.2c-1.4,0.5-1.9,1.2-1.6,2\n\tc0.3,0.7,1.1,1,2,0.7c7.7-3.1,14.3-5.6,15.9-6.2c1.6-0.6,2.6-1.2,2.3-2.1C60.1,71.8,59.4,71.6,58.1,72.1 M43.3,75\n\tc1.6-0.6,11.9-4.7,13-5.1c1.2-0.5,2-1,1.7-2c-0.3-1-0.8-1.1-2.5-0.5c-1.8,0.6-10.2,4-11.8,4.6c-2.1,0.8-2.9,1.4-2.6,2.3\n\tC41.5,74.9,41.7,75.6,43.3,75 M50.1,15.1c-14.8,0-22.9,10.6-22.4,19.3c0.6,11.2,11.5,18.7,12.3,27.9c0.4,4.7,0.5,5.2,2,5.1\n\tc1.1-0.1,1.7-2.4-0.3-9.4c-2.1-7.5-11.2-14.9-11.2-24.3c0-9.3,8.7-16,19.6-16c10.2,0,19,7.4,19,15.9s-7.6,14.9-10.2,22.1\n\tc-2.2,6-2.5,7.5-0.9,8.1c1.2,0.4,1.4-1.2,4-8.5c2.6-7.3,9.8-10.4,9.8-22.3C71.8,21.2,59,15.1,50.1,15.1","key":0}),React.createElement("path",{"d":"M55.5,78.1c-2.3,0.9-6.5,2.7-10.8,4.4c-1,0.4-1.3,1.1-1,1.8c0.3,0.7,1.2,1,2.3,0.6c1.1-0.4,9.6-3.9,11.3-4.7\n\tc1.7-0.7,2-1.6,1.6-2.4C58.5,77,57.9,77.2,55.5,78.1 M58.1,72.1c-3.1,1.1-14.8,5.7-16.2,6.2c-1.4,0.5-1.9,1.2-1.6,2\n\tc0.3,0.7,1.1,1,2,0.7c7.7-3.1,14.3-5.6,15.9-6.2c1.6-0.6,2.6-1.2,2.3-2.1C60.1,71.8,59.4,71.6,58.1,72.1 M43.3,75\n\tc1.6-0.6,11.9-4.7,13-5.1c1.2-0.5,2-1,1.7-2c-0.3-1-0.8-1.1-2.5-0.5c-1.8,0.6-10.2,4-11.8,4.6c-2.1,0.8-2.9,1.4-2.6,2.3\n\tC41.5,74.9,41.7,75.6,43.3,75 M50.1,15.1c-14.8,0-22.9,10.6-22.4,19.3c0.6,11.2,11.5,18.7,12.3,27.9c0.4,4.7,0.5,5.2,2,5.1\n\tc1.1-0.1,1.7-2.4-0.3-9.4c-2.1-7.5-11.2-14.9-11.2-24.3c0-9.3,8.7-16,19.6-16c10.2,0,19,7.4,19,15.9s-7.6,14.9-10.2,22.1\n\tc-2.2,6-2.5,7.5-0.9,8.1c1.2,0.4,1.4-1.2,4-8.5c2.6-7.3,9.8-10.4,9.8-22.3C71.8,21.2,59,15.1,50.1,15.1","key":1}),React.createElement("path",{"d":"M49.8,98C23.4,98,1.9,76.5,1.9,50.1c0-26.4,21.5-47.9,47.9-47.9c26.4,0,47.9,21.5,47.9,47.9C97.6,76.5,76.1,98,49.8,98\n\t M49.8,5.4c-24.6,0-44.7,20-44.7,44.7c0,24.6,20,44.7,44.7,44.7c24.6,0,44.7-20,44.7-44.7C94.4,25.5,74.4,5.4,49.8,5.4","key":2})]);
-}
-
-FullServiceIcon.displayName = "FullServiceIcon";
-
-FullServiceIcon.defaultProps = {"version":"1.1","id":"Layer_1","x":"0px","y":"0px","viewBox":"0 0 100 100","style":{"enableBackground":"new 0 0 100 100"},"xmlSpace":"preserve"};
-
-module.exports = FullServiceIcon;
-
-FullServiceIcon.default = FullServiceIcon;
-
-
-/***/ }),
+/* 265 */,
 /* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -32165,9 +32177,9 @@ var _storageshipping = __webpack_require__(266);
 
 var _storageshipping2 = _interopRequireDefault(_storageshipping);
 
-var _fullservice = __webpack_require__(265);
+var _videowall = __webpack_require__(327);
 
-var _fullservice2 = _interopRequireDefault(_fullservice);
+var _videowall2 = _interopRequireDefault(_videowall);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32222,7 +32234,7 @@ var IconsBar = function (_Component) {
           _react2.default.createElement(
             'li',
             { style: { color: this.props.color } },
-            _react2.default.createElement(_boothrentals2.default, { className: 'service-icon' }),
+            _react2.default.createElement(_videowall2.default, { className: 'service-icon' }),
             'videowall',
             _react2.default.createElement('br', null),
             'wall'
@@ -32326,6 +32338,70 @@ exports.default = Conventions;
 
 
 (0, _reactDom.render)(_react2.default.createElement(Conventions, null), document.getElementById('app'));
+
+/***/ }),
+/* 300 */,
+/* 301 */,
+/* 302 */,
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */,
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */,
+/* 319 */,
+/* 320 */,
+/* 321 */,
+/* 322 */,
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(1);
+
+function HamburgerIcon (props) {
+    return React.createElement("svg",props,[React.createElement("line",{"x1":"5","y1":"18.3","x2":"95","y2":"18.3","key":0}),React.createElement("line",{"x1":"5","y1":"50","x2":"95","y2":"50","key":1}),React.createElement("line",{"x1":"5","y1":"81.7","x2":"95","y2":"81.7","key":2})]);
+}
+
+HamburgerIcon.displayName = "HamburgerIcon";
+
+HamburgerIcon.defaultProps = {"version":"1.1","x":"0px","y":"0px","viewBox":"0 0 100 100","xmlSpace":"preserve"};
+
+module.exports = HamburgerIcon;
+
+HamburgerIcon.default = HamburgerIcon;
+
+
+/***/ }),
+/* 327 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(1);
+
+function VideoWallIcon (props) {
+    return React.createElement("svg",props,[React.createElement("path",{"d":"M50,98C23.5,98,2,76.5,2,50S23.5,2,50,2s48,21.5,48,48S76.5,98,50,98z M50,5.2C25.3,5.2,5.2,25.3,5.2,50\n\t\t\t\tS25.3,94.8,50,94.8S94.8,74.7,94.8,50S74.7,5.2,50,5.2z","key":0}),React.createElement("path",{"d":"M23.2,25.4L23.2,25.4l-2.7,2v46.6l2.7,1.8v0l59.8-13.5V32.8L23.2,25.4z M48.9,54.7V44l17.6,0.5v8.2L48.9,54.7z M66.5,54\n\t     v10.4l-17.6,4V55.9L66.5,54z M24.7,43.3L47.4,44v10.8l-22.7,2.5V43.3z M48.9,42.8V30.1l17.6,2.2v11L48.9,42.8z M67.8,44.6L81.6,45\n\t     v6.1l-13.8,1.5V44.6z M81.6,43.7l-13.8-0.4V32.4l13.8,1.7V43.7z M47.4,29.9v12.8l-22.7-0.7v-15L47.4,29.9z M24.7,58.5l22.7-2.5v12.7\n\t     l-22.7,5.1V58.5z M67.8,64.1V53.9l13.8-1.5V61L67.8,64.1z","key":1})]);
+}
+
+VideoWallIcon.displayName = "VideoWallIcon";
+
+VideoWallIcon.defaultProps = {"version":"1.1","x":"0px","y":"0px","viewBox":"0 0 100 100","xmlSpace":"preserve"};
+
+module.exports = VideoWallIcon;
+
+VideoWallIcon.default = VideoWallIcon;
+
 
 /***/ })
 /******/ ]);

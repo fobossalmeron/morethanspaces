@@ -10739,6 +10739,10 @@ var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _hamburger = __webpack_require__(326);
+
+var _hamburger2 = _interopRequireDefault(_hamburger);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -10756,13 +10760,28 @@ var Nav = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this, props));
 
     _this.state = {
-      relative: false
+      relative: false,
+      menuOn: false
     };
     _this.navScrollMagic = _this.navScrollMagic.bind(_this);
+    _this.doToggleMenu = _this.doToggleMenu.bind(_this);
+    _this.doHideNav = _this.doHideNav.bind(_this);
     return _this;
   }
 
   _createClass(Nav, [{
+    key: 'doToggleMenu',
+    value: function doToggleMenu() {
+      this.setState({ menuOn: !this.state.menuOn });
+      document.body.classList.toggle('restrictBody');
+    }
+  }, {
+    key: 'doHideNav',
+    value: function doHideNav() {
+      this.setState({ menuOn: false });
+      document.body.classList.remove('restrictBody');
+    }
+  }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
       var _this2 = this;
@@ -10775,6 +10794,9 @@ var Nav = function (_Component) {
         this.navScrollMagic();
       }
     }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {}
   }, {
     key: 'navScrollMagic',
     value: function navScrollMagic() {
@@ -10831,6 +10853,7 @@ var Nav = function (_Component) {
         )
       );
       var isThereDiscount = this.props.discountOn ? discountBlock : undefined;
+      var isActive = this.state.menuOn ? "menuActive" : "";
 
       return _react2.default.createElement(
         'nav',
@@ -10842,13 +10865,14 @@ var Nav = function (_Component) {
           _react2.default.createElement('img', { src: baseUrl + "assets/img/layout/type.svg" })
         ),
         isThereDiscount,
+        _react2.default.createElement(_hamburger2.default, { onClick: this.doToggleMenu, className: "menuButton " + isActive }),
         _react2.default.createElement(
           'ul',
-          null,
+          { className: isActive },
           _react2.default.createElement(
             'li',
             { onClick: function onClick() {
-                return _this3.handleNavClick(0);
+                _this3.handleNavClick(0);_this3.doHideNav();
               } },
             _react2.default.createElement(
               'a',
@@ -10859,7 +10883,7 @@ var Nav = function (_Component) {
           _react2.default.createElement(
             'li',
             { onClick: function onClick() {
-                return _this3.handleNavClick(1);
+                _this3.handleNavClick(1);_this3.doHideNav();
               } },
             _react2.default.createElement(
               'a',
@@ -10869,7 +10893,9 @@ var Nav = function (_Component) {
           ),
           _react2.default.createElement(
             'li',
-            null,
+            { onClick: function onClick() {
+                return _this3.doHideNav();
+              } },
             _react2.default.createElement(
               'a',
               { href: baseUrl + "#services" },
@@ -10878,7 +10904,9 @@ var Nav = function (_Component) {
           ),
           _react2.default.createElement(
             'li',
-            null,
+            { onClick: function onClick() {
+                return _this3.doHideNav();
+              } },
             _react2.default.createElement(
               'a',
               { href: baseUrl + "#about" },
@@ -10887,7 +10915,9 @@ var Nav = function (_Component) {
           ),
           _react2.default.createElement(
             'li',
-            null,
+            { onClick: function onClick() {
+                return _this3.doHideNav();
+              } },
             _react2.default.createElement(
               'a',
               { href: baseUrl + "#contact" },
@@ -23389,6 +23419,49 @@ exports.default = NotFound;
 
 
 (0, _reactDom.render)(_react2.default.createElement(NotFound, null), document.getElementById('layout'));
+
+/***/ }),
+/* 302 */,
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */,
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */,
+/* 319 */,
+/* 320 */,
+/* 321 */,
+/* 322 */,
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(1);
+
+function HamburgerIcon (props) {
+    return React.createElement("svg",props,[React.createElement("line",{"x1":"5","y1":"18.3","x2":"95","y2":"18.3","key":0}),React.createElement("line",{"x1":"5","y1":"50","x2":"95","y2":"50","key":1}),React.createElement("line",{"x1":"5","y1":"81.7","x2":"95","y2":"81.7","key":2})]);
+}
+
+HamburgerIcon.displayName = "HamburgerIcon";
+
+HamburgerIcon.defaultProps = {"version":"1.1","x":"0px","y":"0px","viewBox":"0 0 100 100","xmlSpace":"preserve"};
+
+module.exports = HamburgerIcon;
+
+HamburgerIcon.default = HamburgerIcon;
+
 
 /***/ })
 /******/ ]);

@@ -73,6 +73,7 @@ class DiscountsCarousel extends Component {
       autoplay: true,
       autoplaySpeed: 3000,
       pauseOnHover: true,
+      responsive: [ { breakpoint: 500, settings: { slidesToShow: 1 } }, { breakpoint: 900, settings: { slidesToShow: 2 } } ],
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />
     };

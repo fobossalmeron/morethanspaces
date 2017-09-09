@@ -74,9 +74,10 @@ class Nav extends Component {
     );
     var isThereDiscount = (this.props.discountOn ? discountBlock : undefined);
     var isActive = this.state.menuOn? "menuActive" : "";
+    var navIsActive = this.state.menuOn? "navActive" : "";
 
     return (
-      <nav>
+      <nav id={navIsActive}>
         <a href={baseUrl + "#home"}><img src={baseUrl + "assets/img/layout/logo.svg"}/><img src={baseUrl + "assets/img/layout/type.svg"}/></a>
         {isThereDiscount}
         <HamburgerIcon onClick={this.doToggleMenu} className={"menuButton " + isActive}/>

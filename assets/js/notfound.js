@@ -10854,10 +10854,11 @@ var Nav = function (_Component) {
       );
       var isThereDiscount = this.props.discountOn ? discountBlock : undefined;
       var isActive = this.state.menuOn ? "menuActive" : "";
+      var navIsActive = this.state.menuOn ? "navActive" : "";
 
       return _react2.default.createElement(
         'nav',
-        null,
+        { id: navIsActive },
         _react2.default.createElement(
           'a',
           { href: baseUrl + "#home" },

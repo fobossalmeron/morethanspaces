@@ -10,3 +10,8 @@ Morethanspaces Website
 
 ##CrossBrowser
 - button text in HomeSection
+
+##responsive
+- single booth
+- instaQuoteForm
+- conventions page

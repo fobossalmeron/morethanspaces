@@ -27,7 +27,7 @@ class QuoteTabs extends Component {
       individualVideoWallRender: false,
       renderBoothInstaQuote: false,
       renderVideoWallInstaQuote: false,
-      revealInstaQuote: false,
+      revealInstaQuote: true,
       renderCollectors: true
     };
     this.clickFor = this.clickFor.bind(this);

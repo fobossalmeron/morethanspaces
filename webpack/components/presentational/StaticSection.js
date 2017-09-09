@@ -109,7 +109,7 @@ class StaticSection extends Component {
         <div className="half-card frompdf">
           <span>1,</span> <span>2,</span> <span>3 </span> <span> go</span>
           <p>All you have to do is show up and <b>let the show begin!</b></p>
-          <div id="stepbox1" className="stepbox"><b>1:</b><p>communicate your need<br/>and choose</p></div>
+          <div id="stepbox1" className="stepbox"><b>1:</b><p>communicate your<br/>need and choose</p></div>
           <div id="stepbox2" className="stepbox"><b>2:</b><p>we create and<br/>make it happen</p></div>
           <div id="stepbox3" className="stepbox"><b>3:</b><p>we deliver<br/>…and take care of it all</p></div>
           <div className="stepblackbox"><b className="arbitraryPink">best price, best quality</b><p>we try to <b>match or beat any price</b> up to <b>20%</b></p></div>

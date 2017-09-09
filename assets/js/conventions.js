@@ -11942,10 +11942,11 @@ var Nav = function (_Component) {
       );
       var isThereDiscount = this.props.discountOn ? discountBlock : undefined;
       var isActive = this.state.menuOn ? "menuActive" : "";
+      var navIsActive = this.state.menuOn ? "navActive" : "";
 
       return _react2.default.createElement(
         'nav',
-        null,
+        { id: navIsActive },
         _react2.default.createElement(
           'a',
           { href: baseUrl + "#home" },
@@ -25323,6 +25324,7 @@ var DiscountsCarousel = function (_Component) {
         autoplay: true,
         autoplaySpeed: 3000,
         pauseOnHover: true,
+        responsive: [{ breakpoint: 500, settings: { slidesToShow: 1 } }, { breakpoint: 900, settings: { slidesToShow: 2 } }],
         nextArrow: _react2.default.createElement(SampleNextArrow, null),
         prevArrow: _react2.default.createElement(SamplePrevArrow, null)
       };

@@ -1,6 +1,7 @@
 title: More than spaces
-email: ns@morethanspaces.custom
+email: ns@morethanspaces.com
 description: Tradeshow booth and videowall rental solutions
+og_image: "/assets/img/og_image.png"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://morethanspaces.com" # the base hostname & protocol for your site, e.g. http://example.com
 

@@ -11,7 +11,7 @@ import FullServiceIcon from 'svg-react-loader?name=FullServiceIcon!../../../asse
 
 class StaticSection extends Component {
 
-  render (){
+  render (){ 
 
     return (
       <div>

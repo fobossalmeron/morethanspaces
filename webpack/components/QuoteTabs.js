@@ -27,10 +27,21 @@ class QuoteTabs extends Component {
       individualVideoWallRender: false,
       renderBoothInstaQuote: false,
       renderVideoWallInstaQuote: false,
-      revealInstaQuote: true,
-      renderCollectors: true
+      revealInstaQuote: false,
+      renderCollectors: true,
+      name: '',
+      email: '',
+      phone: ''
     };
     this.clickFor = this.clickFor.bind(this);
+  }
+
+  generateUser(name, email, phone){
+    this.setState({
+      name: name,
+      email: email,
+      phone: phone
+    }, () => console.log("QuoteTabs state is: " + this.state.email + ' with the phone ' + this.state.phone + 'with the name ' + this.state.name))
   }
 
   seeState(){
@@ -209,7 +220,8 @@ class QuoteTabs extends Component {
                         discountNumber={this.props.discountNumber}
                         discountType={this.props.discountType}
                         hideCollectors={this.hideCollectors.bind(this)}
-                        renderCollectors={this.state.renderCollectors}/>
+                        renderCollectors={this.state.renderCollectors}
+                        generateUser={this.generateUser.bind(this)}/>
         </TabPanel>
         <TabPanel>
           <VideoWallForm toggleVideoWall={this.toggleVideoWall.bind(this)}
@@ -238,7 +250,8 @@ class QuoteTabs extends Component {
                          discountNumber={this.props.discountNumber}
                          discountType={this.props.discountType}
                          hideCollectors={this.hideCollectors.bind(this)}
-                         renderCollectors={this.state.renderCollectors}/>
+                         renderCollectors={this.state.renderCollectors}
+                         generateUser={this.generateUser.bind(this)}/>
         </TabPanel>
       </Tabs>
       </section>

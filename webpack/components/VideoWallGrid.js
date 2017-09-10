@@ -106,7 +106,8 @@ class VideoWallGrid extends Component {
                     discountType={this.props.discountType}
                     doRevealInstaQuote={this.props.doRevealInstaQuote.bind(this)}
                     hideCollectors={this.props.hideCollectors.bind(this)}
-                    renderCollectors={this.props.renderCollectors}/>
+                    renderCollectors={this.props.renderCollectors}
+                    generateUser={this.props.generateUser.bind(this)}/>
         </div>
         <IconsBar className={"iconsBarQuote"}/>
       </div>

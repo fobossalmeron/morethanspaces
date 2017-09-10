@@ -140,7 +140,8 @@ class InstaQuote extends Component {
     </div>
     <CollectBeforeQuote {...this.props} originalPrice={originalPrice}
                                         finalPrice={finalPrice}
-                                        discountSymbol={this.discountSymbol.bind(this)}/>
+                                        discountSymbol={this.discountSymbol.bind(this)}
+                                        generateUser={this.props.generateUser.bind(this)}/>
       </div>
     );
   }

@@ -236,6 +236,11 @@
 }
 
 @include media-query($x800-down) {
+  .service-icon{
+    circle {
+      stroke-dashoffset: 0;
+    }
+  }
   .convention_card{
     width:100%;
     &:nth-of-type(2){

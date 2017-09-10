@@ -199,8 +199,6 @@ section { float: left; width: 100%; padding: 3% 5%; position: relative; }
 
 .row { float: left; clear: both; width: 100%; }
 
-.service-icon { width: 100%; max-height: 100px; height: 100%; margin-bottom: 20px; position: relative; display: block; }
-
 #about { background-color: #e0e0e0; }
 #about h1 { color: #ec3092; margin-bottom: 0; font-size: 2em; }
 #about .motto { color: #ec3092; margin-bottom: 0; }
@@ -501,7 +499,7 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 .loading a:visited { color: #ec3092; }
 
 #loadingvideo { width: 100%; height: 100%; overflow: hidden; display: block; position: fixed; z-index: -1; left: 0; top: 0; }
-#loadingvideo video { position: absolute; z-index: 0; left: 50%; min-height: 100%; width: auto !important; transform: translateX(-50%); height: 100%; width: 100%; }
+#loadingvideo video { position: absolute; z-index: 0; left: 50%; min-width: 100%; min-height: 100%; width: auto !important; height: auto !important; transform: translateX(-50%); height: 100%; width: 100%; }
 
 .contactBox { background-color: #eee81a; float: left; padding: 4% 6%; width: 100%; margin-bottom: 4%; }
 .contactBox p { font-weight: 700; font-size: 1em; color: #ec3092; }
@@ -534,9 +532,9 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 .lastConventionSection h2 { color: #ec3092; font-weight: 700; }
 .lastConventionSection h3 { color: #eee81a; font-weight: 700; }
 
-.conventionFromPdf { padding: 2% 2% 2% 5%; background-color: #f9f9f9; }
+.conventionFromPdf { padding: 2% 2% 2% 5%; width: 55%; background-color: #f9f9f9; }
 
-.conventionHalfCard { background-color: #383838; padding: 2% 5% 2% 4% !important; color: #f9f9f9; }
+.conventionHalfCard { width: 45%; background-color: #383838; padding: 2% 5% 2% 4% !important; color: #f9f9f9; }
 .conventionHalfCard h2 { color: #eee81a; font-weight: 700; }
 
 .conventionBackground { background-color: #383838; float: left; }
@@ -556,6 +554,10 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 .slick-slider { width: 99%; transform: scale(1.016); }
 
 .heightSlider { max-height: 115px; }
+
+.service-icon { width: 100%; max-height: 100px; height: 100%; margin-bottom: 20px; position: relative; display: block; }
+.service-icon circle { transition: stroke-dashoffset .3s ease; stroke-dasharray: 290; stroke-dashoffset: 290; stroke-width: 3px; fill: none; stroke: currentColor; }
+.service-icon:hover circle { stroke-dashoffset: 0; }
 
 /** Syntax highlighting styles */
 .highlight { background: #fff; }
@@ -1068,7 +1070,8 @@ body.video-react-full-window .video-react-fullscreen { position: fixed; overflow
   .singleBooth .singleInfo { width: 100%; padding: 2% 2% 0 0; }
   .visualizer { min-height: 250px; width: 98.5%; margin-right: 1.5%; }
   .slick-slider { width: 98%; margin-right: 0%; transform: scale(1.01); } }
-@media screen and (max-width: 800px) { .convention_card { width: 100%; }
+@media screen and (max-width: 800px) { .service-icon circle { stroke-dashoffset: 0; }
+  .convention_card { width: 100%; }
   .convention_card:nth-of-type(2) { margin-top: 0; }
   .convention_card h2 { font-size: 1.5em; }
   #content { column-count: 1; }

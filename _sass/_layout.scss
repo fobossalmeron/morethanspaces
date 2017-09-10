@@ -635,15 +635,6 @@ section{
   width: 100%;
 }
 
-.service-icon{
-  width: 100%;
-  max-height: 100px;
-  height: 100%;
-  margin-bottom: 20px;
-  position: relative;
-  display: block;
-}
-
 #about{
   background-color: $grey;
   h1{
@@ -1905,12 +1896,14 @@ iframe{
   video{
     position: absolute;
     z-index: 0;
-    left:50%;
-    min-height:100%;
-    width:auto !important;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto !important;
+    height: auto !important;
     transform: translateX(-50%);
-    height:100%;
-    width:100%;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -2045,9 +2038,11 @@ iframe{
 
 .conventionFromPdf{
 padding:2% 2% 2% 5%;
+width:55%;
 background-color:$white;
 }
 .conventionHalfCard{
+  width:45%;
   background-color: $black;
   padding: 2% 5% 2% 4% !important;
   color: $white;
@@ -2103,4 +2098,26 @@ background-color:$white;
 
 .heightSlider{
   max-height: 115px;
+}
+
+.service-icon{
+  width: 100%;
+  max-height: 100px;
+  height: 100%;
+  margin-bottom: 20px;
+  position: relative;
+  display: block;
+  circle{
+    transition: stroke-dashoffset .3s ease;
+    stroke-dasharray: 290;
+    stroke-dashoffset: 290;
+    stroke-width: 3px;
+    fill: none;
+    stroke: currentColor;
+  }
+  &:hover {
+    circle {
+      stroke-dashoffset: 0;
+    }
+  }
 }

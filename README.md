@@ -3,7 +3,11 @@ Morethanspaces Website
 
 ##Estilos
 - css transition groups
-- icon animations
 
 ##Funcionalidad
-- send email each time user clicks, store user info in state, send emails
+- send email each time user clicks, store user info in state, send several emails
+
+#Ask
+- 17done 21faltan (1,188) Thursday 14.
+- obj files when
+- launch when 

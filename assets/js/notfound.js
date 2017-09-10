@@ -6628,7 +6628,7 @@ var _freedesignconsultation = __webpack_require__(208);
 
 var _freedesignconsultation2 = _interopRequireDefault(_freedesignconsultation);
 
-var _nopressuresale = __webpack_require__(212);
+var _nopressuresale = __webpack_require__(213);
 
 var _nopressuresale2 = _interopRequireDefault(_nopressuresale);
 
@@ -6636,11 +6636,11 @@ var _approveonline = __webpack_require__(206);
 
 var _approveonline2 = _interopRequireDefault(_approveonline);
 
-var _savetime = __webpack_require__(215);
+var _savetime = __webpack_require__(216);
 
 var _savetime2 = _interopRequireDefault(_savetime);
 
-var _savemoney = __webpack_require__(214);
+var _savemoney = __webpack_require__(215);
 
 var _savemoney2 = _interopRequireDefault(_savemoney);
 
@@ -10452,7 +10452,7 @@ var _IconsBar = __webpack_require__(57);
 
 var _IconsBar2 = _interopRequireDefault(_IconsBar);
 
-var _linkedin = __webpack_require__(211);
+var _linkedin = __webpack_require__(212);
 
 var _linkedin2 = _interopRequireDefault(_linkedin);
 
@@ -10460,15 +10460,15 @@ var _facebook = __webpack_require__(207);
 
 var _facebook2 = _interopRequireDefault(_facebook);
 
-var _instagram = __webpack_require__(210);
+var _instagram = __webpack_require__(211);
 
 var _instagram2 = _interopRequireDefault(_instagram);
 
-var _youtube = __webpack_require__(217);
+var _youtube = __webpack_require__(218);
 
 var _youtube2 = _interopRequireDefault(_youtube);
 
-var _pinterest = __webpack_require__(213);
+var _pinterest = __webpack_require__(214);
 
 var _pinterest2 = _interopRequireDefault(_pinterest);
 
@@ -10476,7 +10476,7 @@ var _googleplus = __webpack_require__(209);
 
 var _googleplus2 = _interopRequireDefault(_googleplus);
 
-var _twitter = __webpack_require__(216);
+var _twitter = __webpack_require__(217);
 
 var _twitter2 = _interopRequireDefault(_twitter);
 
@@ -10739,7 +10739,7 @@ var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _hamburger = __webpack_require__(326);
+var _hamburger = __webpack_require__(210);
 
 var _hamburger2 = _interopRequireDefault(_hamburger);
 
@@ -23051,7 +23051,7 @@ module.exports = factory;
 var React = __webpack_require__(1);
 
 function ApproveOnlineIcon (props) {
-    return React.createElement("svg",props,[React.createElement("path",{"className":"st0","d":"M73.2,30.9C71,33.1,38.7,63.5,38.4,63.8l-0.3,0.3l-0.3-0.3C37.7,63.7,26.5,51,25.5,50.1\n\t\tc-0.4-0.4-1.1-0.7-1.8-0.7c0,0-0.1,0-0.1,0c-0.8,0-1.5,0.3-2,0.8c-1.7,1.7-0.6,3.4-0.2,3.8c0.8,1,8.2,9.2,14.1,15.7\n\t\tc0.8,0.8,1.6,1.3,2.4,1.3c0.8,0,1.7-0.3,2.5-1.1c2.3-2.1,34.9-32.8,37.1-35.1c1.1-1.1,1.7-2,1.8-2.9c0.1-0.7-0.2-1.4-0.8-2\n\t\tc-0.7-0.7-1.4-1-2.1-0.9C75.4,29.1,74.4,29.7,73.2,30.9z","key":0}),React.createElement("path",{"d":"M50,98C23.5,98,2,76.5,2,50C2,23.5,23.5,2,50,2c26.5,0,48,21.6,48,48C98,76.5,76.5,98,50,98z M50,5.2\n\t\tC25.3,5.2,5.2,25.3,5.2,50c0,24.7,20.1,44.8,44.8,44.8c24.7,0,44.8-20.1,44.8-44.8C94.8,25.3,74.7,5.2,50,5.2z","key":1})]);
+    return React.createElement("svg",props,[React.createElement("path",{"d":"M73.2,30.9C71,33.1,38.7,63.5,38.4,63.8l-0.3,0.3l-0.3-0.3C37.7,63.7,26.5,51,25.5,50.1\n\t\tc-0.4-0.4-1.1-0.7-1.8-0.7c0,0-0.1,0-0.1,0c-0.8,0-1.5,0.3-2,0.8c-1.7,1.7-0.6,3.4-0.2,3.8c0.8,1,8.2,9.2,14.1,15.7\n\t\tc0.8,0.8,1.6,1.3,2.4,1.3c0.8,0,1.7-0.3,2.5-1.1c2.3-2.1,34.9-32.8,37.1-35.1c1.1-1.1,1.7-2,1.8-2.9c0.1-0.7-0.2-1.4-0.8-2\n\t\tc-0.7-0.7-1.4-1-2.1-0.9C75.4,29.1,74.4,29.7,73.2,30.9z","key":0}),React.createElement("path",{"d":"M50,98C23.5,98,2,76.5,2,50C2,23.5,23.5,2,50,2c26.5,0,48,21.6,48,48C98,76.5,76.5,98,50,98z M50,5.2\n\t\tC25.3,5.2,5.2,25.3,5.2,50c0,24.7,20.1,44.8,44.8,44.8c24.7,0,44.8-20.1,44.8-44.8C94.8,25.3,74.7,5.2,50,5.2z","key":1})]);
 }
 
 ApproveOnlineIcon.displayName = "ApproveOnlineIcon";
@@ -23126,6 +23126,25 @@ GooglePlusIcon.default = GooglePlusIcon;
 
 var React = __webpack_require__(1);
 
+function HamburgerIcon (props) {
+    return React.createElement("svg",props,[React.createElement("line",{"x1":"5","y1":"18.3","x2":"95","y2":"18.3","key":0}),React.createElement("line",{"x1":"5","y1":"50","x2":"95","y2":"50","key":1}),React.createElement("line",{"x1":"5","y1":"81.7","x2":"95","y2":"81.7","key":2})]);
+}
+
+HamburgerIcon.displayName = "HamburgerIcon";
+
+HamburgerIcon.defaultProps = {"version":"1.1","x":"0px","y":"0px","viewBox":"0 0 100 100","xmlSpace":"preserve"};
+
+module.exports = HamburgerIcon;
+
+HamburgerIcon.default = HamburgerIcon;
+
+
+/***/ }),
+/* 211 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(1);
+
 function InstagramIcon (props) {
     return React.createElement("svg",props,React.createElement("g",null,[React.createElement("path",{"d":"M49.5,18.9c10.6,0,11.9,0,16.1,0.2c3.9,0.2,6,0.8,7.4,1.4c1.9,0.7,3.2,1.6,4.6,3s2.3,2.7,3,4.6c0.5,1.4,1.2,3.5,1.4,7.4\n\t\tc0.2,4.2,0.2,5.5,0.2,16.1s0,11.9-0.2,16.1c-0.2,3.9-0.8,6-1.4,7.4c-0.7,1.9-1.6,3.2-3,4.6c-1.4,1.4-2.7,2.3-4.6,3\n\t\tc-1.4,0.5-3.5,1.2-7.4,1.4c-4.2,0.2-5.5,0.2-16.1,0.2s-11.9,0-16.1-0.2c-3.9-0.2-6-0.8-7.4-1.4c-1.9-0.7-3.2-1.6-4.6-3\n\t\tc-1.4-1.4-2.3-2.7-3-4.6c-0.5-1.4-1.2-3.5-1.4-7.4c-0.2-4.2-0.2-5.5-0.2-16.1s0-11.9,0.2-16.1c0.2-3.9,0.8-6,1.4-7.4\n\t\tc0.7-1.9,1.6-3.2,3-4.6s2.7-2.3,4.6-3c1.4-0.5,3.5-1.2,7.4-1.4C37.6,18.9,38.9,18.9,49.5,18.9 M49.5,11.7c-10.8,0-12.2,0-16.4,0.2\n\t\ts-7.1,0.9-9.7,1.8c-2.6,1-4.8,2.4-7,4.6s-3.6,4.4-4.6,7c-1,2.5-1.7,5.4-1.8,9.7c-0.2,4.2-0.2,5.6-0.2,16.4s0,12.2,0.2,16.4\n\t\ts0.9,7.1,1.8,9.7c1,2.6,2.4,4.8,4.6,7c2.2,2.2,4.4,3.6,7,4.6c2.5,1,5.4,1.7,9.7,1.8c4.2,0.2,5.6,0.2,16.4,0.2s12.2,0,16.4-0.2\n\t\ts7.1-0.9,9.7-1.8c2.6-1,4.8-2.4,7-4.6c2.2-2.2,3.6-4.4,4.6-7c1-2.5,1.7-5.4,1.8-9.7c0.2-4.2,0.2-5.6,0.2-16.4s0-12.2-0.2-16.4\n\t\tc-0.2-4.2-0.9-7.1-1.8-9.7c-1-2.6-2.4-4.8-4.6-7c-2.2-2.2-4.4-3.6-7-4.6c-2.5-1-5.4-1.7-9.7-1.8C61.7,11.7,60.3,11.7,49.5,11.7\n\t\tL49.5,11.7z","key":0}),React.createElement("path",{"d":"M49.5,31.1c-11.3,0-20.4,9.2-20.4,20.4s9.2,20.4,20.4,20.4s20.4-9.2,20.4-20.4S60.8,31.1,49.5,31.1z M49.5,64.8\n\t\tc-7.3,0-13.3-5.9-13.3-13.3s5.9-13.3,13.3-13.3s13.3,5.9,13.3,13.3S56.8,64.8,49.5,64.8z","key":1}),React.createElement("circle",{"cx":"70.7","cy":"30.3","r":"4.8","key":2})]));
 }
@@ -23140,7 +23159,7 @@ InstagramIcon.default = InstagramIcon;
 
 
 /***/ }),
-/* 211 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(1);
@@ -23159,7 +23178,7 @@ LinkedInIcon.default = LinkedInIcon;
 
 
 /***/ }),
-/* 212 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(1);
@@ -23178,7 +23197,7 @@ NoPressureSaleIcon.default = NoPressureSaleIcon;
 
 
 /***/ }),
-/* 213 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(1);
@@ -23197,7 +23216,7 @@ PinterestIcon.default = PinterestIcon;
 
 
 /***/ }),
-/* 214 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(1);
@@ -23216,7 +23235,7 @@ SaveMoneyIcon.default = SaveMoneyIcon;
 
 
 /***/ }),
-/* 215 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(1);
@@ -23235,7 +23254,7 @@ SaveTimeIcon.default = SaveTimeIcon;
 
 
 /***/ }),
-/* 216 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(1);
@@ -23254,7 +23273,7 @@ TwitterIcon.default = TwitterIcon;
 
 
 /***/ }),
-/* 217 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(1);
@@ -23273,7 +23292,6 @@ YouTubeIcon.default = YouTubeIcon;
 
 
 /***/ }),
-/* 218 */,
 /* 219 */,
 /* 220 */,
 /* 221 */,
@@ -23420,49 +23438,6 @@ exports.default = NotFound;
 
 
 (0, _reactDom.render)(_react2.default.createElement(NotFound, null), document.getElementById('layout'));
-
-/***/ }),
-/* 302 */,
-/* 303 */,
-/* 304 */,
-/* 305 */,
-/* 306 */,
-/* 307 */,
-/* 308 */,
-/* 309 */,
-/* 310 */,
-/* 311 */,
-/* 312 */,
-/* 313 */,
-/* 314 */,
-/* 315 */,
-/* 316 */,
-/* 317 */,
-/* 318 */,
-/* 319 */,
-/* 320 */,
-/* 321 */,
-/* 322 */,
-/* 323 */,
-/* 324 */,
-/* 325 */,
-/* 326 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var React = __webpack_require__(1);
-
-function HamburgerIcon (props) {
-    return React.createElement("svg",props,[React.createElement("line",{"x1":"5","y1":"18.3","x2":"95","y2":"18.3","key":0}),React.createElement("line",{"x1":"5","y1":"50","x2":"95","y2":"50","key":1}),React.createElement("line",{"x1":"5","y1":"81.7","x2":"95","y2":"81.7","key":2})]);
-}
-
-HamburgerIcon.displayName = "HamburgerIcon";
-
-HamburgerIcon.defaultProps = {"version":"1.1","x":"0px","y":"0px","viewBox":"0 0 100 100","xmlSpace":"preserve"};
-
-module.exports = HamburgerIcon;
-
-HamburgerIcon.default = HamburgerIcon;
-
 
 /***/ })
 /******/ ]);

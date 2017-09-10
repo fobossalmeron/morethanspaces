@@ -137,10 +137,10 @@ class BoothGrid extends Component {
     );
 
     var renderQuote = this.props.renderBoothInstaQuote ? quote : undefined ;
-
+    var overflow = (this.props.individualBoothRender ? 'overflowVisible' : '');
     return (
       <div>
-      <ul id="boothGrid">
+      <ul id="boothGrid" className={overflow}>
         <CSSTransitionGroup transitionName="example"
                             transitionEnterTimeout={400}
                             transitionLeaveTimeout={400}>

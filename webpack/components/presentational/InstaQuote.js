@@ -127,7 +127,7 @@ class InstaQuote extends Component {
       <div className="instaInfo">
         <h2>instaQuote</h2>
         <div className={reveal}>
-        <h2><NumberFormat value={finalPrice} displayType={'text'} thousandSeparator={true} prefix={'$'} /> USD</h2>
+        <h2><NumberFormat decimalPrecision={0} value={finalPrice} displayType={'text'} thousandSeparator={true} prefix={'$'} /> USD</h2>
           <ul>
           {isDiscount}
           {maximumReached}

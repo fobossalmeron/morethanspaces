@@ -84,7 +84,7 @@ class BoothForm extends Component {
       <div className="goBackContainer">
         <div className="leaveOrStay">
           <ArrowBackIcon/>
-          <a onClick={() => this.props.closeSingleBooth()}><b>back</b> to booths</a>
+          <a onClick={() => this.props.closeSingleBooth()}><b>back</b><br/>to booths</a>
         </div>
         <label>rent or own?</label>
           <CheckBox onClick={this.handleRent} inputType="radio" nameFor="rentOrOwn" defaultChecked={!this.props.wantToOwn} checkFor="rent"/>

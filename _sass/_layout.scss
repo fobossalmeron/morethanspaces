@@ -63,9 +63,6 @@ nav{
 
 #navActive{
   background-color: $black;
-  .navScroll{
-    background-color: $white;
-  }
 }
 
 .menuActive{
@@ -99,7 +96,7 @@ nav{
 
 .navScroll{
   height: 60px;
-  background-color:$white;
+  background-color:$white !important;
   .menuButton{
     stroke: $black;
     margin: 5px 15px;
@@ -319,6 +316,8 @@ footer{
 .instaQuoteButton{
   width: 100%;
   font-family: inherit;
+  clear: both;
+  float: left;
   border: none;
   background-color: $magenta;
   border-radius: 2px;
@@ -484,7 +483,7 @@ section{
     font-size: inherit;
     margin-top: 2%;
     font-family: inherit;
-    white-space: nowrap;
+    white-space: inherit;
     float: left;
     clear: both;
     z-index: 1;
@@ -535,12 +534,15 @@ section{
 
 #homevideo{
   width: 100%;
-  height: 0;
-  padding-bottom: 56.2%;
+  height: 100%;
   overflow: hidden;
-  display: block;
-  position: relative;
+  min-height: 100vh;
+  position: absolute;
   z-index: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
 
   .video_overlay{
     position: absolute;
@@ -554,27 +556,35 @@ section{
 
   video{
     position: absolute;
+    min-height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 0;
-    height:100%;
-    width:100%;
+    min-width: 100%;
+    width: auto !important;
+    height: auto !important;
   }
 }
 #servicesvideo{
   width: 100%;
-  height: 0;
-  padding-bottom: 56.2%;
+  height: 100%;
   overflow: hidden;
   display: block;
   position: fixed;
+  background-color: white;
   z-index: -1;
   left: 0;
   top: 0;
 
   video{
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
     z-index: 0;
-    height:100%;
-    width:100%;
+    min-width: 100%;
+    height: auto !important;
   }
 }
 
@@ -622,15 +632,7 @@ section{
 .row{
   float:left;
   clear:both;
-}
-
-.service-icon{
   width: 100%;
-  max-height: 100px;
-  height: 100%;
-  margin-bottom: 20px;
-  position: relative;
-  display: block;
 }
 
 #about{
@@ -704,15 +706,15 @@ section{
     }
     &:nth-of-type(1){
       background-color: $strongYellow;
-      width:66%;
+      width:75%;
     }
     &:nth-of-type(2){
       background-color: $blue;
-      width:75%;
+      width:80%;
     }
     &:nth-of-type(3){
       background-color: $magenta;
-      width:80%;
+      width:90%;
       margin-bottom: 5%;
     }
   }
@@ -1051,7 +1053,7 @@ input[type=text]{
       position: absolute;
       height: 20px;
       width: 20px;
-      right: 20px;
+      right: 10px;
       top: 30px;
       border-radius: 50% 50%;
       bottom: 0;
@@ -1162,6 +1164,14 @@ input[type=text]{
       width:15%;
       padding:0 10px;
     }
+    .theX{
+      float: left;
+      width: 15%;
+      padding: 2% 5%;
+      min-height: 40px;
+      margin: 0;
+      clear:none;
+    }
     label{
       float:left;
       width:100%;
@@ -1192,29 +1202,28 @@ input[type=text]{
 
 .leaveOrStay{
   float: left;
-  padding-top: 15px;
+  padding-top: 10%;
   width: 100%;
   text-align: left;
   line-height: 1.5;
   margin-bottom: 10px;
   a{
-    border-bottom: 2px solid $white;
-    color:white;
-    text-decoration: none;
-    padding-bottom: 0px;
-    float:left;
-    font-size: 18px;
+    text-decoration: underline;
+    color: $white;
+    float: left;
+    font-size: .9em;
+    width: 83%;
+    line-height: 1.2;
   }
   svg{
-    margin-right: 5px;
+    margin-right: 2%;
     fill: white;
     position: relative;
     float: left;
-    width: 30px;
+    width: 15%;
   }
   b{
-    float:left;
-    padding-right: 7px;
+    text-decoration: underline;
   }
 }
 
@@ -1320,6 +1329,7 @@ input[type=text]{
 
 .singleImage{
     width: 60%;
+    overflow: hidden;
     float: left;
     img{
       width:100%;
@@ -1468,6 +1478,7 @@ iframe{
 }
 
 .arrow-icon {
+    margin-left: 2px;
 		-webkit-transition: -webkit-transform 0.3s ease;
 		transition: -webkit-transform 0.3s ease;
 		transition: transform 0.3s ease;
@@ -1534,6 +1545,11 @@ iframe{
   min-height:500px;
 }
 
+.overflowVisible{
+  overflow: visible;
+  height: auto !important;
+}
+
 .realestate{
   a{
     font-weight: 700;
@@ -1556,22 +1572,28 @@ iframe{
     margin-top:-4%;
   }
 }
+.conventionBackground{
+  background-color: $black;
+  width:100%;
+  float:left;
+}
 .convention_card{
     float: left;
     width: 50%;
-      padding: 10% 5% 5% 5%;
-      max-height: 400px;
-      box-sizing: border-box;
-      display: inline-block;
-      position: relative;
-      background-color: $black;
-      &:nth-of-type(1){
-        padding-left: 0;
-      }
-      h2{
-        color: $yellow;
-        background-color:$magenta;
-        padding: 2% 0 2% 10%;
+    margin-top: 130px;
+    padding: 0 5% 5% 5%;
+    max-height: 400px;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    background-color: $black;
+    &:nth-of-type(1){
+      padding-left: 0;
+    }
+    h2{
+      color: $yellow;
+      background-color:$magenta;
+      padding: 2% 0 2% 10%;
       }
       h1{
         font-weight: bold;
@@ -1709,6 +1731,7 @@ iframe{
   p{
     float:left;
     clear:both;
+    margin: 0;
   }
 }
 
@@ -1720,6 +1743,7 @@ iframe{
     width: 100%;
     border-radius: 2px;
     background-size: cover;
+    background-position: center;
     display: block;
     position: relative;
     height: 200px;
@@ -1748,14 +1772,16 @@ iframe{
   h2{
     width:65%;
     float:left;
+    line-height: 1;
+    padding: 2% 0;
     cursor:auto !important;
   }
   ul{
     float:left;
+    padding: 4% 0;
     clear:none;
     width: 35%;
     font-size: .4em;
-    margin-top: 4%;
     font-weight: 300;
     b{
       font-weight: 700;
@@ -1867,8 +1893,7 @@ iframe{
 
 #loadingvideo{
   width: 100%;
-  height: 0;
-  padding-bottom: 56.2%;
+  height: 100%;
   overflow: hidden;
   display: block;
   position: fixed;
@@ -1879,8 +1904,14 @@ iframe{
   video{
     position: absolute;
     z-index: 0;
-    height:100%;
-    width:100%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto !important;
+    height: auto !important;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -1941,7 +1972,7 @@ iframe{
     padding: 2% 4%;
     font-weight: bold;
     margin: 0;
-    font-size: 17px;
+    font-size: .9em;
   }
   a{
     font-size: .8em;
@@ -2014,10 +2045,12 @@ iframe{
 }
 
 .conventionFromPdf{
-padding:2% 0 2% 5%;
+padding:2% 2% 2% 5%;
+width:55%;
 background-color:$white;
 }
 .conventionHalfCard{
+  width:45%;
   background-color: $black;
   padding: 2% 5% 2% 4% !important;
   color: $white;
@@ -2064,4 +2097,35 @@ background-color:$white;
 
 .hideOnMobile{
   display: inline-block;
+}
+
+.slick-slider{
+  width: 99%;
+  transform: scale(1.0160);
+}
+
+.heightSlider{
+  max-height: 115px;
+}
+
+.service-icon{
+  width: 100%;
+  max-height: 100px;
+  height: 100%;
+  margin-bottom: 20px;
+  position: relative;
+  display: block;
+  circle{
+    transition: stroke-dashoffset .3s ease;
+    stroke-dasharray: 290;
+    stroke-dashoffset: 290;
+    stroke-width: 3px;
+    fill: none;
+    stroke: currentColor;
+  }
+  &:hover {
+    circle {
+      stroke-dashoffset: 0;
+    }
+  }
 }

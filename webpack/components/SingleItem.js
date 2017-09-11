@@ -57,9 +57,9 @@ class SingleItem extends Component {
     const settings = {
       infinite: true,
       slidesToShow: 4,
-      slidesToScroll: 1,
       autoplay: false,
       draggable: false,
+      responsive: [ { breakpoint: 500, settings: { slidesToShow: 2 } }, { breakpoint: 900, settings: { slidesToShow: 3 } } ],
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />
     };
@@ -78,7 +78,7 @@ class SingleItem extends Component {
           <div className="visualizer" id="visualizer" style={backgroundStyle}>
             { choice3D }
           </div>
-          <Slider {...settings}>
+          <Slider className={"heightSlider"} {...settings}>
               <img className="thumbnailBooth" onClick={() => this.handleView("3D")} src="assets/img/layout/3dTrigger.svg"/>
               {numberOfImages}
           </Slider>

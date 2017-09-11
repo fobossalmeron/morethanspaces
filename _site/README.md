@@ -3,15 +3,12 @@ Morethanspaces Website
 
 ##Estilos
 - css transition groups
-- responsive -started (3)
 
 ##Funcionalidad
-- send email each time user clicks, store user info in state, send emails
+- send email each time user clicks, send several emails
 
-##CrossBrowser
-- button text in HomeSection
-
-##responsive
-- single booth
-- instaQuoteForm
-- conventions page
+#Ask
+- 17done 21faltan (1,188) Thursday 14.
+- Ds website when
+- obj files when
+- launch when

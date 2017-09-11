@@ -106,17 +106,23 @@ class VideoWallGrid extends Component {
                     discountType={this.props.discountType}
                     doRevealInstaQuote={this.props.doRevealInstaQuote.bind(this)}
                     hideCollectors={this.props.hideCollectors.bind(this)}
-                    renderCollectors={this.props.renderCollectors}/>
+                    renderCollectors={this.props.renderCollectors}
+                    generateUser={this.props.generateUser.bind(this)}
+                    name={this.state.name}
+                    email={this.state.email}
+                    phone={this.state.phone}
+                    weHaveUser={this.props.weHaveUser}/>
         </div>
         <IconsBar className={"iconsBarQuote"}/>
       </div>
     );
 
     var renderQuote = this.props.renderVideoWallInstaQuote ? quote : undefined ;
+    var overflow = (this.props.individualVideoWallRender ? 'overflowVisible' : '');
 
     return (
       <div>
-      <ul id="boothGrid">
+      <ul id="boothGrid" className={overflow}>
         <CSSTransitionGroup transitionName="example"
                             transitionEnterTimeout={400}
                             transitionLeaveTimeout={400}>

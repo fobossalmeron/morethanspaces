@@ -16,6 +16,10 @@ class InstaQuote extends Component {
      this.formatNumber = this.formatNumber.bind(this);
   }
 
+  submitForm(){
+    document.getElementById("submitMe").click();
+  }
+
   discountSymbol(){
     if (this.props.discountType === "percentage") {
         return "%"
@@ -113,7 +117,7 @@ class InstaQuote extends Component {
       <div>
     <div className="instaBlock">
       <div className="instaColumn">
-        <div className="instaThumbnail" style={{backgroundImage: 'url(' + this.props.images[0].url + ')'}}></div>
+        <div className="instaThumbnail" onClick={() => this.submitForm()} style={{backgroundImage: 'url(' + this.props.images[0].url + ')'}}></div>
         <ul>
           <li>model: <b>{this.props.singleValue}</b></li>
           {ifExistsSize}
@@ -127,7 +131,7 @@ class InstaQuote extends Component {
       <div className="instaInfo">
         <h2>instaQuote</h2>
         <div className={reveal}>
-        <h2><NumberFormat value={finalPrice} displayType={'text'} thousandSeparator={true} prefix={'$'} /> USD</h2>
+        <h2><NumberFormat decimalPrecision={0} value={finalPrice} displayType={'text'} thousandSeparator={true} prefix={'$'} /> USD</h2>
           <ul>
           {isDiscount}
           {maximumReached}
@@ -140,7 +144,12 @@ class InstaQuote extends Component {
     </div>
     <CollectBeforeQuote {...this.props} originalPrice={originalPrice}
                                         finalPrice={finalPrice}
-                                        discountSymbol={this.discountSymbol.bind(this)}/>
+                                        discountSymbol={this.discountSymbol.bind(this)}
+                                        generateUser={this.props.generateUser.bind(this)}
+                                        name={this.props.name}
+                                        email={this.props.email}
+                                        phone={this.props.phone}
+                                        weHaveUser={this.props.weHaveUser}/>
       </div>
     );
   }

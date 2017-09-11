@@ -1,4 +1,12 @@
 @include media-query($x1100-down) {
+  .convention_card h2 {
+    font-size: 1.3em;
+  }
+  .quoteNumber{
+    h2{
+      font-size: 1.5em;
+    }
+  }
   section{
     padding: 3%;
   }
@@ -54,9 +62,20 @@
     }
     width: 100%;
   }
+  .singleBooth .singleInfo {
+    padding-left: 3%;
+  }
 }
 
 @include media-query($x1000-down) {
+  #content h1, h2{
+    font-size: 1.3em;
+  }
+  .quoteNumber{
+    h2{
+      font-size: 1.4em;
+    }
+  }
   .frompdf span {
     font-size: 5em;
   }
@@ -92,12 +111,14 @@
   .singleBooth{
     .singleInfo {
       width: 50%;
-      padding-left: 3%;
-      padding-right: 3%;
+      padding-right: 2%;
+    }
+    .singleImage {
+      width: 50%;
+    }
   }
-  }
-  .singleImage {
-    width: 50%;
+  .visualizer{
+    min-height: 350px;
   }
   .boothGridItem{
         min-height: 190px;
@@ -112,6 +133,7 @@
   #boothGrid{
         width: 78%;
         margin-right:0;
+        height:665px;
   }
   nav ul  {
         transform: translateX(-100%);
@@ -150,10 +172,113 @@
 }
 
 @include media-query($x900-down) {
-
+  .convention_card{
+    padding: 0 2% 2% 2%;
+    h2 {
+      font-size: 1em;
+    }
+  }
+  #dataCollector{
+    form {
+      width: 71%;
+      float: right;
+    }
+    input{
+      clear: both;
+      width: 100%;
+    }
+    button{
+      width: 100%;
+      margin-top: 4%;
+      padding: 3%;
+    }
+    .FormError{
+      position: relative;
+      white-space: normal;
+    }
+  }
+  .quoteNumber{
+    h2{
+      width:100%;
+    }
+    ul{
+      clear: both;
+      width:100%;
+      padding-top:1%;
+    }
+  }
+  .instaQuoteButton{
+    width: 55%;
+    padding: 4%;
+    margin-top: 0;
+  }
+  .singleBooth{
+    .singleImage{
+     padding:0;
+     width: 70%;
+     margin: 0 15%;
+    }
+    .singleInfo{
+      width: 100%;
+      padding:2% 2% 0 0;
+    }
+  }
+  .visualizer{
+    min-height: 250px;
+    width: 98.5%;
+    margin-right:1.5%;
+  }
+  .slick-slider{
+    width: 98%;
+    margin-right: 0%;
+    transform: scale(1.01);
+  }
 }
 
 @include media-query($x800-down) {
+  .service-icon{
+    circle {
+      stroke-dashoffset: 0;
+    }
+  }
+  .convention_card{
+    width:100%;
+    &:nth-of-type(2){
+      margin-top: 0;
+    }
+    h2{
+      font-size:1.5em;
+    }
+  }
+  #content{
+    column-count: 1;
+  }
+  #dataCollector{
+    form {
+      width: 70%;
+      float: left;
+    }
+  }
+  .instaColumn{
+    width: 100%;
+    .instaThumbnail{
+      width: 50%;
+      height: 180px;
+    }
+  }
+  .instaInfo{
+    width:100%;
+    padding:0;
+  }
+  .instaQuoteWhole ul{
+    padding: 0 0 0 5%;
+    width: 50%;
+    clear:none;
+  }
+  .quoteNumber ul{
+    padding: 0% 0 3% 0;
+    width:100%;
+  }
   #contact a{
     clear:none;
     &:nth-of-type(1) {
@@ -250,6 +375,19 @@
 }
 
 @include media-query($x700-down) {
+  .instaQuoteButton{
+    width: 100%;
+    padding: 4%;
+  }
+  .singleBooth{
+    .singleImage{
+     width: 100%;
+     margin:0;
+    }
+  }
+  .visualizer{
+    min-height: 250px;
+  }
   h1, h2, h3, h4, h5, h6 {
     font-size: 1.4em;
   }
@@ -285,6 +423,36 @@
 }
 
 @include media-query($x500-down) {
+  .convention_card{
+    h2{
+      font-size:1.2em;
+    }
+  }
+  .instaInfo .scheduleButton{
+    width: 100%;
+  }
+  #dataCollector{
+    form {
+      width: 100%;
+      float: left;
+      margin:0;
+    }
+  }
+  .instaQuoteWhole ul {
+    font-size: .8em;
+  }
+  .quoteNumber ul {
+    font-size: .4em;
+    padding: 0% 0 3% 0;
+  }
+  .slick-slider{
+    width:100%;
+    margin:0;
+    transform: scale(1);
+  }
+  .visualizer{
+    min-height: 200px;
+  }
   #clients{
     ul{
       width:100%;
@@ -316,9 +484,27 @@
       }
     }
   }
+  .blueSuggest label{
+    font-size: .8em;
+  }
 }
 
 @include media-query($x400-down) {
+  .convention_card{
+    h1{
+      font-size:2em;
+    }
+    h2{
+      font-size:1em;
+    }
+  }
+  #about h1 {
+    font-size: 1.5em;
+  }
+  .frompdf span {
+    font-size: 4em;
+    margin-bottom: 2%;
+  }
   .frompdf .stepbox:nth-of-type(1),.frompdf .stepbox:nth-of-type(2),.frompdf .stepbox:nth-of-type(3) {
     width: 100%;
   }
@@ -342,9 +528,20 @@
     font-size: 2em;
   }
   #boothGrid{
-    width:55%
+    width:61%;
+    height: 600px;
   }
   .instaQuoteForm{
-    width:44%;
+    width:38%;
+    font-size: .9em;
+  }
+  .instaQuoteWhole ul {
+    font-size: .7em;
+  }
+  .quoteNumber ul {
+    font-size: .4em;
+  }
+  #products h2 {
+    font-size: 1.2em;
   }
 }

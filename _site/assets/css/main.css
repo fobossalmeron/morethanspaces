@@ -79,7 +79,6 @@ nav ul li a:hover { border-color: #f9f9f9; color: #f9f9f9; text-decoration: none
 .restrictBody { overflow: hidden; }
 
 #navActive { background-color: #383838; }
-#navActive .navScroll { background-color: #f9f9f9; }
 
 .menuActive { transform: translateX(0); }
 
@@ -87,7 +86,7 @@ nav ul li a:hover { border-color: #f9f9f9; color: #f9f9f9; text-decoration: none
 .discounts-menu b { float: left; clear: both; font-size: 25px; color: #ec3092; line-height: 1; margin-right: 6px; }
 .discounts-menu span { float: left; clear: both; margin-top: -5px; font-size: 0.7em; color: #f9f9f9; }
 
-.navScroll { height: 60px; background-color: #f9f9f9; }
+.navScroll { height: 60px; background-color: #f9f9f9 !important; }
 .navScroll .menuButton { stroke: #383838; margin: 5px 15px; }
 .navScroll .discounts-menu { padding-top: 3px; color: #383838; }
 .navScroll .discounts-menu span { color: #383838; }
@@ -138,7 +137,7 @@ footer ul li h3 { font-weight: 700; color: #f9f9f9; }
   to { transform: scale3d(1, 1, 1); } }
 .bounce { animation-name: bounce; transform-origin: center bottom; animation-duration: 1s; animation-iteration-count: infinite; animation-fill-mode: both; animation-play-state: paused; }
 
-.instaQuoteButton { width: 100%; font-family: inherit; border: none; background-color: #ec3092; border-radius: 2px; cursor: pointer; font-weight: 700; color: #f9f9f9; font-size: 1em; padding: 6%; margin-top: 6%; transition: .4s ease all; }
+.instaQuoteButton { width: 100%; font-family: inherit; clear: both; float: left; border: none; background-color: #ec3092; border-radius: 2px; cursor: pointer; font-weight: 700; color: #f9f9f9; font-size: 1em; padding: 6%; margin-top: 6%; transition: .4s ease all; }
 .instaQuoteButton:hover { background-color: #2dbdc0; }
 
 section { float: left; width: 100%; padding: 3% 5%; position: relative; }
@@ -170,7 +169,7 @@ section { float: left; width: 100%; padding: 3% 5%; position: relative; }
 #home { padding: 0; position: relative; min-height: 100vh; background-color: #383838; }
 #home h1 { font-size: 3.4em; display: inline-block; color: #f9f9f9; width: 100%; float: left; clear: both; line-height: 1.20; }
 #home iframe { border: none; background-color: #383838; }
-#home button { background-color: #eee81a; color: #383838; font-weight: 700; border-radius: 2px; display: block; border: none; padding: 10px 20px; font-size: inherit; margin-top: 2%; font-family: inherit; white-space: nowrap; float: left; clear: both; z-index: 1; transition: .4s ease all; border: 2px solid transparent; }
+#home button { background-color: #eee81a; color: #383838; font-weight: 700; border-radius: 2px; display: block; border: none; padding: 10px 20px; font-size: inherit; margin-top: 2%; font-family: inherit; white-space: inherit; float: left; clear: both; z-index: 1; transition: .4s ease all; border: 2px solid transparent; }
 #home button .spaceLeft { margin-left: 10px; }
 #home button svg { display: inline-block; position: relative; top: 0; float: right; height: 25px; margin-left: 0; padding: 0; transition: .4s ease all; fill: #383838; }
 #home button:hover, #home button:focus { cursor: pointer; background-color: transparent; color: #eee81a; border-color: #eee81a; outline: none; }
@@ -181,12 +180,12 @@ section { float: left; width: 100%; padding: 3% 5%; position: relative; }
 .controllsVideo { bottom: 0; }
 .controllsVideo button { float: left !important; clear: none !important; margin-right: 10px; }
 
-#homevideo { width: 100%; height: 0; padding-bottom: 56.2%; overflow: hidden; display: block; position: relative; z-index: 0; }
+#homevideo { width: 100%; height: 100%; overflow: hidden; min-height: 100vh; position: absolute; z-index: 0; bottom: 0; right: 0; left: 0; top: 0; }
 #homevideo .video_overlay { position: absolute; left: 0; z-index: 1; right: 0; bottom: 0; top: 0; background-image: url("../img/layout/overlay.png"); }
-#homevideo video { position: absolute; z-index: 0; height: 100%; width: 100%; }
+#homevideo video { position: absolute; min-height: 100%; top: 0; left: 50%; transform: translateX(-50%); z-index: 0; min-width: 100%; width: auto !important; height: auto !important; }
 
-#servicesvideo { width: 100%; height: 0; padding-bottom: 56.2%; overflow: hidden; display: block; position: fixed; z-index: -1; left: 0; top: 0; }
-#servicesvideo video { position: absolute; z-index: 0; height: 100%; width: 100%; }
+#servicesvideo { width: 100%; height: 100%; overflow: hidden; display: block; position: fixed; background-color: white; z-index: -1; left: 0; top: 0; }
+#servicesvideo video { position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); z-index: 0; min-width: 100%; height: auto !important; }
 
 #services { color: #383838; }
 #services h2 { font-weight: 700; margin-bottom: 0; }
@@ -198,9 +197,7 @@ section { float: left; width: 100%; padding: 3% 5%; position: relative; }
 #services ul li h3 { font-weight: 700; }
 #services ul li em { font-weight: 400; }
 
-.row { float: left; clear: both; }
-
-.service-icon { width: 100%; max-height: 100px; height: 100%; margin-bottom: 20px; position: relative; display: block; }
+.row { float: left; clear: both; width: 100%; }
 
 #about { background-color: #e0e0e0; }
 #about h1 { color: #ec3092; margin-bottom: 0; font-size: 2em; }
@@ -216,9 +213,9 @@ section { float: left; width: 100%; padding: 3% 5%; position: relative; }
 .frompdf .stepbox { width: 100%; float: left; clear: both; font-weight: 700; border-radius: 2px; padding: 2%; height: 75px; margin-bottom: 3.5%; }
 .frompdf .stepbox b { float: left; color: #383838; font-size: 3em; margin-right: 2%; margin-top: -15px; }
 .frompdf .stepbox p { float: left; margin-top: 1%; font-size: 18px; }
-.frompdf .stepbox:nth-of-type(1) { background-color: #f9ec00; width: 66%; }
-.frompdf .stepbox:nth-of-type(2) { background-color: #2dbdc0; width: 75%; }
-.frompdf .stepbox:nth-of-type(3) { background-color: #ec3092; width: 80%; margin-bottom: 5%; }
+.frompdf .stepbox:nth-of-type(1) { background-color: #f9ec00; width: 75%; }
+.frompdf .stepbox:nth-of-type(2) { background-color: #2dbdc0; width: 80%; }
+.frompdf .stepbox:nth-of-type(3) { background-color: #ec3092; width: 90%; margin-bottom: 5%; }
 
 .stepyellowbox { background-color: #f9ec00; color: #383838; border-radius: 2px; width: 100%; float: left; padding: 2%; margin-bottom: 2%; }
 .stepyellowbox p { margin: 0; }
@@ -288,7 +285,7 @@ input[type=text] { border: none; padding: 4px; font-size: .7em; }
 .react-tabs__tab .backSlide { left: -49px; z-index: 0; }
 .react-tabs__tab .backSlide span { transform: rotate(24deg); left: 29px; }
 .react-tabs__tab:focus { outline: none; }
-.react-tabs__tab:focus::after { content: ''; position: absolute; height: 20px; width: 20px; right: 20px; top: 30px; border-radius: 50% 50%; bottom: 0; background: #ec3092; box-shadow: 0 0 5px #ec3092; }
+.react-tabs__tab:focus::after { content: ''; position: absolute; height: 20px; width: 20px; right: 10px; top: 30px; border-radius: 50% 50%; bottom: 0; background: #ec3092; box-shadow: 0 0 5px #ec3092; }
 
 .react-tabs__tab--selected { background-color: #f9f9f9; z-index: 1; }
 .react-tabs__tab--selected .frontSlide span { background-color: #f9f9f9; z-index: 1; }
@@ -328,14 +325,15 @@ input[type=text] { border: none; padding: 4px; font-size: .7em; }
 .instaQuoteForm span { float: left; top: 30px; width: 100%; font-size: 0.5em; text-align: center; position: relative; }
 .instaQuoteForm .doubleLine { width: 47px; left: -7px; }
 .instaQuoteForm p { float: left; width: 15%; padding: 0 10px; }
+.instaQuoteForm .theX { float: left; width: 15%; padding: 2% 5%; min-height: 40px; margin: 0; clear: none; }
 .instaQuoteForm label { float: left; width: 100%; margin-top: 10px; }
 .instaQuoteForm .noMargin { margin: 0px; }
 .instaQuoteForm select { min-height: 40px; -webkit-appearance: none; -moz-appearance: none; border-radius: 2px; width: 42.5%; background-position: right 50%; background-repeat: no-repeat; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAYAAABSgIzaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDZFNDEwNjlGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDZFNDEwNkFGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NkU0MTA2N0Y3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NkU0MTA2OEY3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuGsgwQAAAA5SURBVHjaYvz//z8DOYCJgUxAf42MQIzTk0D/M+KzkRGPoQSdykiKJrBGpOhgJFYTWNEIiEeAAAMAzNENEOH+do8AAAAASUVORK5CYII=); padding: 4% 3%; height: 30px; float: left; border: none; font-size: .7em; font-family: "GothamRound", sans-serif; background-color: #eee81a; margin: 1% 0; }
 
-.leaveOrStay { float: left; padding-top: 15px; width: 100%; text-align: left; line-height: 1.5; margin-bottom: 10px; }
-.leaveOrStay a { border-bottom: 2px solid #f9f9f9; color: white; text-decoration: none; padding-bottom: 0px; float: left; font-size: 18px; }
-.leaveOrStay svg { margin-right: 5px; fill: white; position: relative; float: left; width: 30px; }
-.leaveOrStay b { float: left; padding-right: 7px; }
+.leaveOrStay { float: left; padding-top: 10%; width: 100%; text-align: left; line-height: 1.5; margin-bottom: 10px; }
+.leaveOrStay a { text-decoration: underline; color: #f9f9f9; float: left; font-size: .9em; width: 83%; line-height: 1.2; }
+.leaveOrStay svg { margin-right: 2%; fill: white; position: relative; float: left; width: 15%; }
+.leaveOrStay b { text-decoration: underline; }
 
 .datePickerFields { float: left; }
 .datePickerFields label { float: left; clear: both; }
@@ -366,7 +364,7 @@ input[type=text] { border: none; padding: 4px; font-size: .7em; }
 
 .boothInline label::after { content: 'inline'; background-color: orange; }
 
-.singleImage { width: 60%; float: left; }
+.singleImage { width: 60%; overflow: hidden; float: left; }
 .singleImage img { width: 100%; min-height: 400px; }
 .singleImage .thumbnailBooth { width: 22%; min-height: auto; padding: 10px 4px 0 0; cursor: pointer; }
 .singleImage .thumbnailBooth:hover { opacity: 0.8; }
@@ -408,7 +406,7 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 
 .react-tabs__tab--disabled { display: none; }
 
-.arrow-icon { -webkit-transition: -webkit-transform 0.3s ease; transition: -webkit-transform 0.3s ease; transition: transform 0.3s ease; transition: transform 0.3s ease, -webkit-transform 0.3s ease; vertical-align: middle; position: absolute; top: 55%; float: left; display: block; height: 50px; padding: 0; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); cursor: pointer; z-index: 1; }
+.arrow-icon { margin-left: 2px; -webkit-transition: -webkit-transform 0.3s ease; transition: -webkit-transform 0.3s ease; transition: transform 0.3s ease; transition: transform 0.3s ease, -webkit-transform 0.3s ease; vertical-align: middle; position: absolute; top: 55%; float: left; display: block; height: 50px; padding: 0; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); cursor: pointer; z-index: 1; }
 .arrow-icon .arrow-icon--circle { transition: stroke-dashoffset .3s ease; stroke-dasharray: 95; stroke-dashoffset: 95; }
 .arrow-icon:hover .arrow-icon { transform: translate3d(5px, 0, 0); }
 .arrow-icon:hover .arrow-icon--circle { stroke-dashoffset: 0; }
@@ -427,13 +425,17 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 
 .calendly-inline-widget { min-width: 0; position: relative; width: 100%; min-height: 500px; }
 
+.overflowVisible { overflow: visible; height: auto !important; }
+
 .realestate a { font-weight: 700; margin-bottom: 5px; text-decoration-style: wavy; text-decoration: underline; text-decoration-skip: ink; line-height: 1.2; border: 0; }
 .realestate a:hover { color: #ec3092; text-decoration-color: #ec3092; }
 
 #convention { background-color: #383838; color: #f9f9f9; }
 #convention .frompdf { margin-top: -4%; }
 
-.convention_card { float: left; width: 50%; padding: 10% 5% 5% 5%; max-height: 400px; box-sizing: border-box; display: inline-block; position: relative; background-color: #383838; }
+.conventionBackground { background-color: #383838; width: 100%; float: left; }
+
+.convention_card { float: left; width: 50%; margin-top: 130px; padding: 0 5% 5% 5%; max-height: 400px; box-sizing: border-box; display: inline-block; position: relative; background-color: #383838; }
 .convention_card:nth-of-type(1) { padding-left: 0; }
 .convention_card h2 { color: #eee81a; background-color: #ec3092; padding: 2% 0 2% 10%; }
 .convention_card h1 { font-weight: bold; background-color: #2dbdc0; color: #383838; width: 100%; font-size: 3em; margin-bottom: 0; padding: 2% 0 0% 10%; }
@@ -461,14 +463,14 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 .instaInfo { width: 75%; float: left; padding-left: 4%; }
 .instaInfo .scheduleButton { width: 50%; float: left; clear: both; display: block; padding: 2% 4%; margin-top: 2%; margin-bottom: 1%; border-radius: 2px; background-color: #ec3092; color: #f9f9f9; border: none; font-family: inherit; font-size: 1em; font-weight: 700; cursor: pointer; transition: .4s ease all; }
 .instaInfo .scheduleButton:hover { background-color: #d51479; }
-.instaInfo p { float: left; clear: both; }
+.instaInfo p { float: left; clear: both; margin: 0; }
 
 .instaColumn { width: 25%; float: left; }
-.instaColumn .instaThumbnail { float: left; width: 100%; border-radius: 2px; background-size: cover; display: block; position: relative; height: 200px; margin-bottom: 4%; }
+.instaColumn .instaThumbnail { float: left; width: 100%; border-radius: 2px; background-size: cover; background-position: center; display: block; position: relative; height: 200px; margin-bottom: 4%; }
 
 .quoteNumber { font-weight: 700; display: block; width: 100%; background-color: #eee81a; margin-bottom: 2%; padding: 1% 5% 0% 3%; border-radius: 2px; float: left; font-size: 2em; filter: blur(12px); transition: .4s ease all; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-.quoteNumber h2 { width: 65%; float: left; cursor: auto !important; }
-.quoteNumber ul { float: left; clear: none; width: 35%; font-size: .4em; margin-top: 4%; font-weight: 300; }
+.quoteNumber h2 { width: 65%; float: left; line-height: 1; padding: 2% 0; cursor: auto !important; }
+.quoteNumber ul { float: left; padding: 4% 0; clear: none; width: 35%; font-size: .4em; font-weight: 300; }
 .quoteNumber ul b { font-weight: 700; }
 
 .revealQuote { filter: blur(0px); }
@@ -497,8 +499,8 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 .loading a { color: #ec3092; }
 .loading a:visited { color: #ec3092; }
 
-#loadingvideo { width: 100%; height: 0; padding-bottom: 56.2%; overflow: hidden; display: block; position: fixed; z-index: -1; left: 0; top: 0; }
-#loadingvideo video { position: absolute; z-index: 0; height: 100%; width: 100%; }
+#loadingvideo { width: 100%; height: 100%; overflow: hidden; display: block; position: fixed; z-index: -1; left: 0; top: 0; }
+#loadingvideo video { position: absolute; z-index: 0; left: 50%; min-width: 100%; min-height: 100%; width: auto !important; height: auto !important; transform: translateX(-50%); height: 100%; width: 100%; }
 
 .contactBox { background-color: #eee81a; float: left; padding: 4% 6%; width: 100%; margin-bottom: 4%; }
 .contactBox p { font-weight: 700; font-size: 1em; color: #ec3092; }
@@ -513,7 +515,7 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 .blueSuggest:hover { border-color: #ec3092; }
 .blueSuggest:hover a { text-decoration: none; background-color: #ec3092; }
 .blueSuggest:hover a svg path { fill: #f9f9f9; }
-.blueSuggest label { padding: 2% 4%; font-weight: bold; margin: 0; font-size: 17px; }
+.blueSuggest label { padding: 2% 4%; font-weight: bold; margin: 0; font-size: .9em; }
 .blueSuggest a { font-size: .8em; background-color: #2dbdc0; color: white; float: left; padding: 4%; width: 100%; transition: .4s ease all; border-radius: 0 0 2px 2px; }
 .blueSuggest svg { width: 25px; position: relative; float: right; }
 .blueSuggest svg path { fill: #f9f9f9; transition: .4s ease all; }
@@ -531,9 +533,9 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 .lastConventionSection h2 { color: #ec3092; font-weight: 700; }
 .lastConventionSection h3 { color: #eee81a; font-weight: 700; }
 
-.conventionFromPdf { padding: 2% 0 2% 5%; background-color: #f9f9f9; }
+.conventionFromPdf { padding: 2% 2% 2% 5%; width: 55%; background-color: #f9f9f9; }
 
-.conventionHalfCard { background-color: #383838; padding: 2% 5% 2% 4% !important; color: #f9f9f9; }
+.conventionHalfCard { width: 45%; background-color: #383838; padding: 2% 5% 2% 4% !important; color: #f9f9f9; }
 .conventionHalfCard h2 { color: #eee81a; font-weight: 700; }
 
 .conventionBackground { background-color: #383838; float: left; }
@@ -549,6 +551,14 @@ iframe { position: absolute; background-color: white; height: 100%; width: 100%;
 #pdfViewer embed { position: absolute; left: 0; right: 0; bottom: 0; top: 0; width: 100%; height: 100%; }
 
 .hideOnMobile { display: inline-block; }
+
+.slick-slider { width: 99%; transform: scale(1.016); }
+
+.heightSlider { max-height: 115px; }
+
+.service-icon { width: 100%; max-height: 100px; height: 100%; margin-bottom: 20px; position: relative; display: block; }
+.service-icon circle { transition: stroke-dashoffset .3s ease; stroke-dasharray: 290; stroke-dashoffset: 290; stroke-width: 3px; fill: none; stroke: currentColor; }
+.service-icon:hover circle { stroke-dashoffset: 0; }
 
 /** Syntax highlighting styles */
 .highlight { background: #fff; }
@@ -1006,7 +1016,9 @@ body.video-react-full-window .video-react-fullscreen { position: fixed; overflow
   to { opacity: 0; transform: scale(2); } }
 @keyframes video-react-bezel-fadeout-alt { 0% { opacity: 1; }
   to { opacity: 0; transform: scale(2); } }
-@media screen and (max-width: 1100px) { section { padding: 3%; }
+@media screen and (max-width: 1100px) { .convention_card h2 { font-size: 1.3em; }
+  .quoteNumber h2 { font-size: 1.5em; }
+  section { padding: 3%; }
   footer { padding: 3%; }
   footer ul li:nth-of-type(1) { width: 15.5%; }
   footer ul li:nth-of-type(2) { width: 27%; padding-right: 2%; }
@@ -1021,8 +1033,11 @@ body.video-react-full-window .video-react-fullscreen { position: fixed; overflow
   nav ul { margin-right: 0; }
   .quoteCheck { width: 100%; }
   .quoteCheck label { padding: 5% 6% 3% 6%; }
-  .quoteCheck label:before { right: 8px; } }
-@media screen and (max-width: 1000px) { .frompdf span { font-size: 5em; }
+  .quoteCheck label:before { right: 8px; }
+  .singleBooth .singleInfo { padding-left: 3%; } }
+@media screen and (max-width: 1000px) { #content h1, h2 { font-size: 1.3em; }
+  .quoteNumber h2 { font-size: 1.4em; }
+  .frompdf span { font-size: 5em; }
   #contact a { clear: both; }
   #contact a:nth-of-type(1) { margin-left: 0px; }
   footer { padding: 3%; }
@@ -1031,18 +1046,43 @@ body.video-react-full-window .video-react-fullscreen { position: fixed; overflow
   footer ul li:nth-of-type(3) { width: 33%; }
   footer ul li:nth-of-type(4) { width: 100%; padding-right: 0; }
   .contactBox { padding: 1% 2%; margin-bottom: 2%; }
-  .singleBooth .singleInfo { width: 50%; padding-left: 3%; padding-right: 3%; }
-  .singleImage { width: 50%; }
+  .singleBooth .singleInfo { width: 50%; padding-right: 2%; }
+  .singleBooth .singleImage { width: 50%; }
+  .visualizer { min-height: 350px; }
   .boothGridItem { min-height: 190px; width: 48%; }
   .boothGridItem:nth-child(3n+3) { margin-right: 1%; }
   .boothGridItem:nth-child(even) { margin-right: 0; }
-  #boothGrid { width: 78%; margin-right: 0; }
+  #boothGrid { width: 78%; margin-right: 0; height: 665px; }
   nav ul { transform: translateX(-100%); position: fixed; padding: 5%; width: 100%; z-index: -2; background-color: #ec3092; height: 100%; top: 100px; margin: 0; left: 0; bottom: 0px; transform: translateX(-100%); }
   nav ul li { float: right; height: auto; clear: both; padding: 2% 5%; font-size: 1.5em; text-align: left; }
   nav ul li a { font-weight: 700; }
   .menuButton { display: block; }
   .navScroll ul { margin-top: 0; top: 60px; } }
-@media screen and (max-width: 800px) { #contact a { clear: none; }
+@media screen and (max-width: 900px) { .convention_card { padding: 0 2% 2% 2%; }
+  .convention_card h2 { font-size: 1em; }
+  #dataCollector form { width: 71%; float: right; }
+  #dataCollector input { clear: both; width: 100%; }
+  #dataCollector button { width: 100%; margin-top: 4%; padding: 3%; }
+  #dataCollector .FormError { position: relative; white-space: normal; }
+  .quoteNumber h2 { width: 100%; }
+  .quoteNumber ul { clear: both; width: 100%; padding-top: 1%; }
+  .instaQuoteButton { width: 55%; padding: 4%; margin-top: 0; }
+  .singleBooth .singleImage { padding: 0; width: 70%; margin: 0 15%; }
+  .singleBooth .singleInfo { width: 100%; padding: 2% 2% 0 0; }
+  .visualizer { min-height: 250px; width: 98.5%; margin-right: 1.5%; }
+  .slick-slider { width: 98%; margin-right: 0%; transform: scale(1.01); } }
+@media screen and (max-width: 800px) { .service-icon circle { stroke-dashoffset: 0; }
+  .convention_card { width: 100%; }
+  .convention_card:nth-of-type(2) { margin-top: 0; }
+  .convention_card h2 { font-size: 1.5em; }
+  #content { column-count: 1; }
+  #dataCollector form { width: 70%; float: left; }
+  .instaColumn { width: 100%; }
+  .instaColumn .instaThumbnail { width: 50%; height: 180px; }
+  .instaInfo { width: 100%; padding: 0; }
+  .instaQuoteWhole ul { padding: 0 0 0 5%; width: 50%; clear: none; }
+  .quoteNumber ul { padding: 0% 0 3% 0; width: 100%; }
+  #contact a { clear: none; }
   #contact a:nth-of-type(1) { margin-left: 25px; }
   #slider .sliderCard { width: 80%; }
   .social-list a:nth-of-type(odd) { clear: none; }
@@ -1066,7 +1106,10 @@ body.video-react-full-window .video-react-fullscreen { position: fixed; overflow
   .instaQuoteForm { margin-right: 1%; width: 23%; }
   .iconsBar ul li { width: 33%; font-size: .8em; margin-bottom: 5%; }
   .iconsBar ul li svg { padding: 3%; } }
-@media screen and (max-width: 700px) { h1, h2, h3, h4, h5, h6 { font-size: 1.4em; }
+@media screen and (max-width: 700px) { .instaQuoteButton { width: 100%; padding: 4%; }
+  .singleBooth .singleImage { width: 100%; margin: 0; }
+  .visualizer { min-height: 250px; }
+  h1, h2, h3, h4, h5, h6 { font-size: 1.4em; }
   #boothGrid { width: 70%; }
   .instaQuoteForm { margin-right: 1%; width: 29%; } }
 @media screen and (max-width: 600px) { .loading h2 { font-size: 2em; }
@@ -1075,19 +1118,34 @@ body.video-react-full-window .video-react-fullscreen { position: fixed; overflow
   #boothGrid { width: 60%; }
   .instaQuoteForm { width: 39%; }
   .discounts-menu { display: none; } }
-@media screen and (max-width: 500px) { #clients ul { width: 100%; }
+@media screen and (max-width: 500px) { .convention_card h2 { font-size: 1.2em; }
+  .instaInfo .scheduleButton { width: 100%; }
+  #dataCollector form { width: 100%; float: left; margin: 0; }
+  .instaQuoteWhole ul { font-size: .8em; }
+  .quoteNumber ul { font-size: .4em; padding: 0% 0 3% 0; }
+  .slick-slider { width: 100%; margin: 0; transform: scale(1); }
+  .visualizer { min-height: 200px; }
+  #clients ul { width: 100%; }
   #clients .column { width: 100%; }
   #clients .column h3 { margin-bottom: 5%; }
   #contact a { clear: both; font-size: 1em; }
   #contact a:nth-of-type(1) { margin-left: 0; }
   #home h1 { font-size: 2.4em; }
   .iconsBar ul li { width: 50%; font-size: .8em; margin-bottom: 5%; }
-  .iconsBar ul li svg { padding: 5%; } }
-@media screen and (max-width: 400px) { .frompdf .stepbox:nth-of-type(1), .frompdf .stepbox:nth-of-type(2), .frompdf .stepbox:nth-of-type(3) { width: 100%; }
+  .iconsBar ul li svg { padding: 5%; }
+  .blueSuggest label { font-size: .8em; } }
+@media screen and (max-width: 400px) { .convention_card h1 { font-size: 2em; }
+  .convention_card h2 { font-size: 1em; }
+  #about h1 { font-size: 1.5em; }
+  .frompdf span { font-size: 4em; margin-bottom: 2%; }
+  .frompdf .stepbox:nth-of-type(1), .frompdf .stepbox:nth-of-type(2), .frompdf .stepbox:nth-of-type(3) { width: 100%; }
   #slider .sliderCard { width: 100%; }
   .react-tabs__tab { width: 36%; margin-left: 3%; }
   .react-tabs__tab:nth-of-type(2) { margin-right: 2%; width: 53%; padding-left: 5%; }
   .contactBox a { font-size: 14px; }
   #home h1 { font-size: 2em; }
-  #boothGrid { width: 55%; }
-  .instaQuoteForm { width: 44%; } }
+  #boothGrid { width: 61%; height: 600px; }
+  .instaQuoteForm { width: 38%; font-size: .9em; }
+  .instaQuoteWhole ul { font-size: .7em; }
+  .quoteNumber ul { font-size: .4em; }
+  #products h2 { font-size: 1.2em; } }

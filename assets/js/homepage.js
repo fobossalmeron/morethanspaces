@@ -25813,6 +25813,11 @@ var InstaQuote = function (_Component) {
   }
 
   _createClass(InstaQuote, [{
+    key: 'submitForm',
+    value: function submitForm() {
+      document.getElementById("submitMe").click();
+    }
+  }, {
     key: 'discountSymbol',
     value: function discountSymbol() {
       if (this.props.discountType === "percentage") {
@@ -25996,7 +26001,9 @@ var InstaQuote = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'instaColumn' },
-            _react2.default.createElement('div', { className: 'instaThumbnail', style: { backgroundImage: 'url(' + this.props.images[0].url + ')' } }),
+            _react2.default.createElement('div', { className: 'instaThumbnail', onClick: function onClick() {
+                return _this2.submitForm();
+              }, style: { backgroundImage: 'url(' + this.props.images[0].url + ')' } }),
             _react2.default.createElement(
               'ul',
               null,
@@ -26083,7 +26090,11 @@ var InstaQuote = function (_Component) {
         _react2.default.createElement(_CollectBeforeQuote2.default, _extends({}, this.props, { originalPrice: originalPrice,
           finalPrice: finalPrice,
           discountSymbol: this.discountSymbol.bind(this),
-          generateUser: this.props.generateUser.bind(this) }))
+          generateUser: this.props.generateUser.bind(this),
+          name: this.props.name,
+          email: this.props.email,
+          phone: this.props.phone,
+          weHaveUser: this.props.weHaveUser }))
       );
     }
   }]);
@@ -32762,6 +32773,11 @@ var CollectBeforeQuote = function (_Component) {
   }
 
   _createClass(CollectBeforeQuote, [{
+    key: 'submitForm',
+    value: function submitForm() {
+      document.getElementById("submitMe").click();
+    }
+  }, {
     key: 'doGenerateUser',
     value: function doGenerateUser(name, email, phone) {
       this.props.generateUser(name, email, phone);
@@ -32775,7 +32791,7 @@ var CollectBeforeQuote = function (_Component) {
   }, {
     key: 'isUserSelected',
     value: function isUserSelected() {
-      if (typeof this.props.name !== 'undefined') {
+      if (this.props.weHaveUser == true) {
         var defaultName = this.props.name;
       }
     }
@@ -32803,7 +32819,7 @@ var CollectBeforeQuote = function (_Component) {
         _react2.default.createElement(_reactForm.Text, { field: 'price', className: 'hidden' }),
         _react2.default.createElement(
           'button',
-          { type: 'submit' },
+          { id: 'submitMe', type: 'submit' },
           'reveal instaQuote now!'
         )
       );
@@ -32817,6 +32833,9 @@ var CollectBeforeQuote = function (_Component) {
       var addons = renderTv + " " + renderVideoWall;
       var redacted = "This person quoted the " + this.props.singleValue + " model with the original price of " + this.props.originalPrice + " and the final price after discounts of " + this.props.finalPrice + ". ";
       var convention = "They want to " + renderRentOwn + " it and the event is " + renderInVegas + " Las Vegas.";
+      var name = this.props.weHaveUser ? this.props.name : '';
+      var email = this.props.weHaveUser ? this.props.email : '';
+      var phone = this.props.weHaveUser ? this.props.phone : '';
       return _react2.default.createElement(
         'div',
         { id: 'dataCollector' },
@@ -32828,7 +32847,10 @@ var CollectBeforeQuote = function (_Component) {
               model: redacted,
               convention: convention,
               addons: addons,
-              price: price
+              price: price,
+              name: name,
+              email: email,
+              phone: phone
             },
 
             onSubmit: function onSubmit(values) {
@@ -32876,9 +32898,13 @@ var CollectBeforeQuote = function (_Component) {
             var submitForm = _ref2.submitForm;
 
             return _react2.default.createElement(
-              'form',
-              { onSubmit: submitForm },
-              actualForm
+              'div',
+              null,
+              _react2.default.createElement(
+                'form',
+                { onSubmit: submitForm },
+                actualForm
+              )
             );
           }
         )
@@ -33959,7 +33985,7 @@ var App = function (_Component) {
       discountText: '',
       discountSmallText: '',
       discountBanner: '',
-      maintenance: false
+      maintenance: true
     };
     _this.loadDiscounts = _this.loadDiscounts.bind(_this);
     _this.quitMaintenance = _this.quitMaintenance.bind(_this);
@@ -34183,10 +34209,17 @@ var BoothForm = function (_Component) {
     _this.doNotShip = _this.doNotShip.bind(_this);
     _this.setTv = _this.setTv.bind(_this);
     _this.setVideoWall = _this.setVideoWall.bind(_this);
+    _this.resetQuoteCloseBooth = _this.resetQuoteCloseBooth.bind(_this);
     return _this;
   }
 
   _createClass(BoothForm, [{
+    key: 'resetQuoteCloseBooth',
+    value: function resetQuoteCloseBooth() {
+      this.props.closeSingleBooth();
+      this.props.hideInstaQuote();
+    }
+  }, {
     key: 'doSeeState',
     value: function doSeeState() {
       this.props.seeState();
@@ -34284,8 +34317,8 @@ var BoothForm = function (_Component) {
           )
         ),
         _react2.default.createElement(
-          'p',
-          null,
+          'div',
+          { className: "theX" },
           'x'
         ),
         _react2.default.createElement(
@@ -34344,7 +34377,7 @@ var BoothForm = function (_Component) {
           _react2.default.createElement(
             'a',
             { onClick: function onClick() {
-                return _this2.props.closeSingleBooth();
+                return _this2.resetQuoteCloseBooth();
               } },
             _react2.default.createElement(
               'b',
@@ -34607,7 +34640,11 @@ var BoothGrid = function (_Component) {
             doRevealInstaQuote: this.props.doRevealInstaQuote.bind(this),
             hideCollectors: this.props.hideCollectors.bind(this),
             renderCollectors: this.props.renderCollectors,
-            generateUser: this.props.generateUser.bind(this) })
+            generateUser: this.props.generateUser.bind(this),
+            name: this.state.name,
+            email: this.state.email,
+            phone: this.state.phone,
+            weHaveUser: this.props.weHaveUser })
         ),
         _react2.default.createElement(_IconsBar2.default, { className: "iconsBarQuote" })
       );
@@ -35311,6 +35348,7 @@ var QuoteTabs = function (_Component) {
       renderVideoWallInstaQuote: false,
       revealInstaQuote: false,
       renderCollectors: true,
+      weHaveUser: false,
       name: '',
       email: '',
       phone: ''
@@ -35325,6 +35363,7 @@ var QuoteTabs = function (_Component) {
       var _this2 = this;
 
       this.setState({
+        weHaveUser: true,
         name: name,
         email: email,
         phone: phone
@@ -35364,28 +35403,28 @@ var QuoteTabs = function (_Component) {
     key: 'noNeedShipping',
     value: function noNeedShipping() {
       this.setState({ eventInVegas: true }, function () {
-        return console.log("in vegas XX");
+        return console.log("In vegas");
       });
     }
   }, {
     key: 'needShipping',
     value: function needShipping() {
       this.setState({ eventInVegas: false }, function () {
-        return console.log("not in vegas XX");
+        return console.log("Not in vegas");
       });
     }
   }, {
     key: 'doWantToOwn',
     value: function doWantToOwn() {
       this.setState({ wantToOwn: true }, function () {
-        return console.log("i want to OWN it");
+        return console.log("Want to OWN it");
       });
     }
   }, {
     key: 'doWantToRent',
     value: function doWantToRent() {
       this.setState({ wantToOwn: false }, function () {
-        return console.log("just want to RENT it");
+        return console.log("Want to RENT it");
       });
     }
   }, {
@@ -35401,6 +35440,11 @@ var QuoteTabs = function (_Component) {
       this.setState({ renderVideoWallInstaQuote: true }, function () {
         return controller.scrollTo("#videoWallInstaQuote");
       });
+    }
+  }, {
+    key: 'hideInstaQuote',
+    value: function hideInstaQuote() {
+      this.setState({ renderBoothInstaQuote: false, renderVideoWallInstaQuote: false });
     }
   }, {
     key: 'doRevealInstaQuote',
@@ -35572,7 +35616,7 @@ var QuoteTabs = function (_Component) {
               addVideoWall: this.state.addVideoWall,
               selectedIsland: this.state.selectedIsland,
               seeState: this.seeState.bind(this)
-            }, _defineProperty(_React$createElement, 'selectedIsland', this.state.selectedIsland), _defineProperty(_React$createElement, 'selectedSplitIsland', this.state.selectedSplitIsland), _defineProperty(_React$createElement, 'selectedPeninsula', this.state.selectedPeninsula), _defineProperty(_React$createElement, 'selectedInline', this.state.selectedInline), _defineProperty(_React$createElement, 'boothSizeWidth', this.state.boothSizeWidth), _defineProperty(_React$createElement, 'boothSizeLength', this.state.boothSizeLength), _React$createElement)),
+            }, _defineProperty(_React$createElement, 'selectedIsland', this.state.selectedIsland), _defineProperty(_React$createElement, 'selectedSplitIsland', this.state.selectedSplitIsland), _defineProperty(_React$createElement, 'selectedPeninsula', this.state.selectedPeninsula), _defineProperty(_React$createElement, 'selectedInline', this.state.selectedInline), _defineProperty(_React$createElement, 'boothSizeWidth', this.state.boothSizeWidth), _defineProperty(_React$createElement, 'boothSizeLength', this.state.boothSizeLength), _defineProperty(_React$createElement, 'hideInstaQuote', this.hideInstaQuote.bind(this)), _React$createElement)),
             _react2.default.createElement(_BoothGrid2.default, { dataToLoad: "./assets/js/booths.json",
               selectedIsland: this.state.selectedIsland,
               selectedSplitIsland: this.state.selectedSplitIsland,
@@ -35595,7 +35639,11 @@ var QuoteTabs = function (_Component) {
               discountType: this.props.discountType,
               hideCollectors: this.hideCollectors.bind(this),
               renderCollectors: this.state.renderCollectors,
-              generateUser: this.generateUser.bind(this) })
+              generateUser: this.generateUser.bind(this),
+              name: this.state.name,
+              email: this.state.email,
+              phone: this.state.phone,
+              weHaveUser: this.state.weHaveUser })
           ),
           _react2.default.createElement(
             _reactTabs.TabPanel,
@@ -35608,7 +35656,8 @@ var QuoteTabs = function (_Component) {
               selectedTv: this.state.selectedTv,
               selectedLcd: this.state.selectedLcd,
               selectedLed: this.state.selectedLed,
-              eventInVegas: this.state.eventInVegas }),
+              eventInVegas: this.state.eventInVegas,
+              hideInstaQuote: this.hideInstaQuote.bind(this) }),
             _react2.default.createElement(_VideoWallGrid2.default, { dataToLoad: "./assets/js/videowalls.json",
               individualVideoWallRender: this.state.individualVideoWallRender,
               selectedTv: this.state.selectedTv,
@@ -35626,7 +35675,11 @@ var QuoteTabs = function (_Component) {
               discountType: this.props.discountType,
               hideCollectors: this.hideCollectors.bind(this),
               renderCollectors: this.state.renderCollectors,
-              generateUser: this.generateUser.bind(this) })
+              generateUser: this.generateUser.bind(this),
+              name: this.state.name,
+              email: this.state.email,
+              phone: this.state.phone,
+              weHaveUser: this.state.weHaveUser })
           )
         )
       );
@@ -35773,10 +35826,17 @@ var VideoWallForm = function (_Component) {
     _this.doNotShip = _this.doNotShip.bind(_this);
     _this.handleOpenModal = _this.handleOpenModal.bind(_this);
     _this.handleCloseModal = _this.handleCloseModal.bind(_this);
+    _this.resetQuoteCloseVideoWall = _this.resetQuoteCloseVideoWall.bind(_this);
     return _this;
   }
 
   _createClass(VideoWallForm, [{
+    key: 'resetQuoteCloseVideoWall',
+    value: function resetQuoteCloseVideoWall() {
+      this.props.closeSingleVideoWall();
+      this.props.hideInstaQuote();
+    }
+  }, {
     key: 'handleOpenModal',
     value: function handleOpenModal() {
       this.setState({ showModal: true });
@@ -35840,7 +35900,7 @@ var VideoWallForm = function (_Component) {
           _react2.default.createElement(
             'a',
             { onClick: function onClick() {
-                return _this2.props.closeSingleVideoWall();
+                return _this2.resetQuoteCloseVideoWall();
               } },
             _react2.default.createElement(
               'b',
@@ -36075,7 +36135,11 @@ var VideoWallGrid = function (_Component) {
             doRevealInstaQuote: this.props.doRevealInstaQuote.bind(this),
             hideCollectors: this.props.hideCollectors.bind(this),
             renderCollectors: this.props.renderCollectors,
-            generateUser: this.props.generateUser.bind(this) })
+            generateUser: this.props.generateUser.bind(this),
+            name: this.state.name,
+            email: this.state.email,
+            phone: this.state.phone,
+            weHaveUser: this.props.weHaveUser })
         ),
         _react2.default.createElement(_IconsBar2.default, { className: "iconsBarQuote" })
       );

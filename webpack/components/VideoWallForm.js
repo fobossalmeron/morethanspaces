@@ -16,6 +16,12 @@ class VideoWallForm extends Component {
     this.doNotShip = this.doNotShip.bind(this);
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
+    this.resetQuoteCloseVideoWall = this.resetQuoteCloseVideoWall.bind(this);
+  }
+
+  resetQuoteCloseVideoWall(){
+    this.props.closeSingleVideoWall();
+    this.props.hideInstaQuote();
   }
 
   handleOpenModal () {
@@ -54,7 +60,7 @@ class VideoWallForm extends Component {
       <div className="goBackContainer">
         <div className="leaveOrStay">
           <ArrowBackIcon/>
-          <a onClick={() => this.props.closeSingleVideoWall()}><b>back</b> to<br/>videowalls</a>
+          <a onClick={() => this.resetQuoteCloseVideoWall()}><b>back</b> to<br/>videowalls</a>
         </div>
         <label>event location</label>
           <div className="quoteCheck">

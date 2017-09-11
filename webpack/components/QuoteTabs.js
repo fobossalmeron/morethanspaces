@@ -29,6 +29,7 @@ class QuoteTabs extends Component {
       renderVideoWallInstaQuote: false,
       revealInstaQuote: false,
       renderCollectors: true,
+      weHaveUser: false,
       name: '',
       email: '',
       phone: ''
@@ -38,6 +39,7 @@ class QuoteTabs extends Component {
 
   generateUser(name, email, phone){
     this.setState({
+      weHaveUser: true,
       name: name,
       email: email,
       phone: phone
@@ -61,19 +63,19 @@ class QuoteTabs extends Component {
   }
 
   noNeedShipping(){
-    this.setState({ eventInVegas: true}, ()=> console.log("in vegas XX"));
+    this.setState({ eventInVegas: true}, ()=> console.log("In vegas"));
   }
 
   needShipping(){
-    this.setState({ eventInVegas: false}, ()=> console.log("not in vegas XX"));
+    this.setState({ eventInVegas: false}, ()=> console.log("Not in vegas"));
   }
 
   doWantToOwn(){
-    this.setState({ wantToOwn: true }, ()=> console.log("i want to OWN it"));
+    this.setState({ wantToOwn: true }, ()=> console.log("Want to OWN it"));
   }
 
   doWantToRent(){
-    this.setState({ wantToOwn: false }, ()=> console.log("just want to RENT it"));
+    this.setState({ wantToOwn: false }, ()=> console.log("Want to RENT it"));
   }
 
   doRenderBoothInstaQuote(){
@@ -81,6 +83,10 @@ class QuoteTabs extends Component {
   }
   doRenderVideoWallInstaQuote(){
     this.setState({ renderVideoWallInstaQuote: true }, ()=> controller.scrollTo("#videoWallInstaQuote"))
+  }
+
+  hideInstaQuote(){
+    this.setState({ renderBoothInstaQuote: false, renderVideoWallInstaQuote: false})
   }
 
   doRevealInstaQuote(){
@@ -197,7 +203,8 @@ class QuoteTabs extends Component {
                          selectedPeninsula={this.state.selectedPeninsula}
                          selectedInline={this.state.selectedInline}
                          boothSizeWidth={this.state.boothSizeWidth}
-                         boothSizeLength={this.state.boothSizeLength}/>
+                         boothSizeLength={this.state.boothSizeLength}
+                         hideInstaQuote={this.hideInstaQuote.bind(this)}/>
 
           <BoothGrid    dataToLoad={"./assets/js/booths.json"}
                         selectedIsland={this.state.selectedIsland}
@@ -221,7 +228,11 @@ class QuoteTabs extends Component {
                         discountType={this.props.discountType}
                         hideCollectors={this.hideCollectors.bind(this)}
                         renderCollectors={this.state.renderCollectors}
-                        generateUser={this.generateUser.bind(this)}/>
+                        generateUser={this.generateUser.bind(this)}
+                        name={this.state.name}
+                        email={this.state.email}
+                        phone={this.state.phone}
+                        weHaveUser={this.state.weHaveUser}/>
         </TabPanel>
         <TabPanel>
           <VideoWallForm toggleVideoWall={this.toggleVideoWall.bind(this)}
@@ -232,7 +243,8 @@ class QuoteTabs extends Component {
                          selectedTv={this.state.selectedTv}
                          selectedLcd={this.state.selectedLcd}
                          selectedLed={this.state.selectedLed}
-                         eventInVegas={this.state.eventInVegas}/>
+                         eventInVegas={this.state.eventInVegas}
+                         hideInstaQuote={this.hideInstaQuote.bind(this)}/>
 
           <VideoWallGrid dataToLoad={"./assets/js/videowalls.json"}
                          individualVideoWallRender={this.state.individualVideoWallRender}
@@ -251,7 +263,11 @@ class QuoteTabs extends Component {
                          discountType={this.props.discountType}
                          hideCollectors={this.hideCollectors.bind(this)}
                          renderCollectors={this.state.renderCollectors}
-                         generateUser={this.generateUser.bind(this)}/>
+                         generateUser={this.generateUser.bind(this)}
+                         name={this.state.name}
+                         email={this.state.email}
+                         phone={this.state.phone}
+                         weHaveUser={this.state.weHaveUser}/>
         </TabPanel>
       </Tabs>
       </section>

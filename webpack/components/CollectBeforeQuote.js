@@ -10,6 +10,10 @@ class CollectBeforeQuote extends Component {
   this.doGenerateUser = this.doGenerateUser.bind(this);
   }
 
+  submitForm(){
+    document.getElementById("submitMe").click();
+  }
+
   doGenerateUser(name, email, phone){
     this.props.generateUser(name, email, phone);
   }
@@ -20,7 +24,7 @@ class CollectBeforeQuote extends Component {
   }
 
   isUserSelected(){
-    if (typeof this.props.name !== 'undefined') {
+    if (this.props.weHaveUser == true) {
       var defaultName = this.props.name
     }
   }
@@ -42,7 +46,7 @@ class CollectBeforeQuote extends Component {
       <Text field='addons' className='hidden'/>
       <Text field='price' className='hidden'/>
 
-      <button type='submit'>reveal instaQuote now!</button>
+      <button id="submitMe" type='submit'>reveal instaQuote now!</button>
       </div>
     )
     var renderInVegas = this.props.eventInVegas? "in" : "outside";
@@ -64,6 +68,15 @@ class CollectBeforeQuote extends Component {
     var convention = (
       "They want to " + renderRentOwn + " it and the event is " + renderInVegas + " Las Vegas."
     )
+    var name = (
+      this.props.weHaveUser? this.props.name : ''
+    )
+    var email = (
+      this.props.weHaveUser? this.props.email : ''
+    )
+    var phone = (
+      this.props.weHaveUser? this.props.phone : ''
+    )
     return (
       <div id="dataCollector">
       <Form
@@ -72,7 +85,10 @@ class CollectBeforeQuote extends Component {
             model: redacted,
             convention: convention,
             addons: addons,
-            price: price
+            price: price,
+            name: name,
+            email: email,
+            phone: phone
         }}
 
         onSubmit={(values) => {
@@ -140,9 +156,11 @@ class CollectBeforeQuote extends Component {
         >
         {({submitForm}) => {
           return (
+            <div>
             <form onSubmit={submitForm}>
             {actualForm}
             </form>
+            </div>
           )
         }}
       </Form>

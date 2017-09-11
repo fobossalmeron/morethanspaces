@@ -16,6 +16,12 @@ class BoothForm extends Component {
     this.doNotShip = this.doNotShip.bind(this);
     this.setTv = this.setTv.bind(this);
     this.setVideoWall = this.setVideoWall.bind(this);
+    this.resetQuoteCloseBooth = this.resetQuoteCloseBooth.bind(this);
+  }
+
+  resetQuoteCloseBooth(){
+    this.props.closeSingleBooth();
+    this.props.hideInstaQuote();
   }
 
   doSeeState(){
@@ -62,7 +68,7 @@ class BoothForm extends Component {
           <option value="40">40ft</option>
           <option value="50">50ft</option>
         </select>
-        <p>x</p>
+        <div className={"theX"}>x</div>
         <select onChange={this.handleLengthChange} value={this.props.boothSizeLength}>
           <option value="All">length</option>
           <option value="10">10ft</option>
@@ -84,7 +90,7 @@ class BoothForm extends Component {
       <div className="goBackContainer">
         <div className="leaveOrStay">
           <ArrowBackIcon/>
-          <a onClick={() => this.props.closeSingleBooth()}><b>back</b><br/>to booths</a>
+          <a onClick={() => this.resetQuoteCloseBooth()}><b>back</b><br/>to booths</a>
         </div>
         <label>rent or own?</label>
           <CheckBox onClick={this.handleRent} inputType="radio" nameFor="rentOrOwn" defaultChecked={!this.props.wantToOwn} checkFor="rent"/>

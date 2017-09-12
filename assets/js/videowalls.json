@@ -1,138 +1,220 @@
 {"items": [
     {
       "featured": false,
-      "id": "VWLED50x50",
-      "type": "LED",
-      "description":"A videowall that lorem ipsum dolor sit amet, enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident cupidatat non proident cupidatat non proident cupidatat non proident, sunt in culpa qui officia deserunt est laborum.",
-      "rent": 15000,
-      "size" : "10ftx10ft",
-      "images":[
-        {"url":"assets/img/videowalls/videowall1/2.jpg"},
-        {"url":"assets/img/videowalls/videowall1/1.jpg"},
-        {"url":"assets/img/videowalls/videowall1/3.jpg"},
-        {"url":"assets/img/videowalls/videowall1/4.jpg"},
-        {"url":"assets/img/videowalls/videowall1/5.jpg"}],
-      "obj":"50046be4f4354df29231581e84150395"
-    },
-    {
-      "featured": false,
-      "id": "VWLED45x40",
-      "type": "LED",
-      "description":"A videowall that lorem ipsum dolor sit amet, enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident cupidatat non proident cupidatat non proident cupidatat non proident, sunt in culpa qui officia deserunt est laborum.",
-      "rent": 15000,
-      "size" : "45ftx40ft",
-      "images":[
-        {"url":"assets/img/videowalls/videowall1/2.jpg"},
-        {"url":"assets/img/videowalls/videowall1/1.jpg"},
-        {"url":"assets/img/videowalls/videowall1/3.jpg"},
-        {"url":"assets/img/videowalls/videowall1/4.jpg"},
-        {"url":"assets/img/videowalls/videowall1/5.jpg"}],
-      "obj":"50046be4f4354df29231581e84150395"
-    },
-    {
-      "featured": false,
-      "id": "VWLCD20x20",
+      "id": "VW3x3LCD",
       "type": "LCD",
-      "description":"A video wall that lorem ipsum dolor sit amet, veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident cupidatat non proident cupidatat non proident cupidatat non proident, sunt in culpa qui officia deserunt est laborum.",
-      "rent": 13000,
-      "size" : "20ftx20ft",
+      "description":"<ul><li>built with (9) 55″ ultra slim bezels</li><li>display approx. area: 12 ft x 6.8 ft</li><li>equivalent of a 165″ monitor</li><li>*sound not built-in, but available</li><li>*delivery, setup and teardow</li><li>floor stand</li><li>friendly expert support</li></ul>",
+      "rent": 8900,
+      "size" : "12ft x 6.8ft",
+      "diagonal" : "165",
       "images":[
-        {"url":"assets/img/videowalls/videowall1/1.jpg"},
-        {"url":"assets/img/videowalls/videowall1/2.jpg"},
-        {"url":"assets/img/videowalls/videowall1/3.jpg"},
-        {"url":"assets/img/videowalls/videowall1/4.jpg"},
-        {"url":"assets/img/videowalls/videowall1/5.jpg"}],
-      "obj":"50046be4f4354df29231581e84150395"
+        {"url":"assets/img/videowalls/VW3x3LCD/1.jpg"},
+        {"url":"assets/img/videowalls/VW3x3LCD/2.jpg"}]
     },
     {
       "featured": false,
-      "id": "VWLED60x60",
-      "type": "Tv",
-      "description":"A video wall that lorem ipsum dolor sit amet, veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident cupidatat non proident cupidatat non proident cupidatat non proident, sunt in culpa qui officia deserunt est laborum.",
-      "rent": 11000,
-      "size" : "60ftx60ft",
-      "images":[
-        {"url":"assets/img/videowalls/videowall1/3.jpg"},
-        {"url":"assets/img/videowalls/videowall1/1.jpg"},
-        {"url":"assets/img/videowalls/videowall1/2.jpg"},
-        {"url":"assets/img/videowalls/videowall1/4.jpg"},
-        {"url":"assets/img/videowalls/videowall1/5.jpg"}],
-      "obj":"50046be4f4354df29231581e84150395"
-    },
-    {
-      "featured": false,
-      "id": "VWLCD40x40",
+      "id": "VW3x4LCD",
       "type": "LCD",
-      "description":"A video wall that lorem ipsum dolor sit amet, veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident cupidatat non proident cupidatat non proident cupidatat non proident, sunt in culpa qui officia deserunt est laborum.",
-      "rent": 13000,
-      "size" : "40ftx40ft",
+      "description":"built with (12) 55″ ultra slim bezels; display approx. area: 16 ft x 6.8 ft; equivalent of a 209″ monitor; *sound not built-in, but available; *delivery, setup and teardown; floor stand; friendly expert support",
+      "rent": 11900,
+      "size" : "16ft x 6.8ft",
+      "diagonal" : "209",
       "images":[
-        {"url":"assets/img/videowalls/videowall1/1.jpg"},
-        {"url":"assets/img/videowalls/videowall1/2.jpg"},
-        {"url":"assets/img/videowalls/videowall1/3.jpg"},
-        {"url":"assets/img/videowalls/videowall1/4.jpg"},
-        {"url":"assets/img/videowalls/videowall1/5.jpg"}],
-      "obj":"50046be4f4354df29231581e84150395"
+        {"url":"assets/img/videowalls/VW3x4LCD/1.jpg"},
+        {"url":"assets/img/videowalls/VW3x4LCD/2.jpg"}]
     },
     {
       "featured": false,
-      "id": "VWLED40x40",
+      "id": "VW3x5LCD",
+      "type": "LCD",
+      "description":"built with (15) 55″ ultra slim bezels; display approx. area: 20 ft x 6.8 ft; equivalent of a 253″ monitor; *sound not built-in, but available; *delivery, setup and teardown; floor stand; friendly expert support",
+      "rent": 14900,
+      "size" : "20ft x 6.8ft",
+      "diagonal" : "253",
+      "images":[
+        {"url":"assets/img/videowalls/VW3x5LCD/1.jpg"},
+        {"url":"assets/img/videowalls/VW3x5LCD/2.jpg"}]
+    },
+    {
+      "featured": false,
+      "id": "VW3x6LCD",
+      "type": "LCD",
+      "description":"built with (18) 55″ ultra slim bezels; display approx. area: 24 ft x 6.8 ft; equivalent of a 300″ monitor; *sound not built-in, but available; *delivery, setup and teardown; floor stand; friendly expert support",
+      "rent": 17900,
+      "size" : "24ft x 6.8ft",
+      "diagonal" : "300",
+      "images":[
+        {"url":"assets/img/videowalls/VW3x6LCD/1.jpg"},
+        {"url":"assets/img/videowalls/VW3x6LCD/2.jpg"}]
+    },
+    {
+      "featured": false,
+      "id": "VW4.8LED179",
+      "type": "LED",
+      "description":"display approx. area: 13.4 ft x 6.7 ft; equivalent of a 179″ monitor; sound not built-in, but available*; floor stand or flown*; delivery, setup and teardown*; friendly expert support",
+      "rent": 10900,
+      "size" : "13.4ft x 6.7ft",
+      "diagonal" : "179",
+      "images":[
+        {"url":"assets/img/videowalls/VW4.8LED179/1.jpg"}]
+    },
+    {
+      "featured": false,
+      "id": "VW4.8LED113",
+      "type": "LED",
+      "description":"display approx. area: (6.7 ft x 6.7 ft) x 2; equivalent of a (113″) x 2 monitor; sound not built-in, but available*; flown*; delivery, setup and teardown*; friendly expert support",
+      "rent": 11800,
+      "size" : "6.7ft x 6.7ft",
+      "diagonal" : "113",
+      "images":[
+        {"url":"assets/img/videowalls/VW4.8LED113/1.jpg"}]
+    },
+    {
+      "featured": false,
+      "id": "VW4.8LED144",
+      "type": "LED",
+      "description":"display approx. area: 6.7 ft x 10 ft; equivalent of a 144″ monitor; sound not built-in, but available*; flown*; delivery, setup and teardown*; friendly expert support",
+      "rent": 12900,
+      "size" : "6.7ft x 10ft",
+      "diagonal" : "144",
+      "images":[
+        {"url":"assets/img/videowalls/VW4.8LED144/1.jpg"}]
+    },
+    {
+      "featured": false,
+      "id": "VW4.8LED170",
+      "type": "LED",
+      "description":"display approx. area: 10 ft x 10 ft; equivalent of a 170″ monitor; sound not built-in, but available*; floor stand or flown*; delivery, setup and teardown*; friendly expert support",
+      "rent": 16900,
+      "size" : "10ft x 10ft",
+      "diagonal" : "170",
+      "images":[
+        {"url":"assets/img/videowalls/VW4.8LED170/1.jpg"}]
+    },
+    {
+      "featured": false,
+      "id": "VW4.8LED200",
+      "type": "LED",
+      "description":"display approx. area: 13.4 ft x 10 ft; equivalent of a 200″ monitor; sound not built-in, but available*; floor stand or flown*; delivery, setup and teardown*; friendly expert support",
+      "rent": 19900,
+      "size" : "13.4ft x 10ft",
+      "diagonal" : "200",
+      "images":[
+        {"url":"assets/img/videowalls/VW4.8LED200/1.jpg"}]
+    },
+    {
+      "featured": false,
+      "id": "VW4.8LED217",
+      "type": "LED",
+      "description":"display approx. area: 15 ft x 10 ft; equivalent of a 217″ monitor; sound not built-in, but available*; floor stand or flown*; delivery, setup and teardown*; friendly expert support",
+      "rent": 21900,
+      "size" : "15ft x 10ft",
+      "diagonal" : "217",
+      "images":[
+        {"url":"assets/img/videowalls/VW4.8LED217/1.jpg"}]
+    },
+    {
+      "featured": false,
+      "id": "VW2.5LED106",
+      "type": "LED",
+      "description":"display approx. area: 6.3 ft x 6.3 ft; equivalent of a 106″ monitor; sound not built-in, but available*; floor stand or flown*; delivery, setup and teardown*; friendly expert support",
+      "rent": 8900,
+      "size" : "6.3ft x 6.3ft",
+      "diagonal" : "106",
+      "images":[
+        {"url":"assets/img/videowalls/VW2.5LED106/1.jpg"}]
+    },
+    {
+      "featured": false,
+      "id": "VW2.5LED125",
+      "type": "LED",
+      "description":"display approx. area: 8.4 ft x 6.3 ft; equivalent of a 125″ monitor; sound not built-in, but available*; floor stand or flown*; delivery, setup and teardown*; friendly expert support",
+      "rent": 10900,
+      "size" : "8.4ft x 6.3ft",
+      "diagonal" : "125",
+      "images":[
+        {"url":"assets/img/videowalls/VW2.5LED125/1.jpg"}]
+    },
+    {
+      "featured": false,
+      "id": "VW2.5LED90",
+      "type": "LED",
+      "description":"display approx. area: (4.2 ft x 6.3 ft) x 2; equivalent of a (90″) x 2 monitor; sound not built-in, but available*; flown*; delivery, setup and teardown*; friendly expert support",
+      "rent": 11800,
+      "size" : "4.2ft x 6.3ft",
+      "diagonal" : "90",
+      "images":[
+        {"url":"assets/img/videowalls/VW2.5LED90/1.jpg"}]
+    },
+    {
+      "featured": false,
+      "id": "TV55in",
       "type": "Tv",
-      "description":"A video wall that lorem ipsum dolor sit amet, veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident cupidatat non proident cupidatat non proident cupidatat non proident, sunt in culpa qui officia deserunt est laborum.",
-      "rent": 11000,
-      "size" : "40ftx40ft",
+      "description":"Display Type: LED; Refresh Rate: Motion Rate 120; Resolution: 3840 x 2160; Screen Size Class: 55 in.; Screen Type: Flat; Smart TV: Yes ",
+      "rent": 500,
+      "diagonal" : "55",
       "images":[
-        {"url":"assets/img/videowalls/videowall1/3.jpg"},
-        {"url":"assets/img/videowalls/videowall1/1.jpg"},
-        {"url":"assets/img/videowalls/videowall1/2.jpg"},
-        {"url":"assets/img/videowalls/videowall1/4.jpg"},
-        {"url":"assets/img/videowalls/videowall1/5.jpg"}],
-      "obj":"50046be4f4354df29231581e84150395"
+        {"url":"assets/img/videowalls/TV55in/1.jpg"}]
     },
     {
       "featured": false,
-      "id": "VWLED45x4311",
-      "type": "LED",
-      "description":"A videowall that lorem ipsum dolor sit amet, enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident cupidatat non proident cupidatat non proident cupidatat non proident, sunt in culpa qui officia deserunt est laborum.",
-      "rent": 15000,
-      "size" : "45ftx40ft",
+      "id": "TV65in",
+      "type": "Tv",
+      "description":"Display Type: LED; Refresh Rate: Motion Rate 120; Resolution: 3840 x 2160; Screen Size Class: 65 in.; Screen Type: Flat; Smart TV: Yes ",
+      "rent": 1000,
+      "diagonal" : "65",
       "images":[
-        {"url":"assets/img/videowalls/videowall1/2.jpg"},
-        {"url":"assets/img/videowalls/videowall1/1.jpg"},
-        {"url":"assets/img/videowalls/videowall1/3.jpg"},
-        {"url":"assets/img/videowalls/videowall1/4.jpg"},
-        {"url":"assets/img/videowalls/videowall1/5.jpg"}],
-      "obj":"50046be4f4354df29231581e84150395"
+        {"url":"assets/img/videowalls/TV65in/1.jpg"}]
     },
     {
       "featured": false,
-      "id": "VWLED45x41",
-      "type": "LED",
-      "description":"A videowall that lorem ipsum dolor sit amet, enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident cupidatat non proident cupidatat non proident cupidatat non proident, sunt in culpa qui officia deserunt est laborum.",
-      "rent": 15000,
-      "size" : "45ftx40ft",
+      "id": "TV70in",
+      "type": "Tv",
+      "description":"XHDR Plus w/ support for Dolby Vision and HDR10; XLED Plus - Full-array local dimming backlight w/ 32 local dimming Zones; Vizio Smartcast w/ Chromecast built-in; 120Hz Effective Refresh Rate & Clear Action 360; Tuner-Free Display",
+      "rent": 1800,
+      "diagonal" : "70",
       "images":[
-        {"url":"assets/img/videowalls/videowall1/2.jpg"},
-        {"url":"assets/img/videowalls/videowall1/1.jpg"},
-        {"url":"assets/img/videowalls/videowall1/3.jpg"},
-        {"url":"assets/img/videowalls/videowall1/4.jpg"},
-        {"url":"assets/img/videowalls/videowall1/5.jpg"}],
-      "obj":"50046be4f4354df29231581e84150395"
+        {"url":"assets/img/videowalls/TV70in/1.jpg"}]
     },
     {
       "featured": false,
-      "id": "VWLED45x43",
-      "type": "LED",
-      "description":"A videowall that lorem ipsum dolor sit amet, enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident cupidatat non proident cupidatat non proident cupidatat non proident, sunt in culpa qui officia deserunt est laborum.",
-      "rent": 15000,
-      "size" : "45ftx40ft",
+      "id": "TV80in",
+      "type": "Tv",
+      "description":"120Hz Effective Refresh Rate & Clear Action 180 Full-Array LED Backlight w/ 16 Active LED ZonesÆ; Chromecast Built-In w/ WiFi 802.11ac; V8 Octa-Core Processor; Tuner-Free Display",
+      "rent": 3200,
+      "diagonal" : "80",
       "images":[
-        {"url":"assets/img/videowalls/videowall1/2.jpg"},
-        {"url":"assets/img/videowalls/videowall1/1.jpg"},
-        {"url":"assets/img/videowalls/videowall1/3.jpg"},
-        {"url":"assets/img/videowalls/videowall1/4.jpg"},
-        {"url":"assets/img/videowalls/videowall1/5.jpg"}],
-      "obj":"50046be4f4354df29231581e84150395"
+        {"url":"assets/img/videowalls/TV70in/1.jpg"}]
+    },
+    {
+      "featured": false,
+      "id": "TV90in",
+      "type": "Tv",
+      "description":"Active HDR w/ Dolby Vision; 4K Upscaler; Sound Designed by Harmon/Kardon; TruMotion240; SUPER ULTRA TV",
+      "rent": 6000,
+      "diagonal" : "90",
+      "images":[
+        {"url":"assets/img/videowalls/TV90in/1.jpg"}]
+    },
+    {
+      "featured": false,
+      "id": "TV55inCURB",
+      "type": "Tv",
+      "description":"Display Type: LED; Refresh Rate: Motion Rate 120; Resolution: 3840 x 2160; Screen Size Class: 55 in.; Screen Type: Curved; Smart TV: Yes ",
+      "rent": 1600,
+      "diagonal" : "55",
+      "images":[
+        {"url":"assets/img/videowalls/TV55inCURB/1.jpg"}]
+    },
+    {
+      "featured": false,
+      "id": "TV65inCURB",
+      "type": "Tv",
+      "description":"Display Type: LED; Refresh Rate: Motion Rate 120; Resolution: 3840 x 2160; Screen Size Class: 65 in.; Screen Type: Curved; Smart TV: Yes",
+      "rent": 2200,
+      "diagonal" : "65",
+      "images":[
+        {"url":"assets/img/videowalls/TV65inCURB/1.jpg"}]
     }
   ]
 }

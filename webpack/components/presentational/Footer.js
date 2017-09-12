@@ -62,10 +62,10 @@ class Footer extends Component {
               <h3>resources</h3>
               <a href={baseUrl + "resources/booth_types/"} target="_blank">booth types</a>
               <a href={baseUrl + "resources/timeline_and_graphic_specs/"} target="_blank">timeline &<br/>graphic specs</a>
-              <a href={baseUrl + "assets/pdf/sample.pdf"} target="_blank">video walls</a>
-              <a href={baseUrl + "assets/pdf/sample.pdf"} target="_blank">how to upload</a>
-              <a href={baseUrl + "assets/pdf/sample.pdf"} target="_blank">payment info</a>
-              <a href={baseUrl + "assets/pdf/sample.pdf"} target="_blank">industry clients</a>
+              <a href={baseUrl + "resources/sample/"} target="_blank">video walls</a>
+              <a href={baseUrl + "resources/sample/"} target="_blank">how to upload</a>
+              <a href={baseUrl + "resources/sample/"} target="_blank">payment info</a>
+              <a href={baseUrl + "resources/sample/"} target="_blank">industry clients</a>
             </li>
             <li className="realestate">
               <h3>contact</h3>

@@ -10,7 +10,7 @@ class MagentaSuggest extends Component {
       <div className="blueSuggest magentaSuggest">
       <label>customization</label>
         <p>ALL booths can be customized</p>
-        <p>shelves signs podiums etc.</p>
+        <p>shelves, signs, podiums etc.</p>
       </div>
     );
   }

@@ -1,8 +1,5 @@
 ---
-layout: notfound
+layout: resources
 permalink: /resources/timeline_and_graphic_specs/
+resource: mts_timeline_and_graphic_specs.pdf
 ---
-
-<section id="pdfViewer">
-<embed src="/assets/pdf/mts_timeline_and_graphic_specs.pdf" type='application/pdf'>
-</section>

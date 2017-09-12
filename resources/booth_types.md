@@ -1,8 +1,5 @@
 ---
-layout: notfound
+layout: resources
 permalink: /resources/booth_types/
+resource: mts_booth_types.pdf
 ---
-
-<section id="pdfViewer">
-<embed src="/assets/pdf/mts_booth_types.pdf" type='application/pdf'>
-</section>

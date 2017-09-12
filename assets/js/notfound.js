@@ -10602,22 +10602,22 @@ var Footer = function (_Component) {
               ),
               _react2.default.createElement(
                 'a',
-                { href: baseUrl + "assets/pdf/sample.pdf", target: '_blank' },
+                { href: baseUrl + "resources/sample/", target: '_blank' },
                 'video walls'
               ),
               _react2.default.createElement(
                 'a',
-                { href: baseUrl + "assets/pdf/sample.pdf", target: '_blank' },
+                { href: baseUrl + "resources/sample/", target: '_blank' },
                 'how to upload'
               ),
               _react2.default.createElement(
                 'a',
-                { href: baseUrl + "assets/pdf/sample.pdf", target: '_blank' },
+                { href: baseUrl + "resources/sample/", target: '_blank' },
                 'payment info'
               ),
               _react2.default.createElement(
                 'a',
-                { href: baseUrl + "assets/pdf/sample.pdf", target: '_blank' },
+                { href: baseUrl + "resources/sample/", target: '_blank' },
                 'industry clients'
               )
             ),

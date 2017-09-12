@@ -3,6 +3,7 @@ import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import SketchFab from './SketchFab';
 import Slider from 'react-slick';
 import Arrow from './presentational/Arrow';
+import DangerouslySet from './presentational/DangerouslySet';
 
 function SampleNextArrow(props) {
   const {className, style, onClick} = props
@@ -73,13 +74,17 @@ class SingleItem extends Component {
       <img key={image.url} className="thumbnailBooth" onClick={() => this.handleView(index)} src={this.props.images[index].url}/>
     ));
 
+    var trigger3D = (
+      this.props.no3D? '' : <img className="thumbnailBooth" onClick={() => this.handleView("3D")} src="assets/img/layout/3dTrigger.svg"/>
+    )
+
     var imageOptions = (
       <div className="singleImage">
           <div className="visualizer" id="visualizer" style={backgroundStyle}>
             { choice3D }
           </div>
           <Slider className={"heightSlider"} {...settings}>
-              <img className="thumbnailBooth" onClick={() => this.handleView("3D")} src="assets/img/layout/3dTrigger.svg"/>
+              {trigger3D}
               {numberOfImages}
           </Slider>
       </div>
@@ -91,6 +96,7 @@ class SingleItem extends Component {
       <button onClick={() => this.nextStepVideoWallInstaQuote()} className="instaQuoteButton">get instaQuote</button>
     )
     var buttonChoice = this.props.instaQuoteVideoWall? videoWallButton : boothButton;
+    var description = <DangerouslySet description={this.props.description}/>
 
     return (
       <div className="singleBooth">
@@ -100,7 +106,7 @@ class SingleItem extends Component {
           <div className={"insertPadding booth" + this.props.type}>
           <label></label>
           </div>
-          <p>{this.props.description}</p>
+          {description}
           {buttonChoice}
         </div>
       </div>

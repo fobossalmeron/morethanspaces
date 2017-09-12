@@ -281,6 +281,22 @@ footer{
   }
 }
 
+#downloadButton{
+  position: fixed;
+  width: 90px;
+  z-index: 10;
+  height: 90px;
+  bottom: 20px;
+  right: 25px;
+  background-size: cover;
+  cursor: pointer;
+  background-image: url("../img/layout/download.svg");
+  transition: .4s ease;
+  &:hover{
+    animation-play-state: running;
+  }
+}
+
 @keyframes bounce {
   from {
     transform: scale3d(1, 1, 1);
@@ -1365,6 +1381,10 @@ input[type=text]{
     float:left;
     width:40%;
     padding-left:5%;
+    ul{
+      margin: 0;
+      list-style: initial;
+    }
     span{
         font-weight: 700;
     }

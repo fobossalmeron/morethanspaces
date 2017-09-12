@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head-notfound.html %}
+
+  <body>
+  {{ content }}
+    <a href="/assets/pdf/{{page.resource}}" download="{{page.resource}}">
+      <div className={"bounce"} id="downloadButton"></div>
+    </a>
+    <section id="pdfViewer">
+      <embed src="/assets/pdf/{{page.resource}}" type='application/pdf'>
+    </section>
+    <div id="layout"></div>
+    <script type="text/javascript" src="/assets/js/notfound.js" charset="utf-8"></script>
+    <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+  </body>
+
+</html>

@@ -11,7 +11,7 @@ import FullServiceIcon from 'svg-react-loader?name=FullServiceIcon!../../../asse
 
 class StaticSection extends Component {
 
-  render (){ 
+  render (){
 
     return (
       <div>
@@ -26,7 +26,7 @@ class StaticSection extends Component {
             <div className="service-container">
               <FullServiceIcon className="service-icon"/>
             </div>
-            <h3>full service <em>-service for you, designed for you, 100 percent yours!</em></h3>
+            <h3>full service <em>- we don’t believe in pressure sales, schedule with confidence!</em></h3>
             <h4><b>the smarter approach to trade show</b></h4>
             <p>We are here to help by making it the <b>best experience</b> possible at a price you feel comfortable with!
             Innovative designs, turn-key a-to-z solutions. We like to keep it <b>simple for you</b> and always guarantee to be on time. We are so sure in our service that we will match or beat any of our competitors’ prices <b>up to 20%</b>. Join our trusted list of clients such as <b>Nike</b>, <b>MoneyGarm</b>, <b>CapitalOne</b>, <b>Coca-Cola</b>, and others!</p>
@@ -115,7 +115,10 @@ class StaticSection extends Component {
           <div className="stepblackbox"><b className="arbitraryPink">best price, best quality</b><p>we try to <b>match or beat any price</b> up to <b>20%</b></p></div>
         </div>
         <div className="half-card">
-          <h2 className="motto"><b>motto</b></h2>
+          <h2 className="motto">
+            <b>we don’t believe in pressure sales,<br/>
+            schedule with confidence</b>
+          </h2>
           <div className="stepyellowbox">
             <p><b>more for less</b><br/>better service, better products, <br/>better results, less stress, less worry</p>
           </div>

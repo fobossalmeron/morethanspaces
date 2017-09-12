@@ -13,11 +13,11 @@ class VideoWallGrid extends Component {
       individualVideoWallRender: this.props.individualVideoWallRender,
       singleValue: '',
       description: '',
-      obj: '',
       images:[],
       type: '',
       rent: '',
-      size: ''
+      size: '',
+      diagonal: '',
     };
     this.loadFromServer = this.loadFromServer.bind(this);
   }
@@ -36,15 +36,15 @@ class VideoWallGrid extends Component {
     this.loadFromServer();
   }
 
-  generateSingleVideoWall(singleValue, description, obj, images, type, rent, size){
+  generateSingleVideoWall(singleValue, description, images, type, rent, size, diagonal){
     this.setState({
       singleValue: singleValue,
       description: description,
-      obj: obj,
       rent: rent,
       images : images,
       type: type,
-      size: size
+      size: size,
+      diagonal: diagonal
     })
     this.props.renderSingleVideoWall();
   }
@@ -72,7 +72,7 @@ class VideoWallGrid extends Component {
       }
     }).map((item, index) => (
       <li key={item.id}
-          onClick={() => this.generateSingleVideoWall(item.id, item.description, item.obj, item.images, item.type, item.rent, item.size)}
+          onClick={() => this.generateSingleVideoWall(item.id, item.description, item.images, item.type, item.rent, item.size, item.diagonal)}
           className={"boothGridItem booth" + item.type}
           style={{backgroundImage: 'url(' + item.images[0].url + ')'}}>
           <label>{item.id}</label>
@@ -84,8 +84,8 @@ class VideoWallGrid extends Component {
                     description={this.state.description}
                     singleValue={this.state.singleValue}
                     type={this.state.type}
-                    obj={this.state.obj}
                     images={this.state.images}
+                    no3D={true}
                     doRenderVideoWallInstaQuote={this.props.doRenderVideoWallInstaQuote.bind(this)}/>
       );
 
@@ -99,6 +99,7 @@ class VideoWallGrid extends Component {
                     type={this.state.type}
                     rent={this.state.rent}
                     size={this.state.size}
+                    diagonal={this.state.diagonal}
                     eventInVegas={this.props.eventInVegas}
                     revealInstaQuote={this.props.revealInstaQuote}
                     discountOn={this.props.discountOn}

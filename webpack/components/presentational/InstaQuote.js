@@ -79,11 +79,21 @@ class InstaQuote extends Component {
     return renderOrNot
   }
 
+  ifExistsDiagonal(){
+    var renderOrNot
+    if (typeof this.props.diagonal !== 'undefined') {
+      renderOrNot = <li>diagonal: <b>{this.props.diagonal}″</b></li>
+    } else {
+      renderOrNot = ''
+    }
+    return renderOrNot
+  }
+
   ifExistsSize(){
     var renderOrNot
     if (typeof this.props.size !== 'undefined') {
       renderOrNot = <li>size: {this.props.size} </li>
-    } else {
+    } else if (typeof this.props.width !== 'undefined') {
       renderOrNot = <li>size: <b>{this.props.width}</b>ft x <b>{this.props.length}</b>ft</li>
     }
     return renderOrNot
@@ -101,6 +111,7 @@ class InstaQuote extends Component {
     var finalPrice = this.discountedBoothPrice(originalPrice);
     var ifExistsOwnableMessage = this.ifExistsWantToOwn();
     var ifExistsSize = this.ifExistsSize();
+    var ifExistsDiagonal = this.ifExistsDiagonal();
     var renderInVegas = this.props.eventInVegas? "in" : "outside";
     var reveal = this.props.revealInstaQuote? "revealQuote quoteNumber" : "quoteNumber";
     var renderTv = this.props.addTv? <li>You added a <b>Tv</b></li> : undefined;
@@ -121,6 +132,7 @@ class InstaQuote extends Component {
         <ul>
           <li>model: <b>{this.props.singleValue}</b></li>
           {ifExistsSize}
+          {ifExistsDiagonal}
           <li>type: {this.props.type}</li>
           {ifExistsOwnableMessage}
           <li>This event is <b>{renderInVegas}</b> Las Vegas </li>
@@ -139,7 +151,7 @@ class InstaQuote extends Component {
         </ul>
       </div>
         <button className="scheduleButton" onClick={() => this.showCalendly()}>schedule a call!</button>
-        <p><b>we don&#39;t believe in pressure sales, schedule with confidence</b></p>
+        <p><b>we don&#39;t believe in pressure sales,<br/> schedule with confidence</b></p>
       </div>
     </div>
     <CollectBeforeQuote {...this.props} originalPrice={originalPrice}

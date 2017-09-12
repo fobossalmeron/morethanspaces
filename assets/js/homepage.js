@@ -11758,22 +11758,22 @@ var Footer = function (_Component) {
               ),
               _react2.default.createElement(
                 'a',
-                { href: baseUrl + "assets/pdf/sample.pdf", target: '_blank' },
+                { href: baseUrl + "resources/sample/", target: '_blank' },
                 'video walls'
               ),
               _react2.default.createElement(
                 'a',
-                { href: baseUrl + "assets/pdf/sample.pdf", target: '_blank' },
+                { href: baseUrl + "resources/sample/", target: '_blank' },
                 'how to upload'
               ),
               _react2.default.createElement(
                 'a',
-                { href: baseUrl + "assets/pdf/sample.pdf", target: '_blank' },
+                { href: baseUrl + "resources/sample/", target: '_blank' },
                 'payment info'
               ),
               _react2.default.createElement(
                 'a',
-                { href: baseUrl + "assets/pdf/sample.pdf", target: '_blank' },
+                { href: baseUrl + "resources/sample/", target: '_blank' },
                 'industry clients'
               )
             ),
@@ -25903,6 +25903,27 @@ var InstaQuote = function (_Component) {
       return renderOrNot;
     }
   }, {
+    key: 'ifExistsDiagonal',
+    value: function ifExistsDiagonal() {
+      var renderOrNot;
+      if (typeof this.props.diagonal !== 'undefined') {
+        renderOrNot = _react2.default.createElement(
+          'li',
+          null,
+          'diagonal: ',
+          _react2.default.createElement(
+            'b',
+            null,
+            this.props.diagonal,
+            '\u2033'
+          )
+        );
+      } else {
+        renderOrNot = '';
+      }
+      return renderOrNot;
+    }
+  }, {
     key: 'ifExistsSize',
     value: function ifExistsSize() {
       var renderOrNot;
@@ -25914,7 +25935,7 @@ var InstaQuote = function (_Component) {
           this.props.size,
           ' '
         );
-      } else {
+      } else if (typeof this.props.width !== 'undefined') {
         renderOrNot = _react2.default.createElement(
           'li',
           null,
@@ -25952,6 +25973,7 @@ var InstaQuote = function (_Component) {
       var finalPrice = this.discountedBoothPrice(originalPrice);
       var ifExistsOwnableMessage = this.ifExistsWantToOwn();
       var ifExistsSize = this.ifExistsSize();
+      var ifExistsDiagonal = this.ifExistsDiagonal();
       var renderInVegas = this.props.eventInVegas ? "in" : "outside";
       var reveal = this.props.revealInstaQuote ? "revealQuote quoteNumber" : "quoteNumber";
       var renderTv = this.props.addTv ? _react2.default.createElement(
@@ -26018,6 +26040,7 @@ var InstaQuote = function (_Component) {
                 )
               ),
               ifExistsSize,
+              ifExistsDiagonal,
               _react2.default.createElement(
                 'li',
                 null,
@@ -26082,7 +26105,9 @@ var InstaQuote = function (_Component) {
               _react2.default.createElement(
                 'b',
                 null,
-                'we don\'t believe in pressure sales, schedule with confidence'
+                'we don\'t believe in pressure sales,',
+                _react2.default.createElement('br', null),
+                ' schedule with confidence'
               )
             )
           )
@@ -32954,6 +32979,10 @@ var _Arrow = __webpack_require__(219);
 
 var _Arrow2 = _interopRequireDefault(_Arrow);
 
+var _DangerouslySet = __webpack_require__(328);
+
+var _DangerouslySet2 = _interopRequireDefault(_DangerouslySet);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -33054,6 +33083,10 @@ var SingleItem = function (_Component) {
           }, src: _this2.props.images[index].url });
       });
 
+      var trigger3D = this.props.no3D ? '' : _react2.default.createElement('img', { className: 'thumbnailBooth', onClick: function onClick() {
+          return _this2.handleView("3D");
+        }, src: 'assets/img/layout/3dTrigger.svg' });
+
       var imageOptions = _react2.default.createElement(
         'div',
         { className: 'singleImage' },
@@ -33065,9 +33098,7 @@ var SingleItem = function (_Component) {
         _react2.default.createElement(
           _reactSlick2.default,
           _extends({ className: "heightSlider" }, settings),
-          _react2.default.createElement('img', { className: 'thumbnailBooth', onClick: function onClick() {
-              return _this2.handleView("3D");
-            }, src: 'assets/img/layout/3dTrigger.svg' }),
+          trigger3D,
           numberOfImages
         )
       );
@@ -33086,6 +33117,7 @@ var SingleItem = function (_Component) {
         'get instaQuote'
       );
       var buttonChoice = this.props.instaQuoteVideoWall ? videoWallButton : boothButton;
+      var description = _react2.default.createElement(_DangerouslySet2.default, { description: this.props.description });
 
       return _react2.default.createElement(
         'div',
@@ -33104,11 +33136,7 @@ var SingleItem = function (_Component) {
             { className: "insertPadding booth" + this.props.type },
             _react2.default.createElement('label', null)
           ),
-          _react2.default.createElement(
-            'p',
-            null,
-            this.props.description
-          ),
+          description,
           buttonChoice
         )
       );
@@ -33353,7 +33381,7 @@ var MagentaSuggest = function (_Component) {
         _react2.default.createElement(
           "p",
           null,
-          "shelves signs podiums etc."
+          "shelves, signs, podiums etc."
         )
       );
     }
@@ -36026,11 +36054,11 @@ var VideoWallGrid = function (_Component) {
       individualVideoWallRender: _this.props.individualVideoWallRender,
       singleValue: '',
       description: '',
-      obj: '',
       images: [],
       type: '',
       rent: '',
-      size: ''
+      size: '',
+      diagonal: ''
     };
     _this.loadFromServer = _this.loadFromServer.bind(_this);
     return _this;
@@ -36054,15 +36082,15 @@ var VideoWallGrid = function (_Component) {
     }
   }, {
     key: 'generateSingleVideoWall',
-    value: function generateSingleVideoWall(singleValue, description, obj, images, type, rent, size) {
+    value: function generateSingleVideoWall(singleValue, description, images, type, rent, size, diagonal) {
       this.setState({
         singleValue: singleValue,
         description: description,
-        obj: obj,
         rent: rent,
         images: images,
         type: type,
-        size: size
+        size: size,
+        diagonal: diagonal
       });
       this.props.renderSingleVideoWall();
     }
@@ -36094,7 +36122,7 @@ var VideoWallGrid = function (_Component) {
           'li',
           { key: item.id,
             onClick: function onClick() {
-              return _this2.generateSingleVideoWall(item.id, item.description, item.obj, item.images, item.type, item.rent, item.size);
+              return _this2.generateSingleVideoWall(item.id, item.description, item.images, item.type, item.rent, item.size, item.diagonal);
             },
             className: "boothGridItem booth" + item.type,
             style: { backgroundImage: 'url(' + item.images[0].url + ')' } },
@@ -36110,8 +36138,8 @@ var VideoWallGrid = function (_Component) {
         description: this.state.description,
         singleValue: this.state.singleValue,
         type: this.state.type,
-        obj: this.state.obj,
         images: this.state.images,
+        no3D: true,
         doRenderVideoWallInstaQuote: this.props.doRenderVideoWallInstaQuote.bind(this) });
 
       var gridChoice = this.props.individualVideoWallRender ? singleVideoWall : doRenderVideoWalls;
@@ -36127,6 +36155,7 @@ var VideoWallGrid = function (_Component) {
             type: this.state.type,
             rent: this.state.rent,
             size: this.state.size,
+            diagonal: this.state.diagonal,
             eventInVegas: this.props.eventInVegas,
             revealInstaQuote: this.props.revealInstaQuote,
             discountOn: this.props.discountOn,
@@ -36386,7 +36415,7 @@ var StaticSection = function (_Component) {
                   _react2.default.createElement(
                     'em',
                     null,
-                    '-service for you, designed for you, 100 percent yours!'
+                    '- we don\u2019t believe in pressure sales, schedule with confidence!'
                   )
                 ),
                 _react2.default.createElement(
@@ -36801,7 +36830,9 @@ var StaticSection = function (_Component) {
               _react2.default.createElement(
                 'b',
                 null,
-                'motto'
+                'we don\u2019t believe in pressure sales,',
+                _react2.default.createElement('br', null),
+                'schedule with confidence'
               )
             ),
             _react2.default.createElement(
@@ -40097,6 +40128,58 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = warning;
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 328 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var DangerouslySet = function (_Component) {
+  _inherits(DangerouslySet, _Component);
+
+  function DangerouslySet(props) {
+    _classCallCheck(this, DangerouslySet);
+
+    return _possibleConstructorReturn(this, (DangerouslySet.__proto__ || Object.getPrototypeOf(DangerouslySet)).call(this, props));
+  }
+
+  _createClass(DangerouslySet, [{
+    key: 'render',
+    value: function render() {
+      var description = this.props.description;
+      function createMarkup() {
+        return { __html: description };
+      };
+      return _react2.default.createElement('p', { dangerouslySetInnerHTML: createMarkup() });
+    }
+  }]);
+
+  return DangerouslySet;
+}(_react.Component);
+
+;
+
+exports.default = DangerouslySet;
 
 /***/ })
 /******/ ]);

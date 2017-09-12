@@ -90,10 +90,10 @@ class SingleItem extends Component {
       </div>
     );
     var boothButton = (
-      <button onClick={() => this.nextStepBoothInstaQuote()} className="instaQuoteButton">get instaQuote</button>
+      <button onClick={() => this.nextStepBoothInstaQuote()} className="instaQuoteButton">get base quote</button>
     )
     var videoWallButton = (
-      <button onClick={() => this.nextStepVideoWallInstaQuote()} className="instaQuoteButton">get instaQuote</button>
+      <button onClick={() => this.nextStepVideoWallInstaQuote()} className="instaQuoteButton">get base quote</button>
     )
     var buttonChoice = this.props.instaQuoteVideoWall? videoWallButton : boothButton;
     var description = <DangerouslySet description={this.props.description}/>

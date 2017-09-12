@@ -2,12 +2,9 @@
 Morethanspaces Website
 
 ##Estilos
-- css transition groups
-- first text carousel disappears too soon mobile
-- icons reveal atomatically on scroll
+- css transition groups modals
 - background images mobile
-- back to booths  button
-- reset instaQuote animation 
+- back to booths button
 
 ##Funcionalidad
 - send email each time user clicks, send several emails

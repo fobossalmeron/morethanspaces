@@ -276,8 +276,12 @@ footer{
   cursor: pointer;
   background-image: url("../img/layout/instaQuote.svg");
   transition: .4s ease;
+  transform-origin: center bottom;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
   &:hover{
-    animation-play-state: running;
+    animation-name: bounce;
   }
 }
 
@@ -320,7 +324,7 @@ footer{
 }
 
 
-.bounce {
+.bounced {
   animation-name: bounce;
   transform-origin: center bottom;
   animation-duration: 1s;
@@ -422,10 +426,10 @@ section{
 }
 .modalItself{
   position: absolute;
-  top: 20%;
+  top: 15%;
   left: 15%;
   right: 15%;
-  bottom: 10%;
+  bottom: 5%;
   overflow: hidden;
   border-radius: 2px;
   outline: none;
@@ -660,7 +664,8 @@ section{
  }
  .motto{
    color:$magenta;
-   margin-bottom: 0;
+   margin-bottom: 2%;
+   font-size: 1.3em;
  }
 }
 
@@ -1382,7 +1387,8 @@ input[type=text]{
     width:40%;
     padding-left:5%;
     ul{
-      margin: 0;
+      margin-left: 16px;
+      margin-bottom: 0;
       list-style: initial;
     }
     span{
@@ -1556,6 +1562,11 @@ iframe{
 .slideIn{
   transform: translateX(0%) !important;
   opacity:1 !important;
+  svg{
+    circle {
+      stroke-dashoffset: 0;
+    }
+  }
 }
 
 .calendly-inline-widget{
@@ -2117,6 +2128,7 @@ background-color:$white;
 
 .hideOnMobile{
   display: inline-block;
+  margin-right: 11px;
 }
 
 .slick-slider{
@@ -2136,7 +2148,8 @@ background-color:$white;
   position: relative;
   display: block;
   circle{
-    transition: stroke-dashoffset .3s ease;
+    transition: stroke-dashoffset .4s ease-in;
+    transition-delay: .2s;
     stroke-dasharray: 290;
     stroke-dashoffset: 290;
     stroke-width: 3px;
@@ -2147,5 +2160,11 @@ background-color:$white;
     circle {
       stroke-dashoffset: 0;
     }
+  }
+}
+
+.revealIcon{
+  circle {
+    stroke-dashoffset: 0;
   }
 }

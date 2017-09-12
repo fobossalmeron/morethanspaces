@@ -82,7 +82,7 @@ class App extends Component {
     var maintenanceScreen = (
       <div className="loading">
         <div id="loadingvideo">
-            <ReactPlayer url={"assets/video/intro.mp4"} playing={true} loop={true} volume={0}/>
+            <ReactPlayer url={"assets/video/intro.mp4"} playing={true} loop={true} muted={true} playsinline={true}/>
         </div>
         <img src="assets/img/layout/logo.svg"/>
         <img src="assets/img/layout/type.svg"/>

@@ -7,11 +7,17 @@ import AssembleDismantleIcon from 'svg-react-loader?name=AssembleDismantleIcon!.
 import StorageShippingIcon from 'svg-react-loader?name=StorageShippingIcon!../../../assets/img/layout/icons/storageshipping.svg';
 import VideoWallIcon from 'svg-react-loader?name=VideoWallIcon!../../../assets/img/layout/icons/videowall.svg';
 
-class IconsBar extends Component {
+class ServicesBar extends Component {
+  componentDidMount(){
+    var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: .5}});
+    var service7 = new ScrollMagic.Scene({triggerElement: "#servicesBar", offset:-150})
+            .setClassToggle( "#servicesBar", "revealIcon")
+            .addTo(controller);
+  }
 
   render (){
     return (
-      <section className="iconsBar iconsBarServices" style={{backgroundColor:this.props.backgroundColor}}>
+      <section id="servicesBar" className="iconsBar iconsBarServices" style={{backgroundColor:this.props.backgroundColor}}>
       <ul>
         <li style={{color:this.props.color}}>
         <BoothRentalsIcon className="service-icon"/>
@@ -43,4 +49,4 @@ class IconsBar extends Component {
   }
 };
 
-export default IconsBar;
+export default ServicesBar;

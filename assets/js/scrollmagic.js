@@ -30,7 +30,7 @@ var service7 = new ScrollMagic.Scene({triggerElement: ".service7", duration: $('
         .setClassToggle( ".service7", "slideIn")
         .addTo(controller);
 
-var service7 = new ScrollMagic.Scene({triggerElement: ".sliderCard", duration: $('.sliderCard').height() + 100, offset:-100})
+var service7 = new ScrollMagic.Scene({triggerElement: ".sliderCard", duration: $('.sliderCard').height()*1.5, offset:-100})
         .setClassToggle( ".sliderCard", "fadeIn")
         .addTo(controller);
 

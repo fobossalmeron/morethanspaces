@@ -17,7 +17,7 @@ class StaticSection extends Component {
       <div>
       <section id="services">
         <div id="servicesvideo">
-            <ReactPlayer url={"assets/video/yellow.mp4"} playing={true} loop={true} volume={0}/>
+            <ReactPlayer url={"assets/video/yellow.mp4"} playing={true} loop={true} muted={true} playsinline={true}/>
         </div>
         <h2>services</h2>
         <ul>

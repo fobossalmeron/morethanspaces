@@ -3,9 +3,8 @@ Morethanspaces Website
 
 #Ask
 - 17done 21faltan (1,188) Thursday 14.
-- Ds website when
-- obj files when
-- launch when
+- launch when? obj? database?
+- Format on list, type of description. 
 
 #For launch
 - https://facebook.github.io/react/docs/optimizing-performance.html#webpack

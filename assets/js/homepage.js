@@ -35439,7 +35439,7 @@ var QuoteTabs = function (_Component) {
       individualVideoWallRender: false,
       renderBoothInstaQuote: false,
       renderVideoWallInstaQuote: false,
-      revealInstaQuote: true,
+      revealInstaQuote: false,
       renderCollectors: true,
       weHaveUser: false,
       name: '',

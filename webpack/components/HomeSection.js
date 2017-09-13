@@ -9,9 +9,10 @@ class HomeSection extends Component {
     super(props);
     this.state = {
       fullVideo: false,
-      playing: true,
+      playing: false,
       loop: true,
-      videoVolume: 0,
+      muted: true,
+      playsinline: true,
       url: 'assets/video/intro.mp4',
     };
   this.playFullVideo = this.playFullVideo.bind(this);
@@ -23,17 +24,20 @@ class HomeSection extends Component {
   playFullVideo(){
     this.setState({
       url: "assets/video/full.mp4",
+      playsinline: false,
       fullVideo: true,
       loop: false,
-      videoVolume: 1
-    }, () => console.log(this.state.fullVideo))
+      muted: false
+    }, () => playVideo())
   }
+
   backToLanding(){
     this.setState({
       url: 'assets/video/intro.mp4',
       fullVideo: false,
+      playsinline: true,
       loop: true,
-      videoVolume: 0
+      muted: true
     })
   }
   playVideo(){
@@ -45,6 +49,9 @@ class HomeSection extends Component {
     this.setState({
       playing: false
     })
+  }
+  componentDidMount(){
+    this.setState({playing:true})
   }
   render (){
     var showOver = (
@@ -71,7 +78,7 @@ class HomeSection extends Component {
         {doShowOver}
         <div id="homevideo">
             <div className="video_overlay"></div>
-            <ReactPlayer url={this.state.url} playing={this.state.playing} loop={this.state.loop} volume={this.state.volume} onEnded={this.backToLanding}/>
+            <ReactPlayer url={this.state.url} playing={this.state.playing} loop={this.state.loop} muted={this.state.muted} playsinline={this.state.playsinline} onEnded={this.backToLanding}/>
         </div>
       </section>
     );

@@ -30,6 +30,11 @@ class SingleItem extends Component {
       mainImage: '',
       render3D: false
     };
+    this.submitForm = this.submitForm.bind(this);
+  }
+
+  submitForm(element){
+    document.getElementById(element).click();
   }
 
   componentDidMount() {
@@ -43,10 +48,18 @@ class SingleItem extends Component {
   }
   nextStepBoothInstaQuote(event){
     this.props.doRenderBoothInstaQuote();
+    var myself = this
+    setTimeout(function(){
+      myself.submitForm("submitMeBooth");
+    }, 3000);
   }
 
   nextStepVideoWallInstaQuote(event){
     this.props.doRenderVideoWallInstaQuote();
+    var myself = this
+    setTimeout(function(){
+      myself.submitForm("submitMeWall");
+    }, 3000);
   }
 
   handleView(value){
@@ -90,10 +103,10 @@ class SingleItem extends Component {
       </div>
     );
     var boothButton = (
-      <button onClick={() => this.nextStepBoothInstaQuote()} className="instaQuoteButton">get instaQuote</button>
+      <button onClick={() => this.nextStepBoothInstaQuote()} className="instaQuoteButton">get base quote</button>
     )
     var videoWallButton = (
-      <button onClick={() => this.nextStepVideoWallInstaQuote()} className="instaQuoteButton">get instaQuote</button>
+      <button onClick={() => this.nextStepVideoWallInstaQuote()} className="instaQuoteButton">get base quote</button>
     )
     var buttonChoice = this.props.instaQuoteVideoWall? videoWallButton : boothButton;
     var description = <DangerouslySet description={this.props.description}/>

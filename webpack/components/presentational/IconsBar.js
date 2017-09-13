@@ -9,9 +9,16 @@ import SaveMoneyIcon from 'svg-react-loader?name=SaveMoneyIcon!../../../assets/i
 
 class IconsBar extends Component {
 
+  componentDidMount(){
+    var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: .5}});
+    var service7 = new ScrollMagic.Scene({triggerElement: "#iconsBar", offset:-150})
+            .setClassToggle( "#iconsBar", "revealIcon")
+            .addTo(controller);
+  }
+
   render (){
     return (
-      <section className="iconsBar" style={{backgroundColor:this.props.backgroundColor}}>
+      <section id="iconsBar" className="iconsBar" style={{backgroundColor:this.props.backgroundColor}}>
       <ul>
         <li style={{color:this.props.color}}>
         <FreeDesignConsultationIcon className="service-icon"/>

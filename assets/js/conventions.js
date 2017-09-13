@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 299);
+/******/ 	return __webpack_require__(__webpack_require__.s = 300);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -7242,11 +7242,17 @@ var IconsBar = function (_Component) {
   }
 
   _createClass(IconsBar, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: .5 } });
+      var service7 = new ScrollMagic.Scene({ triggerElement: "#iconsBar", offset: -150 }).setClassToggle("#iconsBar", "revealIcon").addTo(controller);
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'section',
-        { className: 'iconsBar', style: { backgroundColor: this.props.backgroundColor } },
+        { id: 'iconsBar', className: 'iconsBar', style: { backgroundColor: this.props.backgroundColor } },
         _react2.default.createElement(
           'ul',
           null,
@@ -25370,22 +25376,24 @@ var DiscountsCarousel = function (_Component) {
           }, src: baseUrl + "assets/img/layout/carousel/carousel6.jpg" })
       );
       var classList = this.props.className ? this.props.className : '';
+      var modal = _react2.default.createElement(
+        _reactModal2.default,
+        {
+          overlayClassName: "modalOverlay",
+          key: "discountsCarouselModal",
+          className: "modalItself",
+          isOpen: this.state.showModal,
+          onRequestClose: this.handleCloseModal,
+          closeTimeoutMS: 0,
+          contentLabel: 'Minimal Modal Example' },
+        _react2.default.createElement('img', { src: baseUrl + "assets/img/layout/carousel/carousel" + this.state.modalIndex + ".jpg" }),
+        _react2.default.createElement(_cross2.default, { className: 'modalCloseButton', onClick: this.handleCloseModal })
+      );
       return _react2.default.createElement(
         'section',
         { id: "discountsSlider", className: classList },
         slider,
-        _react2.default.createElement(
-          _reactModal2.default,
-          {
-            overlayClassName: "modalOverlay",
-            className: "modalItself",
-            isOpen: this.state.showModal,
-            onRequestClose: this.handleCloseModal,
-            closeTimeoutMS: 500,
-            contentLabel: 'Minimal Modal Example' },
-          _react2.default.createElement('img', { src: baseUrl + "assets/img/layout/carousel/carousel" + this.state.modalIndex + ".jpg" }),
-          _react2.default.createElement(_cross2.default, { className: 'modalCloseButton', onClick: this.handleCloseModal })
-        )
+        modal
       );
     }
   }]);
@@ -31906,7 +31914,7 @@ var _reactPlayer = __webpack_require__(187);
 
 var _reactPlayer2 = _interopRequireDefault(_reactPlayer);
 
-var _ServicesBar = __webpack_require__(297);
+var _ServicesBar = __webpack_require__(298);
 
 var _ServicesBar2 = _interopRequireDefault(_ServicesBar);
 
@@ -32157,7 +32165,8 @@ exports.default = ConventionsStatic;
 /* 294 */,
 /* 295 */,
 /* 296 */,
-/* 297 */
+/* 297 */,
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32197,7 +32206,7 @@ var _storageshipping = __webpack_require__(266);
 
 var _storageshipping2 = _interopRequireDefault(_storageshipping);
 
-var _videowall = __webpack_require__(326);
+var _videowall = __webpack_require__(327);
 
 var _videowall2 = _interopRequireDefault(_videowall);
 
@@ -32209,21 +32218,27 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var IconsBar = function (_Component) {
-  _inherits(IconsBar, _Component);
+var ServicesBar = function (_Component) {
+  _inherits(ServicesBar, _Component);
 
-  function IconsBar() {
-    _classCallCheck(this, IconsBar);
+  function ServicesBar() {
+    _classCallCheck(this, ServicesBar);
 
-    return _possibleConstructorReturn(this, (IconsBar.__proto__ || Object.getPrototypeOf(IconsBar)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (ServicesBar.__proto__ || Object.getPrototypeOf(ServicesBar)).apply(this, arguments));
   }
 
-  _createClass(IconsBar, [{
+  _createClass(ServicesBar, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: .5 } });
+      var service7 = new ScrollMagic.Scene({ triggerElement: "#servicesBar", offset: -150 }).setClassToggle("#servicesBar", "revealIcon").addTo(controller);
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'section',
-        { className: 'iconsBar iconsBarServices', style: { backgroundColor: this.props.backgroundColor } },
+        { id: 'servicesBar', className: 'iconsBar iconsBarServices', style: { backgroundColor: this.props.backgroundColor } },
         _react2.default.createElement(
           'ul',
           null,
@@ -32280,16 +32295,16 @@ var IconsBar = function (_Component) {
     }
   }]);
 
-  return IconsBar;
+  return ServicesBar;
 }(_react.Component);
 
 ;
 
-exports.default = IconsBar;
+exports.default = ServicesBar;
 
 /***/ }),
-/* 298 */,
-/* 299 */
+/* 299 */,
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32360,7 +32375,6 @@ exports.default = Conventions;
 (0, _reactDom.render)(_react2.default.createElement(Conventions, null), document.getElementById('app'));
 
 /***/ }),
-/* 300 */,
 /* 301 */,
 /* 302 */,
 /* 303 */,
@@ -32386,7 +32400,8 @@ exports.default = Conventions;
 /* 323 */,
 /* 324 */,
 /* 325 */,
-/* 326 */
+/* 326 */,
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(1);

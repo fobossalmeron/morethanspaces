@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 301);
+/******/ 	return __webpack_require__(__webpack_require__.s = 302);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -6662,11 +6662,17 @@ var IconsBar = function (_Component) {
   }
 
   _createClass(IconsBar, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: .5 } });
+      var service7 = new ScrollMagic.Scene({ triggerElement: "#iconsBar", offset: -150 }).setClassToggle("#iconsBar", "revealIcon").addTo(controller);
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'section',
-        { className: 'iconsBar', style: { backgroundColor: this.props.backgroundColor } },
+        { id: 'iconsBar', className: 'iconsBar', style: { backgroundColor: this.props.backgroundColor } },
         _react2.default.createElement(
           'ul',
           null,
@@ -23374,7 +23380,8 @@ YouTubeIcon.default = YouTubeIcon;
 /* 298 */,
 /* 299 */,
 /* 300 */,
-/* 301 */
+/* 301 */,
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

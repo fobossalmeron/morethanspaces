@@ -88,19 +88,23 @@ class DiscountsCarousel extends Component {
       </Slider>
     )
     var classList = this.props.className? this.props.className : '';
+    var modal = (
+      <ReactModal
+        overlayClassName={"modalOverlay"}
+        key={"discountsCarouselModal"}
+        className={"modalItself"}
+        isOpen={this.state.showModal}
+        onRequestClose={this.handleCloseModal}
+        closeTimeoutMS={0}
+        contentLabel="Minimal Modal Example">
+        <img src={baseUrl + "assets/img/layout/carousel/carousel" + this.state.modalIndex + ".jpg"} />
+        <CrossIcon className="modalCloseButton" onClick={this.handleCloseModal}/>
+      </ReactModal>
+    )
     return (
       <section id={"discountsSlider"} className={classList}>
       {slider}
-        <ReactModal
-           overlayClassName={"modalOverlay"}
-           className={"modalItself"}
-           isOpen={this.state.showModal}
-           onRequestClose={this.handleCloseModal}
-           closeTimeoutMS={500}
-           contentLabel="Minimal Modal Example">
-           <img src={baseUrl + "assets/img/layout/carousel/carousel" + this.state.modalIndex + ".jpg"} />
-           <CrossIcon className="modalCloseButton" onClick={this.handleCloseModal}/>
-        </ReactModal>
+      {modal}
       </section>
     );
   }

@@ -35,6 +35,9 @@
       width:100%;
     }
     .blueSuggest{
+      .linkText{
+        line-height: 1;
+      }
       p{
         display:block;
       }
@@ -42,6 +45,7 @@
     p{
       display: none;
     }
+    .theX{display:none;}
   }
   #boothGrid{
     margin-right: 2%;
@@ -236,11 +240,6 @@
 }
 
 @include media-query($x800-down) {
-  .service-icon{
-    circle {
-      stroke-dashoffset: 0;
-    }
-  }
   .convention_card{
     width:100%;
     &:nth-of-type(2){

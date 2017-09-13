@@ -85,6 +85,8 @@ class BoothGrid extends Component {
     var doRenderBooths = this.state.data.filter((item,index) => {
       if (this.shouldIRender(item.type) == false || this.shouldIFit(item.width, item.length) == false) {
         return false
+      } else if (item.featured == false) {
+        return false
       } else {
         return true
       }

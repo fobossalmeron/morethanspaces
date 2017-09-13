@@ -14,6 +14,9 @@ exclude:
   - Gemfile.lock
   - node_modules
   - webpack
+  
+sass:
+  style: compressed
 
 collections:
   conventions:

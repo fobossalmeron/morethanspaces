@@ -2,10 +2,14 @@
   "name": "morethanspaces",
   "version": "1.0.0",
   "description": "website for morethanspaces.com",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fobossalmeron/morethanspaces.git"
+  },
+  "scripts": {
+    "start": "webpack -w",
+    "build": "webpack -p --progress --config webpack.prod.js"
   },
   "author": "Rodrigo Salmeron",
   "license": "ISC",
@@ -19,8 +23,10 @@
     "react-addons-update": "^15.5.2",
     "react-dom": "^15.5.4",
     "svg-react-loader": "^0.4.5",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^2.5.1",
-    "webpack-dev-server": "^2.7.1"
+    "webpack-dev-server": "^2.7.1",
+    "webpack-merge": "^4.1.0"
   },
   "dependencies": {
     "react": "^15.6.1",

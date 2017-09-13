@@ -23,7 +23,7 @@ class App extends Component {
         discountText: '',
         discountSmallText: '',
         discountBanner: '',
-        maintenance: true
+        maintenance: false
       };
     this.loadDiscounts = this.loadDiscounts.bind(this);
     this.quitMaintenance = this.quitMaintenance.bind(this);

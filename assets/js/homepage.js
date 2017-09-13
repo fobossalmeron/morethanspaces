@@ -34019,7 +34019,7 @@ var App = function (_Component) {
       discountText: '',
       discountSmallText: '',
       discountBanner: '',
-      maintenance: true
+      maintenance: false
     };
     _this.loadDiscounts = _this.loadDiscounts.bind(_this);
     _this.quitMaintenance = _this.quitMaintenance.bind(_this);
@@ -35188,7 +35188,7 @@ var HomeSection = function (_Component) {
       playing: false,
       loop: true,
       muted: true,
-      videoVolume: 0,
+      playsinline: true,
       url: 'assets/video/intro.mp4'
     };
     _this.playFullVideo = _this.playFullVideo.bind(_this);
@@ -35201,16 +35201,15 @@ var HomeSection = function (_Component) {
   _createClass(HomeSection, [{
     key: 'playFullVideo',
     value: function playFullVideo() {
-      var _this2 = this;
-
       this.setState({
         url: "assets/video/full.mp4",
+        playsinline: false,
         fullVideo: true,
         loop: false,
         videoVolume: 1,
         muted: false
       }, function () {
-        return console.log(_this2.state.fullVideo);
+        return playVideo();
       });
     }
   }, {
@@ -35219,6 +35218,7 @@ var HomeSection = function (_Component) {
       this.setState({
         url: 'assets/video/intro.mp4',
         fullVideo: false,
+        playsinline: true,
         loop: true,
         videoVolume: 0,
         muted: true
@@ -35300,7 +35300,7 @@ var HomeSection = function (_Component) {
           'div',
           { id: 'homevideo' },
           _react2.default.createElement('div', { className: 'video_overlay' }),
-          _react2.default.createElement(_reactPlayer2.default, { url: this.state.url, playing: this.state.playing, loop: this.state.loop, muted: this.state.muted, playsinline: true, onEnded: this.backToLanding })
+          _react2.default.createElement(_reactPlayer2.default, { url: this.state.url, playing: this.state.playing, loop: this.state.loop, muted: this.state.muted, playsinline: this.state.playsinline, onEnded: this.backToLanding })
         )
       );
     }

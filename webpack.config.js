@@ -1,4 +1,4 @@
-const config = {
+module.exports = {
 
     entry: {
       homepage: './webpack/homepage.js',
@@ -27,5 +27,3 @@ const config = {
       ]
     }
 };
-
-module.exports = config;

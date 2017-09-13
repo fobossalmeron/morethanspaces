@@ -42,8 +42,15 @@ class CollectBeforeQuote extends Component {
 
   componentDidMount(){
     if (this.props.renderCollectors == false){
-      /*this.submitForm();*/
     }
+  }
+
+  ifVideowallNoDiscount(){
+    var renderOrNot
+    if (typeof this.props.wantToOwn !== 'undefined') {
+      return true
+    }
+    return false
   }
 
   render (){
@@ -67,17 +74,18 @@ class CollectBeforeQuote extends Component {
     var renderTv = this.props.addTv? "They added a TV." : '';
     var renderVideoWall = this.props.addVideoWall? "They added a videowall." : '';
     var renderRentOwn = this.props.wantToOwn? "own" : "rent";
+
     var narrateDiscount = (
-      this.props.originalPrice + '$ - ' + this.props.discountNumber + this.props.discountSymbol() + ' discount = ' + this.props.finalPrice
+      ' - ' + this.props.discountNumber + this.props.discountSymbol() + ' discount = ' + this.props.finalPrice
     )
-    var price = this.props.discountOn? narrateDiscount : "No discount applied.";
+    var preNarrate = this.ifVideowallNoDiscount()? narrateDiscount : '';
+    var price = this.props.discountOn? this.props.originalPrice + '$' + preNarrate : "No discount applied.";
 
     var addons = (
       renderTv + " " + renderVideoWall
     )
     var redacted = (
-      "This person quoted the " + this.props.singleValue + " model with the original price of " + this.props.originalPrice +
-      " and the final price after discounts of " + this.props.finalPrice + ". "
+      "This person quoted the " + this.props.singleValue + " model with the original price of " + this.props.originalPrice + ". "
     )
     var convention = (
       "They want to " + renderRentOwn + " it and the event is " + renderInVegas + " Las Vegas."
@@ -109,6 +117,7 @@ class CollectBeforeQuote extends Component {
           /*console.log('Form Submitted Succesfully with:', values)*/
 
           const url = 'https://formspree.io/hello@morethanspaces.com';
+          const dummyUrl = 'https://formspree.io/fobos.salmeron@gmail.com';
           var data = values;
 
           var xhr = new XMLHttpRequest();

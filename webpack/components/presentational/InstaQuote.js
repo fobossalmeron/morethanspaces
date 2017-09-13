@@ -15,6 +15,7 @@ class InstaQuote extends Component {
      this.ifExistsSize = this.ifExistsSize.bind(this);
      this.formatNumber = this.formatNumber.bind(this);
      this.ifExistsAvailability = this.ifExistsAvailability.bind(this);
+     this.ifVideowallNoDiscount = this.ifVideowallNoDiscount.bind(this);
   }
 
   discountSymbol(){
@@ -53,16 +54,18 @@ class InstaQuote extends Component {
   discountedBoothPrice(somePrice){
     var myself = this
     var price = somePrice
-    if (this.props.discountOn){
-      if (this.props.discountType === "amount"){
-        price = (price - this.props.discountNumber)
-      } else if (this.props.discountType === "percentage"){
-          price = (1 - (this.props.discountNumber / 100)) * price
-          if ((somePrice - price) > 5000) {
-            price = somePrice - 5000
-          }
+    if (typeof this.props.wantToOwn !== 'undefined') {
+      if (this.props.discountOn){
+        if (this.props.discountType === "amount"){
+          price = (price - this.props.discountNumber)
+        } else if (this.props.discountType === "percentage"){
+            price = (1 - (this.props.discountNumber / 100)) * price
+            if ((somePrice - price) > 5000) {
+              price = somePrice - 5000
+            }
+        }
       }
-    }
+  }
    return price
   }
 
@@ -106,6 +109,14 @@ class InstaQuote extends Component {
     return renderOrNot
   }
 
+  ifVideowallNoDiscount(){
+    var renderOrNot
+    if (typeof this.props.wantToOwn !== 'undefined') {
+      return true
+    }
+    return false
+  }
+
   formatNumber(n, x, s, c) {
       var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\D' : '$') + ')',
           num = this.toFixed(Math.max(0, ~~n));
@@ -130,7 +141,8 @@ class InstaQuote extends Component {
     var narrateDiscount = (
       <li><b>{'(' + originalPrice + '$ - ' + this.props.discountNumber + this.discountSymbol() + ' discount)'}</b></li>
     )
-    var isDiscount = this.props.discountOn? narrateDiscount : '';
+    var preDiscount = this.props.discountOn? narrateDiscount : '';
+    var isDiscount = this.ifVideowallNoDiscount()? preDiscount : '';
 
     return (
       <div>

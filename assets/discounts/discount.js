@@ -3,7 +3,7 @@ published: true
 discount: true
 number: 20
 type: 'percentage'
-text: 'off!'
+text: 'off on tradeshow booths!'
 smallText: ' on purchases of 30,000 USD or more'
 banner: 'banner1.jpg'
 ---

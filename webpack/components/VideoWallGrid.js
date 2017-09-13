@@ -67,8 +67,10 @@ class VideoWallGrid extends Component {
     var doRenderVideoWalls = this.state.data.filter((item,index) => {
       if (this.shouldIRender(item.type) == false) {
         return false
+      } else if (item.featured == false) {
+        return false
       } else {
-        return true
+          return true
       }
     }).map((item, index) => (
       <li key={item.id}

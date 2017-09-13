@@ -1,6 +1,6 @@
 {"items": [
     {
-      "featured": false,
+      "featured": true,
       "id": "VW3x3LCD",
       "type": "LCD",
       "description":"<ul><li>built with (9) 55″ ultra slim bezels</li><li>display approx. area: 12 ft x 6.8 ft</li><li>equivalent of a 165″ monitor</li><li>*sound not built-in, but available</li><li>*delivery, setup and teardow</li><li>floor stand</li><li>friendly expert support</li></ul>",
@@ -12,7 +12,7 @@
         {"url":"assets/img/videowalls/VW3x3LCD/2.jpg"}]
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "VW3x4LCD",
       "type": "LCD",
       "description":"built with (12) 55″ ultra slim bezels; display approx. area: 16 ft x 6.8 ft; equivalent of a 209″ monitor; *sound not built-in, but available; *delivery, setup and teardown; floor stand; friendly expert support",
@@ -24,7 +24,7 @@
         {"url":"assets/img/videowalls/VW3x4LCD/2.jpg"}]
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "VW3x5LCD",
       "type": "LCD",
       "description":"built with (15) 55″ ultra slim bezels; display approx. area: 20 ft x 6.8 ft; equivalent of a 253″ monitor; *sound not built-in, but available; *delivery, setup and teardown; floor stand; friendly expert support",
@@ -36,7 +36,7 @@
         {"url":"assets/img/videowalls/VW3x5LCD/2.jpg"}]
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "VW3x6LCD",
       "type": "LCD",
       "description":"built with (18) 55″ ultra slim bezels; display approx. area: 24 ft x 6.8 ft; equivalent of a 300″ monitor; *sound not built-in, but available; *delivery, setup and teardown; floor stand; friendly expert support",

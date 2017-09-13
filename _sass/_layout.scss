@@ -153,7 +153,7 @@ footer{
   padding: 3% 5%;
   a{
     font-size: .9em;
-    font-weight: 700;
+    font-weight: $bold-font-weight;
     float:left;
     clear:both;
     color:$white;
@@ -205,7 +205,7 @@ footer{
         padding-right: 0;
       }
       h3{
-        font-weight:700;
+        font-weight: $bold-font-weight;
         color:$white;
       }
     }
@@ -274,7 +274,6 @@ footer{
   right: 25px;
   background-size: cover;
   cursor: pointer;
-  background-image: url("../img/layout/instaQuote.svg");
   transition: .4s ease;
   transform-origin: center bottom;
   animation-duration: 1s;
@@ -342,7 +341,7 @@ footer{
   background-color: $magenta;
   border-radius: 2px;
   cursor:pointer;
-  font-weight:700;
+  font-weight:$bold-font-weight;
   color: $white;
   font-size: 1em;
   padding: 6%;
@@ -495,7 +494,7 @@ section{
   button{
     background-color: $yellow;
     color:$black;
-    font-weight: 700;
+    font-weight: $bold-font-weight;
     border-radius: 2px;
     display: block;
     border: none;
@@ -610,7 +609,7 @@ section{
 
 #services{
     h2{
-      font-weight: 700;
+      font-weight: $bold-font-weight;
       margin-bottom: 0;
     }
 //    background-color: $yellow;
@@ -640,10 +639,10 @@ section{
           list-style: none;
           opacity:0;
           h3{
-            font-weight: 700;
+            font-weight: $bold-font-weight;
           }
           em{
-            font-weight:400;
+            font-weight:$base-font-weight;
           }
       }
     }
@@ -678,7 +677,7 @@ section{
     float: left;
     position: relative;
     display: inline-block;
-    font-weight: bold;
+    font-weight: $bold-font-weight;
     line-height: 1;
     color: $black;
     &:nth-of-type(1){
@@ -708,7 +707,7 @@ section{
     width:100%;
     float:left;
     clear:both;
-    font-weight:700;
+    font-weight: $bold-font-weight;
     border-radius: 2px;
     padding: 2%;
     height: 75px;
@@ -914,6 +913,9 @@ form{
       margin-right: 10%;
       opacity:0;
       transition: .4s ease all;
+      svg{
+        fill:$white;
+      }
       &:nth-child(3n+3){
         margin-right:0;
       }
@@ -936,7 +938,7 @@ form{
   }
   h2{
     margin:0px;
-    font-weight: 700;
+    font-weight: $bold-font-weight;
     float:left;
     cursor:pointer;
   }
@@ -1116,47 +1118,10 @@ input[type=text]{
   display: block;
 }
 
-.clientNike{
-  background-image: url("../img/clients/clientNike.svg");
-}
-.clientCocaCola{
-  background-image: url("../img/clients/clientCocaCola.svg");
-}
-.clientMoneyGram{
-  background-image: url("../img/clients/clientMoneyGram.svg");
-}
-.clientChanel{
-  background-image: url("../img/clients/clientChanel.svg");
-}
-.clientCapitalOne{
-  background-image: url("../img/clients/clientCapitalOne.svg");
-}
-.clientBaseF{
-  background-image: url("../img/clients/clientBaseF.svg");
-}
-.clientBoss{
-  background-image: url("../img/clients/clientBoss.svg");
-}
-.clientBMW{
-  background-image: url("../img/clients/clientBMW.svg");
-}
-.clientPepsico{
-  background-image: url("../img/clients/clientPepsico.svg");
-}
-.clientNovartis{
-  background-image: url("../img/clients/clientNovartis.svg");
-}
-.clientKraft{
-  background-image: url("../img/clients/clientKraft.svg");
-}
-.clientDiageo{
-  background-image: url("../img/clients/clientDiageo.svg");
-}
-
 .manyMore{
   float:right;
   margin: 2% 4% 0 0;
-  font-weight: 700;
+  font-weight: $bold-font-weight;
 }
 
 .instaQuoteForm {
@@ -1400,7 +1365,7 @@ input[type=text]{
       list-style: initial;
     }
     span{
-        font-weight: 700;
+        font-weight: $bold-font-weight;
     }
     label{
       float:left;
@@ -1591,7 +1556,7 @@ iframe{
 
 .realestate{
   a{
-    font-weight: 700;
+    font-weight: $bold-font-weight;
     margin-bottom: 5px;
     text-decoration-style: wavy;
     text-decoration: underline;
@@ -1635,7 +1600,7 @@ iframe{
       padding: 2% 0 2% 10%;
       }
       h1{
-        font-weight: bold;
+        font-weight: $bold-font-weight;
         background-color: $blue;
         color:$black;
         width: 100%;
@@ -1656,11 +1621,11 @@ iframe{
   column-gap: 40px;
   h1{
     color:$yellow;
-    font-weight: 700;
+    font-weight: $bold-font-weight;
   }
   h2{
     color:$magenta;
-    font-weight: 700;
+    font-weight: $bold-font-weight;
   }
   p{
   }
@@ -1689,7 +1654,7 @@ iframe{
     width: 25%;
     clear: none;
     float:right;
-    font-weight: 700;
+    font-weight: $bold-font-weight;
     margin-top: 0;
     padding: 2%;
     border-radius: 2px;
@@ -1760,7 +1725,7 @@ iframe{
     border: none;
     font-family: inherit;
     font-size: 1em;
-    font-weight: 700;
+    font-weight: $bold-font-weight;
     cursor:pointer;
     transition: .4s ease all;
       &:hover{
@@ -1791,7 +1756,7 @@ iframe{
 }
 
 .quoteNumber{
-  font-weight: 700;
+  font-weight: $bold-font-weight;
   display: block;
   width:100%;
   background-color: $yellow;
@@ -1821,16 +1786,16 @@ iframe{
     clear:none;
     width: 35%;
     font-size: .4em;
-    font-weight: 300;
+    font-weight: $base-font-weight;
     b{
-      font-weight: 700;
+      font-weight: $bold-font-weight;
     }
   }
   p{
     font-size: .4em;
     padding: 0 2% 2% 0%;
     line-height: 1;
-    font-weight: 300;
+    font-weight: $base-font-weight;
     width:100%;
   }
 }
@@ -1842,13 +1807,13 @@ iframe{
 .smallPrint{
   float: left;
   margin-top: 5%;
-  font-style:italic;
+  font-style: italic;
   font-size: .8em;
 }
 
 .clickFor{
   font-size:15px;
-  font-weight: 400;
+  font-weight: $base-font-weight;
   color: $white;
   position: absolute;
   bottom: 40px;
@@ -1874,7 +1839,7 @@ iframe{
         clear:none;
         width: 20%;
         line-height: 1.2;
-        font-weight: 700;
+        font-weight: $bold-font-weight;
       }
     }
 }
@@ -1901,16 +1866,17 @@ iframe{
   text-align: left;
   color:$white;
     p{
-      width: 350px;
+      max-width: 350px;
     }
     h2{
         font-size: 3em;
-        font-weight: 700;
+        font-weight: $bold-font-weight;
         margin: 0;
         padding-bottom: 10px;
       }
     img{
       margin-bottom: 2%;
+      min-width: 60px;
       width: 10%;
       position: relative;
       &:nth-of-type(2){
@@ -1972,7 +1938,7 @@ iframe{
   width: 100%;
   margin-bottom: 4%;
   p{
-    font-weight: 700;
+    font-weight: $bold-font-weight;
     font-size: 1em;
     color:$magenta;
   }
@@ -2020,7 +1986,7 @@ iframe{
     }
   label{
     padding: 2% 4%;
-    font-weight: bold;
+    font-weight: $bold-font-weight;
     margin: 0;
     font-size: .9em;
   }
@@ -2076,7 +2042,7 @@ iframe{
 #pageNotFound{
     position: relative;
     float: left;
-    padding: 10%;
+    padding: 130px 10% 10% 10%;
     text-align: center;
     color: $white;
     background-color: $black;
@@ -2091,11 +2057,11 @@ iframe{
   color:$white;
   h2{
     color:$magenta;
-    font-weight: 700;
+    font-weight: $bold-font-weight;
   }
   h3{
     color:$yellow;
-    font-weight: 700;
+    font-weight: $bold-font-weight;
   }
 }
 
@@ -2111,7 +2077,7 @@ background-color:$white;
   color: $white;
   h2{
     color:$yellow;
-    font-weight: 700;
+    font-weight: $bold-font-weight;
   }
 }
 .conventionBackground{

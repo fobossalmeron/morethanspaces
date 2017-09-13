@@ -25736,22 +25736,24 @@ var DiscountsCarousel = function (_Component) {
           }, src: baseUrl + "assets/img/layout/carousel/carousel6.jpg" })
       );
       var classList = this.props.className ? this.props.className : '';
+      var modal = _react2.default.createElement(
+        _reactModal2.default,
+        {
+          overlayClassName: "modalOverlay",
+          key: "discountsCarouselModal",
+          className: "modalItself",
+          isOpen: this.state.showModal,
+          onRequestClose: this.handleCloseModal,
+          closeTimeoutMS: 0,
+          contentLabel: 'Minimal Modal Example' },
+        _react2.default.createElement('img', { src: baseUrl + "assets/img/layout/carousel/carousel" + this.state.modalIndex + ".jpg" }),
+        _react2.default.createElement(_cross2.default, { className: 'modalCloseButton', onClick: this.handleCloseModal })
+      );
       return _react2.default.createElement(
         'section',
         { id: "discountsSlider", className: classList },
         slider,
-        _react2.default.createElement(
-          _reactModal2.default,
-          {
-            overlayClassName: "modalOverlay",
-            className: "modalItself",
-            isOpen: this.state.showModal,
-            onRequestClose: this.handleCloseModal,
-            closeTimeoutMS: 500,
-            contentLabel: 'Minimal Modal Example' },
-          _react2.default.createElement('img', { src: baseUrl + "assets/img/layout/carousel/carousel" + this.state.modalIndex + ".jpg" }),
-          _react2.default.createElement(_cross2.default, { className: 'modalCloseButton', onClick: this.handleCloseModal })
-        )
+        modal
       );
     }
   }]);
@@ -25815,15 +25817,11 @@ var InstaQuote = function (_Component) {
     _this.ifExistsWantToOwn = _this.ifExistsWantToOwn.bind(_this);
     _this.ifExistsSize = _this.ifExistsSize.bind(_this);
     _this.formatNumber = _this.formatNumber.bind(_this);
+    _this.ifExistsAvailability = _this.ifExistsAvailability.bind(_this);
     return _this;
   }
 
   _createClass(InstaQuote, [{
-    key: 'submitForm',
-    value: function submitForm() {
-      document.getElementById("submitMe").click();
-    }
-  }, {
     key: 'discountSymbol',
     value: function discountSymbol() {
       if (this.props.discountType === "percentage") {
@@ -25909,6 +25907,25 @@ var InstaQuote = function (_Component) {
       return renderOrNot;
     }
   }, {
+    key: 'ifExistsAvailability',
+    value: function ifExistsAvailability() {
+      var renderOrNot;
+      if (typeof this.props.wantToOwn !== 'undefined') {
+        renderOrNot = this.props.wantToOwn ? _react2.default.createElement(
+          'p',
+          null,
+          '*excluding furniture, flooring and monitors'
+        ) : _react2.default.createElement(
+          'p',
+          null,
+          '*specific furniture subjected to availability'
+        );
+      } else {
+        renderOrNot = ' ';
+      }
+      return renderOrNot;
+    }
+  }, {
     key: 'ifExistsDiagonal',
     value: function ifExistsDiagonal() {
       var renderOrNot;
@@ -25980,6 +25997,7 @@ var InstaQuote = function (_Component) {
       var ifExistsOwnableMessage = this.ifExistsWantToOwn();
       var ifExistsSize = this.ifExistsSize();
       var ifExistsDiagonal = this.ifExistsDiagonal();
+      var availability = this.ifExistsAvailability();
       var renderInVegas = this.props.eventInVegas ? "in" : "outside";
       var reveal = this.props.revealInstaQuote ? "revealQuote quoteNumber" : "quoteNumber";
       var renderTv = this.props.addTv ? _react2.default.createElement(
@@ -26029,9 +26047,7 @@ var InstaQuote = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'instaColumn' },
-            _react2.default.createElement('div', { className: 'instaThumbnail', onClick: function onClick() {
-                return _this2.submitForm();
-              }, style: { backgroundImage: 'url(' + this.props.images[0].url + ')' } }),
+            _react2.default.createElement('div', { className: 'instaThumbnail', style: { backgroundImage: 'url(' + this.props.images[0].url + ')' } }),
             _react2.default.createElement(
               'ul',
               null,
@@ -26096,7 +26112,8 @@ var InstaQuote = function (_Component) {
                   null,
                   ' *for up to 3 event days'
                 )
-              )
+              ),
+              availability
             ),
             _react2.default.createElement(
               'button',
@@ -32800,6 +32817,7 @@ var CollectBeforeQuote = function (_Component) {
 
     _this.revealQuote = _this.revealQuote.bind(_this);
     _this.doGenerateUser = _this.doGenerateUser.bind(_this);
+    _this.boothOrWall = _this.boothOrWall.bind(_this);
     return _this;
   }
 
@@ -32827,9 +32845,22 @@ var CollectBeforeQuote = function (_Component) {
       }
     }
   }, {
+    key: 'boothOrWall',
+    value: function boothOrWall() {
+      var renderOrNot;
+      if (typeof this.props.wantToOwn !== 'undefined') {
+        renderOrNot = "Booth";
+      } else {
+        renderOrNot = "Wall";
+      }
+      return renderOrNot;
+    }
+  }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
-      console.log(this.props);
+      if (this.props.renderCollectors == false) {
+        /*this.submitForm();*/
+      }
     }
   }, {
     key: 'render',
@@ -32837,6 +32868,7 @@ var CollectBeforeQuote = function (_Component) {
       var _this2 = this;
 
       var calendlyUrl = 'https://calendly.com/morethanspaces';
+      var isBoothOrWall = this.boothOrWall();
       var displayForm = this.props.renderCollectors ? '' : 'hidden';
       var actualForm = _react2.default.createElement(
         'div',
@@ -32850,8 +32882,8 @@ var CollectBeforeQuote = function (_Component) {
         _react2.default.createElement(_reactForm.Text, { field: 'price', className: 'hidden' }),
         _react2.default.createElement(
           'button',
-          { id: 'submitMe', type: 'submit' },
-          'reveal instaQuote now!'
+          { id: "submitMe" + isBoothOrWall, type: 'submit' },
+          'reveal base quote now!'
         )
       );
       var renderInVegas = this.props.eventInVegas ? "in" : "outside";
@@ -32885,9 +32917,9 @@ var CollectBeforeQuote = function (_Component) {
             },
 
             onSubmit: function onSubmit(values) {
-              console.log('Form Submitted Succesfully with:', values);
+              /*console.log('Form Submitted Succesfully with:', values)*/
 
-              var url = 'https://formspree.io/fobos.salmeron@gmail.com';
+              var url = 'https://formspree.io/hello@morethanspaces.com';
               var data = values;
 
               var xhr = new XMLHttpRequest();
@@ -33033,10 +33065,16 @@ var SingleItem = function (_Component) {
       mainImage: '',
       render3D: false
     };
+    _this.submitForm = _this.submitForm.bind(_this);
     return _this;
   }
 
   _createClass(SingleItem, [{
+    key: 'submitForm',
+    value: function submitForm(element) {
+      document.getElementById(element).click();
+    }
+  }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
       this.setState({
@@ -33052,11 +33090,19 @@ var SingleItem = function (_Component) {
     key: 'nextStepBoothInstaQuote',
     value: function nextStepBoothInstaQuote(event) {
       this.props.doRenderBoothInstaQuote();
+      var myself = this;
+      setTimeout(function () {
+        myself.submitForm("submitMeBooth");
+      }, 3000);
     }
   }, {
     key: 'nextStepVideoWallInstaQuote',
     value: function nextStepVideoWallInstaQuote(event) {
       this.props.doRenderVideoWallInstaQuote();
+      var myself = this;
+      setTimeout(function () {
+        myself.submitForm("submitMeWall");
+      }, 3000);
     }
   }, {
     key: 'handleView',
@@ -33211,7 +33257,11 @@ var BlueSuggest = function (_Component) {
         _react2.default.createElement(
           'a',
           { href: '#contact' },
-          'free friendly service ',
+          _react2.default.createElement(
+            'div',
+            { className: 'linkText' },
+            'free friendly service'
+          ),
           _react2.default.createElement(_arrowforward2.default, null)
         )
       );
@@ -34019,7 +34069,7 @@ var App = function (_Component) {
       discountText: '',
       discountSmallText: '',
       discountBanner: '',
-      maintenance: false
+      maintenance: true
     };
     _this.loadDiscounts = _this.loadDiscounts.bind(_this);
     _this.quitMaintenance = _this.quitMaintenance.bind(_this);
@@ -34094,50 +34144,54 @@ var App = function (_Component) {
           { id: 'loadingvideo' },
           _react2.default.createElement(_reactPlayer2.default, { url: "assets/video/intro.mp4", playing: true, loop: true, muted: true, playsinline: true })
         ),
-        _react2.default.createElement('img', { src: 'assets/img/layout/logo.svg' }),
-        _react2.default.createElement('img', { src: 'assets/img/layout/type.svg' }),
         _react2.default.createElement(
-          'h2',
-          null,
-          'Stay tuned'
-        ),
-        _react2.default.createElement(
-          'p',
-          null,
-          'We are re-designing the site to be the ',
+          'div',
+          { className: 'aboveVideo' },
+          _react2.default.createElement('img', { src: 'assets/img/layout/logo.svg' }),
+          _react2.default.createElement('img', { src: 'assets/img/layout/type.svg' }),
           _react2.default.createElement(
-            'em',
+            'h2',
             null,
-            'Uber'
+            'Stay tuned'
           ),
-          ' of trade show both and video wall rentals'
-        ),
-        _react2.default.createElement(
-          'p',
-          null,
-          'Can\u2019t wait?',
-          _react2.default.createElement('br', null),
-          'call: ',
           _react2.default.createElement(
-            'a',
-            { href: 'tel:1 833 667 3842' },
+            'p',
+            null,
+            'We are re-designing the site to be the ',
             _react2.default.createElement(
-              'b',
+              'em',
               null,
-              '1-833-MORETHANSPACES'
+              'Uber'
+            ),
+            ' of trade show both and video wall rentals'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Can\u2019t wait?',
+            _react2.default.createElement('br', null),
+            'call: ',
+            _react2.default.createElement(
+              'a',
+              { href: 'tel:1 833 667 3842' },
+              _react2.default.createElement(
+                'b',
+                null,
+                '1-833-MORETHANSPACES'
+              ),
+              _react2.default.createElement('br', null),
+              '(1-833-667-3842)'
             ),
             _react2.default.createElement('br', null),
-            '(1-833-667-3842)'
-          ),
-          _react2.default.createElement('br', null),
-          'email: ',
-          _react2.default.createElement(
-            'a',
-            { href: 'mailto:hello@morethanspaces.com' },
+            'email: ',
             _react2.default.createElement(
-              'b',
-              null,
-              'hello@morethanspaces.com'
+              'a',
+              { href: 'mailto:hello@morethanspaces.com' },
+              _react2.default.createElement(
+                'b',
+                null,
+                'hello@morethanspaces.com'
+              )
             )
           )
         ),
@@ -34418,8 +34472,7 @@ var BoothForm = function (_Component) {
               null,
               'back'
             ),
-            _react2.default.createElement('br', null),
-            'to booths'
+            ' to booths'
           )
         ),
         _react2.default.createElement(
@@ -34675,9 +34728,9 @@ var BoothGrid = function (_Component) {
             hideCollectors: this.props.hideCollectors.bind(this),
             renderCollectors: this.props.renderCollectors,
             generateUser: this.props.generateUser.bind(this),
-            name: this.state.name,
-            email: this.state.email,
-            phone: this.state.phone,
+            name: this.props.name,
+            email: this.props.email,
+            phone: this.props.phone,
             weHaveUser: this.props.weHaveUser })
         ),
         _react2.default.createElement(_IconsBar2.default, { className: "iconsBarQuote" })
@@ -35206,7 +35259,6 @@ var HomeSection = function (_Component) {
         playsinline: false,
         fullVideo: true,
         loop: false,
-        videoVolume: 1,
         muted: false
       }, function () {
         return playVideo();
@@ -35220,7 +35272,6 @@ var HomeSection = function (_Component) {
         fullVideo: false,
         playsinline: true,
         loop: true,
-        videoVolume: 0,
         muted: true
       });
     }
@@ -35388,7 +35439,7 @@ var QuoteTabs = function (_Component) {
       individualVideoWallRender: false,
       renderBoothInstaQuote: false,
       renderVideoWallInstaQuote: false,
-      revealInstaQuote: false,
+      revealInstaQuote: true,
       renderCollectors: true,
       weHaveUser: false,
       name: '',
@@ -35402,15 +35453,11 @@ var QuoteTabs = function (_Component) {
   _createClass(QuoteTabs, [{
     key: 'generateUser',
     value: function generateUser(name, email, phone) {
-      var _this2 = this;
-
       this.setState({
         weHaveUser: true,
         name: name,
         email: email,
         phone: phone
-      }, function () {
-        return console.log("QuoteTabs state is: " + _this2.state.email + ' with the phone ' + _this2.state.phone + 'with the name ' + _this2.state.name);
       });
     }
   }, {
@@ -35426,19 +35473,19 @@ var QuoteTabs = function (_Component) {
   }, {
     key: 'doAddVideoWall',
     value: function doAddVideoWall() {
-      var _this3 = this;
+      var _this2 = this;
 
       this.setState({ addVideoWall: !this.state.addVideoWall }, function () {
-        return console.log("videowall " + _this3.state.addVideoWall);
+        return console.log("videowall " + _this2.state.addVideoWall);
       });
     }
   }, {
     key: 'doAddTv',
     value: function doAddTv() {
-      var _this4 = this;
+      var _this3 = this;
 
       this.setState({ addTv: !this.state.addTv }, function () {
-        return console.log("Tv " + _this4.state.addTv);
+        return console.log("Tv " + _this3.state.addTv);
       });
     }
   }, {
@@ -35576,7 +35623,7 @@ var QuoteTabs = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _this5 = this,
+      var _this4 = this,
           _React$createElement;
 
       return _react2.default.createElement(
@@ -35587,7 +35634,7 @@ var QuoteTabs = function (_Component) {
         _react2.default.createElement(
           _reactTabs.Tabs,
           { forceRenderTabPanel: true, selectedIndex: this.props.tabIndex, onSelect: function onSelect(tabIndex) {
-              return _this5.props.goToTab(tabIndex);
+              return _this4.props.goToTab(tabIndex);
             } },
           _react2.default.createElement(
             _reactTabs.TabList,
@@ -35949,9 +35996,7 @@ var VideoWallForm = function (_Component) {
               null,
               'back'
             ),
-            ' to',
-            _react2.default.createElement('br', null),
-            'videowalls'
+            ' to videowalls'
           )
         ),
         _react2.default.createElement(
@@ -36179,9 +36224,9 @@ var VideoWallGrid = function (_Component) {
             hideCollectors: this.props.hideCollectors.bind(this),
             renderCollectors: this.props.renderCollectors,
             generateUser: this.props.generateUser.bind(this),
-            name: this.state.name,
-            email: this.state.email,
-            phone: this.state.phone,
+            name: this.props.name,
+            email: this.props.email,
+            phone: this.props.phone,
             weHaveUser: this.props.weHaveUser })
         ),
         _react2.default.createElement(_IconsBar2.default, { className: "iconsBarQuote" })

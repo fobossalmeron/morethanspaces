@@ -8,10 +8,11 @@ class CollectBeforeQuote extends Component {
     super(props);
   this.revealQuote = this.revealQuote.bind(this);
   this.doGenerateUser = this.doGenerateUser.bind(this);
+  this.boothOrWall = this.boothOrWall.bind(this);
   }
 
   submitForm(){
-    document.getElementById("submitMe").click();
+      document.getElementById("submitMe").click();
   }
 
   doGenerateUser(name, email, phone){
@@ -29,12 +30,25 @@ class CollectBeforeQuote extends Component {
     }
   }
 
+  boothOrWall(){
+    var renderOrNot
+    if (typeof this.props.wantToOwn !== 'undefined') {
+      renderOrNot = "Booth"
+    } else {
+      renderOrNot = "Wall"
+    }
+    return renderOrNot
+  }
+
   componentDidMount(){
-    console.log(this.props);
+    if (this.props.renderCollectors == false){
+      /*this.submitForm();*/
+    }
   }
 
   render (){
     var calendlyUrl = 'https://calendly.com/morethanspaces'
+    var isBoothOrWall = this.boothOrWall();
     var displayForm = (this.props.renderCollectors? '' : 'hidden')
     var actualForm = (
       <div className={displayForm}>
@@ -46,7 +60,7 @@ class CollectBeforeQuote extends Component {
       <Text field='addons' className='hidden'/>
       <Text field='price' className='hidden'/>
 
-      <button id="submitMe" type='submit'>reveal instaQuote now!</button>
+      <button id={"submitMe" + isBoothOrWall} type='submit'>reveal base quote now!</button>
       </div>
     )
     var renderInVegas = this.props.eventInVegas? "in" : "outside";
@@ -92,9 +106,9 @@ class CollectBeforeQuote extends Component {
         }}
 
         onSubmit={(values) => {
-          console.log('Form Submitted Succesfully with:', values)
+          /*console.log('Form Submitted Succesfully with:', values)*/
 
-          const url = 'https://formspree.io/fobos.salmeron@gmail.com';
+          const url = 'https://formspree.io/hello@morethanspaces.com';
           var data = values;
 
           var xhr = new XMLHttpRequest();

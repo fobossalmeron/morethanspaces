@@ -1,5 +1,4 @@
 const config = {
- //webpack folder's entry js - excluded from jekyll's build process.
 
     entry: {
       homepage: './webpack/homepage.js',

@@ -27,7 +27,7 @@ class QuoteTabs extends Component {
       individualVideoWallRender: false,
       renderBoothInstaQuote: false,
       renderVideoWallInstaQuote: false,
-      revealInstaQuote: false,
+      revealInstaQuote: true,
       renderCollectors: true,
       weHaveUser: false,
       name: '',
@@ -43,7 +43,7 @@ class QuoteTabs extends Component {
       name: name,
       email: email,
       phone: phone
-    }, () => console.log("QuoteTabs state is: " + this.state.email + ' with the phone ' + this.state.phone + 'with the name ' + this.state.name))
+    })
   }
 
   seeState(){

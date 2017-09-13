@@ -27,7 +27,6 @@ class HomeSection extends Component {
       playsinline: false,
       fullVideo: true,
       loop: false,
-      videoVolume: 1,
       muted: false
     }, () => playVideo())
   }
@@ -38,7 +37,6 @@ class HomeSection extends Component {
       fullVideo: false,
       playsinline: true,
       loop: true,
-      videoVolume: 0,
       muted: true
     })
   }

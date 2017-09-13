@@ -23,7 +23,7 @@ class App extends Component {
         discountText: '',
         discountSmallText: '',
         discountBanner: '',
-        maintenance: false
+        maintenance: true
       };
     this.loadDiscounts = this.loadDiscounts.bind(this);
     this.quitMaintenance = this.quitMaintenance.bind(this);
@@ -84,14 +84,16 @@ class App extends Component {
         <div id="loadingvideo">
             <ReactPlayer url={"assets/video/intro.mp4"} playing={true} loop={true} muted={true} playsinline={true}/>
         </div>
-        <img src="assets/img/layout/logo.svg"/>
-        <img src="assets/img/layout/type.svg"/>
-        <h2>Stay tuned</h2>
-        <p>We are re-designing the site to be the <em>Uber</em> of trade show both and video wall rentals</p>
-        <p>Can’t wait?<br/>
-        call: <a href="tel:1 833 667 3842"><b>1-833-MORETHANSPACES</b><br/>(1-833-667-3842)</a><br/>
-        email: <a href="mailto:hello@morethanspaces.com"><b>hello@morethanspaces.com</b></a>
-        </p>
+        <div className="aboveVideo">
+          <img src="assets/img/layout/logo.svg"/>
+          <img src="assets/img/layout/type.svg"/>
+          <h2>Stay tuned</h2>
+          <p>We are re-designing the site to be the <em>Uber</em> of trade show both and video wall rentals</p>
+          <p>Can’t wait?<br/>
+          call: <a href="tel:1 833 667 3842"><b>1-833-MORETHANSPACES</b><br/>(1-833-667-3842)</a><br/>
+          email: <a href="mailto:hello@morethanspaces.com"><b>hello@morethanspaces.com</b></a>
+          </p>
+        </div>
         <button onClick={this.quitMaintenance}>quit</button>
       </div>
     )

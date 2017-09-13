@@ -132,9 +132,9 @@ class BoothGrid extends Component {
                   hideCollectors={this.props.hideCollectors.bind(this)}
                   renderCollectors={this.props.renderCollectors}
                   generateUser={this.props.generateUser.bind(this)}
-                  name={this.state.name}
-                  email={this.state.email}
-                  phone={this.state.phone}
+                  name={this.props.name}
+                  email={this.props.email}
+                  phone={this.props.phone}
                   weHaveUser={this.props.weHaveUser}/>
       </div>
       <IconsBar className={"iconsBarQuote"}/>

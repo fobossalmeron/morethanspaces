@@ -25376,22 +25376,24 @@ var DiscountsCarousel = function (_Component) {
           }, src: baseUrl + "assets/img/layout/carousel/carousel6.jpg" })
       );
       var classList = this.props.className ? this.props.className : '';
+      var modal = _react2.default.createElement(
+        _reactModal2.default,
+        {
+          overlayClassName: "modalOverlay",
+          key: "discountsCarouselModal",
+          className: "modalItself",
+          isOpen: this.state.showModal,
+          onRequestClose: this.handleCloseModal,
+          closeTimeoutMS: 0,
+          contentLabel: 'Minimal Modal Example' },
+        _react2.default.createElement('img', { src: baseUrl + "assets/img/layout/carousel/carousel" + this.state.modalIndex + ".jpg" }),
+        _react2.default.createElement(_cross2.default, { className: 'modalCloseButton', onClick: this.handleCloseModal })
+      );
       return _react2.default.createElement(
         'section',
         { id: "discountsSlider", className: classList },
         slider,
-        _react2.default.createElement(
-          _reactModal2.default,
-          {
-            overlayClassName: "modalOverlay",
-            className: "modalItself",
-            isOpen: this.state.showModal,
-            onRequestClose: this.handleCloseModal,
-            closeTimeoutMS: 500,
-            contentLabel: 'Minimal Modal Example' },
-          _react2.default.createElement('img', { src: baseUrl + "assets/img/layout/carousel/carousel" + this.state.modalIndex + ".jpg" }),
-          _react2.default.createElement(_cross2.default, { className: 'modalCloseButton', onClick: this.handleCloseModal })
-        )
+        modal
       );
     }
   }]);

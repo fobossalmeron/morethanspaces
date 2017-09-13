@@ -60,7 +60,7 @@ class VideoWallForm extends Component {
       <div className="goBackContainer">
         <div className="leaveOrStay">
           <ArrowBackIcon/>
-          <a onClick={() => this.resetQuoteCloseVideoWall()}><b>back</b> to<br/>videowalls</a>
+          <a onClick={() => this.resetQuoteCloseVideoWall()}><b>back</b> to videowalls</a>
         </div>
         <label>event location</label>
           <div className="quoteCheck">

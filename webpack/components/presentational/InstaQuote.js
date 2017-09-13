@@ -14,10 +14,7 @@ class InstaQuote extends Component {
      this.ifExistsWantToOwn = this.ifExistsWantToOwn.bind(this);
      this.ifExistsSize = this.ifExistsSize.bind(this);
      this.formatNumber = this.formatNumber.bind(this);
-  }
-
-  submitForm(){
-    document.getElementById("submitMe").click();
+     this.ifExistsAvailability = this.ifExistsAvailability.bind(this);
   }
 
   discountSymbol(){
@@ -79,6 +76,16 @@ class InstaQuote extends Component {
     return renderOrNot
   }
 
+  ifExistsAvailability(){
+    var renderOrNot
+    if (typeof this.props.wantToOwn !== 'undefined') {
+      renderOrNot = this.props.wantToOwn? <p>*excluding furniture, flooring and monitors</p> : <p>*specific furniture subjected to availability</p>;
+    } else {
+      renderOrNot = ' '
+    }
+    return renderOrNot
+  }
+
   ifExistsDiagonal(){
     var renderOrNot
     if (typeof this.props.diagonal !== 'undefined') {
@@ -112,6 +119,7 @@ class InstaQuote extends Component {
     var ifExistsOwnableMessage = this.ifExistsWantToOwn();
     var ifExistsSize = this.ifExistsSize();
     var ifExistsDiagonal = this.ifExistsDiagonal();
+    var availability = this.ifExistsAvailability();
     var renderInVegas = this.props.eventInVegas? "in" : "outside";
     var reveal = this.props.revealInstaQuote? "revealQuote quoteNumber" : "quoteNumber";
     var renderTv = this.props.addTv? <li>You added a <b>Tv</b></li> : undefined;
@@ -128,7 +136,7 @@ class InstaQuote extends Component {
       <div>
     <div className="instaBlock">
       <div className="instaColumn">
-        <div className="instaThumbnail" onClick={() => this.submitForm()} style={{backgroundImage: 'url(' + this.props.images[0].url + ')'}}></div>
+        <div className="instaThumbnail" style={{backgroundImage: 'url(' + this.props.images[0].url + ')'}}></div>
         <ul>
           <li>model: <b>{this.props.singleValue}</b></li>
           {ifExistsSize}
@@ -144,11 +152,12 @@ class InstaQuote extends Component {
         <h2>instaQuote</h2>
         <div className={reveal}>
         <h2><NumberFormat decimalPrecision={0} value={finalPrice} displayType={'text'} thousandSeparator={true} prefix={'$'} /> USD</h2>
-          <ul>
+        <ul>
           {isDiscount}
           {maximumReached}
           <li> *for up to 3 event days</li>
         </ul>
+            {availability}
       </div>
         <button className="scheduleButton" onClick={() => this.showCalendly()}>schedule a call!</button>
         <p><b>we don&#39;t believe in pressure sales,<br/> schedule with confidence</b></p>

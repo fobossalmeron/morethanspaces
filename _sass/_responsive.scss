@@ -35,6 +35,9 @@
       width:100%;
     }
     .blueSuggest{
+      .linkText{
+        line-height: 1;
+      }
       p{
         display:block;
       }
@@ -42,6 +45,7 @@
     p{
       display: none;
     }
+    .theX{display:none;}
   }
   #boothGrid{
     margin-right: 2%;

@@ -1223,13 +1223,21 @@ input[type=text]{
 
 .leaveOrStay{
   float: left;
-  padding-top: 10%;
+  background-color: $magenta;
+  border-radius:2px;
+  margin-top: 10%;
+  padding: 5%;
   width: 100%;
   text-align: left;
   line-height: 1.5;
   margin-bottom: 10px;
+  transition: .4s ease all;
+  cursor:pointer;
+  &:hover{
+    background-color: $blue;
+  }
   a{
-    text-decoration: underline;
+    text-decoration: none;
     color: $white;
     float: left;
     font-size: .9em;
@@ -1241,10 +1249,10 @@ input[type=text]{
     fill: white;
     position: relative;
     float: left;
-    width: 15%;
+    width: 10%;
   }
   b{
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
@@ -1818,6 +1826,13 @@ iframe{
       font-weight: 700;
     }
   }
+  p{
+    font-size: .4em;
+    padding: 0 2% 2% 0%;
+    line-height: 1;
+    font-weight: 300;
+    width:100%;
+  }
 }
 
 .revealQuote{
@@ -1881,7 +1896,7 @@ iframe{
 .loading{
   padding: 2% 10%;
   min-height: 100vh;
-  background-color: transparent;
+  background-color: $black;
   width: 100%;
   text-align: left;
   color:$white;
@@ -1905,6 +1920,7 @@ iframe{
     }
     button{
       position: absolute;
+      z-index: 10;
       right: 0;
       bottom: 0;
       width: 30px;
@@ -1921,14 +1937,17 @@ iframe{
       }
     }
 }
-
+.aboveVideo{
+  z-index:1;
+  position: relative;
+}
 #loadingvideo{
   width: 100%;
   height: 100%;
   overflow: hidden;
   display: block;
   position: fixed;
-  z-index: -1;
+  z-index: 0;
   left: 0;
   top: 0;
 
@@ -2015,8 +2034,13 @@ iframe{
     transition: .4s ease all;
     border-radius: 0 0 2px 2px;
     }
+    .linkText{
+      width:90%;
+      float:left;
+      position: relative;
+    }
     svg{
-      width: 25px;
+      width:10%;
       position: relative;
       float: right;
       path{
@@ -2109,6 +2133,7 @@ background-color:$white;
     filter: brightness(1) !important;
   }
   color:$black;
+  background-color: $white;
 }
 
 #pdfViewer{

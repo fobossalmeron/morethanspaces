@@ -30,6 +30,11 @@ class SingleItem extends Component {
       mainImage: '',
       render3D: false
     };
+    this.submitForm = this.submitForm.bind(this);
+  }
+
+  submitForm(element){
+    document.getElementById(element).click();
   }
 
   componentDidMount() {
@@ -43,10 +48,18 @@ class SingleItem extends Component {
   }
   nextStepBoothInstaQuote(event){
     this.props.doRenderBoothInstaQuote();
+    var myself = this
+    setTimeout(function(){
+      myself.submitForm("submitMeBooth");
+    }, 3000);
   }
 
   nextStepVideoWallInstaQuote(event){
     this.props.doRenderVideoWallInstaQuote();
+    var myself = this
+    setTimeout(function(){
+      myself.submitForm("submitMeWall");
+    }, 3000);
   }
 
   handleView(value){

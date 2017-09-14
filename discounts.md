@@ -1,5 +1,6 @@
 ---
 permalink: admin/discounts/
+goto: http://prose.io/#DesignSuccess/morethanspaces/edit/master/_data/discount.yml
 ---
 
 <!DOCTYPE html>
@@ -10,7 +11,7 @@ permalink: admin/discounts/
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Discounts">
     <meta name="author" content="Discounts">
-    <meta http-equiv="refresh" content="0; url=http://prose.io/#DesignSuccess/morethanspaces/edit/master/_data/discount.yml" />
+    <meta http-equiv="refresh" content="0; url={{page.goto}}" />
     <title>Discounts</title>
     <style>
     body{
@@ -26,11 +27,11 @@ permalink: admin/discounts/
       }
     </style>
     <script language="javascript">
-      window.location.href = "http://prose.io/#DesignSuccess/morethanspaces/edit/master/assets/discounts/discount.js"
+      window.location.href = "{{page.goto}}"
     </script>
 </head>
 <body>
-    <a href="http://prose.io/#DesignSuccess/morethanspaces/edit/master/assets/discounts/discount.js">
+    <a href="{{page.goto}}">
       <img src="../assets/img/logo.svg" alt="MTS">
     </a>
 </body>

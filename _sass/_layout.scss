@@ -374,6 +374,7 @@ section{
     margin: 0 auto;
     min-height: 200px;
     background-size: cover;
+    background-position: center;
     background-color: $yellow;
   }
 
@@ -394,9 +395,9 @@ section{
 }
 
 .modalCloseButton{
-  position: absolute;
-  top: 5px;
-  right: 5px;
+  position: fixed;
+  top: 15%;
+  right: 15%;
   width: 40px;
   height: 40px;
   background-color: transparent;
@@ -434,6 +435,7 @@ section{
   outline: none;
   cursor:auto;
 }
+
 
 .ReactModal__Body--open{
   overflow: hidden;
@@ -1571,6 +1573,7 @@ iframe{
 }
 #convention{
   background-color: $black;
+  padding: 0 5%;
   color:$white;
   .frompdf{
     margin-top:-4%;
@@ -2036,6 +2039,32 @@ iframe{
       color:$yellow;
       padding-bottom: 0;
     }
+  }
+}
+
+.whatDifference{
+  background-color:$white;
+  overflow:scroll;
+  padding:2% 4%;
+  font-size:0.8em;
+  h2{
+    font-weight: $bold-font-weight;
+  }
+  img{
+    min-width:100px;
+    width:20%;
+  }
+}
+.whatDifferenceButton{
+  background-color:$magenta;
+  cursor:pointer;
+  border-color:$magenta;
+  label{
+    cursor:pointer;
+  }
+  &:hover{
+    background-color:$blue;
+    border-color:$blue;
   }
 }
 

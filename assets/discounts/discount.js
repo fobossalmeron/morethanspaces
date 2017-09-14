@@ -1,7 +1,7 @@
 ---
 published: true
 discount: 'true'
-number: 1500
+number: 1400
 type: amount
 text: off on booths!
 smallText: 'on purchases of 25,000 USD or more'

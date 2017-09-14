@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class DiscountBanner extends Component {
 
   render (){
-    var bannerBackgroundImage = ('url(assets/img/banners/' + this.props.discountBanner + '')
+    var bannerBackgroundImage = ('url(assets/img/conventions/' + this.props.discountBanner + '')
     return (
       <div id="discountbanner">
         <div className="hideBanner" style={{backgroundImage: bannerBackgroundImage}}></div>

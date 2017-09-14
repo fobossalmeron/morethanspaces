@@ -39,7 +39,7 @@ class App extends Component {
 
   loadDiscounts () {
        var xhr = new XMLHttpRequest();
-       xhr.open('get', './assets/discounts/discount.js', true);
+       xhr.open('get', './assets/discounts/discountNONEDITABLE.js', true);
        xhr.onload = function() {
            var discountDigest = JSON.parse(xhr.responseText);
            console.log(discountDigest);

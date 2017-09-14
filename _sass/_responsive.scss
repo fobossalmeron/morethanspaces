@@ -72,6 +72,18 @@
 }
 
 @include media-query($x1000-down) {
+  .react-tabs__tab{
+    height:70px;
+    .backSlide{
+      left:-45px;
+    }
+    .frontSlide{
+      right: -45px;
+      span{
+        top:6px;
+      }
+    }
+  }
   .clickFor {
     font-size: 12px;
     bottom: 35px;
@@ -340,14 +352,6 @@
     width: 100%;
     &:nth-of-type(2n+2) {
       padding: 0
-    }
-  }
-  .react-tabs__tab{
-    .frontSlide{
-      right:-46px;
-    }
-    .backSlide{
-      left: -46px;
     }
   }
   #products h2{

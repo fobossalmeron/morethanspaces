@@ -151,13 +151,13 @@ class CollectBeforeQuote extends Component {
             phone:
               !phone ?
             '*A phone is required' :
-              !phone.match(/^(?=.*\d)[\d ]+$/)?
+              !phone.match(/^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/)?
             '*Please enter a valid phone number' :
             undefined,
             email:
               !email ?
             '*The email cannot be empty' :
-              email.search('@') == -1?
+              !email.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)?
             '*Please give a valid email' :
               email.search(/@gmail.com/i) !== -1?
             '*Sorry for the inconvenience but we only work with businesses, please provide a business email' :

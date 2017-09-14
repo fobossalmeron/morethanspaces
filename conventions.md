@@ -12,7 +12,7 @@ permalink: admin/conventions/
     <meta name="author" content="Discounts">
     <meta http-equiv="refresh" content="0; url=http://prose.io/#DesignSuccess/morethanspaces/" />
     <title>Conventions</title>
-    <style>
+    <style> 
     body{
       background-color: white;
       width:300px;

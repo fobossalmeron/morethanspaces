@@ -1632,6 +1632,9 @@ iframe{
 #content{
   column-count: 2;
   column-gap: 40px;
+  img{
+    display:none;
+  }
   h1{
     color:$yellow;
     font-weight: $bold-font-weight;

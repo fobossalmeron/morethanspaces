@@ -73,7 +73,7 @@ prose:
                 value: 'percentage'
               - name: 'Amount'
                 value: 'amount'
-        - name: 'amount'
+        - name: 'number'
           field:
             element: 'number'
             label: "Specify an amount (Please don't use any signs)"

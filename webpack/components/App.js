@@ -23,7 +23,7 @@ class App extends Component {
         discountText: '',
         discountSmallText: '',
         discountBanner: '',
-        maintenance: false
+        maintenance: true
       };
     this.loadDiscounts = this.loadDiscounts.bind(this);
     this.quitMaintenance = this.quitMaintenance.bind(this);
@@ -39,7 +39,7 @@ class App extends Component {
 
   loadDiscounts () {
        var xhr = new XMLHttpRequest();
-       xhr.open('get', './assets/discounts/discount.js', true);
+       xhr.open('get', './assets/discounts/discountNONEDITABLE.js', true);
        xhr.onload = function() {
            var discountDigest = JSON.parse(xhr.responseText);
            console.log(discountDigest);

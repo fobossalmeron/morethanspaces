@@ -10,7 +10,7 @@ permalink: admin/discounts/
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Discounts">
     <meta name="author" content="Discounts">
-    <meta http-equiv="refresh" content="0; url=http://prose.io/#DesignSuccess/morethanspaces/edit/master/assets/discounts/discount.js" />
+    <meta http-equiv="refresh" content="0; url=http://prose.io/#DesignSuccess/morethanspaces/edit/master/_data/discount.yml" />
     <title>Discounts</title>
     <style>
     body{

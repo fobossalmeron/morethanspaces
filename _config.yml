@@ -14,7 +14,7 @@ exclude:
   - Gemfile.lock
   - node_modules
   - webpack
-  
+
 sass:
   style: compressed
 
@@ -52,7 +52,7 @@ prose:
             element: 'text'
             label: 'Image/Logo name of file, ej. "CES.png"'
             value: ''
-        assets/discounts:
+        _data:
         - name: 'discount'
           field:
             element: 'select'

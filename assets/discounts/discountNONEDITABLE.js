@@ -1,37 +1,11 @@
 ---
 ---
 
-
-{% include_relative ./discounts.js %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {
-  "discountOn":{% include {{ page.discount }} %},
-  "discountNumber":{% include {{ page.number }} %},
-  "discountType":"{% include {{ page.type }} %}",
-  "discountText":"{% include {{ page.text }} %}",
-  "discountSmallText":"{% include {{ page.smallText }} %}",
-  "discountBanner":"{% include {{ page.banner }} %}"
+  "discountOn":{{ site.data.discount.discount }},
+  "discountNumber":{{ site.data.discount.number }},
+  "discountType":"{{ site.data.discount.type }}",
+  "discountText":"{{ site.data.discount.text }}",
+  "discountSmallText":"{{ site.data.discount.smallText }}",
+  "discountBanner":"{{ site.data.discount.banner }}"
 }

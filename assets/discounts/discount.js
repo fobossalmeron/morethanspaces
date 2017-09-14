@@ -50,7 +50,6 @@ banner: banner1.jpg
 
 
 
-
 {
   "discountOn":"{{ page.discount }}",
   "discountNumber":{{ page.number }},

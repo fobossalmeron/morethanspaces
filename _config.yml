@@ -21,7 +21,8 @@ sass:
 collections:
   conventions:
     output: true
-    permalink: /conventions/:path/
+    permalink: /conventions/:title/
+
 github: [metadata]
 prose:
     rooturl: '_conventions'
@@ -32,6 +33,10 @@ prose:
           field:
             element: 'hidden'
             value: 'convention'
+        - name: permalink
+          field:
+            element: 'hidden'
+            value: /:title/
         - name: title
           field:
             element: 'text'

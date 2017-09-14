@@ -259,6 +259,14 @@ footer{
       padding: 2%;
       font-size: 0.8em;
       margin-bottom: 0;
+      a{
+        color: $yellow;
+        text-decoration: none;
+        transition: .4s ease all;
+        &:hover{
+          color:$magenta;
+        }
+      }
 }
 
 .before-pinterest-snippet{
@@ -338,11 +346,11 @@ footer{
   clear: both;
   float: left;
   border: none;
-  background-color: $magenta;
+  background-color: $yellow;
   border-radius: 2px;
   cursor:pointer;
   font-weight:$bold-font-weight;
-  color: $white;
+  color: $black;
   font-size: 1em;
   padding: 6%;
   margin-top: 6%;
@@ -1787,11 +1795,17 @@ iframe{
   }
   ul{
     float:left;
-    padding: 4% 0;
+    padding: 2% 0;
     clear:none;
     width: 35%;
     font-size: .4em;
     font-weight: $base-font-weight;
+    li{
+      font-size:0.8em;
+      b{
+        font-size:1.5em;
+      }
+    }
     b{
       font-weight: $bold-font-weight;
     }
@@ -1951,6 +1965,7 @@ iframe{
     color:$black;
     font-size: .9em;
     font-weight: normal;
+    text-decoration: none;
   }
   b{
     font-size:1.2em;

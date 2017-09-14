@@ -64,7 +64,7 @@ class Footer extends Component {
               <a href={baseUrl + "resources/timeline_and_graphic_specs/"} target="_blank">timeline &<br/>graphic specs</a>
               <a href={baseUrl + "resources/sample/"} target="_blank">video walls</a>
               <a href={baseUrl + "resources/sample/"} target="_blank">how to upload</a>
-              <a href={baseUrl + "resources/sample/"} target="_blank">payment info</a>
+              <a href={baseUrl + "resources/sample/"} target="_blank">our furniture</a>
               <a href={baseUrl + "resources/sample/"} target="_blank">industry clients</a>
             </li>
             <li className="realestate">
@@ -87,7 +87,7 @@ class Footer extends Component {
       </footer>
       {iconsBar}
           <p className="colophon">© <b>morethanspaces</b> 2017, all rights reserved.<br/>
-          website developed by <b>Rodrigo Salmeron</b>
+          website developed by <b><a href="http://rodrigosalmeron.mx/">rodrigo salmeron</a></b>
           </p>
       </div>
     );

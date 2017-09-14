@@ -28,6 +28,7 @@ class SketchFab extends Component{
              ui_general_controls: 0,
              ui_settings: 0,
              ui_help: 0,
+             ui_stop:0,
              autostart: 1
          } );
    }

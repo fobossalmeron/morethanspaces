@@ -82,7 +82,7 @@ class InstaQuote extends Component {
   ifExistsAvailability(){
     var renderOrNot
     if (typeof this.props.wantToOwn !== 'undefined') {
-      renderOrNot = this.props.wantToOwn? <p>*excluding furniture, flooring and monitors</p> : <p>*specific furniture subjected to availability</p>;
+      renderOrNot = this.props.wantToOwn? <li>*excluding furniture, flooring and monitors</li> : <li>*specific furniture subjected to availability</li>;
     } else {
       renderOrNot = ' '
     }
@@ -161,15 +161,15 @@ class InstaQuote extends Component {
         </ul>
       </div>
       <div className="instaInfo">
-        <h2>instaQuote</h2>
+        <h2>instant base quote</h2>
         <div className={reveal}>
         <h2><NumberFormat decimalPrecision={0} value={finalPrice} displayType={'text'} thousandSeparator={true} prefix={'$'} /> USD</h2>
         <ul>
           {isDiscount}
           {maximumReached}
+          {availability}
           <li> *for up to 3 event days</li>
         </ul>
-            {availability}
       </div>
         <button className="scheduleButton" onClick={() => this.showCalendly()}>schedule a call!</button>
         <p><b>we don&#39;t believe in pressure sales,<br/> schedule with confidence</b></p>

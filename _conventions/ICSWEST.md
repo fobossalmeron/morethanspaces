@@ -6,4 +6,3 @@ location: 'Las Vegas, NV'
 logo: led.svg
 published: true
 ---
-

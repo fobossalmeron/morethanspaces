@@ -1,6 +1,6 @@
 ---
 published: true
-discount: true
+discount: 'true'
 number: 20
 type: 'percentage'
 text: 'off on tradeshow booths!'

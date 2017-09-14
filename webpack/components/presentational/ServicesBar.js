@@ -33,7 +33,7 @@ class ServicesBar extends Component {
         </li>
         <li style={{color:this.props.color}}>
         <VideoWallIcon className="service-icon"/>
-          videowall<br/>wall
+          video<br/>wall
         </li>
         <li style={{color:this.props.color}}>
         <AssembleDismantleIcon className="service-icon"/>

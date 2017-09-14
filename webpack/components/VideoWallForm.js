@@ -4,6 +4,7 @@ import BlueSuggest from './presentational/BlueSuggest';
 import MagentaSuggest from './presentational/MagentaSuggest';
 import ReactModal from 'react-modal';
 import ArrowBackIcon from 'svg-react-loader?name=ArrowBackIcon!../../assets/img/layout/arrowback.svg';
+import CrossIcon from 'svg-react-loader?name=CrossIcon!../../assets/img/layout/cross.svg';
 
 class VideoWallForm extends Component {
   constructor(props) {
@@ -50,7 +51,7 @@ class VideoWallForm extends Component {
           <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" nameFor="Tv" checkFor="tv" defaultChecked={this.props.selectedTv}/>
           <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" nameFor="LED" checkFor="led" defaultChecked={this.props.selectedLed}/>
           <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" nameFor="LCD" checkFor="lcd" defaultChecked={this.props.selectedLcd}/>
-          <div className="blueSuggest">
+          <div className="blueSuggest whatDifferenceButton">
           <label onClick={() => this.handleOpenModal()}>what&#39;s the difference?</label>
           </div>
           <BlueSuggest/>
@@ -82,12 +83,29 @@ class VideoWallForm extends Component {
         </div>
         <ReactModal
            overlayClassName={"modalOverlay"}
-           className={"modalItself"}
+           className={"modalItself whatDifference"}
            isOpen={this.state.showModal}
            onRequestClose={this.handleCloseModal}
            contentLabel="What's the difference?">
-           <img src={"assets/img/layout/videotypes.png"} />
-           <button className="modalCloseButton" onClick={this.handleCloseModal}></button>
+             <img src="assets/img/layout/icons/lcd.svg"/>
+             <h2>LCD video wall</h2>
+             <p>LCD <b>video wall</b> is a special multi-monitor setup that consists of multiple television
+             sets tiled together contiguously or overlapped in order to form one large screen.
+             We have the <b>thinnest bezel</b> in order to minimize the gap between active display areas.<br/>
+             LCD video walls have a broad area of usage from small meetings to large trade show application to
+             engage your targeted audience.</p>
+             <img src="assets/img/layout/icons/led.svg"/>
+             <h2>LED video wall</h2>
+             <p>LED is the acronym for Light Emitting Diode.<br/>
+             Pitch is the distance between pixels, usually measured by millimeters.<br/>
+             MoreThanSpaces use the highest quality LED products as well as the best pitches - all the way down
+             to 2.5 pitch; one of the best resolutions on the rental market.</p>
+             <img src="assets/img/layout/icons/tv.svg"/>
+             <h2>TV’s</h2>
+             <p>Television (TV) is a telecommunication medium used for transmitting moving images in color, and
+             in two or three dimensions and sound.<br/>
+             I mean common, its a TV :)</p>
+             <CrossIcon className="modalCloseButton" onClick={this.handleCloseModal}/>
         </ReactModal>
       </div>
     )

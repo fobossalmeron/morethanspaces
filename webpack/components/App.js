@@ -43,8 +43,14 @@ class App extends Component {
        xhr.onload = function() {
            var discountDigest = JSON.parse(xhr.responseText);
            console.log(discountDigest);
+           var discountIsOn
+           if (discountDigest.discountOn == 'true'){
+             var discountIsOn = true
+           } else if (discountDigest.discountOn == 'false'){
+             var discountIsOn = false
+           }
            this.setState({
-             discountOn: discountDigest.discountOn,
+             discountOn: discountIsOn,
              discountNumber: discountDigest.discountNumber,
              discountType: discountDigest.discountType,
              discountText: discountDigest.discountText,

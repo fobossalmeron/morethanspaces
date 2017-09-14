@@ -22,10 +22,10 @@ collections:
   conventions:
     output: true
     permalink: /conventions/:path/
-
+github: [metadata]
 prose:
     rooturl: '_conventions'
-    media: 'assets/img/conventions/'
+    media: 'assets/img/conventions'
     metadata:
         _conventions:
         - name: layout

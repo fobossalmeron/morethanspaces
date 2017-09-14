@@ -25,7 +25,6 @@ collections:
 
 prose:
     rooturl: '_conventions'
-    media: 'assets/img/conventions'
     metadata:
         _conventions:
         - name: layout

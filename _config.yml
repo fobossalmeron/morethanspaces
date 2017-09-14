@@ -52,7 +52,7 @@ prose:
             element: 'text'
             label: 'Image/Logo name of file, ej. "CES.png"'
             value: ''
-        _data:
+        assets/discounts:
         - name: 'discount'
           field:
             element: 'select'
@@ -60,9 +60,9 @@ prose:
             placeholder: 'Choose an option'
             options:
               - name: 'On'
-                value: true
+                value: 'true'
               - name: 'Off'
-                value: false
+                value: 'false'
         - name: 'type'
           field:
             element: 'select'

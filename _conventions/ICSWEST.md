@@ -1,8 +1,10 @@
 ---
+permalink: 'conventions/:title/'
 layout: convention
-title: ICS WEST 2017
-convention_date: '4-7 April, 2018'
-location: 'Las Vegas, N'
-logo: lcd.svg
 published: true
+title: ICS WEST
+convention_date: 'April 4-7, 2017'
+location: 'Convention Center, Las Vegas NV'
+logo: icswest.svg
 ---
+![ICS WEST]({{site.baseurl}}/assets/img/conventions/icswest.svg)

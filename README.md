@@ -5,6 +5,5 @@ Morethanspaces Website
 - 17done 21faltan (1,188) Thursday 14. 11.5
 - tutorial videos
 - optimize videowalls images
-- fondo de pantalla yellow jet
+- landing pages
 - bigger screens
-- rebuild jekyll for discounts

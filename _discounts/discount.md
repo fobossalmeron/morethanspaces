@@ -1,12 +1,13 @@
 ---
 published: true
 discount: 'true'
-number: 1400
-type: amount
-text: off on booths!
-smallText: 'on purchases of 25,000 USD or more'
-banner: banner-01.jpg
+number: 20
+type: percentage
+text: on any order $20k+
+smallText: '*not greater than 5000'
+banner: LogXX.jpg
 ---
+![LogXX.jpg]({{site.baseurl}}/assets/img/conventions/LogXX.jpg)
 
 
 

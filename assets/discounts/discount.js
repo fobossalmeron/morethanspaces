@@ -7,6 +7,6 @@
   "discountType":"{{ disc.type }}",
   "discountText":"{{ disc.text }}",
   "discountSmallText":"{{ disc.smallText }}",
-  "discountBanner":"{{ dics.banner }}"
+  "discountBanner":"{{ disc.banner }}"
 }
 {% endfor %}

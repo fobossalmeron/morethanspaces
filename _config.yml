@@ -1,6 +1,6 @@
 title: More Than Spaces
 email: ns@morethanspaces.com
-description: Tradeshow booth and videowall rental solutions
+description: Trade show booth and videowall solutions for your company
 og_image: "/assets/img/og_image.png"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://morethanspaces.com" # the base hostname & protocol for your site, e.g. http://example.com
@@ -19,6 +19,9 @@ sass:
   style: compressed
 
 collections:
+  discounts:
+    output: true
+    permalink: /d/s/:title/
   conventions:
     output: true
     permalink: /conventions/:title/
@@ -57,7 +60,7 @@ prose:
             element: 'text'
             label: 'Image/Logo name of file, ej. "CES.png"'
             value: ''
-        assets/discounts:
+        _discounts:
         - name: 'discount'
           field:
             element: 'select'

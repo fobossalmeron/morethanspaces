@@ -1,6 +1,6 @@
 ---
 permalink: admin/discounts/
-goto: http://prose.io/#DesignSuccess/morethanspaces/edit/master/assets/discounts/
+goto: http://prose.io/#DesignSuccess/morethanspaces/edit/master/_discounts/discount.md
 ---
 
 <!DOCTYPE html>

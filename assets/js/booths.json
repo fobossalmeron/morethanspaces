@@ -121,12 +121,12 @@
       "obj":"437387a8e54b4100a46e4b52fb511cf0"
     },
     {
-      "featured":false,
+      "featured":true,
       "id":"IS2020-01",
       "type":"Island",
       "width": "20",
       "length": "20",
-      "description":"ISland is the best way ",
+      "description":"Eye-catching stand with elegant and dramatic “floor-to- ceiling” illuminated tradeshow booth with ‘all that you need’: Inviting bar, 2 separate meeting spaces and storage.<br/>Includes:<ul><li>All Hardware as shown</li><li>New Graphics with your artwork</li><li>Lights</li><li>Counter</li><li>Single Color carpet</li><li>Furniture (as per availability)</li><li>Friendly Expert Project Management</ul>",
       "rent": 8000,
       "own" : 9500,
       "tv" : 800,

@@ -7,7 +7,6 @@ text: on any order $20k+
 smallText: '*not greater than 5000'
 banner: banner-01.jpg
 ---
-![LogXX.jpg]({{site.baseurl}}/assets/img/conventions/LogXX.jpg)
 
 
 

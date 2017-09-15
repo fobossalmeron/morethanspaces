@@ -63,7 +63,7 @@ class Footer extends Component {
               <a href={baseUrl + "resources/booth_types/"} target="_blank">booth types</a>
               <a href={baseUrl + "resources/timeline_and_graphic_specs/"} target="_blank">timeline &<br/>graphic specs</a>
               <a href={baseUrl + "resources/sample/"} target="_blank">video walls</a>
-              <a href={baseUrl + "resources/sample/"} target="_blank">how to upload</a>
+              <a href={baseUrl + "resources/how_to_upload/"} target="_blank">how to upload</a>
               <a href={baseUrl + "resources/sample/"} target="_blank">our furniture</a>
               <a href={baseUrl + "resources/sample/"} target="_blank">industry clients</a>
             </li>

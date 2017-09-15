@@ -1,4 +1,7 @@
 @include media-query($x1100-down) {
+  #discountbanner .hideBanner{
+    min-height: 120px;
+  }
   .convention_card h2 {
     font-size: 1.3em;
   }
@@ -408,6 +411,9 @@
 }
 
 @include media-query($x600-down) {
+  .whatDifference{
+    font-size:0.7em;
+  }
   .loading h2 {
     font-size: 2em;
   }
@@ -430,6 +436,9 @@
 }
 
 @include media-query($x500-down) {
+  #discountbanner .hideBanner{
+    min-height: 60px;
+  }
   .convention_card{
     h2{
       font-size:1.2em;

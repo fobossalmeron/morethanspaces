@@ -48,7 +48,7 @@
         {"url":"assets/img/videowalls/VW3x6LCD/2.jpg"}]
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "VW4.8LED179",
       "type": "LED",
       "description":"<ul><li>display approx. area: 13.4 ft x 6.7 ft</li><li>equivalent of a 179″ monitor</li><li>*sound not built-in, but available</li><li>floor stand or flown</li><li>delivery, setup and teardown*</li><li>friendly expert support</li></ul>",
@@ -56,10 +56,11 @@
       "size" : "13.4ft x 6.7ft",
       "diagonal" : "179",
       "images":[
-        {"url":"assets/img/videowalls/VW4.8LED179/1.jpg"}]
+        {"url":"assets/img/videowalls/VW4.8LED179/1.jpg"},
+        {"url":"assets/img/videowalls/VW4.8LED179/2.jpg"}]
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "VW4.8LED113",
       "type": "LED",
       "description":"<ul><li>display approx. area: (6.7 ft x 6.7 ft) x 2</li><li>equivalent of a (113″) x 2 monitor</li><li>*sound not built-in, but available</li><li>flown</li><li>delivery, setup and teardown</li><li>friendly expert support</li></ul>",
@@ -67,10 +68,11 @@
       "size" : "6.7ft x 6.7ft",
       "diagonal" : "113",
       "images":[
-        {"url":"assets/img/videowalls/VW4.8LED113/1.jpg"}]
+        {"url":"assets/img/videowalls/VW4.8LED113/1.jpg"},
+        {"url":"assets/img/videowalls/VW4.8LED113/2.jpg"}]
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "VW4.8LED144",
       "type": "LED",
       "description":"<ul><li>display approx. area: 6.7 ft x 10 ft</li><li>equivalent of a 144″ monitor</li><li>*sound not built-in, but available</li><li>flown</li><li>delivery, setup and teardown</li><li>friendly expert support</li></ul>",
@@ -78,10 +80,11 @@
       "size" : "6.7ft x 10ft",
       "diagonal" : "144",
       "images":[
-        {"url":"assets/img/videowalls/VW4.8LED144/1.jpg"}]
+        {"url":"assets/img/videowalls/VW4.8LED144/1.jpg"},
+        {"url":"assets/img/videowalls/VW4.8LED144/2.jpg"}]
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "VW4.8LED170",
       "type": "LED",
       "description":"<ul><li>display approx. area: 10 ft x 10 ft</li><li>equivalent of a 170″ monitor</li><li>*sound not built-in, but available</li><li>floor stand or flown</li><li>delivery, setup and teardown</li><li>friendly expert support</li></ul>",
@@ -89,10 +92,11 @@
       "size" : "10ft x 10ft",
       "diagonal" : "170",
       "images":[
-        {"url":"assets/img/videowalls/VW4.8LED170/1.jpg"}]
+        {"url":"assets/img/videowalls/VW4.8LED170/1.jpg"},
+        {"url":"assets/img/videowalls/VW4.8LED170/2.jpg"}]
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "VW4.8LED200",
       "type": "LED",
       "description":"<ul><li>display approx. area: 13.4 ft x 10 ft</li><li>equivalent of a 200″ monitor</li><li>*sound not built-in, but available</li><li>floor stand or flown</li><li>delivery, setup and teardown</li><li>friendly expert support</li></ul>",
@@ -100,10 +104,11 @@
       "size" : "13.4ft x 10ft",
       "diagonal" : "200",
       "images":[
-        {"url":"assets/img/videowalls/VW4.8LED200/1.jpg"}]
+        {"url":"assets/img/videowalls/VW4.8LED200/1.jpg"},
+        {"url":"assets/img/videowalls/VW4.8LED200/2.jpg"}]
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "VW4.8LED217",
       "type": "LED",
       "description":"<ul><li>display approx. area: 15 ft x 10 ft</li><li>equivalent of a 217″ monitor</li><li>*sound not built-in, but available</li><li>floor stand or flown</li><li>delivery, setup and teardown</li><li>friendly expert support</li></ul>",
@@ -111,10 +116,11 @@
       "size" : "15ft x 10ft",
       "diagonal" : "217",
       "images":[
-        {"url":"assets/img/videowalls/VW4.8LED217/1.jpg"}]
+        {"url":"assets/img/videowalls/VW4.8LED217/1.jpg"},
+        {"url":"assets/img/videowalls/VW4.8LED217/2.jpg"}]
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "VW2.5LED106",
       "type": "LED",
       "description":"<ul><li>display approx. area: 6.3 ft x 6.3 ft</li><li>equivalent of a 106″ monitor</li><li>*sound not built-in, but available</li><li>floor stand or flown</li><li>delivery, setup and teardown</li><li>friendly expert support</li></ul>",
@@ -122,10 +128,11 @@
       "size" : "6.3ft x 6.3ft",
       "diagonal" : "106",
       "images":[
-        {"url":"assets/img/videowalls/VW2.5LED106/1.jpg"}]
+        {"url":"assets/img/videowalls/VW2.5LED106/1.jpg"},
+        {"url":"assets/img/videowalls/VW2.5LED106/2.jpg"}]
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "VW2.5LED125",
       "type": "LED",
       "description":"<ul><li>display approx. area: 8.4 ft x 6.3 ft</li><li>equivalent of a 125″ monitor</li><li>*sound not built-in, but available</li><li>floor stand or flown</li><li>delivery, setup and teardown</li><li>friendly expert support</li></ul>",
@@ -133,10 +140,11 @@
       "size" : "8.4ft x 6.3ft",
       "diagonal" : "125",
       "images":[
-        {"url":"assets/img/videowalls/VW2.5LED125/1.jpg"}]
+        {"url":"assets/img/videowalls/VW2.5LED125/1.jpg"},
+        {"url":"assets/img/videowalls/VW2.5LED125/2.jpg"}]
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "VW2.5LED90",
       "type": "LED",
       "description":"<ul><li>display approx. area: (4.2 ft x 6.3 ft) x 2</li><li>equivalent of a (90″) x 2 monitor</li><li>*sound not built-in, but available</li><li>flown</li><li>delivery, setup and teardown</li><li>friendly expert support</li></ul>",
@@ -144,10 +152,11 @@
       "size" : "4.2ft x 6.3ft",
       "diagonal" : "90",
       "images":[
-        {"url":"assets/img/videowalls/VW2.5LED90/1.jpg"}]
+        {"url":"assets/img/videowalls/VW2.5LED90/1.jpg"},
+        {"url":"assets/img/videowalls/VW2.5LED90/2.jpg"}]
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "TV55in",
       "type": "Tv",
       "description":"<ul><li>Display Type: LED</li><li>Refresh Rate: Motion Rate 120</li><li>Resolution: 3840 x 2160</li><li>Screen Size Class: 55 in.</li><li>Screen Type: Flat</li><li>Smart TV: Yes</li></ul>",
@@ -157,7 +166,7 @@
         {"url":"assets/img/videowalls/TV55in/1.jpg"}]
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "TV65in",
       "type": "Tv",
       "description":"<ul><li>Display Type: LED</li><li>Refresh Rate: Motion Rate 120</li><li>Resolution: 3840 x 2160</li><li>Screen Size Class: 65 in.</li><li>Screen Type: Flat</li><li>Smart TV: Yes</li></ul>",
@@ -167,7 +176,7 @@
         {"url":"assets/img/videowalls/TV65in/1.jpg"}]
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "TV70in",
       "type": "Tv",
       "description":"<ul><li>XHDR Plus w/ support for Dolby Vision and HDR10</li><li>XLED Plus - Full-array local dimming backlight w/ 32 local dimming Zones</li><li>Vizio Smartcast w/ Chromecast built-in</li><li>120Hz Effective Refresh Rate & Clear Action 360</li><li>Tuner-Free Display</li></ul>",
@@ -177,7 +186,7 @@
         {"url":"assets/img/videowalls/TV70in/1.jpg"}]
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "TV80in",
       "type": "Tv",
       "description":"<ul><li>120Hz Effective Refresh Rate & Clear Action 180 Full-Array LED Backlight w/ 16 Active LED ZonesÆ</li><li>Chromecast Built-In w/ WiFi 802.11ac</li><li>V8 Octa-Core Processor</li><li>Tuner-Free Display</li></ul>",
@@ -187,7 +196,7 @@
         {"url":"assets/img/videowalls/TV70in/1.jpg"}]
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "TV90in",
       "type": "Tv",
       "description":"<ul><li>Active HDR w/ Dolby Vision</li><li>4K Upscaler</li><li>Sound Designed by Harmon/Kardon</li><li>TruMotion240</li><li>SUPER ULTRA TV</li></ul>",
@@ -197,7 +206,7 @@
         {"url":"assets/img/videowalls/TV90in/1.jpg"}]
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "TV55inCURB",
       "type": "Tv",
       "description":"<ul><li>Display Type: LED</li><li>Refresh Rate: Motion Rate 120</li><li>Resolution: 3840 x 2160</li><li>Screen Size Class: 55 in.</li><li>Screen Type: Curved</li><li>Smart TV: Yes</li></ul>",
@@ -207,7 +216,7 @@
         {"url":"assets/img/videowalls/TV55inCURB/1.jpg"}]
     },
     {
-      "featured": false,
+      "featured": true,
       "id": "TV65inCURB",
       "type": "Tv",
       "description":"<ul><li>Display Type: LED</li><li>Refresh Rate: Motion Rate 120</li><li>Resolution: 3840 x 2160</li><li>Screen Size Class: 65 in.</li><li>Screen Type: Curved</li><li>Smart TV: Yes</li></ul>",

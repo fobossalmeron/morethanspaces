@@ -87,6 +87,21 @@
       "obj":"437387a8e54b4100a46e4b52fb511cf0"
     },
     {
+      "featured":true,
+      "id":"Customize your booth!",
+      "type":"custom",
+      "width": "10",
+      "length": "10",
+      "description":"customize your booth x y z",
+      "rent": 1,
+      "own" : 1,
+      "tv" : 1,
+      "videowall" : 1,
+      "images":[
+        {"url":"assets/img/booths/custom/3.jpg"}],
+      "obj":"437387a8e54b4100a46e4b52fb511cf0"
+    },
+    {
       "featured":false,
       "id":"IS1020-07",
       "type":"Island",

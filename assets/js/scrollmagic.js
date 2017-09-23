@@ -30,10 +30,6 @@ var service7 = new ScrollMagic.Scene({triggerElement: ".service7", duration: $('
         .setClassToggle( ".service7", "slideIn")
         .addTo(controller);
 
-var service7 = new ScrollMagic.Scene({triggerElement: ".sliderCard", duration: $('.sliderCard').height()*1.5, offset:-100})
-        .setClassToggle( ".sliderCard", "fadeIn")
-        .addTo(controller);
-
 // clients
 
 var client1 = new ScrollMagic.Scene({triggerElement: ".clientNike", offset:-100})
@@ -76,6 +72,8 @@ var client12 = new ScrollMagic.Scene({triggerElement: ".clientBoss", offset:-150
 // change behaviour of controller to animate scroll instead of jump
 controller.scrollTo(function (newpos) {
       TweenMax.to(window, 0.5, {scrollTo: {y: newpos + -60}});
+      $(window).scrollTop($(window).scrollTop() + 1);
+      $(window).scrollTop($(window).scrollTop() - 1);
 });
 
 //  bind scroll to anchor links

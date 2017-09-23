@@ -103,11 +103,16 @@ class SingleItem extends Component {
       </div>
     );
     var boothButton = (
+      this.props.type == "custom"?
+      <button onClick={() => controller.scrollTo("#contact")} className="instaQuoteButton">get in touch!</button>
+        :
       <button onClick={() => this.nextStepBoothInstaQuote()} className="instaQuoteButton">get instant base quote</button>
     )
+
     var videoWallButton = (
       <button onClick={() => this.nextStepVideoWallInstaQuote()} className="instaQuoteButton">get instant base quote</button>
     )
+    
     var buttonChoice = this.props.instaQuoteVideoWall? videoWallButton : boothButton;
     var description = <DangerouslySet description={this.props.description}/>
 

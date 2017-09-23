@@ -113,7 +113,8 @@ class App extends Component {
              discountSmallText={this.state.discountSmallText}
              toggleMenu={this.toggleMenu.bind(this)}
              hideNav={this.hideNav.bind(this)}
-             menuOn={this.state.menuOn}/>
+             menuOn={this.state.menuOn}
+             barNav/>
         <HomeSection />
         <Carousel />
         <DiscountBanner discountBanner={this.state.discountBanner}/>

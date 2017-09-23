@@ -436,6 +436,12 @@
 }
 
 @include media-query($x500-down) {
+  .whatDifference.spanMagenta{
+    b{
+      min-width: 0;
+      width: 100%;
+    }
+  }
   #discountbanner .hideBanner{
     min-height: 60px;
   }

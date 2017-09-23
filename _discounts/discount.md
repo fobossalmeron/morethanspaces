@@ -1,11 +1,11 @@
 ---
 published: true
-discount: 'true'
+discount: true
 number: 20
 type: percentage
-text: on any order $20k+
-smallText: '*not greater than 5000'
-banner: banner-01.jpg
+text: on booths $25k+
+smallText: not exceeding $6000
+banner: MTS_Website_Banner-01.jpg
 ---
 
 

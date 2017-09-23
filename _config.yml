@@ -9,6 +9,7 @@ url: "http://morethanspaces.com" # the base hostname & protocol for your site, e
 markdown: kramdown
 gems:
   - jekyll-feed
+  - octopress-autoprefixer
 exclude:
   - Gemfile
   - Gemfile.lock

@@ -30,6 +30,13 @@ function SamplePrevArrow(props) {
 }
 
 class Carousel extends Component {
+
+  componentDidMount(){
+    var controllerCarousel = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: 1}});
+    var service7 = new ScrollMagic.Scene({triggerElement: ".sliderCard", offset:150})
+            .setClassToggle( ".sliderCard", "fadeIn")
+            .addTo(controllerCarousel);
+  }
   render (){
     const settings = {
       dots: false,

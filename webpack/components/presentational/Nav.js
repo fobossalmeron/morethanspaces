@@ -30,21 +30,18 @@ class Nav extends Component {
       this.navScrollMagic();
     }
   }
-  componentWillReceiveProps(nextProps) {
-  }
 
   navScrollMagic(){
-    var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: .5}});
-
-    if (this.state.relative == true) {
-      var logoScene = new ScrollMagic.Scene({triggerElement: "#content", offset:-100})
-          .setClassToggle("nav", "navScroll")
-          .addTo(controller);
+      var offset
+    if (typeof this.props.barNav !== 'undefined'){
+      offset = 15
     } else {
-        var logoScene = new ScrollMagic.Scene({triggerElement: "#slider", offset:-300})
+      offset = 0
+    }
+    var controllerX = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: 0}});
+    var logoScene = new ScrollMagic.Scene({triggerElement: "body", offset: offset})
             .setClassToggle("nav", "navScroll")
-            .addTo(controller);
-      }
+            .addTo(controllerX);
   }
 
    discountSymbol(){
@@ -57,12 +54,28 @@ class Nav extends Component {
 
   handleNavClick(booth){
     this.props.goToTab(booth);
-    setTimeout(function(){
+    var timeout = setTimeout(function(){
       controller.scrollTo("#products");
       if (window.history && window.history.pushState) {
           history.pushState("", document.title, '#products');
       }
     }, 1500);
+    //Firefox
+      $('body').bind('DOMMouseScroll', function(e){
+      if(e.detail > 0) {
+          clearTimeout(timeout)
+      } else {
+          clearTimeout(timeout)
+      }
+      });
+   //IE, Opera, Safari
+      $('body').bind('mousewheel', function(e){
+      if(e.wheelDelta< 0) {
+          clearTimeout(timeout)
+      }else {
+          clearTimeout(timeout)
+      }
+    });
   }
 
   render (){

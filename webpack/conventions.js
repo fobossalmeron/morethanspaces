@@ -9,7 +9,7 @@ class Conventions extends Component {
   render() {
     return (
       <div>
-        <Nav relativePath="../../"/>
+        <Nav relativePath="../../" barNav/>
         <ConventionsStatic/>
         <Footer hideIconsBar={true} relativePath="../../"/>
       </div>

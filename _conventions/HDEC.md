@@ -1,0 +1,7 @@
+---
+layout: convention
+title: HDEC 2017
+convention_date: May 3-5, 2017
+location: Mandala Bay, Las Vegas, NV
+logo: HDEC.svg
+---

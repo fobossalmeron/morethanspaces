@@ -32,19 +32,19 @@ class Footer extends Component {
           <li>
             <h3>follow</h3>
             <ul className="social-list">
-               <a href={"https://facebook.com/morethanspaces/"}>
+               <a href={"https://www.linkedin.com/company/18025907/"}>
                 <LinkedInIcon/>
                </a>
-               <a href={"https://facebook.com/morethanspaces/"}>
+               <a href={"https://www.facebook.com/More-Than-Spaces-1281319868629992/"}>
                  <FacebookIcon/>
                </a>
-               <a href={"https://facebook.com/morethanspaces/"}>
+               <a href={"https://www.instagram.com/more.than.spaces/"}>
                  <InstagramIcon/>
                </a>
-               <a href={"https://facebook.com/morethanspaces/"}>
+               <a href={"https://www.youtube.com/channel/UCvUDqkdD4nxI-lWWShdxd_A"}>
                  <YouTubeIcon/>
                </a>
-               <a href={"https://facebook.com/morethanspaces/"}>
+               <a href={"https://twitter.com/M0RETHANSPACES"}>
                  <TwitterIcon/>
                </a>
                <a href={"https://facebook.com/morethanspaces/"}>
@@ -62,10 +62,9 @@ class Footer extends Component {
               <h3>resources</h3>
               <a href={baseUrl + "resources/booth_types/"} target="_blank">booth types</a>
               <a href={baseUrl + "resources/timeline_and_graphic_specs/"} target="_blank">timeline &<br/>graphic specs</a>
-              <a href={baseUrl + "resources/sample/"} target="_blank">video walls</a>
               <a href={baseUrl + "resources/how_to_upload/"} target="_blank">how to upload</a>
               <a href={baseUrl + "resources/our_furniture/"} target="_blank">our furniture</a>
-              <a href={baseUrl + "resources/sample/"} target="_blank">industry clients</a>
+              <a href={baseUrl + "resources/industry_clients/"} target="_blank">industry clients</a>
             </li>
             <li className="realestate">
               <h3>contact</h3>

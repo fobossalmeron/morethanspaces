@@ -19,7 +19,8 @@ nav{
     &:nth-of-type(2){
       margin-left:0;
       -webkit-filter: brightness(20);
-      filter: brightness(20);
+        filter:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='bright20'><feComponentTransfer><feFuncR type='linear' slope='20'/><feFuncG type='linear' slope='20' /><feFuncB type='linear' slope='20' /></feComponentTransfer></filter></svg>#bright20");
+        filter: brightness(20);
     }
   }
   ul{
@@ -110,7 +111,8 @@ nav{
   }
   img:nth-of-type(2){
     -webkit-filter: brightness(1);
-    filter: brightness(1);
+      filter:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='bright1'><feComponentTransfer><feFuncR type='linear' slope='1'/><feFuncG type='linear' slope='1' /><feFuncB type='linear' slope='1' /></feComponentTransfer></filter></svg>#bright1");
+      filter: brightness(1);
   }
   ul{
     margin-top:12px;
@@ -280,7 +282,10 @@ footer{
   height: 90px;
   bottom: 20px;
   right: 25px;
-  background-size: cover;
+  -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
   cursor: pointer;
   transition: .4s ease;
   transform-origin: center bottom;
@@ -384,6 +389,10 @@ section{
     width: 100%;
     margin: 0 auto;
     min-height: 200px;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    -ms-background-size: contain;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
@@ -507,6 +516,7 @@ section{
   }
   button{
     background-color: $yellow;
+    max-width: 200px;
     color:$black;
     font-weight: $bold-font-weight;
     border-radius: 2px;
@@ -536,7 +546,7 @@ section{
       transition: .4s ease all;
       fill: $black;
     }
-      &:hover, &:focus{
+      &:hover{
         cursor:pointer;
         background-color:transparent;
         color:$yellow;
@@ -551,13 +561,12 @@ section{
 
 .overVideo{
   position: absolute;
-  margin: 10% 4%;
   z-index: 2;
   margin: 130px 5% 0 5%;
 }
 
 .controllsVideo{
-  bottom: 0;
+  bottom: 4%;
   button{
     float: left !important;
     clear: none !important;
@@ -1787,7 +1796,14 @@ iframe{
   border-radius: 2px;
   float: left;
   font-size: 2em;
+  filter: blur(12px); /* Someday, sigh ... */
+  -webkit-filter: blur(12px); /* Prefixed CSS3 blur filters */
+  -moz-filter: blur(12px);
+  -o-filter: blur(12px);
+  -ms-filter: blur(12px);
+  filter:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="blur"><feGaussianBlur stdDeviation="12"/></filter></svg>#blur'); /* Firefox needs SVG */
   filter: blur(12px);
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
   transition: .4s ease all;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -1829,7 +1845,13 @@ iframe{
 }
 
 .revealQuote{
-  filter: blur(0px);
+  filter: blur(0px); /* Someday, sigh ... */
+	-webkit-filter: blur(0px); /* Prefixed CSS3 blur filters */
+	-moz-filter: blur(0px);
+	-o-filter: blur(0px);
+	-ms-filter: blur(0px);
+	filter: none; /* Firefox needs SVG */
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
 }
 
 .smallPrint{
@@ -1909,7 +1931,8 @@ iframe{
       position: relative;
       &:nth-of-type(2){
         -webkit-filter: brightness(20);
-        filter: brightness(20);
+          filter:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='bright20'><feComponentTransfer><feFuncR type='linear' slope='20'/><feFuncG type='linear' slope='20' /><feFuncB type='linear' slope='20' /></feComponentTransfer></filter></svg>#bright20");
+          filter: brightness(20);
       }
     }
     button{
@@ -2073,7 +2096,8 @@ iframe{
   clear:none;*/
 }
 .whatDifference{
-  background-color:$white;
+  background-color:$black;
+  color: $white;
   overflow:scroll;
   padding:0;
   font-size:0.8em;
@@ -2085,8 +2109,18 @@ iframe{
       float: left;
       padding: 1% 2% 1% 4%;
       margin-bottom: 2%;
-      width:100%;
       clear: both;
+      min-width: 310px;
+    }
+    ul{
+      margin: 0 2% 3% 3%;
+      float: left;
+      clear: both;
+      list-style: none;
+      width:100%;
+    }
+    p{
+      width:100%;
     }
     h2{
       background-color: $magenta;
@@ -2197,7 +2231,8 @@ background-color:$white;
 .noBackground{
   img{
     -webkit-filter: brightness(1) !important;
-    filter: brightness(1) !important;
+      filter:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='bright1'><feComponentTransfer><feFuncR type='linear' slope='1'/><feFuncG type='linear' slope='1' /><feFuncB type='linear' slope='1' /></feComponentTransfer></filter></svg>#bright1") !important;
+      filter: brightness(1) !important;
   }
   color:$black;
   background-color: $white;

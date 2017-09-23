@@ -9,10 +9,10 @@ import VideoWallIcon from 'svg-react-loader?name=VideoWallIcon!../../../assets/i
 
 class ServicesBar extends Component {
   componentDidMount(){
-    var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: .5}});
+    var controllerServices = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: .5}});
     var service7 = new ScrollMagic.Scene({triggerElement: "#servicesBar", offset:-150})
             .setClassToggle( "#servicesBar", "revealIcon")
-            .addTo(controller);
+            .addTo(controllerServices);
   }
 
   render (){

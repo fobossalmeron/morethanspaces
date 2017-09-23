@@ -60,8 +60,8 @@ class InstaQuote extends Component {
           price = (price - this.props.discountNumber)
         } else if (this.props.discountType === "percentage"){
             price = (1 - (this.props.discountNumber / 100)) * price
-            if ((somePrice - price) > 5000) {
-              price = somePrice - 5000
+            if ((somePrice - price) > 6000) {
+              price = somePrice - 6000
             }
         }
       }
@@ -183,6 +183,7 @@ class InstaQuote extends Component {
                                         email={this.props.email}
                                         phone={this.props.phone}
                                         weHaveUser={this.props.weHaveUser}/>
+
       </div>
     );
   }

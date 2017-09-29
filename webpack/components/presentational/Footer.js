@@ -32,22 +32,22 @@ class Footer extends Component {
           <li>
             <h3>follow</h3>
             <ul className="social-list">
-               <a href={"https://www.linkedin.com/company/18025907/"}>
+               <a href={"https://www.linkedin.com/company/18025907/"} target="_blank">
                 <LinkedInIcon/>
                </a>
-               <a href={"https://www.facebook.com/More-Than-Spaces-1281319868629992/"}>
+               <a href={"https://www.facebook.com/More-Than-Spaces-1281319868629992/"}target="_blank">
                  <FacebookIcon/>
                </a>
-               <a href={"https://www.instagram.com/more.than.spaces/"}>
+               <a href={"https://www.instagram.com/more.than.spaces/"} target="_blank">
                  <InstagramIcon/>
                </a>
-               <a href={"https://www.youtube.com/channel/UCvUDqkdD4nxI-lWWShdxd_A"}>
+               <a href={"https://www.youtube.com/channel/UCvUDqkdD4nxI-lWWShdxd_A"} target="_blank">
                  <YouTubeIcon/>
                </a>
-               <a href={"https://twitter.com/M0RETHANSPACES"}>
+               <a href={"https://twitter.com/M0RETHANSPACES"} target="_blank">
                  <TwitterIcon/>
                </a>
-               <a href={"https://facebook.com/morethanspaces/"}>
+               <a href={"https://facebook.com/morethanspaces/"} target="_blank">
                  <GooglePlusIcon/>
                </a>
              </ul>

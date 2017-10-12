@@ -91,15 +91,22 @@ class SingleItem extends Component {
       this.props.no3D? '' : <img className="thumbnailBooth" onClick={() => this.handleView("3D")} src="assets/img/layout/3dTrigger.svg"/>
     )
 
+    var imageMenu = (
+      this.props.type == "custom"?
+      null
+      :
+      <Slider className={"heightSlider"} {...settings}>
+          {trigger3D}
+          {numberOfImages}
+      </Slider>
+    )
+
     var imageOptions = (
       <div className="singleImage">
           <div className="visualizer" id="visualizer" style={backgroundStyle}>
             { choice3D }
           </div>
-          <Slider className={"heightSlider"} {...settings}>
-              {trigger3D}
-              {numberOfImages}
-          </Slider>
+          {imageMenu}
       </div>
     );
     var boothButton = (
@@ -112,7 +119,7 @@ class SingleItem extends Component {
     var videoWallButton = (
       <button onClick={() => this.nextStepVideoWallInstaQuote()} className="instaQuoteButton">get instant base quote</button>
     )
-    
+
     var buttonChoice = this.props.instaQuoteVideoWall? videoWallButton : boothButton;
     var description = <DangerouslySet description={this.props.description}/>
 

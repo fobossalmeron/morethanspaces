@@ -411,6 +411,9 @@
 }
 
 @include media-query($x600-down) {
+  #downloadButton{
+    animation-name: bounce;
+  }
   .whatDifference{
     font-size:0.7em;
   }

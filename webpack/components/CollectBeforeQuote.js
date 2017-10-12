@@ -106,7 +106,6 @@ class CollectBeforeQuote extends Component {
         defaultValues={{
             model: redacted,
             convention: convention,
-            addons: addons,
             price: price,
             name: name,
             email: email,

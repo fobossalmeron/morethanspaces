@@ -88,10 +88,12 @@ class BoothForm extends Component {
     )
     var backToBooths = (
       <div className="goBackContainer">
-        <div className="leaveOrStay">
-          <ArrowBackIcon/>
-          <a onClick={() => this.resetQuoteCloseBooth()}><b>back</b> to booths</a>
-        </div>
+        <a onClick={() => this.resetQuoteCloseBooth()}>
+          <div className="leaveOrStay">
+            <ArrowBackIcon/>
+            <b>back</b> to booths
+          </div>
+        </a>
         <label>rent or own?</label>
           <CheckBox onClick={this.handleRent} inputType="radio" nameFor="rentOrOwn" defaultChecked={!this.props.wantToOwn} checkFor="rent"/>
           <CheckBox onClick={this.handleOwn} inputType="radio" nameFor="rentOrOwn" defaultChecked={this.props.wantToOwn} checkFor="own"/>
@@ -104,12 +106,6 @@ class BoothForm extends Component {
             <input type="radio" id="other" onClick={this.doShip} name={"inVegas"} defaultChecked={!this.props.eventInVegas} />
             <label className="noMargin" htmlFor="other">other</label>
           </div>
-        <label>stand out even more</label>
-          <div className="quoteCheck">
-            <input type="checkbox" id="add Tv(s)" onClick={this.setTv} defaultChecked={this.props.addTv} />
-            <label className="noMargin" htmlFor={"add Tv(s)"}>add Tv(s)</label>
-          </div>
-          <CheckBox onClick={this.setVideoWall} defaultChecked={this.props.addVideoWall} inputType="checkbox" nameFor="else" checkFor="add videowall"/>
           <MagentaSuggest/>
           <BlueSuggest/>
       </div>

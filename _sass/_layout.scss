@@ -1216,12 +1216,14 @@ input[type=text]{
 .leaveOrStay{
   float: left;
   background-color: $magenta;
+  color: #f9f9f9;
+  font-size: .9em;
   border-radius:2px;
   margin-top: 10%;
   padding: 5%;
   width: 100%;
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.2;
   margin-bottom: 10px;
   transition: .4s ease all;
   cursor:pointer;
@@ -1374,11 +1376,9 @@ input[type=text]{
   float: left;
   position: relative;
   width: 100%;
-
   .next-arrow{
     right:0;
   }
-
   .insertPadding label::after{
     padding: 4px 10px;
   }
@@ -1404,26 +1404,23 @@ input[type=text]{
       }
     }
   }
-
   h3{
     float:left;
     width:100%;
-    margin-bottom:0;
+    line-height: 1;
+    margin-bottom: 10px;
   }
-
   span{
     font-size:0.7em;
     font-style: italic;
     cursor:pointer;
   }
-
   p{
     width:100%;
     float:left;
     font-size:0.8em;
   }
 }
-
 
 .example-enter {
   opacity: 0.01;

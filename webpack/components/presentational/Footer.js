@@ -85,8 +85,7 @@ class Footer extends Component {
 
       </footer>
       {iconsBar}
-          <p className="colophon">© <b>morethanspaces</b> 2017, all rights reserved.<br/>
-          website developed by <b><a href="http://rodrigosalmeron.mx/">rodrigo salmeron</a></b>
+          <p className="colophon">© <b>morethanspaces</b> 2017, All rights reserved.<br/>
           </p>
       </div>
     );

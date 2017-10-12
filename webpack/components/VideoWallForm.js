@@ -59,10 +59,12 @@ class VideoWallForm extends Component {
     )
     var backToVideoWalls = (
       <div className="goBackContainer">
-        <div className="leaveOrStay">
-          <ArrowBackIcon/>
-          <a onClick={() => this.resetQuoteCloseVideoWall()}><b>back</b> to videowalls</a>
-        </div>
+        <a onClick={() => this.resetQuoteCloseVideoWall()}>
+          <div className="leaveOrStay">
+            <ArrowBackIcon/>
+            <b>back</b> to videowalls
+          </div>
+        </a>
         <label>event location</label>
           <div className="quoteCheck">
             <input type="radio" id="Las Vegas" onClick={this.doNotShip} name={"inVegas"} defaultChecked={this.props.eventInVegas} />

@@ -156,8 +156,6 @@ class InstaQuote extends Component {
           <li>type: {this.props.type}</li>
           {ifExistsOwnableMessage}
           <li>This event is <b>{renderInVegas}</b> Las Vegas </li>
-          {renderTv}
-          {renderVideoWall}
         </ul>
       </div>
       <div className="instaInfo">

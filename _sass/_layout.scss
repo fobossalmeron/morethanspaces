@@ -400,6 +400,7 @@ section{
 
 #discountsSlider{
   background-color:black;
+  overflow: hidden;
   padding: 2% 5% 0% 5%;
   .slick-list{
     height: 150px;
@@ -465,6 +466,7 @@ section{
   background-color: $blue;
   float:left;
   width:100%;
+  overflow: hidden;
   min-height: 0;
   padding: 1.5% 5%;
   .sliderCard{
@@ -1273,7 +1275,7 @@ input[type=text]{
   background-size: cover;
   background-position: center;
   position: relative;
-  min-height: 120px;
+  min-height: 210px;
   cursor: pointer;
   float: left;
   margin: 0 1% 5% 0%;

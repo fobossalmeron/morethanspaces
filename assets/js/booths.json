@@ -6,9 +6,10 @@
       "type": "Island",
       "width": "20",
       "length": "20",
-      "description": "Eye-catching stand with elegant and dramatic “floor-to-ceiling” illuminated tradeshow booth with <b>all that you need</b>: Inviting bar, 2 separate meeting spaces and storage.</br>Includes:<ul><li>All Hardware as shown</li><li>New Graphics with your artwork Lights</li><li>Counter</li><li>Furniture* (as per availability)</li><li>Friendly Expert Project Management</ul>Rent excludes flooring *Own excludes furniture, flooring & monitors",
+      "description": "Eye-catching stand with elegant and dramatic “floor-to-ceiling” illuminated tradeshow booth with <b>all that you need</b>: Inviting bar, 2 separate meeting spaces and storage.</br></br>Includes:<ul><li>All Hardware as shown</li><li>New Graphics with your artwork Lights</li><li>Counter</li><li>Furniture* (as per availability)</li><li>Friendly Expert Project Management</li></ul></br>Rent excludes flooring</br>*Own excludes furniture, flooring & monitors",
       "rent": 56990,
       "own": 123900,
+      "obj": "437387a8e54b4100a46e4b52fb511cf0",
       "images": [
         {"url": "assets/img/booths/IS2020-01/1.jpg"},
         {"url": "assets/img/booths/IS2020-01/2.jpg"},
@@ -16,8 +17,26 @@
         {"url": "assets/img/booths/IS2020-01/4.jpg"},
         {"url": "assets/img/booths/IS2020-01/5.jpg"},
         {"url": "assets/img/booths/IS2020-01/6.jpg"}
-      ],
-      "obj": "437387a8e54b4100a46e4b52fb511cf0"
+      ]
+    },
+    {
+      "featured": true,
+      "id": "IS2020-02 ST VW",
+      "type": "Island",
+      "width": "20",
+      "length": "20",
+      "description": "Asymmetrically styled for perfection. Large arch resting on a mega LED video wall that will outshine your competitors. Integrated storage space and smart curved sign has lots of space to promote your brand message.</br></br>Includes:<ul><li>All Hardware as shown</li><li>New Graphics with your artwork</li><li>Lights</li><li>Counter</li><li>Furniture* (as per availability)</li><li>Friendly Expert Project Management</li><li>Video wall is not included</li></ul></br>Rent excludes flooring</br>*Own excludes furniture, flooring & monitors",
+      "rent": 41990,
+      "own": 83900,
+      "obj": "506fa270b24e440eb8010803d918fc48",
+      "images": [
+        {"url": "assets/img/booths/IS2020-02-ST-VW/1.jpg"},
+        {"url": "assets/img/booths/IS2020-02-ST-VW/2.jpg"},
+        {"url": "assets/img/booths/IS2020-02-ST-VW/3.jpg"},
+        {"url": "assets/img/booths/IS2020-02-ST-VW/4.jpg"},
+        {"url": "assets/img/booths/IS2020-02-ST-VW/5.jpg"},
+        {"url": "assets/img/booths/IS2020-02-ST-VW/6.jpg"}
+      ]
     },
     {
       "featured": true,
@@ -25,7 +44,7 @@
       "type": "Island",
       "width": "20",
       "length": "20",
-      "description": "Attention, attention. This booth is bound to grab the attention of your audience. Part of our Exclusive Collection this booth has 6 monitors. The signature archers create a unique lounge and showroom environment.</br>Includes:<ul><li>All Hardware as shown</li><li>New Graphics with your artwork</li><li>Lights</li><li>Counter</li><li>Furniture* (as per availability)</li><li>Friendly Expert Project Management</li></ul>Rent excludes flooring *Own excludes furniture, flooring & monitors",
+      "description": "Attention, attention. This booth is bound to grab the attention of your audience. Part of our Exclusive Collection this booth has 6 monitors. The signature archers create a unique lounge and showroom environment.</br></br>Includes:<ul><li>All Hardware as shown</li><li>New Graphics with your artwork</li><li>Lights</li><li>Counter</li><li>Furniture* (as per availability)</li><li>Friendly Expert Project Management</li></ul></br>Rent excludes flooring</br>*Own excludes furniture, flooring & monitors",
       "rent": 60990,
       "own": 133900,
       "images": [
@@ -44,7 +63,7 @@
       "type": "Island",
       "width": "20",
       "length": "20",
-      "description": "Stunning showroom space! Guaranteed to stand out at any show. Versatile with all needs included: Large signage, visibility, storage, bar/reception and product podiums. Part of our Exclusive Collection.</br>Includes:<ul><li>All Hardware as shown</li><li>New Graphics with your artwork</li><li>Lights</li><li>Counter</li><li>Furniture* (as per availability)</li><li>Friendly Expert Project Management</li></ul>Rent excludes flooring *Own excludes furniture, flooring & monitors",
+      "description": "Stunning showroom space! Guaranteed to stand out at any show. Versatile with all needs included: Large signage, visibility, storage, bar/reception and product podiums. Part of our Exclusive Collection.</br></br>Includes:<ul><li>All Hardware as shown</li><li>New Graphics with your artwork</li><li>Lights</li><li>Counter</li><li>Furniture* (as per availability)</li><li>Friendly Expert Project Management</li><li>Video wall is not included</li></ul></br>Rent excludes flooring</br>*Own excludes furniture, flooring & monitors",
       "rent": 65990,
       "own": 147900,
       "images": [
@@ -63,9 +82,10 @@
       "type": "Island",
       "width": "20",
       "length": "20",
-      "description": "Stunning showroom space! Guaranteed to stand out at any show. Versatile with all needs included: Large signage, visibility, storage, bar/reception and product podiums. Part of our Exclusive Collection.</br>Includes:<ul><li>All Hardware as shown</li><li>New Graphics with your artwork</li><li>Lights</li><li>Counter</li><li>Furniture* (as per availability)</li><li>Friendly Expert Project Management</li></ul> Rent excludes flooring *Own excludes furniture, flooring & monitors",
+      "description": "Stunning showroom space! Guaranteed to stand out at any show. Versatile with all needs included: Large signage, visibility, storage, bar/reception and product podiums. Part of our Exclusive Collection.</br></br>Includes:<ul><li>All Hardware as shown</li><li>New Graphics with your artwork</li><li>Lights</li><li>Counter</li><li>Furniture* (as per availability)</li><li>Friendly Expert Project Management</li><li>Video wall is not included</li></ul></br>Rent excludes flooring</br>*Own excludes furniture, flooring & monitors",
       "rent": 67990,
       "own": 151900,
+      "obj": "0e55f4a012504107a59f614e7242b2d5",
       "images": [
         {"url": "assets/img/booths/IS2020-03-V2-ST-VW/1.jpg"},
         {"url": "assets/img/booths/IS2020-03-V2-ST-VW/2.jpg"},
@@ -73,8 +93,159 @@
         {"url": "assets/img/booths/IS2020-03-V2-ST-VW/4.jpg"},
         {"url": "assets/img/booths/IS2020-03-V2-ST-VW/5.jpg"},
         {"url": "assets/img/booths/IS2020-03-V2-ST-VW/6.jpg"}
-      ],
-      "obj": "0e55f4a012504107a59f614e7242b2d5"
+      ]
+    },
+    {
+      "featured": true,
+      "id": "IS2030-03 V2",
+      "type": "Island",
+      "width": "20",
+      "length": "30",
+      "description": "???",
+      "rent": 1,
+      "own": 1,
+      "obj": "5497b3d2fd5c40bc864cc993e55b7853",
+      "images": [
+        {"url": "assets/img/booths/IS2030-03-V2/1.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V2/2.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V2/3.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V2/4.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V2/5.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V2/6.jpg"}
+      ]
+    },
+    {
+      "featured": true,
+      "id": "IS2030-03 V1",
+      "type": "Island",
+      "width": "20",
+      "length": "30",
+      "description": "Stunning booth! Part of the MTS Exclusive Collection. Signature arches makes this booth totally stand out. The unique space and experience has both reception and lounge area.</br></br>Includes:<ul><li>All Hardware as shown</li><li>New Graphics with your artwork</li><li>Lights</li><li>Counter</li><li>Furniture* (as per availability)</li><li>Friendly Expert Project Management</li></ul></br>Rent excludes flooring</br>*Own excludes furniture, flooring & monitors",
+      "rent": 1,
+      "own": 1,
+      "obj": "8091b98025804273ad34bd56377539d2",
+      "images": [
+        {"url": "assets/img/booths/IS2030-03-V1/1.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V1/2.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V1/3.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V1/4.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V1/5.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V1/6.jpg"}
+      ]
+    },
+    {
+      "featured": true,
+      "id": "IS2030-03 V3",
+      "type": "Island",
+      "width": "20",
+      "length": "20",
+      "description":"An absolute SHOWSTOPPER! A part of our Exclusive Collection this stand with 3 stunning arches, storage space and circular LED screen will grab the entire show’s attention.</br></br>Includes:<ul><li>All Hardware as shown</li><li>New Graphics with your artwork</li><li>Lights</li><li>Counter</li><li>Furniture* (as per availability)</li><li>Friendly Expert Project Management</li></ul></br>Rent excludes flooring</br>*Own excludes furniture, flooring & monitors",
+      "rent": 1,
+      "own": 1,
+      "obj": "3dd9d3fdac064fb79020d4d2d2e4c0a4",
+      "images": [
+        {"url": "assets/img/booths/IS2030-03-V3/1.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V3/2.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V3/3.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V3/4.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V3/5.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V3/6.jpg"}
+      ]
+    },
+    {
+      "featured": true,
+      "id": "IS2030-03 V1 ST",
+      "type": "Island",
+      "width": "20",
+      "length": "30",
+      "description":"????",
+      "rent": 1,
+      "own": 1,
+      "obj": "cc16f9b315194349aea9dc1f7d754f3b",
+      "images": [
+        {"url": "assets/img/booths/IS2030-03-V1-ST/1.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V1-ST/2.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V1-ST/3.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V1-ST/4.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V1-ST/5.jpg"},
+        {"url": "assets/img/booths/IS2030-03-V1-ST/6.jpg"}
+      ]
+    },
+    {
+      "featured": false,
+      "id": "IS2020-04 V1 ST",
+      "type": "Island",
+      "width": "20",
+      "length": "30",
+      "description":"????",
+      "rent": 1,
+      "own": 1,
+      "obj": "??",
+      "images": [
+        {"url": "assets/img/booths/IS2020-04-V1-ST/1.jpg"},
+        {"url": "assets/img/booths/IS2030-04-V1-ST/2.jpg"},
+        {"url": "assets/img/booths/IS2030-04-V1-ST/3.jpg"},
+        {"url": "assets/img/booths/IS2030-04-V1-ST/4.jpg"},
+        {"url": "assets/img/booths/IS2030-04-V1-ST/5.jpg"},
+        {"url": "assets/img/booths/IS2030-04-V1-ST/6.jpg"}
+      ]
+    },
+    {
+      "featured": false,
+      "id": "IS2020-04 V2",
+      "type": "Island",
+      "width": "20",
+      "length": "30",
+      "description":"????",
+      "rent": 1,
+      "own": 1,
+      "obj": "??",
+      "images": [
+        {"url": "assets/img/booths/IS2020-04-V2/1.jpg"},
+        {"url": "assets/img/booths/IS2030-04-V2/2.jpg"},
+        {"url": "assets/img/booths/IS2030-04-V2/3.jpg"},
+        {"url": "assets/img/booths/IS2030-04-V2/4.jpg"},
+        {"url": "assets/img/booths/IS2030-04-V2/5.jpg"},
+        {"url": "assets/img/booths/IS2030-04-V2/6.jpg"}
+      ]
+    },
+    {
+      "featured": true,
+      "id": "IS1010-04",
+      "type": "Island",
+      "width": "10",
+      "length": "10",
+      "description":"Inviting and private at the same time. Monitors attract clients and showroom area invite to good meetings. Lots of display area makes this booth stand out even though it's not the biggest.</br></br>Includes:<ul><li>All Hardware as shown</li><li>New Graphics with your artwork</li><li>Lights</li><li>Counter</li><li>Furniture* (as per availability)</li><li>Friendly Expert Project Management</li></ul></br>Rent excludes flooring</br>*Own excludes furniture, flooring & monitors",
+      "rent": 39990,
+      "own": 78900,
+      "obj": "20d0dfb56e4640f88a313899327b1c2c",
+      "images": [
+        {"url": "assets/img/booths/IS1010-04/1.jpg"},
+        {"url": "assets/img/booths/IS1010-04/1.jpg"},
+        {"url": "assets/img/booths/IS1010-04/1.jpg"},
+        {"url": "assets/img/booths/IS1010-04/1.jpg"},
+        {"url": "assets/img/booths/IS1010-04/1.jpg"},
+        {"url": "assets/img/booths/IS1010-04/1.jpg"}
+      ]
+    },
+    {
+      "featured": true,
+      "id": "IS2020-05",
+      "type": "Island",
+      "width": "20",
+      "length": "20",
+      "description":"Professional asymmetric booth This booth invites to conversation with its open and cool look. Big display space and monitors grab attention from every angle and top to bottom.</br></br>Includes:<ul><li>All Hardware as shown</li><li>New Graphics with your artwork</li><li>Lights</li><li>Counter</li><li>Furniture* (as per availability)</li><li>Friendly Expert Project Management</li></ul><br>Rent excludes flooring<br>*Own excludes furniture, flooring & monitors",
+      "rent": 35990,
+      "own": 68900,
+      "obj": "d687fa7b7ce3463d9fa00865eaf93f00",
+      "images": [
+        {"url": "assets/img/booths/IS2020-05/1.jpg"},
+        {"url": "assets/img/booths/IS2020-05/2.jpg"},
+        {"url": "assets/img/booths/IS2020-05/3.jpg"},
+        {"url": "assets/img/booths/IS2020-05/4.jpg"},
+        {"url": "assets/img/booths/IS2020-05/5.jpg"},
+        {"url": "assets/img/booths/IS2020-05/6.jpg"}
+      ]
     },
     {
       "featured": true,
@@ -82,7 +253,7 @@
       "type": "Island",
       "width": "10",
       "length": "20",
-      "description": "Small footprint with a BIG impact! Attract attention from a 360 degree view. This booth has it all; floating design, monitors, storage podiums and lots of signage space to make your message shine at any event. </br>Includes:<ul><li>All Hardware as shown</li><li>New Graphics with your artwork</li><li>Lights</li><li>Counter</li><li>Furniture* (as per availability)</li><li>Friendly Expert Project Management</li></ul>Rent excludes flooring *Own excludes furniture, flooring & monitors",
+      "description": "Small footprint with a BIG impact! Attract attention from a 360 degree view. This booth has it all; floating design, monitors, storage podiums and lots of signage space to make your message shine at any event.</br></br>Includes:<ul><li>All Hardware as shown</li><li>New Graphics with your artwork</li><li>Lights</li><li>Counter</li><li>Furniture* (as per availability)</li><li>Friendly Expert Project Management</li></ul></br>Rent excludes flooring</br>*Own excludes furniture, flooring & monitors",
       "rent": 36990,
       "own": 72900,
       "images": [

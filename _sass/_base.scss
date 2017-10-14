@@ -35,6 +35,8 @@ body {
     -webkit-text-size-adjust: 100%;
     background-color: $white;
     position: relative;
+    overflow-x: hidden !important;
+    width:100%;
 }
 
 

@@ -1342,8 +1342,13 @@ input[type=text]{
     background-color: $magenta;
 }
 
-.boothPeninsula label::after{
-    content: 'peninsula';
+.boothCustom label::after{
+    content: 'custom';
+    color: $white;
+    background-color: $black;
+}
+.boothPerimeter label::after{
+    content: 'perimeter';
     background-color: coral;
 }
 

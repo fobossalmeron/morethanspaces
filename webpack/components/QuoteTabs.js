@@ -15,7 +15,7 @@ class QuoteTabs extends Component {
       selectedIsland: true,
       selectedSplitIsland: true,
       selectedInline: true,
-      selectedPeninsula: true,
+      selectedPerimeter: true,
       selectedTv: true,
       selectedLed: true,
       selectedLcd: true,
@@ -27,7 +27,7 @@ class QuoteTabs extends Component {
       individualVideoWallRender: false,
       renderBoothInstaQuote: false,
       renderVideoWallInstaQuote: false,
-      revealInstaQuote: false,
+      revealInstaQuote: true,
       renderCollectors: true,
       weHaveUser: false,
       name: '',
@@ -119,8 +119,8 @@ class QuoteTabs extends Component {
       case "SplitIsland":
         this.setState({selectedSplitIsland: !this.state.selectedSplitIsland})
         break
-      case "Peninsula":
-        this.setState({selectedPeninsula: !this.state.selectedPeninsula})
+      case "Perimeter":
+        this.setState({selectedPerimeter: !this.state.selectedPerimeter})
         break
       case "Inline":
         this.setState({selectedInline: !this.state.selectedInline})
@@ -200,7 +200,7 @@ class QuoteTabs extends Component {
                          seeState={this.seeState.bind(this)}
                          selectedIsland={this.state.selectedIsland}
                          selectedSplitIsland={this.state.selectedSplitIsland}
-                         selectedPeninsula={this.state.selectedPeninsula}
+                         selectedPerimeter={this.state.selectedPerimeter}
                          selectedInline={this.state.selectedInline}
                          boothSizeWidth={this.state.boothSizeWidth}
                          boothSizeLength={this.state.boothSizeLength}
@@ -209,7 +209,7 @@ class QuoteTabs extends Component {
           <BoothGrid    dataToLoad={"./assets/js/booths.json"}
                         selectedIsland={this.state.selectedIsland}
                         selectedSplitIsland={this.state.selectedSplitIsland}
-                        selectedPeninsula={this.state.selectedPeninsula}
+                        selectedPerimeter={this.state.selectedPerimeter}
                         selectedInline={this.state.selectedInline}
                         boothSizeWidth={this.state.boothSizeWidth}
                         boothSizeLength={this.state.boothSizeLength}

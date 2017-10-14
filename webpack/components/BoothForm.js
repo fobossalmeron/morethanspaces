@@ -80,7 +80,7 @@ class BoothForm extends Component {
         <label>booth type</label>
           <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="Island" checkFor="island" defaultChecked={this.props.selectedIsland}/>
           <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="SplitIsland" checkFor="split island" defaultChecked={this.props.selectedSplitIsland} doubleLine="doubleLine"/>
-          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="Peninsula" defaultChecked={this.props.selectedPeninsula} checkFor="peninsula"/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="Perimeter" defaultChecked={this.props.selectedPerimeter} checkFor="perimeter"/>
           <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" noMarginRight nameFor="Inline" defaultChecked={this.props.selectedInline} checkFor="inline"/>
         <MagentaSuggest/>
         <BlueSuggest/>

@@ -63,7 +63,7 @@ class BoothGrid extends Component {
     else if (booth === "SplitIsland" && !this.props.selectedSplitIsland) {
         return false;
     }
-    else if (booth === "Peninsula" && !this.props.selectedPeninsula) {
+    else if (booth === "Perimeter" && !this.props.selectedPerimeter) {
         return false;
     }
     else if (booth === "Inline" && !this.props.selectedInline) {

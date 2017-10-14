@@ -90,11 +90,8 @@ class VideoWallForm extends Component {
            onRequestClose={this.handleCloseModal}
            contentLabel="What's the difference?">
                <h2 className="h2Magenta">LCD video wall</h2>
-               <p><b>LCD</b> (Liquid Crystal Display) <b>video wall</b> is a <b>special multi-monitor setup</b> that
-               consists of multiple television monitors tiled together contiguously or overlapped in order to form one
-               large screen.<br/>
-               <b>At More Than Spaces we have the thinnest bezel</b> in order to minimize the gap between active display
-               areas.  </p>
+               <p><b>LCD</b> (Liquid Crystal Display) <b>video wall</b> is a <b>special multi-monitor setup</b> that consists of multiple television monitors tiled together contiguously or overlapped in order to form one large screen.<br/>
+               <b>At More Than Spaces we have the thinnest bezel</b> in order to minimize the gap between active display areas. </p>
                <p className="spanMagenta">
                <b>LCD video walls are great for:</b>
                <ul>
@@ -108,10 +105,7 @@ class VideoWallForm extends Component {
                </p>
 
                <h2 className="h2Blue">LED video wall</h2>
-               <p><b>LED</b> (Light Emitting Diode) <b>video walls</b> are <b>modules seamlessly tiled together to customized
-               sizes.</b><br/>
-               MoreThanSpaces use the highest quality LED products as well as the best pitches - all the way down to 2.5
-               millimeter; one of the best resolutions on the rental market.</p>
+               <p><b>LED</b> (Light Emitting Diode) <b>video walls</b> are <b>modules seamlessly tiled together to customized sizes.</b><br/>MoreThanSpaces use the highest quality LED products as well as the best pitches - all the way down to 2.5 millimeter; one of the best resolutions on the rental market.</p>
               <p className="spanMagenta spanBlue">
               <b>LED video walls are great for:</b>
               <ul>
@@ -125,8 +119,7 @@ class VideoWallForm extends Component {
               </p>
 
                <h2 className="h2Yellow">HD & 4K Monitors</h2>
-               <p><b>HD</b> (High-Definition) & <b>4K</b> (Ultra High-Definition) <b>Monitors or TV’s</b> from the most
-               well-known brands gives super sharp images - and all displays have build-in sound.</p>
+               <p><b>HD</b> (High-Definition) & <b>4K</b> (Ultra High-Definition) <b>Monitors or TV’s</b> from the most well-known brands gives super sharp images - and all displays have build-in sound.</p>
                <p className="spanMagenta spanYellow">
                <b>HD & 4K Monitors are great for:</b>
                <ul>

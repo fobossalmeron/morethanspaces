@@ -78,10 +78,11 @@ class BoothForm extends Component {
           <option value="50">50ft</option>
         </select>
         <label>booth type</label>
-          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="Island" checkFor="island" defaultChecked={this.props.selectedIsland}/>
-          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="SplitIsland" checkFor="split island" defaultChecked={this.props.selectedSplitIsland} doubleLine="doubleLine"/>
-          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="Perimeter" defaultChecked={this.props.selectedPerimeter} checkFor="perimeter"/>
-          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" noMarginRight nameFor="Inline" defaultChecked={this.props.selectedInline} checkFor="inline"/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="Island" checkFor="island" defaultChecked={true} checked={this.props.selectedIsland}/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="SplitIsland" checkFor="split-island" defaultChecked={true} checked={this.props.selectedSplitIsland} doubleLine="doubleLine"/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="Perimeter" defaultChecked={true} checked={this.props.selectedPerimeter} checkFor="perimeter"/>
+          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" noMarginRight nameFor="Inline" defaultChecked={true} checked={this.props.selectedInline} checkFor="inline"/>
+        <div onClick={this.props.resetForm} className="resetButton">reset form</div>
         <MagentaSuggest/>
         <BlueSuggest/>
       </div>

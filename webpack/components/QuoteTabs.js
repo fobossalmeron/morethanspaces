@@ -50,6 +50,30 @@ class QuoteTabs extends Component {
     console.log(this.state);
   }
 
+  resetForm(){
+    if (!this.state.selectedIsland){
+          document.getElementById("island").click();
+          console.log("clicked island");
+    };
+    if (!this.state.selectedInline){
+          document.getElementById("inline").click();
+          console.log("clicked inline");
+    };
+    if (!this.state.selectedPerimeter){
+          document.getElementById("perimeter").click();
+          console.log("clicked perimeter");
+    }
+    if (!this.state.selectedSplitIsland){
+         document.getElementById("split-island").click();
+         console.log("clicked splitisland");
+   };
+    console.log("check")
+    this.setState({
+      boothSizeWidth: "All",
+      boothSizeLength: "All",
+    });
+  }
+
   hideCollectors(){
     this.setState({ renderCollectors: false });
   }
@@ -181,7 +205,8 @@ class QuoteTabs extends Component {
         </TabList>
 
         <TabPanel>
-          <BoothForm     toggleBooth={this.toggleBooth.bind(this)}
+          <BoothForm     resetForm={this.resetForm.bind(this)}
+                         toggleBooth={this.toggleBooth.bind(this)}
                          limitByWidth={this.limitByWidth.bind(this)}
                          limitByLength={this.limitByLength.bind(this)}
                          individualBoothRender={this.state.individualBoothRender}

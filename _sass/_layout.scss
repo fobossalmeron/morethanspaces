@@ -1368,7 +1368,9 @@ input[type=text]{
     .thumbnailBooth{
       width: 22%;
       min-height: auto;
-      padding: 10px 4px 0 0;
+      margin: 10px 2px 0 2px;
+      border-radius: 2px;
+      transition: .4s ease all;
       cursor: pointer;
       &:hover{
         opacity:0.8;
@@ -2263,8 +2265,7 @@ background-color:$white;
 }
 
 .slick-slider{
-  width: 99%;
-  transform: scale(1.0160);
+  width: 100%;
 }
 
 .heightSlider{
@@ -2297,5 +2298,22 @@ background-color:$white;
 .revealIcon{
   circle {
     stroke-dashoffset: 0;
+  }
+}
+
+.resetButton{
+  width: auto;
+  font-size: 14px;
+  height: 30px;
+  background-color: $blue;
+  padding: 10px;
+  position: relative;
+  float: left;
+  line-height: .8;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: .4s ease all;
+  &:hover{
+    background-color:$magenta;
   }
 }

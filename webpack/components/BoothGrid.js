@@ -72,18 +72,23 @@ class BoothGrid extends Component {
     return true;
   }
 
-  shouldIFit(sizeW, sizeL){
-    if ((this.props.boothSizeLength === sizeL || this.props.boothSizeLength === "All") &&
+  shouldIFit(sizeW, sizeL, type){
+    if (type === "Custom"){
+      return true;
+    } else if ((this.props.boothSizeLength === sizeL || this.props.boothSizeLength === "All") &&
         (this.props.boothSizeWidth === sizeW || this.props.boothSizeWidth === "All")){
-       return true
+       return true;
+    } else if ((this.props.boothSizeLength === sizeW || this.props.boothSizeLength === "All") &&
+               (this.props.boothSizeWidth === sizeL || this.props.boothSizeWidth === "All")){
+       return true;
     }
-       return false
+       return false;
     }
 
   render () {
 
     var doRenderBooths = this.state.data.filter((item,index) => {
-      if (this.shouldIRender(item.type) == false || this.shouldIFit(item.width, item.length) == false) {
+      if (this.shouldIRender(item.type) == false || this.shouldIFit(item.width, item.length, item.type) == false) {
         return false
       } else if (item.featured == false) {
         return false

@@ -71,6 +71,10 @@ class SingleItem extends Component {
     const settings = {
       infinite: true,
       slidesToShow: 4,
+      centerMode: false,
+      variableWidth: false,
+      centerPadding: true,
+      focusOnSelect: false,
       autoplay: false,
       draggable: false,
       responsive: [ { breakpoint: 500, settings: { slidesToShow: 2 } }, { breakpoint: 900, settings: { slidesToShow: 3 } } ],
@@ -88,8 +92,10 @@ class SingleItem extends Component {
     ));
 
     var trigger3D = (
-      this.props.no3D? '' : <img className="thumbnailBooth" onClick={() => this.handleView("3D")} src="assets/img/layout/3dTrigger.svg"/>
+      this.props.no3D? '' : <img key={"3D"} className="thumbnailBooth" onClick={() => this.handleView("3D")} src="assets/img/layout/3dTrigger.svg"/>
     )
+
+    
 
     var imageMenu = (
       this.props.type == "custom"?

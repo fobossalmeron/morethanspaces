@@ -1490,6 +1490,8 @@ input[type=text]{
 
 //3D
 
+
+
 iframe{
   position: absolute;
   background-color:white;
@@ -1582,6 +1584,9 @@ iframe.visualizer{
   position: relative;
   width:100%;
   min-height:500px;
+  iframe{
+    min-height: 500px;
+  }
 }
 
 .overflowVisible{

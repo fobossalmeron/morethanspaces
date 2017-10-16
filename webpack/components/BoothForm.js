@@ -97,13 +97,13 @@ class BoothForm extends Component {
         </a>
         <label>rent or own?</label>
           <CheckBox onClick={this.handleRent} inputType="radio" nameFor="rentOrOwn" defaultChecked={!this.props.wantToOwn} checkFor="rent"/>
-          <CheckBox onClick={this.handleOwn} inputType="radio" nameFor="rentOrOwn" defaultChecked={this.props.wantToOwn} checkFor="own"/>
+          <CheckBox quoteRight={true} onClick={this.handleOwn} inputType="radio" nameFor="rentOrOwn" defaultChecked={this.props.wantToOwn} checkFor="own"/>
         <label>event location</label>
           <div className="quoteCheck">
             <input type="radio" id="Las Vegas" onClick={this.doNotShip} name={"inVegas"} defaultChecked={this.props.eventInVegas} />
             <label className="noMargin" htmlFor="Las Vegas">Las Vegas</label>
           </div>
-          <div className="quoteCheck">
+          <div className="quoteCheck quoteRight">
             <input type="radio" id="other" onClick={this.doShip} name={"inVegas"} defaultChecked={!this.props.eventInVegas} />
             <label className="noMargin" htmlFor="other">other</label>
           </div>

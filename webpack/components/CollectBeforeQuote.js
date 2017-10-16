@@ -149,7 +149,7 @@ class CollectBeforeQuote extends Component {
             name: !name ? '*A name is required' : undefined,
             phone:
               !phone ?
-            '*A phone is required' :
+            '*Phone number is missing' :
               !phone.match(/^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/)?
             '*Please enter a valid phone number' :
             undefined,

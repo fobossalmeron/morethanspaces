@@ -70,7 +70,7 @@ class VideoWallForm extends Component {
             <input type="radio" id="Las Vegas" onClick={this.doNotShip} name={"inVegas"} defaultChecked={this.props.eventInVegas} />
             <label className="noMargin" htmlFor="Las Vegas">Las Vegas</label>
           </div>
-          <div className="quoteCheck">
+          <div className="quoteCheck quoteRight">
             <input type="radio" id="other" onClick={this.doShip} name={"inVegas"} defaultChecked={!this.props.eventInVegas} />
             <label className="noMargin" htmlFor="other">other</label>
           </div>

@@ -829,7 +829,7 @@ form{
   width: 100%;
   display: block;
   float: left;
-  min-height: 500px;
+  height: 500px;
   border: solid #666A73 5px;
   box-sizing: border-box;
   transition: .4s ease all;
@@ -1583,9 +1583,9 @@ iframe.visualizer{
   min-width:0;
   position: relative;
   width:100%;
-  min-height:500px;
+  height:500px;
   iframe{
-    min-height: 500px;
+    height: 500px;
   }
 }
 
@@ -1686,6 +1686,7 @@ iframe.visualizer{
     color:$black;
     padding: 2% 0 0% 0;
     min-height: 0;
+    height:auto;
     margin-bottom: 0;
   }
   input{

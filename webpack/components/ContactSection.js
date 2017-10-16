@@ -29,7 +29,7 @@ class ContactSection extends Component {
           placeholder='message'
         />
         <button type='submit'>Send</button>
-        </div>
+      </div>
     )
     const sentMessage = (
       <div>

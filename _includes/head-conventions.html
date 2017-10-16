@@ -4,10 +4,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{{ page.title }} Expert Trade Show Company | 20% discount – Rent/Own | More Than Spaces</title>
-  <meta name="description" content="Your Ultimate Trade Show Experts. Turnkey Solutions. Stand out with our Exclusive Designs.
-Rent/Own. World Class Friendly Service. Click to see in 3D or VR. Always on time.">
+  <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}Your Ultimate Trade Show Experts. Turnkey Solutions. Stand out with our Exclusive Designs.
+Rent/Own. World Class Friendly Service. Click to see in 3D or VR. Always on time.{% endif %}">
   <meta name="author" content="Rodrigo Salmeron | rodrigosalmeron.mx">
-  
+
   <meta property="og:url" content="{{ page.url |cd replace:'index.html','' | prepend: site.url }}">
   <meta property="og:site_name" content="Morethanspaces" />
   <meta property="og:type" content="website">

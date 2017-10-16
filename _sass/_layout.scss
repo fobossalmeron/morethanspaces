@@ -1655,6 +1655,7 @@ iframe.visualizer{
 #content{
   column-count: 2;
   column-gap: 40px;
+  margin-bottom: 20px;
   img{
     display:none;
   }
@@ -2106,7 +2107,8 @@ iframe.visualizer{
 .whatDifference{
   background-color:$black;
   color: $white;
-  overflow:scroll;
+  overflow: scroll;
+  overflow-x: hidden;
   padding:0;
   font-size:0.8em;
   .spanMagenta{
@@ -2135,17 +2137,17 @@ iframe.visualizer{
       color:$white;
     }
     em{
-      color:$magenta;
+      color:$magenta !important;
       padding-left: 4%;
     }
   }
   .spanBlue{
     b, h2{background-color:$blue}
-    em{color:$blue;}
+    em{color:$blue !important;}
   }
   .spanYellow{
     b, h2{background-color:$yellow; color:$black;}
-    em{color:$yellow;}
+    em{color:$yellow !important;}
   }
   h2{
     font-weight: $bold-font-weight;

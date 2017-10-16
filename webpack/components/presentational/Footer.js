@@ -47,7 +47,7 @@ class Footer extends Component {
                <a href={"https://twitter.com/M0RETHANSPACES"} target="_blank">
                  <TwitterIcon/>
                </a>
-               <a href={"https://facebook.com/morethanspaces/"} target="_blank">
+               <a href={"https://plus.google.com/u/0/118235896362832395123"} target="_blank">
                  <GooglePlusIcon/>
                </a>
              </ul>

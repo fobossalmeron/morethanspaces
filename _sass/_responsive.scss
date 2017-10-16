@@ -144,9 +144,6 @@
       }
     }
   }
-  .visualizer{
-    min-height: 350px;
-  }
   .boothGridItem{
         min-height: 190px;
         width: 48%;
@@ -251,14 +248,8 @@
     }
   }
   .visualizer{
-    min-height: 310px;
     width: 98.5%;
     margin-right:1.5%;
-  }
-  .slick-slider{
-    width: 98%;
-    margin-right: 0%;
-    transform: scale(1.01);
   }
 }
 
@@ -385,6 +376,9 @@
 }
 
 @include media-query($x700-down) {
+  .resetButton{
+    margin: 6% 3%;
+  }
   .discounts-menu {
     margin-left: 8%;
     font-size: .9em;
@@ -400,7 +394,7 @@
     }
   }
   .visualizer{
-    min-height: 250px;
+    padding-right: 2%;
   }
   h1, h2, h3, h4, h5, h6 {
     font-size: 1.4em;
@@ -485,9 +479,6 @@
     width:100%;
     margin:0;
     transform: scale(1);
-  }
-  .visualizer{
-    min-height: 200px;
   }
   #clients{
     ul{

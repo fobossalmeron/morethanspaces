@@ -973,7 +973,7 @@ form{
 }
 
 .quoteCheck{
-  width: 48%;
+  width: 49%;
   margin-right: 2%;
   margin-bottom: 4%;
   min-height: 35px;
@@ -1032,6 +1032,10 @@ input[type=text]{
   border: none;
   padding: 4px;
   font-size: .7em;
+}
+
+.quoteRight{
+  margin-right:0;
 }
 
 .addOnCheck{
@@ -1162,6 +1166,7 @@ input[type=text]{
     margin-bottom: 4%;
     padding: 0% 1% 2% 1%;
     color: $white;
+    position: relative;
     span{
       float: left;
       top: 30px;
@@ -1270,10 +1275,7 @@ input[type=text]{
 
 .boothGridItem{
   width: 31.6%;
-  padding-top:20%;
   transition: .5s ease all;
-  background-size: cover;
-  background-position: center;
   position: relative;
   min-height: 210px;
   cursor: pointer;
@@ -1293,7 +1295,6 @@ input[type=text]{
   }
   label{
     float:left;
-    position: absolute;
     background-color:$white;
     bottom: 0;
     width:100%;
@@ -1360,7 +1361,6 @@ input[type=text]{
     float: left;
     img{
       width:100%;
-      min-height: 400px;
     }
     .thumbnailBooth{
       width: 22%;
@@ -1469,7 +1469,6 @@ input[type=text]{
   position:relative;
   border-radius: 2px;
   width:100%;
-  min-height:400px;
   background-size: cover;
   background-position: center;
   transition: 300ms all ease;
@@ -2268,12 +2267,11 @@ background-color:$white;
   width: 100%;
 }
 
-.slick-track{
-  margin: 0 -18px;
-}
-
 .heightSlider{
   max-height: 115px;
+  .slick-track{
+    margin: 0 -18px;
+  }
 }
 
 .service-icon{
@@ -2308,12 +2306,12 @@ background-color:$white;
 .resetButton{
   width: auto;
   font-size: 14px;
-  height: 30px;
   background-color: $blue;
-  padding: 10px;
-  position: relative;
-  float: left;
-  line-height: .8;
+  padding: 10px 5px 10px 5px;
+  position: absolute;
+  margin: 5% 5%;
+  right: 0;
+  line-height: 0;
   border-radius: 2px;
   cursor: pointer;
   transition: .4s ease all;

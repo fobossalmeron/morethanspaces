@@ -49,7 +49,7 @@ class VideoWallForm extends Component {
       <div>
         <label>choose type</label>
           <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" nameFor="Tv" checkFor="tv" defaultChecked={this.props.selectedTv}/>
-          <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" nameFor="LED" checkFor="led" defaultChecked={this.props.selectedLed}/>
+          <CheckBox quoteRight={true} onChange={this.handleVideoWallToggle} inputType="checkbox" nameFor="LED" checkFor="led" defaultChecked={this.props.selectedLed}/>
           <CheckBox onChange={this.handleVideoWallToggle} inputType="checkbox" nameFor="LCD" checkFor="lcd" defaultChecked={this.props.selectedLcd}/>
           <div className="blueSuggest whatDifferenceButton">
           <label onClick={() => this.handleOpenModal()}>what&#39;s the difference?</label>

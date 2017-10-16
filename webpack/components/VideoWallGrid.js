@@ -78,8 +78,8 @@ class VideoWallGrid extends Component {
     }).map((item, index) => (
       <li key={item.id}
           onClick={() => this.generateSingleVideoWall(item.id, item.description, item.images, item.rent, item.size, item.diagonal, item.tags)}
-          className={"boothGridItem"}
-          style={{backgroundImage: 'url(' + item.images[0].url + ')'}}>
+          className={"boothGridItem"}>
+          <img src={'/' + item.images[0].url} alt={item.id}/>
           <label>
             {item.id}
             {item.tags.map((tag, index) => <div className={"tagItem tag" + tag} key={"tagKeyVW" + index}>{tag.toLowerCase()}</div>)}

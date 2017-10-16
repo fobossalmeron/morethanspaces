@@ -59,6 +59,7 @@ class BoothForm extends Component {
   render(){
     var boothMenu = (
       <div>
+      <div onClick={this.props.resetForm} className="resetButton">reset</div>
       <label>booth size</label>
         <select onChange={this.handleWidthChange} value={this.props.boothSizeWidth}>
           <option value="All">width</option>
@@ -79,10 +80,9 @@ class BoothForm extends Component {
         </select>
         <label>booth type</label>
           <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="Island" checkFor="island" defaultChecked={true} checked={this.props.selectedIsland}/>
-          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="SplitIsland" checkFor="split-island" defaultChecked={true} checked={this.props.selectedSplitIsland} doubleLine="doubleLine"/>
+          <CheckBox quoteRight={true} onChange={this.handleBoothToggle} inputType="checkbox" nameFor="SplitIsland" checkFor="split-island" defaultChecked={true} checked={this.props.selectedSplitIsland} doubleLine="doubleLine"/>
           <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" nameFor="Perimeter" defaultChecked={true} checked={this.props.selectedPerimeter} checkFor="perimeter"/>
-          <CheckBox onChange={this.handleBoothToggle} inputType="checkbox" noMarginRight nameFor="Inline" defaultChecked={true} checked={this.props.selectedInline} checkFor="inline"/>
-        <div onClick={this.props.resetForm} className="resetButton">reset form</div>
+          <CheckBox quoteRight={true} onChange={this.handleBoothToggle} inputType="checkbox" noMarginRight nameFor="Inline" defaultChecked={true} checked={this.props.selectedInline} checkFor="inline"/>
         <MagentaSuggest/>
         <BlueSuggest/>
       </div>

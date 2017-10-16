@@ -122,9 +122,8 @@ class SingleItem extends Component {
 
     var imageOptions = (
       <div className="singleImage">
-          <div className="visualizer" id="visualizer" style={backgroundStyle}>
+            <img src={'/' + this.state.mainImage} className="visualizer" id="visualizer" alt={this.props.singleValue}/>
             { choice3D }
-          </div>
           {imageMenu}
       </div>
     );

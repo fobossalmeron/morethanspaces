@@ -1298,16 +1298,6 @@ input[type=text]{
     bottom: 0;
     width:100%;
     font-size:0.7em;
-    &::after{
-      content: ' ';
-      font-size:0.9em;
-      padding: 0px 3px;
-      height: 18px;
-      display: inline-block;
-      right: 0;
-      float: right;
-      position: relative;
-    }
   }
 }
 
@@ -1319,42 +1309,49 @@ input[type=text]{
   }
 }
 
-.boothTv label::after{
-    content: 'tv';
+.tagItem{
+    font-size:0.9em;
+    padding: 0px 3px;
+    height: 18px;
+    display: inline-block;
+    right: 0;
+    float: right;
+    position: relative;
+}
+
+.tagSingleItem{
+  float: left;
+  border-radius: 2px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  padding: 0 5px;
+  font-size: .9em;
+}
+
+.tagIsland{
     background-color: $blue;
 }
-.boothLED label::after{
-    content: 'led';
-    background-color: $yellow;
-}
-.boothLCD label::after{
-    content: 'lcd';
+.tagSplit-Island{
     background-color: $magenta;
 }
-
-.boothIsland label::after{
-    content: 'island';
-    background-color: $blue;
-}
-
-.boothSplitIsland label::after{
-    content: 'split island';
-    background-color: $magenta;
-}
-
-.boothCustom label::after{
-    content: 'custom';
+.tagCustom{
     color: $white;
     background-color: $black;
 }
-.boothPerimeter label::after{
-    content: 'perimeter';
+.tagPerimeter{
     background-color: coral;
 }
-
-.boothInline label::after{
-    content:'inline';
+.tagInline{
     background-color: orange;
+}
+.tagTv{
+    background-color: $blue;
+}
+.tagLED{
+    background-color: $yellow;
+}
+.tagLCD{
+    background-color: $magenta;
 }
 
 .singleImage{
@@ -1375,6 +1372,9 @@ input[type=text]{
       &:hover{
         opacity:0.8;
       }
+    }
+    .onlyTwo{
+      padding: 0 50px;
     }
     .noMarginRight{
       padding-right:0px;
@@ -2266,6 +2266,10 @@ background-color:$white;
 
 .slick-slider{
   width: 100%;
+}
+
+.slick-track{
+  margin: 0 -18px;
 }
 
 .heightSlider{

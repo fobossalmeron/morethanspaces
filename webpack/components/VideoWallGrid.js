@@ -14,7 +14,7 @@ class VideoWallGrid extends Component {
       singleValue: '',
       description: '',
       images:[],
-      type: '',
+      tags: [],
       rent: '',
       size: '',
       diagonal: '',
@@ -36,56 +36,62 @@ class VideoWallGrid extends Component {
     this.loadFromServer();
   }
 
-  generateSingleVideoWall(singleValue, description, images, type, rent, size, diagonal){
+  generateSingleVideoWall(singleValue, description, images, rent, size, diagonal, tags){
     this.setState({
       singleValue: singleValue,
       description: description,
       rent: rent,
       images : images,
-      type: type,
+      tags: tags,
       size: size,
       diagonal: diagonal
     })
     this.props.renderSingleVideoWall();
   }
 
-  shouldIRender(videowall){
-    if (videowall === "Tv" && !this.props.selectedTv) {
-        return false;
+  amITagged(videowall){
+    if (videowall.includes("Tv") && this.props.selectedTv) {
+        return true;
     }
-    else if (videowall === "LED" && !this.props.selectedLed) {
-        return false;
+    else if (videowall.includes("LED") && this.props.selectedLed) {
+        return true;
     }
-    else if (videowall === "LCD" && !this.props.selectedLcd) {
-        return false;
+    else if (videowall.includes("LCD") && this.props.selectedLcd) {
+        return true;
     }
-    return true;
+    else if (videowall.includes("Custom")){
+        return true;
+    }
+    return false;
   }
 
   render () {
 
     var doRenderVideoWalls = this.state.data.filter((item,index) => {
-      if (this.shouldIRender(item.type) == false) {
+      if (this.amITagged(item.tags) == false) {
         return false
       } else if (item.featured == false) {
         return false
       } else {
-          return true
+        return true
       }
     }).map((item, index) => (
       <li key={item.id}
-          onClick={() => this.generateSingleVideoWall(item.id, item.description, item.images, item.type, item.rent, item.size, item.diagonal)}
-          className={"boothGridItem booth" + item.type}
+          onClick={() => this.generateSingleVideoWall(item.id, item.description, item.images, item.rent, item.size, item.diagonal, item.tags)}
+          className={"boothGridItem"}
           style={{backgroundImage: 'url(' + item.images[0].url + ')'}}>
-          <label>{item.id}</label>
+          <label>
+            {item.id}
+            {item.tags.map((tag, index) => <div className={"tagItem tag" + tag} key={"tagKeyVW" + index}>{tag.toLowerCase()}</div>)}
+        </label>
       </li>
     ));
 
     var singleVideoWall = (
-       <SingleItem instaQuoteVideoWall={true}
+       <SingleItem  instaQuoteVideoWall={true}
                     description={this.state.description}
                     singleValue={this.state.singleValue}
-                    type={this.state.type}
+                    tags={this.state.tags}
                     images={this.state.images}
                     no3D={true}
                     doRenderVideoWallInstaQuote={this.props.doRenderVideoWallInstaQuote.bind(this)}/>
@@ -98,7 +104,7 @@ class VideoWallGrid extends Component {
         <div className={"instaQuoteWhole"} id="videoWallInstaQuote">
         <InstaQuote images={this.state.images}
                     singleValue={this.state.singleValue}
-                    type={this.state.type}
+                    tags={this.state.tags}
                     rent={this.state.rent}
                     size={this.state.size}
                     diagonal={this.state.diagonal}

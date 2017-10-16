@@ -110,7 +110,6 @@ class InstaQuote extends Component {
   }
 
   ifVideowallNoDiscount(){
-    var renderOrNot
     if (typeof this.props.wantToOwn !== 'undefined') {
       return true
     }
@@ -139,7 +138,7 @@ class InstaQuote extends Component {
     var maximumReached = this.state.maxDiscount?  <li>*maximum discount reached</li> : '';
 
     var narrateDiscount = (
-      <li><b>{'(' + originalPrice + '$ - ' + this.props.discountNumber + this.discountSymbol() + ' discount)'}</b></li>
+      <li><b>(<NumberFormat decimalPrecision={0} value={originalPrice} displayType={'text'} thousandSeparator={true} prefix={'$'} />{' - ' + this.props.discountNumber + this.discountSymbol() + ' discount)'}</b></li>
     )
     var preDiscount = this.props.discountOn? narrateDiscount : '';
     var isDiscount = this.ifVideowallNoDiscount()? preDiscount : '';
@@ -153,7 +152,7 @@ class InstaQuote extends Component {
           <li>model: <b>{this.props.singleValue}</b></li>
           {ifExistsSize}
           {ifExistsDiagonal}
-          <li>type: {this.props.type}</li>
+          <li>type: {this.props.tags.join(" or ").toLowerCase()}</li>
           {ifExistsOwnableMessage}
           <li>This event is <b>{renderInVegas}</b> Las Vegas </li>
         </ul>

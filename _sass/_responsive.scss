@@ -75,6 +75,7 @@
 }
 
 @include media-query($x1000-down) {
+
   .react-tabs__tab{
     height:70px;
     .backSlide{
@@ -138,6 +139,9 @@
     }
     .singleImage {
       width: 50%;
+      .onlyTwo{
+        padding: 0 20px;
+      }
     }
   }
   .visualizer{
@@ -411,6 +415,13 @@
 }
 
 @include media-query($x600-down) {
+  .singleBooth{
+    .singleImage {
+      .onlyTwo{
+        padding: 0px;
+      }
+    }
+  }
   #downloadButton{
     animation-name: bounce;
   }

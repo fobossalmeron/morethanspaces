@@ -81,27 +81,40 @@ class SingleItem extends Component {
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />
     };
+    const settingsVideoWalls = {
+      infinite: true,
+      slidesToShow: 2,
+      autoplay: false,
+      draggable: false,
+      responsive: [ { breakpoint: 500, settings: { slidesToShow: 2 } }, { breakpoint: 900, settings: { slidesToShow: 2 } } ],
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />
+    }
 
     var backgroundStyle = {
       backgroundImage: 'url(' + this.state.mainImage + ')',
     };
     var choice3D = (this.state.render3D ? <SketchFab obj={this.props.obj} /> : null);
 
+    var thumbnailClasses = this.props.instaQuoteVideoWall? "onlyTwo" : "justOne"
+
     var numberOfImages = this.props.images.map((image, index) => (
-      <img key={image.url} className="thumbnailBooth" onClick={() => this.handleView(index)} src={this.props.images[index].url}/>
+      <img key={image.url} className={"thumbnailBooth " + thumbnailClasses} onClick={() => this.handleView(index)} src={this.props.images[index].url}/>
     ));
 
     var trigger3D = (
-      this.props.no3D? '' : <img key={"3D"} className="thumbnailBooth" onClick={() => this.handleView("3D")} src="assets/img/layout/3dTrigger.svg"/>
+      this.props.no3D? '' : <img key={"3D"} className={"thumbnailBooth"} onClick={() => this.handleView("3D")} src="assets/img/layout/3dTrigger.svg"/>
     )
 
-    
+    var sliderSettings = (
+      this.props.instaQuoteVideoWall? settingsVideoWalls : settings
+    )
 
     var imageMenu = (
-      this.props.type == "custom"?
+      this.props.tags.includes("Custom")?
       null
       :
-      <Slider className={"heightSlider"} {...settings}>
+      <Slider className={"heightSlider"} {...sliderSettings}>
           {trigger3D}
           {numberOfImages}
       </Slider>
@@ -116,7 +129,7 @@ class SingleItem extends Component {
       </div>
     );
     var boothButton = (
-      this.props.type == "custom"?
+      this.props.tags.includes("Custom")?
       <button onClick={() => controller.scrollTo("#contact")} className="instaQuoteButton">get in touch!</button>
         :
       <button onClick={() => this.nextStepBoothInstaQuote()} className="instaQuoteButton">get instant base quote</button>
@@ -134,8 +147,9 @@ class SingleItem extends Component {
         {imageOptions}
         <div className="singleInfo">
           <h3>{this.props.singleValue}</h3>
-          <div className={"insertPadding booth" + this.props.type}>
+          <div className={"insertPadding"}>
           <label></label>
+          {this.props.tags.map((tag, index) => <div className={"tagSingleItem tag" + tag} key={"tagKey" + index}>{tag.toLowerCase()}</div>)}
           </div>
           {description}
           {buttonChoice}

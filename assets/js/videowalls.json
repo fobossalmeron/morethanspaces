@@ -2,8 +2,8 @@
     {
       "featured": true,
       "id": "VW3x3LCD",
-      "type": "LCD",
-      "description":"<ul><li>built with (9) 55″ ultra slim bezels</li><li>display approx. area: 12 ft x 6.8 ft</li><li>equivalent of a 165″ monitor</li><li>*sound not built-in, but available</li><li>delivery, setup and teardow</li><li>floor stand</li><li>friendly expert support</li></ul>",
+      "tags":["LCD"],
+      "description":"<ul><li>built with (9) 55″ ultra slim bezels</li><li>display approx. area: 12 ft x 6.8 ft</li><li>equivalent of a 165″ monitor</li><li>*sound not built-in, but available</li><li>delivery, setup and teardown</li><li>floor stand</li><li>friendly expert support</li></ul>",
       "rent": 8900,
       "size" : "12ft x 6.8ft",
       "diagonal" : "165",
@@ -14,7 +14,7 @@
     {
       "featured": true,
       "id": "VW3x4LCD",
-      "type": "LCD",
+      "tags":["LCD"],
       "description":"<ul><li>built with (12) 55″ ultra slim bezels</li><li>display approx. area: 16 ft x 6.8 ft</li><li>equivalent of a 209″ monitor</li><li>*sound not built-in, but available</li><li>delivery, setup and teardown</li><li>floor stand</li><li>friendly expert support</li></ul>",
       "rent": 11900,
       "size" : "16ft x 6.8ft",
@@ -26,7 +26,7 @@
     {
       "featured": true,
       "id": "VW3x5LCD",
-      "type": "LCD",
+      "tags":["LCD"],
       "description":"<ul><li>built with (15) 55″ ultra slim bezels</li><li>display approx. area: 20 ft x 6.8 ft</li><li>equivalent of a 253″ monitor</li><li>*sound not built-in, but available</li><li>delivery, setup and teardown</li><li>floor stand</li><li>friendly expert support</li></ul>",
       "rent": 14900,
       "size" : "20ft x 6.8ft",
@@ -38,7 +38,7 @@
     {
       "featured": true,
       "id": "VW3x6LCD",
-      "type": "LCD",
+      "tags":["LCD"],
       "description":"<ul><li>built with (18) 55″ ultra slim bezels</li><li>display approx. area: 24 ft x 6.8 ft</li><li>equivalent of a 300″ monitor</li><li>*sound not built-in, but available</li><li>delivery, setup and teardown</li><li>floor stand</li><li>friendly expert support</li></ul>",
       "rent": 17900,
       "size" : "24ft x 6.8ft",
@@ -50,7 +50,7 @@
     {
       "featured": true,
       "id": "VW4.8LED179",
-      "type": "LED",
+      "tags":["LED"],
       "description":"<ul><li>display approx. area: 13.4 ft x 6.7 ft</li><li>equivalent of a 179″ monitor</li><li>*sound not built-in, but available</li><li>floor stand or flown</li><li>delivery, setup and teardown*</li><li>friendly expert support</li></ul>",
       "rent": 10900,
       "size" : "13.4ft x 6.7ft",
@@ -62,7 +62,7 @@
     {
       "featured": true,
       "id": "VW4.8LED113",
-      "type": "LED",
+      "tags":["LED"],
       "description":"<ul><li>display approx. area: (6.7 ft x 6.7 ft) x 2</li><li>equivalent of a (113″) x 2 monitor</li><li>*sound not built-in, but available</li><li>flown</li><li>delivery, setup and teardown</li><li>friendly expert support</li></ul>",
       "rent": 11800,
       "size" : "6.7ft x 6.7ft",
@@ -74,7 +74,7 @@
     {
       "featured": true,
       "id": "VW4.8LED144",
-      "type": "LED",
+      "tags":["LED"],
       "description":"<ul><li>display approx. area: 6.7 ft x 10 ft</li><li>equivalent of a 144″ monitor</li><li>*sound not built-in, but available</li><li>flown</li><li>delivery, setup and teardown</li><li>friendly expert support</li></ul>",
       "rent": 12900,
       "size" : "6.7ft x 10ft",
@@ -86,7 +86,7 @@
     {
       "featured": true,
       "id": "VW4.8LED170",
-      "type": "LED",
+      "tags":["LED"],
       "description":"<ul><li>display approx. area: 10 ft x 10 ft</li><li>equivalent of a 170″ monitor</li><li>*sound not built-in, but available</li><li>floor stand or flown</li><li>delivery, setup and teardown</li><li>friendly expert support</li></ul>",
       "rent": 16900,
       "size" : "10ft x 10ft",
@@ -98,7 +98,7 @@
     {
       "featured": true,
       "id": "VW4.8LED200",
-      "type": "LED",
+      "tags":["LED"],
       "description":"<ul><li>display approx. area: 13.4 ft x 10 ft</li><li>equivalent of a 200″ monitor</li><li>*sound not built-in, but available</li><li>floor stand or flown</li><li>delivery, setup and teardown</li><li>friendly expert support</li></ul>",
       "rent": 19900,
       "size" : "13.4ft x 10ft",
@@ -110,7 +110,7 @@
     {
       "featured": true,
       "id": "VW4.8LED217",
-      "type": "LED",
+      "tags":["LED"],
       "description":"<ul><li>display approx. area: 15 ft x 10 ft</li><li>equivalent of a 217″ monitor</li><li>*sound not built-in, but available</li><li>floor stand or flown</li><li>delivery, setup and teardown</li><li>friendly expert support</li></ul>",
       "rent": 21900,
       "size" : "15ft x 10ft",
@@ -122,7 +122,7 @@
     {
       "featured": true,
       "id": "VW2.5LED106",
-      "type": "LED",
+      "tags":["LED"],
       "description":"<ul><li>display approx. area: 6.3 ft x 6.3 ft</li><li>equivalent of a 106″ monitor</li><li>*sound not built-in, but available</li><li>floor stand or flown</li><li>delivery, setup and teardown</li><li>friendly expert support</li></ul>",
       "rent": 8900,
       "size" : "6.3ft x 6.3ft",
@@ -134,7 +134,7 @@
     {
       "featured": true,
       "id": "VW2.5LED125",
-      "type": "LED",
+      "tags":["LED"],
       "description":"<ul><li>display approx. area: 8.4 ft x 6.3 ft</li><li>equivalent of a 125″ monitor</li><li>*sound not built-in, but available</li><li>floor stand or flown</li><li>delivery, setup and teardown</li><li>friendly expert support</li></ul>",
       "rent": 10900,
       "size" : "8.4ft x 6.3ft",
@@ -146,7 +146,7 @@
     {
       "featured": true,
       "id": "VW2.5LED90",
-      "type": "LED",
+      "tags":["LED"],
       "description":"<ul><li>display approx. area: (4.2 ft x 6.3 ft) x 2</li><li>equivalent of a (90″) x 2 monitor</li><li>*sound not built-in, but available</li><li>flown</li><li>delivery, setup and teardown</li><li>friendly expert support</li></ul>",
       "rent": 11800,
       "size" : "4.2ft x 6.3ft",
@@ -158,7 +158,7 @@
     {
       "featured": true,
       "id": "TV55in",
-      "type": "Tv",
+      "tags":["Tv"],
       "description":"<ul><li>Display Type: LED</li><li>Refresh Rate: Motion Rate 120</li><li>Resolution: 3840 x 2160</li><li>Screen Size Class: 55 in.</li><li>Screen Type: Flat</li><li>Smart TV: Yes</li></ul>",
       "rent": 500,
       "diagonal" : "55",
@@ -168,7 +168,7 @@
     {
       "featured": true,
       "id": "TV65in",
-      "type": "Tv",
+      "tags":["Tv"],
       "description":"<ul><li>Display Type: LED</li><li>Refresh Rate: Motion Rate 120</li><li>Resolution: 3840 x 2160</li><li>Screen Size Class: 65 in.</li><li>Screen Type: Flat</li><li>Smart TV: Yes</li></ul>",
       "rent": 1000,
       "diagonal" : "65",
@@ -178,7 +178,7 @@
     {
       "featured": true,
       "id": "TV70in",
-      "type": "Tv",
+      "tags":["Tv"],
       "description":"<ul><li>XHDR Plus w/ support for Dolby Vision and HDR10</li><li>XLED Plus - Full-array local dimming backlight w/ 32 local dimming Zones</li><li>Vizio Smartcast w/ Chromecast built-in</li><li>120Hz Effective Refresh Rate & Clear Action 360</li><li>Tuner-Free Display</li></ul>",
       "rent": 1800,
       "diagonal" : "70",
@@ -188,7 +188,7 @@
     {
       "featured": true,
       "id": "TV80in",
-      "type": "Tv",
+      "tags":["Tv"],
       "description":"<ul><li>120Hz Effective Refresh Rate & Clear Action 180 Full-Array LED Backlight w/ 16 Active LED ZonesÆ</li><li>Chromecast Built-In w/ WiFi 802.11ac</li><li>V8 Octa-Core Processor</li><li>Tuner-Free Display</li></ul>",
       "rent": 3200,
       "diagonal" : "80",
@@ -198,7 +198,7 @@
     {
       "featured": true,
       "id": "TV90in",
-      "type": "Tv",
+      "tags":["Tv"],
       "description":"<ul><li>Active HDR w/ Dolby Vision</li><li>4K Upscaler</li><li>Sound Designed by Harmon/Kardon</li><li>TruMotion240</li><li>SUPER ULTRA TV</li></ul>",
       "rent": 6000,
       "diagonal" : "90",
@@ -208,7 +208,7 @@
     {
       "featured": true,
       "id": "TV55inCURB",
-      "type": "Tv",
+      "tags":["Tv"],
       "description":"<ul><li>Display Type: LED</li><li>Refresh Rate: Motion Rate 120</li><li>Resolution: 3840 x 2160</li><li>Screen Size Class: 55 in.</li><li>Screen Type: Curved</li><li>Smart TV: Yes</li></ul>",
       "rent": 1600,
       "diagonal" : "55",
@@ -218,7 +218,7 @@
     {
       "featured": true,
       "id": "TV65inCURB",
-      "type": "Tv",
+      "tags":["Tv"],
       "description":"<ul><li>Display Type: LED</li><li>Refresh Rate: Motion Rate 120</li><li>Resolution: 3840 x 2160</li><li>Screen Size Class: 65 in.</li><li>Screen Type: Curved</li><li>Smart TV: Yes</li></ul>",
       "rent": 2200,
       "diagonal" : "65",

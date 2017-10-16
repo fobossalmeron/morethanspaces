@@ -12,15 +12,13 @@ class BoothGrid extends Component {
       individualBoothRender: this.props.individualBoothRender,
       singleValue: '',
       description: '',
-      type: '',
+      tags: [],
       obj: '',
       images:[],
       width: '',
       length: '',
       rent: '',
-      own: '',
-      tv:'',
-      videowall: ''
+      own: ''
     };
     this.loadFromServer = this.loadFromServer.bind(this);
   }
@@ -39,41 +37,42 @@ class BoothGrid extends Component {
     this.loadFromServer();
   }
 
-  generateSingleItem(singleValue, description, obj, images, type, width, length, rent, own, tv, videowall){
+  generateSingleItem(singleValue, description, obj, images, width, length, rent, own, tags){
     this.setState({
       singleValue: singleValue,
       description: description,
-      type: type,
+      tags: tags,
       obj: obj,
       images : images,
       width: width,
       length: length,
       rent: rent,
       own: own,
-      tv:tv,
-      videowall: videowall
     })
     this.props.renderSingleBooth();
   }
 
-  shouldIRender(booth){
-    if (booth === "Island" && !this.props.selectedIsland) {
-        return false;
+  amITagged(booth){
+    if (booth.includes("Island") && this.props.selectedIsland) {
+        return true;
     }
-    else if (booth === "SplitIsland" && !this.props.selectedSplitIsland) {
-        return false;
+    else if (booth.includes("Split-Island") && this.props.selectedSplitIsland) {
+        return true;
     }
-    else if (booth === "Perimeter" && !this.props.selectedPerimeter) {
-        return false;
+    else if (booth.includes("Perimeter") && this.props.selectedPerimeter) {
+        return true;
     }
-    else if (booth === "Inline" && !this.props.selectedInline) {
-        return false;
+    else if (booth.includes("Inline") && this.props.selectedInline) {
+        return true;
     }
-    return true;
+    else if (booth.includes("Custom")){
+        return true;
+    }
+    return false;
   }
 
-  shouldIFit(sizeW, sizeL, type){
-    if (type === "Custom"){
+  shouldIFit(sizeW, sizeL, tags){
+    if (tags.includes("Custom")){
       return true;
     } else if ((this.props.boothSizeLength === sizeL || this.props.boothSizeLength === "All") &&
         (this.props.boothSizeWidth === sizeW || this.props.boothSizeWidth === "All")){
@@ -86,9 +85,8 @@ class BoothGrid extends Component {
     }
 
   render () {
-
     var doRenderBooths = this.state.data.filter((item,index) => {
-      if (this.shouldIRender(item.type) == false || this.shouldIFit(item.width, item.length, item.type) == false) {
+      if (this.amITagged(item.tags) == false || this.shouldIFit(item.width, item.length, item.tags) == false) {
         return false
       } else if (item.featured == false) {
         return false
@@ -97,17 +95,20 @@ class BoothGrid extends Component {
       }
     }).map((item, index) => (
       <li key={item.id}
-          onClick={() => this.generateSingleItem(item.id, item.description, item.obj, item.images, item.type, item.width, item.length, item.rent, item.own, item.tv, item.videowall)}
-          className={"boothGridItem booth" + item.type}
+          onClick={() => this.generateSingleItem(item.id, item.description, item.obj, item.images, item.width, item.length, item.rent, item.own, item.tags)}
+          className={"boothGridItem"}
           style={{backgroundImage: 'url(' + item.images[0].url + ')'}}>
-          <label>{item.id}</label>
+          <label>
+            {item.id}
+            {item.tags.map((tag, index) => <div className={"tagItem tag" + tag} key={"tagKey" + index}>{tag.toLowerCase()}</div>)}
+         </label>
       </li>
     ));
 
     var singleBooth = (
-       <SingleItem description={this.state.description}
+       <SingleItem  description={this.state.description}
                     singleValue={this.state.singleValue}
-                    type={this.state.type}
+                    tags={this.state.tags}
                     obj={this.state.obj}
                     images={this.state.images}
                     doRenderBoothInstaQuote={this.props.doRenderBoothInstaQuote.bind(this)}/>
@@ -120,7 +121,7 @@ class BoothGrid extends Component {
       <div className={"instaQuoteWhole"} id="boothInstaQuote">
       <InstaQuote images={this.state.images}
                   singleValue={this.state.singleValue}
-                  type={this.state.type}
+                  tags={this.state.tags}
                   wantToOwn={this.props.wantToOwn}
                   addTv={this.props.addTv}
                   addVideoWall={this.props.addVideoWall}

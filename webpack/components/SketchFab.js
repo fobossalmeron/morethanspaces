@@ -36,7 +36,7 @@ class SketchFab extends Component{
    render() {
 
      return (
-            <iframe src="" id="api-frame" allowFullScreen={true}></iframe>
+            <iframe className="visualizer" src="" id="api-frame" allowFullScreen={true}></iframe>
      );
    }
  }

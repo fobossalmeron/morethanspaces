@@ -120,9 +120,11 @@ class SingleItem extends Component {
       </Slider>
     )
 
+    var hideImage = this.state.render3D? '' : <img src={'/' + this.state.mainImage} className="visualizer" id="visualizer" alt={this.props.singleValue}/>
+
     var imageOptions = (
       <div className="singleImage">
-            <img src={'/' + this.state.mainImage} className="visualizer" id="visualizer" alt={this.props.singleValue}/>
+            { hideImage }
             { choice3D }
           {imageMenu}
       </div>

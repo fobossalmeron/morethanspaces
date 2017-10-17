@@ -10,7 +10,7 @@ class BlueSuggest extends Component {
     return (
       <div className="blueSuggest">
       <label>can&#39;t find &#39;your thing&#39;?</label>
-        <p>We have 100&#39;s of other cool solutions, no problem!</p>
+        <p>we have 100&#39;s of other cool solutions, no problem!</p>
         <a href="#contact"><div className="linkText">free friendly service</div><ArrowForwardIcon/></a>
       </div>
     );

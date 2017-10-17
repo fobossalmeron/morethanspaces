@@ -38,6 +38,9 @@ class SingleItem extends Component {
   }
 
   componentDidMount() {
+    $('#visualizer').bind('contextmenu', function(e) {
+        return false;
+    });
    this.setState({
      mainImage: this.props.images[0].url
     });

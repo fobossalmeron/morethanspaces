@@ -845,6 +845,7 @@ form{
     padding: 20px;
     font-size:1em;
     font-family: inherit;
+    resize: none;
     transition: .4s ease all;
   }
   button{
@@ -1490,7 +1491,13 @@ input[type=text]{
 
 //3D
 
-
+#visualizer{
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+-moz-user-select: none;     /* Firefox all */
+-ms-user-select: none;      /* IE 10+ */
+-o-user-select: none;
+user-select: none;
+}
 
 iframe{
   position: absolute;

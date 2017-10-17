@@ -17,10 +17,20 @@ class Nav extends Component {
   doToggleMenu(){
     this.setState({ menuOn: !this.state.menuOn})
     document.body.classList.toggle('restrictBody')
+    document.addEventListener('touchstart', this.touchstart);
+    document.addEventListener('touchmove', this.touchmove);
+    function touchstart(e) {
+        e.preventDefault()
+    }
+    function touchmove(e) {
+        e.preventDefault()
+    }
   }
   doHideNav(){
     this.setState({ menuOn: false});
     document.body.classList.remove('restrictBody')
+    document.removeEventListener('touchstart', this.touchstart);
+    document.removeEventListener('touchmove', this.touchmove);
   }
 
   componentDidMount(){

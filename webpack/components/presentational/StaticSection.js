@@ -40,7 +40,7 @@ class StaticSection extends Component {
             </div>
             <h3>full service <em>- the smarter approach to trade show!</em></h3>
             <p>We are here to help by making it the <b>best experience</b> possible at a price you feel comfortable with!
-            Innovative designs, turn-key a-to-z solutions. We like to keep it <b>simple for you</b> and always guarantee to be on time. We are so sure in our service that we will match or beat any of our competitors’ prices <b>up to 20%</b>. Join our trusted list of clients such as <b>Nike</b>, <b>MoneyGarm</b>, <b>CapitalOne</b>, <b>Coca-Cola</b>, and others!</p>
+            Innovative designs, turn-key A-to-Z solutions. We like to keep it <b>simple for you</b> and always guarantee to be on time. We are so sure in our service that we will match or beat any of our competitors’ prices <b>up to 20%</b>. Join our trusted list of clients such as <b>Nike</b>, <b>MoneyGram</b>, <b>CapitalOne</b>, <b>Coca-Cola</b>, and others!</p>
           </li>
           </div>
           <div className="row">

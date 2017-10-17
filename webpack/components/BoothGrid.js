@@ -34,6 +34,9 @@ class BoothGrid extends Component {
    }
 
    componentDidMount() {
+     $('#boothGrid').bind('contextmenu', function(e) {
+         return false;
+     });
     this.loadFromServer();
   }
 
@@ -97,7 +100,7 @@ class BoothGrid extends Component {
       <li key={item.id}
           onClick={() => this.generateSingleItem(item.id, item.description, item.obj, item.images, item.width, item.length, item.rent, item.own, item.tags)}
           className={"boothGridItem"}>
-          <img src={'/' + item.images[0].url} alt={item.id}/>
+          <img className="noSelect" src={'/' + item.images[0].url} alt={item.id}/>
           <label>
             {item.id}
             {item.tags.map((tag, index) => <div className={"tagItem tag" + tag} key={"tagKey" + index}>{tag.toLowerCase()}</div>)}

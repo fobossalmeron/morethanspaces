@@ -114,6 +114,7 @@ class BoothGrid extends Component {
                     tags={this.state.tags}
                     obj={this.state.obj}
                     images={this.state.images}
+                    weHaveUser={this.props.weHaveUser}
                     doRenderBoothInstaQuote={this.props.doRenderBoothInstaQuote.bind(this)}/>
       );
 

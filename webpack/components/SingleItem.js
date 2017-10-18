@@ -52,17 +52,21 @@ class SingleItem extends Component {
   nextStepBoothInstaQuote(event){
     this.props.doRenderBoothInstaQuote();
     var myself = this
-    setTimeout(function(){
-      myself.submitForm("submitMeBooth");
-    }, 3000);
+    if (this.props.weHaveUser === true) {
+      setTimeout(function(){
+        myself.submitForm("submitMeBooth");
+      }, 3000);
+    }
   }
 
   nextStepVideoWallInstaQuote(event){
     this.props.doRenderVideoWallInstaQuote();
     var myself = this
-    setTimeout(function(){
-      myself.submitForm("submitMeWall");
-    }, 3000);
+    if (this.props.weHaveUser === true) {
+      setTimeout(function(){
+        myself.submitForm("submitMeWall");
+      }, 3000);
+    }
   }
 
   handleView(value){

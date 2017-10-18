@@ -120,7 +120,7 @@ class CollectBeforeQuote extends Component {
           var data = values;
 
           var xhr = new XMLHttpRequest();
-              xhr.open('POST', url, true);
+              xhr.open('POST', dummyUrl, true);
               xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
               xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
 
@@ -146,7 +146,6 @@ class CollectBeforeQuote extends Component {
 
         validate={({ name, email, phone }) => {
           return {
-            name: !name ? '*A name is required' : undefined,
             phone:
               !phone ?
             '*Phone number is missing' :
@@ -172,7 +171,9 @@ class CollectBeforeQuote extends Component {
             '*Sorry for the inconvenience but we only work with businesses, please provide a business email' :
               email.search(/@hotmail.com/i) !== -1?
             '*Sorry for the inconvenience but we only work with businesses, please provide a business email' :
-              undefined
+              undefined,
+              name:
+                !name ? '*A name is required' : undefined
           }
         }}
         >

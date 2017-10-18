@@ -93,6 +93,7 @@ class VideoWallGrid extends Component {
                     singleValue={this.state.singleValue}
                     tags={this.state.tags}
                     images={this.state.images}
+                    weHaveUser={this.props.weHaveUser}
                     no3D={true}
                     doRenderVideoWallInstaQuote={this.props.doRenderVideoWallInstaQuote.bind(this)}/>
       );

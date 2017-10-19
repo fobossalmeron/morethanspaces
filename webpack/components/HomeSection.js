@@ -28,7 +28,7 @@ class HomeSection extends Component {
       fullVideo: true,
       loop: false,
       muted: false
-    }, () => playVideo())
+    }, () => playVideo()) 
   }
 
   backToLanding(){

@@ -931,6 +931,7 @@ form{
     width:75%;
     float:left;
     margin:0px;
+    list-style: none;
     li{
       width: 26.5%;
       float: left;
@@ -939,6 +940,7 @@ form{
       background-repeat: no-repeat;
       min-height: 100px;
       box-sizing: border-box;
+      list-style: none;
       margin-right: 10%;
       opacity:0;
       transition: .4s ease all;

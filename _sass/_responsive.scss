@@ -413,6 +413,9 @@
 }
 
 @include media-query($x600-down) {
+  #playForMobile{
+    display:block;
+  }
   iframe.visualizer{
       min-height:250px;
   }

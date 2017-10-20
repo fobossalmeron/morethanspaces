@@ -875,7 +875,7 @@ form{
 }
 
 .destroy{
-  display:none;
+  display:none !important;
 }
 
 .half-card{
@@ -1704,24 +1704,26 @@ iframe.visualizer{
     margin-right:2%;
     clear:none;
     width:20%;
+    height: 65px;
     border-radius: 2px;
   }
   p{
     float: left;
-    font-size: .8em;
+    font-size: 1em;
     padding-top: 10px;
     margin-bottom: -5px;
     clear: both;
     font-weight: 700;
   }
   button{
-    width: 25%;
+    width: auto;
     clear: none;
     float:right;
     font-weight: $bold-font-weight;
     margin-top: 0;
     padding: 1.7%;
     border-radius: 2px;
+    height:65px;
     &:hover{
       background-color: darken($magenta, 10%);
     }
@@ -1831,13 +1833,13 @@ iframe.visualizer{
   border-radius: 2px;
   float: left;
   font-size: 2em;
-  filter: blur(12px); /* Someday, sigh ... */
-  -webkit-filter: blur(12px); /* Prefixed CSS3 blur filters */
-  -moz-filter: blur(12px);
-  -o-filter: blur(12px);
-  -ms-filter: blur(12px);
-  filter:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="blur"><feGaussianBlur stdDeviation="12"/></filter></svg>#blur'); /* Firefox needs SVG */
-  filter: blur(12px);
+  filter: blur(15px); /* Someday, sigh ... */
+  -webkit-filter: blur(15px); /* Prefixed CSS3 blur filters */
+  -moz-filter: blur(15px);
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="blur"><feGaussianBlur stdDeviation="15"/></filter></svg>#blur'); /* Firefox needs SVG */
+  filter: blur(15px);
   filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
   transition: .4s ease all;
   -webkit-touch-callout: none;
@@ -2348,5 +2350,19 @@ background-color:$white;
   transition: .4s ease all;
   &:hover{
     background-color:$blue;
+  }
+}
+
+#playForMobile{
+  width: 70px;
+  display: none;
+  height: 70px;
+  z-index: 2;
+  position: absolute;
+  top: 40%;
+  transform: translateX(-50%);
+  left: 50%;
+  svg{
+    fill: $yellow;
   }
 }

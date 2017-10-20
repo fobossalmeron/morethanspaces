@@ -18,14 +18,22 @@ class HomeSection extends Component {
   this.playFullVideo = this.playFullVideo.bind(this);
   this.backToLanding = this.backToLanding.bind(this);
   this.playVideo = this.playVideo.bind(this);
+  this.mobilePlayVideo = this.mobilePlayVideo.bind(this);
   this.pauseVideo = this.pauseVideo.bind(this);
   }
 
   playVideo(){
-      this.setState({
-        playing: true
-      })
-    }
+    this.setState({
+      playing: true
+    })
+  }
+
+  mobilePlayVideo(){
+    this.setState({
+      playing: true
+    })
+    document.getElementById("playForMobile").classList.add("destroy")
+  }
 
   playFullVideo(){
     this.setState({
@@ -36,9 +44,6 @@ class HomeSection extends Component {
       muted: false,
       playing: true
     }, () => this.playVideo())
-    setTimeout(function(){
-      this.playVideo()
-    }, 1000);
   }
 
   backToLanding(){
@@ -71,9 +76,12 @@ class HomeSection extends Component {
     )
 
     var videoControls = (
-      <div className='overVideo controllsVideo'>
-          <button onClick={this.backToLanding}><CloseIcon/></button>
-          {pauseOrPlay}
+      <div>
+        <div onClick={this.mobilePlayVideo} id='playForMobile'><ArrowForwardIcon/></div>
+        <div className='overVideo controllsVideo'>
+            <button onClick={this.backToLanding}><CloseIcon/></button>
+            {pauseOrPlay}
+        </div>
       </div>
     )
 

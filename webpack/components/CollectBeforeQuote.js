@@ -68,7 +68,7 @@ class CollectBeforeQuote extends Component {
       <Text field='price' className='hidden'/>
 
       <button id={"submitMe" + isBoothOrWall} type='submit'>reveal base quote now!</button>
-      <p>Enter your information to reveal instant base quote</p>
+      <p>enter your information to reveal instant base quote</p>
       </div>
     )
     var renderInVegas = this.props.eventInVegas? "in" : "outside";

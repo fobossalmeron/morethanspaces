@@ -33,7 +33,8 @@ class HomeSection extends Component {
       playsinline: false,
       fullVideo: true,
       loop: false,
-      muted: false
+      muted: false,
+      playing: true
     }, () => this.playVideo())
     setTimeout(function(){
       this.playVideo()

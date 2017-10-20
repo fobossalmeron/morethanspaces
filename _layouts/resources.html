@@ -4,12 +4,27 @@
   {% include head-notfound.html %}
 
   <body>
+
+    <script>
+      $(function() {
+        var viewerElement = document.getElementById("viewer");
+        var myWebViewer = new PDFTron.WebViewer({
+          path: "/resources/WebViewer/lib",
+          type: "html5",
+          l: "fobos.salmeron@gmail.com:7324b8bd016f952763893920ac0cad0fea600518a1f43d3409",
+          documentType: "pdf",
+          initialDoc: "/assets/pdf/{{page.resource}}"
+        }, viewerElement);
+      });
+    </script>
+
   {{ content }}
     <a href="/assets/pdf/{{page.resource}}" download="{{page.resource}}">
       <div className={"bounce"} id="downloadButton"></div>
     </a>
     <section id="pdfViewer">
-      <embed src="/assets/pdf/{{page.resource}}" type='application/pdf'>
+      <div id="viewer"></div>
+      <!--<embed src="/assets/pdf/{{page.resource}}" type='application/pdf'>-->
     </section>
     <div id="layout"></div>
     <script type="text/javascript" src="/assets/js/notfound.js" charset="utf-8"></script>

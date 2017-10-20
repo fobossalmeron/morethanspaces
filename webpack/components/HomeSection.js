@@ -21,6 +21,12 @@ class HomeSection extends Component {
   this.pauseVideo = this.pauseVideo.bind(this);
   }
 
+  playVideo(){
+      this.setState({
+        playing: true
+      })
+    }
+
   playFullVideo(){
     this.setState({
       url: "assets/video/full.mp4",
@@ -28,7 +34,13 @@ class HomeSection extends Component {
       fullVideo: true,
       loop: false,
       muted: false
-    }, () => playVideo()) 
+    }, () => playVideo())
+    setTimeout(function(){
+      document.getElementById("pauseMe").click();
+    }, 1000);
+    setTimeout(function(){
+      document.getElementById("playMe").click();
+    }, 1500);
   }
 
   backToLanding(){
@@ -40,11 +52,7 @@ class HomeSection extends Component {
       muted: true
     })
   }
-  playVideo(){
-    this.setState({
-      playing: true
-    })
-  }
+
   pauseVideo(){
     this.setState({
       playing: false
@@ -61,7 +69,7 @@ class HomeSection extends Component {
       </div>
     )
     var pauseOrPlay = (
-      this.state.playing? <button onClick={this.pauseVideo}><PauseIcon/></button> : <button onClick={this.playVideo}><ArrowForwardIcon/></button>
+      this.state.playing? <button id="pauseMe" onClick={this.pauseVideo}><PauseIcon/></button> : <button id="playMe" onClick={this.playVideo}><ArrowForwardIcon/></button>
     )
 
     var videoControls = (

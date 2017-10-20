@@ -34,13 +34,7 @@ class HomeSection extends Component {
       fullVideo: true,
       loop: false,
       muted: false
-    }, () => playVideo())
-    setTimeout(function(){
-      document.getElementById("pauseMe").click();
-    }, 1000);
-    setTimeout(function(){
-      document.getElementById("playMe").click();
-    }, 1500);
+    }, () => this.playVideo())
   }
 
   backToLanding(){

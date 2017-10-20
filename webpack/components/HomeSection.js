@@ -35,6 +35,9 @@ class HomeSection extends Component {
       loop: false,
       muted: false
     }, () => this.playVideo())
+    setTimeout(function(){
+      this.playVideo()
+    }, 1000);
   }
 
   backToLanding(){

@@ -29,10 +29,8 @@ class HomeSection extends Component {
   }
 
   mobilePlayVideo(){
-    this.pauseVideo();
-    this.setState({
-      playing: true
-    });
+    document.getElementById("pauseMe").click();
+    setTimeout(function(){document.getElementById("playMe").click();}, 500)
     document.getElementById("playForMobile").classList.add("destroy");
   }
 

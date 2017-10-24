@@ -13,7 +13,7 @@ class HomeSection extends Component {
       loop: true,
       muted: true,
       playsinline: true,
-      url: 'assets/video/intro.mp4',
+      url: 'assets/video/intro.mp4'
     };
   this.playFullVideo = this.playFullVideo.bind(this);
   this.backToLanding = this.backToLanding.bind(this);
@@ -29,10 +29,11 @@ class HomeSection extends Component {
   }
 
   mobilePlayVideo(){
+    this.pauseVideo();
     this.setState({
       playing: true
-    })
-    document.getElementById("playForMobile").classList.add("destroy")
+    });
+    document.getElementById("playForMobile").classList.add("destroy");
   }
 
   playFullVideo(){
@@ -41,8 +42,7 @@ class HomeSection extends Component {
       playsinline: false,
       fullVideo: true,
       loop: false,
-      muted: false,
-      playing: true
+      muted: false
     }, () => this.playVideo())
   }
 

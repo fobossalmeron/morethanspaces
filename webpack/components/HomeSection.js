@@ -41,7 +41,8 @@ class HomeSection extends Component {
       fullVideo: true,
       loop: false,
       muted: false
-    }, () => this.playVideo())
+    }, () => this.forceUpdate())
+    this.playVideo()
   }
 
   backToLanding(){
@@ -84,7 +85,6 @@ class HomeSection extends Component {
     )
 
     var doShowOver = (this.state.fullVideo? videoControls : showOver)
-
     return (
       <section id="home">
         {doShowOver}

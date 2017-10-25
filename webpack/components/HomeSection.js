@@ -13,7 +13,8 @@ class HomeSection extends Component {
       loop: true,
       muted: true,
       playsinline: true,
-      url: 'assets/video/intro.mp4'
+      url: 'assets/video/intro.mp4',
+      playerKey: 'oneKey'
     };
   this.playFullVideo = this.playFullVideo.bind(this);
   this.backToLanding = this.backToLanding.bind(this);
@@ -34,6 +35,12 @@ class HomeSection extends Component {
     document.getElementById("playForMobile").classList.add("destroy");
   }
 
+  changeKey(){
+    this.setState({
+      playerKey: 'twoKey'
+    })
+  }
+
   playFullVideo(){
     this.setState({
       url: "assets/video/full.mp4",
@@ -41,7 +48,7 @@ class HomeSection extends Component {
       fullVideo: true,
       loop: false,
       muted: false
-    }, () => this.forceUpdate())
+    }, () => this.changeKey())
     this.playVideo()
   }
 
@@ -51,7 +58,8 @@ class HomeSection extends Component {
       fullVideo: false,
       playsinline: true,
       loop: true,
-      muted: true
+      muted: true,
+      playerKey: 'oneKey'
     })
   }
 
@@ -62,6 +70,9 @@ class HomeSection extends Component {
   }
   componentDidMount(){
     this.setState({playing:true})
+  }
+  componentWillReceiveProps(nextProps){
+
   }
   render (){
     var showOver = (
@@ -90,7 +101,7 @@ class HomeSection extends Component {
         {doShowOver}
         <div id="homevideo">
             <div className="video_overlay"></div>
-            <ReactPlayer url={this.state.url} playing={this.state.playing} loop={this.state.loop} muted={this.state.muted} playsinline={this.state.playsinline} onEnded={this.backToLanding}/>
+            <ReactPlayer key={this.state.playerKey} url={this.state.url} playing={this.state.playing} loop={this.state.loop} muted={this.state.muted} playsinline={this.state.playsinline} onEnded={this.backToLanding}/>
         </div>
       </section>
     );

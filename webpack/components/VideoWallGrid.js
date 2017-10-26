@@ -13,6 +13,7 @@ class VideoWallGrid extends Component {
       individualVideoWallRender: this.props.individualVideoWallRender,
       singleValue: '',
       description: '',
+      video: '',
       images:[],
       tags: [],
       rent: '',
@@ -36,11 +37,12 @@ class VideoWallGrid extends Component {
     this.loadFromServer();
   }
 
-  generateSingleVideoWall(singleValue, description, images, rent, size, diagonal, tags){
+  generateSingleVideoWall(singleValue, description, images, rent, size, diagonal, tags, video){
     this.setState({
       singleValue: singleValue,
       description: description,
       rent: rent,
+      video: video,
       images : images,
       tags: tags,
       size: size,
@@ -77,7 +79,7 @@ class VideoWallGrid extends Component {
       }
     }).map((item, index) => (
       <li key={item.id}
-          onClick={() => this.generateSingleVideoWall(item.id, item.description, item.images, item.rent, item.size, item.diagonal, item.tags)}
+          onClick={() => this.generateSingleVideoWall(item.id, item.description, item.images, item.rent, item.size, item.diagonal, item.tags, item.video)}
           className={"boothGridItem"}>
           <img src={'/' + item.images[0].url} alt={item.id}/>
           <label>
@@ -91,6 +93,7 @@ class VideoWallGrid extends Component {
        <SingleItem  instaQuoteVideoWall={true}
                     description={this.state.description}
                     singleValue={this.state.singleValue}
+                    video={this.state.video}
                     tags={this.state.tags}
                     images={this.state.images}
                     weHaveUser={this.props.weHaveUser}

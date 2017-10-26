@@ -4,6 +4,7 @@ import SketchFab from './SketchFab';
 import Slider from 'react-slick';
 import Arrow from './presentational/Arrow';
 import DangerouslySet from './presentational/DangerouslySet';
+import ReactPlayer from 'react-player';
 
 function SampleNextArrow(props) {
   const {className, style, onClick} = props
@@ -28,7 +29,8 @@ class SingleItem extends Component {
     super(props);
     this.state = {
       mainImage: '',
-      render3D: false
+      render3D: false,
+      showVideo: false
     };
     this.submitForm = this.submitForm.bind(this);
   }
@@ -70,8 +72,13 @@ class SingleItem extends Component {
   }
 
   handleView(value){
-    value !== "3D" ?
-    this.setState({mainImage: this.props.images[value].url, render3D:false}) : this.setState({render3D:true})
+    if (value == "3D"){
+      this.setState({render3D:true, showVideo:false});
+    } else if (value == "Video"){
+      this.setState({render3D:false, showVideo:true});
+    } else {
+      this.setState({mainImage: this.props.images[value].url, render3D:false, showVideo: false})
+    }
   }
 
   render() {
@@ -103,6 +110,8 @@ class SingleItem extends Component {
     };
     var choice3D = (this.state.render3D ? <SketchFab obj={this.props.obj} /> : null);
 
+    var choiceVideo = (this.state.showVideo ? <ReactPlayer className="singleVideo" url={this.props.video} playing={true} loop={false} muted={true} playsinline={true}/> : null);
+
     var thumbnailClasses = this.props.instaQuoteVideoWall? "onlyTwo" : "justOne"
 
     var numberOfImages = this.props.images.map((image, index) => (
@@ -111,6 +120,10 @@ class SingleItem extends Component {
 
     var trigger3D = (
       this.props.no3D? '' : <img key={"3D"} className={"thumbnailBooth"} onClick={() => this.handleView("3D")} src="assets/img/layout/3dTrigger.svg"/>
+    )
+
+    var triggerVideo = (
+      (typeof this.props.video == 'undefined')? '' : <img key={"Video"} className={"thumbnailBooth"} onClick={() => this.handleView("Video")} src="assets/img/layout/videoTrigger.svg"/>
     )
 
     var sliderSettings = (
@@ -123,16 +136,18 @@ class SingleItem extends Component {
       :
       <Slider className={"heightSlider"} {...sliderSettings}>
           {trigger3D}
+          {triggerVideo}
           {numberOfImages}
       </Slider>
     )
 
-    var hideImage = this.state.render3D? '' : <img src={'/' + this.state.mainImage} className="visualizer" id="visualizer" alt={this.props.singleValue}/>
+    var choiceImage = (this.state.render3D || this.state.showVideo)? '' : <img src={'/' + this.state.mainImage} className="visualizer" id="visualizer" alt={this.props.singleValue}/>
 
     var imageOptions = (
       <div className="singleImage">
-            { hideImage }
+            { choiceImage }
             { choice3D }
+            { choiceVideo }
           {imageMenu}
       </div>
     );

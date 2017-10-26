@@ -23,6 +23,7 @@ class ContactSection extends Component {
       <div>
         <Text field='name' placeholder='your name'/>
         <Text field='email' placeholder='your email'/>
+        <Text field='phone' placeholder='your phone'/>
         <Text field='business' placeholder='your business name'/>
         <Textarea
           field='message'
@@ -86,11 +87,17 @@ class ContactSection extends Component {
                   }
             }}
 
-            validate={({ name, email, business, message }) => {
+            validate={({ name, email, phone, business, message }) => {
               return {
                 name: !name ? 'A name is required' : undefined,
                 business: !business ? 'A business name is required' : undefined,
                 message: !message? 'The message cannot be empty' : undefined,
+                phone:
+                  !phone ?
+                '*Phone number is missing' :
+                  !phone.match(/^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/)?
+                '*Please enter a valid phone number' :
+                undefined,
                 email:
                   !email ?
                 'The email cannot be empty' :

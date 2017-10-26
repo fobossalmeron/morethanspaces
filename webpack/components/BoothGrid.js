@@ -12,6 +12,7 @@ class BoothGrid extends Component {
       individualBoothRender: this.props.individualBoothRender,
       singleValue: '',
       description: '',
+      video: '',
       tags: [],
       obj: '',
       images:[],
@@ -40,11 +41,12 @@ class BoothGrid extends Component {
     this.loadFromServer();
   }
 
-  generateSingleItem(singleValue, description, obj, images, width, length, rent, own, tags){
+  generateSingleItem(singleValue, description, obj, images, width, length, rent, own, tags, video){
     this.setState({
       singleValue: singleValue,
       description: description,
       tags: tags,
+      video: video,
       obj: obj,
       images : images,
       width: width,
@@ -98,7 +100,7 @@ class BoothGrid extends Component {
       }
     }).map((item, index) => (
       <li key={item.id}
-          onClick={() => this.generateSingleItem(item.id, item.description, item.obj, item.images, item.width, item.length, item.rent, item.own, item.tags)}
+          onClick={() => this.generateSingleItem(item.id, item.description, item.obj, item.images, item.width, item.length, item.rent, item.own, item.tags, item.video)}
           className={"boothGridItem"}>
           <img className="noSelect" src={'/' + item.images[0].url} alt={item.id}/>
           <label>
@@ -111,6 +113,7 @@ class BoothGrid extends Component {
     var singleBooth = (
        <SingleItem  description={this.state.description}
                     singleValue={this.state.singleValue}
+                    video={this.state.video}
                     tags={this.state.tags}
                     obj={this.state.obj}
                     images={this.state.images}

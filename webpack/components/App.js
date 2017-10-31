@@ -10,6 +10,7 @@ import ContactSection from './ContactSection';
 import DiscountBanner from './presentational/DiscountBanner';
 import DiscountsCarousel from './presentational/DiscountsCarousel';
 import ReactPlayer from 'react-player';
+import scrollToComponent from 'react-scroll-to-component';
 
 class App extends Component {
   constructor(props) {
@@ -120,13 +121,13 @@ class App extends Component {
         <DiscountBanner discountBanner={this.state.discountBanner}/>
         <DiscountsCarousel />
         <QuoteTabs tabIndex={this.state.tabIndex}
-                    discountOn={this.state.discountOn}
-                    discountNumber={this.state.discountNumber}
-                    discountType={this.state.discountType}
-                    goToTab={this.goToTab.bind(this)}/>
-        <StaticSection/>
-        <ContactSection/>
-        <Footer/>
+                   discountOn={this.state.discountOn}
+                   discountNumber={this.state.discountNumber}
+                   discountType={this.state.discountType}
+                   goToTab={this.goToTab.bind(this)}/>
+        <StaticSection />
+        <ContactSection />
+        <Footer />
       </div>
     )
     var doRenderApp = this.state.maintenance? maintenanceScreen : app;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
+import screenfull from 'screenfull';
 import CloseIcon from 'svg-react-loader?name=CloseIcon!../../assets/img/layout/cross.svg';
 import PauseIcon from 'svg-react-loader?name=PauseIcon!../../assets/img/layout/pause.svg';
 import ArrowForwardIcon from 'svg-react-loader?name=ArrowForwardIcon!../../assets/img/layout/arrowforward.svg';
@@ -33,6 +34,10 @@ class HomeSection extends Component {
     document.getElementById("pauseMe").click();
     setTimeout(function(){document.getElementById("playMe").click();}, 500)
     document.getElementById("playForMobile").classList.add("destroy");
+    const el = document.getElementById('#homevideo video');
+    if (screenfull.enabled) {
+      screenfull.request(el);
+    }
   }
 
   changeKey(){

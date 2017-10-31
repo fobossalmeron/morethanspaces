@@ -107,11 +107,13 @@ class ContactSection extends Component {
                 'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
                   email.search(/@aol.com/i) !== -1?
                 'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+                  email.search(/@msn.com/i) !== -1?
+                'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
                   email.search(/@icloud.com/i) !== -1?
                 'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
                   email.search(/@me.com/i) !== -1?
                 'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
-                  email.search(/yahoo.com/i) !== -1?
+                  email.search(/@yahoo.com/i) !== -1?
                 'Sorry for the inconvenience but we only work with businesses, please provide a business email' :
                   email.search(/@live.com/i) !== -1?
                 'Sorry for the inconvenience but we only work with businesses, please provide a business email' :

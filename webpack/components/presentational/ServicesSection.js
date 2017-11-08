@@ -7,26 +7,12 @@ import CustomRentalBoothIcon from 'svg-react-loader?name=CustomRentalBoothIcon!.
 import AssembleDismantleIcon from 'svg-react-loader?name=AssembleDismantleIcon!../../../assets/img/layout/icons/assembledismantle.svg';
 import StorageShippingIcon from 'svg-react-loader?name=StorageShippingIcon!../../../assets/img/layout/icons/storageshipping.svg';
 import FullServiceIcon from 'svg-react-loader?name=FullServiceIcon!../../../assets/img/layout/icons/fullservice.svg';
-import NikeIcon from 'svg-react-loader?name=NikeIcon!../../../assets/img/clients/clientNike.svg';
-import CocaColaIcon from 'svg-react-loader?name=CocaColaIcon!../../../assets/img/clients/clientCocaCola.svg';
-import ChanelIcon from 'svg-react-loader?name=ChanelIcon!../../../assets/img/clients/clientChanel.svg';
-import MoneyGramIcon from 'svg-react-loader?name=MoneyGramIcon!../../../assets/img/clients/clientMoneyGram.svg';
-import CapitalOneIcon from 'svg-react-loader?name=CapitalOneIcon!../../../assets/img/clients/clientCapitalOne.svg';
-import BaseFIcon from 'svg-react-loader?name=BaseFIcon!../../../assets/img/clients/clientBaseF.svg';
-import NovartisIcon from 'svg-react-loader?name=NovartisIcon!../../../assets/img/clients/clientNovartis.svg';
-import DiageoIcon from 'svg-react-loader?name=DiageoIcon!../../../assets/img/clients/clientDiageo.svg';
-import KraftIcon from 'svg-react-loader?name=KraftIcon!../../../assets/img/clients/clientKraft.svg';
-import PepsicoIcon from 'svg-react-loader?name=PepsicoIcon!../../../assets/img/clients/clientPepsico.svg';
-import BMWIcon from 'svg-react-loader?name=BMWIcon!../../../assets/img/clients/clientBMW.svg';
-import BossIcon from 'svg-react-loader?name=BossIcon!../../../assets/img/clients/clientBoss.svg';
-
 
 class StaticSection extends Component {
 
   render (){
 
     return (
-      <div>
       <section id="services">
         <div id="servicesvideo">
             <ReactPlayer url={"assets/video/yellow.mp4"} playing={true} loop={true} muted={true} playsinline={true}/>
@@ -114,58 +100,6 @@ class StaticSection extends Component {
           </div>
         </ul>
       </section>
-
-      <section id="about">
-        <h2><b>about us</b></h2>
-        <div className="half-card frompdf">
-          <span>1,</span> <span>2,</span> <span>3 </span> <span> go</span>
-          <p>All you have to do is show up and <b>let the show begin!</b></p>
-          <div id="stepbox1" className="stepbox"><b>1:</b><p>communicate your<br/>need and choose</p></div>
-          <div id="stepbox2" className="stepbox"><b>2:</b><p>we create and<br/>make it happen</p></div>
-          <div id="stepbox3" className="stepbox"><b>3:</b><p>we deliver<br/>…and take care of it all</p></div>
-          <div className="stepblackbox"><b className="arbitraryPink">best price, best quality</b><p>we try to <b>match or beat any price</b> up to <b>20%</b></p></div>
-        </div>
-        <div className="half-card">
-          <h2 className="motto">
-            <b>we don’t believe in pressure sales,<br/>
-            schedule with confidence</b>
-          </h2>
-          <div className="stepyellowbox">
-            <p><b>more for less</b><br/>better service, better products, <br/>better results, less stress, less worry</p>
-          </div>
-          <h1><b>more than spaces</b></h1>
-          <ul>
-            <li>Established and located in Las Vegas, <b>the convention capital</b>, we understand the world of trade shows.</li>
-            <li>Believes in creativity, simplicity and <b>good prices</b> - and always to go over and beyond with a smile.</li>
-            <li>Is a concept by <b>design:success</b> a world leading design and innovation company. </li>
-            <li>Trusted by the world’s most iconic brands and <b>Fortune500</b> companies.</li>
-          </ul>
-          <p>We proudly work with companies, event planners and agencies across the USA and international.</p>
-        </div>
-      </section>
-
-      <section id="clients">
-        <div className="column">
-          <h3>we are trusted by</h3>
-          <img src="assets/img/layout/yourlogohere.svg"/>
-        </div>
-        <ul>
-          <li className="clientNike">Nike<NikeIcon/></li>
-          <li className="clientCocaCola">Coca-Cola<CocaColaIcon/></li>
-          <li className="clientChanel">Chanel<ChanelIcon/></li>
-          <li className="clientMoneyGram">MoneyGram<MoneyGramIcon/></li>
-          <li className="clientCapitalOne">CapitalOne<CapitalOneIcon/></li>
-          <li className="clientBaseF">BaseF<BaseFIcon/></li>
-          <li className="clientNovartis">Novartis<NovartisIcon/></li>
-          <li className="clientDiageo">Diageo<DiageoIcon/></li>
-          <li className="clientKraft">Kraft<KraftIcon/></li>
-          <li className="clientPepsico">Pepsico<PepsicoIcon/></li>
-          <li className="clientBMW">BMW<BMWIcon/></li>
-          <li className="clientBoss">Boss<BossIcon/></li>
-        </ul>
-        <p className="manyMore">...and many more</p>
-      </section>
-      </div>
     );
   }
 };

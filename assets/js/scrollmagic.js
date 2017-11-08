@@ -68,26 +68,3 @@ var client11 = new ScrollMagic.Scene({triggerElement: ".clientBMW", offset:-150}
 var client12 = new ScrollMagic.Scene({triggerElement: ".clientBoss", offset:-150})
         .setClassToggle( ".clientBoss", "fadeIn")
         .addTo(controller);
-
-// change behaviour of controller to animate scroll instead of jump
-controller.scrollTo(function (newpos) {
-      TweenMax.to(window, 0.5, {scrollTo: {y: newpos + -60}});
-      $(window).scrollTop($(window).scrollTop() + 1);
-      $(window).scrollTop($(window).scrollTop() - 1);
-});
-
-//  bind scroll to anchor links
-$(document).on("click", "a[href^='#']", function (e) {
-    var id = $(this).attr("href");
-    if ($(id).length > 0) {
-    e.preventDefault();
-
-    // trigger scroll
-    controller.scrollTo(id);
-
-    // if supported by the browser we can even update the URL.
-    if (window.history && window.history.pushState) {
-        history.pushState("", document.title, id);
-      }
-    }
-  });

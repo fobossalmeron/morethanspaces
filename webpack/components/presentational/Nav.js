@@ -41,6 +41,34 @@ class Nav extends Component {
     }
   }
 
+  doScrollToAbout(event){
+    if (typeof this.props.scrollToAbout !== 'undefined') {
+      event.preventDefault();
+      this.props.scrollToAbout();
+      if (window.history && window.history.pushState) {
+        history.pushState("", document.title, "#about");
+      }
+    }
+  }
+  doScrollToServices(){
+    if (typeof this.props.scrollToServices !== 'undefined') {
+      event.preventDefault();
+      this.props.scrollToServices();
+      if (window.history && window.history.pushState) {
+        history.pushState("", document.title, "#services");
+      }
+    }
+  }
+  doScrollToContact(){
+    if (typeof this.props.scrollToContact !== 'undefined') {
+      event.preventDefault();
+      this.props.scrollToContact();
+      if (window.history && window.history.pushState) {
+        history.pushState("", document.title, "#contact");
+      }
+    }
+  }
+
   navScrollMagic(){
       var offset
     if (typeof this.props.barNav !== 'undefined'){
@@ -64,28 +92,13 @@ class Nav extends Component {
 
   handleNavClick(booth){
     this.props.goToTab(booth);
+    this.props.scrollToDiscountBanner();
+    console.log("to discount banner")
+    var myself = this
     var timeout = setTimeout(function(){
-      controller.scrollTo("#products");
-      if (window.history && window.history.pushState) {
-          history.pushState("", document.title, '#products');
-      }
+      console.log("to before products")
+      myself.props.scrollToProducts();
     }, 1500);
-    //Firefox
-      $('body').bind('DOMMouseScroll', function(e){
-      if(e.detail > 0) {
-          clearTimeout(timeout)
-      } else {
-          clearTimeout(timeout)
-      }
-      });
-   //IE, Opera, Safari
-      $('body').bind('mousewheel', function(e){
-      if(e.wheelDelta< 0) {
-          clearTimeout(timeout)
-      }else {
-          clearTimeout(timeout)
-      }
-    });
   }
 
   render (){
@@ -105,11 +118,11 @@ class Nav extends Component {
         {isThereDiscount}
         <HamburgerIcon onClick={this.doToggleMenu} className={"menuButton " + isActive}/>
         <ul className={isActive}>
-          <li onClick={() => {this.handleNavClick(0); this.doHideNav()}}><a href={baseUrl + "#discountbanner"}>booths</a></li>
-          <li onClick={() => {this.handleNavClick(1); this.doHideNav()}}><a href={baseUrl + "#discountbanner"}>videowalls</a></li>
-          <li onClick={() => this.doHideNav()}><a href={baseUrl + "#services"}>services</a></li>
-          <li onClick={() => this.doHideNav()}><a href={baseUrl + "#about"}>about</a></li>
-          <li onClick={() => this.doHideNav()}><a href={baseUrl + "#contact"}>contact</a></li>
+          <li onClick={() => {this.handleNavClick(0); this.doHideNav()}}><a href={baseUrl + "#products"}>booths</a></li>
+          <li onClick={() => {this.handleNavClick(1); this.doHideNav()}}><a href={baseUrl + "#products"}>videowalls</a></li>
+          <li onClick={() => {this.doHideNav(); this.doScrollToServices()}}><a href={baseUrl + "#services"}>services</a></li>
+          <li onClick={() => {this.doHideNav(); this.doScrollToAbout(event)}}><a href={baseUrl + "#about"}>about</a></li>
+          <li onClick={() => {this.doHideNav(); this.doScrollToContact()}}><a href={baseUrl + "#contact"}>contact</a></li>
         </ul>
       </nav>
     );

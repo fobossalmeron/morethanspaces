@@ -17,7 +17,7 @@ class InstaQuoteButton extends Component {
 
   render (){
     return (
-        <a onClick={this.props.scrollToComponent}>
+        <a onClick={this.props.scrollToProducts} href={"#products"}>
           <div className={"bounce"} id="instaQuoteButton"><InstaQuoteIcon/></div>
         </a>
     );

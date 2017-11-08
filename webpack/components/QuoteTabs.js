@@ -182,10 +182,10 @@ class QuoteTabs extends Component {
 
   render(){
     return (
-      <section id="products" ref={(section) => { this.Products = section; }}>
+      <section id="products">
       <InstaQuoteButton renderBoothInstaQuote={this.state.renderBoothInstaQuote}
                         renderVideoWallInstaQuote={this.state.renderVideoWallInstaQuote}
-                        scrollToComponent={() => scrollToComponent(this.Products, { offset: -50, align: 'top'})}/>
+                        scrollToProducts={this.props.scrollToProducts}/>
 
       <Tabs forceRenderTabPanel={true} selectedIndex={this.props.tabIndex} onSelect={tabIndex => this.props.goToTab( tabIndex )}>
         <TabList>

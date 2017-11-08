@@ -5,9 +5,11 @@ import Carousel from './Carousel';
 import QuoteTabs from './QuoteTabs';
 import Nav from './presentational/Nav';
 import Footer from './presentational/Footer';
-import StaticSection from './presentational/StaticSection';
+import ServicesSection from './presentational/ServicesSection';
 import ContactSection from './ContactSection';
 import DiscountBanner from './presentational/DiscountBanner';
+import AboutSection from './presentational/AboutSection';
+import ClientsSection from './presentational/ClientsSection';
 import DiscountsCarousel from './presentational/DiscountsCarousel';
 import ReactPlayer from 'react-player';
 import scrollToComponent from 'react-scroll-to-component';
@@ -115,18 +117,28 @@ class App extends Component {
              toggleMenu={this.toggleMenu.bind(this)}
              hideNav={this.hideNav.bind(this)}
              menuOn={this.state.menuOn}
-             barNav/>
+             barNav
+             scrollToAbout={() => scrollToComponent(this.About, { offset: -50, align: 'top'})}
+             scrollToContact={() => scrollToComponent(this.Contact, { offset: -50, align: 'top'})}
+             scrollToServices={() => scrollToComponent(this.Services, { offset: -50, align: 'top'})}
+             scrollToProducts={() => scrollToComponent(this.Products, { offset: -50, align: 'top'})}
+             scrollToDiscountBanner={() => scrollToComponent(this.DiscountBanner, { offset: -50, align: 'top'})}/>
         <HomeSection />
         <Carousel />
-        <DiscountBanner discountBanner={this.state.discountBanner}/>
+        <DiscountBanner discountBanner={this.state.discountBanner}
+                        ref={(section) => { this.DiscountBanner = section; }}/>
         <DiscountsCarousel />
         <QuoteTabs tabIndex={this.state.tabIndex}
                    discountOn={this.state.discountOn}
                    discountNumber={this.state.discountNumber}
                    discountType={this.state.discountType}
-                   goToTab={this.goToTab.bind(this)}/>
-        <StaticSection />
-        <ContactSection />
+                   goToTab={this.goToTab.bind(this)}
+                   ref={(section) => { this.Products = section; }}
+                   scrollToProducts={() => scrollToComponent(this.Products, { offset: -50, align: 'top'})}/>
+        <ServicesSection ref={(section) => { this.Services = section; }}/>
+        <AboutSection ref={(section) => { this.About = section; }}/>
+        <ClientsSection />
+        <ContactSection ref={(section) => { this.Contact = section; }}/>
         <Footer />
       </div>
     )

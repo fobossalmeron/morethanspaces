@@ -5,7 +5,7 @@ number: 50
 type: percentage
 banner: BannerNovember.png
 text: 'OFF booths to own '
-smallText: '& video wall rental in LV'
+smallText: '& video wall rental in Las Vegas'
 ---
 ![]({{site.baseurl}}/C:\Users\Nemanja\Desktop\MTS\MTS_BlackFriday_Final\Banners\50banner.png)
 

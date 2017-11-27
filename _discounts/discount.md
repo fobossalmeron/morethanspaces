@@ -1,11 +1,10 @@
 ---
 published: true
 discount: 'true'
-number: 20
+number: 50
 type: percentage
 banner: BannerNovember.png
-text: on booths $25k+
-smallText: not exceeding $6000
+text: on booths to own & video wall rental
 ---
 ![]({{site.baseurl}}/C:\Users\Nemanja\Desktop\MTS\MTS_BlackFriday_Final\Banners\50banner.png)
 

@@ -3,7 +3,7 @@ published: true
 discount: 'true'
 number: 20
 type: percentage
-banner: BannerNovember.jpg
+banner: BannerNovember.png
 text: on booths $25k+
 smallText: not exceeding $6000
 ---

@@ -1,5 +1,4 @@
 ---
-permalink: 'conventions/:title/'
 layout: convention
 published: true
 title: ICS WEST

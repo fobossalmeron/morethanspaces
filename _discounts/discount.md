@@ -1,13 +1,10 @@
 ---
 published: true
-discount: 'true'
-number: 50
+discount: 'false'
+number: 0
 type: percentage
-banner: BannerNovember.png
-text: 'OFF booths to own'
-smallText: '& video wall rental in Las Vegas'
 ---
-![]({{site.baseurl}}/C:\Users\Nemanja\Desktop\MTS\MTS_BlackFriday_Final\Banners\50banner.png)
+![]({{site.baseurl}}/C:\Users\Nemanja\Desktop\MTS_BannerArtboard 1 copy 7.png)
 
 
 

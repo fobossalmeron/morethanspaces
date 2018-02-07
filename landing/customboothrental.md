@@ -1,10 +1,12 @@
 ---
-layout: convention
-landing: true
 title: Custom Booth Rental
 permalink: customboothrental/
+layout: convention
+landing: true
 logo: MTS.svg
-meta_description: Get more for less! 20% Off. See exclusive trade show booth designs in 3D & VR. Rent/Own. Video walls rental. Vegas & Nationwide. World Class Friendly Service.
+meta_description: Get more for less! 20% Off. See exclusive trade show booth designs
+  in 3D & VR. Rent/Own. Video walls rental. Vegas & Nationwide. World Class Friendly
+  Service.
 ---
 
 We’re a first of its kind modern design booth company with the best deals in town. Cheapest rates up to 20% discount for Las Vegas trade show booths - rent or even own. Modern turn-key trade booth solutions; huge selections of displays for any type of special event. Feel the difference - See your Trade Show booth in Virtual Reality and 3D. Schedule with confidence with our friendly customer service team. We're the best quality equipment and always on time delivery for your trade show needs.  

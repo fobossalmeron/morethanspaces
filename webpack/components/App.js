@@ -134,7 +134,7 @@ class App extends Component {
                    discountType={this.state.discountType}
                    goToTab={this.goToTab.bind(this)}
                    ref={(section) => { this.Products = section; }}
-                   scrollToProducts={() => scrollToComponent(this.Products, { offset: -50, align: 'top'})}/>
+                   scrollToContact={() => scrollToComponent(this.Contact, { offset: -50, align: 'top'})}/>
         <ServicesSection ref={(section) => { this.Services = section; }}/>
         <AboutSection ref={(section) => { this.About = section; }}/>
         <ClientsSection />

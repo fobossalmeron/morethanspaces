@@ -5,19 +5,11 @@ import InstaQuoteIcon from 'svg-react-loader?name=InstaQuoteIcon!../../../assets
 class InstaQuoteButton extends Component {
   constructor(props) {
     super(props);
-    this.scrollToProducts = this.scrollToProducts.bind(this);
-  }
-
-  scrollToProducts(){
-    controller.scrollTo("#products");
-    if (window.history && window.history.pushState) {
-        history.pushState("", document.title, '#products');
-    }
   }
 
   render (){
     return (
-        <a onClick={this.props.scrollToProducts} href={"#products"}>
+        <a onClick={this.props.scrollToContact} href={'#contact'}>
           <div className={"bounce"} id="instaQuoteButton"><InstaQuoteIcon/></div>
         </a>
     );

@@ -8,10 +8,16 @@
       <div class="convention_card">
         <h2>your tradeshow expert for</h2>
         <h1><b>{{ page.title }}</b></h1>
-        <h3>{{ page.convention_date }}. {{ page.location }}</h3>
+        {% if page.convention_date %}
+          <h3>{{ page.convention_date }}. {{ page.location }}</h3>
+        {% endif %}
       </div>
       <div class="convention_card">
-        <img src="../../assets/img/conventions/{{page.logo}}">
+        {% if page.image %}
+          <img src="../../assets/img/services/{{page.image}}">
+        {% else if page.logo %}
+          <img src="../../assets/img/conventions/{{page.logo}}">
+        {% endif %}
       </div>
     </div>
     <section id="convention">

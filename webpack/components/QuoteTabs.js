@@ -185,7 +185,7 @@ class QuoteTabs extends Component {
       <section id="products">
       <InstaQuoteButton renderBoothInstaQuote={this.state.renderBoothInstaQuote}
                         renderVideoWallInstaQuote={this.state.renderVideoWallInstaQuote}
-                        scrollToProducts={this.props.scrollToProducts}/>
+                        scrollToContact={this.props.scrollToContact}/>
 
       <Tabs forceRenderTabPanel={true} selectedIndex={this.props.tabIndex} onSelect={tabIndex => this.props.goToTab( tabIndex )}>
         <TabList>

@@ -508,7 +508,7 @@ section{
     display: inline-block;
     color: $white;
     width:100%;
-    float:left;
+    float: left;
     clear:both;
     line-height: 1.20;
   }
@@ -596,7 +596,7 @@ section{
     right: 0;
     bottom: 0;
     top: 0;
-    background-image:url("../img/layout/overlay.png");
+    background-image: url("../img/layout/overlay.png");
   }
 
   video{
@@ -656,7 +656,7 @@ section{
       float:right;
     }
     ul {
-      margin:0px;
+      margin: 0px;
       li {
           transition: .5s ease all;
           transform: translateX(-10%);
@@ -2383,5 +2383,44 @@ background-color:$white;
   left: 50%;
   svg{
     fill: $yellow;
+  }
+}
+
+.mts_status {
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  grid-gap: 20px;
+  li{
+    list-style: none;
+    border: 2px solid $magenta;
+    border-width: 0 1px 1px 0;
+    display: grid;
+    grid-template-areas: "title image" "url image" "meta image";
+    grid-template-columns: 2fr 1fr;
+  }
+  h4{
+    grid-area: title;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  p{
+    grid-area:meta;
+    font-size:.8rem;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  span{
+    grid-area: url;
+    font-size:.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: $yellow;
+  }
+  img{
+    grid-area: image;
+    max-width: 150px;
   }
 }

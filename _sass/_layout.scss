@@ -726,6 +726,7 @@ section{
     color: $white;
     float: left;
     padding: 2%;
+    width: 100%;
       p{
         margin:0;
         width: 100%;
@@ -755,7 +756,8 @@ section{
     }
     &:nth-of-type(1){
       background-color: $strongYellow;
-      width:75%;
+      width:78%;
+      height: 105px;
     }
     &:nth-of-type(2){
       background-color: $blue;
@@ -774,6 +776,7 @@ section{
   color: $black;
   border-radius: 2px;
   width:100%;
+  font-size: 1.3em;
   float: left;
   padding: 2%;
   margin-bottom: 2%;
@@ -2283,6 +2286,7 @@ background-color:$white;
 }
 .arbitraryPink{
   color:$magenta;
+  font-size: 1.3em;
 }
 
 .noBackground{

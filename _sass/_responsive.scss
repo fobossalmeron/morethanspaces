@@ -193,6 +193,9 @@
       top:60px;
     }
   }
+  .frompdf .stepbox:nth-of-type(1) {
+    width: 85%;
+  }
 }
 
 @include media-query($x900-down) {
@@ -248,9 +251,18 @@
       padding:2% 2% 0 0;
     }
   }
+  .frompdf .stepbox:nth-of-type(1) {
+    width: 95%;
+  }
 }
 
 @include media-query($x800-down) {
+  .stepyellowbox {
+    margin: 4% 0 2% 0;
+  }
+  .frompdf .stepbox:nth-of-type(1) {
+    width: 70%;
+  }
   .convention_card{
     width:100%;
     &:nth-of-type(2){
@@ -418,6 +430,9 @@
 }
 
 @include media-query($x600-down) {
+  .frompdf .stepbox:nth-of-type(1) {
+    width: 94%;
+  }
   #playForMobile{
     display:block;
   }

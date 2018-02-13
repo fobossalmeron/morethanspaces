@@ -13,6 +13,9 @@ import ClientsSection from './presentational/ClientsSection';
 import DiscountsCarousel from './presentational/DiscountsCarousel';
 import ReactPlayer from 'react-player';
 import scrollToComponent from 'react-scroll-to-component';
+import { loadDiscount } from '../services/navservice.js';
+import CaptureLead from './CaptureLead';
+
 
 class App extends Component {
   constructor(props) {
@@ -26,43 +29,33 @@ class App extends Component {
         discountText: '',
         discountSmallText: '',
         discountBanner: '',
+        weHaveUser: false,
+        name: '',
+        email: '',
+        phone: '',
         maintenance: false
       };
-    this.loadDiscounts = this.loadDiscounts.bind(this);
+    this.loadDiscount = loadDiscount.bind(this);
     this.quitMaintenance = this.quitMaintenance.bind(this);
     this.initScrollMagic = this.initScrollMagic.bind(this);
+  }
+
+  generateUser(name, email, phone){
+    this.setState({
+      weHaveUser: true,
+      name: name,
+      email: email,
+      phone: phone
+    })
   }
 
   toggleMenu(){
     this.setState({ menuOn: !this.state.menuOn})
   }
+
   hideNav(){
     this.setState({ menuOn: false});
   }
-
-  loadDiscounts () {
-       var xhr = new XMLHttpRequest();
-       xhr.open('get', './assets/discounts/discount.js', true);
-       xhr.onload = function() {
-           var discountDigest = JSON.parse(xhr.responseText);
-           console.log(discountDigest);
-           var discountIsOn
-           if (discountDigest.discountOn == 'true'){
-             var discountIsOn = true
-           } else if (discountDigest.discountOn == 'false'){
-             var discountIsOn = false
-           }
-           this.setState({
-             discountOn: discountIsOn,
-             discountNumber: discountDigest.discountNumber,
-             discountType: discountDigest.discountType,
-             discountText: discountDigest.discountText,
-             discountSmallText: discountDigest.discountSmallText,
-             discountBanner: discountDigest.discountBanner
-           });
-       }.bind(this);
-       xhr.send();
-   }
 
    initScrollMagic(){
      const script = document.createElement("script");
@@ -77,7 +70,7 @@ class App extends Component {
    }
 
    componentDidMount() {
-    this.loadDiscounts();
+    this.loadDiscount(this);
     if (this.state.maintenance == false){
       this.initScrollMagic();
     }
@@ -123,6 +116,7 @@ class App extends Component {
              scrollToServices={() => scrollToComponent(this.Services, { offset: -50, align: 'top'})}
              scrollToProducts={() => scrollToComponent(this.Products, { offset: -50, align: 'top'})}
              scrollToDiscountBanner={() => scrollToComponent(this.DiscountBanner, { offset: -50, align: 'top'})}/>
+        <CaptureLead generateUser={this.generateUser.bind(this)}/>
         <HomeSection />
         <Carousel />
         <DiscountBanner discountBanner={this.state.discountBanner}
@@ -134,6 +128,11 @@ class App extends Component {
                    discountType={this.state.discountType}
                    goToTab={this.goToTab.bind(this)}
                    ref={(section) => { this.Products = section; }}
+                   generateUser={this.generateUser.bind(this)}
+                   weHaveUser={this.state.weHaveUser}
+                   name={this.state.name}
+                   email={this.state.email}
+                   phone={this.state.phone}
                    scrollToContact={() => scrollToComponent(this.Contact, { offset: -50, align: 'top'})}/>
         <ServicesSection ref={(section) => { this.Services = section; }}/>
         <AboutSection ref={(section) => { this.About = section; }}/>

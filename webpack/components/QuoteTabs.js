@@ -29,22 +29,9 @@ class QuoteTabs extends Component {
       renderBoothInstaQuote: false,
       renderVideoWallInstaQuote: false,
       revealInstaQuote: false,
-      renderCollectors: true,
-      weHaveUser: false,
-      name: '',
-      email: '',
-      phone: ''
+      renderCollectors: true
     };
     this.clickFor = this.clickFor.bind(this);
-  }
-
-  generateUser(name, email, phone){
-    this.setState({
-      weHaveUser: true,
-      name: name,
-      email: email,
-      phone: phone
-    })
   }
 
   seeState(){
@@ -250,11 +237,11 @@ class QuoteTabs extends Component {
                         discountType={this.props.discountType}
                         hideCollectors={this.hideCollectors.bind(this)}
                         renderCollectors={this.state.renderCollectors}
-                        generateUser={this.generateUser.bind(this)}
-                        name={this.state.name}
-                        email={this.state.email}
-                        phone={this.state.phone}
-                        weHaveUser={this.state.weHaveUser}/>
+                        generateUser={this.props.generateUser.bind(this)}
+                        name={this.props.name}
+                        email={this.props.email}
+                        phone={this.props.phone}
+                        weHaveUser={this.props.weHaveUser}/>
         </TabPanel>
         <TabPanel>
           <VideoWallForm toggleVideoWall={this.toggleVideoWall.bind(this)}
@@ -285,11 +272,11 @@ class QuoteTabs extends Component {
                          discountType={this.props.discountType}
                          hideCollectors={this.hideCollectors.bind(this)}
                          renderCollectors={this.state.renderCollectors}
-                         generateUser={this.generateUser.bind(this)}
-                         name={this.state.name}
-                         email={this.state.email}
-                         phone={this.state.phone}
-                         weHaveUser={this.state.weHaveUser}/>
+                         generateUser={this.props.generateUser.bind(this)}
+                         name={this.props.name}
+                         email={this.props.email}
+                         phone={this.props.phone}
+                         weHaveUser={this.props.weHaveUser}/>
         </TabPanel>
       </Tabs>
       </section>

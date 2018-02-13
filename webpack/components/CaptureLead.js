@@ -1,27 +1,22 @@
 import React, { Component } from 'react';
-import { Form, Text, NestedForm, FormError } from 'react-form'
-import Check from './presentational/Check';
-import InstaQuote from './presentational/InstaQuote';
+import { Form, Text, NestedForm, FormError } from 'react-form';
 
-class CollectBeforeQuote extends Component {
+class CaptureLead extends Component {
   constructor(props) {
     super(props);
-  this.revealQuote = this.revealQuote.bind(this);
+    this.state = {
+      successMessage: false
+    }
   this.doGenerateUser = this.doGenerateUser.bind(this);
-  this.boothOrWall = this.boothOrWall.bind(this);
+  this.successMessage = this.successMessage.bind(this);
   }
 
   submitForm(){
-      document.getElementById("submitMe").click();
+      document.getElementById("submitMeCaptureLead").click();
   }
 
   doGenerateUser(name, email, phone){
     this.props.generateUser(name, email, phone);
-  }
-
-  revealQuote(){
-    this.props.doRevealInstaQuote();
-    this.props.hideCollectors();
   }
 
   isUserSelected(){
@@ -29,68 +24,27 @@ class CollectBeforeQuote extends Component {
       var defaultName = this.props.name
     }
   }
-
-  boothOrWall(){
-    var renderOrNot
-    if (typeof this.props.wantToOwn !== 'undefined') {
-      renderOrNot = "Booth"
-    } else {
-      renderOrNot = "Wall"
-    }
-    return renderOrNot
-  }
-
-  componentDidMount(){
-    if (this.props.renderCollectors == false){
-    }
-  }
-
-  ifVideowallNoDiscount(){
-    var renderOrNot
-    if (typeof this.props.wantToOwn !== 'undefined') {
-      return true
-    }
-    return false
+  successMessage(){
+    this.setState({
+      successMessage: true
+    })
   }
 
   render (){
-    var calendlyUrl = 'https://calendly.com/morethanspaces'
-    var isBoothOrWall = this.boothOrWall();
-    var displayForm = (this.props.renderCollectors? '' : 'hidden')
+    var displayForm = (this.props.weHaveUser? 'hidden' : this.state.successMessage? 'hidden' : '')
+    var message = (<p className="successMessage">we'll contact you shortly!</p>)
+    var displayMessage = (this.state.successMessage? message : '')
     var actualForm = (
-      <div className={displayForm}>
+      <div className={"leadgrid " + displayForm}>
       <Text field='name' placeholder='your name'/>
       <Text field='email' placeholder='your email'/>
       <Text field='phone' placeholder='your phone'/>
-      <Text field='model' className='hidden'/>
-      <Text field='convention' className='hidden'/>
-      <Text field='addons' className='hidden'/>
-      <Text field='price' className='hidden'/>
-
-      <button id={"submitMe" + isBoothOrWall} type='submit'>reveal base quote now!</button>
-      <p>enter your information to reveal instant base quote</p>
+      <Text field='business' placeholder='your business'/>
+      <Text field='page' className='hidden'/>
+      <button id={"submitMeCaptureLead"} type='submit'>free quote now!</button>
       </div>
     )
-    var renderInVegas = this.props.eventInVegas? "in" : "outside";
-    var renderTv = this.props.addTv? "They added a TV." : '';
-    var renderVideoWall = this.props.addVideoWall? "They added a videowall." : '';
-    var renderRentOwn = this.props.wantToOwn? "own" : "rent";
 
-    var narrateDiscount = (
-      ' - ' + this.props.discountNumber + this.props.discountSymbol() + ' discount = $' + this.props.finalPrice
-    )
-    var preNarrate = this.ifVideowallNoDiscount()? narrateDiscount : '';
-    var price = this.props.discountOn? '$' + this.props.originalPrice + preNarrate : '$' + this.props.originalPrice + ". No discount applied.";
-
-    var addons = (
-      renderTv + " " + renderVideoWall
-    )
-    var redacted = (
-      "This person quoted the " + this.props.singleValue + " model with the original price of $" + this.props.originalPrice + ". "
-    )
-    var convention = (
-      "They want to " + renderRentOwn + " it and the event is " + renderInVegas + " Las Vegas."
-    )
     var name = (
       this.props.weHaveUser? this.props.name : ''
     )
@@ -100,21 +54,24 @@ class CollectBeforeQuote extends Component {
     var phone = (
       this.props.weHaveUser? this.props.phone : ''
     )
+    var page = (
+      document.URL
+    )
+
     return (
-      <div id="dataCollector">
+      <div id="captureLead">
       <Form
 
         defaultValues={{
-            model: redacted,
-            convention: convention,
-            price: price,
+            business: '',
+            page: page,
             name: name,
             email: email,
             phone: phone
         }}
 
         onSubmit={(values) => {
-          /*console.log('Form Submitted Succesfully with:', values)*/
+          console.log('Form Submitted Succesfully with:', values)
 
           const url = 'https://formspree.io/hello@morethanspaces.com';
           const dummyUrl = 'https://formspree.io/fobos.salmeron@gmail.com';
@@ -138,8 +95,8 @@ class CollectBeforeQuote extends Component {
                     console.log(JSON.parse(responseText).error);
 
                 } else if (response.target.status === 200) {
-                    console.log('Success! Here is your quote');
-                    myself.revealQuote();
+                    console.log('Success! Information sent!');
+                    myself.successMessage();
                     myself.doGenerateUser(data.name, data.email, data.phone);
                   }
               }
@@ -183,6 +140,7 @@ class CollectBeforeQuote extends Component {
         {({submitForm}) => {
           return (
             <div>
+            {displayMessage}
             <form onSubmit={submitForm}>
             {actualForm}
             </form>
@@ -195,4 +153,4 @@ class CollectBeforeQuote extends Component {
   }
 };
 
-export default CollectBeforeQuote;
+export default CaptureLead;

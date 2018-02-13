@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 import Nav from './components/presentational/Nav';
 import Footer from './components/presentational/Footer';
 import ConventionsStatic from './components/presentational/ConventionsStatic';
+import { loadDiscount } from './services/navservice.js';
 
 class Conventions extends Component {
   constructor(props) {
@@ -15,32 +16,9 @@ class Conventions extends Component {
         discountText: '',
         discountSmallText: '',
         discountBanner: ''
-      };
-    this.loadDiscounts = this.loadDiscounts.bind(this);
+      };    
+      this.loadDiscount = loadDiscount.bind(this);
   }
-  loadDiscounts () {
-       var xhr = new XMLHttpRequest();
-       xhr.open('get', '/assets/discounts/discount.js', true);
-       xhr.onload = function() {
-           var discountDigest = JSON.parse(xhr.responseText);
-           console.log(discountDigest);
-           var discountIsOn
-           if (discountDigest.discountOn == 'true'){
-             var discountIsOn = true
-           } else if (discountDigest.discountOn == 'false'){
-             var discountIsOn = false
-           }
-           this.setState({
-             discountOn: discountIsOn,
-             discountNumber: discountDigest.discountNumber,
-             discountType: discountDigest.discountType,
-             discountText: discountDigest.discountText,
-             discountSmallText: discountDigest.discountSmallText,
-             discountBanner: discountDigest.discountBanner
-           });
-       }.bind(this);
-       xhr.send();
-   }
    toggleMenu(){
      this.setState({ menuOn: !this.state.menuOn})
    }
@@ -48,7 +26,7 @@ class Conventions extends Component {
      this.setState({ menuOn: false});
    }
    componentDidMount() {
-    this.loadDiscounts();
+    this.loadDiscount(this);
   }
   render() {
     return (

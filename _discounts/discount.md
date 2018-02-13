@@ -1,11 +1,11 @@
 ---
 published: true
-discount: 'false'
-number: 0
+discount: 'true'
+number: 10
 type: percentage
 banner: BannerNoDiscount.png
-text: ' '
-smallText: ' '
+text: ' off in videowalls'
+smallText: 'un purchases over $5,000'
 ---
 
 Use this file to upload the new banner and edit the discount.

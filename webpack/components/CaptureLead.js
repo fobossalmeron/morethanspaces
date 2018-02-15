@@ -59,7 +59,7 @@ class CaptureLead extends Component {
     )
 
     return (
-      <div id="captureLead">
+      <div id="captureLead" className="discounts-menu">
       <Form
 
         defaultValues={{
@@ -116,21 +116,21 @@ class CaptureLead extends Component {
               !email.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)?
             '*Please give a valid email' :
               email.search(/@gmail.com/i) !== -1?
-            '*Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+            '*Please provide a business email' :
               email.search(/@aol.com/i) !== -1?
-            '*Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+            '*Please provide a business email' :
               email.search(/@icloud.com/i) !== -1?
-            '*Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+            '*Please provide a business email' :
               email.search(/@me.com/i) !== -1?
-            '*Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+            '*Please provide a business email' :
               email.search(/@msn.com/i) !== -1?
-            '*Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+            '*Please provide a business email' :
               email.search(/@yahoo.com/i) !== -1?
-            '*Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+            '*Please provide a business email' :
               email.search(/@live.com/i) !== -1?
-            '*Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+            '*Please provide a business email' :
               email.search(/@hotmail.com/i) !== -1?
-            '*Sorry for the inconvenience but we only work with businesses, please provide a business email' :
+            '*Please provide a business email' :
               undefined,
               name:
                 !name ? '*A name is required' : undefined

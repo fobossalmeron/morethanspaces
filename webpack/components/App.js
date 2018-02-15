@@ -14,7 +14,6 @@ import DiscountsCarousel from './presentational/DiscountsCarousel';
 import ReactPlayer from 'react-player';
 import scrollToComponent from 'react-scroll-to-component';
 import { loadDiscount } from '../services/navservice.js';
-import CaptureLead from './CaptureLead';
 
 
 class App extends Component {
@@ -110,13 +109,14 @@ class App extends Component {
              toggleMenu={this.toggleMenu.bind(this)}
              hideNav={this.hideNav.bind(this)}
              menuOn={this.state.menuOn}
+             generateUser={this.generateUser.bind(this)}
+             weHaveUser={this.state.weHaveUser}
              barNav
              scrollToAbout={() => scrollToComponent(this.About, { offset: -50, align: 'top'})}
              scrollToContact={() => scrollToComponent(this.Contact, { offset: -50, align: 'top'})}
              scrollToServices={() => scrollToComponent(this.Services, { offset: -50, align: 'top'})}
              scrollToProducts={() => scrollToComponent(this.Products, { offset: -50, align: 'top'})}
              scrollToDiscountBanner={() => scrollToComponent(this.DiscountBanner, { offset: -50, align: 'top'})}/>
-        <CaptureLead generateUser={this.generateUser.bind(this)}/>
         <HomeSection />
         <Carousel />
         <DiscountBanner discountBanner={this.state.discountBanner}

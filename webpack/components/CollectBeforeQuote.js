@@ -56,7 +56,7 @@ class CollectBeforeQuote extends Component {
   render (){
     var calendlyUrl = 'https://calendly.com/morethanspaces'
     var isBoothOrWall = this.boothOrWall();
-    var displayForm = (this.props.renderCollectors? '' : 'hidden')
+    var displayForm = (!this.props.renderCollectors ? 'hidden' : this.props.weHaveUser ? 'hidden' : '')
     var actualForm = (
       <div className={displayForm}>
       <Text field='name' placeholder='your name'/>

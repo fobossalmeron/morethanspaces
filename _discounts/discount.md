@@ -1,6 +1,6 @@
 ---
 published: true
-discount: 'true'
+discount: 'false'
 number: 10
 type: percentage
 banner: BannerNoDiscount.png

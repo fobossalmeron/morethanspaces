@@ -57,7 +57,7 @@ class SingleItem extends Component {
     if (this.props.weHaveUser === true) {
       setTimeout(function(){
         myself.submitForm("submitMeBooth");
-      }, 3000);
+      }, 2500);
     }
   }
 
@@ -67,7 +67,7 @@ class SingleItem extends Component {
     if (this.props.weHaveUser === true) {
       setTimeout(function(){
         myself.submitForm("submitMeWall");
-      }, 3000);
+      }, 2500);
     }
   }
 

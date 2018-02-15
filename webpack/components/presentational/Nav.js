@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import HamburgerIcon from 'svg-react-loader?name=HamburgerIcon!../../../assets/img/layout/icons/hamburger.svg';
+import CaptureLead from '../CaptureLead';
 
 class Nav extends Component {
   constructor(props) {
@@ -115,7 +116,7 @@ class Nav extends Component {
     return (
       <nav id={navIsActive}>
         <a href={baseUrl + "#home"}><img src={baseUrl + "assets/img/layout/logo.svg"}/><img src={baseUrl + "assets/img/layout/type.svg"}/></a>
-        {isThereDiscount}
+        <CaptureLead generateUser={this.props.generateUser.bind(this)}/>
         <HamburgerIcon onClick={this.doToggleMenu} className={"menuButton " + isActive}/>
         <ul className={isActive}>
           <li onClick={() => {this.handleNavClick(0); this.doHideNav()}}><a href={baseUrl + "#products"}>booths</a></li>

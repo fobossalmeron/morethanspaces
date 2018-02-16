@@ -1,7 +1,7 @@
 ---
 layout: convention
 title: Tradeshow Booth
-image: tradeshowbooth.jpg
+image: tradeshowbooth.png
 meta_description: Unique design, Great Prices, Great Service. Get a Free Design Consultation on High-Quality Trade Show Presentation. Get Started Today.
 ---
 

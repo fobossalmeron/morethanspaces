@@ -1,7 +1,7 @@
 ---
 layout: convention
 title: Tradeshow Booth LV
-image: tradeshowboothlv.jpg
+image: tradeshowboothlv.png
 meta_description: Get more for less! See exclusive trade show booth designs in 3D & VR. Rent/Own. Video walls rental. Vegas & Nationwide. World Class Friendly Service.
 ---
 

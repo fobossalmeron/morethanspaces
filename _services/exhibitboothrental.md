@@ -1,7 +1,7 @@
 ---
 layout: convention
 title: Exhibit Booth Rental
-image: exhibitboothrental.jpg
+image: exhibitboothrental.png
 meta_description: Get more for less! See exclusive trade show booth designs in 3D & VR. Rent/Own. Video walls rental. Vegas & Nationwide. World Class Friendly Service.
 ---
 

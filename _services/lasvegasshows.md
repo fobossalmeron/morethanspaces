@@ -1,7 +1,7 @@
 ---
 layout: convention
 title: Las Vegas Shows
-image: lasvegasshows.jpg
+image: lasvegasshows.png
 meta_description: Browse Many Styles. Hundreds of booths. Great Selection, On-time Delivery & The Best Prices Around. Shop Now!
 ---
 

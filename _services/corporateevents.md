@@ -1,7 +1,7 @@
 ---
 layout: convention
 title: Corporate Events
-image: corporateevents.jpg
+image: corporateevents.png
 meta_description: Best Priced Equipment. Quality Audio Visual. Expert and Friendly Service. Local and Nationwide Rentals. Let us help with your event! 
 ---
 

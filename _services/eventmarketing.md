@@ -1,7 +1,7 @@
 ---
 layout: convention
 title: Event Marketing
-image: eventmarketing.jpg
+image: eventmarketing.png
 meta_description: Save Money on Innovative Booth Design. Best Quality. Better Prices. On-time Delivery. More for Less. Call Today.
 ---
 

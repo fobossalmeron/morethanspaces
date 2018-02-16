@@ -1,7 +1,7 @@
 ---
 layout: convention
 title: Las Vegas Exhibit Rental
-image: lasvegasexhibitrental.jpg
+image: lasvegasexhibitrental.png
 meta_description: Save Money on Innovative Booth Design. Best Quality. Better Prices. On-time Delivery. More for Less. Call Today.
 ---
 

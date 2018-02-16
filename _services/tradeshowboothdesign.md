@@ -1,7 +1,7 @@
 ---
 layout: convention
 title: Tradeshow Booth Design
-image: tradeshowboothdesign.jpg
+image: tradeshowboothdesign.png
 meta_description: Browse Many Styles. Hundreds of booths. Great Selection, On-time Delivery & The Best Prices Around. Shop Now!
 ---
 

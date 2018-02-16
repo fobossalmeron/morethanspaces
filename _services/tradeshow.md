@@ -1,7 +1,7 @@
 ---
 layout: convention
 title: Tradeshow
-image: tradeshow.jpg
+image: tradeshow.png
 meta_description: When It Comes To Trade Shows, Represent Your Uniqueness With A Custom Booth. Video Walls & Displays. Save Big. Great Service. More for Less.
 ---
 

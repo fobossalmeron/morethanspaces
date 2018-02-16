@@ -5,13 +5,13 @@ permalink: /mts_status/
 ---
 
 <header id="pageNotFound">
-<h2>Total of: {{ site.services.size }} Services Landing Pages</h2>
+<h2>Total of: {{ site.services.size }} Service Landing Pages</h2>
 <ul class="mts_status">
   {% assign sorted_services = site.services | sort: 'title' %}
   {% for service in sorted_services %}
   <li>
   <h4>{{service.title}}</h4>
-  <span>{{service.url}}</span>
+  <span><a href="{{service.url}}">{{service.url}}</a></span>
   <p> {{service.meta_description}}</p>
   <img src="../assets/img/services/{{service.image}}"> 
   </li>

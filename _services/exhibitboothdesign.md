@@ -1,7 +1,7 @@
 ---
 layout: convention
 title: Exhibit Booth Design
-image: exhibitboothdesign.jpg
+image: exhibitboothdesign.png
 meta_description: Browse Many Styles. Hundreds of booths. Great Selection, On-time Delivery & The Best Prices Around. Shop Now!
 ---
 

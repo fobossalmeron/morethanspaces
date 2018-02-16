@@ -1,7 +1,7 @@
 ---
 layout: convention
 title: Exhibit Booth Company
-image: exhibitboothcompany.jpg
+image: exhibitboothcompany.png
 meta_description: Get The Best Presentation For Your Next Trade Show. Call More Than Spaces Today! Quality Service. Free Design Consultation. Best Prices.
 ---
 

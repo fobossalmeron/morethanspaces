@@ -1,7 +1,7 @@
 ---
 layout: convention
 title: Free Custom Booth Design
-image: freecustomboothdesign.jpg
+image: freecustomboothdesign.png
 meta_description: Save Money on Innovative Booth Design. Best Quality. Better Prices. On-time Delivery. More for Less. Call Today.
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: convention
 title: Friendly Service
-image: friendlyservice.jpg
+image: friendlyservice.png
 meta_description: Choose From A Variety of High-Quality & Professional Video Walls. LCD and LED Video Walls. Get In Touch Today To Plan Your Next Event. 
 ---
 

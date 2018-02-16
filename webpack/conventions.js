@@ -15,17 +15,29 @@ class Conventions extends Component {
         discountType: '',
         discountText: '',
         discountSmallText: '',
-        discountBanner: ''
+        discountBanner: '',
+        weHaveUser: false,
+        name: '',
+        email: '',
+        phone: ''
       };    
       this.loadDiscount = loadDiscount.bind(this);
   }
-   toggleMenu(){
-     this.setState({ menuOn: !this.state.menuOn})
-   }
-   hideNav(){
-     this.setState({ menuOn: false});
-   }
-   componentDidMount() {
+  generateUser(name, email, phone){
+    this.setState({
+      weHaveUser: true,
+      name: name,
+      email: email,
+      phone: phone
+    })
+  }
+  toggleMenu(){
+    this.setState({ menuOn: !this.state.menuOn})
+  }
+  hideNav(){
+    this.setState({ menuOn: false});
+  }
+  componentDidMount() {
     this.loadDiscount(this);
   }
   render() {
@@ -40,7 +52,9 @@ class Conventions extends Component {
              discountSmallText={this.state.discountSmallText}
              toggleMenu={this.toggleMenu.bind(this)}
              hideNav={this.hideNav.bind(this)}
-             menuOn={this.state.menuOn} />
+             menuOn={this.state.menuOn} 
+             generateUser={this.generateUser.bind(this)}
+             weHaveUser={this.state.weHaveUser} />
         <ConventionsStatic/>
         <Footer hideIconsBar={true} relativePath="../../"/>
       </div>

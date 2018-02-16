@@ -2434,10 +2434,12 @@ background-color:$white;
   }
   span{
     grid-area: url;
-    font-size:.8rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: $yellow;
+    a{
+      font-size:.8rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: $yellow;
+    }
   }
   img{
     grid-area: image;

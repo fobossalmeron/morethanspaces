@@ -78,7 +78,7 @@ class CaptureLead extends Component {
           var data = values;
 
           var xhr = new XMLHttpRequest();
-              xhr.open('POST', dummyUrl, true);
+              xhr.open('POST', url, true);
               xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
               xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
 

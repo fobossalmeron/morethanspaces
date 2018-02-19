@@ -1,7 +1,7 @@
 ---
-layout: notfound
 title: Status of indexes
-permalink: /mts_status/
+permalink: "/mts_status/"
+layout: notfound
 ---
 
 <header id="pageNotFound">

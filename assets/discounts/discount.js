@@ -1,5 +1,6 @@
 ---
 ---
+
 {% for disc in site.discounts %}
 {
   "discountOn":"{{ disc.discount }}",

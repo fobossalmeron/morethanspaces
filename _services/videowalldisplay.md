@@ -1,8 +1,9 @@
 ---
-layout: convention
 title: Video Wall Display
+layout: convention
 image: videowalldisplay.png
-meta_description: When It Comes To Trade Shows, Represent Your Uniqueness With A Custom Booth. Video Walls & Displays. Save Big. Great Service. More for Less.
+meta_description: When It Comes To Trade Shows, Represent Your Uniqueness With A Custom
+  Booth. Video Walls & Displays. Save Big. Great Service. More for Less.
 ---
 
 We’re a first of its kind modern design booth company with the best deals in town. Cheapest rates up to 20% discount for Las Vegas trade show booths - rent or even own. Modern turn-key trade booth solutions; huge selections of displays for any type of special event. Feel the difference - See your Trade Show booth in Virtual Reality and 3D. Schedule with confidence with our friendly customer service team. We're the best quality equipment and always on time delivery for your trade show needs.  

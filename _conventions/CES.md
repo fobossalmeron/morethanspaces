@@ -1,6 +1,6 @@
 ---
-layout: convention
 title: CES 2018
+layout: convention
 convention_date: January 9-12, 2018
 location: Las Vegas, NV
 logo: CES.svg

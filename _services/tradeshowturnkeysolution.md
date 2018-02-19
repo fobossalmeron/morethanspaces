@@ -1,6 +1,5 @@
 ---
 layout: convention
-landing: true
 title: Tradeshow Turn Key Solution
 image: tradeshowturnkeysolution.jpg
 meta_description: Best Design Quality Selection. Trade Show and Conference Events. Friendly Service. Great Prices. Full Service. No Stress. No Worries.

@@ -2,20 +2,17 @@ title: More Than Spaces | Trade Show & Video Wall Experts – Rent or Own
 email: ns@morethanspaces.com
 description: Get more for less! See exclusive trade show booth designs in 3D & VR. Rent/Own. Video walls rental. Vegas & Nationwide. World Class Friendly Service.
 og_image: "/assets/img/og_image.png"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://morethanspaces.com" # the base hostname & protocol for your site, e.g. http://example.com
-
-# Build settings
+baseurl: ''
+url: http://morethanspaces.com
 markdown: kramdown
 gems:
-  - jekyll-feed
-  - octopress-autoprefixer
+- jekyll-feed
+- octopress-autoprefixer
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - webpack
-
+- Gemfile
+- Gemfile.lock
+- node_modules
+- webpack
 sass:
   style: compressed
 
@@ -32,76 +29,76 @@ collections:
 
 github: [metadata]
 prose:
-    rooturl: '_conventions'
-    media: 'assets/img/conventions'
-    metadata:
-        _conventions:
-        - name: layout
-          field:
-            element: 'hidden'
-            value: 'convention'
-        - name: permalink
-          field:
-            element: 'hidden'
-            value: conventions/:title/
-        - name: title
-          field:
-            element: 'text'
-            label: 'Convention name'
-            value: ''
-        - name: convention_date
-          field:
-            element: 'text'
-            label: 'Date'
-            value: ''
-        - name: location
-          field:
-            element: 'text'
-            label: 'Location'
-            value: ''
-        - name: logo
-          field:
-            element: 'text'
-            label: 'Image/Logo name of file, ej. "CES.png"'
-            value: ''
-        _discounts:
-        - name: 'discount'
-          field:
-            element: 'select'
-            label: 'Turn the discount ON or OFF'
-            placeholder: 'Choose an option'
-            options:
-              - name: 'On'
-                value: 'true'
-              - name: 'Off'
-                value: 'false'
-        - name: 'type'
-          field:
-            element: 'select'
-            label: 'Percentage or Amount'
-            placeholder: 'Choose a category'
-            options:
-              - name: 'Percentage'
-                value: 'percentage'
-              - name: 'Amount'
-                value: 'amount'
-        - name: 'number'
-          field:
-            element: 'number'
-            label: "Specify an amount (Please don't use any signs)"
-            value : ''
-        - name: 'text'
-          field:
-            element: 'text'
-            label: 'Discount text'
-            value: ''
-        - name: 'smallText'
-          field:
-            element: 'text'
-            label: 'Discount small text'
-            value: ''
-        - name: 'banner'
-          field:
-            element: 'text'
-            label: 'Banner name of file, ej. "bannerSeptember.jpg"'
-            value: ''
+  rooturl: _conventions
+  media: assets/img/conventions
+  metadata:
+    _conventions:
+    - name: layout
+      field:
+        element: hidden
+        value: convention
+    - name: permalink
+      field:
+        element: hidden
+        value: conventions/:title/
+    - name: title
+      field:
+        element: text
+        label: Convention name
+        value: ''
+    - name: convention_date
+      field:
+        element: text
+        label: Date
+        value: ''
+    - name: location
+      field:
+        element: text
+        label: Location
+        value: ''
+    - name: logo
+      field:
+        element: text
+        label: Image/Logo name of file, ej. "CES.png"
+        value: ''
+    _discounts:
+    - name: discount
+      field:
+        element: select
+        label: Turn the discount ON or OFF
+        placeholder: Choose an option
+        options:
+        - name: 'On'
+          value: 'true'
+        - name: 'Off'
+          value: 'false'
+    - name: type
+      field:
+        element: select
+        label: Percentage or Amount
+        placeholder: Choose a category
+        options:
+        - name: Percentage
+          value: percentage
+        - name: Amount
+          value: amount
+    - name: number
+      field:
+        element: number
+        label: Specify an amount (Please don't use any signs)
+        value: ''
+    - name: text
+      field:
+        element: text
+        label: Discount text
+        value: ''
+    - name: smallText
+      field:
+        element: text
+        label: Discount small text
+        value: ''
+    - name: banner
+      field:
+        element: text
+        label: Banner name of file, ej. "bannerSeptember.jpg"
+        value: ''

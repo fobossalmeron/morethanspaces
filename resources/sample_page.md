@@ -1,6 +1,7 @@
 ---
-layout: resources
-permalink: /resources/sample/
 title: Sample Page
+permalink: "/resources/sample/"
+layout: resources
 resource: sample.pdf
 ---
+

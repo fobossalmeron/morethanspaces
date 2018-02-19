@@ -1,4 +1,6 @@
 ---
+title: Friendly Service
+permalink: "/friendlyservice/"
 layout: convention
 title: Friendly Service
 image: friendlyservice.png

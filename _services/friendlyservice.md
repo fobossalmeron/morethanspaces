@@ -1,6 +1,5 @@
 ---
 title: Friendly Service
-permalink: "/friendlyservice/"
 layout: convention
 image: friendlyservice.png
 meta_description: Choose From A Variety of High-Quality & Professional Video Walls.

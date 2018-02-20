@@ -430,6 +430,59 @@ section{
     }
   }
 }
+#interactiveKiosk{
+  background-color:$yellow;
+  padding: 1% 4% .5% 4%;
+  color: $black;
+  img{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .arrow-icon{
+    fill: $black;
+    right:0;
+    &:hover{
+      g{
+        stroke-width: 2px;
+      }
+    }
+    g{
+      stroke: $black;
+      transition: .4s ease all;
+    }
+    &.back-arrow{
+      left:0;
+    }
+  }
+  h3{
+    font-weight: bold;
+  }
+  .sliderI{
+    max-width: 250px;
+    font-size: 0.7em;
+    text-align: center;
+  }
+  .slick-slider{
+    position: unset;
+  }
+  .slick-slide{
+    margin-right: 25px;
+    cursor:pointer;
+    transition: .4s ease all;
+    &:hover{
+      opacity:0.8;
+    }
+    &.sliderP{
+      font-size: 1em;
+      max-width: unset;
+      cursor:auto;
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+}
 
 .modalCloseButton{
   position: fixed;

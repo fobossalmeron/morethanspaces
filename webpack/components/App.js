@@ -9,6 +9,7 @@ import ServicesSection from './presentational/ServicesSection';
 import ContactSection from './ContactSection';
 import DiscountBanner from './presentational/DiscountBanner';
 import AboutSection from './presentational/AboutSection';
+import InteractiveKiosk from './presentational/InteractiveKiosk';
 import ClientsSection from './presentational/ClientsSection';
 import DiscountsCarousel from './presentational/DiscountsCarousel';
 import ReactPlayer from 'react-player';
@@ -121,6 +122,7 @@ class App extends Component {
         <Carousel />
         <DiscountBanner discountBanner={this.state.discountBanner}
                         ref={(section) => { this.DiscountBanner = section; }}/>
+        <InteractiveKiosk />
         <DiscountsCarousel />
         <QuoteTabs tabIndex={this.state.tabIndex}
                    discountOn={this.state.discountOn}

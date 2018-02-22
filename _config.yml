@@ -11,7 +11,7 @@ collections:
     output: true
     permalink: "/d/s/:title/"
   posts:
-    title: Posts
+    title: Videowalls
     output: true
   services:
     title: Services
@@ -39,3 +39,23 @@ sass:
   style: compressed
 github:
 - metadata
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "convention"
+      title:
+      meta_description:
+      image: 
+  -
+    scope:
+      path: ""
+      type: "conventions"
+    values:
+      layout: "convention"
+      title: 
+      logo: 
+      convention_date: 

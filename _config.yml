@@ -58,3 +58,18 @@ defaults:
       title: 
       logo: 
       convention_date: 
+  - 
+    scope: 
+      path: ""
+      type: "posts"
+    values:
+      featured: ['true', 'false']
+      id: 
+      tags: ['LCD', 'LED', ]
+      description:
+      rent:
+      size:
+      diagonal:
+      images:
+        url:
+        url:

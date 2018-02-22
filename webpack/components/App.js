@@ -122,7 +122,6 @@ class App extends Component {
         <Carousel />
         <DiscountBanner discountBanner={this.state.discountBanner}
                         ref={(section) => { this.DiscountBanner = section; }}/>
-        <InteractiveKiosk />
         <DiscountsCarousel />
         <QuoteTabs tabIndex={this.state.tabIndex}
                    discountOn={this.state.discountOn}

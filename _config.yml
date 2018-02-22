@@ -21,38 +21,39 @@ collections:
     title: Videowalls
     output: true
 defaults:
-  - scope:
-      path: ''
-      type: services
-    values:
-      layout: "convention"
-      title:
-      meta_description:
-      image: 
-  - scope:
-      path: ''
-      type: conventions
-    values:
-      layout: convention
-      title: 
-      logo: 
-      convention_date: 
-  - scope: 
-      path: ''
-      type: posts
-    values:
-      featured: ['true']
-      id: 
-      tags: ["LCD", "LED", "Tv"]
-      description:
-      rent:
-      size:
-      diagonal:
-      images:
-        url:
-        url:
-        url:
-        url:
+- scope:
+    path: ''
+    type: services
+  values:
+    layout: convention
+    title: 
+    meta_description: 
+    image: 
+- scope:
+    path: ''
+    type: conventions
+  values:
+    layout: convention
+    title: 
+    logo: 
+    convention_date: 
+- scope:
+    path: ''
+    type: posts
+  values:
+    featured:
+    - 'true'
+    id: 
+    tags:
+    - LCD
+    - LED
+    - Tv
+    description: 
+    rent: 
+    size: 
+    diagonal: 
+    images:
+      url: 
 email: hello@morethanspaces.com
 description: Get more for less! See exclusive trade show booth designs in 3D & VR.
   Rent/Own. Video walls rental. Vegas & Nationwide. World Class Friendly Service.

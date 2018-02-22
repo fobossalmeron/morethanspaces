@@ -44,14 +44,16 @@ defaults:
       path: ""
       type: "posts"
     values:
-      featured: ['true', 'false']
+      featured: ['true']
       id: 
-      tags: ['LCD', 'LED', ]
+      tags: ["LCD", "LED", "Tv"]
       description:
       rent:
       size:
       diagonal:
       images:
+        url:
+        url:
         url:
         url:
 email: hello@morethanspaces.com

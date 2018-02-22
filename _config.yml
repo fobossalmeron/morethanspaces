@@ -24,7 +24,7 @@ email: hello@morethanspaces.com
 description: Get more for less! See exclusive trade show booth designs in 3D & VR.
   Rent/Own. Video walls rental. Vegas & Nationwide. World Class Friendly Service.
 og_image: "/assets/img/og_image.png"
-baseurl: ''
+baseurl: 
 url: http://morethanspaces.com
 markdown: kramdown
 gems:
@@ -39,6 +39,7 @@ sass:
   style: compressed
 github:
 - metadata
+<<<<<<< HEAD
 
 defaults:
   -
@@ -59,3 +60,5 @@ defaults:
       title: 
       logo: 
       convention_date: 
+=======
+>>>>>>> 5dae6025d872bd859dfef0e7031078a3a311dc13

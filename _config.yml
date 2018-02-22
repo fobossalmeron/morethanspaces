@@ -10,9 +10,6 @@ collections:
     title: Discounts
     output: true
     permalink: "/d/s/:title/"
-  posts:
-    title: Videowalls
-    output: true
   services:
     title: Services
     output: true
@@ -20,29 +17,29 @@ collections:
   uploads:
     title: Uploads
     output: true
+  posts:
+    title: Videowalls
+    output: true
 defaults:
-  -
-    scope:
-      path: ""
-      type: "services"
+  - scope:
+      path: ''
+      type: services
     values:
       layout: "convention"
       title:
       meta_description:
       image: 
-  -
-    scope:
-      path: ""
-      type: "conventions"
+  - scope:
+      path: ''
+      type: conventions
     values:
-      layout: "convention"
+      layout: convention
       title: 
       logo: 
       convention_date: 
-  - 
-    scope: 
-      path: ""
-      type: "posts"
+  - scope: 
+      path: ''
+      type: posts
     values:
       featured: ['true']
       id: 

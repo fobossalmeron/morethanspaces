@@ -10,6 +10,9 @@ collections:
     title: Discounts
     output: true
     permalink: "/d/s/:title/"
+  posts:
+    title: Posts
+    output: true
   services:
     title: Services
     output: true
@@ -17,7 +20,7 @@ collections:
   uploads:
     title: Uploads
     output: true
-  posts:
+  videowalls:
     title: Videowalls
     output: true
 defaults:

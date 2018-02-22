@@ -39,6 +39,7 @@ sass:
   style: compressed
 github:
 - metadata
+<<<<<<< HEAD
 
 defaults:
   -
@@ -59,3 +60,5 @@ defaults:
       title: 
       logo: 
       convention_date: 
+=======
+>>>>>>> b3a752674bd3fbc8d76a45003f06114fd900487c

@@ -20,25 +20,6 @@ collections:
   uploads:
     title: Uploads
     output: true
-email: hello@morethanspaces.com
-description: Get more for less! See exclusive trade show booth designs in 3D & VR.
-  Rent/Own. Video walls rental. Vegas & Nationwide. World Class Friendly Service.
-og_image: "/assets/img/og_image.png"
-baseurl: 
-url: http://morethanspaces.com
-markdown: kramdown
-gems:
-- jekyll-feed
-- octopress-autoprefixer
-exclude:
-- Gemfile
-- Gemfile.lock
-- node_modules
-- webpack
-sass:
-  style: compressed
-github:
-- metadata
 defaults:
   -
     scope:
@@ -73,3 +54,22 @@ defaults:
       images:
         url:
         url:
+email: hello@morethanspaces.com
+description: Get more for less! See exclusive trade show booth designs in 3D & VR.
+  Rent/Own. Video walls rental. Vegas & Nationwide. World Class Friendly Service.
+og_image: "/assets/img/og_image.png"
+baseurl: 
+url: http://morethanspaces.com
+markdown: kramdown
+gems:
+- jekyll-feed
+- octopress-autoprefixer
+exclude:
+- Gemfile
+- Gemfile.lock
+- node_modules
+- webpack
+sass:
+  style: compressed
+github:
+- metadata

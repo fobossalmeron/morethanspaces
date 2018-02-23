@@ -1,5 +1,6 @@
 ---
 ---
+
 {"items": [{% for videowall in site.videowalls %}
     {
       "featured": {{ videowall.featured }},

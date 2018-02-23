@@ -12,7 +12,7 @@ collections:
     permalink: "/d/s/:title/"
   posts:
     title: Posts
-    output: false
+    output: true
   services:
     title: Services
     output: true
@@ -52,10 +52,10 @@ defaults:
     description: 
     rent: 
     size: 
-    diagonal:
+    diagonal: 
     featured:
     - true
-    - false 
+    - false
     images:
       url: 
 email: hello@morethanspaces.com

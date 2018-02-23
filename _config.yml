@@ -10,9 +10,6 @@ collections:
   discounts:
     title: Discounts
     output: false
-  booths:
-    title: Posts
-    output: true
   posts:
     title: Posts
     output: true

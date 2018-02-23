@@ -4,9 +4,9 @@ timezone: UTC
 collections:
   conventions:
     title: Conventions
-    layout: convention
     output: true
     permalink: "/conventions/:title/"
+    layout: convention
   discounts:
     title: Discounts
     output: false

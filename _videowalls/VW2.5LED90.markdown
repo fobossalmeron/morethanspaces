@@ -1,9 +1,8 @@
 ---
-title: Vw2.5led90
+title: VW2.5LED90
 tags:
 - LED
 featured: true
-id: VW2.5LED90
 description: "<ul><li>display approx. area: (4.2 ft x 6.3 ft) x 2</li><li>equivalent
   of a (90″) x 2 monitor</li><li>*sound not built-in, but available</li><li>flown</li><li>delivery,
   setup and teardown</li><li>friendly expert support</li></ul>"

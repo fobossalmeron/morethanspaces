@@ -1,9 +1,8 @@
 ---
-title: Vw4.8led217
+title: VW4.8LED217
 tags:
 - LED
 featured: true
-id: VW4.8LED217
 description: "<ul><li>display approx. area: 15 ft x 10 ft</li><li>equivalent of a
   217″ monitor</li><li>*sound not built-in, but available</li><li>floor stand or flown</li><li>delivery,
   setup and teardown</li><li>friendly expert support</li></ul>"

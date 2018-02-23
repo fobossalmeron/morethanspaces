@@ -1,9 +1,8 @@
 ---
-title: Vw4.8led144
+title: VW4.8LED144
 tags:
 - LED
 featured: true
-id: VW4.8LED144
 description: "<ul><li>display approx. area: 6.7 ft x 10 ft</li><li>equivalent of a
   144″ monitor</li><li>*sound not built-in, but available</li><li>flown</li><li>delivery,
   setup and teardown</li><li>friendly expert support</li></ul>"

@@ -3,7 +3,6 @@ title: VW3x4LCD
 tags:
 - LCD
 featured: true
-id: VW3x4LCD
 description: "<ul><li>built with (12) 55″ ultra slim bezels</li><li>display approx.
   area: 16 ft x 6.8 ft</li><li>equivalent of a 209″ monitor</li><li>*sound not built-in,
   but available</li><li>delivery, setup and teardown</li><li>floor stand</li><li>friendly

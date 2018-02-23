@@ -15,9 +15,9 @@ collections:
     output: true
   services:
     title: Services
-    layout: convention
     output: true
     permalink: "/:title/"
+    layout: convention
   uploads:
     title: Uploads
     output: true

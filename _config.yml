@@ -44,8 +44,6 @@ defaults:
     path: ''
     type: posts
   values:
-    featured:
-    - 'true'
     id: 
     tags:
     - LCD
@@ -54,7 +52,10 @@ defaults:
     description: 
     rent: 
     size: 
-    diagonal: 
+    diagonal:
+    featured:
+    - true
+    - false 
     images:
       url: 
 email: hello@morethanspaces.com

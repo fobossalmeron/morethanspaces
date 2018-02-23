@@ -1,10 +1,8 @@
 ---
 title: VW3x3LCD
-date: 2018-02-22 05:19:00 Z
 tags:
 - LCD
-featured:
-- true
+featured: true
 id: VW3x3LCD
 description: "<ul><li>built with (9) 55″ ultra slim bezels</li><li>display approx.
   area: 12 ft x 6.8 ft</li><li>equivalent of a 165″ monitor</li><li>\\*sound not built-in,

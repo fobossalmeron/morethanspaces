@@ -12,7 +12,7 @@ collections:
     permalink: "/d/s/:title/"
   posts:
     title: Posts
-    output: true
+    output: false
   services:
     title: Services
     output: true
@@ -42,7 +42,7 @@ defaults:
     convention_date: 
 - scope:
     path: ''
-    type: posts
+    type: videowalls
   values:
     id: 
     tags:
@@ -52,10 +52,10 @@ defaults:
     description: 
     rent: 
     size: 
-    diagonal: 
+    diagonal:
     featured:
     - true
-    - false
+    - false 
     images:
       url: 
 email: hello@morethanspaces.com

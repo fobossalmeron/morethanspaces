@@ -63,7 +63,7 @@ og_image: "/assets/img/og_image.png"
 baseurl: 
 url: http://morethanspaces.com
 markdown: kramdown
-gems:
+plugins:
 - jekyll-feed
 - octopress-autoprefixer
 exclude:

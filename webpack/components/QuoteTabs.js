@@ -255,7 +255,7 @@ class QuoteTabs extends Component {
                          eventInVegas={this.state.eventInVegas}
                          hideInstaQuote={this.hideInstaQuote.bind(this)}/>
 
-          <VideoWallGrid dataToLoad={"./assets/js/videowalls.json"}
+          <VideoWallGrid dataToLoad={"./assets/json/videowalls.json"}
                          individualVideoWallRender={this.state.individualVideoWallRender}
                          selectedTv={this.state.selectedTv}
                          selectedLcd={this.state.selectedLcd}

@@ -1,0 +1,17 @@
+---
+---
+{"items": [{% for videowall in site.videowalls %}
+    {
+      "featured": {{ videowall.featured }},
+      "id": "{{ videowall.title }}",
+      "tags":[{% for tag in videowall.tags %}"{{tag}}"{% unless forloop.last %},{% endunless %}{% endfor %}],
+      "description":"{{videowall.description}}",
+      "rent": {{ videowall.rent }},
+      "size" : "{{ videowall.size }}",
+      "diagonal" : "{{videowall.diagonal}}",
+      "images":[
+        {% for image in videowall.images %}{"url":"{{image.url}}"}{% unless forloop.last %},
+        {% endunless %}{% endfor %}]
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}

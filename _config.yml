@@ -52,10 +52,10 @@ defaults:
     description: 
     rent: 
     size: 
-    diagonal:
+    diagonal: 
     featured:
     - true
-    - false 
+    - false
     images:
       url: 
 email: hello@morethanspaces.com

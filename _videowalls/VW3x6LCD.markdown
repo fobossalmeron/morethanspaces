@@ -1,9 +1,9 @@
 ---
-featured: true
-id: VW3x6LCD
 title: VW3x6LCD
 tags:
 - LCD
+featured: true
+id: VW3x6LCD
 description: "<ul><li>built with (18) 55″ ultra slim bezels</li><li>display approx.
   area: 24 ft x 6.8 ft</li><li>equivalent of a 300″ monitor</li><li>*sound not built-in,
   but available</li><li>delivery, setup and teardown</li><li>floor stand</li><li>friendly
@@ -15,3 +15,4 @@ images:
 - url: assets/img/videowalls/VW3x6LCD/1.jpg
 - url: assets/img/videowalls/VW3x6LCD/2.jpg
 ---
+

@@ -15,6 +15,7 @@ collections:
     output: true
   services:
     title: Services
+    layout: convention
     output: true
     permalink: "/:title/"
   uploads:
@@ -36,7 +37,6 @@ defaults:
     path: ''
     type: conventions
   values:
-    layout: convention
     title: 
     logo: 
     convention_date: 

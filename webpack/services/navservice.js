@@ -1,7 +1,7 @@
 
 export function loadDiscount(externalThis) {
        var xhr = new XMLHttpRequest();
-       xhr.open('get', '/assets/discounts/discount.js', true);
+       xhr.open('get', '/assets/json/discount.js', true);
        xhr.onload = function() {
            var discountDigest = JSON.parse(xhr.responseText);
            console.log(discountDigest);

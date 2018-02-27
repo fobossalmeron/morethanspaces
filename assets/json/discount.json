@@ -1,0 +1,13 @@
+---
+---
+
+{% for discount in site.discounts %}
+{
+  "discountOn":"{{ discount.discount }}",
+  "discountNumber":{{ discount.number }},
+  "discountType":"{{ discount.type }}",
+  "discountText":"{{ discount.text }}",
+  "discountSmallText":"{{ discount.smallText }}",
+  "discountBanner":"{{ discount.banner }}"
+}
+{% endfor %}

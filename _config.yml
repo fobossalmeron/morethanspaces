@@ -9,7 +9,11 @@ collections:
     title: Conventions
     output: true
     permalink: "/conventions/:title/"
-    layout: convention
+  resources:
+    title: Resources
+    output: true
+    permalink: "/resources/:title/"
+    layout: resources
   discounts:
     title: Discounts
     output: false
@@ -38,9 +42,17 @@ defaults:
     image: 
 - scope:
     path: ''
+    type: resources
+  values:
+    layout: resources
+    title:
+    resource:
+- scope:
+    path: ''
     type: conventions
   values:
     title: 
+    layout: convention
     logo: 
     convention_date: 
 - scope:

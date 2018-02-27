@@ -1,6 +1,6 @@
 ---
 title: Discount
-discount: 'false'
+discount: false
 number: 10
 type: percentage
 banner: BannerNoDiscount.png

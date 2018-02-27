@@ -109,14 +109,14 @@ class Nav extends Component {
       <b>{this.props.discountNumber}{this.discountSymbol()}</b> {this.props.discountText} <span>{this.props.discountSmallText}</span>
       </div>
     );
-    var isThereDiscount = (this.props.discountOn ? discountBlock : undefined);
+    var isThereDiscount = (this.props.discountOn ? discountBlock : <CaptureLead generateUser={this.props.generateUser.bind(this)}/>);
     var isActive = this.state.menuOn? "menuActive" : "";
     var navIsActive = this.state.menuOn? "navActive" : "";
 
     return (
       <nav id={navIsActive}>
         <a href={baseUrl + "#home"}><img src={baseUrl + "assets/img/layout/logo.svg"}/><img src={baseUrl + "assets/img/layout/type.svg"}/></a>
-        <CaptureLead generateUser={this.props.generateUser.bind(this)}/>
+        {isThereDiscount}
         <HamburgerIcon onClick={this.doToggleMenu} className={"menuButton " + isActive}/>
         <ul className={isActive}>
           <li onClick={() => {this.handleNavClick(0); this.doHideNav()}}><a href={baseUrl + "#products"}>booths</a></li>

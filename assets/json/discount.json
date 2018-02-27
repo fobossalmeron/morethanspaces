@@ -1,6 +1,5 @@
 ---
 ---
-
 {% for discount in site.discounts %}
 {
   "discountOn":"{{ discount.discount }}",

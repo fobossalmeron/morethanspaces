@@ -1,15 +1,18 @@
 ---
 ---
 
-{"items": [{% for booth in site.booths %}
+{
+  "items": [{% for booth in site.booths %}
     {
       "featured": {{ booth.featured }},
       "id": "{{ booth.title }}",
       "tags":[{% for tag in booth.tags %}"{{tag}}"{% unless forloop.last %},{% endunless %}{% endfor %}],
+      "width": "{{ booth.width }}"
+      "length" "{{ booth.length }}"
       "description":"{{booth.description}}",
       "rent": {{ booth.rent }},
-      "size" : "{{ booth.size }}",
-      "diagonal" : "{{booth.diagonal}}",
+      "own" : "{{ booth.own }}",
+      "obj" : "{{booth.obj}}",
       "images":[
         {% for image in booth.images %}{"url":"{{image.url}}"}{% unless forloop.last %},
         {% endunless %}{% endfor %}]

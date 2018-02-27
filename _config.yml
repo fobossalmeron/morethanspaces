@@ -2,6 +2,9 @@
 title: More Than Spaces | Trade Show & Video Wall Experts – Rent or Own
 timezone: UTC
 collections:
+  booths:
+    title: Booths
+    output: false
   conventions:
     title: Conventions
     output: true
@@ -23,9 +26,6 @@ collections:
     output: true
   videowalls:
     title: Videowalls
-    output: false
-  booths:
-    title: Booths
     output: false
 defaults:
 - scope:

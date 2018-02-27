@@ -3,8 +3,8 @@ title: Customize your booth!
 tags:
 - Custom
 featured: true
-width: 10
-length: 10
+width: 100
+length: 100
 description: "<b>Design your next award-winning custom booth</b><ul><li>Create your
   custom booth with MoreThanSpaces’ award-winning team of architects and designers.</li><li>100%
   tailor-made to you and your brand&#39;s needs.</li><li>State-of-the-art materials

@@ -215,7 +215,7 @@ class QuoteTabs extends Component {
                          boothSizeLength={this.state.boothSizeLength}
                          hideInstaQuote={this.hideInstaQuote.bind(this)}/>
 
-          <BoothGrid    dataToLoad={"./assets/js/booths.json"}
+          <BoothGrid    dataToLoad={"./assets/json/booths.json"}
                         selectedIsland={this.state.selectedIsland}
                         selectedSplitIsland={this.state.selectedSplitIsland}
                         selectedPerimeter={this.state.selectedPerimeter}

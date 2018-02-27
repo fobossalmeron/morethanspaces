@@ -4,8 +4,8 @@ tags:
 - Custom
 - Perimeter
 featured: true
-width: 10
-length: 10
+width: 100
+length: 100
 description: "<b>Design your next award-winning perimeter booth</b><ul><li>Create
   your perimeter booth with MoreThanSpaces’ award-winning team of architects and designers.</li><li>100%
   tailor-made to you and your brand&#39;s needs.</li><li>State-of-the-art materials

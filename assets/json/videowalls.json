@@ -1,7 +1,8 @@
 ---
 ---
+{% assign sorted_videowalls = site.videowalls | sort: "id" | reverse %}
 
-{"items": [{% for videowall in site.videowalls %}
+{"items": [{% for videowall in sorted_videowalls %}
     {
       "featured": {{ videowall.featured }},
       "id": "{{ videowall.title }}",

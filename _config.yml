@@ -24,6 +24,9 @@ collections:
   videowalls:
     title: Videowalls
     output: false
+  booths:
+    title: Booths
+    output: false
 defaults:
 - scope:
     path: ''

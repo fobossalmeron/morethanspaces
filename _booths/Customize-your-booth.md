@@ -1,8 +1,8 @@
 ---
-featured: true
 title: Customize your booth!
 tags:
 - Custom
+featured: true
 width: 10
 length: 10
 description: "<b>Design your next award-winning custom booth</b><ul><li>Create your
@@ -17,3 +17,4 @@ images:
 - url: assets/img/booths/custom/custom.jpg
 obj: 437387a8e54b4100a46e4b52fb511cf0
 ---
+

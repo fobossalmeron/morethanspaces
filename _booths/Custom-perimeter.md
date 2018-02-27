@@ -1,9 +1,9 @@
 ---
-featured: true
 title: Custom perimeter
 tags:
 - Custom
 - Perimeter
+featured: true
 width: 10
 length: 10
 description: "<b>Design your next award-winning perimeter booth</b><ul><li>Create
@@ -18,3 +18,4 @@ images:
 - url: assets/img/booths/custom/perimeter.jpg
 obj: 437387a8e54b4100a46e4b52fb511cf0
 ---
+

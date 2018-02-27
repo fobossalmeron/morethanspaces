@@ -1,9 +1,9 @@
 ---
-featured: true
 title: Custom inline
 tags:
 - Custom
 - Inline
+featured: true
 width: 10
 length: 10
 description: "<b>Design your next award-winning in-line booth</b><ul><li>Create your
@@ -18,3 +18,4 @@ images:
 - url: assets/img/booths/custom/inline.jpg
 obj: 437387a8e54b4100a46e4b52fb511cf0
 ---
+

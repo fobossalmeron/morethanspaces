@@ -1,5 +1,6 @@
 ---
 ---
+
 {% assign sorted_booths = site.booths | sort: "id" | reverse %}
 {
   "items": [{% for booth in sorted_booths %}

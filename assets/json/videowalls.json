@@ -1,5 +1,6 @@
 ---
 ---
+
 {% assign sorted_videowalls = site.videowalls | sort: "id" | reverse %}
 
 {"items": [{% for videowall in sorted_videowalls %}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Text, Select, Textarea, NestedForm, FormError } from 'react-form'
+import { Form, Text, Select, TextArea, NestedForm, FormError } from 'react-form'
 import Check from './presentational/Check';
 
 class ContactSection extends Component {
@@ -25,7 +25,7 @@ class ContactSection extends Component {
         <Text field='email' placeholder='your email'/>
         <Text field='phone' placeholder='your phone'/>
         <Text field='business' placeholder='your business name'/>
-        <Textarea
+        <TextArea
           field='message'
           placeholder='message'
         />

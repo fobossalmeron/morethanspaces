@@ -15,6 +15,8 @@ import DiscountsCarousel from './presentational/DiscountsCarousel';
 import ReactPlayer from 'react-player';
 import scrollToComponent from 'react-scroll-to-component';
 import { loadDiscount } from '../services/navservice.js';
+import InstagramIcon from 'svg-react-loader?name=InstagramIcon!../../assets/img/layout/icons/instagram.svg';
+import UnderConstruction from 'svg-react-loader?name=InstagramIcon!../../assets/img/underconstruction.svg';
 
 
 class App extends Component {
@@ -33,7 +35,7 @@ class App extends Component {
         name: '',
         email: '',
         phone: '',
-        maintenance: false
+        maintenance: true
       };
     this.loadDiscount = loadDiscount.bind(this);
     this.quitMaintenance = this.quitMaintenance.bind(this);
@@ -84,17 +86,24 @@ class App extends Component {
     var maintenanceScreen = (
       <div className="loading">
         <div id="loadingvideo">
-            <ReactPlayer url={"assets/video/intro.mp4"} playing={true} loop={true} muted={true} playsinline={true}/>
+            <UnderConstruction/>
         </div>
         <div className="aboveVideo">
           <img src="assets/img/layout/logo.svg"/>
           <img src="assets/img/layout/type.svg"/>
-          <h2>Stay tuned</h2>
-          <p>We are re-designing the site to be the <em>Uber</em> of trade show both and video wall rentals</p>
-          <p>Can’t wait?<br/>
-          call: <a href="tel:1 833 667 3842"><b>1-833-MORETHANSPACES</b><br/>(1-833-667-3842)</a><br/>
-          email: <a href="mailto:hello@morethanspaces.com"><b>hello@morethanspaces.com</b></a>
-          </p>
+          <div className="secondLanding">
+            <h2 className="blue">we're</h2>
+            <h2 className="yellow">redesigning</h2>
+            <h2 className="pink">ourselves</h2>
+          </div>
+          <div className="follow">
+            <p>follow us on 
+            <a href={"https://www.instagram.com/more.than.spaces/"} target="_blank">
+                 <InstagramIcon/>
+               </a>
+            </p>
+            <p><a href="http://instagram.com/more.than.spaces/">@<span className="blue">more</span>.<span className="yellow">than</span>.<span className="pink">spaces</span></a></p>
+            </div>
         </div>
         <button onClick={this.quitMaintenance}>quit</button>
       </div>
